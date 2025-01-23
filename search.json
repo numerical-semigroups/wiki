@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "About Numerical Semigroups",
+    "section": "",
+    "text": "This page is intended to collect information about numerical semigroups.\nYou can add new entries blah blah"
+  },
+  {
     "objectID": "Basic concepts/Numerical-Semigroups.html",
     "href": "Basic concepts/Numerical-Semigroups.html",
     "title": "Numerical Semigroups",
@@ -33,12 +40,5 @@
     "title": "Numerical Semigroups",
     "section": "References",
     "text": "References"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "About Numerical Semigroups",
-    "section": "",
-    "text": "This page is intended to collect information about numerical semigroups.\nYou can add new entries blah blah"
   }
 ]
