@@ -1,0 +1,74 @@
+---
+title: "Special gap"
+format: html
+editor: visual
+execute: 
+  echo: false
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and $PF(S)$ the set of [pseudo-Frobenius numbers](Pseudo-Frobenius-number.qmd) of $S$. An element $x \in PF(S)$ is a special gap if $2x \in S$. The set of special gaps is denoted by $SG(S)$ and is always non-empty, due to $F(S) \in SG(S)$, where $F(S)$ denotes the [Frobenius number](Frobenius-number.qmd) of $S$. Its definition is motivated by the problem of finding the set of all numerical semigroups containing a given numerical semigroup.
+
+## Examples
+
+$\circ$ Consider $m \in \mathbb{N}$ a non-zero element arbitrary but fixed and $S = \{0, m, \rightarrow \}$. Its easy to see that $PF(S) = \{1,2, \ldots, m-1\}$, therefore an element $n \in PF(S)$ is a special gap if $2n \ge m$, that is, if $n \ge \lceil \frac{m}{2} \rceil$, in conclusion, $SG(S) = \{\lceil \frac{m}{2} \rceil, \lceil \frac{m}{2} \rceil + 1, \ldots, m-1 \}$.
+
+$\circ$ Let $S = \langle 3, 5, 10 \rangle = \{0, 3, 5, 6, 8, \rightarrow \}$. The positive integers that do not belong to $S$ are $\mathbb{N} \setminus S = \{1, 2, 4, 7\}$, and as $3 \in S$, the candidates for pseudo-Frobenius numbers belongs to the set $\{-3, -2, -1, 1, 2, 4, 7 \}$. Checking the condition for each element, it is concluded that $PF(S) = \{7\}$ and $SG(S) = \{7\}$
+
+## Examples with GAP
+
+The following examples are made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 5, 23, 24, 33, 34 \rangle$, in GAP:
+
+```{GAP}
+gap> S := NumericalSemigroup(5, 23, 24, 33, 34);
+
+<Numerical semigroup with 5 generators>
+
+```
+
+The function `SpecialGaps` returns the set of special gaps of a numerical semigroup, in this case:
+
+```{GAP}
+gap> SpecialGaps(S);
+
+[ 17, 29, 41 ]
+
+```
+
+$\diamond$ Let $S = \langle 3, 5, 7 \rangle$, in GAP:
+
+```{GAP}
+gap> S := NumericalSemigroup(3, 5, 7);
+
+<Numerical semigroup with 3 generators>
+
+```
+
+The special gaps of $S$ are:
+
+```{GAP}
+gap> SpecialGaps(S);
+
+[ 4 ]
+
+```
+
+For an element to be a special gap, first it has to be a gap and a pseudo-Frobenius number, we can compute this elements with the functions `Gaps` and `PseudoFrobenius`, respectively.
+
+```{GAP}
+gap> Gaps(S);
+
+[ 1, 2, 4 ]
+
+gap> PseudoFrobenius(S);
+
+[ 2, 4 ]
+
+```
+
+With this numerical semigroup we found an example that $SG(S) \subsetneq PF(S) \subsetneq G(S)$.
+
+## References

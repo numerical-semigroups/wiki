@@ -1,0 +1,77 @@
+---
+title: "Irreducible Z-components"
+format: html
+editor: visual
+execute: 
+  echo: false
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd) and $E$ a [relative ideal](./Ideals-NS/Relative-ideal.qmd) of $S$. The definition of irreducible $\mathbb{Z}-$components of a relative ideal comes from the following result.
+
+$\textbf{Proposition}$: Let $S$ be a numerical semigroup and let $E$ be a relative ideal of $S$. Let $x_1, x_2, \ldots, x_h$ be the minimal generators of the ideal $K - E$. Then,
+
+$$
+E = (-x_1 + K) \cap \cdots \cap (-x_h + K), 
+$$ 
+
+where $K$ denotes the [standard canonical ideal](./Ideals-NS/Standard-canonical-ideal.qmd) of $S$. This decomposition is irredundant an unique.
+
+It is defined the irreducible $\mathbb{Z}-$components as the ideals $-x_i + K$ that generates the factorization.
+
+## Examples
+
+$\circ$ Let $S = \langle 3, 5, 7 \rangle$, $I = \{4, 5\}$ and $E = I + S$. Making simple calculations, $F(S) = 4$ and $K(S) = \{0, 2, 3, 5, \rightarrow \}$, where $K(S)$ denotes the standard canonical ideal of $S$. We have that $E = (-2 + K(S)) \cap (2 + K(S))$. Indeed,
+
+$$
+(-2 + K(S)) \cap (2 + K(S)) = \{-2, 0, 1, 3, \rightarrow \} \cap \{2, 4, 5, 7, \rightarrow\}
+$$
+
+$$
+= \{4, 5, 7, \rightarrow \} = \{4, 5\} + S = E.
+$$
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 17, 21, 30, 45, 61 \rangle$, $I = \{6, 10\}$ and $K = I + S$, in GAP:
+
+```{GAP}
+
+gap> S := NumericalSemigroup(17, 21, 30, 45, 61);
+
+<Numerical semigroup with 5 generators>
+
+gap> I := [6, 10];
+
+[ 6, 10 ]
+
+gap> K := I + S;
+
+<Ideal of numerical semigroup>
+
+
+```
+
+In order to compute the irreducible $\mathbb{Z}-$components of $K$, the function `IrreducibleZComponents` returns a list with the ideals that generate the decomposition of the relative ideal.
+
+```{GAP}
+
+gap> Irred := IrreducibleZComponents(K);
+
+[ <Ideal of numerical semigroup>, <Ideal of numerical 
+semigroup>, <Ideal of numerical semigroup>,
+  <Ideal of numerical semigroup>, <Ideal of numerical semigroup> ]
+
+
+gap> List(Irred, MinimalGenerators);
+
+[ [ -8, -6, 6, 7, 10 ], [ -9, -7, 5, 6, 9 ], [ -11, -9, 3, 4, 7 ], [ -13, -11, 1, 2, 5 ], [ -24, -22, -10, -9, -6 ] ]
+
+
+
+```
+
+## References

@@ -1,0 +1,66 @@
+---
+title: "Integrally closed ideal"
+format: html
+editor: visual
+execute: 
+  echo: false
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd) and $E$ a [proper ideal](Proper-ideal.qmd) of $S$. It is said that $E$ is integrally closed if it is of the form $S(s) = (s + \mathbb{N}) \cap S$ for some $s \in S$.
+
+Note that $E$ is integrally closed if, and only if, $E = S(m(E))$, where $m(E)$ denotes the [multiplicity ideal](Multiplicity-ideal.qmd) of $E$.
+
+## Examples
+
+$\circ$ Let $S$ a numerical semigroup, then the [maximal ideal](Maximal-ideal.qmd) $M = S^*$ is integrally closed, since $S^* = (m(S) + \mathbb{N}) \cap S$, where $m(S)$ denotes the [multiplicity](./Basic-concepts/Multiplicity.qmd) of $S$.
+
+$\circ$ Let $S = \langle 5, 7, 9 \rangle = \{0, 5, 7, 9, 10, 12, 14, \rightarrow \}$, $I = \{9, 10, 12, 14\}$ and $E = I + S$, lets prove the equality $E = (9 + \mathbb{N}) \cap S$. First, $(9 + \mathbb{N}) \cap S = \{9, 10, 12, 14, \rightarrow\}$, then we have to prove that $E = \{9, 10, 12, 14, \rightarrow\}$.
+
+-   Let $e \in E$, then exist $i \in I$ and $s \in S$ such that $e = i + s$. If $s = 0$, $e \in I \subseteq \{9, 10, 12, 14, \rightarrow\}$, otherwise, $e = i + s \ge i + 5 \ge 14$ and $e \in \{9, 10, 12, 14, \rightarrow\}$.
+
+-   It is easy to check that $\{14, 15, 16, 17, 18\} \subseteq E$, then for all $n \ge 14$ it holds $n \in E$ and $\{9, 10, 12, 14, \rightarrow\} \subseteq E$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 13, 15, 29, 31 \rangle$, $I = \{72, 75, 77\}$ and $K = I + S$, in GAP:
+
+```{GAP}
+
+gap> S := NumericalSemigroup(13, 15, 29, 31);
+
+<Numerical semigroup with 4 generators>
+
+gap> I := [72, 75, 77];
+
+[ 72, 75, 77 ]
+
+gap> K := I + S;
+
+<Ideal of numerical semigroup>
+
+```
+
+Nowadays, there is no direct function that determines whether an proper ideal is integrally closed or not, but it is easy to compute it. First, the function `Minimum` returns the multiplicity of a proper ideal; afterwards, the function `NumericalSemigroupBySmallElements` generates the numerical semigroup given a list with the [left elements](./Basic-concepts/Left-elements.qmd) of $S$ and the [conductor](./Basic-concepts/Conductor.qmd) of $S$; also, the function `Intersection` computes the intersection of numerical semigroups; next, the function `MaximalIdeal` returns the maximal ideal of the numerical semigroup; finally,the function `SmallElements` returns the set formed by the left elements and the conductor. Taking into account that $E$ is integrally closed if, and only if, $E = S(m(E))$, we have the result.
+
+```{GAP}
+
+gap> m := Minimum(K);
+
+72
+
+gap> N1 := NumericalSemigroupBySmallElements([0, m]);
+
+<Numerical semigroup>
+
+gap> SmallElements(K) = SmallElements(MaximalIdeal(Intersection(N1, S)));
+
+false
+
+
+```
+
+## References

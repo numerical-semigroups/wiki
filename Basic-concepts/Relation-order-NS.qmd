@@ -1,0 +1,27 @@
+---
+title: "Relation order of a numerical semigroup"
+format: html
+editor: visual
+execute: 
+  echo: false
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd). It is defined the relation $\le_S$ over $\mathbb{Z}$ as follows:
+
+$$
+a \le_S b \Longleftrightarrow b - a \in S.
+$$ It is easy to prove that $\le_S$ is a partial order relation. From this relation order is possible to characterize the [pseudo-Frobenius numbers](Pseudo-Frobenius-number.qmd) of $S$.
+
+## Examples
+
+$\circ$ Let $S = \langle 10, 14, 17, 21 \rangle$ and the integers $x_1 = 8, x_2 = 62$. For $x_1$, there is no positive integer $y \ne x_1$ such that $y \le_S x_1$, since $x_1 - y = 8 - y < 10$ and the only element in $S$ smaller than $10$ is $0$, therefore $x_1$ is a minimal in $\mathbb{N}$, but is not minimal in $\mathbb{Z}$, since $-2 \le_S x_1$. On the other hand, for $x_2 = 62$ we have that $10 \le_S 62$ and $62 \le_S 72$.
+
+$\diamond$ Let $S$ a numerical semigroup and $F(S)$ the [Frobenius number](Frobenius-number.qmd) of $S$. If we suppose $F(S) \le_S x$ for some $x \in \mathbb{Z} \setminus S$, then exists $s \in S$ such that $x = F(S) + y$, but that means $x \in S$, which is a contradiction, therefore $F(S)$ is maximal in $\mathbb{Z} \setminus S$.
+
+## Examples with GAP
+
+Nowadays, there are no functions in package NumericalSgps related to relation order.
+
+## References

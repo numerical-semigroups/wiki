@@ -1,0 +1,48 @@
+---
+title: "Set of divisors"
+format: html
+editor: visual
+execute: 
+  echo: false
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and an element $x \in S$. It is defined the set of divisors of $x$ in $S$ as the set
+
+$$
+D(x) = \{s \in S ~ | ~ s \le_S x\},
+$$
+
+where $\le_S$ is the [relation order](Relation-order-NS.qmd) of $S$. This set is always non-empty, since $x \in D(x)$.
+
+## Examples
+
+$\circ$ Let $S = \langle 3, 5, 7 \rangle = \{0, 3, 5, \rightarrow \}$ and $x = 11$. Then, $s \in D(11)$ if $11 - s \in S$. Checking the condition for every $s \in S$ such that $s \le 11$, it is obtained that $D(11) = \{0, 3, 5, 6, 8, 11\}$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 21, 30, 45, 47 \rangle$, in GAP:
+
+```{GAP}
+
+gap> S := NumericalSemigroup(21, 30, 45, 47);
+
+<Numerical semigroup with 4 generators>
+
+
+```
+
+Lets compute $D(107)$ (note that $107 = 2 \cdot 30 + 47 \in S$), the function `DivisorsOfElementInNumericalSemigroup` returns the set $D(x)$ given a numerical semigroup and an element $x$ of the numerical semigroup.
+
+```{GAP}
+
+gap> DivisorsOfElementInNumericalSemigroup(S, 107);
+
+[ 0, 30, 47, 60, 77, 107 ]
+
+```
+
+## References

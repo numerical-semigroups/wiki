@@ -1,0 +1,21 @@
+---
+title: "Weierstrass semigroup"
+format: html
+editor: visual
+execute: 
+  echo: false
+---
+
+## Definition
+
+Let $C$ be a smooth algebraic curve over the complex numbers of genus $g$. Weierstrass Lückensatz states that for every $P \in C$, there are exactly $g$ integers $\alpha_1(P), \alpha_2(P), \ldots, \alpha_g(P)$ with $1 = \alpha_1(P) < \cdots < \alpha_g(P) = 2g - 1$, such that for all $i \in \{1, 2, \ldots, g\}$ there is no meromorphic function on $X$ with a pole at $P$ of multiplicity $\alpha_i(P)$ as its only singularity. The set $S = \mathbb{N} \setminus \{\alpha_1(P), \alpha_2(P), \ldots, \alpha_g(P)\}$ is a numerical semigroup, known as the Weierstrass semigroup at $P$.
+
+## Examples
+
+$\circ$
+
+## Examples with GAP
+
+Nowadays, there are no functions in package NumericalSgps related to Weierstrass semigroup.
+
+## References

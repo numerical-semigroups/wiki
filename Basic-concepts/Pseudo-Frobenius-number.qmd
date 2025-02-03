@@ -1,0 +1,42 @@
+---
+title: "Pseudo Frobenius number"
+format: html
+editor: visual
+execute: 
+  echo: false
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd). We say that $x \in \mathbb{Z}$ is a pseudo-Frobenius number if $x \not \in S$ and $x + s \in S$ for all $s \in S^*$. The set formed by the pseudo-Frobenius numbers of $S$ is denoted by $PF(S)$.
+
+The set $PF(S)$ is always non-empty because $F(S) \in PF(S)$, where $F(S)$ is the [Frobenius number](Frobenius-number.qmd) of $S$. The cardinal of $PF(S)$ is the [type](Type.qmd) of $S$.
+
+## Examples
+
+$\circ$ Let $S = \langle 3, 5, 10 \rangle = \{0, 3, 5, 6, 8, \rightarrow \}$. The positive integers that do not belong to $S$ are $\mathbb{N} \setminus S = \{1, 2, 4, 7\}$, and as $3 \in S$, the candidates for pseudo-Frobenius numbers belongs to the set $\{-3, -2, -1, 1, 2, 4, 7 \}$. Checking the condition for each element, it is concluded that $PF(S) = \{7\}$.
+
+$\circ$ The Frobenius number is the only pseudo-Frobenius number (the type is $1$) if, and only if, $2g(S) = C(S)$, where $g(S)$ is the [genus](Genus.qmd) of $S$ and $C(S)$ the [conductor](Conductor.qmd) of $S$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 7, 9, 10, 15, 20 \rangle$, in GAP:
+
+```{GAP}
+gap> S := NumericalSemigroup(7, 9, 10, 15, 20);
+
+<Numerical semigroup with 5 generators>
+
+```
+
+In order to compute the pseudo-Frobenius numbers of $S$, we can apply the function `PseudoFrobenius`, which returns the set of pseudo-Frobenius numbers of the numerical semigroup.
+
+```{GAP}
+gap> PseudoFrobenius(S);
+
+[ 8, 11, 12, 13 ]
+```
+
+## References

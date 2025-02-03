@@ -1,0 +1,53 @@
+---
+title: "Proper-ideal"
+format: html
+editor: visual
+execute: 
+  echo: false
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd) and $E$ a subset of $\mathbb{Z}$. It is said that $E$ is a proper ideal of $S$, or simply an ideal of $S$, if $E$ is a [relative ideal](Relative-ideal.qmd) of $S$ and $E \subseteq S$.
+
+## Examples
+
+$\circ$ Let's prove that $E = S^*$ is an ideal of $S$. Clearly $S^* \subseteq S$ and $S + S^* \subseteq S^*$. If we consider $s = C(S)$, where $C(S)$ denotes the [conductor](./Basic-concepts/Conductor.qmd) of $S$, we have $C(S) + S^* \subseteq S$, therefore $S^*$ is an ideal. The ideal $S^*$ is called the [maximal ideal](Maximal-ideal.qmd) of $S$.
+
+$\circ$ Let $b \in \mathbb{N}$ an odd natural arbitrary but fixed, $S = \langle 2, b \rangle = \{0, 2, 4, \ldots, b - 1\}$ and $E = \{0, b, \rightarrow \}$. Clearly $E$ is an ideal of $S$. In general, given a numerical semigroup $S$, the set $E = \{C(S), \rightarrow\}$ is called the [conductor ideal](Conductor-ideal.qmd) of $S$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 10, 11, 15, 19 \rangle$, $I = \{20, 21, 25\}$ and the relative ideal $E = I + S$, in GAP:
+
+```{GAP}
+
+gap> S := NumericalSemigroup(10, 11, 15, 19);
+
+<Numerical semigroup with 4 generators>
+
+gap> I := [20, 21, 25];
+
+
+[ 20, 21, 25 ]
+
+gap> K := I + S;
+
+<Ideal of numerical semigroup>
+
+```
+
+The function `IsIntegral` returns true or false whether an ideal of a semigroup is contained in the semigroup or not.
+
+```{GAP}
+
+gap> IsIntegral(K);
+
+true
+
+
+```
+
+## References

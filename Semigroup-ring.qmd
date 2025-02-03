@@ -1,0 +1,23 @@
+---
+title: "Semigroup ring"
+format: html
+editor: visual
+execute: 
+  echo: false
+---
+
+## Definition
+
+Let $S$ a [numerical semigroup](Numerical-semigroup.qmd), $t$ be an indeterminant and $\mathbb{K}$ be a field. It is defined the semigroup ring of $S$ over $\mathbb{K}$ as $\mathbb{K}[t^s ~ | ~ s \in S] = \bigoplus_{s \in S} \mathbb{K}t^{s}$ and is denoted by $\mathbb{K}[S]$. Note that $\mathbb{K}[S]$ is a subring of the polynomial ring $\mathbb{K}[t]$.
+
+## Examples
+
+$\circ$ Let $b \in \mathbb{N}$ an odd natural arbitrary but fixed and $S = \langle 2, b \rangle$. It is easy to see that $S = \{0, 2, 4, \ldots, b-1, b \rightarrow \}$, then $$
+\mathbb{K}[S] = \{a_0 + a_1t^{s_1} + \cdots + a_nt^{s_n} ~ | ~ a_0, \ldots, a_n \in \mathbb{K}, s_0, s_1, \ldots, s_n \in S\}.
+$$ In this case, $s_i$ is even or greater or equal to $b$ for all $i \in \{1, 2, \ldots, n\}$.
+
+## Examples with GAP
+
+Nowadays, there are no functions in package NumericalSgps related to semigroup ring.
+
+## References

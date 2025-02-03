@@ -1,0 +1,50 @@
+---
+title: "Set closed under divisors"
+format: html
+editor: visual
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd), $\le_S$ the [relation order of $S$](./Basic-concepts/Relation-order-NS.qmd) and $X$ a subset of $\mathbb{N}$. It is said that $X$ is closed under divisors if for all $x \in X$ and $y \in S$, if $y \le_S x$, then $y \in X$.
+
+## Examples
+
+$\circ$ Lets prove that if $E$ is a [proper ideal](Proper-ideal.qmd) of $S$, then its complement $X = S \setminus E$ is closed under divisors. Let $x \in X$ and $y \in S$ such that $y \le_S x$, therefore exists $s \in S$ so that $x = y + s$. If we suppose $y \not \in X$, then $y \in E$ and $x = s + y \in S + E \subseteq E$, a contradiction, in conclusion $y \in X$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 10, 11, 15, 19 \rangle$, $I = \{20, 21, 25\}$ and the [relative ideal](Relative-ideal.qmd) $E = I + S$, in GAP:
+
+```{GAP}
+
+gap> S := NumericalSemigroup(10, 11, 15, 19);
+
+<Numerical semigroup with 4 generators>
+
+gap> I := [20, 21, 25];
+
+[ 20, 21, 25 ]
+
+gap> K := I + S;
+
+<Ideal of numerical semigroup>
+
+```
+
+The function `IdealByDivisorClosedSet` has as parameters a subset $X$ closed under divisors and a numerical semigroup and returns $S \setminus X$. This function comes from the fact that $E$ is a proper ideal of $S$ if, and only if, $S \setminus E$ is a set closed under divisors. The function `Difference` gets two ideals $I, J$ of a numerical semigroup with $J \subseteq I$ and returns the set $I \setminus J$.
+
+```{GAP}
+
+gap> d:=Difference(0+S,K);
+
+[ 0, 10, 11, 15, 19, 22, 26, 29, 33, 34, 37, 38, 48 ]
+
+gap> K = IdealByDivisorClosedSet(d,S);
+
+true
+```
+
+## References

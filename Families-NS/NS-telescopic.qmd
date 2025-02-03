@@ -1,0 +1,49 @@
+---
+title: "Telescopic numerical semigroup"
+format: html
+editor: visual
+execute: 
+  echo: false
+---
+
+## Definition
+
+Let $S$ a [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd) and $B = \{r_0, r_1, \ldots, r_h\}$ the [set of minimal generators](./Basic-concepts/Minimal-set-of-generators.qmd) of $S$. It is said that $S$ is telescopic if $S$ is [free](NS-free.qmd) for the arrangement $(r_0, r_1, \ldots, r_h)$ and $r_0 < r_1 < \cdots < r_h$.
+
+## Examples
+
+$\circ$ Let $S = \langle 4, 6, 9 \rangle$. We have, $h = 3, d_1 = 4, d_2 = 2$ and $d_3 = 1$. Thus, $e_1 = e_2 = 2$. As $2 \cdot 6 \in \langle 4 \rangle$ and $2 \cdot 9 \in \langle 4, 6 \rangle$, we conclude that $S$ is telescopic.
+
+## Examples with GAP
+
+The following examples are made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 4, 11, 14 \rangle$, in GAP:
+
+```{GAP}
+gap> S := NumericalSemigroup(4, 11, 14);
+
+<Numerical semigroup with 3 generators>
+
+```
+
+In order to know if $S$ is telescopic, we can use the function `IsTelescopic`.
+
+```{GAP}
+
+gap> IsTelescopic(S);
+
+false
+```
+
+$\diamond$ If we are interested in how many telescopic numerical semigroups have Frobenius number $f$, the function `TelescopicNumericalSemigroupsWithFrobeniusNumber` return the set of all telescopic numerical semigroups with given Frobenius number $f$.
+
+```{GAP}
+
+gap> Length(TelescopicNumericalSemigroupsWithFrobeniusNumber(11));
+
+4
+
+```
+
+## References

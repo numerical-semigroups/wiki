@@ -1,0 +1,53 @@
+---
+title: "Arf semigroup"
+format: html
+editor: visual
+execute: 
+  echo: false
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd). It is said that $S$ is Arf if every [integrally closed](Integrally-closed-ideal.qmd) [proper ideal](Proper-ideal.qmd) of $S$ is [stable](Stable-ideal.qmd).
+
+## Examples
+
+$\circ$ Let $S = \langle 5, 7, 9 \rangle = \{0, 5, 7, 9, 10, 12, 14, \rightarrow \}$, $I = \{9, 10, 12, 14\}$ and $E = I + S$. It is easy to prove that $E = (9 + \mathbb{N}) \cap S = S(9)$, then $E$ is integrally closed, but $r(E) = 2$, since
+
+$$
+2E = E + E = \{18, \rightarrow \} \ne \{18, 19, 21, 23, \rightarrow \} = m(E) + E
+$$ and
+
+$$
+3E = E + (E + E) = \{27, \rightarrow \} = m(E) + 2E
+$$
+
+Therefore, $E$ is integrally closed but not stable and $S$ is not an Arf semigroup.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 20, 24, 45, 66 \rangle$, in GAP:
+
+```{GAP}
+
+gap> S := NumericalSemigroup(20, 24, 45, 66);
+
+<Numerical semigroup with 4 generators>
+
+
+```
+
+The function `IsArf` returns true or false whether a numerical semigroup is Arf or not.
+
+```{GAP}
+
+gap> IsArf(S);
+
+false
+
+
+```
+
+## References

@@ -1,0 +1,49 @@
+---
+title: "Minimal set of generators"
+format: html
+editor: visual
+execute: 
+  echo: false
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and let $A \subset S$. We say that $A$ is a minimal set of generators of $S$ if $S = \langle A \rangle$ and no proper subset of $S$ has this property. It is well known that every numerical semigroup has a unique minimal set of generators, which is $A = S^* \setminus (S^* + S^*)$.
+
+## Examples
+
+$\circ$ Let $S = \langle 4, 7, 12, 23 \rangle$. We have $12 = 4 + 4 + 4$ and $23 = 4 + 7 + 12$, so $S = \langle 4, 7, 12, 23 \rangle = \langle 4, 7 \rangle$ and no proper subset of $B = \{4,7\}$ generates $S$, therefore, $B$ is the set of minimal generators.
+
+$\circ$ Let $S = \langle 8, 9, 12, 15 \rangle$ and $B = \{8, 9, 12, 15\}$. If we remove an element of $B$, this cannot be generated, and as a consequence, no proper subset of $B$ generates $S$. In conclusion, $B$ is already a minimal set of generators.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 15, 33, 42, 47, 48, 75, 89 \rangle$, in GAP:
+
+```{GAP}
+gap> S := NumericalSemigroup(15, 33, 42, 47, 48, 75, 89);
+
+<Numerical semigroup with 7 generators>
+
+```
+
+Note that $B = \{15, 33, 42, 47, 48, 75, 89\}$ is not a minimal set of generators, for example, $48 = 15 + 33$. The function `MinimalGenerators` returns the minimal set of generators of the numerical semigroup.
+
+```{GAP}
+gap> MinimalGenerators(S);
+
+[ 15, 33, 42, 47 ]
+```
+
+If we just want to know what system of generators has been used to generate $S$, the function `Generators` return the set of generators.
+
+```{GAP}
+gap> Generators(S);
+
+[ 15, 33, 42, 47, 48, 75, 89 ]
+
+```
+
+## References

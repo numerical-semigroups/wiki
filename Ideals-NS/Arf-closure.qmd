@@ -1,0 +1,23 @@
+---
+title: "Arf closure"
+format: html
+editor: visual
+execute: 
+  echo: false
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd).
+
+## Examples
+
+$\circ$ Let
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 11, 14, 20 \rangle$, $I = \{22, 45, 53\}$ and $K = I + S$, in GAP:
+
+## References

@@ -1,0 +1,80 @@
+---
+title: "Blowup"
+format: html
+editor: visual
+execute: 
+  echo: false
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd) and $E$ a [proper ideal](Proper-ideal.qmd) of $S$ with [multiplicity ideal](Multiplicity-ideal.qmd) $m(E)$ and [reduction number](Reduction-number.qmd) $r(E)$. It is defined the blowup of $E$ as the proper ideal $r(E)E - r(E)m(E)$. It is denoted by $\mathcal{B}(E)$.
+
+It can be proven that $r(E)E - r(E)m(E) = r(E)E - r(E)E$.
+
+## Examples
+
+$\circ$ Let $S = \langle 3, 5, 7 \rangle$, $I = \{2, 4\}$ and $E = I + S = \{2, 4, 5, 7, \rightarrow \}$. Clearly, $m(E) = 2$, then we are looking for the smaller $h \in \mathbb{N} \setminus \{0\}$ such that $(h+1)E = 2 + hE$. If we take $h = 1$,
+
+$$
+2E = E + E = \{4, 6, \rightarrow\} \ne \{4, 6, 7, 9, \rightarrow \} = 2 + E.
+$$
+
+For $h = 2$,
+
+$$
+3E = (E + E) + E = \{6, 8, \rightarrow\} = 2 + 2E
+$$
+
+To sum up, $r(E) = 2$ and the blowup of $E$ is $2E - 2E = \{0, 2, \rightarrow \}$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 16, 21, 30, 47 \rangle$, $I = \{37, 51, 102\}$ and $K = I + S$, in GAP:
+
+```{GAP}
+
+gap> S := NumericalSemigroup(16, 21, 30, 47);
+
+<Numerical semigroup with 4 generators>
+
+gap> I := [37, 51, 102];
+
+[ 37, 51, 102 ]
+
+gap> K := I + S;
+
+<Ideal of numerical semigroup>
+
+
+```
+
+The function `BlowUp` returns the blowup of a proper ideal.
+
+```{GAP}
+
+gap> L := BlowUp(K);
+
+<Ideal of numerical semigroup>
+
+  
+
+```
+
+Lets check it. The function `ReductionNumber` returns the reduction number of the proper ideal.
+
+```{GAP}
+
+gap> r := ReductionNumber(K);
+
+2
+
+gap> L = r*K - r*K;
+
+true
+
+```
+
+## References

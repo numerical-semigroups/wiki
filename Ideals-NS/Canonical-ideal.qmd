@@ -1,0 +1,51 @@
+---
+title: "Canonical ideal"
+format: html
+editor: visual
+execute: 
+  echo: false
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd) with [Frobenius number](./Basic-concepts/Frobenius-number.qmd) $F(S)$ and $E$ a [relative ideal](Relative-ideal.qmd) with [Frobenius number of the ideal](Frobenius-number-ideal.qmd) $F(E)$. It is said that $E$ is a canonical ideal if $\tilde{E} = K(S)$, where $\tilde{E} = E + F(S) - F(E)$ and $K(S)$ denotes the [standard canonical ideal](Standard-canonical-ideal.qmd) of $S$.
+
+## Examples
+
+$\circ$ Let $S = \langle 4, 5, 7 \rangle = \{0, 4, 5, 7, \rightarrow \}$ and $E = \{-15, -12, -11, -10, -8\} + S$. It is easy to check that $F(S) = 6$, $F(E) = -9$ and $K(S) = \{0, 3, 4, 5, 7, \rightarrow \}$, then $\tilde{E} = E + F(S) - F(E) = E + 15$. If $F(E) = -9$, $E = \{-15, -12, -11, -10, -8, \rightarrow\}$, so $\tilde{E} = \{0, 3, 4, 5, 7\} + S = K(S)$ and $E$ is a canonical ideal.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 30, 43, 45, 50 \rangle$, $I = {30, 135, 140, 267}$ and $K = I + S$, in GAP:
+
+```{GAP}
+
+gap> S := NumericalSemigroup(30, 43, 45, 50);
+
+<Numerical semigroup with 4 generators>
+
+gap> I := [30, 135, 140, 267];
+
+[ 30, 135, 140, 267 ]
+
+gap> K := I + S;
+
+<Ideal of numerical semigroup>
+
+```
+
+To check if a relative ideal is a canonical ideal, we can use the function `IsCanonicalIdeal`.
+
+```{GAP}
+
+gap> IsCanonicalIdeal(K);
+
+false
+
+```
+
+In this case, $S = K(S)$ (this happens if, and only if, $S$ is [symmetric](Families-NS/NS-Symmetric.qmd)).
+
+## References

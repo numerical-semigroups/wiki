@@ -1,0 +1,79 @@
+---
+title: "Fundamental gap"
+format: html
+editor: visual
+execute: 
+  echo: false
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and $G(S)$ the set formed by the [gaps](Gap.qmd) of $S$. A gap $g \in G(S)$ is a fundamental gap of $S$ if $\{2g, 3g\} \subseteq S$, or equivalently, for every $n \in \mathbb{N} \setminus \{0,1\}$, it holds that $ng \in S$. It is denoted by $FG(S)$ the set of fundamental gaps of $S$ and is always non-empty, due to $F(S) \in FG(S)$, where $F(S)$ is the [Frobenius number](Frobenius-number.qmd) of $S$.
+
+## Examples
+
+$\circ$ Let $S = \langle 4, 9, 10 \rangle = \{0, 4, 8, 9, 10, 12, 13, 14, 16, \rightarrow \}$. We have that $G(S) = \{1, 2, 3, 5, 6, 7, 11, 15\}$ and checking the condition for all gap of $S$, it is concluded that $FG(S) = \{6, 7, 11, 15\}$.
+
+$\circ$ Let $b \in \mathbb{N}$ an odd element arbitrary but fixed. The set $S = \langle 2, b \rangle$ is a numerical semigroup (note that if $n \ge b$, then $n \in S$) and the gaps of $S$ are $G(S) = \{1, 3, 5, 7, \ldots, b - 2\}$, in other words, all the odd naturals smaller than $b$. Now, a gap $x \in G(S)$ is fundamental if $\{2x,3x\} \subseteq S$, in this case, as $2 \in S$, then $2x \in S$ for all $x \in G(S)$, and $3x \in S$ if, and only if, $x \ge \lceil \frac{b}{3} \rceil$, therefore, $FG(S)$ consist in all the odd integers greater or equal to $\lceil \frac{b}{3} \rceil$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 4, 9, 10 \rangle$, in GAP:
+
+```{GAP}
+gap> S := NumericalSemigroup(4, 9, 10);
+
+<Numerical semigroup with 3 generators>
+
+```
+
+The function `FundamentalGaps` return all the fundamental gaps of $S$.
+
+```{GAP}
+gap> FundamentalGaps(S);
+
+[ 6, 7, 11, 15 ]
+
+```
+
+If we want to know all the gaps of $S$, then we have the function `Gaps`.
+
+```{GAP}
+gap> Gaps(S);
+
+[ 1, 2, 3, 5, 6, 7, 11, 15 ]
+
+```
+
+In this case, the fundamental gaps are the greatest of the set, but that does not hold for every numerical semigroup.
+
+$\diamond$ Let $S = \langle 5, 12, 18 \rangle$, in GAP:
+
+```{GAP}
+gap> S := NumericalSemigroup(5, 12, 18);
+
+<Numerical semigroup with 3 generators>
+
+```
+
+The gaps of $S$ are:
+
+```{GAP}
+gap> Gaps(S);
+
+[ 1, 2, 3, 4, 6, 7, 8, 9, 11, 13, 14, 16, 19, 21, 26, 31 ]
+
+```
+
+On the other hand, the fundamental gaps of $S$ are formed by:
+
+```{GAP}
+gap> FundamentalGaps(S);
+
+[ 6, 9, 11, 14, 16, 19, 21, 26, 31 ]
+
+```
+
+## References

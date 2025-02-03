@@ -1,0 +1,53 @@
+---
+title: "Multiplicity"
+format: html
+editor: visual
+execute:
+  echo: false
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd). We say that $s \in S$ is the multiplicity of $S$ if it is the smallest non-zero element of $S$, and it is denoted by $m(S)$. Equivalently, the multiplicity of $S$ is defined as the minimum of the [minimal generator system](Minimal-set-of-generators.qmd) of S.
+
+As simple results, the multiplicity is an upper bound of the [embedding dimension](Embedding-dimension.qmd) of $S$, a minimal generator and does not determine the numerical semigroup.
+
+## Examples
+
+$\circ$ Consider a non-zero $m \in \mathbb{N}$ arbitrary but fixed and $S = \{0, m, \rightarrow\}$. Obviously $m(S) = m$ This example shows that for any $n \in \mathbb{N} \setminus \{0\}$, there exists a numerical semigroup $S$ so that $m(S) = n$.
+
+$\circ$ Let $S_1 = \{0, 5, 7, 9, 10, 12, 14, \rightarrow \}$ and $S_2 = \{0, 5, \rightarrow\}$, obviously $m(S_1) = 5 = m(S_2)$ and $S_1 \ne S_2$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 3, 7, 9, 13 \rangle$, in GAP:
+
+```{GAP}
+
+gap> S := NumericalSemigroup(3, 7, 9, 13);
+
+<Numerical semigroup with 4 generators>
+
+```
+
+The function `Multiplicity` returns the multiplicity of a numerical semigroup.
+
+```{GAP}
+gap> Multiplicity(S);
+
+3
+```
+
+We can check if $m(S) = 3$ is a minimal generator with the function `MinimalGenerators`, which returns the set of minimal generators of the numerical semigroup.
+
+```{GAP}
+gap> MinimalGenerators(S);
+
+[3, 7]
+```
+
+We can also note that the number of minimal generators is less than the multiplicity.
+
+## References

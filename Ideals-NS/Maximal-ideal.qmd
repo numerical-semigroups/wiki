@@ -1,0 +1,47 @@
+---
+title: "Maximal-ideal"
+format: html
+editor: visual
+execute: 
+  echo: false
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd). It is defined the maximal ideal of $S$ as the subset $S^*$, and is usually denoted by $M(S)$. This definition is motivated by the definitions of [relative ideal](Relative-ideal.qmd) of $S$ and [proper ideal](Proper-ideal.qmd) of $S$.
+
+## Examples
+
+$\circ$ Let $S$ a numerical semigroup and $E$ a proper ideal of $S$. If $0 \in E$, then $S \subset S + E$, but if $E$ is an ideal of $S$, $S + E \subset E$ and $E = S$. Therefore, every ideal of $S$ is a subset of $S^*$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 13, 15, 20 \rangle$, in GAP:
+
+```{GAP}
+gap> S := NumericalSemigroup(13, 15, 20);
+
+<Numerical semigroup with 3 generators>
+
+```
+
+There are two ways to compute the maximal ideal of a numerical semigroup, these are with the functions `MaximalIdeal` and `MaximalIdealOfNumericalSemigroup`.
+
+```{GAP}
+gap> I := MaximalIdeal(S);
+
+<Ideal of numerical semigroup>
+
+gap> J := MaximalIdealOfNumericalSemigroup(S);
+
+<Ideal of numerical semigroup>
+
+gap> I = J;
+
+true
+
+```
+
+## References
