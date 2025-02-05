@@ -1,16 +1,14 @@
 ---
 title: "Pseudo Frobenius number"
 format: html
-editor: visual
-execute: 
-  echo: false
+engine: markdown
 ---
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd). We say that $x \in \mathbb{Z}$ is a pseudo-Frobenius number if $x \not \in S$ and $x + s \in S$ for all $s \in S^*$. The set formed by the pseudo-Frobenius numbers of $S$ is denoted by $PF(S)$.
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd). It is said that $x \in \mathbb{Z}$ is a pseudo-Frobenius number if $x \not \in S$ and $x + s \in S$ for all $s \in S^*$. The set formed by the pseudo-Frobenius numbers of $S$ is denoted by $PF(S)$.
 
-The set $PF(S)$ is always non-empty because $F(S) \in PF(S)$, where $F(S)$ is the [Frobenius number](Frobenius-number.qmd) of $S$. The cardinal of $PF(S)$ is the [type](Type.qmd) of $S$.
+The set $PF(S)$ is always non-empty since $F(S) \in PF(S)$, where $F(S)$ is the [Frobenius number](Frobenius-number.qmd) of $S$. The cardinal of $PF(S)$ is the [type](Type.qmd) of $S$.
 
 ## Examples
 
@@ -24,19 +22,25 @@ The following example is made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 7, 9, 10, 15, 20 \rangle$, in GAP:
 
-```{GAP}
+``` gap
 gap> S := NumericalSemigroup(7, 9, 10, 15, 20);
-
 <Numerical semigroup with 5 generators>
-
 ```
 
 In order to compute the pseudo-Frobenius numbers of $S$, we can apply the function `PseudoFrobenius`, which returns the set of pseudo-Frobenius numbers of the numerical semigroup.
 
-```{GAP}
+``` gap
 gap> PseudoFrobenius(S);
-
 [ 8, 11, 12, 13 ]
 ```
+
+On the other hand, the function `FrobeniusNumber` returns the Frobenius number of the numerical semigroup.
+
+``` gap
+gap> FrobeniusNumber(S); 
+13
+```
+
+It holds that for every numerical semigroup, $F(S) = \max PF(S)$.
 
 ## References

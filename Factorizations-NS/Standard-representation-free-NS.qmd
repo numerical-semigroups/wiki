@@ -1,14 +1,12 @@
 ---
 title: "Standard representation in a free Numerical semigroup"
 format: html
-editor: visual
-execute: 
-  echo: false
+engine: markdown
 ---
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd). The definition of standard representation in a [free](./Families-NS/NS-free.qmd) numerical semigroup comes from the following result.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). The definition of standard representation in a [free](../Families-NS/NS-free.qmd) numerical semigroup comes from the following result.
 
 $\textbf{Proposition}$: Assume that $S$ is free for the arrangement $(r_0, r_1, \ldots, r_h)$, and let $x \in \mathbb{Z}$. There exist unique $\lambda_0, \lambda_1, \ldots, \lambda_h \in \mathbb{Z}$ such that the following holds.
 
@@ -20,7 +18,7 @@ It is defined the standard representation of an integer $x \in \mathbb{Z}$ an ex
 
 ## Examples
 
-$\circ$ Consider the free numerical semigroup $S = \langle 4, 6, 9 \rangle$ and the integer $x = 27$. The unique ways to generate $x$ from the set $B = \{4, 6, 7\}$ are with the coefficients $a_1 = (3, 1, 1), a_2 = (0, 3, 1)$ and $a_3 = (0, 0, 3)$. We have, $d_1 = r_0 = 4$, $d_2 = gcd(d_1, r_1) = gcd(4, 6) = 2$, $d_3 = gcd(d_2, r_2) = gcd(2, 9) = 1$, $e_1 = \frac{d_1}{d_2} = 2, e_2 = \frac{d_2}{d_3} = 2$. Checking the second condition for every $a_i$ with $i = 1,2,3$, it holds that the standard representation of $x = 27$ with respect to $S$ is $(3, 1, 1)$.
+$\circ$ Consider the free numerical semigroup $S = \langle 4, 6, 9 \rangle$ and the integer $x = 27$. The unique ways to generate $x$ from the set $B = \{4, 6, 7\}$ are with the coefficients $a_1 = (3, 1, 1), a_2 = (0, 3, 1)$ and $a_3 = (0, 0, 3)$. We have, $d_1 = r_0 = 4$, $d_2 = gcd(d_1, r_1) = gcd(4, 6) = 2$, $d_3 = gcd(d_2, r_2) = gcd(2, 9) = 1$, $e_1 = \frac{d_1}{d_2} = 2, e_2 = \frac{d_2}{d_3} = 2$. Checking the second condition on each $a_i$ with $i = 1,2,3$, it holds that the standard representation of $x = 27$ with respect to $S$ is $(3, 1, 1)$.
 
 ## Examples with GAP
 
@@ -28,50 +26,34 @@ The following example is made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 17, 46, 70 \rangle$, in GAP:
 
-```{GAP}
+``` gap
 gap> S := NumericalSemigroup(17, 46, 70);
-
 <Numerical semigroup with 3 generators>
-
 ```
 
 The function `FactorizationsIntegerWRTList` has as a parameters an integer $n$ and a list of integers $Is$, and returns the set of factorization in terms of the elements in $Is$.
 
-```{GAP}
+``` gap
 gap> FactorizationsIntegerWRTList(315, [15, 22, 30]);
-
 [ [ 21, 0, 0 ], [ 19, 0, 1 ], [ 17, 0, 2 ], [ 15, 0, 3 ], [ 13, 0, 4 ], [ 11, 0, 5 ], [ 9, 0, 6 ], [ 7, 0, 7 ],
   [ 5, 0, 8 ], [ 3, 0, 9 ], [ 1, 0, 10 ] ]
-
-
 ```
 
-In the case we are interested in a numerical semigroup, the function `Factorizations` returns the set of factorization of an integer $n$ in terms of the [minimal generators](./Basic-concepts/Minimal-set-of-generators.qmd) of the numerical semigroup $S$.
+In the case we are interested in a numerical semigroup, the function `Factorizations` returns the set of factorization of an integer $n$ in terms of the [minimal generators](../Basic-concepts/Minimal-set-of-generators.qmd) of the numerical semigroup $S$.
 
-```{GAP}
-
+``` gap
 gap> Factorizations(315, S);
-
 [ [ 5, 5, 0 ], [ 9, 2, 1 ] ]
-
 gap> Factorizations(S, 315);
-
 [ [ 5, 5, 0 ], [ 9, 2, 1 ] ]
-
-
 ```
 
 For the case we need the factorization of a list of integers, it is applied the function `FactorizationsElementListWRTNumericalSemigroup`.
 
-```{GAP}
-
+``` gap
 gap> FactorizationsElementListWRTNumericalSemigroup([315, 420, 710], S);
-
-
 [ [ [ 5, 5, 0 ], [ 9, 2, 1 ] ], [ [ 0, 0, 6 ], [ 22, 1, 0 ] ],
   [ [ 2, 1, 9 ], [ 12, 11, 0 ], [ 16, 8, 1 ], [ 20, 5, 2 ], [ 24, 2, 3 ] ] ]
-
-
 ```
 
 ## References

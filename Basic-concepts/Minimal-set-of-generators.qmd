@@ -1,9 +1,7 @@
 ---
 title: "Minimal set of generators"
 format: html
-editor: visual
-execute: 
-  echo: false
+engine: markdown
 ---
 
 ## Definition
@@ -22,28 +20,23 @@ The following example is made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 15, 33, 42, 47, 48, 75, 89 \rangle$, in GAP:
 
-```{GAP}
+``` gap
 gap> S := NumericalSemigroup(15, 33, 42, 47, 48, 75, 89);
-
 <Numerical semigroup with 7 generators>
-
 ```
 
 Note that $B = \{15, 33, 42, 47, 48, 75, 89\}$ is not a minimal set of generators, for example, $48 = 15 + 33$. The function `MinimalGenerators` returns the minimal set of generators of the numerical semigroup.
 
-```{GAP}
+``` gap
 gap> MinimalGenerators(S);
-
 [ 15, 33, 42, 47 ]
 ```
 
 If we just want to know what system of generators has been used to generate $S$, the function `Generators` return the set of generators.
 
-```{GAP}
+``` gap
 gap> Generators(S);
-
 [ 15, 33, 42, 47, 48, 75, 89 ]
-
 ```
 
 ## References

@@ -1,9 +1,7 @@
 ---
 title: "Gap"
 format: html
-editor: visual
-execute: 
-  echo: false
+engine: markdown
 ---
 
 ## Definition
@@ -12,9 +10,9 @@ Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd). By definition, the 
 
 ## Examples
 
-$\circ$ Let $S = \langle 4, 9, 10 \rangle$. If we compute the first elements of $S$, we arrive that $S = \{0, 4, 8, 9, 10, 12, 13, 14, 16, \rightarrow \}$, then $G(S) = \mathbb{N} \setminus S = \mathbb{N} \setminus \{0, 4, 8, 9, 10, 12, 13, 14, 16\}$ and $G(S) = \{1, 2, 3, 5, 6, 7, 11, 15\}$.
+$\circ$ Let $S = \langle 4, 9, 10 \rangle$. If we compute the first elements of $S$, we arrive that $S = \{0, 4, 8, 9, 10, 12, 13, 14, 16, \rightarrow \}$, then $G(S) = \mathbb{N} \setminus S = \{1, 2, 3, 5, 6, 7, 11, 15\}$.
 
-$\circ$ Let $b \in \mathbb{N}$ an odd element arbitrary but fixed. The set $S = \langle 2, b \rangle$ is a numerical semigroup (note that if $n \ge b$, then $n \in S$) and the gaps of $S$ are $G(S) = \{1, 3, 5, 7, \ldots, b - 2\}$, in other words, all the odd naturals smaller than $b$.
+$\circ$ Let us consider $b \in \mathbb{N}$ an odd element arbitrary but fixed. The set $S = \langle 2, b \rangle$ is a numerical semigroup (note that if $n \ge b$, then $n \in S$) and the gaps of $S$ are $G(S) = \{1, 3, 5, 7, \ldots, b - 2\}$, in other words, all the odd naturals smaller than $b$.
 
 ## Examples with GAP
 
@@ -22,29 +20,23 @@ The following example is made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 5, 23, 24, 33, 34 \rangle$, in GAP:
 
-```{GAP}
+``` gap
 gap> S := NumericalSemigroup(5, 23, 24, 33, 34);
-
 <Numerical semigroup with 5 generators>
-
 ```
 
 To compute the set of gaps of $S$ we can apply the function `Gaps`.
 
-```{GAP}
+``` gap
 gap> Gaps(S);
-
 [ 1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 21, 22, 26, 27, 31, 32, 36, 37, 41, 42 ]
-
 ```
 
-Note that if we know all the elements between $0$ and $F(S)+1$ that belongs to $S$, where $F(S)$ denote the Frobenius number of $S$, then we also know the gaps of $S$, in GAP, we can compute it with the function `SmallElements`:
+Note that if we know all the elements between $0$ and $F(S)+1$ that belongs to $S$, where $F(S)$ denote the Frobenius number of $S$, then we also know the gaps of $S$. In GAP, we can compute it with the function `SmallElements`, which returns the set formed by the [left elements](Left-elements.qmd) of $S$ and the [conductor](Conductor.qmd) of $S$.
 
-```{GAP}
+``` gap
 gap> SmallElements(S);
-
 [ 0, 5, 10, 15, 20, 23, 24, 25, 28, 29, 30, 33, 34, 35, 38, 39, 40, 43 ]
-
 ```
 
 ## References

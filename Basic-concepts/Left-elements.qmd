@@ -1,9 +1,7 @@
 ---
 title: "Left Elements"
 format: html
-editor: visual
-execute: 
-  echo: false
+engine: markdown
 ---
 
 ## Definition
@@ -14,9 +12,9 @@ The set of left elements is always non-empty, due to $0 \in N(S)$, and determine
 
 ## Examples
 
-$\circ$ Let $S = \langle 3, 8, 10 \rangle$. We have that $6 = 3 + 3 \in S$ and since we have $8,9,10 \in S$, adding $3$ to each number, we have that for $n \ge 8$, it holds $n \in S$ and $7 \not \in S$, so the Frobenius number is $F(S) = 7$ and the set of left elements is $N(S) = \{0, 3, 6\}$.
+$\circ$ Let $S = \langle 3, 8, 10 \rangle$. We have that $6 = 3 + 3 \in S$ and since $8,9,10 \in S$, adding $3$ to each number, we have that for $n \ge 8$, it holds $n \in S$ and $7 \not \in S$, so the Frobenius number is $F(S) = 7$ and the set of left elements is $N(S) = \{0, 3, 6\}$.
 
-$\circ$ Let $b \in \mathbb{N}$ an odd integer arbitrary but fixed and $S = \langle 2, b \rangle$. Note that for $n \ge b-1$, we have that $n \in S$ and $b-2 \not \in S$, thus the Frobenius number is $F(S) = b-2$ and the set of left elements is $N(S) = \{0, 2, 4, \ldots, b-3\}$, in other words, the even elements between $0$ and $b-2$.
+$\circ$ Let us consider $b \in \mathbb{N}$ an odd integer arbitrary but fixed and $S = \langle 2, b \rangle$. Note that for $n \ge b-1$, it holds $n \in S$ and $b-2 \not \in S$, thus the Frobenius number is $F(S) = b-2$ and the set of left elements is $N(S) = \{0, 2, 4, \ldots, b-3\}$, in other words, the even elements between $0$ and $b-2$.
 
 ## Examples with GAP
 
@@ -24,30 +22,23 @@ The following example is made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 4, 13, 17, 20 \rangle$, in GAP:
 
-```{GAP}
+``` gap
 gap> S := NumericalSemigroup(4, 13, 17, 20);
-
 <Numerical semigroup with 4 generators>
-
 ```
 
-If we want to compute the left elements of $S$, the function `SmallElements` returns a list with the left elements and the conductor of $S$.
+If we want to compute the left elements of $S$, the function `SmallElements` returns a list with the left elements and the [conductor](Conductor.qmd) of $S$.
 
-```{GAP}
+``` gap
 gap> SmallElements(S);
-
 [ 0, 4, 8, 12, 13, 16, 17, 20, 21, 24, 25, 26, 28, 29, 30, 32, 33, 34, 36 ]
-
 ```
 
 Obviously, the conductor is the greatest element of the list, in this case, $C(S) = 36$. Another way to know the left elements of $S$ is from the function `Gaps`, which returns the [gaps](Gap.qmd) of $S$. If $G(S)$ is the set of gaps, therefore $N(S) = \{0, 1, 2, \ldots, F(S)-1\} \setminus G(S)$.
 
-```{GAP}
-
+``` gap
 gap> Gaps(S);
-
 [ 1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 15, 18, 19, 22, 23, 27, 31, 35 ]
-
 ```
 
 ## References
