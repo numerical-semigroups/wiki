@@ -1,20 +1,18 @@
 ---
 title: "Maximum sparse ideal"
 format: html
-editor: visual
-execute: 
-  echo: false
+engine: markdown
 ---
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd) with [genus](./Basic-concepts/Genus.qmd) and [Frobenius number](./Basic-concepts/Frobenius-number.qmd) $F(S)$, $E$ a [proper ideal](Proper-ideal.qmd) of $S$ with [Frobenius number ideal](Frobenius-number-ideal.qmd) $F(E)$. It is said that $E$ is a maximum sparse ideal if satisfies the equality $F(E) = 2g(S) - 1 + |S \setminus E|$.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) with [genus](../Basic-concepts/Genus.qmd) $g(S)$ and [Frobenius number](../Basic-concepts/Frobenius-number.qmd) $F(S)$, and let $E$ be a [proper ideal](Proper-ideal.qmd) of $S$ with [Frobenius number ideal](Frobenius-number-ideal.qmd) $F(E)$. It is said that $E$ is a maximum sparse ideal if satisfies the equality $F(E) = 2g(S) - 1 + |S \setminus E|$.
 
-If the [multiplicity](Multiplicity-ideal.qmd) of the relative ideal is denoted by $m(E)$, it can be proven that the equality is equivalent to $F(S) + 1 - g(S) = g(\tilde{E}) + m(\tilde{E})$, where $\tilde{E} = E + F(S) - F(E)$.
+If the [multiplicity of a relative ideal](Multiplicity-ideal.qmd) is denoted by $m(E)$ and the [genus of a relative ideal](Genus-ideal.qmd) by $g(E)$, it can be proven that the equality is equivalent to $F(S) + 1 - g(S) = g(\tilde{E}) + m(\tilde{E})$, where $\tilde{E} = E + F(S) - F(E)$.
 
 ## Examples
 
-$\circ$ Let $S = \langle 4, 9 \rangle$ and the proper ideal $E = \{F(S) + 1, \rightarrow \}$ (in fact, is the [conductor ideal](Conductor-ideal.qmd) of $S$). In this case, $E = \tilde{E}$, and is easy to check that $F(S) = F(E) = 11, g(S) = 6, g(E) = 0$ and $m(E) = F(S) + 1$, then $F(S) + 1 - g(S) = 6 < 12 = m(E)$, then $E$ is not a maximum sparse ideal.
+$\circ$ Let $S = \langle 4, 9 \rangle$ and the proper ideal $E = \{F(S) + 1, \rightarrow \}$ (in fact, is the [conductor ideal](Conductor-ideal.qmd) of $S$). In this case, $E = \tilde{E}$, and is easy to check that $F(S) = F(E) = 11, g(S) = 6, g(E) = 0$ and $m(E) = F(S) + 1$, then $F(S) + 1 - g(S) = 6 < 12 = m(E)$, thus $E$ is not a maximum sparse ideal.
 
 $\circ$ Let $S$ a numerical semigroup and $K(S)$ the [standard canonical ideal](Standard-canonical-ideal.qmd) of $S$. The integer $g(K) + m(K)$ is the number of elements in $\mathbb{N} \setminus K$ since $m(K)$ is a non-negative integer. Furthermore, $F(S) + 1 - g(S)$ is the number of elements $s \in S$ such that $s \le F(S) + 1$. By the bijection $\{0, 1, \ldots, F(S) + 1\} \cap S \to \mathbb{N} \setminus K$ defined by $s \to F(S) - s$, we have the equality $F(S) + 1 - g(S) = m(K) + g(K)$. To sum up, $K(S)$ is always a maximum sparse ideal of $S$.
 

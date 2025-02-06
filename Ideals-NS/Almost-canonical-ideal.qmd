@@ -1,18 +1,16 @@
 ---
 title: "Almost canonical ideal"
 format: html
-editor: visual
-execute: 
-  echo: false
+engine: markdown
 ---
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd) with [Frobenius number](./Basic-concepts/Frobenius-number.qmd) $F(S)$ and [genus](./Basic-concepts/Genus.qmd) $g(S)$, and $E$ a [proper ideal](Ideals-NS/Proper-ideal.qmd) with [Frobenius number ideal](Ideals-and-numerical-semigroups/Frobenius-number-ideal.qmd) $F(E)$ and [type ideal](Ideals-NS/Type-ideal.qmd) $t(E)$. If $\tilde{E} = E + F(S) - F(E)$, it is said that $E$ is an almost canonical ideal if $g(\tilde{E}) + m(\tilde{E}) = F(S) - g(S) + t(E)$, where $g(\tilde{E})$ and $m(\tilde{E})$ refers to the [genus of an ideal](Ideals-NS/Genus-ideal.qmd) and the [multiplicity of an ideal](Ideals-NS/Multiplicity-ideal.qmd), respectively.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) with [Frobenius number](../Basic-concepts/Frobenius-number.qmd) $F(S)$ and [genus](../Basic-concepts/Genus.qmd) $g(S)$, and let $E$ be a [proper ideal](Proper-ideal.qmd) with [Frobenius number ideal](Frobenius-number-ideal.qmd) $F(E)$ and [type ideal](Type-ideal.qmd) $t(E)$. If $\tilde{E} = E + F(S) - F(E)$, it is said that $E$ is an almost canonical ideal if $g(\tilde{E}) + m(\tilde{E}) = F(S) - g(S) + t(E)$, where $g(\tilde{E})$ and $m(\tilde{E})$ refers to the [genus of an ideal](Genus-ideal.qmd) and the [multiplicity of an ideal](Multiplicity-ideal.qmd), respectively.
 
 ## Examples
 
-$\circ$ Let $S = \langle 5, 7, 9 \rangle = \{0, 5, 7, 9, 10, 12, 14, \rightarrow \}$ and $E = \{10, 12, 14\} + S$. With simple calculations it is obtained that $E \subseteq S$ (is a proper ideal), $F(S) = 13, g(S) = 8$, $F(E) = 18$ and type $t(E) = 3$. On the other hand, $\tilde{E} = E + F(S) - F(E) = E - 5$, $g(\tilde{E}) = 6$ and $m(\tilde{E}) = 5$, finally, $F(S) - g(S) + t(E) = 13 - 8 + 3 = 8 \ne 11 = g(\tilde{E}) + m(\tilde{E})$. To sum up, $E$ is not an almost canonical ideal.
+$\circ$ Let $S = \langle 5, 7, 9 \rangle = \{0, 5, 7, 9, 10, 12, 14, \rightarrow \}$ and $E = \{10, 12, 14\} + S$. With simple calculations it is obtained that $E \subseteq S$ (is a proper ideal), $F(S) = 13, g(S) = 8$, $F(E) = 18$ and $t(E) = 3$. On the other hand, $\tilde{E} = E + F(S) - F(E) = E - 5$, $g(\tilde{E}) = 6$ and $m(\tilde{E}) = 5$. Finally, $F(S) - g(S) + t(E) = 13 - 8 + 3 = 8 \ne 11 = g(\tilde{E}) + m(\tilde{E})$. To sum up, $E$ is not an almost canonical ideal.
 
 ## Examples with GAP
 
@@ -20,30 +18,20 @@ The following example is made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 30, 43, 45, 50 \rangle$, $I = \{30, 135, 140, 267\}$ and $K = I + S$, in GAP:
 
-```{GAP}
-
+``` gap
 gap> S := NumericalSemigroup(30, 43, 45, 50);
-
 <Numerical semigroup with 4 generators>
-
 gap> I := [30, 135, 140, 267];
-
 [ 30, 135, 140, 267 ]
-
 gap> K := I + S;
-
 <Ideal of numerical semigroup>
-
 ```
 
 To check if a proper ideal is almost canonical, we can use the function `IsAlmostCanonical`.
 
-```{GAP}
-
+``` gap
 gap> IsAlmostCanonical(K);
-
 false
-
 ```
 
 ## References

@@ -10,7 +10,7 @@ Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and $PF(S)$ the set 
 
 ## Examples
 
-$\circ$ Let $S = \langle 4, 6, 9, 13 \rangle = \{0, 4, 6, 8, 9, 10, 12, \rightarrow \}$, lets compute the pseudo-Frobenius numbers of $S$. The positive integers that do not belong to $S$ are $\mathbb{N} \setminus S = \{1,2,3,5,7,11\}$ and as $4 \in S$, the candidates for pseudo-Frobenius numbers belongs to the set $\{-4, -3, -2, -1, 1,2,3,5,7,11 \}$. Checking the condition of pseudo-Frobenius number on every candidate, it is conclude that $PF(S) = \{11\}$ and $t(S) = 1$.
+$\circ$ Let $S = \langle 4, 6, 9, 13 \rangle = \{0, 4, 6, 8, 9, 10, 12, \rightarrow \}$, let's compute the pseudo-Frobenius numbers of $S$. The positive integers that do not belong to $S$ are $\mathbb{N} \setminus S = \{1,2,3,5,7,11\}$ and as $4 \in S$, the candidates for pseudo-Frobenius numbers belongs to the set $\{-4, -3, -2, -1, 1,2,3,5,7,11 \}$. Checking the condition of pseudo-Frobenius number on every candidate, it is conclude that $PF(S) = \{11\}$ and $t(S) = 1$.
 
 $\circ$ The type of a numerical semigroup is $1$ if, and only if, $2g(S) = C(S)$, where $g(S)$ is the [genus](Genus.qmd) of $S$ and $C(S)$ the [conductor](Conductor.qmd) of $S$.
 

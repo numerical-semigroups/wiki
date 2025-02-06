@@ -18,25 +18,25 @@ $\circ$ Let us consider $b \in \mathbb{N}$ an odd element arbitrary but fixed. T
 
 The following example is made with the package NumericalSgps in GAP.
 
-$\diamond$ Let $S = \langle 4, 9, 10 \rangle$, in GAP:
+$\diamond$ Let $S = \langle 8, 12, 14, 15, 25 \rangle$, in GAP:
 
 ``` gap
-gap> S := NumericalSemigroup(4, 9, 10);
-<Numerical semigroup with 3 generators>
+gap> S := NumericalSemigroup(8, 12, 14, 15, 25);
+<Numerical semigroup with 5 generators>
 ```
 
-The function `FundamentalGaps` return all the fundamental gaps of $S$.
+The function `FundamentalGaps` returns the set formed by the fundamental gaps of $S$.
 
 ``` gap
 gap> FundamentalGaps(S);
-[ 6, 7, 11, 15 ]
+[ 4, 10, 11, 13, 17, 18, 19, 21 ]
 ```
 
 If we want to know all the gaps of $S$, then we have the function `Gaps`.
 
 ``` gap
 gap> Gaps(S);
-[ 1, 2, 3, 5, 6, 7, 11, 15 ]
+[ 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 13, 17, 18, 19, 21 ]
 ```
 
 In this case, the fundamental gaps are the greatest of the set, but that does not hold for every numerical semigroup.

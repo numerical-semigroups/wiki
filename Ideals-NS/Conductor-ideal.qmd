@@ -1,14 +1,12 @@
 ---
 title: "Conductor ideal"
 format: html
-editor: visual
-execute: 
-  echo: false
+engine: markdown
 ---
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd). It is defined the conductor ideal of $S$ as the set $S - \mathbb{N} = \{z \in \mathbb{Z} ~ | ~ z + \mathbb{N} \subseteq S \}$. Equivalently, the conductor ideal of $S$ is defined as the numerical semigroup $S - \mathbb{N} = \{C(S), \rightarrow \}$, where $C(S)$ denotes the [conductor](./Basic-concepts/Conductor.qmd) of $S$.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is defined the conductor ideal of $S$ as the set $S - \mathbb{N} = \{z \in \mathbb{Z} ~ | ~ z + \mathbb{N} \subseteq S \}$. Equivalently, the conductor ideal of $S$ is defined as the numerical semigroup $S - \mathbb{N} = \{C(S), \rightarrow \}$, where $C(S)$ denotes the [conductor](../Basic-concepts/Conductor.qmd) of $S$.
 
 ## Examples
 
@@ -20,34 +18,22 @@ The following example is made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 13, 15, 20 \rangle$, $I = \{8, 9, \ldots, 15\}$ and $K = I + S$, in GAP:
 
-```{GAP}
+``` gap
 gap> S := NumericalSemigroup(13, 15, 20);
-
 <Numerical semigroup with 3 generators>
-
 gap> I := [8..15];
-
 [ 8 .. 15 ]
-
 gap> K := I + S;
-
 <Ideal of numerical semigroup>
-
-
 ```
 
-There are two ways to compute the conductor of a numerical semigroup from the relative ideal, these are with the functions `Conductor` and `ConductorOfIdealOfNumericalSemigroup`.
+There are two ways to compute the conductor of a numerical semigroup from the relative ideal, these are with the functions `Conductor` and `ConductorOfIdealOfNumericalSemigroup`. The function `Conductor` also computes the conductor of a numerical semigroup.
 
-```{GAP}
-
+``` gap
 gap> Conductor(K);
-
 21
-
 gap> ConductorOfNumericalSemigroup(K);
-
 21
-
 ```
 
 Therefore the conductor ideal of $K = I + S$ is $K - \mathbb{N} = \{21, \rightarrow\}$.

@@ -1,20 +1,24 @@
 ---
 title: "Irreducible numerical semigroup"
 format: html
-editor: visual
-execute: 
-  echo: false
+engine: markdown
 ---
 
 ## Definition
 
-A [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd) $S$ is irreducible if it cannot be expressed as the intersection of two numerical semigroups properly containing it.
+A [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) $S$ is said to be irreducible if it cannot be expressed as the intersection of two numerical semigroups properly containing it.
 
 It is well known that the intersection of two numerical semigroups is also a numerical semigroup.
 
 ## Examples
 
-$\circ$ Let $S = \langle 5, 7, 9 \rangle$ and the numerical semigroups $S_1 = \langle 5, 7, 8, 9 \rangle$ and $S_2 = \langle 5, 7, 9, 11 \rangle$. Clearly, $S \subsetneq S_1$, $S \subsetneq S_2$ and $S = S_1 \cap S_2$, because $S_1 = S \cup \{8, 13\}$ and $S_2 = S \cup \{11\}$.
+$\circ$ Let $S = \langle 5, 7, 9 \rangle$ and the numerical semigroups $S_1 = \langle 5, 7, 8, 9 \rangle$ and $S_2 = \langle 5, 7, 9, 11 \rangle$. Clearly, $S \subsetneq S_1$, $S \subsetneq S_2$ and $S = S_1 \cap S_2$, since $S_1 = S \cup \{8, 13\}$ and $S_2 = S \cup \{11\}$.
+
+$\circ$ Let $S = \langle 2, 7 \rangle = \{0, 2, 4, 6, \rightarrow \}$, let's prove that $S$ is irreducible. Let us consider the set of [oversemigroups](../Basic-concepts/Oversemigroups.qmd) of $S$,
+
+$$
+\mathcal{O}(S) = \{\mathbb{N}, \{0, 2, \rightarrow\}, \{0, 2, 4, \rightarrow\}, S\} = \{\mathbb{N}, S \cup \{3, 5\}, S \cup \{5\}, S\} = \{\mathbb{N}, T_1, T_2, S\}.
+$$ If $S$ is not irreducible, the only possibility is $S = T_1 \cap T_2$, but $T_1 \cap T_2 = S \cup \{5\} \ne S$, therefore $S$ is irreducible.
 
 ## Examples with GAP
 
@@ -22,39 +26,30 @@ The following examples are made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 4, 10, 17 \rangle$, in GAP:
 
-```{GAP}
+``` gap
 gap> S := NumericalSemigroup(4, 10, 17);
-
 <Numerical semigroup with 3 generators>
-
 ```
 
 We can check if $S$ is irreducible numerical semigroup with the function `IsIrreducible`.
 
-```{GAP}
+``` gap
 gap> IsIrreducible(S);
-
 true
-
-
 ```
 
 $\diamond$ The function `IrreducibleNumericalSemigroupsWithFrobeniusNumber` returns the set of all irreducible numerical semigroups with fixed Frobenius number $f$.
 
-```{GAP}
+``` gap
 gap> Length(IrreducibleNumericalSemigroupsWithFrobeniusNumber(16));
-
 7
-
 ```
 
 We can also fix the multiplicity with the function `IrreducibleNumericalSemigroupsWithFrobeniusNumberAndMultiplicity`.
 
-```{GAP}
+``` gap
 gap> Length(IrreducibleNumericalSemigroupsWithFrobeniusNumberAndMultiplicity(16, 3));
-
 1
-
 ```
 
 ## References

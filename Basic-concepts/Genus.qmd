@@ -8,7 +8,7 @@ engine: markdown
 
 Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd). By definition of numerical semigroup, the set $\mathbb{N} \setminus S$, usually denoted by $G(S)$, is finite. It is defined the genus of $S$ as the cardinal of the set $|\mathbb{N} \setminus S|$, and it is denoted by $g(S)$.
 
-If $n(S)$ is the cardinal of the set formed by the [left elements](Left-elements.qmd) of $S$, and $C(S)$ is the [conductor](Conductor.qmd) of $S$, it is easy to see the relation $n(S) + g(S) = C(S)$.
+If $n(S)$ is the cardinal of the set formed by the [left elements](Left-elements.qmd) of $S$, and $C(S)$ is the [conductor](Conductor.qmd) of $S$, it is deduced the relation $n(S) + g(S) = C(S)$.
 
 ## Examples
 

@@ -1,14 +1,12 @@
 ---
 title: "Blowup"
 format: html
-editor: visual
-execute: 
-  echo: false
+engine: markdown
 ---
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd) and $E$ a [proper ideal](Proper-ideal.qmd) of $S$ with [multiplicity ideal](Multiplicity-ideal.qmd) $m(E)$ and [reduction number](Reduction-number.qmd) $r(E)$. It is defined the blowup of $E$ as the proper ideal $r(E)E - r(E)m(E)$. It is denoted by $\mathcal{B}(E)$.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $E$ be a [proper ideal](Proper-ideal.qmd) of $S$ with [multiplicity ideal](Multiplicity-ideal.qmd) $m(E)$ and [reduction number](Reduction-number.qmd) $r(E)$. It is defined the blowup of $E$ as the proper ideal $r(E)E - r(E)m(E)$. It is denoted by $\mathcal{B}(E)$.
 
 It can be proven that $r(E)E - r(E)m(E) = r(E)E - r(E)E$.
 
@@ -34,47 +32,29 @@ The following example is made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 16, 21, 30, 47 \rangle$, $I = \{37, 51, 102\}$ and $K = I + S$, in GAP:
 
-```{GAP}
-
+``` gap
 gap> S := NumericalSemigroup(16, 21, 30, 47);
-
 <Numerical semigroup with 4 generators>
-
 gap> I := [37, 51, 102];
-
 [ 37, 51, 102 ]
-
 gap> K := I + S;
-
 <Ideal of numerical semigroup>
-
-
 ```
 
 The function `BlowUp` returns the blowup of a proper ideal.
 
-```{GAP}
-
+``` gap
 gap> L := BlowUp(K);
-
 <Ideal of numerical semigroup>
-
-  
-
 ```
 
-Lets check it. The function `ReductionNumber` returns the reduction number of the proper ideal.
+Let's check it. The function `ReductionNumber` returns the reduction number of the proper ideal.
 
-```{GAP}
-
+```         
 gap> r := ReductionNumber(K);
-
 2
-
 gap> L = r*K - r*K;
-
 true
-
 ```
 
 ## References

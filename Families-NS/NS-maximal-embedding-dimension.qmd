@@ -6,19 +6,19 @@ engine: markdown
 
 ## Definition
 
-Let $S$ a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), $e(S)$ the [embedding dimension](./Basic-concepts/Embedding-dimension.qmd) and $m(S)$ the [multiplicity](./Basic-concepts/Multiplicity.qmd) of $S$. Then, $S$ is a numerical semigroup with maximal embedding dimension if $e(S) = m(S)$.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), $e(S)$ the [embedding dimension](../Basic-concepts/Embedding-dimension.qmd) and $m(S)$ the [multiplicity](../Basic-concepts/Multiplicity.qmd) of $S$. Then, it is said that $S$ is a numerical semigroup with maximal embedding dimension if $e(S) = m(S)$.
 
-It is well known that for every numerical semigroup, it holds the equality $e(S) \le m(S)$.
+It is well known that for every numerical semigroup, it holds the inequality $e(S) \le m(S)$.
 
 ## Examples
 
 $\circ$ Let $S = \langle 3, 8 \rangle$. Clearly, $m(S) = 3$ and $e(S) = 2$, thus $S$ does not have maximal embedding dimension.
 
-$\circ$ Let $a,b \in \mathbb{N}$ with $gcd(a,b) = 1$ and $S = \langle a, a+1, a+2, \ldots, a+b \rangle$. By construction of $S$, $m(S) = a$. To compute $e(S)$, we divide into cases:
+$\circ$ Let us consider $a,b \in \mathbb{N}$ with $gcd(a,b) = 1$ and $S = \langle a, a+1, a+2, \ldots, a+b \rangle$. By construction of $S$, $m(S) = a$. To compute $e(S)$, we divide into cases:
 
--   If $a = b$, then $B = {a, a+1, \ldots, 2a - 1}$ is the [minimal set of generators](./Basic-concepts/Minimal-set-of-generators.qmd) of $S$ and $e(S) = a$, therefore $S$ has maximal embedding dimension.
+-   If $a = b$, then $B = {a, a+1, \ldots, 2a - 1}$ is the [minimal set of generators](../Basic-concepts/Minimal-set-of-generators.qmd) of $S$ and $e(S) = a$, therefore $S$ has maximal embedding dimension.
 
--   If $a \ne b$, then $B = \{a, a+1, \ldots, a+b\}$ is the minimal set of generators of $S$ and $e(S) = b$. In conclusion, $S$ does not have maximal embedding dimension.
+-   If $a \ne b$, then $B = \{a, a+1, \ldots, a+b\}$ is the minimal set of generators of $S$, $e(S) = b$ and $S$ does not have maximal embedding dimension.
 
 ## Examples with GAP
 
@@ -26,35 +26,25 @@ The following example is made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 4, 15, 20, 21, 22, 30, 31, 38 \rangle$, in GAP:
 
-```gap
+``` gap
 gap> S := NumericalSemigroup(4, 15, 20, 21, 22, 30, 31, 38);
 <Numerical semigroup with 8 generators>
 ```
 
 To check if $S$ has maximal embedding dimension, we need to compute the embedding dimension and the multiplicity of $S$. The function `EmbeddingDimension` returns the embedding dimension of a numerical semigroup.
 
-```gap
+``` gap
 gap> EmbeddingDimension(S);
 4
 ```
 
 Now, the function `Multiplicity` returns the multiplicity of $S$.
 
-```gap
+``` gap
 gap> Multiplicity(S);
 4
 ```
 
 Therefore, $S$ has maximal embedding dimension.
 
-
 ## References
-
-
-
-
-
-
-
-
-

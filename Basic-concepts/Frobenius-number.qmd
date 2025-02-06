@@ -12,7 +12,7 @@ There is a obvious relation between the [conductor](Conductor.qmd) and the Frobe
 
 ## Examples
 
-$\circ$ Let us consider a non-zero $m \in \mathbb{N}$ arbitrary but fixed and $S = \{0, m, \rightarrow\}$. Obviously, $F(S) = m-1$ and in this case every element of $S \setminus \{0\}$ is greater than the Frobenius number. This type of numerical semigroups are the only ones that satisfy that property. This example shows that for any $n \in \mathbb{N} \setminus \{0\}$, there exists a numerical semigroup $S$ so that $F(S) = n$.
+$\circ$ Let us consider a non-zero $m \in \mathbb{N}$ arbitrary but fixed and $S = \{0, m, \rightarrow\}$. Obviously, $F(S) = m-1$ and in this case every element of $S \setminus \{0\}$ is greater than the Frobenius number. This kind of numerical semigroups are the only ones that satisfy that property. This example shows that for any $n \in \mathbb{N} \setminus \{0\}$, there exists a numerical semigroup $S$ so that $F(S) = n$.
 
 $\circ$ Let $S_1 = \langle 5, 7, 9 \rangle$ and $S_2 = \langle 2, 15 \rangle$. With simple calculations we obtain that $S_1 = \{0, 5, 7, 9, 10, 12, 14, \rightarrow \}$ and $S_2 = \{0, 2,4,6,8,10,12,14, \rightarrow\}$, therefore $F(S_1) = 13 = F(S_2)$ and $S_1 \ne S_2$.
 

@@ -1,18 +1,16 @@
 ---
-title: "Pseudo symmetric numerical semigroup"
+title: "Pseudo-symmetric numerical semigroup"
 format: html
-editor: visual
-execute: 
-  echo: false
+engine: markdown
 ---
 
 ## Definition
 
-A [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd) $S$ is symmetric if it is [irreducible](NS-irreducible.qmd) and its [Frobenius number](./Basic-concepts/Frobenius-number.qmd) is even.
+A [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) $S$ is said to be pseudo-symmetric if it is [irreducible](NS-irreducible.qmd) and its [Frobenius number](../Basic-concepts/Frobenius-number.qmd) is even.
 
 ## Examples
 
-$\circ$ Let $S = \langle 4, 10, 17 \rangle$. This numerical semigroup is irreducible and if we compute the first elements of $S$, we obtain that $S = \{0, 4, 8, 10, 12, 14, 16, 17, 18, 20, 21, 22, 24, \rightarrow \}$, so $F(S) = 23$ and $S$ is not a pseudo-symmetric numerical semigroup. The numerical semigroups irreducible with odd Frobenius number are called [symmetric numerical semigroups](NS-Symmetric.qmd).
+$\circ$ Let $S = \langle 4, 10, 17 \rangle$. This numerical semigroup is irreducible and if we compute the first elements of $S$, we obtain that $S = \{0, 4, 8, 10, 12, 14, 16, 17, 18, 20, 21, 22, 24, \rightarrow \}$, so $F(S) = 23$ and $S$ is not a pseudo-symmetric numerical semigroup. The irreducible numerical semigroups with odd Frobenius number are called [symmetric numerical semigroups](NS-symmetric.qmd).
 
 ## Examples with GAP
 
@@ -20,39 +18,30 @@ The following example is made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 4, 5, 7 \rangle$, in GAP:
 
-```{GAP}
+``` gap
 gap> S := NumericalSemigroup(4, 5, 7);
-
 <Numerical semigroup with 3 generators>
-
 ```
 
-The function `IsPseudoSymmetric` is irreducible returns true or false whether the numerical semigroup is pseudo-symmetric or not.
+The function `IsPseudoSymmetric` returns true or false depending on whether the numerical semigroup is pseudo-symmetric or not.
 
-```{GAP}
-
+``` gap
 gap> IsPseudoSymmetric(S);
-
 true
-
 ```
 
-We can also prove it by definition. First, we have to known if $S$ is irreducible, the function `IsIrreducible` returns true or false whether the numerical semigroup is irreducible or not.
+We can also prove it by definition. First, we have to known if $S$ is irreducible, the function `IsIrreducible` returns true or false depending on whether the numerical semigroup is irreducible or not.
 
-```{GAP}
+``` gap
 gap> IsIrreducible(S);
-
 true
-
 ```
 
-Now, the function `FrobeniusNumber` compute the Frobenius number of $S$.
+Now, the function `FrobeniusNumber` computes the Frobenius number of $S$.
 
-```{GAP}
+``` gap
 gap> FrobeniusNumber(S);
-
 6
-
 ```
 
 ## References

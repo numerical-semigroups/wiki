@@ -1,14 +1,12 @@
 ---
 title: "Symmetric numerical semigroup"
 format: html
-editor: visual
-execute: 
-  echo: false
+engine: markdown
 ---
 
 ## Definition
 
-A [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd) $S$ is symmetric if it is [irreducible](NS-irreducible.qmd) and its [Frobenius number](./Basic-concepts/Frobenius-number.qmd) is odd.
+A [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) $S$ is said to be symmetric if it is [irreducible](NS-irreducible.qmd) and its [Frobenius number](../Basic-concepts/Frobenius-number.qmd) is odd.
 
 ## Examples
 
@@ -20,42 +18,32 @@ The following example is made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 4, 5, 7 \rangle$, in GAP:
 
-```{GAP}
+``` gap
 gap> S := NumericalSemigroup(4, 5, 7);
-
 <Numerical semigroup with 3 generators>
-
 ```
 
 The function `IsSymmetric` returns if $S$ is a symmetric numerical semigroup.
 
-```{GAP}
-
+``` gap
 gap> IsSymmetric(S);
-
 false
-
-
 ```
 
-The output is false, thus, $S$ is not a symmetric numerical semigroup, we can check where it fails. First, the function `IsIrreducible` returns true or false whether the numerical semigroup is irreducible or not.
+The output is false, thus, $S$ is not a symmetric numerical semigroup, we can check where it fails. First, the function `IsIrreducible` returns true or false depending on whether the numerical semigroup is irreducible or not.
 
-```{GAP}
+``` gap
 gap> IsIrreducible(S);
-
 true
-
 ```
 
 Now, the function `FrobeniusNumber` compute the Frobenius number of $S$.
 
-```{GAP}
+``` gap
 gap> FrobeniusNumber(S);
-
 6
-
 ```
 
-As we can see, $F(S)$ is not odd. The numerical semigroups irreducible with Frobenius number even are called [pseudo-symmetric numerical semigroups](NS-pseudo-symmetric.qmd).
+As we can see, $F(S)$ is not odd. The irreducible numerical semigroups with Frobenius number even are called [pseudo-symmetric numerical semigroups](NS-pseudo-symmetric.qmd).
 
 ## References

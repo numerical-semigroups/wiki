@@ -1,14 +1,12 @@
 ---
 title: "Free numerical semigroup"
 format: html
-editor: visual
-execute: 
-  echo: false
+engine: markdown
 ---
 
 ## Definition
 
-Let $S$ a [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd) and $B = \{r_0, r_1, \ldots, r_h\}$ the [set of minimal generators](./Basic-concepts/Minimal-set-of-generators.qmd) of $S$. Let $d_1 = r_0$ and for all $k \in \{2, 3, \ldots, h+1\}$, set $d_k = gcd(d_{k-1}, r_{k-1})$ and define $e_k = \frac{d_k}{d_{k+1}}$. It is said that $S$ is free for the arrangement $(r_0, r_1, \ldots, r_h)$ if for all $k \in \{1, 2, \ldots, h\}$:
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $B = \{r_0, r_1, \ldots, r_h\}$ be the [set of minimal generators](../Basic-concepts/Minimal-set-of-generators.qmd) of $S$. Let $d_1 = r_0$ and for all $k \in \{2, 3, \ldots, h+1\}$, set $d_k = gcd(d_{k-1}, r_{k-1})$. Define $e_k = \frac{d_k}{d_{k+1}}$ for all $k \in \{1, 2, \ldots, h\}$. It is said that $S$ is free for the arrangement $(r_0, r_1, \ldots, r_h)$ if for all $k \in \{1, 2, \ldots, h\}$:
 
 (i) $e_k > 1$.
 
@@ -18,54 +16,40 @@ If $S$ is free for all arrangements of its minimal generators, then it is said t
 
 ## Examples
 
-$\circ$ Let $a,b \in \mathbb{N} \setminus \{0, 1\}$ with $gcd(a,b) = 1$ and $S = \langle a,b \rangle$. Then, $h = 1$, $d_1 = a, d_2 = gcd(d_1, b) = 1$. We have, $e_1 = a > 1$ and $e_1 r_1 = a \in \langle a \rangle$. Therefore, any numerical semigroup with [embedding dimension](./Basic-concepts/Embedding-dimension.qmd) two is free.
+$\circ$ Let $a,b \in \mathbb{N} \setminus \{0, 1\}$ with $gcd(a,b) = 1$ and $S = \langle a,b \rangle$. Then, $h = 1$, $d_1 = a$ and $d_2 = gcd(d_1, b) = 1$. We have, $e_1 = a > 1$ and $e_1 r_1 = ab \in \langle a \rangle$. Therefore, any numerical semigroup with [embedding dimension](../Basic-concepts/Embedding-dimension.qmd) two is free. In fact, they are [telescopic](NS-telescopic.qmd) numerical semigroups.
+
+$\circ$ Let $S = \langle 4, 9, 11 \rangle$. We have, $d_1 = 4$, $d_2 = gcd(4, 9) = 1$ and $d_3 = gcd(1, 11) = 1$. On the other hand, $e_1 = \frac{d_1}{d_2} = 4, e_2 = \frac{d_2}{d_3} = 1$. As $e_2 \not > 1$, then $S$ is not a free numerical semigroup.
 
 ## Examples with GAP
 
 The following examples are made with the package NumericalSgps in GAP.
 
-$\diamond$ Let $S = \langle 13, 40, 76 \rangle$, in GAP:
+$\diamond$ Let $S = \langle 10, 15, 18 \rangle$, in GAP:
 
-```{GAP}
-gap> S := NumericalSemigroup(13, 40, 76);
-
+``` gap
+gap> S := NumericalSemigroup(10, 15, 18);
 <Numerical semigroup with 3 generators>
-
 ```
 
 In order to know if $S$ is free, we can use the function `IsFree`.
 
-```{GAP}
-
+``` gap
 gap> IsFree(S);
-
-false
-```
-
-$\diamond$ Let $S = \langle 10, 15, 18 \rangle$, in GAP:
-
-```{GAP}
-gap> S := NumericalSemigroup(10, 15, 18);
-
-```
-
-If we check whether $S$ is a free numerical semigroup, we obtain that:
-
-```{GAP}
-
-gap> IsFree(S);
-
 true
-
 ```
 
-The condition of free depends on the arrangement, the function `IsUniversallyFree` check if the numerical semigroup is free for all arrangements of its minimal generators.
+The condition of free depends on the arrangement, the function `IsUniversallyFree` checks if the numerical semigroup is free for all arrangements of its minimal generators.
 
-```{GAP}
+``` gap
 gap> IsUniversallyFree(S);
-
 true
+```
 
+$\diamond$ If we are interested in know how many free numerical semigroups have a fixed Frobenius number $f \in \mathbb{N}$, the function `FreeNumericalSemigroupsWithFrobeniusNumber` returns these numerical semigroups.
+
+``` gap
+gap> Length(FreeNumericalSemigroupsWithFrobeniusNumber(57));
+33
 ```
 
 ## References

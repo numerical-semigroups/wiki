@@ -1,14 +1,12 @@
 ---
 title: "Reduction"
 format: html
-editor: visual
-execute: 
-  echo: false
+engine: markdown
 ---
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd) and $H,E$ two [proper ideals](Proper-ideal.qmd) of $S$ with $H \subseteq E$. We say that $H$ is a reduction of $E$ if, for some $h \in \mathbb{N} \setminus \{0\}$, the equality $(h+1)E = H + hE$ holds.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $H,E$ two [proper ideals](Proper-ideal.qmd) of $S$ with $H \subseteq E$. We say that $H$ is a reduction of $E$ if, for some $h \in \mathbb{N} \setminus \{0\}$, the equality $(h+1)E = H + hE$ holds.
 
 ## Examples
 
@@ -16,7 +14,9 @@ $\circ$ Let $S$ a numerical semigroup and $E$ a proper ideal of $S$ with [multip
 
 $$
 S \subseteq E - m(E) \subseteq 2E - 2m(E) \subseteq \cdots \subseteq jE - jm(E) \subseteq \cdots \subseteq \mathbb{N},
-$$ it eventually stabilizes, since $|\mathbb{N} \setminus S|$ is finite. Then, exists $h \in \mathbb{N} \setminus \{0\}$ such that $hE - hm(E) = (h+1)E - (h+1)m(E)$, or equivalently, $(h+1)E = hE + m(E) = [m(E) + S] + hE$, that means, $m(E) + S$ is a reduction of $E$.
+$$
+
+it eventually stabilizes, since $|\mathbb{N} \setminus S|$ is finite. Then, exists $h \in \mathbb{N} \setminus \{0\}$ such that $hE - hm(E) = (h+1)E - (h+1)m(E)$, or equivalently, $(h+1)E = hE + m(E) = [m(E) + S] + hE$, that means, $m(E) + S$ is a reduction of $E$.
 
 ## Examples with GAP
 

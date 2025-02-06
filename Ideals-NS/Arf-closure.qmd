@@ -1,9 +1,7 @@
 ---
 title: "Arf closure"
 format: html
-editor: visual
-execute: 
-  echo: false
+engine: markdown
 ---
 
 ## Definition

@@ -1,20 +1,18 @@
 ---
-title: "Multiplicity-ideal"
+title: "Multiplicity of an ideal"
 format: html
-editor: visual
-execute: 
-  echo: false
+engine: markdown
 ---
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd) and $E$ a [relative ideal](Relative-ideal.qmd) of $S$. It is defined the multiplicity of $E$ as the minimum of the set.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $E$ be a [relative ideal](Relative-ideal.qmd) of $S$. It is defined the multiplicity of $E$ as the minimum of $E$.
 
 It can be proven that every relative ideal of a semigroup has a minimum. This property is due to the second condition of relative ideal of a numerical semigroup.
 
 ## Examples
 
-$\circ$ Let $E = \{-2, -1\} + S$. Clearly, $S + E \subseteq S$ and if we take $s = C(S) + 2$, where $C(S)$ is the [conductor](./Basic-concepts/Conductor.qmd) of $S$ then $s + E \subseteq S$, therefore $E$ is a relative ideal of $S$ and $m(E) = -2$.
+$\circ$ Let $E = \{-2, -1\} + S$. Clearly, $S + E \subseteq S$ and if we take $s = C(S) + 2$, where $C(S)$ is the [conductor](../Basic-concepts/Conductor.qmd) of $S$ then $s + E \subseteq S$, therefore $E$ is a relative ideal of $S$ and $m(E) = -2$.
 
 ## Examples with GAP
 
@@ -22,26 +20,18 @@ The following example is made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $I = \{8, 9, \ldots, 15\}$ and $S = \langle 6, 10, 15 \rangle$, in GAP:
 
-```{GAP}
+``` gap
 gap> I := [8..15];
-
 [ 8 .. 15 ]
-
 gap> S := NumericalSemigroup(6,8,15);
-
 <Numerical semigroup with 3 generators>
-
 ```
 
 In order to obtain the multiplicity of the relative ideal $E = I + S$ we can use the function `Minimum`, that returns the multiplicity of the relative ideal.
 
-```{GAP}
-
+``` gap
 gap> Minimum(I+S);
-
 8
-
-
 ```
 
 ## References

@@ -12,11 +12,13 @@ $$
 D(x) = \{s \in S ~ | ~ s \le_S x\},
 $$
 
-where $\le_S$ is the [relation order](Relation-order-NS.qmd) of $S$. This set is always non-empty, since $x \in D(x)$.
+where $\le_S$ is the [relation order](Relation-order-NS.qmd) of $S$. This set is always non-empty, since $x \in D(x)$, and it is related with the notion of [proper ideals](../Ideals-NS/Proper-ideal.qmd) of a numerical semigroup.
 
 ## Examples
 
 $\circ$ Let $S = \langle 3, 5, 7 \rangle = \{0, 3, 5, \rightarrow \}$ and $x = 11$. Then, $s \in D(11)$ if, and only if, $11 - s \in S$. Checking the condition for every $s \in S$ such that $s \le 11$, it is obtained that $D(11) = \{0, 3, 5, 6, 8, 11\}$.
+
+$\circ$ Let $S = \langle 4, 9, 10, 11 \rangle = \{0, 4, 8, \rightarrow \}$. For $x = 4$, it is obtained $D(4) = \{0, 4\}$, and for $x = 8$, the set of divisors is $D(8) = \{0, 4, 8\}$, then $D(4) \subseteq D(8)$. In general, given $x, y \in S$, it is deduced that $D(x) \subseteq D(y)$ if, and only if, $x \le_S y$. As $\le_S$ is a partially relation order, the Hasse diagram can be constructed and given $x \in S$, $D(x)$ is the set formed by the elements $y \in S$ such that there is a path from $y$ to $x$.
 
 ## Examples with GAP
 
@@ -29,7 +31,7 @@ gap> S := NumericalSemigroup(21, 30, 45, 47);
 <Numerical semigroup with 4 generators>
 ```
 
-Lets compute $D(107)$ (note that $107 = 2 \cdot 30 + 47 \in S$), the function `DivisorsOfElementInNumericalSemigroup` returns the set $D(x)$ given a numerical semigroup and an element $x$ of the numerical semigroup.
+Let's compute $D(107)$ (note that $107 = 2 \cdot 30 + 47 \in S$), the function `DivisorsOfElementInNumericalSemigroup` returns the set $D(x)$ given a numerical semigroup and an element $x$ of the numerical semigroup.
 
 ``` gap
 gap> DivisorsOfElementInNumericalSemigroup(S, 107);

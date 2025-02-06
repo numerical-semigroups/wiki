@@ -1,22 +1,22 @@
 ---
 title: "Type of an ideal"
 format: html
-editor: visual
-execute: 
-  echo: false
+engine: markdown
 ---
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd) and $E$ a [relative ideal](Relative-ideal.qmd) of $S$. It is defined the type of $E$ as $t(E) = |(E - M) \setminus E|$, where $M = S^*$ is the [maximal ideal](Maximal-ideal) of $S$.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $E$ be a [relative ideal](Relative-ideal.qmd) of $S$. It is defined the type of $E$ as $t(E) = |(E - M) \setminus E|$, where $M = S^*$ is the [maximal ideal](Maximal-ideal) of $S$.
 
 ## Examples
 
-$\circ$ The definition of type of a relative ideal is a generalization of the [type](./Basic-concepts/Type.qmd) of a numerical semigroup. Indeed, let $S$ a numerical semigroup with type $t$, in particular, is a relative ideal of itself, then $t(S) = |(S - S^*) \setminus S|$. Recall that
+$\circ$ The definition of type of a relative ideal is a generalization of the [type](../Basic-concepts/Type.qmd) of a numerical semigroup. Indeed, let $S$ a numerical semigroup with type $t$, in particular, is a relative ideal of itself, then $t(S) = |(S - S^*) \setminus S|$. By definition,
 
 $$
 S - S^* = \{z \in \mathbb{Z} ~ | ~ z + S^* \subseteq S\},
-$$ then, the set $(S - S^*) \setminus S$ is by definition the set of [pseudo-Frobenius number](./Basic-concepts/Pseudo-Frobenius-number.qmd) of $S$, in conclusion, $t(S) = t$.
+$$
+
+then, the set $(S - S^*) \setminus S$ is the set of [pseudo-Frobenius number](../Basic-concepts/Pseudo-Frobenius-number.qmd) of $S$, in conclusion, $t(S) = t$.
 
 $\circ$ Let $S = \langle 5, 7, 11 \rangle = \{0, 5, 7, 10, 11, 12, 14, \rightarrow \}$ and $E = \{-4\} + S = \{-4, 1, 3, 6, 7, 8, 10, \rightarrow\}$. We have,
 
@@ -32,42 +32,29 @@ The following example is made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 10, 11, 15, 19 \rangle$ and $K = \{20, 21, 25\} + S$, in GAP:
 
-```{GAP}
+``` gap
 gap> S := NumericalSemigroup(10, 11, 15, 19);
-
 <Numerical semigroup with 4 generators>
-
 gap> I := [20, 21, 25];
-
 [ 20, 21, 25 ]
-
 gap> K := I + S;
-
 <Ideal of numerical semigroup>
-
 ```
 
 The function `Type` returns the type of a relative ideal of a numerical semigroup. This function also returns the type of a numerical semigroup.
 
-```{GAP}
+``` gap
 gap> Type(S);
-
 4
-
 gap> Type(K);
-
 2
-
 ```
 
 If we want to know the elements of $(E - S^*) \setminus E$, we can apply the function `PseudoFrobenius`. This function also returns the set of pseudo-Frobenius numbers of a numerical semigroup.
 
-```{GAP}
-
+``` gap
 gap> PseudoFrobenius(K);
-
 [ 34, 48 ]
-
 ```
 
 ## References

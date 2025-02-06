@@ -16,7 +16,7 @@ The knowledge of this set determines completely the numerical semigroup $S$. $Ap
 
 ## Examples
 
-$\circ$ Let $S = \langle 3, 8, 10 \rangle$, or equivalently, $S = \{0, 3, 6, 8, \rightarrow \}$, lets compute the Apéry set of $S$ with respect to $n = 3$. All the elements greater or equal than $11$ cannot be in the Apéry set. Indeed, the [conductor](Conductor.qmd) of $S$ is $C(S) = 8$ and if $n \ge 11$, $n - 3 \ge 11 - 3 = 8$, in conclusion, $n-3 \in S$. With the above reasoning, we have that $Ap(S, 3) \subseteq \{0, 3, 6, 8, 9, 10\}$, and if we check the condition on each element, it is deduced that $Ap(S,3) = \{0, 8, 10\}$.
+$\circ$ Let $S = \langle 3, 8, 10 \rangle$, or equivalently, $S = \{0, 3, 6, 8, \rightarrow \}$, let's compute the Apéry set of $S$ with respect to $n = 3$. All the elements greater or equal than $11$ cannot be in the Apéry set. Indeed, the [conductor](Conductor.qmd) of $S$ is $C(S) = 8$ and if $n \ge 11$, $n - 3 \ge 11 - 3 = 8$, in conclusion, $n-3 \in S$. With the above reasoning, we have that $Ap(S, 3) \subseteq \{0, 3, 6, 8, 9, 10\}$, and if we check the condition on each element, it is deduced that $Ap(S,3) = \{0, 8, 10\}$.
 
 $\circ$ Let $S = \langle 4, 6, 11, 13 \rangle$ and $n = 6$. If we compute the first elements of $S$, it is deduced that $S = \{0, 4, 6, 8, 10, \rightarrow \}$ and $C(S) = 10$, then if $n \ge 16$, it holds $n - 6 \in S$ and it must be $Ap(S,6) \subseteq \{0, 4, 6, 8, 10, 11, 12, 13, 14, 15\}$. If we check on each number, it follows that $Ap(S,6) = \{0, 4, 8, 11, 13, 15\}$.
 
