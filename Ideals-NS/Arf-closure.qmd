@@ -6,16 +6,54 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](./Basic-concepts/Numerical-semigroup.qmd).
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $\mathcal{O}(S)$ the set of [oversemigroups](../Basic-concepts/Oversemigroup.qmd) of $S$. It is defined the Arf closure as the smallest [Arf numerical semigroup](Arf-semigroup.qmd) containing $S$.
+
+It can be proven that the intersection of Arf semigroups is also an Arf semigroup, from that it is deduced that the Arf closure is the intersection of all Arf numerical semigroups containing it, and since $\mathcal{O}(S)$ is finite, the intersection is also finite.
 
 ## Examples
 
-$\circ$ Let
+$\circ$ Let $S = \langle 4, 6, 9 \rangle = \{0, 4, 6, 8, 9, 10, 12, \rightarrow \}$. The set of oversemigroups is
+
+$$
+\mathcal{O}(S) = \{\mathbb{N}, \{0, 2, \rightarrow \}, \{0, 2, 4, \rightarrow \}, \{0, 2, 4, 6, \rightarrow\}, \{0, 2, 4, 6, 8, \rightarrow \}, \{0, 3, \rightarrow \},
+$$
+
+$$
+\{0, 3, 4, 6, \rightarrow \}, \{0, 4, \rightarrow \}, \{0, 4, 5, 6, 8, \rightarrow \}, \{0, 4, 6, \rightarrow \}, \{0, 4, 6, 8, \rightarrow \}, S \}.
+$$
+
+Moreover, the Arf semigroups are
+
+$$
+T_0 = \mathbb{N}, T_1 = \{0, 2, \rightarrow \}, T_2 = \{0, 2, 4, \rightarrow \}, T_3 = \{0, 2, 4, 6, \rightarrow \}, T_4 = \{0, 2, 4, 6, 8, \rightarrow \}, 
+$$
+
+$$
+T_5 = \{0, 3, \rightarrow \}, T_6 = \{0, 4, \rightarrow \}, T_7 = \{0, 4, 6, \rightarrow \}, T_8 = \{0, 4, 6, 8, \rightarrow \}.
+$$
+
+Therefore, the Arf closure of $S$ is $A = \bigcap_{i = 0}^8 T_i = \{0, 4, 6, 8, \rightarrow \} = S \cup \{11\}$. In this case, the Arf closure of $S$ is the numerical semigroup $S$ to which its [Frobenius number](../Basic-concepts/Frobenius-number.qmd) has been added.
 
 ## Examples with GAP
 
 The following example is made with the package NumericalSgps in GAP.
 
-$\diamond$ Let $S = \langle 11, 14, 20 \rangle$, $I = \{22, 45, 53\}$ and $K = I + S$, in GAP:
+$\diamond$ Let $S = \langle 15, 32, 49 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(15, 32, 49);
+<Numerical semigroup with 3 generators>
+```
+
+The function `ArfClosure` computes the Arf closure of a numerical semigroup.
+
+``` gap
+gap> A := ArfClosure(S);
+<Numerical semigroup>
+gap> SmallElements(A);
+[ 0, 15, 30, 32, 34, 36, 38, 40, 42, 44 ]
+```
+
+The function `SmallElements` returns a list with the [left elements](../Basic-concepts/Left-elements.qmd) and the [conductor](../Basic-concepts/Conductor.qmd) of the numerical semigroup. Then, the Arf closure of $S$ is $A = \{0,15, 30, 32, 34, 36, 38, 40, 42, 44, \rightarrow \}$.
 
 ## References

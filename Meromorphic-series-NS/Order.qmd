@@ -1,0 +1,21 @@
+---
+title: "Order"
+format: html
+engine: markdown
+---
+
+## Definition
+
+Let $\mathbb{K}$ be a field and $x$ a variable. We denote by $\mathbb{K}[[x]]$ the set of formal series on $x$ with coefficients in $\mathbb{K}$, that is, the set of elements of the form $\sum_{i \in \mathbb{N}} a_i x^i$ with $a_i \in \mathbb{K}$ for all $i \in \mathbb{N}$.
+
+Let $f(x) = \sum_{i \in \mathbb{N}} a_i x^i \in \mathbb{K}[[x]]$, it is defined the order of $f$ as the smallest $i \in \mathbb{N}$ such that $a_i \ne 0$, and it is denoted by $ord_x(f(x))$. For $f(x) = 0$, it is usually written $ord_x(0) = + \infty$.
+
+## Examples
+
+$\circ$
+
+## Examples with GAP
+
+Nowadays there is no function in the package NumericalSgps related to order of a formal series.
+
+## References

@@ -1,0 +1,41 @@
+---
+title: "Characteristic sequences"
+format: html
+engine: markdown
+---
+
+The definition of characteristic sequences comes from the following result.
+
+$\textbf{Preposition}$: Let $f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]$. Suppose that $f(x,y)$ is irreducible. There exists $y(t) \in \mathbb{K}((t))$ such that $f(t^n, y(t)) = 0$. Furthermore,
+
+(i) $f(t^n, y) = \prod_{w, w^n = 1} (y - y(wt))$,
+
+(ii) if $w_1 \ne w_2$ and $w_1^n = w_2^n = 1$, then $y(w_1t) \ne y(w_2t)$,
+
+(iii) $gcd(n, gcd(Supp(y(t)))) = 1$,
+
+where $Supp(y(t))$ is the [support](Support.qmd) of $y(t)$.
+
+Let us consider $f(x,y) \in \mathbb{K}((x))[y]$ irreducible and let $y = \sum_{p \in \mathbb{N}} c_p t^p \in \mathbb{K}((t))$.
+
+-   Let $d_1 = n = deg_y(f)$ and let $m_1 = \min \{p \in Supp(y(t)) ~ | ~ d_1 \not | \ \ p\}$, $d_2 = gcd(d_1, m_1)$. Then for all $i \ge 2$, if $d_i \ne 1$, let $m_i = \min \{p \in Supp(y(t)) ~ | ~ d_i \not | \ \ p \}$ and $d_{i+1} = gcd(d_i, m_i)$. By the above preposition, $m_i$ is well defined and there exists $h \ge 1$ such that $d_{h+1} = 1$. It is defined $\underline{m} = (m_1, m_2, \ldots, m_h)$ and $\underline{d} = (d_1, d_2, \ldots, d_{h+1})$.
+
+-   It is also defined $e_i = \frac{d_i}{d_{i+1}}$ for all $i \in \{1,2, \ldots, h\}$.
+
+-   Finally, it is defined the sequence $\underline{r} = (r_0, r_1, \ldots, r_h$ as follows: $r_0 = n, r_1 = m_1$ and for all $i \in \{2, 3, \ldots, h\}$,
+
+$$
+r_i = r_{i-1}e_{i-1} + m_i - m_{i-1}.
+$$
+
+It is defined the characteristic sequences of $f$ as the sequences $\underline{m}, \underline{d}$ and $\underline{r}$. In particular, the sequence $\underline{m}$ is called the [Newton-Puiseux exponents](Newton-Puiseux-exponents.qmd) of $f$.
+
+## Examples
+
+$\circ$
+
+## Examples with GAP
+
+Nowadays there is no function in the package NumericalSgps related to order of a characteristic sequences of a formal series.
+
+## References

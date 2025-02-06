@@ -32,7 +32,7 @@ Therefore, $S$ is an Arf semigroup. In fact, we have proven that $S$ is Arf if, 
 
 ## Examples with GAP
 
-The following example is made with the package NumericalSgps in GAP.
+The following examples are made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 20, 24, 45, 66 \rangle$, in GAP:
 
@@ -46,6 +46,43 @@ The function `IsArf` returns true or false depending on whether a numerical semi
 ``` gap
 gap> IsArf(S);
 false
+```
+
+$\diamond$ There are several functions related to how many Arf numerical semigroups satisfy a certain condition.
+
+-   Condition on [Frobenius number](../Basic-concepts/Frobenius-number.qmd): the function `ArfNumericalSemigroupsWithFrobeniusNumber` returns the Arf numerical semigroups with Frobenius number equals to a given number.
+
+``` gap
+gap> Length(ArfNumericalSemigroupsWithFrobeniusNumber(10));
+9
+```
+
+This function is extended with the function `ArfNumericalSemigroupsWithFrobeniusNumberUpTo`, which returns the Arf numerical semigroups with Frobenius number less than or equal to a given number.
+
+``` gap
+gap> Length(ArfNumericalSemigroupsWithFrobeniusNumberUpTo(10));
+46
+```
+
+-   Condition on [genus](../Basic-concepts/Genus.qmd): the function `ArfNumericalSemigroupsWithGenus` returns the Arf numerical semigroups with genus equals to a given number.
+
+``` gap
+gap> Length(ArfNumericalSemigroupsWithGenus(12));
+31
+```
+
+This function is extended with the function `ArfNumericalSemigroupsWithGenusUpTo`, which returns the Arf numerical semigroups with genus less than or equal to a given number.
+
+``` gap
+gap> Length(ArfNumericalSemigroupsWithGenusUpTo(12));
+143
+```
+
+-   Condition on Frobenius number and genus: The function `ArfNumericalSemigroupsWithGenusAndFrobeniusNumber` returns the Arf numerical semigroups with genus and Frobenius number both fixed. The first parameter is the genus and the next one is the Frobenius number.
+
+``` gap
+gap> Length(ArfNumericalSemigroupsWithGenusAndFrobeniusNumber(12,15));
+6
 ```
 
 ## References
