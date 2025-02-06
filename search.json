@@ -137,7 +137,7 @@
     "href": "Ideals-NS/Arf-semigroup.html#examples-with-gap",
     "title": "Arf semigroup",
     "section": "Examples with GAP",
-    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 20, 24, 45, 66 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(20, 24, 45, 66);\n&lt;Numerical semigroup with 4 generators&gt;\nThe function IsArf returns true or false depending on whether a numerical semigroup is Arf or not.\ngap&gt; IsArf(S);\nfalse"
+    "text": "Examples with GAP\nThe following examples are made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 20, 24, 45, 66 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(20, 24, 45, 66);\n&lt;Numerical semigroup with 4 generators&gt;\nThe function IsArf returns true or false depending on whether a numerical semigroup is Arf or not.\ngap&gt; IsArf(S);\nfalse\n\\(\\diamond\\) There are several functions related to how many Arf numerical semigroups satisfy a certain condition.\n\nCondition on Frobenius number: the function ArfNumericalSemigroupsWithFrobeniusNumber returns the Arf numerical semigroups with Frobenius number equals to a given number.\n\ngap&gt; Length(ArfNumericalSemigroupsWithFrobeniusNumber(10));\n9\nThis function is extended with the function ArfNumericalSemigroupsWithFrobeniusNumberUpTo, which returns the Arf numerical semigroups with Frobenius number less than or equal to a given number.\ngap&gt; Length(ArfNumericalSemigroupsWithFrobeniusNumberUpTo(10));\n46\n\nCondition on genus: the function ArfNumericalSemigroupsWithGenus returns the Arf numerical semigroups with genus equals to a given number.\n\ngap&gt; Length(ArfNumericalSemigroupsWithGenus(12));\n31\nThis function is extended with the function ArfNumericalSemigroupsWithGenusUpTo, which returns the Arf numerical semigroups with genus less than or equal to a given number.\ngap&gt; Length(ArfNumericalSemigroupsWithGenusUpTo(12));\n143\n\nCondition on Frobenius number and genus: The function ArfNumericalSemigroupsWithGenusAndFrobeniusNumber returns the Arf numerical semigroups with genus and Frobenius number both fixed. The first parameter is the genus and the next one is the Frobenius number.\n\ngap&gt; Length(ArfNumericalSemigroupsWithGenusAndFrobeniusNumber(12,15));\n6"
   },
   {
     "objectID": "Ideals-NS/Arf-semigroup.html#references",
@@ -563,6 +563,104 @@
     "objectID": "Families-NS/Weierstrass-semigroup.html#references",
     "href": "Families-NS/Weierstrass-semigroup.html#references",
     "title": "Weierstrass semigroup",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Characteristic-sequences.html",
+    "href": "Meromorphic-series-NS/Characteristic-sequences.html",
+    "title": "Characteristic sequences",
+    "section": "",
+    "text": "The definition of characteristic sequences comes from the following result.\n\\(\\textbf{Preposition}\\): Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\). Suppose that \\(f(x,y)\\) is irreducible. There exists \\(y(t) \\in \\mathbb{K}((t))\\) such that \\(f(t^n, y(t)) = 0\\). Furthermore,\nwhere \\(Supp(y(t))\\) is the support of \\(y(t)\\).\nLet us consider \\(f(x,y) \\in \\mathbb{K}((x))[y]\\) irreducible and let \\(y = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\).\n\\[\nr_i = r_{i-1}e_{i-1} + m_i - m_{i-1}.\n\\]\nIt is defined the characteristic sequences of \\(f\\) as the sequences \\(\\underline{m}, \\underline{d}\\) and \\(\\underline{r}\\). In particular, the sequence \\(\\underline{m}\\) is called the Newton-Puiseux exponents of \\(f\\)."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Characteristic-sequences.html#examples",
+    "href": "Meromorphic-series-NS/Characteristic-sequences.html#examples",
+    "title": "Characteristic sequences",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\)"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Characteristic-sequences.html#examples-with-gap",
+    "href": "Meromorphic-series-NS/Characteristic-sequences.html#examples-with-gap",
+    "title": "Characteristic sequences",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nNowadays there is no function in the package NumericalSgps related to order of a characteristic sequences of a formal series."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Characteristic-sequences.html#references",
+    "href": "Meromorphic-series-NS/Characteristic-sequences.html#references",
+    "title": "Characteristic sequences",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Newton-Puiseux-exponents.html",
+    "href": "Meromorphic-series-NS/Newton-Puiseux-exponents.html",
+    "title": "Newton-Puiseux exponents",
+    "section": "",
+    "text": "The definition of Newton-Puiseux exponents comes from the following result.\n\\(\\textbf{Preposition}\\): Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\). Suppose that \\(f(x,y)\\) is irreducible. There exists \\(y(t) \\in \\mathbb{K}((t))\\) such that \\(f(t^n, y(t)) = 0\\). Furthermore,\n\n\\(f(t^n, y) = \\prod_{w, w^n = 1} (y - y(wt))\\),\nif \\(w_1 \\ne w_2\\) and \\(w_1^n = w_2^n = 1\\), then \\(y(w_1t) \\ne y(w_2t)\\),\n\\(gcd(n, gcd(Supp(y(t)))) = 1\\),\n\nwhere \\(Supp(y(t))\\) is the support of \\(y(t)\\).\nLet us consider \\(f(x,y) \\in \\mathbb{K}((x))[y]\\) irreducible and let \\(y = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\).\n\nLet \\(d_1 = n = deg_y(f)\\) and let \\(m_1 = \\min \\{p \\in Supp(y(t)) ~ | ~ d_1 \\not | \\ \\ p\\}\\), \\(d_2 = gcd(d_1, m_1)\\). Then for all \\(i \\ge 2\\), if \\(d_i \\ne 1\\), let \\(m_i = \\min \\{p \\in Supp(y(t)) ~ | ~ d_i \\not | \\ \\ p \\}\\) and \\(d_{i+1} = gcd(d_i, m_i)\\). By the above preposition, \\(m_i\\) is well defined and there exists \\(h \\ge 1\\) such that \\(d_{h+1} = 1\\). It is defined the Newton-Poiseux exponents of \\(f\\) as \\((m_1, m_2, \\ldots, m_h)\\) and is denoted by \\(\\underline{m}\\)."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Newton-Puiseux-exponents.html#definition",
+    "href": "Meromorphic-series-NS/Newton-Puiseux-exponents.html#definition",
+    "title": "Newton-Puiseux exponents",
+    "section": "",
+    "text": "The definition of Newton-Puiseux exponents comes from the following result.\n\\(\\textbf{Preposition}\\): Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\). Suppose that \\(f(x,y)\\) is irreducible. There exists \\(y(t) \\in \\mathbb{K}((t))\\) such that \\(f(t^n, y(t)) = 0\\). Furthermore,\n\n\\(f(t^n, y) = \\prod_{w, w^n = 1} (y - y(wt))\\),\nif \\(w_1 \\ne w_2\\) and \\(w_1^n = w_2^n = 1\\), then \\(y(w_1t) \\ne y(w_2t)\\),\n\\(gcd(n, gcd(Supp(y(t)))) = 1\\),\n\nwhere \\(Supp(y(t))\\) is the support of \\(y(t)\\).\nLet us consider \\(f(x,y) \\in \\mathbb{K}((x))[y]\\) irreducible and let \\(y = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\).\n\nLet \\(d_1 = n = deg_y(f)\\) and let \\(m_1 = \\min \\{p \\in Supp(y(t)) ~ | ~ d_1 \\not | \\ \\ p\\}\\), \\(d_2 = gcd(d_1, m_1)\\). Then for all \\(i \\ge 2\\), if \\(d_i \\ne 1\\), let \\(m_i = \\min \\{p \\in Supp(y(t)) ~ | ~ d_i \\not | \\ \\ p \\}\\) and \\(d_{i+1} = gcd(d_i, m_i)\\). By the above preposition, \\(m_i\\) is well defined and there exists \\(h \\ge 1\\) such that \\(d_{h+1} = 1\\). It is defined the Newton-Poiseux exponents of \\(f\\) as \\((m_1, m_2, \\ldots, m_h)\\) and is denoted by \\(\\underline{m}\\)."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Newton-Puiseux-exponents.html#examples",
+    "href": "Meromorphic-series-NS/Newton-Puiseux-exponents.html#examples",
+    "title": "Newton-Puiseux exponents",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\)"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Newton-Puiseux-exponents.html#examples-with-gap",
+    "href": "Meromorphic-series-NS/Newton-Puiseux-exponents.html#examples-with-gap",
+    "title": "Newton-Puiseux exponents",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nNowadays there is no function in the package NumericalSgps related to Newton-Puiseux exponents of a formal series."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Newton-Puiseux-exponents.html#references",
+    "href": "Meromorphic-series-NS/Newton-Puiseux-exponents.html#references",
+    "title": "Newton-Puiseux exponents",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Intersection-multiplicity.html",
+    "href": "Meromorphic-series-NS/Intersection-multiplicity.html",
+    "title": "Intersection multiplicity",
+    "section": "",
+    "text": "The definition of Newton-Puiseux exponents comes from the following result.\n\\(\\textbf{Preposition}\\): Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\). Suppose that \\(f(x,y)\\) is irreducible. There exists \\(y(t) \\in \\mathbb{K}((t))\\) such that \\(f(t^n, y(t)) = 0\\).\nLet \\(f, g \\in \\mathbb{K}((x))[y]\\) with \\(g \\ne 0\\) and \\(y(t)\\) a root of \\(f(t^n, y(t)) = 0\\). It is defined the intersection multiplicity of \\(f\\) with \\(g\\), denoted by \\(int(f,g)\\), to be\n\\[\nint(f,g) = ord_t g(t^n, y(t))\n\\]\nIt can be proven that this definition does not depend on the root \\(y(t)\\), that is, \\(int(f,g) = ord_t g(t^n, y(wt))\\) for all \\(w \\in \\mathbb{K}\\) such that \\(w^n = 1\\)."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Intersection-multiplicity.html#definition",
+    "href": "Meromorphic-series-NS/Intersection-multiplicity.html#definition",
+    "title": "Intersection multiplicity",
+    "section": "",
+    "text": "The definition of Newton-Puiseux exponents comes from the following result.\n\\(\\textbf{Preposition}\\): Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\). Suppose that \\(f(x,y)\\) is irreducible. There exists \\(y(t) \\in \\mathbb{K}((t))\\) such that \\(f(t^n, y(t)) = 0\\).\nLet \\(f, g \\in \\mathbb{K}((x))[y]\\) with \\(g \\ne 0\\) and \\(y(t)\\) a root of \\(f(t^n, y(t)) = 0\\). It is defined the intersection multiplicity of \\(f\\) with \\(g\\), denoted by \\(int(f,g)\\), to be\n\\[\nint(f,g) = ord_t g(t^n, y(t))\n\\]\nIt can be proven that this definition does not depend on the root \\(y(t)\\), that is, \\(int(f,g) = ord_t g(t^n, y(wt))\\) for all \\(w \\in \\mathbb{K}\\) such that \\(w^n = 1\\)."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Intersection-multiplicity.html#examples",
+    "href": "Meromorphic-series-NS/Intersection-multiplicity.html#examples",
+    "title": "Intersection multiplicity",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\)"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Intersection-multiplicity.html#examples-with-gap",
+    "href": "Meromorphic-series-NS/Intersection-multiplicity.html#examples-with-gap",
+    "title": "Intersection multiplicity",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nNowadays there is no function in the package NumericalSgps related to intersection multiplicity of formal series."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Intersection-multiplicity.html#references",
+    "href": "Meromorphic-series-NS/Intersection-multiplicity.html#references",
+    "title": "Intersection multiplicity",
     "section": "References",
     "text": "References"
   },
@@ -1232,6 +1330,76 @@
     "text": "References"
   },
   {
+    "objectID": "Meromorphic-series-NS/Order.html",
+    "href": "Meromorphic-series-NS/Order.html",
+    "title": "Order",
+    "section": "",
+    "text": "Let \\(\\mathbb{K}\\) be a field and \\(x\\) a variable. We denote by \\(\\mathbb{K}[[x]]\\) the set of formal series on \\(x\\) with coefficients in \\(\\mathbb{K}\\), that is, the set of elements of the form \\(\\sum_{i \\in \\mathbb{N}} a_i x^i\\) with \\(a_i \\in \\mathbb{K}\\) for all \\(i \\in \\mathbb{N}\\).\nLet \\(f(x) = \\sum_{i \\in \\mathbb{N}} a_i x^i \\in \\mathbb{K}[[x]]\\), it is defined the order of \\(f\\) as the smallest \\(i \\in \\mathbb{N}\\) such that \\(a_i \\ne 0\\), and it is denoted by \\(ord_x(f(x))\\). For \\(f(x) = 0\\), it is usually written \\(ord_x(0) = + \\infty\\)."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Order.html#definition",
+    "href": "Meromorphic-series-NS/Order.html#definition",
+    "title": "Order",
+    "section": "",
+    "text": "Let \\(\\mathbb{K}\\) be a field and \\(x\\) a variable. We denote by \\(\\mathbb{K}[[x]]\\) the set of formal series on \\(x\\) with coefficients in \\(\\mathbb{K}\\), that is, the set of elements of the form \\(\\sum_{i \\in \\mathbb{N}} a_i x^i\\) with \\(a_i \\in \\mathbb{K}\\) for all \\(i \\in \\mathbb{N}\\).\nLet \\(f(x) = \\sum_{i \\in \\mathbb{N}} a_i x^i \\in \\mathbb{K}[[x]]\\), it is defined the order of \\(f\\) as the smallest \\(i \\in \\mathbb{N}\\) such that \\(a_i \\ne 0\\), and it is denoted by \\(ord_x(f(x))\\). For \\(f(x) = 0\\), it is usually written \\(ord_x(0) = + \\infty\\)."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Order.html#examples",
+    "href": "Meromorphic-series-NS/Order.html#examples",
+    "title": "Order",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\)"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Order.html#examples-with-gap",
+    "href": "Meromorphic-series-NS/Order.html#examples-with-gap",
+    "title": "Order",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nNowadays there is no function in the package NumericalSgps related to order of a formal series."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Order.html#references",
+    "href": "Meromorphic-series-NS/Order.html#references",
+    "title": "Order",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Pseudo-approximate-root.html",
+    "href": "Meromorphic-series-NS/Pseudo-approximate-root.html",
+    "title": "Pseudo-approximate root",
+    "section": "",
+    "text": "Let \\(f(x,y) \\in \\mathbb{K}((x))[y]\\) irreducible and \\(y(t) = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\) a root of \\(f(t^n, y(t)) = 0\\). Let \\(\\underline{m} = (m_0, m_1, \\ldots, m_h)\\), \\(\\underline{d} = (d_1, d_2, \\ldots, d_{h+1})\\) and \\(\\underline{r} = (r_0, r_1, \\ldots, r_h)\\) the characteristic sequences of \\(f\\).\nLet \\(k \\in \\{1, 2, \\ldots, h\\}\\). Let \\(\\overline{y}(t) = \\sum_{p &lt; m_k} c_p t^p\\) and let \\(Y(t) = \\overline{y}(t^{1/d_k}) \\in \\mathbb{K}((t))\\). It is defined the \\(d_k^{th}-\\)pseudo-approximate root of \\(f\\) as\n\\[\nG_k(t^{\\frac{n}{d_k}}, y) = \\prod_{v, v^{\\frac{n}{d_k}} = 1} (y - Y(vt)).\n\\]"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Pseudo-approximate-root.html#definition",
+    "href": "Meromorphic-series-NS/Pseudo-approximate-root.html#definition",
+    "title": "Pseudo-approximate root",
+    "section": "",
+    "text": "Let \\(f(x,y) \\in \\mathbb{K}((x))[y]\\) irreducible and \\(y(t) = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\) a root of \\(f(t^n, y(t)) = 0\\). Let \\(\\underline{m} = (m_0, m_1, \\ldots, m_h)\\), \\(\\underline{d} = (d_1, d_2, \\ldots, d_{h+1})\\) and \\(\\underline{r} = (r_0, r_1, \\ldots, r_h)\\) the characteristic sequences of \\(f\\).\nLet \\(k \\in \\{1, 2, \\ldots, h\\}\\). Let \\(\\overline{y}(t) = \\sum_{p &lt; m_k} c_p t^p\\) and let \\(Y(t) = \\overline{y}(t^{1/d_k}) \\in \\mathbb{K}((t))\\). It is defined the \\(d_k^{th}-\\)pseudo-approximate root of \\(f\\) as\n\\[\nG_k(t^{\\frac{n}{d_k}}, y) = \\prod_{v, v^{\\frac{n}{d_k}} = 1} (y - Y(vt)).\n\\]"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Pseudo-approximate-root.html#examples",
+    "href": "Meromorphic-series-NS/Pseudo-approximate-root.html#examples",
+    "title": "Pseudo-approximate root",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\)"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Pseudo-approximate-root.html#examples-with-gap",
+    "href": "Meromorphic-series-NS/Pseudo-approximate-root.html#examples-with-gap",
+    "title": "Pseudo-approximate root",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nNowadays there is no function in the package NumericalSgps related to pseudo-approximate root of a formal series."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Pseudo-approximate-root.html#references",
+    "href": "Meromorphic-series-NS/Pseudo-approximate-root.html#references",
+    "title": "Pseudo-approximate root",
+    "section": "References",
+    "text": "References"
+  },
+  {
     "objectID": "Families-NS/NS-free.html",
     "href": "Families-NS/NS-free.html",
     "title": "Free numerical semigroup",
@@ -1376,28 +1544,28 @@
     "href": "Ideals-NS/Arf-closure.html",
     "title": "Arf closure",
     "section": "",
-    "text": "Let \\(S\\) be a numerical semigroup."
+    "text": "Let \\(S\\) be a numerical semigroup and \\(\\mathcal{O}(S)\\) the set of oversemigroups of \\(S\\). It is defined the Arf closure as the smallest Arf numerical semigroup containing \\(S\\).\nIt can be proven that the intersection of Arf semigroups is also an Arf semigroup, from that it is deduced that the Arf closure is the intersection of all Arf numerical semigroups containing it, and since \\(\\mathcal{O}(S)\\) is finite, the intersection is also finite."
   },
   {
     "objectID": "Ideals-NS/Arf-closure.html#definition",
     "href": "Ideals-NS/Arf-closure.html#definition",
     "title": "Arf closure",
     "section": "",
-    "text": "Let \\(S\\) be a numerical semigroup."
+    "text": "Let \\(S\\) be a numerical semigroup and \\(\\mathcal{O}(S)\\) the set of oversemigroups of \\(S\\). It is defined the Arf closure as the smallest Arf numerical semigroup containing \\(S\\).\nIt can be proven that the intersection of Arf semigroups is also an Arf semigroup, from that it is deduced that the Arf closure is the intersection of all Arf numerical semigroups containing it, and since \\(\\mathcal{O}(S)\\) is finite, the intersection is also finite."
   },
   {
     "objectID": "Ideals-NS/Arf-closure.html#examples",
     "href": "Ideals-NS/Arf-closure.html#examples",
     "title": "Arf closure",
     "section": "Examples",
-    "text": "Examples\n\\(\\circ\\) Let"
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 4, 6, 9 \\rangle = \\{0, 4, 6, 8, 9, 10, 12, \\rightarrow \\}\\). The set of oversemigroups is\n\\[\n\\mathcal{O}(S) = \\{\\mathbb{N}, \\{0, 2, \\rightarrow \\}, \\{0, 2, 4, \\rightarrow \\}, \\{0, 2, 4, 6, \\rightarrow\\}, \\{0, 2, 4, 6, 8, \\rightarrow \\}, \\{0, 3, \\rightarrow \\},\n\\]\n\\[\n\\{0, 3, 4, 6, \\rightarrow \\}, \\{0, 4, \\rightarrow \\}, \\{0, 4, 5, 6, 8, \\rightarrow \\}, \\{0, 4, 6, \\rightarrow \\}, \\{0, 4, 6, 8, \\rightarrow \\}, S \\}.\n\\]\nMoreover, the Arf semigroups are\n\\[\nT_0 = \\mathbb{N}, T_1 = \\{0, 2, \\rightarrow \\}, T_2 = \\{0, 2, 4, \\rightarrow \\}, T_3 = \\{0, 2, 4, 6, \\rightarrow \\}, T_4 = \\{0, 2, 4, 6, 8, \\rightarrow \\},\n\\]\n\\[\nT_5 = \\{0, 3, \\rightarrow \\}, T_6 = \\{0, 4, \\rightarrow \\}, T_7 = \\{0, 4, 6, \\rightarrow \\}, T_8 = \\{0, 4, 6, 8, \\rightarrow \\}.\n\\]\nTherefore, the Arf closure of \\(S\\) is \\(A = \\bigcap_{i = 0}^8 T_i = \\{0, 4, 6, 8, \\rightarrow \\} = S \\cup \\{11\\}\\). In this case, the Arf closure of \\(S\\) is the numerical semigroup \\(S\\) to which its Frobenius number has been added."
   },
   {
     "objectID": "Ideals-NS/Arf-closure.html#examples-with-gap",
     "href": "Ideals-NS/Arf-closure.html#examples-with-gap",
     "title": "Arf closure",
     "section": "Examples with GAP",
-    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 11, 14, 20 \\rangle\\), \\(I = \\{22, 45, 53\\}\\) and \\(K = I + S\\), in GAP:"
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 15, 32, 49 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(15, 32, 49);\n&lt;Numerical semigroup with 3 generators&gt;\nThe function ArfClosure computes the Arf closure of a numerical semigroup.\ngap&gt; A := ArfClosure(S);\n&lt;Numerical semigroup&gt;\ngap&gt; SmallElements(A);\n[ 0, 15, 30, 32, 34, 36, 38, 40, 42, 44 ]\nThe function SmallElements returns a list with the left elements and the conductor of the numerical semigroup. Then, the Arf closure of \\(S\\) is \\(A = \\{0,15, 30, 32, 34, 36, 38, 40, 42, 44, \\rightarrow \\}\\)."
   },
   {
     "objectID": "Ideals-NS/Arf-closure.html#references",
