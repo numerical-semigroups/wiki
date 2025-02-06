@@ -1,5 +1,40 @@
 [
   {
+    "objectID": "Factorizations-NS/Standard-representation-free-NS.html",
+    "href": "Factorizations-NS/Standard-representation-free-NS.html",
+    "title": "Standard representation in a free Numerical semigroup",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. The definition of standard representation in a free numerical semigroup comes from the following result.\n\\(\\textbf{Proposition}\\): Assume that \\(S\\) is free for the arrangement \\((r_0, r_1, \\ldots, r_h)\\), and let \\(x \\in \\mathbb{Z}\\). There exist unique \\(\\lambda_0, \\lambda_1, \\ldots, \\lambda_h \\in \\mathbb{Z}\\) such that the following holds.\n\n\\(\\displaystyle x = \\sum_{k = 0}^h \\lambda_k r_k\\).\nFor all \\(k \\in \\{1, 2, \\ldots, h\\}\\), \\(0 \\le \\lambda_k &lt; e_k\\).\n\nIt is defined the standard representation of an integer \\(x \\in \\mathbb{Z}\\) an expression of \\(x\\) like in the previous proposition."
+  },
+  {
+    "objectID": "Factorizations-NS/Standard-representation-free-NS.html#definition",
+    "href": "Factorizations-NS/Standard-representation-free-NS.html#definition",
+    "title": "Standard representation in a free Numerical semigroup",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. The definition of standard representation in a free numerical semigroup comes from the following result.\n\\(\\textbf{Proposition}\\): Assume that \\(S\\) is free for the arrangement \\((r_0, r_1, \\ldots, r_h)\\), and let \\(x \\in \\mathbb{Z}\\). There exist unique \\(\\lambda_0, \\lambda_1, \\ldots, \\lambda_h \\in \\mathbb{Z}\\) such that the following holds.\n\n\\(\\displaystyle x = \\sum_{k = 0}^h \\lambda_k r_k\\).\nFor all \\(k \\in \\{1, 2, \\ldots, h\\}\\), \\(0 \\le \\lambda_k &lt; e_k\\).\n\nIt is defined the standard representation of an integer \\(x \\in \\mathbb{Z}\\) an expression of \\(x\\) like in the previous proposition."
+  },
+  {
+    "objectID": "Factorizations-NS/Standard-representation-free-NS.html#examples",
+    "href": "Factorizations-NS/Standard-representation-free-NS.html#examples",
+    "title": "Standard representation in a free Numerical semigroup",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Consider the free numerical semigroup \\(S = \\langle 4, 6, 9 \\rangle\\) and the integer \\(x = 27\\). The unique ways to generate \\(x\\) from the set \\(B = \\{4, 6, 7\\}\\) are with the coefficients \\(a_1 = (3, 1, 1), a_2 = (0, 3, 1)\\) and \\(a_3 = (0, 0, 3)\\). We have, \\(d_1 = r_0 = 4\\), \\(d_2 = gcd(d_1, r_1) = gcd(4, 6) = 2\\), \\(d_3 = gcd(d_2, r_2) = gcd(2, 9) = 1\\), \\(e_1 = \\frac{d_1}{d_2} = 2, e_2 = \\frac{d_2}{d_3} = 2\\). Checking the second condition on each \\(a_i\\) with \\(i = 1,2,3\\), it holds that the standard representation of \\(x = 27\\) with respect to \\(S\\) is \\((3, 1, 1)\\)."
+  },
+  {
+    "objectID": "Factorizations-NS/Standard-representation-free-NS.html#examples-with-gap",
+    "href": "Factorizations-NS/Standard-representation-free-NS.html#examples-with-gap",
+    "title": "Standard representation in a free Numerical semigroup",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 17, 46, 70 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(17, 46, 70);\n&lt;Numerical semigroup with 3 generators&gt;\nThe function FactorizationsIntegerWRTList has as a parameters an integer \\(n\\) and a list of integers \\(Is\\), and returns the set of factorization in terms of the elements in \\(Is\\).\ngap&gt; FactorizationsIntegerWRTList(315, [15, 22, 30]);\n[ [ 21, 0, 0 ], [ 19, 0, 1 ], [ 17, 0, 2 ], [ 15, 0, 3 ], [ 13, 0, 4 ], [ 11, 0, 5 ], [ 9, 0, 6 ], [ 7, 0, 7 ],\n  [ 5, 0, 8 ], [ 3, 0, 9 ], [ 1, 0, 10 ] ]\nIn the case we are interested in a numerical semigroup, the function Factorizations returns the set of factorization of an integer \\(n\\) in terms of the minimal generators of the numerical semigroup \\(S\\).\ngap&gt; Factorizations(315, S);\n[ [ 5, 5, 0 ], [ 9, 2, 1 ] ]\ngap&gt; Factorizations(S, 315);\n[ [ 5, 5, 0 ], [ 9, 2, 1 ] ]\nFor the case we need the factorization of a list of integers, it is applied the function FactorizationsElementListWRTNumericalSemigroup.\ngap&gt; FactorizationsElementListWRTNumericalSemigroup([315, 420, 710], S);\n[ [ [ 5, 5, 0 ], [ 9, 2, 1 ] ], [ [ 0, 0, 6 ], [ 22, 1, 0 ] ],\n  [ [ 2, 1, 9 ], [ 12, 11, 0 ], [ 16, 8, 1 ], [ 20, 5, 2 ], [ 24, 2, 3 ] ] ]"
+  },
+  {
+    "objectID": "Factorizations-NS/Standard-representation-free-NS.html#references",
+    "href": "Factorizations-NS/Standard-representation-free-NS.html#references",
+    "title": "Standard representation in a free Numerical semigroup",
+    "section": "References",
+    "text": "References"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "About Numerical Semigroups",
@@ -7,37 +42,1787 @@
     "text": "This page is intended to collect information about numerical semigroups.\nYou can add new entries blah blah"
   },
   {
-    "objectID": "Basic concepts/Numerical-Semigroups.html",
-    "href": "Basic concepts/Numerical-Semigroups.html",
-    "title": "Numerical Semigroups",
+    "objectID": "Ideals-NS/Stable-ideal.html",
+    "href": "Ideals-NS/Stable-ideal.html",
+    "title": "Stable ideal",
     "section": "",
-    "text": "We say that \\((S,+)\\) is a numerical semigroups if \\(S \\subseteq \\mathbb{N}\\) and satisifies the following conditions:\n\nFor all \\(x,y \\in S\\), then \\(a + b \\in S\\).\n\\(0 \\in S\\).\nThe set \\(\\mathbb{N} \\setminus S\\) is finite.\n\nThe first two conditions implies that \\((S,+)\\) is a submonoid of \\((\\mathbb{N}, +)\\)."
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(E\\) be a proper ideal of \\(S\\) with reduction number \\(r(E)\\). It is said that \\(E\\) is stable if \\(r(E) = 1\\), that is, \\(2E = m(E) + E\\)."
   },
   {
-    "objectID": "Basic concepts/Numerical-Semigroups.html#definition",
-    "href": "Basic concepts/Numerical-Semigroups.html#definition",
-    "title": "Numerical Semigroups",
+    "objectID": "Ideals-NS/Stable-ideal.html#definition",
+    "href": "Ideals-NS/Stable-ideal.html#definition",
+    "title": "Stable ideal",
     "section": "",
-    "text": "We say that \\((S,+)\\) is a numerical semigroups if \\(S \\subseteq \\mathbb{N}\\) and satisifies the following conditions:\n\nFor all \\(x,y \\in S\\), then \\(a + b \\in S\\).\n\\(0 \\in S\\).\nThe set \\(\\mathbb{N} \\setminus S\\) is finite.\n\nThe first two conditions implies that \\((S,+)\\) is a submonoid of \\((\\mathbb{N}, +)\\)."
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(E\\) be a proper ideal of \\(S\\) with reduction number \\(r(E)\\). It is said that \\(E\\) is stable if \\(r(E) = 1\\), that is, \\(2E = m(E) + E\\)."
   },
   {
-    "objectID": "Basic concepts/Numerical-Semigroups.html#examples",
-    "href": "Basic concepts/Numerical-Semigroups.html#examples",
-    "title": "Numerical Semigroups",
+    "objectID": "Ideals-NS/Stable-ideal.html#examples",
+    "href": "Ideals-NS/Stable-ideal.html#examples",
+    "title": "Stable ideal",
     "section": "Examples",
-    "text": "Examples"
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 3, 5, 7 \\rangle\\), \\(I = \\{2, 4\\}\\) and \\(E = I + S = \\{2, 4, 5, 7, \\rightarrow \\}\\). Clearly, \\(m(E) = 2\\), then we are looking for the smaller \\(h \\in \\mathbb{N} \\setminus \\{0\\}\\) such that \\((h+1)E = 2 + hE\\). If we take \\(h = 1\\),\n\\[\n2E = E + E = \\{4, 6, \\rightarrow\\} \\ne \\{4, 6, 7, 9, \\rightarrow \\} = 2 + E.\n\\]\nTherefore, \\(E\\) is not stable. It is easy to prove that \\(r(E) = 2\\)."
   },
   {
-    "objectID": "Basic concepts/Numerical-Semigroups.html#examples-with-gap",
-    "href": "Basic concepts/Numerical-Semigroups.html#examples-with-gap",
-    "title": "Numerical Semigroups",
+    "objectID": "Ideals-NS/Stable-ideal.html#examples-with-gap",
+    "href": "Ideals-NS/Stable-ideal.html#examples-with-gap",
+    "title": "Stable ideal",
     "section": "Examples with GAP",
-    "text": "Examples with GAP"
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 12, 15, 19, 20 \\rangle\\), \\(I = \\{24, 38, 40\\}\\) and \\(K = I + S\\), in GAP:\ngap&gt; S := NumericalSemigroup(12, 15, 19, 20);\n&lt;Numerical semigroup with 4 generators&gt;\ngap&gt; I := [24, 38, 40];\n[ 24, 38, 40 ]\ngap&gt; K := I + S;\n&lt;Ideal of numerical semigroup&gt;\nThere is no direct method that states if a proper ideal is stable or not, but the function Reduction number returns the reduction number of a proper ideal.\ngap&gt; ReductionNumber(K);\n1"
   },
   {
-    "objectID": "Basic concepts/Numerical-Semigroups.html#references",
-    "href": "Basic concepts/Numerical-Semigroups.html#references",
-    "title": "Numerical Semigroups",
+    "objectID": "Ideals-NS/Stable-ideal.html#references",
+    "href": "Ideals-NS/Stable-ideal.html#references",
+    "title": "Stable ideal",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Ideals-NS/Irreducible-ideal.html",
+    "href": "Ideals-NS/Irreducible-ideal.html",
+    "title": "Irreducible ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(E\\) be a proper ideal of \\(S\\). It is said that \\(E\\) is irreducible if it cannot be expressed as finite intersection of proper ideals of \\(S\\) strictly containing it.\nIf \\(D(X)\\) denotes the set of divisors of x in \\(S\\), it can be proven that every irreducible ideal containing \\(E\\) is of the form \\(S \\setminus D(x)\\), with \\(x \\in S \\setminus E\\) and the intersection of all this sets is equal to \\(E\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Irreducible-ideal.html#definition",
+    "href": "Ideals-NS/Irreducible-ideal.html#definition",
+    "title": "Irreducible ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(E\\) be a proper ideal of \\(S\\). It is said that \\(E\\) is irreducible if it cannot be expressed as finite intersection of proper ideals of \\(S\\) strictly containing it.\nIf \\(D(X)\\) denotes the set of divisors of x in \\(S\\), it can be proven that every irreducible ideal containing \\(E\\) is of the form \\(S \\setminus D(x)\\), with \\(x \\in S \\setminus E\\) and the intersection of all this sets is equal to \\(E\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Irreducible-ideal.html#examples",
+    "href": "Ideals-NS/Irreducible-ideal.html#examples",
+    "title": "Irreducible ideal",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Any numerical semigroup \\(S\\) is irreducible as ideal of itself.\n\\(\\circ\\) Let \\(S = \\langle 3, 5, 7 \\rangle = \\{0, 3, 5, \\rightarrow \\}\\), \\(I = \\{3, 5\\}\\) and \\(E = I + S\\). First, we compute \\(S \\setminus E\\),\n\\[\nE = I + S = (3 + S) \\cup (5 + S) = \\{3, 6, 8, \\rightarrow \\} \\cup \\{5, 8, 10, \\rightarrow \\} = \\{3, 5, 6, 8, \\rightarrow \\}.\n\\]\nTherefore, \\(S \\setminus E = \\{0, 7\\}\\) and \\(E \\subseteq (S \\setminus D(0)) \\cap (S \\setminus D(7))\\), but \\(S \\setminus D(0) = S^*\\) and \\(S \\setminus D(7) = E\\), then \\(E\\) is a irreducible ideal of \\(S\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Irreducible-ideal.html#examples-with-gap",
+    "href": "Ideals-NS/Irreducible-ideal.html#examples-with-gap",
+    "title": "Irreducible ideal",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 9, 11, 14, 20 \\rangle, I = \\{20, 27, 33\\}\\) and \\(E = I + S\\), in GAP:\ngap&gt; S := NumericalSemigroup(9, 11, 14, 20);\n&lt;Numerical semigroup with 4 generators&gt;\ngap&gt; I := [20, 27, 33];\n[ 20, 27, 33 ]\ngap&gt; K := I + S;\n&lt;Ideal of numerical semigroup&gt;\nThe function Difference has as parameters two ideals \\(I,J\\) of a numerical semigroup with \\(J \\subset I\\) and returns \\(I \\setminus J\\), in this case, we need to compute \\(S \\setminus E\\).\ngap&gt; Difference(0+S, K);\n[ 0, 9, 11, 14, 18, 22, 23, 25, 28, 32, 37, 39, 46 ]\nThen, \\(E = \\bigcap_{x \\in S \\setminus E} (S \\setminus D(x))\\). It is known that there exist for every proper ideal a irredundant decomposition into proper irreducible ideals, the function DecomposeIntegralIdealIntoIrreducibles returns a list with the irreducible components.\ngap&gt; DecomposeIntegralIdealIntoIrreducibles(K);\n[ &lt;Ideal of numerical semigroup&gt;, &lt;Ideal of numerical semigroup&gt;, &lt;Ideal of numerical semigroup&gt; ]\ngap&gt; List(DecomposeIntegralIdealIntoIrreducibles(K),MinimalGenerators);\n[ [ 9, 14, 33 ], [ 9, 22 ], [ 11, 27 ] ]\nTurns out that actually \\(E = ( S \\setminus D(22) ) \\cap ( S \\setminus D(39) ) \\cap ( S \\setminus D(46) )\\), let’s check it. The function DivisorsOfElementInNumericalSemigroup compute the set \\(D(x)\\).\ngap&gt; D1 := DivisorsOfElementInNumericalSemigroup(22,S);\n[ 0, 11, 22 ]\ngap&gt; D2 := DivisorsOfElementInNumericalSemigroup(39,S);\n[ 0, 11, 14, 25, 28, 39 ]\ngap&gt; D3 := DivisorsOfElementInNumericalSemigroup(46,S);\n[ 0, 9, 14, 18, 23, 28, 32, 37, 46 ]\nOnce we have \\(D(22), D(39)\\) and \\(D(46)\\), the function IdealByDivisorClosedSet allows to compute \\(S \\setminus D(x)\\).\ngap&gt; DifD1 := IdealByDivisorClosedSet(D1,S);\n&lt;Ideal of numerical semigroup&gt;\ngap&gt; DifD2 := IdealByDivisorClosedSet(D2,S);\n&lt;Ideal of numerical semigroup&gt;\ngap&gt; DifD3 := IdealByDivisorClosedSet(D2,S);\n&lt;Ideal of numerical semigroup&gt;\ngap&gt; DifD3 := IdealByDivisorClosedSet(D3,S);\n&lt;Ideal of numerical semigroup&gt;\nFinally, the function Intersection computes the intersection of ideals of a numerical semigroup.\ngap&gt; K = Intersection(DifD1, DifD2, DifD3);\ntrue"
+  },
+  {
+    "objectID": "Ideals-NS/Irreducible-ideal.html#references",
+    "href": "Ideals-NS/Irreducible-ideal.html#references",
+    "title": "Irreducible ideal",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Ideals-NS/Arf-semigroup.html",
+    "href": "Ideals-NS/Arf-semigroup.html",
+    "title": "Arf semigroup",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. It is said that \\(S\\) is Arf if every integrally closed proper ideal of \\(S\\) is stable. It can be proven that a numerical semigroup \\(S\\) is Arf if, and only if, for any \\(s,t \\in S\\) with \\(s \\le t\\), it holds \\(2t - s \\in S\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Arf-semigroup.html#definition",
+    "href": "Ideals-NS/Arf-semigroup.html#definition",
+    "title": "Arf semigroup",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. It is said that \\(S\\) is Arf if every integrally closed proper ideal of \\(S\\) is stable. It can be proven that a numerical semigroup \\(S\\) is Arf if, and only if, for any \\(s,t \\in S\\) with \\(s \\le t\\), it holds \\(2t - s \\in S\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Arf-semigroup.html#examples",
+    "href": "Ideals-NS/Arf-semigroup.html#examples",
+    "title": "Arf semigroup",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 5, 7, 9 \\rangle = \\{0, 5, 7, 9, 10, 12, 14, \\rightarrow \\}\\), \\(I = \\{9, 10, 12, 14\\}\\) and \\(E = I + S\\). It is easy to prove that \\(E = (9 + \\mathbb{N}) \\cap S = S(9)\\), then \\(E\\) is integrally closed, but \\(r(E) = 2\\), since\n\\[\n2E = E + E = \\{18, \\rightarrow \\} \\ne \\{18, 19, 21, 23, \\rightarrow \\} = m(E) + E,\n\\] and\n\\[\n3E = E + (E + E) = \\{27, \\rightarrow \\} = m(E) + 2E.\n\\]\nTherefore, \\(E\\) is integrally closed but not stable. Thus, \\(S\\) is not an Arf semigroup.\n\\(\\circ\\) Let \\(S = \\langle 3, 5, 7 \\rangle = \\{0, 3, 5, \\rightarrow \\}\\), let’s prove that for any \\(s,t \\in S\\) with \\(s \\le t\\), it holds \\(2t - s \\in S\\). The conductor of \\(S\\) is \\(C(S) = 5\\), we divide into cases:\n\nIf \\(t &lt; C(S)\\): if \\(t &lt; C(S) = 5\\), it must be \\(t = 0\\) or \\(t = 3\\) and the property holds easily.\nIf \\(t \\ge C(S)\\): let \\(s \\in S\\) with \\(s \\le t\\). Then, \\(2t - s = t + (t-s) \\ge t \\ge C(S)\\) and \\(2t - s \\in S\\).\n\nTherefore, \\(S\\) is an Arf semigroup. In fact, we have proven that \\(S\\) is Arf if, and only if, for any \\(s \\in S\\), \\(t \\in N(S)\\) with \\(s \\le t\\), where \\(N(S)\\) denotes the set of left elements of \\(S\\), it holds \\(2t - s \\in S\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Arf-semigroup.html#examples-with-gap",
+    "href": "Ideals-NS/Arf-semigroup.html#examples-with-gap",
+    "title": "Arf semigroup",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 20, 24, 45, 66 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(20, 24, 45, 66);\n&lt;Numerical semigroup with 4 generators&gt;\nThe function IsArf returns true or false depending on whether a numerical semigroup is Arf or not.\ngap&gt; IsArf(S);\nfalse"
+  },
+  {
+    "objectID": "Ideals-NS/Arf-semigroup.html#references",
+    "href": "Ideals-NS/Arf-semigroup.html#references",
+    "title": "Arf semigroup",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Ideals-NS/Almost-canonical-ideal.html",
+    "href": "Ideals-NS/Almost-canonical-ideal.html",
+    "title": "Almost canonical ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup with Frobenius number \\(F(S)\\) and genus \\(g(S)\\), and let \\(E\\) be a proper ideal with Frobenius number ideal \\(F(E)\\) and type ideal \\(t(E)\\). If \\(\\tilde{E} = E + F(S) - F(E)\\), it is said that \\(E\\) is an almost canonical ideal if \\(g(\\tilde{E}) + m(\\tilde{E}) = F(S) - g(S) + t(E)\\), where \\(g(\\tilde{E})\\) and \\(m(\\tilde{E})\\) refers to the genus of an ideal and the multiplicity of an ideal, respectively."
+  },
+  {
+    "objectID": "Ideals-NS/Almost-canonical-ideal.html#definition",
+    "href": "Ideals-NS/Almost-canonical-ideal.html#definition",
+    "title": "Almost canonical ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup with Frobenius number \\(F(S)\\) and genus \\(g(S)\\), and let \\(E\\) be a proper ideal with Frobenius number ideal \\(F(E)\\) and type ideal \\(t(E)\\). If \\(\\tilde{E} = E + F(S) - F(E)\\), it is said that \\(E\\) is an almost canonical ideal if \\(g(\\tilde{E}) + m(\\tilde{E}) = F(S) - g(S) + t(E)\\), where \\(g(\\tilde{E})\\) and \\(m(\\tilde{E})\\) refers to the genus of an ideal and the multiplicity of an ideal, respectively."
+  },
+  {
+    "objectID": "Ideals-NS/Almost-canonical-ideal.html#examples",
+    "href": "Ideals-NS/Almost-canonical-ideal.html#examples",
+    "title": "Almost canonical ideal",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 5, 7, 9 \\rangle = \\{0, 5, 7, 9, 10, 12, 14, \\rightarrow \\}\\) and \\(E = \\{10, 12, 14\\} + S\\). With simple calculations it is obtained that \\(E \\subseteq S\\) (is a proper ideal), \\(F(S) = 13, g(S) = 8\\), \\(F(E) = 18\\) and \\(t(E) = 3\\). On the other hand, \\(\\tilde{E} = E + F(S) - F(E) = E - 5\\), \\(g(\\tilde{E}) = 6\\) and \\(m(\\tilde{E}) = 5\\). Finally, \\(F(S) - g(S) + t(E) = 13 - 8 + 3 = 8 \\ne 11 = g(\\tilde{E}) + m(\\tilde{E})\\). To sum up, \\(E\\) is not an almost canonical ideal."
+  },
+  {
+    "objectID": "Ideals-NS/Almost-canonical-ideal.html#examples-with-gap",
+    "href": "Ideals-NS/Almost-canonical-ideal.html#examples-with-gap",
+    "title": "Almost canonical ideal",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 30, 43, 45, 50 \\rangle\\), \\(I = \\{30, 135, 140, 267\\}\\) and \\(K = I + S\\), in GAP:\ngap&gt; S := NumericalSemigroup(30, 43, 45, 50);\n&lt;Numerical semigroup with 4 generators&gt;\ngap&gt; I := [30, 135, 140, 267];\n[ 30, 135, 140, 267 ]\ngap&gt; K := I + S;\n&lt;Ideal of numerical semigroup&gt;\nTo check if a proper ideal is almost canonical, we can use the function IsAlmostCanonical.\ngap&gt; IsAlmostCanonical(K);\nfalse"
+  },
+  {
+    "objectID": "Ideals-NS/Almost-canonical-ideal.html#references",
+    "href": "Ideals-NS/Almost-canonical-ideal.html#references",
+    "title": "Almost canonical ideal",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Ideals-NS/Conductor-ideal.html",
+    "href": "Ideals-NS/Conductor-ideal.html",
+    "title": "Conductor ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. It is defined the conductor ideal of \\(S\\) as the set \\(S - \\mathbb{N} = \\{z \\in \\mathbb{Z} ~ | ~ z + \\mathbb{N} \\subseteq S \\}\\). Equivalently, the conductor ideal of \\(S\\) is defined as the numerical semigroup \\(S - \\mathbb{N} = \\{C(S), \\rightarrow \\}\\), where \\(C(S)\\) denotes the conductor of \\(S\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Conductor-ideal.html#definition",
+    "href": "Ideals-NS/Conductor-ideal.html#definition",
+    "title": "Conductor ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. It is defined the conductor ideal of \\(S\\) as the set \\(S - \\mathbb{N} = \\{z \\in \\mathbb{Z} ~ | ~ z + \\mathbb{N} \\subseteq S \\}\\). Equivalently, the conductor ideal of \\(S\\) is defined as the numerical semigroup \\(S - \\mathbb{N} = \\{C(S), \\rightarrow \\}\\), where \\(C(S)\\) denotes the conductor of \\(S\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Conductor-ideal.html#examples",
+    "href": "Ideals-NS/Conductor-ideal.html#examples",
+    "title": "Conductor ideal",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 5, 8, 11 \\rangle\\). Computing the first elements of \\(S\\), it is obtained that \\(S = \\{0, 5, 8, 10, 11, 13, 15, 16, 18, \\rightarrow \\}\\), thus \\(C(S) = 18\\) and \\(S - \\mathbb{N} = \\{18, \\rightarrow \\}\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Conductor-ideal.html#examples-with-gap",
+    "href": "Ideals-NS/Conductor-ideal.html#examples-with-gap",
+    "title": "Conductor ideal",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 13, 15, 20 \\rangle\\), \\(I = \\{8, 9, \\ldots, 15\\}\\) and \\(K = I + S\\), in GAP:\ngap&gt; S := NumericalSemigroup(13, 15, 20);\n&lt;Numerical semigroup with 3 generators&gt;\ngap&gt; I := [8..15];\n[ 8 .. 15 ]\ngap&gt; K := I + S;\n&lt;Ideal of numerical semigroup&gt;\nThere are two ways to compute the conductor of a numerical semigroup from the relative ideal, these are with the functions Conductor and ConductorOfIdealOfNumericalSemigroup. The function Conductor also computes the conductor of a numerical semigroup.\ngap&gt; Conductor(K);\n21\ngap&gt; ConductorOfNumericalSemigroup(K);\n21\nTherefore the conductor ideal of \\(K = I + S\\) is \\(K - \\mathbb{N} = \\{21, \\rightarrow\\}\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Conductor-ideal.html#references",
+    "href": "Ideals-NS/Conductor-ideal.html#references",
+    "title": "Conductor ideal",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Ideals-NS/Blowup.html",
+    "href": "Ideals-NS/Blowup.html",
+    "title": "Blowup",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(E\\) be a proper ideal of \\(S\\) with multiplicity ideal \\(m(E)\\) and reduction number \\(r(E)\\). It is defined the blowup of \\(E\\) as the proper ideal \\(r(E)E - r(E)m(E)\\). It is denoted by \\(\\mathcal{B}(E)\\).\nIt can be proven that \\(r(E)E - r(E)m(E) = r(E)E - r(E)E\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Blowup.html#definition",
+    "href": "Ideals-NS/Blowup.html#definition",
+    "title": "Blowup",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(E\\) be a proper ideal of \\(S\\) with multiplicity ideal \\(m(E)\\) and reduction number \\(r(E)\\). It is defined the blowup of \\(E\\) as the proper ideal \\(r(E)E - r(E)m(E)\\). It is denoted by \\(\\mathcal{B}(E)\\).\nIt can be proven that \\(r(E)E - r(E)m(E) = r(E)E - r(E)E\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Blowup.html#examples",
+    "href": "Ideals-NS/Blowup.html#examples",
+    "title": "Blowup",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 3, 5, 7 \\rangle\\), \\(I = \\{2, 4\\}\\) and \\(E = I + S = \\{2, 4, 5, 7, \\rightarrow \\}\\). Clearly, \\(m(E) = 2\\), then we are looking for the smaller \\(h \\in \\mathbb{N} \\setminus \\{0\\}\\) such that \\((h+1)E = 2 + hE\\). If we take \\(h = 1\\),\n\\[\n2E = E + E = \\{4, 6, \\rightarrow\\} \\ne \\{4, 6, 7, 9, \\rightarrow \\} = 2 + E.\n\\]\nFor \\(h = 2\\),\n\\[\n3E = (E + E) + E = \\{6, 8, \\rightarrow\\} = 2 + 2E\n\\]\nTo sum up, \\(r(E) = 2\\) and the blowup of \\(E\\) is \\(2E - 2E = \\{0, 2, \\rightarrow \\}\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Blowup.html#examples-with-gap",
+    "href": "Ideals-NS/Blowup.html#examples-with-gap",
+    "title": "Blowup",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 16, 21, 30, 47 \\rangle\\), \\(I = \\{37, 51, 102\\}\\) and \\(K = I + S\\), in GAP:\ngap&gt; S := NumericalSemigroup(16, 21, 30, 47);\n&lt;Numerical semigroup with 4 generators&gt;\ngap&gt; I := [37, 51, 102];\n[ 37, 51, 102 ]\ngap&gt; K := I + S;\n&lt;Ideal of numerical semigroup&gt;\nThe function BlowUp returns the blowup of a proper ideal.\ngap&gt; L := BlowUp(K);\n&lt;Ideal of numerical semigroup&gt;\nLet’s check it. The function ReductionNumber returns the reduction number of the proper ideal.\ngap&gt; r := ReductionNumber(K);\n2\ngap&gt; L = r*K - r*K;\ntrue"
+  },
+  {
+    "objectID": "Ideals-NS/Blowup.html#references",
+    "href": "Ideals-NS/Blowup.html#references",
+    "title": "Blowup",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Ideals-NS/Type-ideal.html",
+    "href": "Ideals-NS/Type-ideal.html",
+    "title": "Type of an ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(E\\) be a relative ideal of \\(S\\). It is defined the type of \\(E\\) as \\(t(E) = |(E - M) \\setminus E|\\), where \\(M = S^*\\) is the maximal ideal of \\(S\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Type-ideal.html#definition",
+    "href": "Ideals-NS/Type-ideal.html#definition",
+    "title": "Type of an ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(E\\) be a relative ideal of \\(S\\). It is defined the type of \\(E\\) as \\(t(E) = |(E - M) \\setminus E|\\), where \\(M = S^*\\) is the maximal ideal of \\(S\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Type-ideal.html#examples",
+    "href": "Ideals-NS/Type-ideal.html#examples",
+    "title": "Type of an ideal",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) The definition of type of a relative ideal is a generalization of the type of a numerical semigroup. Indeed, let \\(S\\) a numerical semigroup with type \\(t\\), in particular, is a relative ideal of itself, then \\(t(S) = |(S - S^*) \\setminus S|\\). By definition,\n\\[\nS - S^* = \\{z \\in \\mathbb{Z} ~ | ~ z + S^* \\subseteq S\\},\n\\]\nthen, the set \\((S - S^*) \\setminus S\\) is the set of pseudo-Frobenius number of \\(S\\), in conclusion, \\(t(S) = t\\).\n\\(\\circ\\) Let \\(S = \\langle 5, 7, 11 \\rangle = \\{0, 5, 7, 10, 11, 12, 14, \\rightarrow \\}\\) and \\(E = \\{-4\\} + S = \\{-4, 1, 3, 6, 7, 8, 10, \\rightarrow\\}\\). We have,\n\\[\nE - S^* = \\{z \\in \\mathbb{Z} ~ | ~ z + S^* \\subseteq E\\}\n\\]\nThe candidates are in the set \\(\\{-9, -8, \\ldots, 9\\} \\setminus E\\), and checking for every element, we get \\(E - S^* = \\{5, 9\\}\\) and \\(t(E) = 2\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Type-ideal.html#examples-with-gap",
+    "href": "Ideals-NS/Type-ideal.html#examples-with-gap",
+    "title": "Type of an ideal",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 10, 11, 15, 19 \\rangle\\) and \\(K = \\{20, 21, 25\\} + S\\), in GAP:\ngap&gt; S := NumericalSemigroup(10, 11, 15, 19);\n&lt;Numerical semigroup with 4 generators&gt;\ngap&gt; I := [20, 21, 25];\n[ 20, 21, 25 ]\ngap&gt; K := I + S;\n&lt;Ideal of numerical semigroup&gt;\nThe function Type returns the type of a relative ideal of a numerical semigroup. This function also returns the type of a numerical semigroup.\ngap&gt; Type(S);\n4\ngap&gt; Type(K);\n2\nIf we want to know the elements of \\((E - S^*) \\setminus E\\), we can apply the function PseudoFrobenius. This function also returns the set of pseudo-Frobenius numbers of a numerical semigroup.\ngap&gt; PseudoFrobenius(K);\n[ 34, 48 ]"
+  },
+  {
+    "objectID": "Ideals-NS/Type-ideal.html#references",
+    "href": "Ideals-NS/Type-ideal.html#references",
+    "title": "Type of an ideal",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Ideals-NS/Genus-ideal.html",
+    "href": "Ideals-NS/Genus-ideal.html",
+    "title": "Genus of an ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(E\\) be a relative ideal of \\(S\\). It is defined the genus of \\(E\\) as \\(g(E) = |(m(E) + \\mathbb{N}) \\setminus E|\\), where \\(m(E)\\) denotes the multiplicity of \\(E\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Genus-ideal.html#definition",
+    "href": "Ideals-NS/Genus-ideal.html#definition",
+    "title": "Genus of an ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(E\\) be a relative ideal of \\(S\\). It is defined the genus of \\(E\\) as \\(g(E) = |(m(E) + \\mathbb{N}) \\setminus E|\\), where \\(m(E)\\) denotes the multiplicity of \\(E\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Genus-ideal.html#examples",
+    "href": "Ideals-NS/Genus-ideal.html#examples",
+    "title": "Genus of an ideal",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 5, 7, 9 \\rangle = \\{0, 5, 7, 9, 10, 12, 14, \\rightarrow \\}\\) and \\(E = \\{-14\\} + S = \\{-14, -9, -7, -5, -4, -2, 0, \\rightarrow\\}\\). Clearly, \\(m(E) = -14\\), so \\(g(E) = |(-14 + \\mathbb{N}) \\setminus E| = |\\{-13, -12, -11, -10, -8, -6, -3, -1\\}| = 8\\).\n\\(\\circ\\) The definition of genus of a relative ideal is a generalization of the genus of a numerical semigroup. Indeed, let \\(S\\) be a numerical semigroup with genus \\(g\\), in particular, is a relative ideal of itself, then \\(g(S) = |(m(S) + \\mathbb{N}) \\setminus S|\\). The multiplicity of \\(S\\) is \\(m(S) = 0\\), therefore \\(g(S) = |\\mathbb{N} \\setminus S| = g\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Genus-ideal.html#examples-with-gap",
+    "href": "Ideals-NS/Genus-ideal.html#examples-with-gap",
+    "title": "Genus of an ideal",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to genus of a relative ideal."
+  },
+  {
+    "objectID": "Ideals-NS/Genus-ideal.html#references",
+    "href": "Ideals-NS/Genus-ideal.html#references",
+    "title": "Genus of an ideal",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Ideals-NS/Set-closed-divisors.html",
+    "href": "Ideals-NS/Set-closed-divisors.html",
+    "title": "Set closed under divisors",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup, \\(\\le_S\\) the relation order of \\(S\\) and \\(X\\) a subset of \\(\\mathbb{N}\\). It is said that \\(X\\) is closed under divisors if for all \\(x \\in X\\) and \\(y \\in S\\), if \\(y \\le_S x\\), then \\(y \\in X\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Set-closed-divisors.html#definition",
+    "href": "Ideals-NS/Set-closed-divisors.html#definition",
+    "title": "Set closed under divisors",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup, \\(\\le_S\\) the relation order of \\(S\\) and \\(X\\) a subset of \\(\\mathbb{N}\\). It is said that \\(X\\) is closed under divisors if for all \\(x \\in X\\) and \\(y \\in S\\), if \\(y \\le_S x\\), then \\(y \\in X\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Set-closed-divisors.html#examples",
+    "href": "Ideals-NS/Set-closed-divisors.html#examples",
+    "title": "Set closed under divisors",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let’s prove that if \\(E\\) is a proper ideal of \\(S\\), then its complement \\(X = S \\setminus E\\) is closed under divisors. Let \\(x \\in X\\) and \\(y \\in S\\) such that \\(y \\le_S x\\), therefore exists \\(s \\in S\\) so that \\(x = y + s\\). If we suppose \\(y \\not \\in X\\), then \\(y \\in E\\) and \\(x = s + y \\in S + E \\subseteq E\\), a contradiction. In conclusion, \\(y \\in X\\) and \\(X\\) is closed under divisors."
+  },
+  {
+    "objectID": "Ideals-NS/Set-closed-divisors.html#examples-with-gap",
+    "href": "Ideals-NS/Set-closed-divisors.html#examples-with-gap",
+    "title": "Set closed under divisors",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 10, 11, 15, 19 \\rangle\\), \\(I = \\{20, 21, 25\\}\\) and the relative ideal \\(E = I + S\\), in GAP:\ngap&gt; S := NumericalSemigroup(10, 11, 15, 19);\n&lt;Numerical semigroup with 4 generators&gt;\ngap&gt; I := [20, 21, 25];\n[ 20, 21, 25 ]\ngap&gt; K := I + S;\n&lt;Ideal of numerical semigroup&gt;\nThe function IdealByDivisorClosedSet has as parameters a subset \\(X\\) closed under divisors and a numerical semigroup, and returns \\(S \\setminus X\\). This function comes from the fact that \\(E\\) is a proper ideal of \\(S\\) if, and only if, \\(S \\setminus E\\) is a set closed under divisors. The function Difference gets two ideals \\(I, J\\) of a numerical semigroup with \\(J \\subseteq I\\) and returns the set \\(I \\setminus J\\).\ngap&gt; d:=Difference(0+S,K);\n[ 0, 10, 11, 15, 19, 22, 26, 29, 33, 34, 37, 38, 48 ]\ngap&gt; K = IdealByDivisorClosedSet(d,S);\ntrue"
+  },
+  {
+    "objectID": "Ideals-NS/Set-closed-divisors.html#references",
+    "href": "Ideals-NS/Set-closed-divisors.html#references",
+    "title": "Set closed under divisors",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Ideals-NS/Integrally-closed-ideal.html",
+    "href": "Ideals-NS/Integrally-closed-ideal.html",
+    "title": "Integrally closed ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(E\\) be a proper ideal of \\(S\\). It is said that \\(E\\) is integrally closed if it is of the form \\(S(s) = (s + \\mathbb{N}) \\cap S\\) for some \\(s \\in S\\).\nIt can be proven that \\(E\\) is integrally closed if, and only if, \\(E = S(m(E))\\), where \\(m(E)\\) denotes the multiplicity ideal of \\(E\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Integrally-closed-ideal.html#definition",
+    "href": "Ideals-NS/Integrally-closed-ideal.html#definition",
+    "title": "Integrally closed ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(E\\) be a proper ideal of \\(S\\). It is said that \\(E\\) is integrally closed if it is of the form \\(S(s) = (s + \\mathbb{N}) \\cap S\\) for some \\(s \\in S\\).\nIt can be proven that \\(E\\) is integrally closed if, and only if, \\(E = S(m(E))\\), where \\(m(E)\\) denotes the multiplicity ideal of \\(E\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Integrally-closed-ideal.html#examples",
+    "href": "Ideals-NS/Integrally-closed-ideal.html#examples",
+    "title": "Integrally closed ideal",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S\\) a numerical semigroup, then the maximal ideal \\(M = S^*\\) is integrally closed, since \\(S^* = (m(S) + \\mathbb{N}) \\cap S\\), where \\(m(S)\\) denotes the multiplicity of \\(S\\).\n\\(\\circ\\) Let \\(S = \\langle 5, 7, 9 \\rangle = \\{0, 5, 7, 9, 10, 12, 14, \\rightarrow \\}\\), \\(I = \\{9, 10, 12, 14\\}\\) and \\(E = I + S\\), lets prove the equality \\(E = (9 + \\mathbb{N}) \\cap S\\). First, \\((9 + \\mathbb{N}) \\cap S = \\{9, 10, 12, 14, \\rightarrow\\}\\), then we have to prove that \\(E = \\{9, 10, 12, 14, \\rightarrow\\}\\).\n\nLet \\(e \\in E\\), then exist \\(i \\in I\\) and \\(s \\in S\\) such that \\(e = i + s\\). If \\(s = 0\\), \\(e \\in I \\subseteq \\{9, 10, 12, 14, \\rightarrow\\}\\), otherwise, \\(e = i + s \\ge i + 5 \\ge 14\\) and \\(e \\in \\{9, 10, 12, 14, \\rightarrow\\}\\).\nIt is easy to check that \\(\\{14, 15, 16, 17, 18\\} \\subseteq E\\), then for all \\(n \\ge 14\\) it holds \\(n \\in E\\) and \\(\\{9, 10, 12, 14, \\rightarrow\\} \\subseteq E\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Integrally-closed-ideal.html#examples-with-gap",
+    "href": "Ideals-NS/Integrally-closed-ideal.html#examples-with-gap",
+    "title": "Integrally closed ideal",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 13, 15, 29, 31 \\rangle\\), \\(I = \\{72, 75, 77\\}\\) and \\(K = I + S\\), in GAP:\ngap&gt; S := NumericalSemigroup(13, 15, 29, 31);\n&lt;Numerical semigroup with 4 generators&gt;\ngap&gt; I := [72, 75, 77];\n[ 72, 75, 77 ]\ngap&gt; K := I + S;\n&lt;Ideal of numerical semigroup&gt;\nNowadays, there is no direct function that determines whether a proper ideal is integrally closed or not, but it is easy to compute it. First, the function Minimum returns the multiplicity of a proper ideal; afterwards, the function NumericalSemigroupBySmallElements generates the numerical semigroup given a list with the left elements of \\(S\\) and the conductor of \\(S\\); also, the function Intersection computes the intersection of numerical semigroups; next, the function MaximalIdeal returns the maximal ideal of the numerical semigroup; finally, the function SmallElements returns the set formed by the left elements and the conductor. Taking into account that \\(E\\) is integrally closed if, and only if, \\(E = S(m(E))\\), we have the result.\ngap&gt; m := Minimum(K);\n72\ngap&gt; N1 := NumericalSemigroupBySmallElements([0, m]);\n&lt;Numerical semigroup&gt;\ngap&gt; SmallElements(K) = SmallElements(MaximalIdeal(Intersection(N1, S)));\nfalse"
+  },
+  {
+    "objectID": "Ideals-NS/Integrally-closed-ideal.html#references",
+    "href": "Ideals-NS/Integrally-closed-ideal.html#references",
+    "title": "Integrally closed ideal",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Ideals-NS/Maximum-sparse-ideal.html",
+    "href": "Ideals-NS/Maximum-sparse-ideal.html",
+    "title": "Maximum sparse ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup with genus \\(g(S)\\) and Frobenius number \\(F(S)\\), and let \\(E\\) be a proper ideal of \\(S\\) with Frobenius number ideal \\(F(E)\\). It is said that \\(E\\) is a maximum sparse ideal if satisfies the equality \\(F(E) = 2g(S) - 1 + |S \\setminus E|\\).\nIf the multiplicity of a relative ideal is denoted by \\(m(E)\\) and the genus of a relative ideal by \\(g(E)\\), it can be proven that the equality is equivalent to \\(F(S) + 1 - g(S) = g(\\tilde{E}) + m(\\tilde{E})\\), where \\(\\tilde{E} = E + F(S) - F(E)\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Maximum-sparse-ideal.html#definition",
+    "href": "Ideals-NS/Maximum-sparse-ideal.html#definition",
+    "title": "Maximum sparse ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup with genus \\(g(S)\\) and Frobenius number \\(F(S)\\), and let \\(E\\) be a proper ideal of \\(S\\) with Frobenius number ideal \\(F(E)\\). It is said that \\(E\\) is a maximum sparse ideal if satisfies the equality \\(F(E) = 2g(S) - 1 + |S \\setminus E|\\).\nIf the multiplicity of a relative ideal is denoted by \\(m(E)\\) and the genus of a relative ideal by \\(g(E)\\), it can be proven that the equality is equivalent to \\(F(S) + 1 - g(S) = g(\\tilde{E}) + m(\\tilde{E})\\), where \\(\\tilde{E} = E + F(S) - F(E)\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Maximum-sparse-ideal.html#examples",
+    "href": "Ideals-NS/Maximum-sparse-ideal.html#examples",
+    "title": "Maximum sparse ideal",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 4, 9 \\rangle\\) and the proper ideal \\(E = \\{F(S) + 1, \\rightarrow \\}\\) (in fact, is the conductor ideal of \\(S\\)). In this case, \\(E = \\tilde{E}\\), and is easy to check that \\(F(S) = F(E) = 11, g(S) = 6, g(E) = 0\\) and \\(m(E) = F(S) + 1\\), then \\(F(S) + 1 - g(S) = 6 &lt; 12 = m(E)\\), thus \\(E\\) is not a maximum sparse ideal.\n\\(\\circ\\) Let \\(S\\) a numerical semigroup and \\(K(S)\\) the standard canonical ideal of \\(S\\). The integer \\(g(K) + m(K)\\) is the number of elements in \\(\\mathbb{N} \\setminus K\\) since \\(m(K)\\) is a non-negative integer. Furthermore, \\(F(S) + 1 - g(S)\\) is the number of elements \\(s \\in S\\) such that \\(s \\le F(S) + 1\\). By the bijection \\(\\{0, 1, \\ldots, F(S) + 1\\} \\cap S \\to \\mathbb{N} \\setminus K\\) defined by \\(s \\to F(S) - s\\), we have the equality \\(F(S) + 1 - g(S) = m(K) + g(K)\\). To sum up, \\(K(S)\\) is always a maximum sparse ideal of \\(S\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Maximum-sparse-ideal.html#examples-with-gap",
+    "href": "Ideals-NS/Maximum-sparse-ideal.html#examples-with-gap",
+    "title": "Maximum sparse ideal",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to maximum sparse ideal."
+  },
+  {
+    "objectID": "Ideals-NS/Maximum-sparse-ideal.html#references",
+    "href": "Ideals-NS/Maximum-sparse-ideal.html#references",
+    "title": "Maximum sparse ideal",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Families-NS/NS-maximal-embedding-dimension.html",
+    "href": "Families-NS/NS-maximal-embedding-dimension.html",
+    "title": "Numerical semigroup with maximal embedding dimension",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup, \\(e(S)\\) the embedding dimension and \\(m(S)\\) the multiplicity of \\(S\\). Then, it is said that \\(S\\) is a numerical semigroup with maximal embedding dimension if \\(e(S) = m(S)\\).\nIt is well known that for every numerical semigroup, it holds the inequality \\(e(S) \\le m(S)\\)."
+  },
+  {
+    "objectID": "Families-NS/NS-maximal-embedding-dimension.html#definition",
+    "href": "Families-NS/NS-maximal-embedding-dimension.html#definition",
+    "title": "Numerical semigroup with maximal embedding dimension",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup, \\(e(S)\\) the embedding dimension and \\(m(S)\\) the multiplicity of \\(S\\). Then, it is said that \\(S\\) is a numerical semigroup with maximal embedding dimension if \\(e(S) = m(S)\\).\nIt is well known that for every numerical semigroup, it holds the inequality \\(e(S) \\le m(S)\\)."
+  },
+  {
+    "objectID": "Families-NS/NS-maximal-embedding-dimension.html#examples",
+    "href": "Families-NS/NS-maximal-embedding-dimension.html#examples",
+    "title": "Numerical semigroup with maximal embedding dimension",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 3, 8 \\rangle\\). Clearly, \\(m(S) = 3\\) and \\(e(S) = 2\\), thus \\(S\\) does not have maximal embedding dimension.\n\\(\\circ\\) Let us consider \\(a,b \\in \\mathbb{N}\\) with \\(gcd(a,b) = 1\\) and \\(S = \\langle a, a+1, a+2, \\ldots, a+b \\rangle\\). By construction of \\(S\\), \\(m(S) = a\\). To compute \\(e(S)\\), we divide into cases:\n\nIf \\(a = b\\), then \\(B = {a, a+1, \\ldots, 2a - 1}\\) is the minimal set of generators of \\(S\\) and \\(e(S) = a\\), therefore \\(S\\) has maximal embedding dimension.\nIf \\(a \\ne b\\), then \\(B = \\{a, a+1, \\ldots, a+b\\}\\) is the minimal set of generators of \\(S\\), \\(e(S) = b\\) and \\(S\\) does not have maximal embedding dimension."
+  },
+  {
+    "objectID": "Families-NS/NS-maximal-embedding-dimension.html#examples-with-gap",
+    "href": "Families-NS/NS-maximal-embedding-dimension.html#examples-with-gap",
+    "title": "Numerical semigroup with maximal embedding dimension",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 4, 15, 20, 21, 22, 30, 31, 38 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(4, 15, 20, 21, 22, 30, 31, 38);\n&lt;Numerical semigroup with 8 generators&gt;\nTo check if \\(S\\) has maximal embedding dimension, we need to compute the embedding dimension and the multiplicity of \\(S\\). The function EmbeddingDimension returns the embedding dimension of a numerical semigroup.\ngap&gt; EmbeddingDimension(S);\n4\nNow, the function Multiplicity returns the multiplicity of \\(S\\).\ngap&gt; Multiplicity(S);\n4\nTherefore, \\(S\\) has maximal embedding dimension."
+  },
+  {
+    "objectID": "Families-NS/NS-maximal-embedding-dimension.html#references",
+    "href": "Families-NS/NS-maximal-embedding-dimension.html#references",
+    "title": "Numerical semigroup with maximal embedding dimension",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Families-NS/NS-almost-symmetric.html",
+    "href": "Families-NS/NS-almost-symmetric.html",
+    "title": "Almost symmetric numerical semigroup",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup, \\(F(S)\\) the Frobenius number, \\(g(S)\\) the genus and \\(t(S)\\) the type of \\(S\\). It is said that \\(S\\) is an almost symmetric numerical semigroup if it satisfies the equality \\(2g(S) = F(S) + t(S)\\)."
+  },
+  {
+    "objectID": "Families-NS/NS-almost-symmetric.html#definition",
+    "href": "Families-NS/NS-almost-symmetric.html#definition",
+    "title": "Almost symmetric numerical semigroup",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup, \\(F(S)\\) the Frobenius number, \\(g(S)\\) the genus and \\(t(S)\\) the type of \\(S\\). It is said that \\(S\\) is an almost symmetric numerical semigroup if it satisfies the equality \\(2g(S) = F(S) + t(S)\\)."
+  },
+  {
+    "objectID": "Families-NS/NS-almost-symmetric.html#examples",
+    "href": "Families-NS/NS-almost-symmetric.html#examples",
+    "title": "Almost symmetric numerical semigroup",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 5, 7, 9 \\rangle = \\{0, 5, 7, 9, 10, 12, 14\\}\\). It is easy to see that the set of gaps is \\(G(S) = \\{1, 2, 3, 4, 6, 8, 11, 13\\}\\), the Frobenius number is \\(F(S) = 13\\) and the set of pseudo-Frobenius numbers is \\(PF(S) = \\{11, 13\\}\\). Therefore, \\(g(S) = |G(S)| = 8, t(S) = |PF(S)| = 2\\) and \\(2g(S) = 16 \\ne 15 = 13 + 2 = F(S) + t(S)\\), to sum up, \\(S\\) is not an almost symmetric numerical semigroup.\n\\(\\circ\\) Let \\(a,b \\in \\mathbb{N}\\) with \\(gcd(a,b) = 1\\) and \\(S = \\langle a, b \\rangle\\). It is well known that for numerical semigroups of embedding dimension two, \\(t(S) = 1\\) and \\(2g(S) = F(S) + 1 = F(S) + t(S)\\), therefore, every numerical semigroup with embedding dimension two is almost symmetric."
+  },
+  {
+    "objectID": "Families-NS/NS-almost-symmetric.html#examples-with-gap",
+    "href": "Families-NS/NS-almost-symmetric.html#examples-with-gap",
+    "title": "Almost symmetric numerical semigroup",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 12, 15, 19 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(12, 15, 19);\n&lt;Numerical semigroup with 3 generators&gt;\nThe function IsAlmostSymmetric returns true or false depending on whether a numerical semigroup is almost symmetric or not.\ngap&gt; IsAlmostSymmetric(S);\ntrue\nTherefore, \\(2g(S) = F(S) + t(S)\\), let’s check it. The functions Genus, FrobeniusNumber and Type return the genus, the Frobenius number and the type of a numerical semigroup, respectively.\ngap&gt; g := Genus(S);\n36\ngap&gt; F := FrobeniusNumber(S);\n71\ngap&gt; t := Type(S);\n1\ngap&gt; 2*g = F + t;\ntrue\nIf we are interested in how many almost symmetric numerical semigroups exist with a fixed Frobenius number \\(f\\) and type \\(t\\), the function AlmostSymmetricNumericalSemigroupsWithFrobeniusNumberAndType returns a list of all these almost symmetric numerical semigroups.\ngap&gt; Length(AlmostSymmetricNumericalSemigroupsWithFrobeniusNumber(12));\n15\nThere is an extension of the previous function, that is, AlmostSymmetricNumericalSemigroupsWithFrobeniusNumber, which returns all the almost symmetric numerical semigroups with fixed Frobenius number \\(f\\) and type greater or equal to \\(t\\).\ngap&gt; Length(AlmostSymmetricNumericalSemigroupsWithFrobeniusNumberAndType(12,6));\n4"
+  },
+  {
+    "objectID": "Families-NS/NS-almost-symmetric.html#references",
+    "href": "Families-NS/NS-almost-symmetric.html#references",
+    "title": "Almost symmetric numerical semigroup",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Families-NS/NS-symmetric.html",
+    "href": "Families-NS/NS-symmetric.html",
+    "title": "Symmetric numerical semigroup",
+    "section": "",
+    "text": "A numerical semigroup \\(S\\) is said to be symmetric if it is irreducible and its Frobenius number is odd."
+  },
+  {
+    "objectID": "Families-NS/NS-symmetric.html#definition",
+    "href": "Families-NS/NS-symmetric.html#definition",
+    "title": "Symmetric numerical semigroup",
+    "section": "",
+    "text": "A numerical semigroup \\(S\\) is said to be symmetric if it is irreducible and its Frobenius number is odd."
+  },
+  {
+    "objectID": "Families-NS/NS-symmetric.html#examples",
+    "href": "Families-NS/NS-symmetric.html#examples",
+    "title": "Symmetric numerical semigroup",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 4, 10, 17 \\rangle\\). This numerical semigroup is irreducible and if we compute the first elements of \\(S\\), we obtain that \\(S = \\{0, 4, 8, 10, 12, 14, 16, 17, 18, 20, 21, 22, 24, \\rightarrow \\}\\), so \\(F(S) = 23\\) and \\(S\\) is a symmetric numerical semigroup."
+  },
+  {
+    "objectID": "Families-NS/NS-symmetric.html#examples-with-gap",
+    "href": "Families-NS/NS-symmetric.html#examples-with-gap",
+    "title": "Symmetric numerical semigroup",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 4, 5, 7 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(4, 5, 7);\n&lt;Numerical semigroup with 3 generators&gt;\nThe function IsSymmetric returns if \\(S\\) is a symmetric numerical semigroup.\ngap&gt; IsSymmetric(S);\nfalse\nThe output is false, thus, \\(S\\) is not a symmetric numerical semigroup, we can check where it fails. First, the function IsIrreducible returns true or false depending on whether the numerical semigroup is irreducible or not.\ngap&gt; IsIrreducible(S);\ntrue\nNow, the function FrobeniusNumber compute the Frobenius number of \\(S\\).\ngap&gt; FrobeniusNumber(S);\n6\nAs we can see, \\(F(S)\\) is not odd. The irreducible numerical semigroups with Frobenius number even are called pseudo-symmetric numerical semigroups."
+  },
+  {
+    "objectID": "Families-NS/NS-symmetric.html#references",
+    "href": "Families-NS/NS-symmetric.html#references",
+    "title": "Symmetric numerical semigroup",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Families-NS/Weierstrass-semigroup.html",
+    "href": "Families-NS/Weierstrass-semigroup.html",
+    "title": "Weierstrass semigroup",
+    "section": "",
+    "text": "Let \\(C\\) be a smooth algebraic curve over the complex numbers of genus \\(g\\). Weierstrass Lückensatz states that for every \\(P \\in C\\), there are exactly \\(g\\) integers \\(\\alpha_1(P), \\alpha_2(P), \\ldots, \\alpha_g(P)\\) with \\(1 = \\alpha_1(P) &lt; \\cdots &lt; \\alpha_g(P) = 2g - 1\\), such that for all \\(i \\in \\{1, 2, \\ldots, g\\}\\) there is no meromorphic function on \\(X\\) with a pole at \\(P\\) of multiplicity \\(\\alpha_i(P)\\) as its only singularity. The set \\(S = \\mathbb{N} \\setminus \\{\\alpha_1(P), \\alpha_2(P), \\ldots, \\alpha_g(P)\\}\\) is a numerical semigroup, known as the Weierstrass semigroup at \\(P\\)."
+  },
+  {
+    "objectID": "Families-NS/Weierstrass-semigroup.html#definition",
+    "href": "Families-NS/Weierstrass-semigroup.html#definition",
+    "title": "Weierstrass semigroup",
+    "section": "",
+    "text": "Let \\(C\\) be a smooth algebraic curve over the complex numbers of genus \\(g\\). Weierstrass Lückensatz states that for every \\(P \\in C\\), there are exactly \\(g\\) integers \\(\\alpha_1(P), \\alpha_2(P), \\ldots, \\alpha_g(P)\\) with \\(1 = \\alpha_1(P) &lt; \\cdots &lt; \\alpha_g(P) = 2g - 1\\), such that for all \\(i \\in \\{1, 2, \\ldots, g\\}\\) there is no meromorphic function on \\(X\\) with a pole at \\(P\\) of multiplicity \\(\\alpha_i(P)\\) as its only singularity. The set \\(S = \\mathbb{N} \\setminus \\{\\alpha_1(P), \\alpha_2(P), \\ldots, \\alpha_g(P)\\}\\) is a numerical semigroup, known as the Weierstrass semigroup at \\(P\\)."
+  },
+  {
+    "objectID": "Families-NS/Weierstrass-semigroup.html#examples",
+    "href": "Families-NS/Weierstrass-semigroup.html#examples",
+    "title": "Weierstrass semigroup",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\)"
+  },
+  {
+    "objectID": "Families-NS/Weierstrass-semigroup.html#examples-with-gap",
+    "href": "Families-NS/Weierstrass-semigroup.html#examples-with-gap",
+    "title": "Weierstrass semigroup",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to Weierstrass semigroup."
+  },
+  {
+    "objectID": "Families-NS/Weierstrass-semigroup.html#references",
+    "href": "Families-NS/Weierstrass-semigroup.html#references",
+    "title": "Weierstrass semigroup",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Basic-concepts/Set-divisors.html",
+    "href": "Basic-concepts/Set-divisors.html",
+    "title": "Set of divisors",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and an element \\(x \\in S\\). It is defined the set of divisors of \\(x\\) in \\(S\\) as the set\n\\[\nD(x) = \\{s \\in S ~ | ~ s \\le_S x\\},\n\\]\nwhere \\(\\le_S\\) is the relation order of \\(S\\). This set is always non-empty, since \\(x \\in D(x)\\), and it is related with the notion of proper ideals of a numerical semigroup."
+  },
+  {
+    "objectID": "Basic-concepts/Set-divisors.html#definition",
+    "href": "Basic-concepts/Set-divisors.html#definition",
+    "title": "Set of divisors",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and an element \\(x \\in S\\). It is defined the set of divisors of \\(x\\) in \\(S\\) as the set\n\\[\nD(x) = \\{s \\in S ~ | ~ s \\le_S x\\},\n\\]\nwhere \\(\\le_S\\) is the relation order of \\(S\\). This set is always non-empty, since \\(x \\in D(x)\\), and it is related with the notion of proper ideals of a numerical semigroup."
+  },
+  {
+    "objectID": "Basic-concepts/Set-divisors.html#examples",
+    "href": "Basic-concepts/Set-divisors.html#examples",
+    "title": "Set of divisors",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 3, 5, 7 \\rangle = \\{0, 3, 5, \\rightarrow \\}\\) and \\(x = 11\\). Then, \\(s \\in D(11)\\) if, and only if, \\(11 - s \\in S\\). Checking the condition for every \\(s \\in S\\) such that \\(s \\le 11\\), it is obtained that \\(D(11) = \\{0, 3, 5, 6, 8, 11\\}\\).\n\\(\\circ\\) Let \\(S = \\langle 4, 9, 10, 11 \\rangle = \\{0, 4, 8, \\rightarrow \\}\\). For \\(x = 4\\), it is obtained \\(D(4) = \\{0, 4\\}\\), and for \\(x = 8\\), the set of divisors is \\(D(8) = \\{0, 4, 8\\}\\), then \\(D(4) \\subseteq D(8)\\). In general, given \\(x, y \\in S\\), it is deduced that \\(D(x) \\subseteq D(y)\\) if, and only if, \\(x \\le_S y\\). As \\(\\le_S\\) is a partially relation order, the Hasse diagram can be constructed and given \\(x \\in S\\), \\(D(x)\\) is the set formed by the elements \\(y \\in S\\) such that there is a path from \\(y\\) to \\(x\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Set-divisors.html#examples-with-gap",
+    "href": "Basic-concepts/Set-divisors.html#examples-with-gap",
+    "title": "Set of divisors",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 21, 30, 45, 47 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(21, 30, 45, 47);\n&lt;Numerical semigroup with 4 generators&gt;\nLet’s compute \\(D(107)\\) (note that \\(107 = 2 \\cdot 30 + 47 \\in S\\)), the function DivisorsOfElementInNumericalSemigroup returns the set \\(D(x)\\) given a numerical semigroup and an element \\(x\\) of the numerical semigroup.\ngap&gt; DivisorsOfElementInNumericalSemigroup(S, 107);\n[ 0, 30, 47, 60, 77, 107 ]"
+  },
+  {
+    "objectID": "Basic-concepts/Set-divisors.html#references",
+    "href": "Basic-concepts/Set-divisors.html#references",
+    "title": "Set of divisors",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Basic-concepts/Type.html",
+    "href": "Basic-concepts/Type.html",
+    "title": "Type",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and \\(PF(S)\\) the set of pseudo-Frobenius numbers of \\(S\\). The type of \\(S\\) is defined as the cardinal of the set \\(PF(S)\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Type.html#definition",
+    "href": "Basic-concepts/Type.html#definition",
+    "title": "Type",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and \\(PF(S)\\) the set of pseudo-Frobenius numbers of \\(S\\). The type of \\(S\\) is defined as the cardinal of the set \\(PF(S)\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Type.html#examples",
+    "href": "Basic-concepts/Type.html#examples",
+    "title": "Type",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 4, 6, 9, 13 \\rangle = \\{0, 4, 6, 8, 9, 10, 12, \\rightarrow \\}\\), let’s compute the pseudo-Frobenius numbers of \\(S\\). The positive integers that do not belong to \\(S\\) are \\(\\mathbb{N} \\setminus S = \\{1,2,3,5,7,11\\}\\) and as \\(4 \\in S\\), the candidates for pseudo-Frobenius numbers belongs to the set \\(\\{-4, -3, -2, -1, 1,2,3,5,7,11 \\}\\). Checking the condition of pseudo-Frobenius number on every candidate, it is conclude that \\(PF(S) = \\{11\\}\\) and \\(t(S) = 1\\).\n\\(\\circ\\) The type of a numerical semigroup is \\(1\\) if, and only if, \\(2g(S) = C(S)\\), where \\(g(S)\\) is the genus of \\(S\\) and \\(C(S)\\) the conductor of \\(S\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Type.html#examples-with-gap",
+    "href": "Basic-concepts/Type.html#examples-with-gap",
+    "title": "Type",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 7, 9, 10, 15, 20 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(7, 9, 10, 15, 20);\n&lt;Numerical semigroup with 5 generators&gt;\nTo compute the type of \\(S\\) we can apply the function Type.\ngap&gt; Type(S);\n4\nApplying the function PseudoFrobenius, we are able to obtain explicitly the pseudo-Frobenius numbers of \\(S\\).\ngap&gt; PseudoFrobenius(S);\n[ 8, 11, 12, 13 ]"
+  },
+  {
+    "objectID": "Basic-concepts/Type.html#references",
+    "href": "Basic-concepts/Type.html#references",
+    "title": "Type",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Basic-concepts/Conductor.html",
+    "href": "Basic-concepts/Conductor.html",
+    "title": "Conductor",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. It is said that \\(s \\in S\\) is the conductor of \\(S\\) if for any \\(n \\in \\mathbb{N}\\), it satisfies that \\(s + n \\in S\\), and it is denoted by \\(C(S)\\). Equivalently, \\(s \\in S\\) is the conductor of \\(S\\) if for all \\(n \\in \\mathbb{N}\\) such that \\(n \\ge s\\), it holds \\(n \\in S\\).\nThere is a obvious relation between the conductor and the Frobenius number, that is, \\(F(S) + 1 = C(S)\\). The conductor does not determine in general the numerical semigroup, that means, it may exist more than one numerical semigroup with the same conductor."
+  },
+  {
+    "objectID": "Basic-concepts/Conductor.html#definition",
+    "href": "Basic-concepts/Conductor.html#definition",
+    "title": "Conductor",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. It is said that \\(s \\in S\\) is the conductor of \\(S\\) if for any \\(n \\in \\mathbb{N}\\), it satisfies that \\(s + n \\in S\\), and it is denoted by \\(C(S)\\). Equivalently, \\(s \\in S\\) is the conductor of \\(S\\) if for all \\(n \\in \\mathbb{N}\\) such that \\(n \\ge s\\), it holds \\(n \\in S\\).\nThere is a obvious relation between the conductor and the Frobenius number, that is, \\(F(S) + 1 = C(S)\\). The conductor does not determine in general the numerical semigroup, that means, it may exist more than one numerical semigroup with the same conductor."
+  },
+  {
+    "objectID": "Basic-concepts/Conductor.html#examples",
+    "href": "Basic-concepts/Conductor.html#examples",
+    "title": "Conductor",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let us consider a non-zero \\(m \\in \\mathbb{N}\\) arbitrary but fixed and \\(S = \\{0, m, \\rightarrow\\}\\). Obviously, \\(C(S) = m\\) and in this case every element of \\(S \\setminus \\{0\\}\\) is greater or equal than the conductor. This kind of numerical semigroups are the only ones that satisfy that property. This example shows that for any \\(n \\in \\mathbb{N}\\) with \\(n \\ne 1\\), there exists a numerical semigroup \\(S\\) such that \\(C(S) = n\\).\n\\(\\circ\\) Let \\(S_1 = \\langle 5, 7, 9 \\rangle\\) and \\(S_2 = \\langle 2, 15 \\rangle\\). With simple calculations we obtain that \\(S_1 = \\{0, 5, 7, 9, 10, 12, 14, \\rightarrow \\}\\) and \\(S_2 = \\{0, 2,4,6,8,10,12,14, \\rightarrow\\}\\), therefore \\(C(S_1) = 14 = c(S_2)\\) and \\(S_1 \\ne S_2\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Conductor.html#examples-with-gap",
+    "href": "Basic-concepts/Conductor.html#examples-with-gap",
+    "title": "Conductor",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following examples are made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 3, 7, 9, 11 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(3, 7, 9, 11);\n&lt;Numerical semigroup with 4 generators&gt;\nUsing the Conductor function, we can obtain the conductor of \\(S\\).\ngap&gt; Conductor(S);\n9\nTaking into account the equality \\(F(S) + 1 = C(S)\\), we can compute the conductor from the Frobenius number. The function FrobeniusNumber compute the Frobenius number of \\(S\\).\ngap&gt; FrobeniusNumber(S) + 1;\n9\n\\(\\diamond\\) Let \\(S = \\langle 4, 20, 21, 22 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(4, 20, 21, 22);\n&lt;Numerical semigroup with 4 generators&gt;\nThe function SmallElements returns a list with the left elements of \\(S\\) and the conductor.\ngap&gt; SmallElements(S);\n[ 0, 4, 8, 12, 16, 20, 21, 22, 24, 25, 26, 28, 29, 30, 32, 33, 34, 36, 37, 38, 40 ]\nWe obtain \\(C(S) = 40\\), we can check it with the function Conductor.\ngap&gt; Conductor(S);\n40"
+  },
+  {
+    "objectID": "Basic-concepts/Conductor.html#references",
+    "href": "Basic-concepts/Conductor.html#references",
+    "title": "Conductor",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Basic-concepts/Minimal-set-of-generators.html",
+    "href": "Basic-concepts/Minimal-set-of-generators.html",
+    "title": "Minimal set of generators",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(A \\subset S\\). We say that \\(A\\) is a minimal set of generators of \\(S\\) if \\(S = \\langle A \\rangle\\) and no proper subset of \\(S\\) has this property. It is well known that every numerical semigroup has a unique minimal set of generators, which is \\(A = S^* \\setminus (S^* + S^*)\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Minimal-set-of-generators.html#definition",
+    "href": "Basic-concepts/Minimal-set-of-generators.html#definition",
+    "title": "Minimal set of generators",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(A \\subset S\\). We say that \\(A\\) is a minimal set of generators of \\(S\\) if \\(S = \\langle A \\rangle\\) and no proper subset of \\(S\\) has this property. It is well known that every numerical semigroup has a unique minimal set of generators, which is \\(A = S^* \\setminus (S^* + S^*)\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Minimal-set-of-generators.html#examples",
+    "href": "Basic-concepts/Minimal-set-of-generators.html#examples",
+    "title": "Minimal set of generators",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 4, 7, 12, 23 \\rangle\\). We have \\(12 = 4 + 4 + 4\\) and \\(23 = 4 + 7 + 12\\), so \\(S = \\langle 4, 7, 12, 23 \\rangle = \\langle 4, 7 \\rangle\\) and no proper subset of \\(B = \\{4,7\\}\\) generates \\(S\\), therefore, \\(B\\) is the set of minimal generators.\n\\(\\circ\\) Let \\(S = \\langle 8, 9, 12, 15 \\rangle\\) and \\(B = \\{8, 9, 12, 15\\}\\). If we remove an element of \\(B\\), this cannot be generated, and as a consequence, no proper subset of \\(B\\) generates \\(S\\). In conclusion, \\(B\\) is already a minimal set of generators."
+  },
+  {
+    "objectID": "Basic-concepts/Minimal-set-of-generators.html#examples-with-gap",
+    "href": "Basic-concepts/Minimal-set-of-generators.html#examples-with-gap",
+    "title": "Minimal set of generators",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 15, 33, 42, 47, 48, 75, 89 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(15, 33, 42, 47, 48, 75, 89);\n&lt;Numerical semigroup with 7 generators&gt;\nNote that \\(B = \\{15, 33, 42, 47, 48, 75, 89\\}\\) is not a minimal set of generators, for example, \\(48 = 15 + 33\\). The function MinimalGenerators returns the minimal set of generators of the numerical semigroup.\ngap&gt; MinimalGenerators(S);\n[ 15, 33, 42, 47 ]\nIf we just want to know what system of generators has been used to generate \\(S\\), the function Generators returns the set of generators.\ngap&gt; Generators(S);\n[ 15, 33, 42, 47, 48, 75, 89 ]"
+  },
+  {
+    "objectID": "Basic-concepts/Minimal-set-of-generators.html#references",
+    "href": "Basic-concepts/Minimal-set-of-generators.html#references",
+    "title": "Minimal set of generators",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Basic-concepts/Frobenius-number.html",
+    "href": "Basic-concepts/Frobenius-number.html",
+    "title": "Frobenius number",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. It is defined the Frobenius number of \\(S\\), denoted by \\(F(S)\\), as the maximum of the set \\(\\mathbb{N} \\setminus S\\). Equivalently, the Frobenius number is the largest number that does not belong to \\(S\\) or the unique element in \\(\\mathbb{N} \\setminus S\\) so that for any \\(n \\in \\mathbb{N} \\setminus \\{0\\}\\), we have that \\(F(S) + n \\in S\\).\nThere is a obvious relation between the conductor and the Frobenius number, that is, \\(F(S) + 1 = C(S)\\). The Frobenius number does not determine in general the numerical semigroup, that means, it may exist more than one numerical semigroup with the same Frobenius number."
+  },
+  {
+    "objectID": "Basic-concepts/Frobenius-number.html#definition",
+    "href": "Basic-concepts/Frobenius-number.html#definition",
+    "title": "Frobenius number",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. It is defined the Frobenius number of \\(S\\), denoted by \\(F(S)\\), as the maximum of the set \\(\\mathbb{N} \\setminus S\\). Equivalently, the Frobenius number is the largest number that does not belong to \\(S\\) or the unique element in \\(\\mathbb{N} \\setminus S\\) so that for any \\(n \\in \\mathbb{N} \\setminus \\{0\\}\\), we have that \\(F(S) + n \\in S\\).\nThere is a obvious relation between the conductor and the Frobenius number, that is, \\(F(S) + 1 = C(S)\\). The Frobenius number does not determine in general the numerical semigroup, that means, it may exist more than one numerical semigroup with the same Frobenius number."
+  },
+  {
+    "objectID": "Basic-concepts/Frobenius-number.html#examples",
+    "href": "Basic-concepts/Frobenius-number.html#examples",
+    "title": "Frobenius number",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let us consider a non-zero \\(m \\in \\mathbb{N}\\) arbitrary but fixed and \\(S = \\{0, m, \\rightarrow\\}\\). Obviously, \\(F(S) = m-1\\) and in this case every element of \\(S \\setminus \\{0\\}\\) is greater than the Frobenius number. This kind of numerical semigroups are the only ones that satisfy that property. This example shows that for any \\(n \\in \\mathbb{N} \\setminus \\{0\\}\\), there exists a numerical semigroup \\(S\\) so that \\(F(S) = n\\).\n\\(\\circ\\) Let \\(S_1 = \\langle 5, 7, 9 \\rangle\\) and \\(S_2 = \\langle 2, 15 \\rangle\\). With simple calculations we obtain that \\(S_1 = \\{0, 5, 7, 9, 10, 12, 14, \\rightarrow \\}\\) and \\(S_2 = \\{0, 2,4,6,8,10,12,14, \\rightarrow\\}\\), therefore \\(F(S_1) = 13 = F(S_2)\\) and \\(S_1 \\ne S_2\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Frobenius-number.html#examples-with-gap",
+    "href": "Basic-concepts/Frobenius-number.html#examples-with-gap",
+    "title": "Frobenius number",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following examples are made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 3, 10, 16, 19 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(3, 10, 16, 19);\n&lt;Numerical semigroup with 4 generators&gt;\nUsing the FrobeniusNumber function, we can obtain the Frobenius number of \\(S\\).\ngap&gt; FrobeniusNumber(S);\n17\nTaking into account the equality \\(F(S) + 1 = C(S)\\), we can compute the Frobenius number from the conductor. The function Conductor computes the conductor of \\(S\\).\ngap&gt; Conductor(S) - 1;\n17\n\\(\\diamond\\) Let \\(S = \\langle 4, 20, 21, 22 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(4, 20, 21, 22);\nUsing the function SmallElements we can obtain the left elements of S and the conductor.\ngap&gt; SmallElements(S);\n[ 0, 4, 8, 12, 16, 20, 21, 22, 24, 25, 26, 28, 29, 30, 32, 33, 34, 36, 37, 38, 40 ]\nWe obtain \\(F(S) = C(S) - 1 = 40 - 1 = 39\\).\ngap&gt; FrobeniusNumber(S);\n39\nIf we want to know how many numerical semigroups have Frobenius number \\(f \\in \\mathbb{N}\\), we have the function NumericalSemigroupsWithFrobeniusNumberFG that returns the set of these numerical semigroups, with \\(f = 15\\):\ngap&gt; Length(NumericalSemigroupsWithFrobeniusNumberFG(15));\n200"
+  },
+  {
+    "objectID": "Basic-concepts/Frobenius-number.html#references",
+    "href": "Basic-concepts/Frobenius-number.html#references",
+    "title": "Frobenius number",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Basic-concepts/Genus.html",
+    "href": "Basic-concepts/Genus.html",
+    "title": "Genus",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. By definition of numerical semigroup, the set \\(\\mathbb{N} \\setminus S\\), usually denoted by \\(G(S)\\), is finite. It is defined the genus of \\(S\\) as the cardinal of the set \\(|\\mathbb{N} \\setminus S|\\), and it is denoted by \\(g(S)\\).\nIf \\(n(S)\\) is the cardinal of the set formed by the left elements of \\(S\\), and \\(C(S)\\) is the conductor of \\(S\\), it is deduced the relation \\(n(S) + g(S) = C(S)\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Genus.html#definition",
+    "href": "Basic-concepts/Genus.html#definition",
+    "title": "Genus",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. By definition of numerical semigroup, the set \\(\\mathbb{N} \\setminus S\\), usually denoted by \\(G(S)\\), is finite. It is defined the genus of \\(S\\) as the cardinal of the set \\(|\\mathbb{N} \\setminus S|\\), and it is denoted by \\(g(S)\\).\nIf \\(n(S)\\) is the cardinal of the set formed by the left elements of \\(S\\), and \\(C(S)\\) is the conductor of \\(S\\), it is deduced the relation \\(n(S) + g(S) = C(S)\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Genus.html#examples",
+    "href": "Basic-concepts/Genus.html#examples",
+    "title": "Genus",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 6, 10, 13, 14, 15 \\rangle\\). Computing the first elements of \\(S\\), we can note that \\(S = \\{ 0, 6, 10, 12, 13, 14, 15, 16, 18, \\rightarrow \\}\\), and \\(\\mathbb{N} \\setminus S = \\{1, 2, 3, 4, 5, 7, 8, 9, 11, 17\\}\\), thus \\(g(S) = 10\\).\n\\(\\circ\\) Let \\(S = \\{ 0, 4, 8, 9, 11, 12, 13, 15, \\rightarrow \\}\\). The set of left elements is \\(N(S) = \\{0, 4, 8, 9, 11, 12, 13\\}\\) and the conductor is \\(C(S) = 15\\), therefore \\(g(S) = C(S) - n(S) = 15 - 7 = 8\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Genus.html#examples-with-gap",
+    "href": "Basic-concepts/Genus.html#examples-with-gap",
+    "title": "Genus",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following examples are made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 8, 11, 13, 15, 19 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(8, 11, 13, 15, 19);\n&lt;Numerical semigroup with 5 generators&gt;\nIn order to compute the genus of \\(S\\), we can apply the function Genus.\ngap&gt; Genus(S);\n15\n\\(\\diamond\\) Let \\(S = \\langle 6, 8, 10, 13 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(6, 8, 10, 13);\n&lt;Numerical semigroup with 4 generators&gt;\nWe will use the relation \\(g(S) = C(S) - n(S)\\) to compute the genus. First, we use the function SmallElements to calculate the set \\(N(S) \\cup \\{C(S)\\}\\).\ngap&gt; SmallElements(S);\n[ 0, 6, 8, 10, 12, 13, 14, 16, 18 ]\nThen, we get \\(C(S) = 18\\) and \\(n(S) = |\\{0, 6, 8, 10, 12, 13, 14, 16 \\}| = 8\\), so \\(g(S) = C(S) - n(S) = 10\\). Applying the function Genus:\ngap&gt; Genus(S);\n10"
+  },
+  {
+    "objectID": "Basic-concepts/Genus.html#references",
+    "href": "Basic-concepts/Genus.html#references",
+    "title": "Genus",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Basic-concepts/Gap.html",
+    "href": "Basic-concepts/Gap.html",
+    "title": "Gap",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. By definition, the set \\(\\mathbb{N} \\setminus S\\) is finite, then it is said that a natural is a gap of \\(S\\) if it belongs to \\(\\mathbb{N} \\setminus S\\). The set of gaps is usually denoted by \\(G(S)\\), and its cardinal, the genus of \\(S\\), by \\(g(S)\\). Note that the gaps determine completely the numerical semigroup. The maximum of \\(G(S)\\) is the Frobenius number of \\(S\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Gap.html#definition",
+    "href": "Basic-concepts/Gap.html#definition",
+    "title": "Gap",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. By definition, the set \\(\\mathbb{N} \\setminus S\\) is finite, then it is said that a natural is a gap of \\(S\\) if it belongs to \\(\\mathbb{N} \\setminus S\\). The set of gaps is usually denoted by \\(G(S)\\), and its cardinal, the genus of \\(S\\), by \\(g(S)\\). Note that the gaps determine completely the numerical semigroup. The maximum of \\(G(S)\\) is the Frobenius number of \\(S\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Gap.html#examples",
+    "href": "Basic-concepts/Gap.html#examples",
+    "title": "Gap",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 4, 9, 10 \\rangle\\). If we compute the first elements of \\(S\\), we arrive that \\(S = \\{0, 4, 8, 9, 10, 12, 13, 14, 16, \\rightarrow \\}\\), then \\(G(S) = \\mathbb{N} \\setminus S = \\{1, 2, 3, 5, 6, 7, 11, 15\\}\\).\n\\(\\circ\\) Let us consider \\(b \\in \\mathbb{N}\\) an odd element arbitrary but fixed. The set \\(S = \\langle 2, b \\rangle\\) is a numerical semigroup (note that if \\(n \\ge b\\), then \\(n \\in S\\)) and the gaps of \\(S\\) are \\(G(S) = \\{1, 3, 5, 7, \\ldots, b - 2\\}\\), in other words, all the odd naturals smaller than \\(b\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Gap.html#examples-with-gap",
+    "href": "Basic-concepts/Gap.html#examples-with-gap",
+    "title": "Gap",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 5, 23, 24, 33, 34 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(5, 23, 24, 33, 34);\n&lt;Numerical semigroup with 5 generators&gt;\nTo compute the set of gaps of \\(S\\) we can apply the function Gaps.\ngap&gt; Gaps(S);\n[ 1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 21, 22, 26, 27, 31, 32, 36, 37, 41, 42 ]\nNote that if we know all the elements between \\(0\\) and \\(F(S)+1\\) that belongs to \\(S\\), where \\(F(S)\\) denote the Frobenius number of \\(S\\), then we also know the gaps of \\(S\\). In GAP, we can compute it with the function SmallElements, which returns the set formed by the left elements of \\(S\\) and the conductor of \\(S\\).\ngap&gt; SmallElements(S);\n[ 0, 5, 10, 15, 20, 23, 24, 25, 28, 29, 30, 33, 34, 35, 38, 39, 40, 43 ]"
+  },
+  {
+    "objectID": "Basic-concepts/Gap.html#references",
+    "href": "Basic-concepts/Gap.html#references",
+    "title": "Gap",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Basic-concepts/Multiplicity.html",
+    "href": "Basic-concepts/Multiplicity.html",
+    "title": "Multiplicity",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. We say that \\(s \\in S\\) is the multiplicity of \\(S\\) if it is the smallest non-zero element of \\(S\\), and it is denoted by \\(m(S)\\). Equivalently, the multiplicity of \\(S\\) is defined as the minimum of the minimal generator system of S.\nAs simple results, the multiplicity is an upper bound of the embedding dimension of \\(S\\), a minimal generator and does not determine the numerical semigroup."
+  },
+  {
+    "objectID": "Basic-concepts/Multiplicity.html#definition",
+    "href": "Basic-concepts/Multiplicity.html#definition",
+    "title": "Multiplicity",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. We say that \\(s \\in S\\) is the multiplicity of \\(S\\) if it is the smallest non-zero element of \\(S\\), and it is denoted by \\(m(S)\\). Equivalently, the multiplicity of \\(S\\) is defined as the minimum of the minimal generator system of S.\nAs simple results, the multiplicity is an upper bound of the embedding dimension of \\(S\\), a minimal generator and does not determine the numerical semigroup."
+  },
+  {
+    "objectID": "Basic-concepts/Multiplicity.html#examples",
+    "href": "Basic-concepts/Multiplicity.html#examples",
+    "title": "Multiplicity",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let us consider a non-zero \\(m \\in \\mathbb{N}\\) arbitrary but fixed and \\(S = \\{0, m, \\rightarrow\\}\\). Obviously \\(m(S) = m\\). This example shows that for any \\(n \\in \\mathbb{N} \\setminus \\{0\\}\\), there exists a numerical semigroup \\(S\\) so that \\(m(S) = n\\).\n\\(\\circ\\) Let \\(S_1 = \\{0, 5, 7, 9, 10, 12, 14, \\rightarrow \\}\\) and \\(S_2 = \\{0, 5, \\rightarrow\\}\\), obviously \\(m(S_1) = 5 = m(S_2)\\) and \\(S_1 \\ne S_2\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Multiplicity.html#examples-with-gap",
+    "href": "Basic-concepts/Multiplicity.html#examples-with-gap",
+    "title": "Multiplicity",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 3, 7, 9, 13 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(3, 7, 9, 13);\n&lt;Numerical semigroup with 4 generators&gt;\nThe function Multiplicity returns the multiplicity of a numerical semigroup.\ngap&gt; Multiplicity(S);\n3\nWe can check if \\(m(S) = 3\\) is a minimal generator with the function MinimalGenerators, which returns the set of minimal generators of the numerical semigroup.\ngap&gt; MinimalGenerators(S);\n[3, 7]\nWe can also note that the number of minimal generators is less than the multiplicity, this property holds for any numerical semigroup."
+  },
+  {
+    "objectID": "Basic-concepts/Multiplicity.html#references",
+    "href": "Basic-concepts/Multiplicity.html#references",
+    "title": "Multiplicity",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Basic-concepts/Numerical-semigroup.html",
+    "href": "Basic-concepts/Numerical-semigroup.html",
+    "title": "Numerical Semigroup",
+    "section": "",
+    "text": "We say that \\((S,+)\\) is a numerical semigroup if \\(S \\subseteq \\mathbb{N}\\) and satisfies the following conditions:\n\nFor all \\(a,b \\in S\\), then \\(a + b \\in S\\).\n\\(0 \\in S\\).\nThe set \\(\\mathbb{N} \\setminus S\\) is finite.\n\nThe first two conditions implies that \\((S,+)\\) is a submonoid of \\((\\mathbb{N}, +)\\) and if there is no confusion, we denote the numerical semigroup as \\(S\\). The set formed by the non-zero elements of \\(S\\) is denoted by \\(S^*\\). Equivalently, \\((S, +)\\) is a numerical semigroup if \\((S,+)\\) is a submonoid of \\((\\mathbb{N}, +)\\) and \\(1 \\in G\\), where \\(G = \\{x - y ~ | ~ x,y \\in S \\}\\).\nAs the complement is finite, there must be a \\(c \\in S\\) such that for any \\(n \\in \\mathbb{N}\\), \\(c+n \\in S\\), this value \\(c \\in S\\) is called the conductor of the semigroup and it is usually denoted by \\(C(S)\\). If \\(s_1, s_2, \\ldots, s_n \\in S\\) are the elements smaller than the conductor (called left elements), then we write the numerical semigroup as \\(S = \\{0, s_1, s_2, \\ldots, s_n, C(S), \\rightarrow \\}\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Numerical-semigroup.html#definition",
+    "href": "Basic-concepts/Numerical-semigroup.html#definition",
+    "title": "Numerical Semigroup",
+    "section": "",
+    "text": "We say that \\((S,+)\\) is a numerical semigroup if \\(S \\subseteq \\mathbb{N}\\) and satisfies the following conditions:\n\nFor all \\(a,b \\in S\\), then \\(a + b \\in S\\).\n\\(0 \\in S\\).\nThe set \\(\\mathbb{N} \\setminus S\\) is finite.\n\nThe first two conditions implies that \\((S,+)\\) is a submonoid of \\((\\mathbb{N}, +)\\) and if there is no confusion, we denote the numerical semigroup as \\(S\\). The set formed by the non-zero elements of \\(S\\) is denoted by \\(S^*\\). Equivalently, \\((S, +)\\) is a numerical semigroup if \\((S,+)\\) is a submonoid of \\((\\mathbb{N}, +)\\) and \\(1 \\in G\\), where \\(G = \\{x - y ~ | ~ x,y \\in S \\}\\).\nAs the complement is finite, there must be a \\(c \\in S\\) such that for any \\(n \\in \\mathbb{N}\\), \\(c+n \\in S\\), this value \\(c \\in S\\) is called the conductor of the semigroup and it is usually denoted by \\(C(S)\\). If \\(s_1, s_2, \\ldots, s_n \\in S\\) are the elements smaller than the conductor (called left elements), then we write the numerical semigroup as \\(S = \\{0, s_1, s_2, \\ldots, s_n, C(S), \\rightarrow \\}\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Numerical-semigroup.html#examples",
+    "href": "Basic-concepts/Numerical-semigroup.html#examples",
+    "title": "Numerical Semigroup",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let us consider a non-zero \\(m \\in \\mathbb{N}\\) arbitrary but fixed. The set \\(S = \\mathbb{N} \\setminus \\{1, 2, \\ldots, m-1\\}\\) is a numerical semigroup, and if we use the previous notation, \\(S = \\{0, m, \\rightarrow \\}\\).\n\\(\\circ\\) Consider the submonoid generated by the set \\(A = \\{4,5\\}\\), that means, \\(S = \\langle 4, 5 \\rangle\\). Computing the first elements, we see that \\(\\{0, 4, 5, 8, 9, 10, 12\\} \\subseteq S\\) and for any element \\(n \\in \\mathbb{N}\\) so that \\(n \\ge 12\\), it holds \\(n \\in S\\). In conclusion, \\(S\\) is a numerical semigroup and \\(S = \\{0, 4, 5, 8, 9, 10, 12 \\rightarrow \\}\\).\n\\(\\circ\\) Consider the submonoid generated by the set \\(A = \\{5, 7, 11\\}\\), that means, \\(S = \\langle 5, 7, 11 \\rangle\\). If we compute the first elements, we obtain that \\(\\{0, 5, 7, 10, 11, 12, 14\\} \\subseteq S\\) and the conductor is \\(C(S) = 14\\), therefore, \\(S = \\{0, 5, 7, 10, 11, 12, 14, \\rightarrow \\}\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Numerical-semigroup.html#examples-with-gap",
+    "href": "Basic-concepts/Numerical-semigroup.html#examples-with-gap",
+    "title": "Numerical Semigroup",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following examples are made with the package NumericalSgps in GAP. The function NumericalSemigroups returns the numerical semigroups generated from a set \\(A \\subseteq \\mathbb{N}\\) if possible, since not every set \\(A\\) generates a numerical semigroup, a sufficient and necessary condition is \\(gcd(A) = 1\\).\n\\(\\diamond\\) We define the following numerical semigroup in GAP:\ngap&gt; S := NumericalSemigroups(9, 11, 12);\n&lt;Numerical semigroup with 3 generators&gt;\nWe can obtain the left elements and the conductor with the function SmallElements.\ngap&gt; Smallelements(S);\n[ 0, 9, 11, 12, 18, 20, 21, 22, 23, 24, 27, 29, 30, 31, 32, 33, 34, 35, 36, 38 ]\nWe conclude that \\(S = \\{ 0, 9, 11, 12, 18, 20, 21, 22, 23, 24, 27, 29, 30, 31, 32, 33, 34, 35, 36, 38, \\rightarrow \\}\\).\n\\(\\diamond\\) If we try to define a semigroup with the set \\(A = \\{12, 15, 21\\}\\), we obtain the following output:\ngap&gt; S := NumericalSemigroups(12, 15, 21);\nError, The greatest common divisor is not 1.\nAs we can see, \\(gcd(12, 15, 21) = 3\\), that implies that \\(S = \\langle 12, 15, 21 \\rangle \\subseteq \\langle 3 \\rangle\\), but the set \\(\\mathbb{N} \\setminus \\langle 3 \\rangle\\) is infinite, therefore \\(\\mathbb{N} \\setminus S\\) is also infinite and \\(S\\) is not a numerical semigroup."
+  },
+  {
+    "objectID": "Basic-concepts/Numerical-semigroup.html#references",
+    "href": "Basic-concepts/Numerical-semigroup.html#references",
+    "title": "Numerical Semigroup",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Basic-concepts/Special-gap.html",
+    "href": "Basic-concepts/Special-gap.html",
+    "title": "Special gap",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(PF(S)\\) be the set of pseudo-Frobenius numbers of \\(S\\). An element \\(x \\in PF(S)\\) is a special gap if \\(2x \\in S\\). The set of special gaps is denoted by \\(SG(S)\\) and is always non-empty, due to \\(F(S) \\in SG(S)\\), where \\(F(S)\\) denotes the Frobenius number of \\(S\\). Its definition is motivated by the problem of finding the set of all numerical semigroups containing a given numerical semigroup."
+  },
+  {
+    "objectID": "Basic-concepts/Special-gap.html#definition",
+    "href": "Basic-concepts/Special-gap.html#definition",
+    "title": "Special gap",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(PF(S)\\) be the set of pseudo-Frobenius numbers of \\(S\\). An element \\(x \\in PF(S)\\) is a special gap if \\(2x \\in S\\). The set of special gaps is denoted by \\(SG(S)\\) and is always non-empty, due to \\(F(S) \\in SG(S)\\), where \\(F(S)\\) denotes the Frobenius number of \\(S\\). Its definition is motivated by the problem of finding the set of all numerical semigroups containing a given numerical semigroup."
+  },
+  {
+    "objectID": "Basic-concepts/Special-gap.html#examples",
+    "href": "Basic-concepts/Special-gap.html#examples",
+    "title": "Special gap",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let us consider \\(m \\in \\mathbb{N}\\) a non-zero element arbitrary but fixed and \\(S = \\{0, m, \\rightarrow \\}\\). Its easy to see that \\(PF(S) = \\{1,2, \\ldots, m-1\\}\\), therefore an element \\(n \\in PF(S)\\) is a special gap if \\(2n \\ge m\\), that is, if \\(n \\ge \\lceil \\frac{m}{2} \\rceil\\), in conclusion, \\(SG(S) = \\{\\lceil \\frac{m}{2} \\rceil, \\lceil \\frac{m}{2} \\rceil + 1, \\ldots, m-1 \\}\\).\n\\(\\circ\\) Let \\(S = \\langle 3, 5, 10 \\rangle = \\{0, 3, 5, 6, 8, \\rightarrow \\}\\). The positive integers that do not belong to \\(S\\) are \\(\\mathbb{N} \\setminus S = \\{1, 2, 4, 7\\}\\), and as \\(3 \\in S\\), the candidates for pseudo-Frobenius numbers belongs to the set \\(\\{-3, -2, -1, 1, 2, 4, 7 \\}\\). Checking the condition for each element, it is concluded that \\(PF(S) = \\{7\\}\\) and \\(SG(S) = \\{7\\}\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Special-gap.html#examples-with-gap",
+    "href": "Basic-concepts/Special-gap.html#examples-with-gap",
+    "title": "Special gap",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following examples are made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 5, 23, 24, 33, 34 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(5, 23, 24, 33, 34);\n&lt;Numerical semigroup with 5 generators&gt;\nThe function SpecialGaps returns the set of special gaps of a numerical semigroup.\ngap&gt; SpecialGaps(S);\n[ 17, 29, 41 ]\n\\(\\diamond\\) Let \\(S = \\langle 3, 5, 7 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(3, 5, 7);\n&lt;Numerical semigroup with 3 generators&gt;\nThe special gaps of \\(S\\) are:\ngap&gt; SpecialGaps(S);\n[ 4 ]\nFor an element to be a special gap, first it has to be a gap and a pseudo-Frobenius number, we can compute this elements with the functions Gaps and PseudoFrobenius, respectively.\ngap&gt; Gaps(S);\n[ 1, 2, 4 ]\ngap&gt; PseudoFrobenius(S);\n[ 2, 4 ]\nWith this numerical semigroup we found an example that \\(SG(S) \\subsetneq PF(S) \\subsetneq G(S)\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Special-gap.html#references",
+    "href": "Basic-concepts/Special-gap.html#references",
+    "title": "Special gap",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Basic-concepts/Relation-order-NS.html",
+    "href": "Basic-concepts/Relation-order-NS.html",
+    "title": "Relation order of a numerical semigroup",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. It is defined the relation \\(\\le_S\\) over \\(\\mathbb{Z}\\) as follows:\n\\[\na \\le_S b \\Longleftrightarrow b - a \\in S.\n\\] It is easy to prove that \\(\\le_S\\) is a partial order relation. From this relation order is possible to characterize the pseudo-Frobenius numbers of \\(S\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Relation-order-NS.html#definition",
+    "href": "Basic-concepts/Relation-order-NS.html#definition",
+    "title": "Relation order of a numerical semigroup",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. It is defined the relation \\(\\le_S\\) over \\(\\mathbb{Z}\\) as follows:\n\\[\na \\le_S b \\Longleftrightarrow b - a \\in S.\n\\] It is easy to prove that \\(\\le_S\\) is a partial order relation. From this relation order is possible to characterize the pseudo-Frobenius numbers of \\(S\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Relation-order-NS.html#examples",
+    "href": "Basic-concepts/Relation-order-NS.html#examples",
+    "title": "Relation order of a numerical semigroup",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 10, 14, 17, 21 \\rangle\\) and the integers \\(x_1 = 8, x_2 = 62\\). For \\(x_1\\), there is no positive integer \\(y \\ne x_1\\) such that \\(y \\le_S x_1\\), since \\(x_1 - y = 8 - y &lt; 10\\) and the only element in \\(S\\) smaller than \\(10\\) is \\(0\\), therefore \\(x_1\\) is a minimal in \\(\\mathbb{N}\\), but is not minimal in \\(\\mathbb{Z}\\), since \\(-2 \\le_S x_1\\). On the other hand, for \\(x_2 = 62\\) we have that \\(10 \\le_S 62\\) and \\(62 \\le_S 72\\).\n\\(\\diamond\\) Let \\(S\\) be a numerical semigroup and \\(F(S)\\) the Frobenius number of \\(S\\). If we suppose \\(F(S) \\le_S x\\) for some \\(x \\in \\mathbb{Z} \\setminus S\\), then exists \\(s \\in S\\) such that \\(x = F(S) + y\\), but that means \\(x \\in S\\), which is a contradiction, therefore \\(F(S)\\) is maximal in \\(\\mathbb{Z} \\setminus S\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Relation-order-NS.html#examples-with-gap",
+    "href": "Basic-concepts/Relation-order-NS.html#examples-with-gap",
+    "title": "Relation order of a numerical semigroup",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to relation order."
+  },
+  {
+    "objectID": "Basic-concepts/Relation-order-NS.html#references",
+    "href": "Basic-concepts/Relation-order-NS.html#references",
+    "title": "Relation order of a numerical semigroup",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Basic-concepts/Oversemigroup.html",
+    "href": "Basic-concepts/Oversemigroup.html",
+    "title": "Oversemigroup",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup arbitrary but fixed. It is said that \\(T\\) is a oversemigroup of \\(S\\) if \\(T\\) is a numerical semigroup and \\(S \\subseteq T\\). The set of oversemigroups of \\(S\\) is denoted by \\(\\mathcal{O}(S)\\).\nThe set \\(\\mathcal{O}(S)\\) is non-empty and finite for every numerical semigroup, since \\(S \\in \\mathcal{O}(S)\\) and \\(|\\mathbb{N} \\setminus S|\\) is finite."
+  },
+  {
+    "objectID": "Basic-concepts/Oversemigroup.html#definition",
+    "href": "Basic-concepts/Oversemigroup.html#definition",
+    "title": "Oversemigroup",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup arbitrary but fixed. It is said that \\(T\\) is a oversemigroup of \\(S\\) if \\(T\\) is a numerical semigroup and \\(S \\subseteq T\\). The set of oversemigroups of \\(S\\) is denoted by \\(\\mathcal{O}(S)\\).\nThe set \\(\\mathcal{O}(S)\\) is non-empty and finite for every numerical semigroup, since \\(S \\in \\mathcal{O}(S)\\) and \\(|\\mathbb{N} \\setminus S|\\) is finite."
+  },
+  {
+    "objectID": "Basic-concepts/Oversemigroup.html#examples",
+    "href": "Basic-concepts/Oversemigroup.html#examples",
+    "title": "Oversemigroup",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 4, 5, 6 \\rangle = \\{ 0, 4, 5, 6, 8, \\rightarrow\\}\\). The gaps of \\(S\\) are \\(G(S) = \\{1, 2, 3, 7\\}\\), so to compute the oversemigroups we have to add gaps to \\(S\\) and check if it is in fact a numerical semigroup.\n\n0 gaps: we have \\(S \\subseteq S\\) so \\(S\\) is trivially a oversemigroup of \\(S\\).\n1 gap: the candidates are \\(T_{1,1} = S \\cup \\{1\\}, T_{1,2} = S \\cup \\{2\\}, T_{1,3} = S \\cup \\{3\\}, T_{1,4} = S \\cup \\{7\\}\\) and \\(T_4\\) is the only numerical semigroup.\n2 gaps: in this case the oversemigroups are \\(T_{2,1} = S \\cup \\{2, 7\\}, T_{2,2} = S \\cup \\{3, 7\\}\\).\n3 gaps: the only oversemigroup is \\(T_{3,1} = S \\cup \\{2, 3, 7\\}\\).\n4 gaps: we have the trivial oversemigroup \\(T_{4,1} = \\mathbb{N}\\).\n\nTo sum up, \\(\\mathcal{O}(S) = \\{S, S \\cup \\{7\\}, S \\cup \\{2, 7\\}, S \\cup \\{3, 7\\}, S \\cup \\{2, 3, 7\\}, \\mathbb{N}\\}\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Oversemigroup.html#examples-with-gap",
+    "href": "Basic-concepts/Oversemigroup.html#examples-with-gap",
+    "title": "Oversemigroup",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 2, 5, 7 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(2, 5, 7);\n&lt;Numerical semigroup with 3 generators&gt;\nTo get the oversemigroups of \\(S\\), the function Oversemigroups returns the set of oversemigroups.\ngap&gt; OverSemigroups(S);\n[ &lt;The numerical semigroup N&gt;, &lt;Numerical semigroup with 2 generators&gt;, &lt;Numerical semigroup with 2 generators&gt; ]\nThe code List(List_NS, S -&gt; Function(S)); return a list where it has applied Function to every element in \\(List\\_NS\\), for example, we can see the oversemigroups of \\(S\\) by the set formed by its left elements and its conductor,\ngap&gt; List(OverSemigroups(S), S -&gt; SmallElements(S));\n[ [ 0 ], [ 0, 2 ], [ 0, 2, 4 ] ]\nor by its gaps,\ngap&gt; List(OverSemigroups(S), S -&gt; Gaps(S));\n[ [  ], [ 1 ], [ 1, 3 ] ]\nIt is concluded that \\(\\mathcal{O}(S) = \\{S, T, \\mathbb{N}\\}\\), where \\(T = \\{0, 2, \\rightarrow\\}\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Oversemigroup.html#references",
+    "href": "Basic-concepts/Oversemigroup.html#references",
+    "title": "Oversemigroup",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Basic-concepts/Degree-of-singularity.html",
+    "href": "Basic-concepts/Degree-of-singularity.html",
+    "title": "Degree of singularity",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup, \\(t\\) be an indeterminant and \\(\\mathbb{K}\\) be a field. As in the semigroup ring case, it is defined \\(\\mathbb{K}[[t^s ~ | ~ s \\in S]]\\), denoted by \\(\\mathbb{K}[[S]]\\), and is a subring of the ring power series \\(\\mathbb{K}[[t]]\\). It is defined the degree of singularity of \\(\\mathbb{K}[[S]]\\) as the length of the \\(\\mathbb{K}[[S]]-\\)module \\(\\mathbb{K}[[t]]/\\mathbb{K}[[S]]\\). Some authors use the terminology degree of singularity to refer the genus of a numerical semigroup."
+  },
+  {
+    "objectID": "Basic-concepts/Degree-of-singularity.html#definition",
+    "href": "Basic-concepts/Degree-of-singularity.html#definition",
+    "title": "Degree of singularity",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup, \\(t\\) be an indeterminant and \\(\\mathbb{K}\\) be a field. As in the semigroup ring case, it is defined \\(\\mathbb{K}[[t^s ~ | ~ s \\in S]]\\), denoted by \\(\\mathbb{K}[[S]]\\), and is a subring of the ring power series \\(\\mathbb{K}[[t]]\\). It is defined the degree of singularity of \\(\\mathbb{K}[[S]]\\) as the length of the \\(\\mathbb{K}[[S]]-\\)module \\(\\mathbb{K}[[t]]/\\mathbb{K}[[S]]\\). Some authors use the terminology degree of singularity to refer the genus of a numerical semigroup."
+  },
+  {
+    "objectID": "Basic-concepts/Degree-of-singularity.html#examples",
+    "href": "Basic-concepts/Degree-of-singularity.html#examples",
+    "title": "Degree of singularity",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\)"
+  },
+  {
+    "objectID": "Basic-concepts/Degree-of-singularity.html#examples-with-gap",
+    "href": "Basic-concepts/Degree-of-singularity.html#examples-with-gap",
+    "title": "Degree of singularity",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nNowadays there is no function in the package NumericalSgps related to degree of singularity."
+  },
+  {
+    "objectID": "Basic-concepts/Degree-of-singularity.html#references",
+    "href": "Basic-concepts/Degree-of-singularity.html#references",
+    "title": "Degree of singularity",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Basic-concepts/Fundamental-gap.html",
+    "href": "Basic-concepts/Fundamental-gap.html",
+    "title": "Fundamental gap",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(G(S)\\) be the set formed by the gaps of \\(S\\). A gap \\(g \\in G(S)\\) is a fundamental gap of \\(S\\) if \\(\\{2g, 3g\\} \\subseteq S\\), or equivalently, for every \\(n \\in \\mathbb{N} \\setminus \\{0,1\\}\\), it holds that \\(ng \\in S\\). It is denoted by \\(FG(S)\\) the set of fundamental gaps of \\(S\\) and is always non-empty, due to \\(F(S) \\in FG(S)\\), where \\(F(S)\\) is the Frobenius number of \\(S\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Fundamental-gap.html#definition",
+    "href": "Basic-concepts/Fundamental-gap.html#definition",
+    "title": "Fundamental gap",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(G(S)\\) be the set formed by the gaps of \\(S\\). A gap \\(g \\in G(S)\\) is a fundamental gap of \\(S\\) if \\(\\{2g, 3g\\} \\subseteq S\\), or equivalently, for every \\(n \\in \\mathbb{N} \\setminus \\{0,1\\}\\), it holds that \\(ng \\in S\\). It is denoted by \\(FG(S)\\) the set of fundamental gaps of \\(S\\) and is always non-empty, due to \\(F(S) \\in FG(S)\\), where \\(F(S)\\) is the Frobenius number of \\(S\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Fundamental-gap.html#examples",
+    "href": "Basic-concepts/Fundamental-gap.html#examples",
+    "title": "Fundamental gap",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 4, 9, 10 \\rangle = \\{0, 4, 8, 9, 10, 12, 13, 14, 16, \\rightarrow \\}\\). We have that \\(G(S) = \\{1, 2, 3, 5, 6, 7, 11, 15\\}\\) and checking the condition for each gap of \\(S\\), it is concluded that \\(FG(S) = \\{6, 7, 11, 15\\}\\).\n\\(\\circ\\) Let us consider \\(b \\in \\mathbb{N}\\) an odd element arbitrary but fixed. The set \\(S = \\langle 2, b \\rangle\\) is a numerical semigroup (note that if \\(n \\ge b\\), then \\(n \\in S\\)) and the gaps of \\(S\\) are \\(G(S) = \\{1, 3, 5, 7, \\ldots, b - 2\\}\\), in other words, all the odd naturals smaller than \\(b\\). Now, a gap \\(x \\in G(S)\\) is fundamental if \\(\\{2x,3x\\} \\subseteq S\\), in this case, as \\(2 \\in S\\), then \\(2x \\in S\\) for all \\(x \\in G(S)\\). On the other hand, \\(3x \\in S\\) if, and only if, \\(x \\ge \\lceil \\frac{b}{3} \\rceil\\), therefore, \\(FG(S)\\) consist in all the odd integers greater or equal to \\(\\lceil \\frac{b}{3} \\rceil\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Fundamental-gap.html#examples-with-gap",
+    "href": "Basic-concepts/Fundamental-gap.html#examples-with-gap",
+    "title": "Fundamental gap",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 8, 12, 14, 15, 25 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(8, 12, 14, 15, 25);\n&lt;Numerical semigroup with 5 generators&gt;\nThe function FundamentalGaps returns the set formed by the fundamental gaps of \\(S\\).\ngap&gt; FundamentalGaps(S);\n[ 4, 10, 11, 13, 17, 18, 19, 21 ]\nIf we want to know all the gaps of \\(S\\), then we have the function Gaps.\ngap&gt; Gaps(S);\n[ 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 13, 17, 18, 19, 21 ]\nIn this case, the fundamental gaps are the greatest of the set, but that does not hold for every numerical semigroup.\n\\(\\diamond\\) Let \\(S = \\langle 5, 12, 18 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(5, 12, 18);\n&lt;Numerical semigroup with 3 generators&gt;\nThe gaps of \\(S\\) are:\ngap&gt; Gaps(S);\n[ 1, 2, 3, 4, 6, 7, 8, 9, 11, 13, 14, 16, 19, 21, 26, 31 ]\nOn the other hand, the fundamental gaps of \\(S\\) are formed by:\ngap&gt; FundamentalGaps(S);\n[ 6, 9, 11, 14, 16, 19, 21, 26, 31 ]"
+  },
+  {
+    "objectID": "Basic-concepts/Fundamental-gap.html#references",
+    "href": "Basic-concepts/Fundamental-gap.html#references",
+    "title": "Fundamental gap",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Basic-concepts/Apery-set.html",
+    "href": "Basic-concepts/Apery-set.html",
+    "title": "Apéry Set",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and \\(n \\in S^*\\). It is defined the Apéry set of \\(S\\) with respect to \\(n\\), denoted by \\(Ap(S,n)\\), to be the set\n\\[\nAp(S,n) = \\{s \\in S ~ | ~ s - n \\not \\in S\\}.\n\\]\nThe knowledge of this set determines completely the numerical semigroup \\(S\\). \\(Ap(S,n)\\) always have \\(n\\) elements and it is easy to obtain the Frobenius number, the multiplicity and the genus of \\(S\\) from this set. This definition could be extended to the Apéry set of an integer."
+  },
+  {
+    "objectID": "Basic-concepts/Apery-set.html#definition",
+    "href": "Basic-concepts/Apery-set.html#definition",
+    "title": "Apéry Set",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and \\(n \\in S^*\\). It is defined the Apéry set of \\(S\\) with respect to \\(n\\), denoted by \\(Ap(S,n)\\), to be the set\n\\[\nAp(S,n) = \\{s \\in S ~ | ~ s - n \\not \\in S\\}.\n\\]\nThe knowledge of this set determines completely the numerical semigroup \\(S\\). \\(Ap(S,n)\\) always have \\(n\\) elements and it is easy to obtain the Frobenius number, the multiplicity and the genus of \\(S\\) from this set. This definition could be extended to the Apéry set of an integer."
+  },
+  {
+    "objectID": "Basic-concepts/Apery-set.html#examples",
+    "href": "Basic-concepts/Apery-set.html#examples",
+    "title": "Apéry Set",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 3, 8, 10 \\rangle\\), or equivalently, \\(S = \\{0, 3, 6, 8, \\rightarrow \\}\\), let’s compute the Apéry set of \\(S\\) with respect to \\(n = 3\\). All the elements greater or equal than \\(11\\) cannot be in the Apéry set. Indeed, the conductor of \\(S\\) is \\(C(S) = 8\\) and if \\(n \\ge 11\\), \\(n - 3 \\ge 11 - 3 = 8\\), in conclusion, \\(n-3 \\in S\\). With the above reasoning, we have that \\(Ap(S, 3) \\subseteq \\{0, 3, 6, 8, 9, 10\\}\\), and if we check the condition on each element, it is deduced that \\(Ap(S,3) = \\{0, 8, 10\\}\\).\n\\(\\circ\\) Let \\(S = \\langle 4, 6, 11, 13 \\rangle\\) and \\(n = 6\\). If we compute the first elements of \\(S\\), it is deduced that \\(S = \\{0, 4, 6, 8, 10, \\rightarrow \\}\\) and \\(C(S) = 10\\), then if \\(n \\ge 16\\), it holds \\(n - 6 \\in S\\) and it must be \\(Ap(S,6) \\subseteq \\{0, 4, 6, 8, 10, 11, 12, 13, 14, 15\\}\\). If we check on each number, it follows that \\(Ap(S,6) = \\{0, 4, 8, 11, 13, 15\\}\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Apery-set.html#examples-with-gap",
+    "href": "Basic-concepts/Apery-set.html#examples-with-gap",
+    "title": "Apéry Set",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following examples are made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Consider \\(S = \\langle 12, 14, 25, 33 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(12, 14, 25, 33);\n&lt;Numerical semigroup with 4 generators&gt;\nWe can use the function AperyListOfNumericalSemigroupWRTElement in order to compute the Apéry set of \\(S\\) for any \\(n \\in S^*\\).\ngap&gt; AperyListOfNumericalSemigroupWRTElement(S, 12);\n[0, 25, 14, 39, 28, 53, 42, 67, 56, 33, 58, 47]\n\\(\\diamond\\) Let \\(S = \\langle 6,7,8,9 \\rangle\\). We first compute the left elements and the conductor of \\(S\\) with the function SmallElements.\ngap&gt; S := NumericalSemigroup(6,7,8,9);\n&lt;Numerical semigroup with 4 generators&gt;\ngap&gt; SmallElements(S);\n[ 0, 6, 7, 8, 9, 12 ]\nWe have that \\(S = \\{0, 6, 7, 8, 9, 12, \\rightarrow \\}\\). Now we calculate the Apéry set of \\(S\\) with \\(n = 6\\).\ngap&gt; AperyListOfNumericalSemigroupWRTElement(S, 6);\n[ 0, 7, 8, 9, 16, 17 ]\nThe Apéry set determines completely the numerical semigroup. The function NumericalSemigroupByAperyList returns the numerical semigroup from the Apéry set.\ngap&gt; T := NumericalSemigroupByAperyList([ 0, 7, 8, 9, 16, 17 ]);\n&lt;Numerical semigroup&gt;\ngap&gt; SmallElements(T);\n[ 0, 6, 7, 8, 9, 12 ]\nThus, \\(S = \\{0, 6, 7, 8, 9, 12, \\rightarrow \\} = T\\) and the result holds. The function IsAperyListOfNumericalSemigroup tests whether a list of integers may represent the Apéry set of a numerical semigroup.\ngap&gt; IsAperyListOfNumericalSemigroup([ 0, 7, 8, 9, 16, 17 ]);\ntrue"
+  },
+  {
+    "objectID": "Basic-concepts/Apery-set.html#references",
+    "href": "Basic-concepts/Apery-set.html#references",
+    "title": "Apéry Set",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Basic-concepts/Pseudo-Frobenius-number.html",
+    "href": "Basic-concepts/Pseudo-Frobenius-number.html",
+    "title": "Pseudo Frobenius number",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. It is said that \\(x \\in \\mathbb{Z}\\) is a pseudo-Frobenius number if \\(x \\not \\in S\\) and \\(x + s \\in S\\) for all \\(s \\in S^*\\). The set formed by the pseudo-Frobenius numbers of \\(S\\) is denoted by \\(PF(S)\\).\nThe set \\(PF(S)\\) is always non-empty since \\(F(S) \\in PF(S)\\), where \\(F(S)\\) is the Frobenius number of \\(S\\). The cardinal of \\(PF(S)\\) is the type of \\(S\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Pseudo-Frobenius-number.html#definition",
+    "href": "Basic-concepts/Pseudo-Frobenius-number.html#definition",
+    "title": "Pseudo Frobenius number",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. It is said that \\(x \\in \\mathbb{Z}\\) is a pseudo-Frobenius number if \\(x \\not \\in S\\) and \\(x + s \\in S\\) for all \\(s \\in S^*\\). The set formed by the pseudo-Frobenius numbers of \\(S\\) is denoted by \\(PF(S)\\).\nThe set \\(PF(S)\\) is always non-empty since \\(F(S) \\in PF(S)\\), where \\(F(S)\\) is the Frobenius number of \\(S\\). The cardinal of \\(PF(S)\\) is the type of \\(S\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Pseudo-Frobenius-number.html#examples",
+    "href": "Basic-concepts/Pseudo-Frobenius-number.html#examples",
+    "title": "Pseudo Frobenius number",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 3, 5, 10 \\rangle = \\{0, 3, 5, 6, 8, \\rightarrow \\}\\). The positive integers that do not belong to \\(S\\) are \\(\\mathbb{N} \\setminus S = \\{1, 2, 4, 7\\}\\), and as \\(3 \\in S\\), the candidates for pseudo-Frobenius numbers belongs to the set \\(\\{-3, -2, -1, 1, 2, 4, 7 \\}\\). Checking the condition for each element, it is concluded that \\(PF(S) = \\{7\\}\\).\n\\(\\circ\\) The Frobenius number is the only pseudo-Frobenius number (the type is \\(1\\)) if, and only if, \\(2g(S) = C(S)\\), where \\(g(S)\\) is the genus of \\(S\\) and \\(C(S)\\) the conductor of \\(S\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Pseudo-Frobenius-number.html#examples-with-gap",
+    "href": "Basic-concepts/Pseudo-Frobenius-number.html#examples-with-gap",
+    "title": "Pseudo Frobenius number",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 7, 9, 10, 15, 20 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(7, 9, 10, 15, 20);\n&lt;Numerical semigroup with 5 generators&gt;\nIn order to compute the pseudo-Frobenius numbers of \\(S\\), we can apply the function PseudoFrobenius, which returns the set of pseudo-Frobenius numbers of the numerical semigroup.\ngap&gt; PseudoFrobenius(S);\n[ 8, 11, 12, 13 ]\nOn the other hand, the function FrobeniusNumber returns the Frobenius number of the numerical semigroup.\ngap&gt; FrobeniusNumber(S); \n13\nIt holds that for every numerical semigroup, \\(F(S) = \\max PF(S)\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Pseudo-Frobenius-number.html#references",
+    "href": "Basic-concepts/Pseudo-Frobenius-number.html#references",
+    "title": "Pseudo Frobenius number",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Basic-concepts/Semigroup-ring.html",
+    "href": "Basic-concepts/Semigroup-ring.html",
+    "title": "Semigroup ring",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup, \\(t\\) be an indeterminant and \\(\\mathbb{K}\\) be a field. It is defined the semigroup ring of \\(S\\) over \\(\\mathbb{K}\\) as \\(\\mathbb{K}[t^s ~ | ~ s \\in S] = \\bigoplus_{s \\in S} \\mathbb{K}t^{s}\\) and is denoted by \\(\\mathbb{K}[S]\\). Note that \\(\\mathbb{K}[S]\\) is a subring of the polynomial ring \\(\\mathbb{K}[t]\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Semigroup-ring.html#definition",
+    "href": "Basic-concepts/Semigroup-ring.html#definition",
+    "title": "Semigroup ring",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup, \\(t\\) be an indeterminant and \\(\\mathbb{K}\\) be a field. It is defined the semigroup ring of \\(S\\) over \\(\\mathbb{K}\\) as \\(\\mathbb{K}[t^s ~ | ~ s \\in S] = \\bigoplus_{s \\in S} \\mathbb{K}t^{s}\\) and is denoted by \\(\\mathbb{K}[S]\\). Note that \\(\\mathbb{K}[S]\\) is a subring of the polynomial ring \\(\\mathbb{K}[t]\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Semigroup-ring.html#examples",
+    "href": "Basic-concepts/Semigroup-ring.html#examples",
+    "title": "Semigroup ring",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let us consider \\(b \\in \\mathbb{N}\\) an odd natural arbitrary but fixed and \\(S = \\langle 2, b \\rangle\\). It is easy to see that \\(S = \\{0, 2, 4, \\ldots, b-1, b \\rightarrow \\}\\), then \\[\n\\mathbb{K}[S] = \\{a_0 + a_1t^{s_1} + \\cdots + a_nt^{s_n} ~ | ~ a_0, \\ldots, a_n \\in \\mathbb{K}, s_0, s_1, \\ldots, s_n \\in S\\}.\n\\] In this case, \\(s_i\\) is even or greater or equal to \\(b\\) for all \\(i \\in \\{1, 2, \\ldots, n\\}\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Semigroup-ring.html#examples-with-gap",
+    "href": "Basic-concepts/Semigroup-ring.html#examples-with-gap",
+    "title": "Semigroup ring",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to semigroup ring."
+  },
+  {
+    "objectID": "Basic-concepts/Semigroup-ring.html#references",
+    "href": "Basic-concepts/Semigroup-ring.html#references",
+    "title": "Semigroup ring",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Basic-concepts/Embedding-dimension.html",
+    "href": "Basic-concepts/Embedding-dimension.html",
+    "title": "Embedding dimension",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. It is well known that every numerical semigroup admits a unique finite minimal system of generators \\(B = \\{n_1, n_2, \\ldots, n_p\\}\\) for some \\(p \\in \\mathbb{N} \\setminus \\{0\\}\\). The embedding dimension is defined as the cardinal of the minimal system of generators, and it is denoted by \\(e(S)\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Embedding-dimension.html#definition",
+    "href": "Basic-concepts/Embedding-dimension.html#definition",
+    "title": "Embedding dimension",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. It is well known that every numerical semigroup admits a unique finite minimal system of generators \\(B = \\{n_1, n_2, \\ldots, n_p\\}\\) for some \\(p \\in \\mathbb{N} \\setminus \\{0\\}\\). The embedding dimension is defined as the cardinal of the minimal system of generators, and it is denoted by \\(e(S)\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Embedding-dimension.html#examples",
+    "href": "Basic-concepts/Embedding-dimension.html#examples",
+    "title": "Embedding dimension",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\{0, 3, 6, 7, 9, 10, 12, \\rightarrow\\}\\). First, we will compute the minimal system of generators of \\(S\\). The multiplicity of \\(S\\) is \\(m(S) = 3\\) and is always a minimal generator. On the other hand, the number \\(7\\) cannot be generated by \\(3\\), then \\(7\\) is another minimal generator. Considering the generators system \\(B = \\{3, 7\\}\\), we obtain \\(S\\), therefore, \\(e(S) = |B| = 2\\).\n\\(\\circ\\) Let us consider \\(m \\in \\mathbb{N} \\setminus \\{0\\}\\) arbitrary but fixed and \\(S = \\langle m, m+1, m+2, \\ldots, 2m - 1 \\rangle\\). It is easy to see that \\(B = \\{m, m+1, m+2, \\ldots, 2m - 1\\}\\) is a minimal system of generators of \\(S\\), therefore \\(e(S) = m = m(S)\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Embedding-dimension.html#examples-with-gap",
+    "href": "Basic-concepts/Embedding-dimension.html#examples-with-gap",
+    "title": "Embedding dimension",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 5, 12, 15, 17, 18, 19, 29, 35, 50 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(5, 12, 15, 17, 18, 19, 29, 35, 50);\n&lt;Numerical semigroup with 9 generators&gt;\nThe function EmbeddingDimension computes the embedding dimension of \\(S\\).\ngap&gt; EmbeddingDimension(S);\n4\nUsing the MinimalGenerators function, we can also obtain the minimal system of generators of \\(S\\).\ngap&gt; MinimalGenerators(S);\n[ 5, 12, 18, 19 ]\nWe conclude that \\(e(S) = |\\{5, 12, 18, 19\\}| = 4\\). Note that \\(e(S)\\) is less than the multiplicity (\\(m(S) = 5\\)), this property holds for any numerical semigroup."
+  },
+  {
+    "objectID": "Basic-concepts/Embedding-dimension.html#references",
+    "href": "Basic-concepts/Embedding-dimension.html#references",
+    "title": "Embedding dimension",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Basic-concepts/Left-elements.html",
+    "href": "Basic-concepts/Left-elements.html",
+    "title": "Left Elements",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and \\(F(S)\\) the Frobenius number of \\(S\\). An element \\(s \\in \\mathbb{N}\\) is a left element (or small element) of \\(S\\) if \\(s \\in S\\) and \\(s &lt; F(S)\\). The set of left elements is denoted by \\(N(S)\\).\nThe set of left elements is always non-empty, due to \\(0 \\in N(S)\\), and determines the numerical semigroup."
+  },
+  {
+    "objectID": "Basic-concepts/Left-elements.html#definition",
+    "href": "Basic-concepts/Left-elements.html#definition",
+    "title": "Left Elements",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and \\(F(S)\\) the Frobenius number of \\(S\\). An element \\(s \\in \\mathbb{N}\\) is a left element (or small element) of \\(S\\) if \\(s \\in S\\) and \\(s &lt; F(S)\\). The set of left elements is denoted by \\(N(S)\\).\nThe set of left elements is always non-empty, due to \\(0 \\in N(S)\\), and determines the numerical semigroup."
+  },
+  {
+    "objectID": "Basic-concepts/Left-elements.html#examples",
+    "href": "Basic-concepts/Left-elements.html#examples",
+    "title": "Left Elements",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 3, 8, 10 \\rangle\\). We have that \\(6 = 3 + 3 \\in S\\) and since \\(8,9,10 \\in S\\), adding \\(3\\) to each number, we have that for \\(n \\ge 8\\), it holds \\(n \\in S\\) and \\(7 \\not \\in S\\), so the Frobenius number is \\(F(S) = 7\\) and the set of left elements is \\(N(S) = \\{0, 3, 6\\}\\).\n\\(\\circ\\) Let us consider \\(b \\in \\mathbb{N}\\) an odd integer arbitrary but fixed and \\(S = \\langle 2, b \\rangle\\). Note that for \\(n \\ge b-1\\), it holds \\(n \\in S\\) and \\(b-2 \\not \\in S\\), thus the Frobenius number is \\(F(S) = b-2\\) and the set of left elements is \\(N(S) = \\{0, 2, 4, \\ldots, b-3\\}\\), in other words, the even elements between \\(0\\) and \\(b-2\\)."
+  },
+  {
+    "objectID": "Basic-concepts/Left-elements.html#examples-with-gap",
+    "href": "Basic-concepts/Left-elements.html#examples-with-gap",
+    "title": "Left Elements",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 4, 13, 17, 20 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(4, 13, 17, 20);\n&lt;Numerical semigroup with 4 generators&gt;\nIf we want to compute the left elements of \\(S\\), the function SmallElements returns a list with the left elements and the conductor of \\(S\\).\ngap&gt; SmallElements(S);\n[ 0, 4, 8, 12, 13, 16, 17, 20, 21, 24, 25, 26, 28, 29, 30, 32, 33, 34, 36 ]\nObviously, the conductor is the greatest element of the list, in this case, \\(C(S) = 36\\). Another way to know the left elements of \\(S\\) is from the function Gaps, which returns the gaps of \\(S\\). If \\(G(S)\\) is the set of gaps, therefore \\(N(S) = \\{0, 1, 2, \\ldots, F(S)-1\\} \\setminus G(S)\\).\ngap&gt; Gaps(S);\n[ 1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 15, 18, 19, 22, 23, 27, 31, 35 ]"
+  },
+  {
+    "objectID": "Basic-concepts/Left-elements.html#references",
+    "href": "Basic-concepts/Left-elements.html#references",
+    "title": "Left Elements",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Families-NS/NS-free.html",
+    "href": "Families-NS/NS-free.html",
+    "title": "Free numerical semigroup",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(B = \\{r_0, r_1, \\ldots, r_h\\}\\) be the set of minimal generators of \\(S\\). Let \\(d_1 = r_0\\) and for all \\(k \\in \\{2, 3, \\ldots, h+1\\}\\), set \\(d_k = gcd(d_{k-1}, r_{k-1})\\). Define \\(e_k = \\frac{d_k}{d_{k+1}}\\) for all \\(k \\in \\{1, 2, \\ldots, h\\}\\). It is said that \\(S\\) is free for the arrangement \\((r_0, r_1, \\ldots, r_h)\\) if for all \\(k \\in \\{1, 2, \\ldots, h\\}\\):\n\n\\(e_k &gt; 1\\).\n\\(e_k r_k\\) belongs to the semigroup generated by \\(\\{r_0, r_1, \\ldots, r_{k-1} \\}\\).\n\nIf \\(S\\) is free for all arrangements of its minimal generators, then it is said that \\(S\\) is universally free."
+  },
+  {
+    "objectID": "Families-NS/NS-free.html#definition",
+    "href": "Families-NS/NS-free.html#definition",
+    "title": "Free numerical semigroup",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(B = \\{r_0, r_1, \\ldots, r_h\\}\\) be the set of minimal generators of \\(S\\). Let \\(d_1 = r_0\\) and for all \\(k \\in \\{2, 3, \\ldots, h+1\\}\\), set \\(d_k = gcd(d_{k-1}, r_{k-1})\\). Define \\(e_k = \\frac{d_k}{d_{k+1}}\\) for all \\(k \\in \\{1, 2, \\ldots, h\\}\\). It is said that \\(S\\) is free for the arrangement \\((r_0, r_1, \\ldots, r_h)\\) if for all \\(k \\in \\{1, 2, \\ldots, h\\}\\):\n\n\\(e_k &gt; 1\\).\n\\(e_k r_k\\) belongs to the semigroup generated by \\(\\{r_0, r_1, \\ldots, r_{k-1} \\}\\).\n\nIf \\(S\\) is free for all arrangements of its minimal generators, then it is said that \\(S\\) is universally free."
+  },
+  {
+    "objectID": "Families-NS/NS-free.html#examples",
+    "href": "Families-NS/NS-free.html#examples",
+    "title": "Free numerical semigroup",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(a,b \\in \\mathbb{N} \\setminus \\{0, 1\\}\\) with \\(gcd(a,b) = 1\\) and \\(S = \\langle a,b \\rangle\\). Then, \\(h = 1\\), \\(d_1 = a\\) and \\(d_2 = gcd(d_1, b) = 1\\). We have, \\(e_1 = a &gt; 1\\) and \\(e_1 r_1 = ab \\in \\langle a \\rangle\\). Therefore, any numerical semigroup with embedding dimension two is free. In fact, they are telescopic numerical semigroups.\n\\(\\circ\\) Let \\(S = \\langle 4, 9, 11 \\rangle\\). We have, \\(d_1 = 4\\), \\(d_2 = gcd(4, 9) = 1\\) and \\(d_3 = gcd(1, 11) = 1\\). On the other hand, \\(e_1 = \\frac{d_1}{d_2} = 4, e_2 = \\frac{d_2}{d_3} = 1\\). As \\(e_2 \\not &gt; 1\\), then \\(S\\) is not a free numerical semigroup."
+  },
+  {
+    "objectID": "Families-NS/NS-free.html#examples-with-gap",
+    "href": "Families-NS/NS-free.html#examples-with-gap",
+    "title": "Free numerical semigroup",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following examples are made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 10, 15, 18 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(10, 15, 18);\n&lt;Numerical semigroup with 3 generators&gt;\nIn order to know if \\(S\\) is free, we can use the function IsFree.\ngap&gt; IsFree(S);\ntrue\nThe condition of free depends on the arrangement, the function IsUniversallyFree checks if the numerical semigroup is free for all arrangements of its minimal generators.\ngap&gt; IsUniversallyFree(S);\ntrue\n\\(\\diamond\\) If we are interested in know how many free numerical semigroups have a fixed Frobenius number \\(f \\in \\mathbb{N}\\), the function FreeNumericalSemigroupsWithFrobeniusNumber returns these numerical semigroups.\ngap&gt; Length(FreeNumericalSemigroupsWithFrobeniusNumber(57));\n33"
+  },
+  {
+    "objectID": "Families-NS/NS-free.html#references",
+    "href": "Families-NS/NS-free.html#references",
+    "title": "Free numerical semigroup",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Families-NS/NS-telescopic.html",
+    "href": "Families-NS/NS-telescopic.html",
+    "title": "Telescopic numerical semigroup",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and \\(B = \\{r_0, r_1, \\ldots, r_h\\}\\) the set of minimal generators of \\(S\\). It is said that \\(S\\) is telescopic if \\(S\\) is free for the arrangement \\((r_0, r_1, \\ldots, r_h)\\) and \\(r_0 &lt; r_1 &lt; \\cdots &lt; r_h\\)."
+  },
+  {
+    "objectID": "Families-NS/NS-telescopic.html#definition",
+    "href": "Families-NS/NS-telescopic.html#definition",
+    "title": "Telescopic numerical semigroup",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and \\(B = \\{r_0, r_1, \\ldots, r_h\\}\\) the set of minimal generators of \\(S\\). It is said that \\(S\\) is telescopic if \\(S\\) is free for the arrangement \\((r_0, r_1, \\ldots, r_h)\\) and \\(r_0 &lt; r_1 &lt; \\cdots &lt; r_h\\)."
+  },
+  {
+    "objectID": "Families-NS/NS-telescopic.html#examples",
+    "href": "Families-NS/NS-telescopic.html#examples",
+    "title": "Telescopic numerical semigroup",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 4, 6, 9 \\rangle\\). We have, \\(h = 2, d_1 = 4, d_2 = 2\\) and \\(d_3 = 1\\). Thus, \\(e_1 = e_2 = 2\\). As \\(2 \\cdot 6 \\in \\langle 4 \\rangle\\) and \\(2 \\cdot 9 \\in \\langle 4, 6 \\rangle\\), it is concluded that \\(S\\) is telescopic.\n\\(\\circ\\) Let \\(S = \\langle 4, 9, 14 \\rangle\\) and the arrangement \\(B_1 = \\{14, 4, 9\\}\\). We have, \\(d_1 = 14, d_2 = gcd(14, 4) = 2\\) and \\(d_3 = gcd(2, 9) = 1\\). Moreover, \\(e_1 = \\frac{d_1}{d_2} = 7 &gt; 1, e_2 = \\frac{d_2}{d_3} = 2 &gt; 1\\), \\(e_1r_1 = 7 \\cdot 4 \\in \\langle 14 \\rangle\\) and \\(e_2r_2 = 2 \\cdot 9 \\in \\langle 14, 4 \\rangle\\), therefore \\(S\\) is free for the arrangement \\(B_1\\). If we check with the arrangement \\(B_2 = \\{4, 9, 14\\}\\), is is obtained that \\(d_1 = 4, d_2 = gcd(4, 9) = 1, d_3 = 1\\) and \\(e_2 = \\frac{d_2}{d_3} = 1 \\not &gt; 1\\), therefore \\(S\\) is not telescopic."
+  },
+  {
+    "objectID": "Families-NS/NS-telescopic.html#examples-with-gap",
+    "href": "Families-NS/NS-telescopic.html#examples-with-gap",
+    "title": "Telescopic numerical semigroup",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following examples are made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 4, 11, 14 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(4, 11, 14);\n&lt;Numerical semigroup with 3 generators&gt;\nIn order to know if \\(S\\) is telescopic, we can use the function IsTelescopic.\ngap&gt; IsTelescopic(S);\nfalse\n\\(\\diamond\\) If we are interested in how many telescopic numerical semigroups have a fixed Frobenius number \\(f\\), the function TelescopicNumericalSemigroupsWithFrobeniusNumber returns the set of all telescopic numerical semigroups with given Frobenius number \\(f\\).\ngap&gt; Length(TelescopicNumericalSemigroupsWithFrobeniusNumber(11));\n4"
+  },
+  {
+    "objectID": "Families-NS/NS-telescopic.html#references",
+    "href": "Families-NS/NS-telescopic.html#references",
+    "title": "Telescopic numerical semigroup",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Families-NS/NS-pseudo-symmetric.html",
+    "href": "Families-NS/NS-pseudo-symmetric.html",
+    "title": "Pseudo-symmetric numerical semigroup",
+    "section": "",
+    "text": "A numerical semigroup \\(S\\) is said to be pseudo-symmetric if it is irreducible and its Frobenius number is even."
+  },
+  {
+    "objectID": "Families-NS/NS-pseudo-symmetric.html#definition",
+    "href": "Families-NS/NS-pseudo-symmetric.html#definition",
+    "title": "Pseudo-symmetric numerical semigroup",
+    "section": "",
+    "text": "A numerical semigroup \\(S\\) is said to be pseudo-symmetric if it is irreducible and its Frobenius number is even."
+  },
+  {
+    "objectID": "Families-NS/NS-pseudo-symmetric.html#examples",
+    "href": "Families-NS/NS-pseudo-symmetric.html#examples",
+    "title": "Pseudo-symmetric numerical semigroup",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 4, 10, 17 \\rangle\\). This numerical semigroup is irreducible and if we compute the first elements of \\(S\\), we obtain that \\(S = \\{0, 4, 8, 10, 12, 14, 16, 17, 18, 20, 21, 22, 24, \\rightarrow \\}\\), so \\(F(S) = 23\\) and \\(S\\) is not a pseudo-symmetric numerical semigroup. The irreducible numerical semigroups with odd Frobenius number are called symmetric numerical semigroups."
+  },
+  {
+    "objectID": "Families-NS/NS-pseudo-symmetric.html#examples-with-gap",
+    "href": "Families-NS/NS-pseudo-symmetric.html#examples-with-gap",
+    "title": "Pseudo-symmetric numerical semigroup",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 4, 5, 7 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(4, 5, 7);\n&lt;Numerical semigroup with 3 generators&gt;\nThe function IsPseudoSymmetric returns true or false depending on whether the numerical semigroup is pseudo-symmetric or not.\ngap&gt; IsPseudoSymmetric(S);\ntrue\nWe can also prove it by definition. First, we have to known if \\(S\\) is irreducible, the function IsIrreducible returns true or false depending on whether the numerical semigroup is irreducible or not.\ngap&gt; IsIrreducible(S);\ntrue\nNow, the function FrobeniusNumber computes the Frobenius number of \\(S\\).\ngap&gt; FrobeniusNumber(S);\n6"
+  },
+  {
+    "objectID": "Families-NS/NS-pseudo-symmetric.html#references",
+    "href": "Families-NS/NS-pseudo-symmetric.html#references",
+    "title": "Pseudo-symmetric numerical semigroup",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Families-NS/NS-irreducible.html",
+    "href": "Families-NS/NS-irreducible.html",
+    "title": "Irreducible numerical semigroup",
+    "section": "",
+    "text": "A numerical semigroup \\(S\\) is said to be irreducible if it cannot be expressed as the intersection of two numerical semigroups properly containing it.\nIt is well known that the intersection of two numerical semigroups is also a numerical semigroup."
+  },
+  {
+    "objectID": "Families-NS/NS-irreducible.html#definition",
+    "href": "Families-NS/NS-irreducible.html#definition",
+    "title": "Irreducible numerical semigroup",
+    "section": "",
+    "text": "A numerical semigroup \\(S\\) is said to be irreducible if it cannot be expressed as the intersection of two numerical semigroups properly containing it.\nIt is well known that the intersection of two numerical semigroups is also a numerical semigroup."
+  },
+  {
+    "objectID": "Families-NS/NS-irreducible.html#examples",
+    "href": "Families-NS/NS-irreducible.html#examples",
+    "title": "Irreducible numerical semigroup",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 5, 7, 9 \\rangle\\) and the numerical semigroups \\(S_1 = \\langle 5, 7, 8, 9 \\rangle\\) and \\(S_2 = \\langle 5, 7, 9, 11 \\rangle\\). Clearly, \\(S \\subsetneq S_1\\), \\(S \\subsetneq S_2\\) and \\(S = S_1 \\cap S_2\\), since \\(S_1 = S \\cup \\{8, 13\\}\\) and \\(S_2 = S \\cup \\{11\\}\\).\n\\(\\circ\\) Let \\(S = \\langle 2, 7 \\rangle = \\{0, 2, 4, 6, \\rightarrow \\}\\), let’s prove that \\(S\\) is irreducible. Let us consider the set of oversemigroups of \\(S\\),\n\\[\n\\mathcal{O}(S) = \\{\\mathbb{N}, \\{0, 2, \\rightarrow\\}, \\{0, 2, 4, \\rightarrow\\}, S\\} = \\{\\mathbb{N}, S \\cup \\{3, 5\\}, S \\cup \\{5\\}, S\\} = \\{\\mathbb{N}, T_1, T_2, S\\}.\n\\] If \\(S\\) is not irreducible, the only possibility is \\(S = T_1 \\cap T_2\\), but \\(T_1 \\cap T_2 = S \\cup \\{5\\} \\ne S\\), therefore \\(S\\) is irreducible."
+  },
+  {
+    "objectID": "Families-NS/NS-irreducible.html#examples-with-gap",
+    "href": "Families-NS/NS-irreducible.html#examples-with-gap",
+    "title": "Irreducible numerical semigroup",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following examples are made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 4, 10, 17 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(4, 10, 17);\n&lt;Numerical semigroup with 3 generators&gt;\nWe can check if \\(S\\) is irreducible numerical semigroup with the function IsIrreducible.\ngap&gt; IsIrreducible(S);\ntrue\n\\(\\diamond\\) The function IrreducibleNumericalSemigroupsWithFrobeniusNumber returns the set of all irreducible numerical semigroups with fixed Frobenius number \\(f\\).\ngap&gt; Length(IrreducibleNumericalSemigroupsWithFrobeniusNumber(16));\n7\nWe can also fix the multiplicity with the function IrreducibleNumericalSemigroupsWithFrobeniusNumberAndMultiplicity.\ngap&gt; Length(IrreducibleNumericalSemigroupsWithFrobeniusNumberAndMultiplicity(16, 3));\n1"
+  },
+  {
+    "objectID": "Families-NS/NS-irreducible.html#references",
+    "href": "Families-NS/NS-irreducible.html#references",
+    "title": "Irreducible numerical semigroup",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Ideals-NS/Arf-closure.html",
+    "href": "Ideals-NS/Arf-closure.html",
+    "title": "Arf closure",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup."
+  },
+  {
+    "objectID": "Ideals-NS/Arf-closure.html#definition",
+    "href": "Ideals-NS/Arf-closure.html#definition",
+    "title": "Arf closure",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup."
+  },
+  {
+    "objectID": "Ideals-NS/Arf-closure.html#examples",
+    "href": "Ideals-NS/Arf-closure.html#examples",
+    "title": "Arf closure",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let"
+  },
+  {
+    "objectID": "Ideals-NS/Arf-closure.html#examples-with-gap",
+    "href": "Ideals-NS/Arf-closure.html#examples-with-gap",
+    "title": "Arf closure",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 11, 14, 20 \\rangle\\), \\(I = \\{22, 45, 53\\}\\) and \\(K = I + S\\), in GAP:"
+  },
+  {
+    "objectID": "Ideals-NS/Arf-closure.html#references",
+    "href": "Ideals-NS/Arf-closure.html#references",
+    "title": "Arf closure",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Ideals-NS/Maximal-ideal.html",
+    "href": "Ideals-NS/Maximal-ideal.html",
+    "title": "Maximal ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. It is defined the maximal ideal of \\(S\\) as the subset \\(S^*\\), and is denoted by \\(M(S)\\). This definition is motivated by the definitions relative ideal of \\(S\\) and proper ideal of \\(S\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Maximal-ideal.html#definition",
+    "href": "Ideals-NS/Maximal-ideal.html#definition",
+    "title": "Maximal ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. It is defined the maximal ideal of \\(S\\) as the subset \\(S^*\\), and is denoted by \\(M(S)\\). This definition is motivated by the definitions relative ideal of \\(S\\) and proper ideal of \\(S\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Maximal-ideal.html#examples",
+    "href": "Ideals-NS/Maximal-ideal.html#examples",
+    "title": "Maximal ideal",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S\\) a numerical semigroup and \\(E\\) a proper ideal of \\(S\\). By definition, \\(E \\subseteq S\\), and if \\(0 \\in E\\), then \\(S \\subseteq S + E\\), but if \\(E\\) is a proper ideal of \\(S\\), \\(S + E \\subseteq E\\), therefore \\(E = S\\). In conclusion, every proper ideal of \\(S\\) is a subset of \\(S^*\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Maximal-ideal.html#examples-with-gap",
+    "href": "Ideals-NS/Maximal-ideal.html#examples-with-gap",
+    "title": "Maximal ideal",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 13, 15, 20 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(13, 15, 20);\n&lt;Numerical semigroup with 3 generators&gt;\nThere are two ways to compute the maximal ideal of a numerical semigroup, these are with the functions MaximalIdeal and MaximalIdealOfNumericalSemigroup.\ngap&gt; I := MaximalIdeal(S);\n&lt;Ideal of numerical semigroup&gt;\ngap&gt; J := MaximalIdealOfNumericalSemigroup(S);\n&lt;Ideal of numerical semigroup&gt;\ngap&gt; I = J;\ntrue"
+  },
+  {
+    "objectID": "Ideals-NS/Maximal-ideal.html#references",
+    "href": "Ideals-NS/Maximal-ideal.html#references",
+    "title": "Maximal ideal",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Ideals-NS/Relative-ideal.html",
+    "href": "Ideals-NS/Relative-ideal.html",
+    "title": "Relative ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. A subset \\(E\\) of \\(\\mathbb{Z}\\) is a relative ideal of \\(S\\) if \\(S + E = \\{s + e ~ | ~ s \\in S, e \\in E \\} \\subseteq E\\) and there exists \\(s \\in S\\) such that \\(s + E = \\{s + e ~ | ~ e \\in E \\}\\subseteq S\\).\nTwo relative ideals \\(E\\) and \\(H\\) are said to be equivalent if there exists \\(x \\in \\mathbb{Z}\\) such that \\(E = x + H = \\{x + h ~ | ~ h \\in H \\}\\). As a consequence, every relative ideal is equivalent to some proper ideal."
+  },
+  {
+    "objectID": "Ideals-NS/Relative-ideal.html#definition",
+    "href": "Ideals-NS/Relative-ideal.html#definition",
+    "title": "Relative ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup. A subset \\(E\\) of \\(\\mathbb{Z}\\) is a relative ideal of \\(S\\) if \\(S + E = \\{s + e ~ | ~ s \\in S, e \\in E \\} \\subseteq E\\) and there exists \\(s \\in S\\) such that \\(s + E = \\{s + e ~ | ~ e \\in E \\}\\subseteq S\\).\nTwo relative ideals \\(E\\) and \\(H\\) are said to be equivalent if there exists \\(x \\in \\mathbb{Z}\\) such that \\(E = x + H = \\{x + h ~ | ~ h \\in H \\}\\). As a consequence, every relative ideal is equivalent to some proper ideal."
+  },
+  {
+    "objectID": "Ideals-NS/Relative-ideal.html#examples",
+    "href": "Ideals-NS/Relative-ideal.html#examples",
+    "title": "Relative ideal",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 3, 8, 10 \\rangle = \\{0, 3, 6, 8, \\rightarrow \\}\\) and \\(E = \\langle 3 \\rangle\\) the ideal generated by \\(A = \\{3\\}\\) in \\(\\mathbb{Z}\\). \\(E\\) is not a relative ideal since \\(S + E \\subsetneq E\\), note that \\(3 + 8 = 11 \\not \\in E\\) but \\(3 \\in E\\) and \\(8 \\in S\\).\n\\(\\circ\\) Let \\(S\\) a numerical semigroup, \\(k \\in \\mathbb{N} \\setminus \\{0\\}\\) and \\(I = \\{i_1, i_2, \\ldots, i_k\\}\\) a subset of \\(\\mathbb{Z}\\) arbitrary but fixed. Then, the set \\(E = I + S\\) is a relative ideal of \\(S\\). The first condition is obvious, and if we take \\(w = \\min \\{0, i_1, i_2, \\ldots, i_k\\}\\), defining \\(s = C(S) - w\\), where \\(C(S)\\) denotes the conductor of \\(S\\), we have that \\(s + E \\subseteq S\\). In conclusion, \\(E\\) is a relative ideal."
+  },
+  {
+    "objectID": "Ideals-NS/Relative-ideal.html#examples-with-gap",
+    "href": "Ideals-NS/Relative-ideal.html#examples-with-gap",
+    "title": "Relative ideal",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S\\) a numerical semigroup and \\(I\\) a list of integers. As we know, the subset \\(E = I + S\\) is a relative ideal of \\(S\\), the function IdealOfNumericalSemigroup returns the ideal generated by \\(I\\) and \\(S\\).\ngap&gt; S := NumericalSemigroup(12,17,20);\n&lt;Numerical semigroup with 3 generators&gt;\ngap&gt; I := [-5, -4, 13];\n[ -5, -4, 13 ]\ngap&gt; IS := IdealOfNumericalSemigroup(I,S);\n&lt;Ideal of numerical semigroup&gt;\nIt is also possible to generate it with the + operator.\ngap&gt; J := I + S;\n&lt;Ideal of numerical semigroup&gt;\ngap&gt; J = IS;\ntrue\nIn the case where we have an ideal \\(I\\), the function IsIdealOfNumericalSemigroup checks whether is an relative ideal of a numerical semigroup or not.\ngap&gt; T := [1..5] + NumericalSemigroup(3,8);\n&lt;Ideal of numerical semigroup&gt;\ngap&gt; IsIdealOfNumericalSemigroup(T);\ntrue"
+  },
+  {
+    "objectID": "Ideals-NS/Relative-ideal.html#references",
+    "href": "Ideals-NS/Relative-ideal.html#references",
+    "title": "Relative ideal",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Ideals-NS/Z-irreducible-ideal.html",
+    "href": "Ideals-NS/Z-irreducible-ideal.html",
+    "title": "Z-irreducible ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(E\\) be a relative ideal of \\(S\\). It is said that \\(E\\) is \\(\\mathbb{Z}\\) irreducible if it cannot be expressed as a finite intersection of other relative ideals properly containing it.\nIt can be proven that every relative ideal has a unique finite factorization in \\(\\mathbb{Z}-\\)irreducible components, they are called as the \\(\\mathbb{Z}-\\)irreducible components of \\(E\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Z-irreducible-ideal.html#definition",
+    "href": "Ideals-NS/Z-irreducible-ideal.html#definition",
+    "title": "Z-irreducible ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(E\\) be a relative ideal of \\(S\\). It is said that \\(E\\) is \\(\\mathbb{Z}\\) irreducible if it cannot be expressed as a finite intersection of other relative ideals properly containing it.\nIt can be proven that every relative ideal has a unique finite factorization in \\(\\mathbb{Z}-\\)irreducible components, they are called as the \\(\\mathbb{Z}-\\)irreducible components of \\(E\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Z-irreducible-ideal.html#examples",
+    "href": "Ideals-NS/Z-irreducible-ideal.html#examples",
+    "title": "Z-irreducible ideal",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 3, 5, 7 \\rangle\\), \\(I = \\{4, 5\\}\\) and \\(E = I + S\\). Making simple calculations, \\(F(S) = 4\\) and \\(K(S) = \\{0, 2, 3, 5, \\rightarrow \\}\\), where \\(K(S)\\) denotes the standard canonical ideal of \\(S\\). We have that \\(E = (-2 + K(S)) \\cap (2 + K(S))\\). Indeed,\n\\[\n(-2 + K(S)) \\cap (2 + K(S)) = \\{-2, 0, 1, 3, \\rightarrow \\} \\cap \\{2, 4, 5, 7, \\rightarrow\\}\n\\]\n\\[\n= \\{4, 5, 7, \\rightarrow \\} = \\{4, 5\\} + S = E.\n\\]\n\\(\\circ\\) Let \\(S\\) a numerical semigroup with Frobenius number \\(F(S)\\), \\(K(S)\\) the standard canonical ideal and \\(E\\) a canonical ideal of \\(S\\) with Frobenius number ideal \\(F(E)\\). If \\(E\\) is a canonical ideal, \\(\\tilde{E} = K\\), where \\(\\tilde{E} = E + F(S) - F(E)\\).\nLet’s suppose that exist \\(K_1, K_2, \\ldots, K_h\\) relative ideals such that \\(E \\subseteq K_i\\) for all \\(i \\in \\{1, 2, \\ldots, h\\}\\) and \\(E = K_1 \\cap K_2 \\cap \\ldots \\cap K_h\\). Then, exist \\(j \\in \\{1, 2, \\ldots, h\\}\\) so that \\(F(E) \\not \\in K_j\\) and \\(\\{F(E) + 1, \\rightarrow \\} \\subseteq K_j\\), therefore \\(F(K_j) = F(E)\\). If \\(E \\subset K_j\\), then \\(K(S) = \\tilde{E} \\subseteq \\tilde{K_j}\\), but it is known that for any relative ideal, \\(\\tilde{K_j} \\subseteq K(S) = \\tilde{E}\\). To conclude, we have \\(\\tilde{E} = \\tilde{K_j}\\), that means \\(E = K_j\\) and \\(E\\) is \\(\\mathbb{Z}-\\)irreducible."
+  },
+  {
+    "objectID": "Ideals-NS/Z-irreducible-ideal.html#examples-with-gap",
+    "href": "Ideals-NS/Z-irreducible-ideal.html#examples-with-gap",
+    "title": "Z-irreducible ideal",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 14, 23, 30 \\rangle\\), \\(I = \\{6, 10\\}\\) and \\(K = I + S\\), in GAP:\ngap&gt; S := NumericalSemigroup(14, 23, 30);\n&lt;Numerical semigroup with 3 generators&gt;\ngap&gt; I := [6, 10];\n[ 6, 10 ]\ngap&gt; K := I + S;\n&lt;Ideal of numerical semigroup&gt;\nIn order to compute the \\(\\mathbb{Z}-\\)components of \\(K\\), the function IrreducibleZComponents returns a list with the ideals that generate the decomposition of the relative ideal.\ngap&gt; Irred := IrreducibleZComponents(K);\n[ &lt;Ideal of numerical semigroup&gt;, &lt;Ideal of numerical semigroup&gt;, &lt;Ideal of numerical semigroup&gt; ]\ngap&gt; List(Irred, MinimalGenerators);\n[ [ -36, -20 ], [ -52, -36 ], [ -102, -86 ] ]\nThe function Intersection computes the intersection of ideals of a numerical semigroup.\ngap&gt; K = Intersection(Irred);\ntrue"
+  },
+  {
+    "objectID": "Ideals-NS/Z-irreducible-ideal.html#references",
+    "href": "Ideals-NS/Z-irreducible-ideal.html#references",
+    "title": "Z-irreducible ideal",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Ideals-NS/Multiplicity-sequence.html",
+    "href": "Ideals-NS/Multiplicity-sequence.html",
+    "title": "Multiplicity sequence",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup, \\(M = S^*\\) the maximal ideal of \\(S\\) and \\(\\mathcal{B}(M)\\) the blowup of \\(M\\). It is known that \\(\\mathcal{B}(M)\\) is a numerical semigroup such that \\(S \\subseteq \\mathcal{B}(M)\\), then, setting \\(S^1 = \\mathcal{B}(M)\\), it can be considered the blowup of its maximal ideal, \\(S^2\\), and repeating the argument, it is obtained a chain of numerical semigroups\n\\[\nS = S^0 \\subseteq S^1 \\subseteq S^2 \\subseteq \\cdots \\subseteq S^i \\subseteq S^{i+1} \\subseteq\\cdots\n\\]\nwhere \\(S^{i+1}\\) is the blowup of the maximal ideal of \\(S^i\\) for all \\(i \\in \\mathbb{N}\\). This chain stabilizes at \\(\\mathbb{N}\\), and if we consider the multiplicity \\(m_i = m(S^i)\\) of each \\(S^i\\), we get a non increasing sequence \\((m_0, m_1, m_2, \\ldots)\\) that stabilizes at \\(1\\). It is defined the multiplicity sequence of \\(S\\) as the sequence \\((m_0, m_1, m_2, \\ldots)\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Multiplicity-sequence.html#definition",
+    "href": "Ideals-NS/Multiplicity-sequence.html#definition",
+    "title": "Multiplicity sequence",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup, \\(M = S^*\\) the maximal ideal of \\(S\\) and \\(\\mathcal{B}(M)\\) the blowup of \\(M\\). It is known that \\(\\mathcal{B}(M)\\) is a numerical semigroup such that \\(S \\subseteq \\mathcal{B}(M)\\), then, setting \\(S^1 = \\mathcal{B}(M)\\), it can be considered the blowup of its maximal ideal, \\(S^2\\), and repeating the argument, it is obtained a chain of numerical semigroups\n\\[\nS = S^0 \\subseteq S^1 \\subseteq S^2 \\subseteq \\cdots \\subseteq S^i \\subseteq S^{i+1} \\subseteq\\cdots\n\\]\nwhere \\(S^{i+1}\\) is the blowup of the maximal ideal of \\(S^i\\) for all \\(i \\in \\mathbb{N}\\). This chain stabilizes at \\(\\mathbb{N}\\), and if we consider the multiplicity \\(m_i = m(S^i)\\) of each \\(S^i\\), we get a non increasing sequence \\((m_0, m_1, m_2, \\ldots)\\) that stabilizes at \\(1\\). It is defined the multiplicity sequence of \\(S\\) as the sequence \\((m_0, m_1, m_2, \\ldots)\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Multiplicity-sequence.html#examples",
+    "href": "Ideals-NS/Multiplicity-sequence.html#examples",
+    "title": "Multiplicity sequence",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 3, 5, 7 \\rangle\\). We have \\(m(S) = 3\\) and \\(S^*\\) has reduction number \\(r(S^*) = 1\\), since\n\\[\n2S^* = S^* + S^* = \\{6, 8, \\rightarrow \\} = 3 + S^* = m(S) + S^*.\n\\] Then, \\(S^1 = \\mathcal{B}(S^*) = S^* - S^* = \\{0, 2, \\rightarrow \\}\\). Now, \\(m(S^1) = 2\\) and \\(r((S^1)^*) = 1\\),\n\\[\n2(S^1)^* = (S^1)^* + (S^1)^* = \\{4, \\rightarrow \\} = 2 + (S^1)^*.\n\\]\nFinally, \\(S^2 = \\mathcal{B}((S^1)^*) = (S^1)^* - (S^1)^* = \\mathbb{N}\\) and the multiplicity sequence of \\(S\\) is \\((3,2,1)\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Multiplicity-sequence.html#examples-with-gap",
+    "href": "Ideals-NS/Multiplicity-sequence.html#examples-with-gap",
+    "title": "Multiplicity sequence",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 12, 17, 21, 30 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(12, 17, 21, 30);\n&lt;Numerical semigroup with 4 generators&gt;\nThe function MultiplicitySequence returns the multiplicity sequence of a numerical semigroup.\ngap&gt; MultiplicitySequence(S);\n[ 12, 5, 4, 1 ]\nIf we are interested in the blowups and the maximal ideals generated in the process, the functions BlowUp and MaximalIdeal returns the blowup of a proper ideal and the maximal ideal of a numerical semigroup, respectively.\ngap&gt; M0 := MaximalIdeal(S);\n&lt;Ideal of numerical semigroup&gt;\ngap&gt; SmallElements(M0);\n[ 12, 17, 21, 24, 29, 30, 33, 34, 36, 38, 41, 42, 45, 46, 47, 48, 50, 51, 53, 54, 55, 57, 58, 59, 60, 62, 63, 64, 65,\n  66, 67, 68, 69, 70, 71, 72, 74 ]\ngap&gt; S1 := BlowUp(M0);\n&lt;Ideal of numerical semigroup&gt;\ngap&gt; SmallElements(S1);\n[ 0, 5, 9, 10, 12, 14, 15, 17 ]\nS1 := NumericalSemigroupBySmallElements(SmallElements(S1));\n&lt;Numerical semigroup&gt;\ngap&gt; M1 := MaximalIdeal(S1);\n&lt;Ideal of numerical semigroup&gt;\ngap&gt; S2 := BlowUp(M1);\n&lt;Ideal of numerical semigroup&gt;\ngap&gt; SmallElements(S2);\n[ 0, 4, 5, 7 ]\ngap&gt; S2 := NumericalSemigroupBySmallElements(SmallElements(S2));\n&lt;Numerical semigroup&gt;\ngap&gt; M2 := MaximalIdeal(S2);\n&lt;Ideal of numerical semigroup&gt;\ngap&gt; S3 := BlowUp(M2);\n&lt;Ideal of numerical semigroup&gt;\ngap&gt; SmallElements(S3);\n[ 0 ]\nThe function SmallElements has been used to show the left elements of the numerical semigroup and NumericalSemigroupBySmallElements have been used to generate the numerical semigroup from the blowup, because the MaximalIdeal function needs a numerical semigroup, not an ideal. As we can see, \\(S^1 = \\{0, 5, 9, 10, 12, 14, 15, 17, \\rightarrow \\}, S^2 = \\{0, 4, 5, 7, \\rightarrow \\}\\) and \\(S^3 = \\mathbb{N}\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Multiplicity-sequence.html#references",
+    "href": "Ideals-NS/Multiplicity-sequence.html#references",
+    "title": "Multiplicity sequence",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Ideals-NS/Multiplicity-ideal.html",
+    "href": "Ideals-NS/Multiplicity-ideal.html",
+    "title": "Multiplicity of an ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(E\\) be a relative ideal of \\(S\\). It is defined the multiplicity of \\(E\\) as the minimum of \\(E\\).\nIt can be proven that every relative ideal of a semigroup has a minimum. This property is due to the second condition of relative ideal of a numerical semigroup."
+  },
+  {
+    "objectID": "Ideals-NS/Multiplicity-ideal.html#definition",
+    "href": "Ideals-NS/Multiplicity-ideal.html#definition",
+    "title": "Multiplicity of an ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(E\\) be a relative ideal of \\(S\\). It is defined the multiplicity of \\(E\\) as the minimum of \\(E\\).\nIt can be proven that every relative ideal of a semigroup has a minimum. This property is due to the second condition of relative ideal of a numerical semigroup."
+  },
+  {
+    "objectID": "Ideals-NS/Multiplicity-ideal.html#examples",
+    "href": "Ideals-NS/Multiplicity-ideal.html#examples",
+    "title": "Multiplicity of an ideal",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(E = \\{-2, -1\\} + S\\). Clearly, \\(S + E \\subseteq S\\) and if we take \\(s = C(S) + 2\\), where \\(C(S)\\) is the conductor of \\(S\\) then \\(s + E \\subseteq S\\), therefore \\(E\\) is a relative ideal of \\(S\\) and \\(m(E) = -2\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Multiplicity-ideal.html#examples-with-gap",
+    "href": "Ideals-NS/Multiplicity-ideal.html#examples-with-gap",
+    "title": "Multiplicity of an ideal",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(I = \\{8, 9, \\ldots, 15\\}\\) and \\(S = \\langle 6, 10, 15 \\rangle\\), in GAP:\ngap&gt; I := [8..15];\n[ 8 .. 15 ]\ngap&gt; S := NumericalSemigroup(6,8,15);\n&lt;Numerical semigroup with 3 generators&gt;\nIn order to obtain the multiplicity of the relative ideal \\(E = I + S\\) we can use the function Minimum, that returns the multiplicity of the relative ideal.\ngap&gt; Minimum(I+S);\n8"
+  },
+  {
+    "objectID": "Ideals-NS/Multiplicity-ideal.html#references",
+    "href": "Ideals-NS/Multiplicity-ideal.html#references",
+    "title": "Multiplicity of an ideal",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Ideals-NS/Reduction-number.html",
+    "href": "Ideals-NS/Reduction-number.html",
+    "title": "Reduction number",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(E\\) be a proper ideal of \\(S\\) with multiplicity \\(m(E)\\). It is defined the reduction number of \\(E\\), denoted by \\(r(E)\\), as the value\n\\[\nr(E) = \\min \\{h \\ge 1 ~ | ~ (h+1)E = m(E) + hE \\}.\n\\]\nA proper ideal is said to be stable if \\(r(E) = 1\\), that is, \\(2E = m(E) + E\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Reduction-number.html#definition",
+    "href": "Ideals-NS/Reduction-number.html#definition",
+    "title": "Reduction number",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(E\\) be a proper ideal of \\(S\\) with multiplicity \\(m(E)\\). It is defined the reduction number of \\(E\\), denoted by \\(r(E)\\), as the value\n\\[\nr(E) = \\min \\{h \\ge 1 ~ | ~ (h+1)E = m(E) + hE \\}.\n\\]\nA proper ideal is said to be stable if \\(r(E) = 1\\), that is, \\(2E = m(E) + E\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Reduction-number.html#examples",
+    "href": "Ideals-NS/Reduction-number.html#examples",
+    "title": "Reduction number",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 3, 5, 7 \\rangle\\), \\(I = \\{2, 4\\}\\) and \\(E = I + S = \\{2, 4, 5, 7, \\rightarrow \\}\\). Clearly, \\(m(E) = 2\\), then we are looking for the smaller \\(h \\in \\mathbb{N} \\setminus \\{0\\}\\) such that \\((h+1)E = 2 + hE\\). If we take \\(h = 1\\),\n\\[\n2E = E + E = \\{4, 6, \\rightarrow\\} \\ne \\{4, 6, 7, 9, \\rightarrow \\} = 2 + E.\n\\]\nFor \\(h = 2\\),\n\\[\n3E = (E + E) + E = \\{6, 8, \\rightarrow\\} = 2 + 2E\n\\]\nTo sum up, \\(r(E) = 2\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Reduction-number.html#examples-with-gap",
+    "href": "Ideals-NS/Reduction-number.html#examples-with-gap",
+    "title": "Reduction number",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 11, 14, 20 \\rangle\\), \\(I = \\{22, 45, 53\\}\\) and \\(K = I + S\\), in GAP:\ngap&gt; S := NumericalSemigroup(11, 14, 20);\n&lt;Numerical semigroup with 3 generators&gt;\ngap&gt; I := [22, 45, 53];\n[ 22, 45, 53 ]\ngap&gt; K := I + S;\n&lt;Ideal of numerical semigroup&gt;\nThe function ReductionNumber returns the reduction number of a proper ideal.\ngap&gt; ReductionNumber(K);\n2\nThen, \\(3K = m(K) + 2K\\), lets check it. The function Minimum returns the multiplicity of a relative ideal, then,\ngap&gt; Minimum(K);\n22\ngap&gt; 3*K = 22 + 2*K;\ntrue\nIf we prove with \\(h = 1\\),\ngap&gt; 2*K = 22 + K;\nfalse"
+  },
+  {
+    "objectID": "Ideals-NS/Reduction-number.html#references",
+    "href": "Ideals-NS/Reduction-number.html#references",
+    "title": "Reduction number",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Ideals-NS/Proper-ideal.html",
+    "href": "Ideals-NS/Proper-ideal.html",
+    "title": "Proper ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(E\\) be a subset of \\(\\mathbb{Z}\\). It is said that \\(E\\) is a proper ideal of \\(S\\), or simply an ideal of \\(S\\), if \\(E\\) is a relative ideal of \\(S\\) and \\(E \\subseteq S\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Proper-ideal.html#definition",
+    "href": "Ideals-NS/Proper-ideal.html#definition",
+    "title": "Proper ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and let \\(E\\) be a subset of \\(\\mathbb{Z}\\). It is said that \\(E\\) is a proper ideal of \\(S\\), or simply an ideal of \\(S\\), if \\(E\\) is a relative ideal of \\(S\\) and \\(E \\subseteq S\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Proper-ideal.html#examples",
+    "href": "Ideals-NS/Proper-ideal.html#examples",
+    "title": "Proper ideal",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let’s prove that \\(E = S^*\\) is an ideal of \\(S\\). Clearly \\(S^* \\subseteq S\\) and \\(S + S^* \\subseteq S^*\\). If we consider \\(s = C(S)\\), where \\(C(S)\\) denotes the conductor of \\(S\\), we have \\(C(S) + S^* \\subseteq S\\), therefore \\(S^*\\) is an ideal. The ideal \\(S^*\\) is called the maximal ideal of \\(S\\).\n\\(\\circ\\) Let \\(b \\in \\mathbb{N}\\) an odd natural arbitrary but fixed, \\(S = \\langle 2, b \\rangle = \\{0, 2, 4, \\ldots, b - 1\\}\\) and \\(E = \\{0, b, \\rightarrow \\}\\). Clearly, \\(E\\) is an ideal of \\(S\\). In general, given a numerical semigroup \\(S\\), the set \\(E = \\{C(S), \\rightarrow\\}\\) is a proper ideal and is called the conductor ideal of \\(S\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Proper-ideal.html#examples-with-gap",
+    "href": "Ideals-NS/Proper-ideal.html#examples-with-gap",
+    "title": "Proper ideal",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 10, 11, 15, 19 \\rangle\\), \\(I = \\{20, 21, 25\\}\\) and the relative ideal \\(K = I + S\\), in GAP:\ngap&gt; S := NumericalSemigroup(10, 11, 15, 19);\n&lt;Numerical semigroup with 4 generators&gt;\ngap&gt; I := [20, 21, 25];\n[ 20, 21, 25 ]\ngap&gt; K := I + S;\n&lt;Ideal of numerical semigroup&gt;\nThe function IsIntegral returns true or false depending on whether an ideal of a semigroup is contained in the semigroup or not.\ngap&gt; IsIntegral(K);\ntrue"
+  },
+  {
+    "objectID": "Ideals-NS/Proper-ideal.html#references",
+    "href": "Ideals-NS/Proper-ideal.html#references",
+    "title": "Proper ideal",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Ideals-NS/Reduction.html",
+    "href": "Ideals-NS/Reduction.html",
+    "title": "Reduction",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and \\(H,E\\) two proper ideals of \\(S\\) with \\(H \\subseteq E\\). We say that \\(H\\) is a reduction of \\(E\\) if, for some \\(h \\in \\mathbb{N} \\setminus \\{0\\}\\), the equality \\((h+1)E = H + hE\\) holds."
+  },
+  {
+    "objectID": "Ideals-NS/Reduction.html#definition",
+    "href": "Ideals-NS/Reduction.html#definition",
+    "title": "Reduction",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and \\(H,E\\) two proper ideals of \\(S\\) with \\(H \\subseteq E\\). We say that \\(H\\) is a reduction of \\(E\\) if, for some \\(h \\in \\mathbb{N} \\setminus \\{0\\}\\), the equality \\((h+1)E = H + hE\\) holds."
+  },
+  {
+    "objectID": "Ideals-NS/Reduction.html#examples",
+    "href": "Ideals-NS/Reduction.html#examples",
+    "title": "Reduction",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S\\) a numerical semigroup and \\(E\\) a proper ideal of \\(S\\) with multiplicity \\(m(E)\\). If we consider the following chain of relative ideals,\n\\[\nS \\subseteq E - m(E) \\subseteq 2E - 2m(E) \\subseteq \\cdots \\subseteq jE - jm(E) \\subseteq \\cdots \\subseteq \\mathbb{N},\n\\]\nit eventually stabilizes, since \\(|\\mathbb{N} \\setminus S|\\) is finite. Then, exists \\(h \\in \\mathbb{N} \\setminus \\{0\\}\\) such that \\(hE - hm(E) = (h+1)E - (h+1)m(E)\\), or equivalently, \\((h+1)E = hE + m(E) = [m(E) + S] + hE\\), that means, \\(m(E) + S\\) is a reduction of \\(E\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Reduction.html#examples-with-gap",
+    "href": "Ideals-NS/Reduction.html#examples-with-gap",
+    "title": "Reduction",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to reduction of ideals."
+  },
+  {
+    "objectID": "Ideals-NS/Reduction.html#references",
+    "href": "Ideals-NS/Reduction.html#references",
+    "title": "Reduction",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Ideals-NS/Frobenius-number-ideal.html",
+    "href": "Ideals-NS/Frobenius-number-ideal.html",
+    "title": "Frobenius number of an ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and \\(E\\) a relative ideal of \\(S\\). The Frobenius number of \\(E\\) is defined as the maximum of the set \\(\\mathbb{Z} \\setminus E\\), and it is denoted as \\(F(E)\\).\nIt is easy to prove from the definition of relative ideal that the set \\(\\mathbb{Z} \\setminus E\\) always has a maximum. Unlike the Frobenius number of a numerical semigroup, \\(F(E)\\) can be negative."
+  },
+  {
+    "objectID": "Ideals-NS/Frobenius-number-ideal.html#definition",
+    "href": "Ideals-NS/Frobenius-number-ideal.html#definition",
+    "title": "Frobenius number of an ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and \\(E\\) a relative ideal of \\(S\\). The Frobenius number of \\(E\\) is defined as the maximum of the set \\(\\mathbb{Z} \\setminus E\\), and it is denoted as \\(F(E)\\).\nIt is easy to prove from the definition of relative ideal that the set \\(\\mathbb{Z} \\setminus E\\) always has a maximum. Unlike the Frobenius number of a numerical semigroup, \\(F(E)\\) can be negative."
+  },
+  {
+    "objectID": "Ideals-NS/Frobenius-number-ideal.html#examples",
+    "href": "Ideals-NS/Frobenius-number-ideal.html#examples",
+    "title": "Frobenius number of an ideal",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S\\) a numerical semigroup, \\(F(S)\\) its Frobenius number and \\(E\\) a relative ideal of \\(S\\). If we define \\(\\tilde{E} = E + (F(S) - F(E))\\), then the maximum of the set \\(\\mathbb{Z} \\setminus \\tilde{E}\\) is the maximum of \\(\\mathbb{Z} \\setminus E\\) adding \\(F(S) - F(E)\\), that means, \\(F(\\tilde{E}) = F(E) + F(S) - F(E) = F(S)\\). To sum up, every relative ideal \\(E\\) of \\(S\\) is equivalent (see definition of equivalence of relative ideals) to a relative ideal with same Frobenius number as \\(S\\).\n\\(\\circ\\) Let \\(S\\) a numerical semigroup, \\(F(S)\\) its Frobenius number and \\(K(S)\\) its standard canonical ideal. Recall that \\(x \\in K(S)\\) if, and only if, \\(F(S) - x \\not \\in S\\), thus \\(F(S) \\not \\in K(S)\\). Furthermore, if \\(x &gt; F(S)\\), \\(F(S) - x &lt; 0\\) and \\(x \\in K(S)\\), in conclusion, \\(F(K(S)) = F(S)\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Frobenius-number-ideal.html#examples-with-gap",
+    "href": "Ideals-NS/Frobenius-number-ideal.html#examples-with-gap",
+    "title": "Frobenius number of an ideal",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 15, 17, 23 \\rangle\\), \\(I = \\{-12, -5, 4, 10\\}\\) and \\(K = I + S\\), in GAP:\ngap&gt; S := NumericalSemigroup(15, 17, 23);\n&lt;Numerical semigroup with 3 generators&gt;\ngap&gt; I := [-12, -5, 4, 10];\n[ -12, -5, 4, 10 ]\ngap&gt; K := I + S;\n&lt;Ideal of numerical semigroup&gt;\nThe function FrobeniusNumber returns the Frobenius number of the relative ideal. This function also returns the Frobenius number of a numerical semigroup.\ngap&gt; FrobeniusNumber(K);\n47\ngap&gt; FrobeniusNumber(S);\n88"
+  },
+  {
+    "objectID": "Ideals-NS/Frobenius-number-ideal.html#references",
+    "href": "Ideals-NS/Frobenius-number-ideal.html#references",
+    "title": "Frobenius number of an ideal",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Ideals-NS/Canonical-ideal.html",
+    "href": "Ideals-NS/Canonical-ideal.html",
+    "title": "Canonical ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup with Frobenius number \\(F(S)\\) and \\(E\\) a relative ideal with Frobenius number of the ideal \\(F(E)\\). It is said that \\(E\\) is a canonical ideal if \\(\\tilde{E} = K(S)\\), where \\(\\tilde{E} = E + F(S) - F(E)\\) and \\(K(S)\\) denotes the standard canonical ideal of \\(S\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Canonical-ideal.html#definition",
+    "href": "Ideals-NS/Canonical-ideal.html#definition",
+    "title": "Canonical ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup with Frobenius number \\(F(S)\\) and \\(E\\) a relative ideal with Frobenius number of the ideal \\(F(E)\\). It is said that \\(E\\) is a canonical ideal if \\(\\tilde{E} = K(S)\\), where \\(\\tilde{E} = E + F(S) - F(E)\\) and \\(K(S)\\) denotes the standard canonical ideal of \\(S\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Canonical-ideal.html#examples",
+    "href": "Ideals-NS/Canonical-ideal.html#examples",
+    "title": "Canonical ideal",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 4, 5, 7 \\rangle = \\{0, 4, 5, 7, \\rightarrow \\}\\) and \\(E = \\{-15, -12, -11, -10, -8\\} + S\\). It is easy to check that \\(F(S) = 6\\), \\(F(E) = -9\\) and \\(K(S) = \\{0, 3, 4, 5, 7, \\rightarrow \\}\\), then \\(\\tilde{E} = E + F(S) - F(E) = E + 15\\). If \\(F(E) = -9\\), \\(E = \\{-15, -12, -11, -10, -8, \\rightarrow\\}\\), so \\(\\tilde{E} = \\{0, 3, 4, 5, 7\\} + S = K(S)\\) and \\(E\\) is a canonical ideal."
+  },
+  {
+    "objectID": "Ideals-NS/Canonical-ideal.html#examples-with-gap",
+    "href": "Ideals-NS/Canonical-ideal.html#examples-with-gap",
+    "title": "Canonical ideal",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 30, 43, 45, 50 \\rangle\\), \\(I = \\{30, 135, 140, 267\\}\\) and \\(K = I + S\\), in GAP:\ngap&gt; S := NumericalSemigroup(30, 43, 45, 50);\n&lt;Numerical semigroup with 4 generators&gt;\ngap&gt; I := [30, 135, 140, 267];\n[ 30, 135, 140, 267 ]\ngap&gt; K := I + S;\n&lt;Ideal of numerical semigroup&gt;\nTo check if a relative ideal is a canonical ideal, we can use the function IsCanonicalIdeal.\ngap&gt; IsCanonicalIdeal(K);\nfalse\nIn this case, \\(S = K(S)\\) (this happens if, and only if, \\(S\\) is symmetric)."
+  },
+  {
+    "objectID": "Ideals-NS/Canonical-ideal.html#references",
+    "href": "Ideals-NS/Canonical-ideal.html#references",
+    "title": "Canonical ideal",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Ideals-NS/Standard-canonical-ideal.html",
+    "href": "Ideals-NS/Standard-canonical-ideal.html",
+    "title": "Standard canonical ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and \\(F(S)\\) the Frobenius number of \\(S\\). The standard canonical ideal of \\(S\\) is defined as\n\\[\nK(S) = \\{x \\in \\mathbb{Z} ~ | ~ F(S) - x \\not \\in S\\}.\n\\]\nIt can be proven that the standard canonical ideal is a relative ideal of \\(S\\) and \\(S \\subseteq K(S) \\subseteq \\mathbb{N}\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Standard-canonical-ideal.html#definition",
+    "href": "Ideals-NS/Standard-canonical-ideal.html#definition",
+    "title": "Standard canonical ideal",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and \\(F(S)\\) the Frobenius number of \\(S\\). The standard canonical ideal of \\(S\\) is defined as\n\\[\nK(S) = \\{x \\in \\mathbb{Z} ~ | ~ F(S) - x \\not \\in S\\}.\n\\]\nIt can be proven that the standard canonical ideal is a relative ideal of \\(S\\) and \\(S \\subseteq K(S) \\subseteq \\mathbb{N}\\)."
+  },
+  {
+    "objectID": "Ideals-NS/Standard-canonical-ideal.html#examples",
+    "href": "Ideals-NS/Standard-canonical-ideal.html#examples",
+    "title": "Standard canonical ideal",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 4, 9, 10 \\rangle = \\{0, 4, 8, 9, 10, 12, 13, 14, 16, \\rightarrow \\}\\). The Frobenius number of \\(S\\) is \\(F(S) = 15\\), thus \\(K(S) = \\{x \\in \\mathbb{Z} ~ | ~ 15 - x \\not \\in S\\}\\). The set of gaps of \\(S\\) is \\(G(S) = \\{1, 2, 3, 5, 6, 7, 11, 15\\}\\), then if we compute \\(15 -g\\) for every \\(g \\in G(S)\\), we have that \\(K(S) = S \\cup \\{4, 8, 9, 10, 12, 13, 14\\} = \\{0, 4, 8, 9, 10, 12, 13, 14, 16, \\rightarrow \\} = S\\). It can be proven that \\(S = K(S)\\) if, and only if, \\(S\\) is symmetric."
+  },
+  {
+    "objectID": "Ideals-NS/Standard-canonical-ideal.html#examples-with-gap",
+    "href": "Ideals-NS/Standard-canonical-ideal.html#examples-with-gap",
+    "title": "Standard canonical ideal",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 5, 7, 13, 16 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(5, 7, 13, 16);\n&lt;Numerical semigroup with 4 generators&gt;\nTo compute the canonical ideal of \\(S\\), there are the functions CanonicalIdeal and CanonicalIdealOfNumericalSemigroup, which both returns the canonical ideal of the numerical semigroup.\ngap&gt; K := CanonicalIdeal(S);\n&lt;Ideal of numerical semigroup&gt;\nOn the other hand, given an ideal \\(E\\) of a numerical semigroup \\(S\\), the functions IsCanonicalIdeal and IsCanonicalIdealOfNumericalSemigroup returns true or false depending on whether the ideal \\(E\\) is a translation of the canonical ideal.\ngap&gt; IsCanonicalIdeal(K);\ntrue\ngap&gt; K2 := 3 + K;\n&lt;Ideal of numerical semigroup&gt;\ngap&gt; IsCanonicalIdeal(K2);\ntrue"
+  },
+  {
+    "objectID": "Ideals-NS/Standard-canonical-ideal.html#references",
+    "href": "Ideals-NS/Standard-canonical-ideal.html#references",
+    "title": "Standard canonical ideal",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Factorizations-NS/Irreducible-Z-components.html",
+    "href": "Factorizations-NS/Irreducible-Z-components.html",
+    "title": "Irreducible Z-components",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and \\(E\\) a relative ideal of \\(S\\). The definition of irreducible \\(\\mathbb{Z}-\\)components of a relative ideal comes from the following result.\n\\(\\textbf{Proposition}\\): Let \\(S\\) be a numerical semigroup and let \\(E\\) be a relative ideal of \\(S\\). Let \\(x_1, x_2, \\ldots, x_h\\) be the minimal generators of the ideal \\(K - E\\). Then,\n\\[\nE = (-x_1 + K) \\cap \\cdots \\cap (-x_h + K),\n\\]\nwhere \\(K\\) denotes the standard canonical ideal of \\(S\\). This decomposition is irredundant an unique.\nIt is defined the irreducible \\(\\mathbb{Z}-\\)components as the ideals \\(-x_i + K\\) that generates the factorization."
+  },
+  {
+    "objectID": "Factorizations-NS/Irreducible-Z-components.html#definition",
+    "href": "Factorizations-NS/Irreducible-Z-components.html#definition",
+    "title": "Irreducible Z-components",
+    "section": "",
+    "text": "Let \\(S\\) be a numerical semigroup and \\(E\\) a relative ideal of \\(S\\). The definition of irreducible \\(\\mathbb{Z}-\\)components of a relative ideal comes from the following result.\n\\(\\textbf{Proposition}\\): Let \\(S\\) be a numerical semigroup and let \\(E\\) be a relative ideal of \\(S\\). Let \\(x_1, x_2, \\ldots, x_h\\) be the minimal generators of the ideal \\(K - E\\). Then,\n\\[\nE = (-x_1 + K) \\cap \\cdots \\cap (-x_h + K),\n\\]\nwhere \\(K\\) denotes the standard canonical ideal of \\(S\\). This decomposition is irredundant an unique.\nIt is defined the irreducible \\(\\mathbb{Z}-\\)components as the ideals \\(-x_i + K\\) that generates the factorization."
+  },
+  {
+    "objectID": "Factorizations-NS/Irreducible-Z-components.html#examples",
+    "href": "Factorizations-NS/Irreducible-Z-components.html#examples",
+    "title": "Irreducible Z-components",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 3, 5, 7 \\rangle\\), \\(I = \\{4, 5\\}\\) and \\(E = I + S\\). Making simple calculations, \\(F(S) = 4\\) and \\(K(S) = \\{0, 2, 3, 5, \\rightarrow \\}\\), where \\(K(S)\\) denotes the standard canonical ideal of \\(S\\). We have that \\(E = (-2 + K(S)) \\cap (2 + K(S))\\). Indeed,\n\\[\n(-2 + K(S)) \\cap (2 + K(S)) = \\{-2, 0, 1, 3, \\rightarrow \\} \\cap \\{2, 4, 5, 7, \\rightarrow\\}\n\\]\n\\[\n= \\{4, 5, 7, \\rightarrow \\} = \\{4, 5\\} + S = E.\n\\]"
+  },
+  {
+    "objectID": "Factorizations-NS/Irreducible-Z-components.html#examples-with-gap",
+    "href": "Factorizations-NS/Irreducible-Z-components.html#examples-with-gap",
+    "title": "Irreducible Z-components",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 17, 21, 30, 45, 61 \\rangle\\), \\(I = \\{6, 10\\}\\) and \\(K = I + S\\), in GAP:\ngap&gt; S := NumericalSemigroup(17, 21, 30, 45, 61);\n&lt;Numerical semigroup with 5 generators&gt;\ngap&gt; I := [6, 10];\n[ 6, 10 ]\ngap&gt; K := I + S;\n&lt;Ideal of numerical semigroup&gt;\nIn order to compute the irreducible \\(\\mathbb{Z}-\\)components of \\(K\\), the function IrreducibleZComponents returns a list with the ideals that generate the decomposition of the relative ideal.\ngap&gt; Irred := IrreducibleZComponents(K);\n[ &lt;Ideal of numerical semigroup&gt;, &lt;Ideal of numerical \nsemigroup&gt;, &lt;Ideal of numerical semigroup&gt;,\n  &lt;Ideal of numerical semigroup&gt;, &lt;Ideal of numerical semigroup&gt; ]\ngap&gt; List(Irred, MinimalGenerators);\n[ [ -8, -6, 6, 7, 10 ], [ -9, -7, 5, 6, 9 ], [ -11, -9, 3, 4, 7 ], [ -13, -11, 1, 2, 5 ], [ -24, -22, -10, -9, -6 ] ]"
+  },
+  {
+    "objectID": "Factorizations-NS/Irreducible-Z-components.html#references",
+    "href": "Factorizations-NS/Irreducible-Z-components.html#references",
+    "title": "Irreducible Z-components",
     "section": "References",
     "text": "References"
   }

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About Numerical Semigroups</title>
+<title>Left Elements</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +20,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ae19251225fe89a8232519ecbffc7ebc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-ae19251225fe89a8232519ecbffc7ebc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -67,6 +101,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -79,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">About Numerical Semigroups</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Left Elements</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -106,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About Numerical Semigroups</h1>
+<h1 class="title">Left Elements</h1>
 </div>
 
 
@@ -123,10 +186,34 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This page is intended to collect information about numerical semigroups.</p>
-<p>You can add new entries blah blah</p>
+<section id="definition" class="level2">
+<h2 class="anchored" data-anchor-id="definition">Definition</h2>
+<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> and <span class="math inline">\(F(S)\)</span> the <a href="../Basic-concepts/Frobenius-number.html">Frobenius number</a> of <span class="math inline">\(S\)</span>. An element <span class="math inline">\(s \in \mathbb{N}\)</span> is a left element (or small element) of <span class="math inline">\(S\)</span> if <span class="math inline">\(s \in S\)</span> and <span class="math inline">\(s &lt; F(S)\)</span>. The set of left elements is denoted by <span class="math inline">\(N(S)\)</span>.</p>
+<p>The set of left elements is always non-empty, due to <span class="math inline">\(0 \in N(S)\)</span>, and determines the numerical semigroup.</p>
+</section>
+<section id="examples" class="level2">
+<h2 class="anchored" data-anchor-id="examples">Examples</h2>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 3, 8, 10 \rangle\)</span>. We have that <span class="math inline">\(6 = 3 + 3 \in S\)</span> and since <span class="math inline">\(8,9,10 \in S\)</span>, adding <span class="math inline">\(3\)</span> to each number, we have that for <span class="math inline">\(n \ge 8\)</span>, it holds <span class="math inline">\(n \in S\)</span> and <span class="math inline">\(7 \not \in S\)</span>, so the Frobenius number is <span class="math inline">\(F(S) = 7\)</span> and the set of left elements is <span class="math inline">\(N(S) = \{0, 3, 6\}\)</span>.</p>
+<p><span class="math inline">\(\circ\)</span> Let us consider <span class="math inline">\(b \in \mathbb{N}\)</span> an odd integer arbitrary but fixed and <span class="math inline">\(S = \langle 2, b \rangle\)</span>. Note that for <span class="math inline">\(n \ge b-1\)</span>, it holds <span class="math inline">\(n \in S\)</span> and <span class="math inline">\(b-2 \not \in S\)</span>, thus the Frobenius number is <span class="math inline">\(F(S) = b-2\)</span> and the set of left elements is <span class="math inline">\(N(S) = \{0, 2, 4, \ldots, b-3\}\)</span>, in other words, the even elements between <span class="math inline">\(0\)</span> and <span class="math inline">\(b-2\)</span>.</p>
+</section>
+<section id="examples-with-gap" class="level2">
+<h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
+<p>The following example is made with the package NumericalSgps in GAP.</p>
+<p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 4, 13, 17, 20 \rangle\)</span>, in GAP:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">4</span><span class="op">,</span> <span class="fl">13</span><span class="op">,</span> <span class="fl">17</span><span class="op">,</span> <span class="fl">20</span>)<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">4</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If we want to compute the left elements of <span class="math inline">\(S\)</span>, the function <code>SmallElements</code> returns a list with the left elements and the <a href="../Basic-concepts/Conductor.html">conductor</a> of <span class="math inline">\(S\)</span>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">SmallElements</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>[ <span class="fl">0</span><span class="op">,</span> <span class="fl">4</span><span class="op">,</span> <span class="fl">8</span><span class="op">,</span> <span class="fl">12</span><span class="op">,</span> <span class="fl">13</span><span class="op">,</span> <span class="fl">16</span><span class="op">,</span> <span class="fl">17</span><span class="op">,</span> <span class="fl">20</span><span class="op">,</span> <span class="fl">21</span><span class="op">,</span> <span class="fl">24</span><span class="op">,</span> <span class="fl">25</span><span class="op">,</span> <span class="fl">26</span><span class="op">,</span> <span class="fl">28</span><span class="op">,</span> <span class="fl">29</span><span class="op">,</span> <span class="fl">30</span><span class="op">,</span> <span class="fl">32</span><span class="op">,</span> <span class="fl">33</span><span class="op">,</span> <span class="fl">34</span><span class="op">,</span> <span class="fl">36</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Obviously, the conductor is the greatest element of the list, in this case, <span class="math inline">\(C(S) = 36\)</span>. Another way to know the left elements of <span class="math inline">\(S\)</span> is from the function <code>Gaps</code>, which returns the <a href="../Basic-concepts/Gap.html">gaps</a> of <span class="math inline">\(S\)</span>. If <span class="math inline">\(G(S)\)</span> is the set of gaps, therefore <span class="math inline">\(N(S) = \{0, 1, 2, \ldots, F(S)-1\} \setminus G(S)\)</span>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">Gaps</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>[ <span class="fl">1</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">3</span><span class="op">,</span> <span class="fl">5</span><span class="op">,</span> <span class="fl">6</span><span class="op">,</span> <span class="fl">7</span><span class="op">,</span> <span class="fl">9</span><span class="op">,</span> <span class="fl">10</span><span class="op">,</span> <span class="fl">11</span><span class="op">,</span> <span class="fl">14</span><span class="op">,</span> <span class="fl">15</span><span class="op">,</span> <span class="fl">18</span><span class="op">,</span> <span class="fl">19</span><span class="op">,</span> <span class="fl">22</span><span class="op">,</span> <span class="fl">23</span><span class="op">,</span> <span class="fl">27</span><span class="op">,</span> <span class="fl">31</span><span class="op">,</span> <span class="fl">35</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
