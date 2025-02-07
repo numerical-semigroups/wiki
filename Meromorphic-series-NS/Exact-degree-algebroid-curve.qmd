@@ -1,0 +1,28 @@
+---
+title: "Exact degree of an algebroid curve"
+format: html
+engine: markdown
+---
+
+## Definition
+
+Let $f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]$ be an irreducible polynomial, and let $x(t), y(t)$ a [short parametrization](Short-parametrization.qmd) of $f$. Let $\mathbf{A} = \mathbb{K}[[x(t), y(t)]]$ and let $\mathbf{M} = x'(t) \mathbf{A} + y'(t) \mathbf{A}$. It is defined
+
+$$
+I = \{ord_t(g) ~ | ~ g \in \mathbf{M} \}.
+$$
+It can be proven that $I$ is a [relative ideal](../Ideals-NS/Relative-ideal.qmd) of $S = \Gamma(f)$, the [numerical semigroup associated to f](Polynomial-NS.qmd). It is said that $i \in I$ is an exact degree if $i+1 \in S$. The other elements are said non exact degrees of $\mathbf{M}$. The set of non exact degrees is denoted by $NE(M)$.
+
+
+## Examples
+
+$\circ$
+
+## Examples with GAP
+
+Nowadays there is no function in the package NumericalSgps related to exact degree of algebroid curves.
+
+## References
+
+
+

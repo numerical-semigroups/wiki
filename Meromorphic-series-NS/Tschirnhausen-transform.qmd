@@ -6,7 +6,7 @@ engine: markdown
 
 ## Definition
 
-Let $f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]$ an irreducible polynomial. Let us consider $d$ a divisor of $n$ and let $G \in \mathbb{K}((x))[y]$ be a monic polynomial of degree $\frac{n}{d}$ in $y$. Then, the [G-adic expansion](G-adic-expansion.qmd) of $f$ has the form
+Let $f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]$ be an irreducible polynomial. Let us consider $d$ a divisor of $n$ and let $G \in \mathbb{K}((x))[y]$ be a monic polynomial of degree $\frac{n}{d}$ in $y$. Then, the [G-adic expansion](G-adic-expansion.qmd) of $f$ has the form
 
 $$
 f = G^d + \alpha_1 G^{d-1} + \cdots + \alpha_d,

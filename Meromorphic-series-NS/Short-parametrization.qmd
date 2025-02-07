@@ -1,0 +1,23 @@
+---
+title: "Short parametrization"
+format: html
+engine: markdown
+---
+
+## Definition
+
+Let $f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]$ be an irreducible polynomial and $S = \Gamma(f) = \langle r_0, r_1, \ldots, r_m \rangle$, with $r_0 = n$ and $r_0 = m$, where $\Gamma(f)$ is the [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [associated to f](Polynomial-NS.qmd) and $\underline{r} = (r_0, r_1, \ldots, r_h)$ comes from the definition of [characteristic sequences](Characteristic-sequences.qmd) of $f$. Let $C(f)$ be the algebroid curve $f = 0$.
+
+Let $x(t) = t^n, y(t) = \sum_{p \ge m} c_p t^p$ be a parametrization of $f$, and suppose, after a possibly a change of variables, that $c_m = 1$. Suppose that $y(t) - t^m \ne 0$. Let $p_1 = \inf (Supp(y(t) - t^m)$, where $Supp(y(t) - t^m)$ denotes the [support](Support.qmd) of $y(t) - t^m$. If $p_1 \in S$, then $p_1 = \sum_{i = 0}^h a_i r_i$ with $a_0, \ldots, a_h \in \mathbb{N}$ and we consider the change of variables $x_1 = x, y_1 = y - c_{p_1}x^{a_0}y^{a_1}G_2^{a_2}\cdots G_h^{a_h}$, where for all $i \in \{1, \ldots, h\}$, $G_i$ is an element of $\mathbb{K}[[x, y]]$ such that $int(f, G_i) = r_i$. It follows that $f_1(x_1, y_1) = f(x_1, y_1 + c_{p_1}x^{a_0}y^{a_1}G_2^{a_2}\cdots G_h^{a_h})$ is an irreducible polynomial of $\mathbb{K}[[x,y]]$ with parametrization $x_1(t) = t^n, y_1(t) = t^m + \sum_{p > m} \tilde{c}_p t^p$ and either $y_1(t) - t^m = 0$ or $\inf (Supp(y_1(t) - t^m) > p_1$. In the second case, we restart with $f_1, x_1(t), y_1(t)$. The [conductor](../Basic-concepts/Conductor.qmd) $C(S)$ of $S$ being finite, we get, after repeating the argument, the following:
+
+Let us consider the hypothesis of the preposition. Then, modulo an automorphism of $\mathbb{K}[[x,y]]$, $f$ has a parametrization of the form $x = t^n$ and $y = t^m + \sum_{q \in G(S), q > m} c_q t^q$, where $G(S)$ denotes the set of [gaps](../Basic-concepts/Gap.qmd) of $S$. It is said a short parametrization of $C(f)$ an expression as above.
+
+## Examples
+
+$\circ$
+
+## Examples with GAP
+
+Nowadays there is no function in the package NumericalSgps related to contact.
+
+## References

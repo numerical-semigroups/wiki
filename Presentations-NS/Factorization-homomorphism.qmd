@@ -1,0 +1,33 @@
+---
+title: "Factorization homomorphism"
+format: html
+engine: markdown
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) with [minimal set of generators](../Basic-concepts/Minimal-set-of-generators.qmd) by $\{n_1, n_2, \ldots, n_p\}$. It is defined the factorization homomorphism of $S$ as the application $\phi$ such that
+
+$$
+\phi: \mathbb{N}^p \to S ~ ; ~ \phi(a_1, a_2, \ldots, a_p) = \sum_{i = 1}^p a_i n_i.
+$$ It can be proven that $\phi$ is a monoid epimorphism, and consequently $S$ is isomorphic to $\mathbb{N}^p / \ker(\phi)$, where $\ker(\phi)$ is the kernel congruence of $\phi$:
+
+$$
+\ker(\phi) = \{(a, b) \in \mathbb{N}^p \times \mathbb{N}^p ~ | ~ \phi(a) = \phi(b)\}.
+$$
+
+## Examples
+
+$\circ$ Let $S = \langle 10, 17, 21 \rangle$. The factorization homomorphism of $S$ is defined as
+
+$$
+\phi: \mathbb{N}^3 \to S ~ ; ~ (a_1, a_2, a_3) \to 10a_1 + 17a_2 + 21a_3.
+$$
+
+Minimal generators only have a single preimage by definition of minimal set of generators, which is $n_i = \phi(e^i)$ with $e_i^i = 1$ and $e_i^j = 0$ for all $j \ne i$. Furthermore, there are always elements with more than one preimage, for example $68 = 10 \cdot 0 + 17 \cdot 4 + 21 \cdot 0 = \phi(0, 4, 0)$ and $68 = 10 \cdot 3 + 17 \cdot 1 + 21 \cdot 1 = \phi(3,1,1)$.
+
+## Examples with GAP
+
+Nowadays there is no function in the package NumericalSgps related to factorization homomorphism of a numerical semigroup.
+
+## References
