@@ -1,0 +1,39 @@
+---
+title: "Approximate root"
+format: html
+engine: markdown
+---
+
+## Definition
+
+Let $f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]$ be an irreducible polynomial. Let us consider $d$ a divisor of $n$ and let $G \in \mathbb{K}((x))[y]$ be a monic polynomial of degree $\frac{n}{d}$ in $y$. Let
+
+$$
+f = G^d + \alpha_1 G^{d-1} + \cdots + \alpha_d,
+$$
+
+be the [G-adic expansion](G-adic-expansion.qmd) of $f$. It is said that $G$ is a $d^{th}$ approximate root of $f$ if $\alpha_1 = 0$.
+
+It can be proven that for any $d$ divisor of $n$, the $d^{th}$ approximate root of $f$ exists and it is unique. It is denoted by $Ap(f;d)$.
+
+## Examples
+
+$\circ$ Let $f = y^4 + 13x^2y^2 + 42x^2$, and $d = 2$, let us calculate $Ap(f, 2)$ applying an algorithm. First, let us consider $G = y^{\frac{n}{d}} = y^2$ and compute the $G-$adic expansion of $f$,
+
+$$
+f = y^4 + 13x^2y^2 + 42x^2 = G^2 + 13x^2G  + 42x^2
+$$
+
+We have $\alpha_1(x,y) = 13x^2 \ne 0$, then, we consider now $G_1 = T(G) = G + \frac{\alpha_1(x,y)}{d} = y^2 + \frac{13}{2}x^2$, where $T(G)$ is the [Tschirnhausen transform](Tschirnhausen-transform.qmd). If we compute the $G_1-$adic expansion of $f$,
+
+$$
+f = G^2 + 13x^2G + 42x^2 = (G_1 - \frac{13}{2}x^2)^2 + 13x^2(G_1 - \frac{13}{2}x^2) + 42x^2
+$$ $$
+= G_1^2 - 13x^2G_1 + \frac{169}{4}x^4 + 13x^2G_1 - \frac{169}{2}x^4 + 42x^2 = G_1^2 - \frac{169}{4}x^4 + 42x^2.
+$$ and $\alpha_1(x,y) = 0$. To sum up, $Ap(f,2) = y^2 + \frac{13}{2}x^2$.
+
+## Examples with GAP
+
+Nowadays there is no function in the package NumericalSgps related to Approximate root of a formal series.
+
+## References

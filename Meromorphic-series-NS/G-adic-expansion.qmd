@@ -1,0 +1,47 @@
+---
+title: "G-adic expansion"
+format: html
+engine: markdown
+---
+
+## Definition
+
+Let $F, G \in \mathbb{K}((x))[y]$, with $G \ne 0$. Let $n = deg_y G$. Since in $\mathbb{K}((x))[y]$ we have division algorithm, we can write $F = QG + R$ where $deg_y R < n$. If $deg_y Q \ge n$, then write $Q = Q^1 G + R^1$ with $deg_y R^1 < n$. With this we can write $F$ as $F = Q^1 G^2 + R^1 G + R$. Then we restart with $Q^1$. This process will stop giving the following expression in terms of the powers of $G$:
+
+$$
+F = \sum_{k = 0}^l \alpha_k(x,y) G^k,
+$$
+
+where $deg_y \alpha(x. y) < n$ for all $k \in \{0, 1, \ldots, l\}$. It is defined the $G-$adic expansion of $F$ as the previous expression of $F$ in terms of $G^k$.
+
+## Examples
+
+$\circ$ Let $F = 3xy^4 + (6x + 1)y^3 + (6x^2 + 4x + 2)y^2 + (6x^2 + 2x + 3)y + 3x^3 + x^2 + x$ and $G = y^2 + y + 1$. If we compute the first division,
+
+$$
+F(x,y) = [3xy^2 + (3x+1)y + (3x^2 + x + 1)]G + 2y = QG + R,
+$$
+
+and $deg_y Q = 2 = deg_y G$. Repeating the process,
+
+$$
+Q = 3xG + (x + y + 1) = Q^1G + R^1,
+$$
+
+and $deg_y Q^1 = 1 < deg_y G$. Therefore, the $G-$adic expansion of $G$ is
+
+$$
+F = QG + R = (Q^1G + R^1)G + R = Q^1G^2 + R^1G + R
+$$
+
+$$
+= 3xG^2 + (x + y + 1)G + 2y = \alpha_2(x,y)G^2 + \alpha_1(x,y)G + \alpha_0(x,y).
+$$
+
+$\circ$ Let $F = \sum_{k = 0}^l \alpha_k(x,y) G^k$. It can be proven by induction on $l \in \mathbb{N}$ that the $G-$adic expression is unique.
+
+## Examples with GAP
+
+Nowadays there is no function in the package NumericalSgps related to $G-$adic expansion.
+
+## References

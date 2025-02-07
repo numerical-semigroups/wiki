@@ -1,5 +1,27 @@
 ---
 title: "Support"
 format: html
-editor: visual
+engine: markdown
 ---
+
+## Definition
+
+Let $\mathbb{K}$ be a field and $t$ a variable. Let us consider $y(t) = \sum_{p \in \mathbb{N}} c_p t^p \in \mathbb{K}((t))$. It is defined the support of $y(t)$ as
+
+$$
+Supp(y(t)) = \{p ~ | ~ c_p \ne 0 \}.
+$$
+
+## Examples
+
+$\circ$ Let $\mathbb{K}$ be a field, $t$ and indeterminant and the rings $\mathbb{K}[t], \mathbb{K}[[t]]$. By definition of polynomial ring, it holds that
+
+$$
+\mathbb{K}[t] = \{y(t) \in \mathbb{K}[[t]] ~ | ~ Supp(y(t)) < + \infty \} \subsetneq \mathbb{K}[[t]].
+$$
+
+## Examples with GAP
+
+Nowadays there is no function in the package NumericalSgps related to support of a formal series.
+
+## References
