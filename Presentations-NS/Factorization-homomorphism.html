@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Order</title>
+<title>Factorization homomorphism</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,7 +108,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Order</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Factorization homomorphism</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -135,7 +135,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Order</h1>
+<h1 class="title">Factorization homomorphism</h1>
 </div>
 
 
@@ -154,17 +154,25 @@ window.Quarto = {
 
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(\mathbb{K}\)</span> be a field and <span class="math inline">\(x\)</span> a variable. We denote by <span class="math inline">\(\mathbb{K}[[x]]\)</span> the set of formal series on <span class="math inline">\(x\)</span> with coefficients in <span class="math inline">\(\mathbb{K}\)</span>, that is, the set of elements of the form <span class="math inline">\(\sum_{i \in \mathbb{N}} a_i x^i\)</span> with <span class="math inline">\(a_i \in \mathbb{K}\)</span> for all <span class="math inline">\(i \in \mathbb{N}\)</span>.</p>
-<p>Let <span class="math inline">\(f(x) = \sum_{i \in \mathbb{N}} a_i x^i \in \mathbb{K}[[x]]\)</span>, it is defined the order of <span class="math inline">\(f\)</span> as the smallest <span class="math inline">\(i \in \mathbb{N}\)</span> such that <span class="math inline">\(a_i \ne 0\)</span>, and it is denoted by <span class="math inline">\(ord_x(f(x))\)</span>. For <span class="math inline">\(f(x) = 0\)</span>, it is usually written <span class="math inline">\(ord_x(0) = + \infty\)</span>.</p>
+<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> with <a href="../Basic-concepts/Minimal-set-of-generators.html">minimal set of generators</a> by <span class="math inline">\(\{n_1, n_2, \ldots, n_p\}\)</span>. It is defined the factorization homomorphism of <span class="math inline">\(S\)</span> as the application <span class="math inline">\(\phi\)</span> such that</p>
+<p><span class="math display">\[
+\phi: \mathbb{N}^p \to S ~ ; ~ \phi(a_1, a_2, \ldots, a_p) = \sum_{i = 1}^p a_i n_i.
+\]</span> It can be proven that <span class="math inline">\(\phi\)</span> is a monoid epimorphism, and consequently <span class="math inline">\(S\)</span> is isomorphic to <span class="math inline">\(\mathbb{N}^p / \ker(\phi)\)</span>, where <span class="math inline">\(\ker(\phi)\)</span> is the kernel congruence of <span class="math inline">\(\phi\)</span>:</p>
+<p><span class="math display">\[
+\ker(\phi) = \{(a, b) \in \mathbb{N}^p \times \mathbb{N}^p ~ | ~ \phi(a) = \phi(b)\}.
+\]</span></p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(f(x) = 7x^5 + 4x^3 - x^2\)</span>. The coefficients are: <span class="math inline">\(a_0 = a_1 = 0, a_2 = -1, a_3 = 4, a_4 = 0\)</span> and <span class="math inline">\(a_5 = 7\)</span>. The order of <span class="math inline">\(f(x)\)</span> is <span class="math inline">\(2\)</span> since <span class="math inline">\(a_0 = a_1 = 0\)</span> and <span class="math inline">\(a_2 = -1 \ne 0\)</span>.</p>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> and let us consider <span class="math inline">\(f(x) = \sum_{s \in S \setminus \{0\}} x^s\)</span>. The order of <span class="math inline">\(f\)</span> is the smallest non-zero coefficient, equivalent to compute the minimum of <span class="math inline">\(S^*\)</span>, which is the <a href="../Basic-concepts/Multiplicity.html">multiplicity</a> of <span class="math inline">\(S\)</span>, <span class="math inline">\(m(S)\)</span>. Therefore, <span class="math inline">\(ord_x(f) = m(S)\)</span>.</p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 10, 17, 21 \rangle\)</span>. The factorization homomorphism of <span class="math inline">\(S\)</span> is defined as</p>
+<p><span class="math display">\[
+\phi: \mathbb{N}^3 \to S ~ ; ~ (a_1, a_2, a_3) \to 10a_1 + 17a_2 + 21a_3.
+\]</span></p>
+<p>Minimal generators only have a single preimage by definition of minimal set of generators, which is <span class="math inline">\(n_i = \phi(e^i)\)</span> with <span class="math inline">\(e_i^i = 1\)</span> and <span class="math inline">\(e_i^j = 0\)</span> for all <span class="math inline">\(j \ne i\)</span>. Furthermore, there are always elements with more than one preimage, for example <span class="math inline">\(68 = 10 \cdot 0 + 17 \cdot 4 + 21 \cdot 0 = \phi(0, 4, 0)\)</span> and <span class="math inline">\(68 = 10 \cdot 3 + 17 \cdot 1 + 21 \cdot 1 = \phi(3,1,1)\)</span>.</p>
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>Nowadays there is no function in the package NumericalSgps related to order of a formal series.</p>
+<p>Nowadays there is no function in the package NumericalSgps related to factorization homomorphism of a numerical semigroup.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Order</title>
+<title>Short parametrization</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,7 +108,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Order</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Short parametrization</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -135,7 +135,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Order</h1>
+<h1 class="title">Short parametrization</h1>
 </div>
 
 
@@ -154,17 +154,17 @@ window.Quarto = {
 
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(\mathbb{K}\)</span> be a field and <span class="math inline">\(x\)</span> a variable. We denote by <span class="math inline">\(\mathbb{K}[[x]]\)</span> the set of formal series on <span class="math inline">\(x\)</span> with coefficients in <span class="math inline">\(\mathbb{K}\)</span>, that is, the set of elements of the form <span class="math inline">\(\sum_{i \in \mathbb{N}} a_i x^i\)</span> with <span class="math inline">\(a_i \in \mathbb{K}\)</span> for all <span class="math inline">\(i \in \mathbb{N}\)</span>.</p>
-<p>Let <span class="math inline">\(f(x) = \sum_{i \in \mathbb{N}} a_i x^i \in \mathbb{K}[[x]]\)</span>, it is defined the order of <span class="math inline">\(f\)</span> as the smallest <span class="math inline">\(i \in \mathbb{N}\)</span> such that <span class="math inline">\(a_i \ne 0\)</span>, and it is denoted by <span class="math inline">\(ord_x(f(x))\)</span>. For <span class="math inline">\(f(x) = 0\)</span>, it is usually written <span class="math inline">\(ord_x(0) = + \infty\)</span>.</p>
+<p>Let <span class="math inline">\(f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]\)</span> be an irreducible polynomial and <span class="math inline">\(S = \Gamma(f) = \langle r_0, r_1, \ldots, r_m \rangle\)</span>, with <span class="math inline">\(r_0 = n\)</span> and <span class="math inline">\(r_0 = m\)</span>, where <span class="math inline">\(\Gamma(f)\)</span> is the <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> <a href="../Meromorphic-series-NS/Polynomial-NS.html">associated to f</a> and <span class="math inline">\(\underline{r} = (r_0, r_1, \ldots, r_h)\)</span> comes from the definition of <a href="../Meromorphic-series-NS/Characteristic-sequences.html">characteristic sequences</a> of <span class="math inline">\(f\)</span>. Let <span class="math inline">\(C(f)\)</span> be the algebroid curve <span class="math inline">\(f = 0\)</span>.</p>
+<p>Let <span class="math inline">\(x(t) = t^n, y(t) = \sum_{p \ge m} c_p t^p\)</span> be a parametrization of <span class="math inline">\(f\)</span>, and suppose, after a possibly a change of variables, that <span class="math inline">\(c_m = 1\)</span>. Suppose that <span class="math inline">\(y(t) - t^m \ne 0\)</span>. Let <span class="math inline">\(p_1 = \inf (Supp(y(t) - t^m)\)</span>, where <span class="math inline">\(Supp(y(t) - t^m)\)</span> denotes the <a href="../Meromorphic-series-NS/Support.html">support</a> of <span class="math inline">\(y(t) - t^m\)</span>. If <span class="math inline">\(p_1 \in S\)</span>, then <span class="math inline">\(p_1 = \sum_{i = 0}^h a_i r_i\)</span> with <span class="math inline">\(a_0, \ldots, a_h \in \mathbb{N}\)</span> and we consider the change of variables <span class="math inline">\(x_1 = x, y_1 = y - c_{p_1}x^{a_0}y^{a_1}G_2^{a_2}\cdots G_h^{a_h}\)</span>, where for all <span class="math inline">\(i \in \{1, \ldots, h\}\)</span>, <span class="math inline">\(G_i\)</span> is an element of <span class="math inline">\(\mathbb{K}[[x, y]]\)</span> such that <span class="math inline">\(int(f, G_i) = r_i\)</span>. It follows that <span class="math inline">\(f_1(x_1, y_1) = f(x_1, y_1 + c_{p_1}x^{a_0}y^{a_1}G_2^{a_2}\cdots G_h^{a_h})\)</span> is an irreducible polynomial of <span class="math inline">\(\mathbb{K}[[x,y]]\)</span> with parametrization <span class="math inline">\(x_1(t) = t^n, y_1(t) = t^m + \sum_{p &gt; m} \tilde{c}_p t^p\)</span> and either <span class="math inline">\(y_1(t) - t^m = 0\)</span> or <span class="math inline">\(\inf (Supp(y_1(t) - t^m) &gt; p_1\)</span>. In the second case, we restart with <span class="math inline">\(f_1, x_1(t), y_1(t)\)</span>. The <a href="../Basic-concepts/Conductor.html">conductor</a> <span class="math inline">\(C(S)\)</span> of <span class="math inline">\(S\)</span> being finite, we get, after repeating the argument, the following:</p>
+<p>Let us consider the hypothesis of the preposition. Then, modulo an automorphism of <span class="math inline">\(\mathbb{K}[[x,y]]\)</span>, <span class="math inline">\(f\)</span> has a parametrization of the form <span class="math inline">\(x = t^n\)</span> and <span class="math inline">\(y = t^m + \sum_{q \in G(S), q &gt; m} c_q t^q\)</span>, where <span class="math inline">\(G(S)\)</span> denotes the set of <a href="../Basic-concepts/Gap.html">gaps</a> of <span class="math inline">\(S\)</span>. It is said a short parametrization of <span class="math inline">\(C(f)\)</span> an expression as above.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(f(x) = 7x^5 + 4x^3 - x^2\)</span>. The coefficients are: <span class="math inline">\(a_0 = a_1 = 0, a_2 = -1, a_3 = 4, a_4 = 0\)</span> and <span class="math inline">\(a_5 = 7\)</span>. The order of <span class="math inline">\(f(x)\)</span> is <span class="math inline">\(2\)</span> since <span class="math inline">\(a_0 = a_1 = 0\)</span> and <span class="math inline">\(a_2 = -1 \ne 0\)</span>.</p>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> and let us consider <span class="math inline">\(f(x) = \sum_{s \in S \setminus \{0\}} x^s\)</span>. The order of <span class="math inline">\(f\)</span> is the smallest non-zero coefficient, equivalent to compute the minimum of <span class="math inline">\(S^*\)</span>, which is the <a href="../Basic-concepts/Multiplicity.html">multiplicity</a> of <span class="math inline">\(S\)</span>, <span class="math inline">\(m(S)\)</span>. Therefore, <span class="math inline">\(ord_x(f) = m(S)\)</span>.</p>
+<p><span class="math inline">\(\circ\)</span></p>
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>Nowadays there is no function in the package NumericalSgps related to order of a formal series.</p>
+<p>Nowadays there is no function in the package NumericalSgps related to contact.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
