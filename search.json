@@ -567,30 +567,107 @@
     "text": "References"
   },
   {
-    "objectID": "Meromorphic-series-NS/Characteristic-sequences.html",
-    "href": "Meromorphic-series-NS/Characteristic-sequences.html",
-    "title": "Characteristic sequences",
+    "objectID": "Meromorphic-series-NS/Tschirnhausen-transform.html",
+    "href": "Meromorphic-series-NS/Tschirnhausen-transform.html",
+    "title": "Tschirnhausen transform",
     "section": "",
-    "text": "The definition of characteristic sequences comes from the following result.\n\\(\\textbf{Preposition}\\): Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\). Suppose that \\(f(x,y)\\) is irreducible. There exists \\(y(t) \\in \\mathbb{K}((t))\\) such that \\(f(t^n, y(t)) = 0\\). Furthermore,\nwhere \\(Supp(y(t))\\) is the support of \\(y(t)\\).\nLet us consider \\(f(x,y) \\in \\mathbb{K}((x))[y]\\) irreducible and let \\(y = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\).\n\\[\nr_i = r_{i-1}e_{i-1} + m_i - m_{i-1}.\n\\]\nIt is defined the characteristic sequences of \\(f\\) as the sequences \\(\\underline{m}, \\underline{d}\\) and \\(\\underline{r}\\). In particular, the sequence \\(\\underline{m}\\) is called the Newton-Puiseux exponents of \\(f\\)."
+    "text": "Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) an irreducible polynomial. Let us consider \\(d\\) a divisor of \\(n\\) and let \\(G \\in \\mathbb{K}((x))[y]\\) be a monic polynomial of degree \\(\\frac{n}{d}\\) in \\(y\\). Then, the G-adic expansion of \\(f\\) has the form\n\\[\nf = G^d + \\alpha_1 G^{d-1} + \\cdots + \\alpha_d,\n\\]\nwith \\(\\alpha_i \\in \\mathbb{K}((x))[y]\\) and \\(deg_y \\alpha(x,y) &lt; \\frac{n}{d}\\) for all \\(i \\in \\{1, 2, \\ldots, d\\}\\). It is defined the Tschirnhausen transform of \\(G\\) as \\(T(G) = G + \\frac{\\alpha_1}{d}\\)."
   },
   {
-    "objectID": "Meromorphic-series-NS/Characteristic-sequences.html#examples",
-    "href": "Meromorphic-series-NS/Characteristic-sequences.html#examples",
-    "title": "Characteristic sequences",
+    "objectID": "Meromorphic-series-NS/Tschirnhausen-transform.html#definition",
+    "href": "Meromorphic-series-NS/Tschirnhausen-transform.html#definition",
+    "title": "Tschirnhausen transform",
+    "section": "",
+    "text": "Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) an irreducible polynomial. Let us consider \\(d\\) a divisor of \\(n\\) and let \\(G \\in \\mathbb{K}((x))[y]\\) be a monic polynomial of degree \\(\\frac{n}{d}\\) in \\(y\\). Then, the G-adic expansion of \\(f\\) has the form\n\\[\nf = G^d + \\alpha_1 G^{d-1} + \\cdots + \\alpha_d,\n\\]\nwith \\(\\alpha_i \\in \\mathbb{K}((x))[y]\\) and \\(deg_y \\alpha(x,y) &lt; \\frac{n}{d}\\) for all \\(i \\in \\{1, 2, \\ldots, d\\}\\). It is defined the Tschirnhausen transform of \\(G\\) as \\(T(G) = G + \\frac{\\alpha_1}{d}\\)."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Tschirnhausen-transform.html#examples",
+    "href": "Meromorphic-series-NS/Tschirnhausen-transform.html#examples",
+    "title": "Tschirnhausen transform",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(f = y^6 + (12x^2 + 3)y^5 + (36x^4 + 18x^2 + 2)y^4 + 13xy^3 + (78x^3 + 2x^2 + 20x)y^2 + 42x^2\\) and \\(g = y^3 + (6x^2 + 1)y^2 + 7x\\). We have \\(n = 6\\) and \\(d = 2\\). Dividing,\n\\[\nf = (y^3 + (6x^2 + 2)y^2 + 6x)G + 2x^2y^2 = QG + R,\n\\]\nand \\(deg_y Q = 3 = deg_y G\\). Dividing \\(Q\\) by \\(G\\),\n\\[\nQ = G + y^2 - x = Q^1G + R^1.\n\\]\nThen, the \\(G-\\)adic expansion of \\(f\\) is\n\\[\nf = QG + R = (Q^1G + R^1)G + R = G^2 + (y^2 - x)G + 2x^2y^2,\n\\]\nwith \\(\\alpha_1(x,y) = y^2 - x\\). Finally, the Tschirnhausen transform of \\(G\\) is\n\\[\nT(G) = G + \\frac{\\alpha_1(x,y)}{d} = y^3 + (6x^2 + 1)y^2 + 7x + \\frac{y^2-x}{2}.\n\\]"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Tschirnhausen-transform.html#examples-with-gap",
+    "href": "Meromorphic-series-NS/Tschirnhausen-transform.html#examples-with-gap",
+    "title": "Tschirnhausen transform",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nNowadays there is no function in the package NumericalSgps related to Tschirnhausen transform."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Tschirnhausen-transform.html#references",
+    "href": "Meromorphic-series-NS/Tschirnhausen-transform.html#references",
+    "title": "Tschirnhausen transform",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Pseudo-approximate-root.html",
+    "href": "Meromorphic-series-NS/Pseudo-approximate-root.html",
+    "title": "Pseudo-approximate root",
+    "section": "",
+    "text": "Let \\(f(x,y) \\in \\mathbb{K}((x))[y]\\) irreducible and \\(y(t) = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\) a root of \\(f(t^n, y(t)) = 0\\). Let \\(\\underline{m} = (m_0, m_1, \\ldots, m_h)\\), \\(\\underline{d} = (d_1, d_2, \\ldots, d_{h+1})\\) and \\(\\underline{r} = (r_0, r_1, \\ldots, r_h)\\) the characteristic sequences of \\(f\\).\nLet \\(k \\in \\{1, 2, \\ldots, h\\}\\). Let \\(\\overline{y}(t) = \\sum_{p &lt; m_k} c_p t^p\\) and let \\(Y(t) = \\overline{y}(t^{1/d_k}) \\in \\mathbb{K}((t))\\). It is defined the \\(d_k^{th}-\\)pseudo-approximate root of \\(f\\) as\n\\[\nG_k(t^{\\frac{n}{d_k}}, y) = \\prod_{v, v^{\\frac{n}{d_k}} = 1} (y - Y(vt)).\n\\]"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Pseudo-approximate-root.html#definition",
+    "href": "Meromorphic-series-NS/Pseudo-approximate-root.html#definition",
+    "title": "Pseudo-approximate root",
+    "section": "",
+    "text": "Let \\(f(x,y) \\in \\mathbb{K}((x))[y]\\) irreducible and \\(y(t) = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\) a root of \\(f(t^n, y(t)) = 0\\). Let \\(\\underline{m} = (m_0, m_1, \\ldots, m_h)\\), \\(\\underline{d} = (d_1, d_2, \\ldots, d_{h+1})\\) and \\(\\underline{r} = (r_0, r_1, \\ldots, r_h)\\) the characteristic sequences of \\(f\\).\nLet \\(k \\in \\{1, 2, \\ldots, h\\}\\). Let \\(\\overline{y}(t) = \\sum_{p &lt; m_k} c_p t^p\\) and let \\(Y(t) = \\overline{y}(t^{1/d_k}) \\in \\mathbb{K}((t))\\). It is defined the \\(d_k^{th}-\\)pseudo-approximate root of \\(f\\) as\n\\[\nG_k(t^{\\frac{n}{d_k}}, y) = \\prod_{v, v^{\\frac{n}{d_k}} = 1} (y - Y(vt)).\n\\]"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Pseudo-approximate-root.html#examples",
+    "href": "Meromorphic-series-NS/Pseudo-approximate-root.html#examples",
+    "title": "Pseudo-approximate root",
     "section": "Examples",
     "text": "Examples\n\\(\\circ\\)"
   },
   {
-    "objectID": "Meromorphic-series-NS/Characteristic-sequences.html#examples-with-gap",
-    "href": "Meromorphic-series-NS/Characteristic-sequences.html#examples-with-gap",
-    "title": "Characteristic sequences",
+    "objectID": "Meromorphic-series-NS/Pseudo-approximate-root.html#examples-with-gap",
+    "href": "Meromorphic-series-NS/Pseudo-approximate-root.html#examples-with-gap",
+    "title": "Pseudo-approximate root",
     "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays there is no function in the package NumericalSgps related to order of a characteristic sequences of a formal series."
+    "text": "Examples with GAP\nNowadays there is no function in the package NumericalSgps related to pseudo-approximate root of a formal series."
   },
   {
-    "objectID": "Meromorphic-series-NS/Characteristic-sequences.html#references",
-    "href": "Meromorphic-series-NS/Characteristic-sequences.html#references",
-    "title": "Characteristic sequences",
+    "objectID": "Meromorphic-series-NS/Pseudo-approximate-root.html#references",
+    "href": "Meromorphic-series-NS/Pseudo-approximate-root.html#references",
+    "title": "Pseudo-approximate root",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/G-adic-expansion.html",
+    "href": "Meromorphic-series-NS/G-adic-expansion.html",
+    "title": "G-adic expansion",
+    "section": "",
+    "text": "Let \\(F, G \\in \\mathbb{K}((x))[y]\\), with \\(G \\ne 0\\). Let \\(n = deg_y G\\). Since in \\(\\mathbb{K}((x))[y]\\) we have division algorithm, we can write \\(F = QG + R\\) where \\(deg_y R &lt; n\\). If \\(deg_y Q \\ge n\\), then write \\(Q = Q^1 G + R^1\\) with \\(deg_y R^1 &lt; n\\). With this we can write \\(F\\) as \\(F = Q^1 G^2 + R^1 G + R\\). Then we restart with \\(Q^1\\). This process will stop giving the following expression in terms of the powers of \\(G\\):\n\\[\nF = \\sum_{k = 0}^l \\alpha_k(x,y) G^k,\n\\]\nwhere \\(deg_y \\alpha(x. y) &lt; n\\) for all \\(k \\in \\{0, 1, \\ldots, l\\}\\). It is defined the \\(G-\\)adic expansion of \\(F\\) as the previous expression of \\(F\\) in terms of \\(G^k\\)."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/G-adic-expansion.html#definition",
+    "href": "Meromorphic-series-NS/G-adic-expansion.html#definition",
+    "title": "G-adic expansion",
+    "section": "",
+    "text": "Let \\(F, G \\in \\mathbb{K}((x))[y]\\), with \\(G \\ne 0\\). Let \\(n = deg_y G\\). Since in \\(\\mathbb{K}((x))[y]\\) we have division algorithm, we can write \\(F = QG + R\\) where \\(deg_y R &lt; n\\). If \\(deg_y Q \\ge n\\), then write \\(Q = Q^1 G + R^1\\) with \\(deg_y R^1 &lt; n\\). With this we can write \\(F\\) as \\(F = Q^1 G^2 + R^1 G + R\\). Then we restart with \\(Q^1\\). This process will stop giving the following expression in terms of the powers of \\(G\\):\n\\[\nF = \\sum_{k = 0}^l \\alpha_k(x,y) G^k,\n\\]\nwhere \\(deg_y \\alpha(x. y) &lt; n\\) for all \\(k \\in \\{0, 1, \\ldots, l\\}\\). It is defined the \\(G-\\)adic expansion of \\(F\\) as the previous expression of \\(F\\) in terms of \\(G^k\\)."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/G-adic-expansion.html#examples",
+    "href": "Meromorphic-series-NS/G-adic-expansion.html#examples",
+    "title": "G-adic expansion",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(F = 3xy^4 + (6x + 1)y^3 + (6x^2 + 4x + 2)y^2 + (6x^2 + 2x + 3)y + 3x^3 + x^2 + x\\) and \\(G = y^2 + y + 1\\). If we compute the first division,\n\\[\nF(x,y) = [3xy^2 + (3x+1)y + (3x^2 + x + 1)]G + 2y = QG + R,\n\\]\nand \\(deg_y Q = 2 = deg_y G\\). Repeating the process,\n\\[\nQ = 3xG + (x + y + 1) = Q^1G + R^1,\n\\]\nand \\(deg_y Q^1 = 1 &lt; deg_y G\\). Therefore, the \\(G-\\)adic expansion of \\(G\\) is\n\\[\nF = QG + R = (Q^1G + R^1)G + R = Q^1G^2 + R^1G + R\n\\]\n\\[\n= 3xG^2 + (x + y + 1)G + 2y = \\alpha_2(x,y)G^2 + \\alpha_1(x,y)G + \\alpha_0(x,y).\n\\]\n\\(\\circ\\) Let \\(F = \\sum_{k = 0}^l \\alpha_k(x,y) G^k\\). It can be proven by induction on \\(l \\in \\mathbb{N}\\) that the \\(G-\\)adic expression is unique."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/G-adic-expansion.html#examples-with-gap",
+    "href": "Meromorphic-series-NS/G-adic-expansion.html#examples-with-gap",
+    "title": "G-adic expansion",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nNowadays there is no function in the package NumericalSgps related to \\(G-\\)adic expansion."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/G-adic-expansion.html#references",
+    "href": "Meromorphic-series-NS/G-adic-expansion.html#references",
+    "title": "G-adic expansion",
     "section": "References",
     "text": "References"
   },
@@ -1365,37 +1442,135 @@
     "text": "References"
   },
   {
-    "objectID": "Meromorphic-series-NS/Pseudo-approximate-root.html",
-    "href": "Meromorphic-series-NS/Pseudo-approximate-root.html",
-    "title": "Pseudo-approximate root",
+    "objectID": "Meromorphic-series-NS/Approximate-root.html",
+    "href": "Meromorphic-series-NS/Approximate-root.html",
+    "title": "Approximate root",
     "section": "",
-    "text": "Let \\(f(x,y) \\in \\mathbb{K}((x))[y]\\) irreducible and \\(y(t) = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\) a root of \\(f(t^n, y(t)) = 0\\). Let \\(\\underline{m} = (m_0, m_1, \\ldots, m_h)\\), \\(\\underline{d} = (d_1, d_2, \\ldots, d_{h+1})\\) and \\(\\underline{r} = (r_0, r_1, \\ldots, r_h)\\) the characteristic sequences of \\(f\\).\nLet \\(k \\in \\{1, 2, \\ldots, h\\}\\). Let \\(\\overline{y}(t) = \\sum_{p &lt; m_k} c_p t^p\\) and let \\(Y(t) = \\overline{y}(t^{1/d_k}) \\in \\mathbb{K}((t))\\). It is defined the \\(d_k^{th}-\\)pseudo-approximate root of \\(f\\) as\n\\[\nG_k(t^{\\frac{n}{d_k}}, y) = \\prod_{v, v^{\\frac{n}{d_k}} = 1} (y - Y(vt)).\n\\]"
+    "text": "Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial. Let us consider \\(d\\) a divisor of \\(n\\) and let \\(G \\in \\mathbb{K}((x))[y]\\) be a monic polynomial of degree \\(\\frac{n}{d}\\) in \\(y\\). Let\n\\[\nf = G^d + \\alpha_1 G^{d-1} + \\cdots + \\alpha_d,\n\\]\nbe the G-adic expansion of \\(f\\). It is said that \\(G\\) is a \\(d^{th}\\) approximate root of \\(f\\) if \\(\\alpha_1 = 0\\).\nIt can be proven that for any \\(d\\) divisor of \\(n\\), the \\(d^{th}\\) approximate root of \\(f\\) exists and it is unique. It is denoted by \\(Ap(f;d)\\)."
   },
   {
-    "objectID": "Meromorphic-series-NS/Pseudo-approximate-root.html#definition",
-    "href": "Meromorphic-series-NS/Pseudo-approximate-root.html#definition",
-    "title": "Pseudo-approximate root",
+    "objectID": "Meromorphic-series-NS/Approximate-root.html#definition",
+    "href": "Meromorphic-series-NS/Approximate-root.html#definition",
+    "title": "Approximate root",
     "section": "",
-    "text": "Let \\(f(x,y) \\in \\mathbb{K}((x))[y]\\) irreducible and \\(y(t) = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\) a root of \\(f(t^n, y(t)) = 0\\). Let \\(\\underline{m} = (m_0, m_1, \\ldots, m_h)\\), \\(\\underline{d} = (d_1, d_2, \\ldots, d_{h+1})\\) and \\(\\underline{r} = (r_0, r_1, \\ldots, r_h)\\) the characteristic sequences of \\(f\\).\nLet \\(k \\in \\{1, 2, \\ldots, h\\}\\). Let \\(\\overline{y}(t) = \\sum_{p &lt; m_k} c_p t^p\\) and let \\(Y(t) = \\overline{y}(t^{1/d_k}) \\in \\mathbb{K}((t))\\). It is defined the \\(d_k^{th}-\\)pseudo-approximate root of \\(f\\) as\n\\[\nG_k(t^{\\frac{n}{d_k}}, y) = \\prod_{v, v^{\\frac{n}{d_k}} = 1} (y - Y(vt)).\n\\]"
+    "text": "Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial. Let us consider \\(d\\) a divisor of \\(n\\) and let \\(G \\in \\mathbb{K}((x))[y]\\) be a monic polynomial of degree \\(\\frac{n}{d}\\) in \\(y\\). Let\n\\[\nf = G^d + \\alpha_1 G^{d-1} + \\cdots + \\alpha_d,\n\\]\nbe the G-adic expansion of \\(f\\). It is said that \\(G\\) is a \\(d^{th}\\) approximate root of \\(f\\) if \\(\\alpha_1 = 0\\).\nIt can be proven that for any \\(d\\) divisor of \\(n\\), the \\(d^{th}\\) approximate root of \\(f\\) exists and it is unique. It is denoted by \\(Ap(f;d)\\)."
   },
   {
-    "objectID": "Meromorphic-series-NS/Pseudo-approximate-root.html#examples",
-    "href": "Meromorphic-series-NS/Pseudo-approximate-root.html#examples",
-    "title": "Pseudo-approximate root",
+    "objectID": "Meromorphic-series-NS/Approximate-root.html#examples",
+    "href": "Meromorphic-series-NS/Approximate-root.html#examples",
+    "title": "Approximate root",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(f = y^4 + 13x^2y^2 + 42x^2\\), and \\(d = 2\\), let us calculate \\(Ap(f, 2)\\) applying an algorithm. First, let us consider \\(G = y^{\\frac{n}{d}} = y^2\\) and compute the \\(G-\\)adic expansion of \\(f\\),\n\\[\nf = y^4 + 13x^2y^2 + 42x^2 = G^2 + 13x^2G  + 42x^2\n\\]\nWe have \\(\\alpha_1(x,y) = 13x^2 \\ne 0\\), then, we consider now \\(G_1 = T(G) = G + \\frac{\\alpha_1(x,y)}{d} = y^2 + \\frac{13}{2}x^2\\), where \\(T(G)\\) is the Tschirnhausen transform. If we compute the \\(G_1-\\)adic expansion of \\(f\\),\n\\[\nf = G^2 + 13x^2G + 42x^2 = (G_1 - \\frac{13}{2}x^2)^2 + 13x^2(G_1 - \\frac{13}{2}x^2) + 42x^2\n\\] \\[\n= G_1^2 - 13x^2G_1 + \\frac{169}{4}x^4 + 13x^2G_1 - \\frac{169}{2}x^4 + 42x^2 = G_1^2 - \\frac{169}{4}x^4 + 42x^2.\n\\] and \\(\\alpha_1(x,y) = 0\\). To sum up, \\(Ap(f,2) = y^2 + \\frac{13}{2}x^2\\)."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Approximate-root.html#examples-with-gap",
+    "href": "Meromorphic-series-NS/Approximate-root.html#examples-with-gap",
+    "title": "Approximate root",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nNowadays there is no function in the package NumericalSgps related to Approximate root of a formal series."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Approximate-root.html#references",
+    "href": "Meromorphic-series-NS/Approximate-root.html#references",
+    "title": "Approximate root",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Expansion.html",
+    "href": "Meromorphic-series-NS/Expansion.html",
+    "title": "Expansion",
+    "section": "",
+    "text": "Let \\(g,G_1, \\ldots, G_h \\in \\mathbb{K}((x))[y]\\) with \\(G_1, \\ldots, G_h\\) non-zero and let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial. The definition of expansion of \\(g\\) with respect to \\((G_1, G_2, \\ldots, G_h, f)\\) comes from the following result.\n\\(\\textbf{Preposition}\\): Let \\(g,G_1, \\ldots, G_h \\in \\mathbb{K}((x))[y]\\), with \\(G_1, \\ldots, G_h\\) non-zero and let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial. Then,\n\\[\ng = \\sum_{\\theta \\in \\Theta} c_{\\theta} (x) G_1^{\\theta_1} G_2^{\\theta_2} \\cdots G_h^{\\theta_h} f^{\\theta_{h+1}},\n\\]\nfor some \\(\\theta = (\\theta_1, \\ldots, \\theta_{h+1}) \\in \\mathbb{N}^{h+1}\\), with \\(0 \\le \\theta_k &lt; e_k\\) for all \\(k \\in \\{1, 2, \\ldots, h\\}\\), where \\((e_1, e_2, \\ldots, e_h)\\) comes from the definition of characteristic sequences of a formal series, and some \\(c_{\\theta} (x) \\in \\mathbb{K}((x))\\). Moreover,\n\\[\ndeg_y g = \\max \\{c_{\\theta} (x) G_1^{\\theta_1} G_2^{\\theta_2} \\cdots G_h^{\\theta_h} f^{\\theta_{h+1}} ~ | ~ \\theta \\in \\Theta \\}.\n\\]\nIt is defined the expansion of \\(g\\) with respect to \\((G_1, G_2, \\ldots, G_h, f)\\) as the expression of \\(g\\) obtained in the previous proposition."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Expansion.html#definition",
+    "href": "Meromorphic-series-NS/Expansion.html#definition",
+    "title": "Expansion",
+    "section": "",
+    "text": "Let \\(g,G_1, \\ldots, G_h \\in \\mathbb{K}((x))[y]\\) with \\(G_1, \\ldots, G_h\\) non-zero and let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial. The definition of expansion of \\(g\\) with respect to \\((G_1, G_2, \\ldots, G_h, f)\\) comes from the following result.\n\\(\\textbf{Preposition}\\): Let \\(g,G_1, \\ldots, G_h \\in \\mathbb{K}((x))[y]\\), with \\(G_1, \\ldots, G_h\\) non-zero and let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial. Then,\n\\[\ng = \\sum_{\\theta \\in \\Theta} c_{\\theta} (x) G_1^{\\theta_1} G_2^{\\theta_2} \\cdots G_h^{\\theta_h} f^{\\theta_{h+1}},\n\\]\nfor some \\(\\theta = (\\theta_1, \\ldots, \\theta_{h+1}) \\in \\mathbb{N}^{h+1}\\), with \\(0 \\le \\theta_k &lt; e_k\\) for all \\(k \\in \\{1, 2, \\ldots, h\\}\\), where \\((e_1, e_2, \\ldots, e_h)\\) comes from the definition of characteristic sequences of a formal series, and some \\(c_{\\theta} (x) \\in \\mathbb{K}((x))\\). Moreover,\n\\[\ndeg_y g = \\max \\{c_{\\theta} (x) G_1^{\\theta_1} G_2^{\\theta_2} \\cdots G_h^{\\theta_h} f^{\\theta_{h+1}} ~ | ~ \\theta \\in \\Theta \\}.\n\\]\nIt is defined the expansion of \\(g\\) with respect to \\((G_1, G_2, \\ldots, G_h, f)\\) as the expression of \\(g\\) obtained in the previous proposition."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Expansion.html#examples",
+    "href": "Meromorphic-series-NS/Expansion.html#examples",
+    "title": "Expansion",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(g = y^{10}\\), and \\(f = y^6 - 2x^2y^3 + x^4 - x^5y, G_1 = y, G_2 = y^3 - x^2\\), let us compute the expansion of \\(g\\) with respect to \\((G_1, G_2, f)\\). If we divide \\(g\\) by \\(f\\),\n\\[\ng = (2x^2y + y^4)f + (2x^7y^2 - 2x^6y + x^5y^5 + 3x^4y^4) = Qf + R.\n\\]\nSince \\(deg_y Q &lt; deg_y f\\), we start dividing \\(Q\\) and \\(R\\) by \\(G_2\\).\n\\[\nQ = yG_2 + 3x^2y, \\hspace{0.3cm} R = (x^5y^2 + 3x^4y)G_2 + 3x^7y^2 + x^6y.\n\\]\nFinally,\n\\[\ng = (yG_2 + 3x^2y)f + (x^5y^2 + 3x^4y)G_2 + 3x^7y^2 + x^6y\n\\]\n\\[\n= G_1G_2f + 3x^2G_1f + x^5G_1^2G_2 + 3x^4G_1G_2 + 3x^7G_1^2 + x^6G_1.\n\\]"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Expansion.html#examples-with-gap",
+    "href": "Meromorphic-series-NS/Expansion.html#examples-with-gap",
+    "title": "Expansion",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nNowadays there is no function in the package NumericalSgps related to expansion."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Expansion.html#references",
+    "href": "Meromorphic-series-NS/Expansion.html#references",
+    "title": "Expansion",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Characteristic-sequences.html",
+    "href": "Meromorphic-series-NS/Characteristic-sequences.html",
+    "title": "Characteristic sequences",
+    "section": "",
+    "text": "The definition of characteristic sequences comes from the following result.\n\\(\\textbf{Preposition}\\): Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\). Suppose that \\(f(x,y)\\) is irreducible. There exists \\(y(t) \\in \\mathbb{K}((t))\\) such that \\(f(t^n, y(t)) = 0\\). Furthermore,\nwhere \\(Supp(y(t))\\) is the support of \\(y(t)\\).\nLet us consider \\(f(x,y) \\in \\mathbb{K}((x))[y]\\) irreducible and let \\(y = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\).\n\\[\nr_i = r_{i-1}e_{i-1} + m_i - m_{i-1}.\n\\]\nIt is defined the characteristic sequences of \\(f\\) as the sequences \\(\\underline{m}, \\underline{d}\\) and \\(\\underline{r}\\). In particular, the sequence \\(\\underline{m}\\) is called the Newton-Puiseux exponents of \\(f\\)."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Characteristic-sequences.html#examples",
+    "href": "Meromorphic-series-NS/Characteristic-sequences.html#examples",
+    "title": "Characteristic sequences",
     "section": "Examples",
     "text": "Examples\n\\(\\circ\\)"
   },
   {
-    "objectID": "Meromorphic-series-NS/Pseudo-approximate-root.html#examples-with-gap",
-    "href": "Meromorphic-series-NS/Pseudo-approximate-root.html#examples-with-gap",
-    "title": "Pseudo-approximate root",
+    "objectID": "Meromorphic-series-NS/Characteristic-sequences.html#examples-with-gap",
+    "href": "Meromorphic-series-NS/Characteristic-sequences.html#examples-with-gap",
+    "title": "Characteristic sequences",
     "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays there is no function in the package NumericalSgps related to pseudo-approximate root of a formal series."
+    "text": "Examples with GAP\nNowadays there is no function in the package NumericalSgps related to order of a characteristic sequences of a formal series."
   },
   {
-    "objectID": "Meromorphic-series-NS/Pseudo-approximate-root.html#references",
-    "href": "Meromorphic-series-NS/Pseudo-approximate-root.html#references",
-    "title": "Pseudo-approximate root",
+    "objectID": "Meromorphic-series-NS/Characteristic-sequences.html#references",
+    "href": "Meromorphic-series-NS/Characteristic-sequences.html#references",
+    "title": "Characteristic sequences",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Support.html",
+    "href": "Meromorphic-series-NS/Support.html",
+    "title": "Support",
+    "section": "",
+    "text": "Let \\(\\mathbb{K}\\) be a field and \\(t\\) a variable. Let us consider \\(y(t) = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\). It is defined the support of \\(y(t)\\) as\n\\[\nSupp(y(t)) = \\{p ~ | ~ c_p \\ne 0 \\}.\n\\]"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Support.html#definition",
+    "href": "Meromorphic-series-NS/Support.html#definition",
+    "title": "Support",
+    "section": "",
+    "text": "Let \\(\\mathbb{K}\\) be a field and \\(t\\) a variable. Let us consider \\(y(t) = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\). It is defined the support of \\(y(t)\\) as\n\\[\nSupp(y(t)) = \\{p ~ | ~ c_p \\ne 0 \\}.\n\\]"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Support.html#examples",
+    "href": "Meromorphic-series-NS/Support.html#examples",
+    "title": "Support",
+    "section": "Examples",
+    "text": "Examples\n\\(\\circ\\) Let \\(\\mathbb{K}\\) be a field, \\(t\\) and indeterminant and the rings \\(\\mathbb{K}[t], \\mathbb{K}[[t]]\\). By definition of polynomial ring, it holds that\n\\[\n\\mathbb{K}[t] = \\{y(t) \\in \\mathbb{K}[[t]] ~ | ~ Supp(y(t)) &lt; + \\infty \\} \\subsetneq \\mathbb{K}[[t]].\n\\]"
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Support.html#examples-with-gap",
+    "href": "Meromorphic-series-NS/Support.html#examples-with-gap",
+    "title": "Support",
+    "section": "Examples with GAP",
+    "text": "Examples with GAP\nNowadays there is no function in the package NumericalSgps related to support of a formal series."
+  },
+  {
+    "objectID": "Meromorphic-series-NS/Support.html#references",
+    "href": "Meromorphic-series-NS/Support.html#references",
+    "title": "Support",
     "section": "References",
     "text": "References"
   },

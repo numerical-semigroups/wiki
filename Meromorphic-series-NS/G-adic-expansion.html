@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Support</title>
+<title>G-adic expansion</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,7 +108,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Support</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">G-adic expansion</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -135,7 +135,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Support</h1>
+<h1 class="title">G-adic expansion</h1>
 </div>
 
 
@@ -154,21 +154,34 @@ window.Quarto = {
 
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(\mathbb{K}\)</span> be a field and <span class="math inline">\(t\)</span> a variable. Let us consider <span class="math inline">\(y(t) = \sum_{p \in \mathbb{N}} c_p t^p \in \mathbb{K}((t))\)</span>. It is defined the support of <span class="math inline">\(y(t)\)</span> as</p>
+<p>Let <span class="math inline">\(F, G \in \mathbb{K}((x))[y]\)</span>, with <span class="math inline">\(G \ne 0\)</span>. Let <span class="math inline">\(n = deg_y G\)</span>. Since in <span class="math inline">\(\mathbb{K}((x))[y]\)</span> we have division algorithm, we can write <span class="math inline">\(F = QG + R\)</span> where <span class="math inline">\(deg_y R &lt; n\)</span>. If <span class="math inline">\(deg_y Q \ge n\)</span>, then write <span class="math inline">\(Q = Q^1 G + R^1\)</span> with <span class="math inline">\(deg_y R^1 &lt; n\)</span>. With this we can write <span class="math inline">\(F\)</span> as <span class="math inline">\(F = Q^1 G^2 + R^1 G + R\)</span>. Then we restart with <span class="math inline">\(Q^1\)</span>. This process will stop giving the following expression in terms of the powers of <span class="math inline">\(G\)</span>:</p>
 <p><span class="math display">\[
-Supp(y(t)) = \{p ~ | ~ c_p \ne 0 \}.
+F = \sum_{k = 0}^l \alpha_k(x,y) G^k,
 \]</span></p>
+<p>where <span class="math inline">\(deg_y \alpha(x. y) &lt; n\)</span> for all <span class="math inline">\(k \in \{0, 1, \ldots, l\}\)</span>. It is defined the <span class="math inline">\(G-\)</span>adic expansion of <span class="math inline">\(F\)</span> as the previous expression of <span class="math inline">\(F\)</span> in terms of <span class="math inline">\(G^k\)</span>.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(\mathbb{K}\)</span> be a field, <span class="math inline">\(t\)</span> and indeterminant and the rings <span class="math inline">\(\mathbb{K}[t], \mathbb{K}[[t]]\)</span>. By definition of polynomial ring, it holds that</p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(F = 3xy^4 + (6x + 1)y^3 + (6x^2 + 4x + 2)y^2 + (6x^2 + 2x + 3)y + 3x^3 + x^2 + x\)</span> and <span class="math inline">\(G = y^2 + y + 1\)</span>. If we compute the first division,</p>
 <p><span class="math display">\[
-\mathbb{K}[t] = \{y(t) \in \mathbb{K}[[t]] ~ | ~ Supp(y(t)) &lt; + \infty \} \subsetneq \mathbb{K}[[t]].
+F(x,y) = [3xy^2 + (3x+1)y + (3x^2 + x + 1)]G + 2y = QG + R,
 \]</span></p>
+<p>and <span class="math inline">\(deg_y Q = 2 = deg_y G\)</span>. Repeating the process,</p>
+<p><span class="math display">\[
+Q = 3xG + (x + y + 1) = Q^1G + R^1,
+\]</span></p>
+<p>and <span class="math inline">\(deg_y Q^1 = 1 &lt; deg_y G\)</span>. Therefore, the <span class="math inline">\(G-\)</span>adic expansion of <span class="math inline">\(G\)</span> is</p>
+<p><span class="math display">\[
+F = QG + R = (Q^1G + R^1)G + R = Q^1G^2 + R^1G + R
+\]</span></p>
+<p><span class="math display">\[
+= 3xG^2 + (x + y + 1)G + 2y = \alpha_2(x,y)G^2 + \alpha_1(x,y)G + \alpha_0(x,y).
+\]</span></p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(F = \sum_{k = 0}^l \alpha_k(x,y) G^k\)</span>. It can be proven by induction on <span class="math inline">\(l \in \mathbb{N}\)</span> that the <span class="math inline">\(G-\)</span>adic expression is unique.</p>
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>Nowadays there is no function in the package NumericalSgps related to support of a formal series.</p>
+<p>Nowadays there is no function in the package NumericalSgps related to <span class="math inline">\(G-\)</span>adic expansion.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>

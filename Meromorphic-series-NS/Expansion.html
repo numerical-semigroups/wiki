@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Support</title>
+<title>Expansion</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,7 +108,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Support</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Expansion</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -135,7 +135,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Support</h1>
+<h1 class="title">Expansion</h1>
 </div>
 
 
@@ -154,21 +154,38 @@ window.Quarto = {
 
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(\mathbb{K}\)</span> be a field and <span class="math inline">\(t\)</span> a variable. Let us consider <span class="math inline">\(y(t) = \sum_{p \in \mathbb{N}} c_p t^p \in \mathbb{K}((t))\)</span>. It is defined the support of <span class="math inline">\(y(t)\)</span> as</p>
+<p>Let <span class="math inline">\(g,G_1, \ldots, G_h \in \mathbb{K}((x))[y]\)</span> with <span class="math inline">\(G_1, \ldots, G_h\)</span> non-zero and let <span class="math inline">\(f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]\)</span> be an irreducible polynomial. The definition of expansion of <span class="math inline">\(g\)</span> with respect to <span class="math inline">\((G_1, G_2, \ldots, G_h, f)\)</span> comes from the following result.</p>
+<p><span class="math inline">\(\textbf{Preposition}\)</span>: Let <span class="math inline">\(g,G_1, \ldots, G_h \in \mathbb{K}((x))[y]\)</span>, with <span class="math inline">\(G_1, \ldots, G_h\)</span> non-zero and let <span class="math inline">\(f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]\)</span> be an irreducible polynomial. Then,</p>
 <p><span class="math display">\[
-Supp(y(t)) = \{p ~ | ~ c_p \ne 0 \}.
+g = \sum_{\theta \in \Theta} c_{\theta} (x) G_1^{\theta_1} G_2^{\theta_2} \cdots G_h^{\theta_h} f^{\theta_{h+1}},
 \]</span></p>
+<p>for some <span class="math inline">\(\theta = (\theta_1, \ldots, \theta_{h+1}) \in \mathbb{N}^{h+1}\)</span>, with <span class="math inline">\(0 \le \theta_k &lt; e_k\)</span> for all <span class="math inline">\(k \in \{1, 2, \ldots, h\}\)</span>, where <span class="math inline">\((e_1, e_2, \ldots, e_h)\)</span> comes from the definition of <a href="../Meromorphic-series-NS/Characteristic-sequences.html">characteristic sequences</a> of a formal series, and some <span class="math inline">\(c_{\theta} (x) \in \mathbb{K}((x))\)</span>. Moreover,</p>
+<p><span class="math display">\[
+deg_y g = \max \{c_{\theta} (x) G_1^{\theta_1} G_2^{\theta_2} \cdots G_h^{\theta_h} f^{\theta_{h+1}} ~ | ~ \theta \in \Theta \}.
+\]</span></p>
+<p>It is defined the expansion of <span class="math inline">\(g\)</span> with respect to <span class="math inline">\((G_1, G_2, \ldots, G_h, f)\)</span> as the expression of <span class="math inline">\(g\)</span> obtained in the previous proposition.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(\mathbb{K}\)</span> be a field, <span class="math inline">\(t\)</span> and indeterminant and the rings <span class="math inline">\(\mathbb{K}[t], \mathbb{K}[[t]]\)</span>. By definition of polynomial ring, it holds that</p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(g = y^{10}\)</span>, and <span class="math inline">\(f = y^6 - 2x^2y^3 + x^4 - x^5y, G_1 = y, G_2 = y^3 - x^2\)</span>, let us compute the expansion of <span class="math inline">\(g\)</span> with respect to <span class="math inline">\((G_1, G_2, f)\)</span>. If we divide <span class="math inline">\(g\)</span> by <span class="math inline">\(f\)</span>,</p>
 <p><span class="math display">\[
-\mathbb{K}[t] = \{y(t) \in \mathbb{K}[[t]] ~ | ~ Supp(y(t)) &lt; + \infty \} \subsetneq \mathbb{K}[[t]].
+g = (2x^2y + y^4)f + (2x^7y^2 - 2x^6y + x^5y^5 + 3x^4y^4) = Qf + R.
+\]</span></p>
+<p>Since <span class="math inline">\(deg_y Q &lt; deg_y f\)</span>, we start dividing <span class="math inline">\(Q\)</span> and <span class="math inline">\(R\)</span> by <span class="math inline">\(G_2\)</span>.</p>
+<p><span class="math display">\[
+Q = yG_2 + 3x^2y, \hspace{0.3cm} R = (x^5y^2 + 3x^4y)G_2 + 3x^7y^2 + x^6y.
+\]</span></p>
+<p>Finally,</p>
+<p><span class="math display">\[
+g = (yG_2 + 3x^2y)f + (x^5y^2 + 3x^4y)G_2 + 3x^7y^2 + x^6y
+\]</span></p>
+<p><span class="math display">\[
+= G_1G_2f + 3x^2G_1f + x^5G_1^2G_2 + 3x^4G_1G_2 + 3x^7G_1^2 + x^6G_1.
 \]</span></p>
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>Nowadays there is no function in the package NumericalSgps related to support of a formal series.</p>
+<p>Nowadays there is no function in the package NumericalSgps related to expansion.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>

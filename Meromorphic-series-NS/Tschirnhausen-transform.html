@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Support</title>
+<title>Tschirnhausen transform</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,7 +108,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Support</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Tschirnhausen transform</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -135,7 +135,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Support</h1>
+<h1 class="title">Tschirnhausen transform</h1>
 </div>
 
 
@@ -154,21 +154,34 @@ window.Quarto = {
 
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(\mathbb{K}\)</span> be a field and <span class="math inline">\(t\)</span> a variable. Let us consider <span class="math inline">\(y(t) = \sum_{p \in \mathbb{N}} c_p t^p \in \mathbb{K}((t))\)</span>. It is defined the support of <span class="math inline">\(y(t)\)</span> as</p>
+<p>Let <span class="math inline">\(f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]\)</span> an irreducible polynomial. Let us consider <span class="math inline">\(d\)</span> a divisor of <span class="math inline">\(n\)</span> and let <span class="math inline">\(G \in \mathbb{K}((x))[y]\)</span> be a monic polynomial of degree <span class="math inline">\(\frac{n}{d}\)</span> in <span class="math inline">\(y\)</span>. Then, the <a href="../Meromorphic-series-NS/G-adic-expansion.html">G-adic expansion</a> of <span class="math inline">\(f\)</span> has the form</p>
 <p><span class="math display">\[
-Supp(y(t)) = \{p ~ | ~ c_p \ne 0 \}.
+f = G^d + \alpha_1 G^{d-1} + \cdots + \alpha_d,
 \]</span></p>
+<p>with <span class="math inline">\(\alpha_i \in \mathbb{K}((x))[y]\)</span> and <span class="math inline">\(deg_y \alpha(x,y) &lt; \frac{n}{d}\)</span> for all <span class="math inline">\(i \in \{1, 2, \ldots, d\}\)</span>. It is defined the Tschirnhausen transform of <span class="math inline">\(G\)</span> as <span class="math inline">\(T(G) = G + \frac{\alpha_1}{d}\)</span>.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(\mathbb{K}\)</span> be a field, <span class="math inline">\(t\)</span> and indeterminant and the rings <span class="math inline">\(\mathbb{K}[t], \mathbb{K}[[t]]\)</span>. By definition of polynomial ring, it holds that</p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(f = y^6 + (12x^2 + 3)y^5 + (36x^4 + 18x^2 + 2)y^4 + 13xy^3 + (78x^3 + 2x^2 + 20x)y^2 + 42x^2\)</span> and <span class="math inline">\(g = y^3 + (6x^2 + 1)y^2 + 7x\)</span>. We have <span class="math inline">\(n = 6\)</span> and <span class="math inline">\(d = 2\)</span>. Dividing,</p>
 <p><span class="math display">\[
-\mathbb{K}[t] = \{y(t) \in \mathbb{K}[[t]] ~ | ~ Supp(y(t)) &lt; + \infty \} \subsetneq \mathbb{K}[[t]].
+f = (y^3 + (6x^2 + 2)y^2 + 6x)G + 2x^2y^2 = QG + R,
+\]</span></p>
+<p>and <span class="math inline">\(deg_y Q = 3 = deg_y G\)</span>. Dividing <span class="math inline">\(Q\)</span> by <span class="math inline">\(G\)</span>,</p>
+<p><span class="math display">\[
+Q = G + y^2 - x = Q^1G + R^1.
+\]</span></p>
+<p>Then, the <span class="math inline">\(G-\)</span>adic expansion of <span class="math inline">\(f\)</span> is</p>
+<p><span class="math display">\[
+f = QG + R = (Q^1G + R^1)G + R = G^2 + (y^2 - x)G + 2x^2y^2,
+\]</span></p>
+<p>with <span class="math inline">\(\alpha_1(x,y) = y^2 - x\)</span>. Finally, the Tschirnhausen transform of <span class="math inline">\(G\)</span> is</p>
+<p><span class="math display">\[
+T(G) = G + \frac{\alpha_1(x,y)}{d} = y^3 + (6x^2 + 1)y^2 + 7x + \frac{y^2-x}{2}.
 \]</span></p>
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>Nowadays there is no function in the package NumericalSgps related to support of a formal series.</p>
+<p>Nowadays there is no function in the package NumericalSgps related to Tschirnhausen transform.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
