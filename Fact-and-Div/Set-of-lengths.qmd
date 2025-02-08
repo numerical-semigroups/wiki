@@ -1,0 +1,39 @@
+---
+title: "Set of lengths"
+format: html
+engine: markdown
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $\{n_1, n_2, \ldots, n_p\}$, let $s \in S$ and let $\mathbf{Z}(s)$ be the [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) of $s$. It is defined the set of lengths of $s$ in $S$ as
+
+$$
+\mathbf{L}(s) = \{|x| ~ | ~ x \in \mathbf{Z}(s)\},
+$$ 
+
+where $|x|$ denotes the [length factorization](Length-factorization.qmd) of $x$.
+
+## Examples
+
+$\circ$ Let $S = \langle 5, 12, 17 \rangle$ and $s = 70$. Its set of factorizations is $\mathbf{Z}(70) = \{(14, 0), (2,5)\}$. The length of $(14,0)$ is $14$ and the length of $(2,5)$ is $7$, therefore, $\mathbf{L}(70) = \{14, 7\}$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 15, 17, 21, 29 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(15, 17, 21, 29);
+<Numerical semigroup with 4 generators>
+```
+
+Given a numerical semigroup $S$ and an element $n$ of it, the function `LengthsOfFactorizationsElementWRTNumericalSemigroup` computes the set of lengths of $n$ in $S$.
+
+``` gap
+gap> LengthsOfFactorizationsElementWRTNumericalSemigroup(120, S);
+[ 6, 8 ]
+```
+
+## References

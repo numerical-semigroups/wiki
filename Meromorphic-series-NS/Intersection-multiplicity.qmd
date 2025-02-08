@@ -24,6 +24,6 @@ $\circ$
 
 ## Examples with GAP
 
-Nowadays there is no function in the package NumericalSgps related to intersection multiplicity of formal series.
+Nowadays, there are no functions in package NumericalSgps related to intersection multiplicity of formal series.
 
 ## References

@@ -44,17 +44,17 @@ gap> OverSemigroups(S);
 [ <The numerical semigroup N>, <Numerical semigroup with 2 generators>, <Numerical semigroup with 2 generators> ]
 ```
 
-The code `List(List_NS, S -> Function(S));` return a list where it has applied `Function` to every element in $List\_NS$, for example, we can see the oversemigroups of $S$ by the set formed by its [left elements](Left-elements.qmd) and its [conductor](Conductor.qmd),
+The code `List(List_NS, l -> Function(l));` return a list where it has applied `Function` to every element in $List\_NS$, for example, we can see the oversemigroups of $S$ by the set formed by its [left elements](Left-elements.qmd) and its [conductor](Conductor.qmd),
 
 ``` gap
-gap> List(OverSemigroups(S), S -> SmallElements(S));
+gap> List(OverSemigroups(S), l -> SmallElements(l));
 [ [ 0 ], [ 0, 2 ], [ 0, 2, 4 ] ]
 ```
 
 or by its gaps,
 
 ``` gap
-gap> List(OverSemigroups(S), S -> Gaps(S));
+gap> List(OverSemigroups(S), l -> Gaps(l));
 [ [  ], [ 1 ], [ 1, 3 ] ]
 ```
 

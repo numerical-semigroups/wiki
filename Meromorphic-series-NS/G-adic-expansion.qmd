@@ -42,6 +42,6 @@ $\circ$ Let $F = \sum_{k = 0}^l \alpha_k(x,y) G^k$. It can be proven by inductio
 
 ## Examples with GAP
 
-Nowadays there is no function in the package NumericalSgps related to $G-$adic expansion.
+Nowadays, there are no functions in package NumericalSgps related to $G-$adic expansion.
 
 ## References

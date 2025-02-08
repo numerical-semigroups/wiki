@@ -30,7 +30,7 @@ Finally, is minimal since it only has one element.
 
 ## Examples with GAP
 
-The following example is made with the package NumericalSgps in GAP
+The following example is made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 7, 15, 20 \rangle$, in GAP:
 

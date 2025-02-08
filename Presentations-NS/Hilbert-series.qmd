@@ -1,0 +1,63 @@
+---
+title: "Hilbert series"
+format: html
+engine: markdown
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $x$ an indeterminate. It is defined the Hilbert series of $S$ as
+
+$$
+H_S(x) = \sum_{s \in S} x^s.
+$$
+
+The Hilbert series of a numerical semigroup is also known as the generating function of a numerical semigroup. If $\{n_1, n_2, \ldots, n_e\}$ is the [minimal set of generators](../Basic-concepts/Minimal-set-of-generators.qmd) of $S$, $n \in S$, $\mathcal{F}(n)$ denotes the [shaded set](Shaded-set.qmd) of $n$, and
+
+$$
+\chi(\mathcal{F}(n)) = \sum_{L \in \mathcal{F}(n)} (-1)^{|L|},
+$$ is the Euler characteristic, it can be proven that
+
+$$
+H_S(x)(1 - x^{n_1})\cdots(1-x^{n_e}) = \sum_{s \in S} \chi(\mathcal{F}(s))x^s,
+$$ and consequently,
+
+$$
+H_S(x) = \frac{\sum_{s \in S} \chi(\mathcal{F}(s))x^s}{(1 - x^{n_1})\cdots(1-x^{n_e})}.
+$$
+
+## Examples
+
+$\circ$ Let $S = \langle 2, 5 \rangle = \{0, 2, 4, \rightarrow\}$. Let us compute the Hilbert series of $S$ from the Euler characteristic. We know that $F(S) = 3$, where $F(S)$ denotes the [Frobenius number](../Basic-concepts/Frobenius-number.qmd) of $S$, then if $s > F(S) + 2 + 5 = 10$, $\mathcal{F}(s)$ contains $A = \{a,b\}$ and therefore contains all the proper subsets of $A$, which implies $\chi(\mathcal{F}(s)) = 0$. The candidates for non-zero Euler characteristic are $\{0, 2, 4, 5,6,7,8,9,10\}$. If we compute the Euler characteristic of each candidate, we have
+
+$$
+\chi(\mathcal{F}(0)) = 1, \ \ \ \chi(\mathcal{F}(10)) = -1,
+$$
+
+$$
+\chi(\mathcal{F}(s)) = 0 \hspace{0.3cm} \text{for } s = 2,4,5,6,7,8,9.
+$$ Finally, the Hilbert series of $S$ is
+
+$$
+H_S(x) = \frac{1 - x^{10}}{(1 - x^2)(1-x^5)}.
+$$
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 7, 10, 13, 15, 19 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(7, 10, 13, 15, 19);
+<Numerical semigroup with 5 generators>
+```
+
+Given an indeterminate $x$ and a numerical semigroup $S$, the function `HilbertSeriesOfNumericalSemigroup` returns the Hilbert series of $S$ with indeterminate $x$.
+
+``` gap
+gap> HilbertSeriesOfNumericalSemigroup(S,x);
+(x^19-x^18+x^17-x^16+x^13-x^11+x^10-x^8+x^7-x+1)/(-x+1)
+```
+
+## References

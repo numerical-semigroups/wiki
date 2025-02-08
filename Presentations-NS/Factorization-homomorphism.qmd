@@ -28,6 +28,6 @@ Minimal generators only have a single preimage by definition of minimal set of g
 
 ## Examples with GAP
 
-Nowadays there is no function in the package NumericalSgps related to factorization homomorphism of a numerical semigroup.
+Nowadays, there are no functions in package NumericalSgps related to factorization homomorphism of a numerical semigroup.
 
 ## References

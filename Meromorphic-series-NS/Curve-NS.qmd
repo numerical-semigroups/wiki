@@ -4,24 +4,21 @@ format: html
 engine: markdown
 ---
 
-
 ## Definition
 
 The definition of numerical semigroup associated to a curve needs the following preposition.
 
 $\textbf{Preposition}$: Let $F = y^n + a_1(x)y^{n-1} + \cdots + a_n(x)$ be a nonzero polynomial of $\mathbb{K}[x][y]$ and assume, possibly after a change of variables, that $deg_x a_i < i$ for all $i \in \{1, 2, \ldots, n\}$ such that $a_i(x) \ne 0$. Let $F_{\infty}(u,y) = h_F(u,1,y)$ and $f(x,y) = F(x^{-1}, y) \in \mathbb{K}[x^{-1}, y]$.
 
-1. $f(x,y) = x^{-n}F(x, y)$.
+1.  $f(x,y) = x^{-n}F(x, y)$.
 
-2. $F$ has [one place at infinity](Curves-one-place-infinity.qmd) if, and only if, $f(x,y)$ is irreducible in $\mathbb{K}[x^{-1}, y]$.
+2.  $F$ has [one place at infinity](Curves-one-place-infinity.qmd) if, and only if, $f(x,y)$ is irreducible in $\mathbb{K}[x^{-1}, y]$.
 
 Let us consider the hypothesis of the preposition and also that $F$ has one place at the point at infinity. It is defined the numerical semigroup associated to $f$ as
 
 $$
 \Gamma(f) = \{int(f,g) ~ | ~ g \in \mathbb{K}[x^{-1}][y] \setminus (f)\}.
-$$
-It can be proven that $\Gamma(f)$ is a subsemigroup of $- \mathbb{N}$.
-
+$$ It can be proven that $\Gamma(f)$ is a subsemigroup of $- \mathbb{N}$.
 
 ## Examples
 
@@ -29,6 +26,6 @@ $\circ$
 
 ## Examples with GAP
 
-Nowadays there is no function in the package NumericalSgps related to numerical semigroup associated to a curve.
+Nowadays, there are no functions in package NumericalSgps related to numerical semigroup associated to a curve.
 
 ## References

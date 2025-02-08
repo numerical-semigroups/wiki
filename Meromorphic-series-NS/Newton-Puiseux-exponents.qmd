@@ -28,6 +28,6 @@ $\circ$
 
 ## Examples with GAP
 
-Nowadays there is no function in the package NumericalSgps related to Newton-Puiseux exponents of a formal series.
+Nowadays, there are no functions in package NumericalSgps related to Newton-Puiseux exponents.
 
 ## References

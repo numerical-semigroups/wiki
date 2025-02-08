@@ -1,0 +1,50 @@
+---
+title: "Factorizations R-related"
+format: html
+enigne: markdown
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), an element $s \in S$, $\mathbf{Z}(s)$ the [set of factorizations](Set-of-factorizations.qmd) of $s$ and $\nabla_s$ the [graph associated](Graph-associated-to-an-element.qmd) to $s$. It is said that two factorizations $a$ and $b$ of $s$ are $\mathcal{R}-$related if they belong to the same connected component of $\nabla_s$, that is, there exists a chain of factorizations $a_1, a_2, \ldots, a_t \in \mathbf{Z}(s)$ such that
+
+-   $a_1 = a, a_t = b$.
+
+-   for all $i \in \{1, 2, \ldots, t-1\}$, $a_i \cdot a_{i+1} \ne 0$, where the dot product is component by component.
+
+Note that two elements are $\mathcal{R}-$related is an equivalence relation. The equivalence classes are called $\mathcal{R}-$classes.
+
+## Examples
+
+$\circ$ Let $S = \langle 7, 12, 15 \rangle$ and $s = 36$. Taking into account that $(\alpha, \beta, \gamma) \in \mathbb{Z}(36)$ implies $0 \le \alpha \le 5, 0 \le \beta \le 3$ and $0 \le \gamma \le 2$, it is deduced the set of factorizations, which is
+
+$$
+\mathbf{Z}(36) = \{(0,3,0), (3,0,1)\},
+$$
+
+and $(0,3,0) \cdot (3,0,1) = (0 \cdot 3, 3 \cdot 0, 0 \cdot 1) = (0,0,0)$. Then, $(0,3,0)$ and $(3,0,1)$ are not $\mathcal{R}-$related.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 21, 22, 41, 42 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(21, 22, 41, 42);
+<Numerical semigroup with 4 generators>
+```
+
+The function `RClassesOfSetOfFactorizations` has as parameter the set of factorizations of an element of a numerical semigroup and returns its set of $\mathcal{R}-$classes. The set of factorizations of an element can be computed with the function `Factorizations`.
+
+``` gap
+
+gap> z := Factorizations(S, 500);
+[ [ 6, 17, 0 ], [ 3, 18, 1 ], [ 0, 19, 2 ], [ 16, 0, 4 ], [ 13, 1, 5 ],
+  [ 10, 2, 6 ], [ 7, 3, 7 ], [ 4, 4, 8 ], [ 1, 5, 9 ] ]
+gap> RClassesOfSetOfFactorizations(z);
+[ [ [ 0, 19, 2 ], [ 1, 5, 9 ], [ 3, 18, 1 ], [ 4, 4, 8 ], [ 6, 17, 0 ],
+      [ 7, 3, 7 ], [ 10, 2, 6 ], [ 13, 1, 5 ], [ 16, 0, 4 ] ] ]
+```
+
+## References

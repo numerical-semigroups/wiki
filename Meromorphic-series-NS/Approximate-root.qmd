@@ -34,6 +34,6 @@ $$ and $\alpha_1(x,y) = 0$. To sum up, $Ap(f,2) = y^2 + \frac{13}{2}x^2$.
 
 ## Examples with GAP
 
-Nowadays there is no function in the package NumericalSgps related to Approximate root of a formal series.
+Nowadays, there are no functions in package NumericalSgps related to approximate root.
 
 ## References
