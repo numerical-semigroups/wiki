@@ -1,0 +1,45 @@
+---
+title: "Delta set of a numerical semigroup"
+format: html
+engine: markdown
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is defined the Delta set of $S$, denoted by $\Delta(S)$, as
+
+$$
+\Delta(S) = \bigcup_{s \in S} \Delta(s),
+$$
+
+where $\Delta(s)$ denotes the [delta set of s](Delta-set-of-an-element.qmd) in $S$. If $Betti(S)$ is the set of [Betti elements](../Presentations-NS/Betti-element.qmd) of $S$, it can be proven that
+
+$$
+\max \Delta(S) = \max \{\max \Delta(b) ~ | ~ b \in Betti(S)\}.
+$$
+
+## Examples
+
+$\circ$ Let $S = \langle 2, 3 \rangle$. If $\nabla_s$ is not connected, where $\nabla_s$ denotes the [graph associated to s](../Presentations-NS/Graph-associated-to-an-element.qmd), then $s = n + w$ with $n \in \{2,3\}$ and $w \in Ap(S,2)$. From the above argument, it is deduced that $Betti(S) = \{6\}$, and its [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) is $\mathbf{Z}(6) = \{(3,0),(0,2)\}$. Thus, $\Delta(6) = \{1\}$ and $\max \Delta(S) = \{1\}$, consequently, $\Delta(S) = \{1\}$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 13, 45, 60, 89 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(13, 45, 60, 89);
+<Numerical semigroup with 4 generators>
+```
+
+Given a numerical semigroup $S$, the function `DeltaSet` return the Delta set of $S$. If we also give an element $n \in S$, the function returns the Delta set of $n$ in $S$.
+
+``` gap
+gap> DeltaSet(S);
+[ 1, 2, 3, 4, 6, 7, 11 ]
+gap> DeltaSet(S, 314);
+[ 1, 2, 4 ]
+```
+
+## References

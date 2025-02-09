@@ -1,5 +1,5 @@
 ---
-title: "Elasticity"
+title: "Catenary degree"
 format: html
 engine: markdown
 ---
@@ -10,8 +10,7 @@ Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd).
 
 ## Examples
 
-$\circ$ 
-
+$\circ$ Let $S = \langle
 
 ## Examples with GAP
 
@@ -20,10 +19,4 @@ The following example is made with the package NumericalSgps in GAP.
 $\diamond$ Let 
 
 
-
 ## References
-
-
-
-
-

@@ -1,0 +1,59 @@
+---
+title: "Elasticity of a numerical semigroup"
+format: html
+engine: markdown
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is defined the elasticity of $S$, denoted by $\rho(S)$, as
+
+$$
+\rho(S) = \sup \{\rho(s) ~ | ~ s \in S\},
+$$
+
+where $\rho(s)$ denotes the [elasticity of s](Elasticity-of-an-element.qmd) in $S$. If $S$ is [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $\{n_1, n_2, \ldots, n_p\}$ with $n_1 < n_2 < \cdots < n_p$, it can be proven that
+
+$$
+\rho(S) = \frac{n_p}{n_1}.
+$$
+
+## Examples
+
+$\circ$ Let $S = \langle 17, 42, 89, 104 \rangle$. As $B = \{17, 42, 89, 104\}$ is a minimal set of generators, the elasticity of $S$ is $\rho(S) = 104/17$. If we take $s = 17 \cdot 104$, we have
+
+$$
+17 \cdot 104 = 104 \cdot 17 + 0 \cdot 42 + 0 \cdot 89 + 0 \cdot 104 = 0 \cdot 17 + 0 \cdot 42 + 0 \cdot 89 + 17 \cdot 104,
+$$
+
+then $(104,0,0,0)$ and $(0,0,0,17)$ are factorizations of $17 \cdot 104$ with lengths $104$ and $17$ respectively, therefore
+
+$$
+\frac{104}{17} \le \rho(17 \cdot 104) \le \rho(S) = \frac{104}{17}.
+$$
+
+In conclusion, $\rho(17 \cdot 104) = 104/17$ and the elasticity of $S$ is reached by $17 \cdot 104$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 18, 43, 92, 105 \rangle$, in GAP;
+
+``` gap
+gap> S := NumericalSemigroup(18, 43, 92, 105);
+<Numerical semigroup with 4 generators>
+```
+
+Given a numerical semigroup $S$, the function `Elasticity` returns the elasticity of $S$. If we also give an element $n \in S$, the function returns the elasticity of $n$ in $S$.
+
+``` gap
+gap> Elasticity(S);
+35/6
+gap> Elasticity(S, 415);
+6/5
+gap> Elasticity(S, 1890);
+35/6
+```
+
+## References
