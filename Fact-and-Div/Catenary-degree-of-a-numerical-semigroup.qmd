@@ -1,0 +1,59 @@
+---
+title: "Catenary degree of a numerical semigroup"
+format: html
+engine: markdown
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is defined the catenary degree of $S$, denoted by $\mathbf{C}(S)$, as
+
+$$
+\mathbf{C}(s) = \sup \{\mathbf{C}(s) ~ | ~ s \in S\},
+$$ where $\mathbf{C}(s)$ denotes the [catenary degree of s](Catenary-degree-of-an-element.qmd) in $S$. If $Betti(S)$ denotes the set of [Betti elements](../Presentations-NS/Betti-element.qmd) of $S$, it can be proven that
+
+$$
+\mathbf{C}(S) = \max \{\mathbf{C}(b) ~ | ~ b \in Betti(S)\}.
+$$
+
+## Examples
+
+$\circ$ Let $S = \langle 5, 7, 9 \rangle$. The set of Betti elements of $S$ is $Betti(S) = \{14, 25, 27\}$, and if we compute the catenary degree of each element, it is obtained that $\mathbf{C}(14) = 2, \mathbf{C}(25) = 5$ and $\mathbf{C}(27) = 5$, then $\mathbf{C}(S) = \max \{2, 5, 5\} = 5$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 37, 42, 45, 80 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(37, 42, 45, 80);
+<Numerical semigroup with 4 generators>
+```
+
+Given only a numerical semigroup $S$, the function `CatenaryDegree` returns the catenary degree of $S$.
+
+``` gap
+gap> CatenaryDegree(S);
+8
+```
+
+Given a numerical semigroup $S$ and an element $n$ of it, the function returns the catenary degree of $n$ in $S$.
+
+``` gap
+gap> CatenaryDegree(S, 400);
+6
+gap> CatenaryDegree(400, S);
+6
+```
+
+Finally, if we give the set of factorizations of an element, the function also computes the catenary degree of the element.
+
+``` gap
+gap> z := Factorizations(400, S);
+[ [ 4, 6, 0, 0 ], [ 5, 0, 3, 1 ], [ 3, 2, 1, 2 ], [ 0, 0, 0, 5 ] ]
+gap> CatenaryDegree(z);
+6
+```
+
+## References

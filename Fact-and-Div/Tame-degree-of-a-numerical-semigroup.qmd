@@ -1,0 +1,54 @@
+---
+title: "Tame degree of a numerical semigroup"
+format: html
+engine: markdown
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $\{n_1, n_2, \ldots, n_p\}$. It is defined the tame degree of $S$, denoted by $\mathbf{t}(S)$, as
+
+$$
+\mathbf{t}(S) = \sup_{n \in S} \mathbf{t}(n),
+$$
+
+where $\mathbf{t}(n)$ denotes the [tame degree of n](Tame-degree-of-an-element.qmd) in $S$. If it is defined for all $i \in \{1, 2, \ldots, p\}$ the set
+
+$$
+\mathbf{t}_i(S) = \sup_{n \in S} \mathbf{t}_i(n),
+$$
+
+it can be proven that $\mathbf{t}_i(S) = \sup \{\mathbf{t}_i(S) ~ | ~ i \in \{1, 2, \ldots, p\}\}$.
+
+## Examples
+
+$\circ$ Let $S = \langle \rangle$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 37, 42, 45, 65, 88 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(37, 42, 45, 65, 88);
+<Numerical semigroup with 5 generators>
+```
+
+Given a numerical semigroup $S$, the function `TameDegree` returns the tame degree of $S$.
+
+``` gap
+gap> TameDegree(S);
+7
+```
+
+If we also give an element $n \in S$, then computes the tame degree of $n$ in $S$.
+
+``` gap
+gap> TameDegree(314, S);
+4
+gap> TameDegree(S, 314);
+4
+```
+
+## References
