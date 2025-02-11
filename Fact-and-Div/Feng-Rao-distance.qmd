@@ -1,0 +1,47 @@
+---
+title: "Feng-Rao distance"
+format: html
+engine: markdown
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $s \in S$. It is defined the Feng-Rao distance of $s$ in $S$, denoted by $\delta_{FR}(s)$, as
+
+$$
+\delta_{FR}(s) = \min \{ |D(s')| ~ : ~ s \le s' \text{ and } s' \in S\},
+$$
+
+where $D(s)$ denotes the [set of divisors](../Basic-concepts/Set-divisors.qmd) of $s$ in $S$.
+
+It can be proven that for any numerical semigroup $S$ with [conductor](../Basic-concepts/Conductor.qmd) $C(S)$ and [genus](../Basic-concepts/Genus.qmd) $g(S)$, if $s \in S$ is such that $s \ge 2C(S) - 1$, then
+
+$$
+\delta_{FR}(s) = s + 1 - 2g(S).
+$$
+
+## Examples
+
+$\circ$ Let $S = \langle 4, 6, 11 \rangle$. It is easy to see that $C(S) = 14$ and $g(S) = 7$, therefore if $s \in S$ is such that $s \ge 2C(S) - 1 = 27$, then $\delta_{FR}(s) = s + 1 -14$. For example, for $s = 35 = 4 \cdot 6 + 11 \in S$, it holds $\delta_{FR}(35) = 22$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 17, 35, 53, 78, 90 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(17, 35, 53, 78, 90);
+<Numerical semigroup with 5 generators>
+```
+
+Given a numerical semigroup $S$, an element $s$ of it and $r = 1$, the function `FengRaoDistance` computes the Feng-Rao distance of $n$ in $S$.
+
+``` gap
+gap> FengRaoDistance(S, 1, 231);
+26
+```
+
+If we consider $r \in \mathbb{N} \setminus \{0, 1\}$, the function computes the [r-th Feng Rao distance](Feng-Rao-distance-generalized.qmd).
+
+## References

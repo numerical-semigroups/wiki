@@ -4,20 +4,38 @@ format: html
 engine: markdown
 ---
 
-
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd).
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), let $s, s' \in S$ and $\le_S$ the [relation order](../Basic-concepts/Relation-order-NS.qmd) of $S$. It is said that $s$ divides $s'$ if $s \le_S s'$. Equivalently, $s$ divides $s'$ if $s' \in s + S = \{s + x ~ | ~ x \in S\}$. The set of elements $s$ that divides $s'$ is the [set of divisors](../Basic-concepts/Set-divisors.qmd) of $s'$ in $S$ and it is denoted by $D(s')$.
 
 ## Examples
 
-$\circ$ Let $S = \langle
+$\circ$ Let $S = \langle 3, 7, 11 \rangle = \{0, 3, 6, 7, 9, \rightarrow \}$ and $s' = 12$, let us compute the elements that divides $s'$. If $s \in S$ divides $s'$, then $s \le s'$, therefore the candidates are $\{0, 3, 6, 7, 9, 10, 11, 12\}$ and the set of divisors is
+
+$$
+D(s') = \{0, 3, 6, 9, 12\}.
+$$
 
 ## Examples with GAP
 
 The following example is made with the package NumericalSgps in GAP.
 
-$\diamond$ Let 
+$\diamond$ Let $S = \langle 21, 28, 32, 46 \rangle$, in GAP:
 
+``` gap
+gap> S := NumericalSemigroup(21, 28, 32, 46);
+<Numerical semigroup with 4 generators>
+```
+
+Given a numerical semigroup $S$ and an element $n$ of it, the function `DivisorsOfElementInNumericalSemigroup` computes the set of divisors of $n$ in $S$.
+
+``` gap
+gap> DivisorsOfElementInNumericalSemigroup(S,210);
+[ 0, 21, 28, 42, 49, 56, 63, 70, 77, 84, 91, 98, 105, 112, 119, 126, 133, 140, 147,
+  154, 161, 168, 182, 189, 210 ]
+gap> DivisorsOfElementInNumericalSemigroup(210, S);
+[ 0, 21, 28, 42, 49, 56, 63, 70, 77, 84, 91, 98, 105, 112, 119, 126, 133, 140, 147,
+  154, 161, 168, 182, 189, 210 ]
+```
 
 ## References

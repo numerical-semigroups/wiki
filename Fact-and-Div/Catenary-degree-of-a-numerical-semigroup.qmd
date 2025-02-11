@@ -10,10 +10,18 @@ Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). I
 
 $$
 \mathbf{C}(s) = \sup \{\mathbf{C}(s) ~ | ~ s \in S\},
-$$ where $\mathbf{C}(s)$ denotes the [catenary degree of s](Catenary-degree-of-an-element.qmd) in $S$. If $Betti(S)$ denotes the set of [Betti elements](../Presentations-NS/Betti-element.qmd) of $S$, it can be proven that
+$$
+
+where $\mathbf{C}(s)$ denotes the [catenary degree of s](Catenary-degree-of-an-element.qmd) in $S$. If $Betti(S)$ denotes the set of [Betti elements](../Presentations-NS/Betti-element.qmd) of $S$, it can be proven that
 
 $$
 \mathbf{C}(S) = \max \{\mathbf{C}(b) ~ | ~ b \in Betti(S)\}.
+$$
+
+Given a numerical semigroup $S$, there is a relation between its [Delta set](Delta-set-of-a-numerical-semigroup.qmd) $\Delta(S)$, its catenary degree $\mathbf{C}(S)$, its [w-primality](w-primality-of-a-numerical-semigroup.qmd) $\omega(S)$ and its [tame degree](Tame-degree-of-a-numerical-semigroup.qmd) $\mathbf{t}(S)$, which is
+
+$$
+\max \Delta(S) + 2 \le \mathbf{C}(S) \le \omega(S) \le \mathbf{t}(S).
 $$
 
 ## Examples

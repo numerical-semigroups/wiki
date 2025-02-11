@@ -20,6 +20,12 @@ $$
 
 it can be proven that $\mathbf{t}_i(S) = \sup \{\mathbf{t}_i(S) ~ | ~ i \in \{1, 2, \ldots, p\}\}$.
 
+Given a numerical semigroup $S$, there is a relation between its [Delta set](Delta-set-of-a-numerical-semigroup.qmd) $\Delta(S)$, its [catenary degree](Catenary-degree-of-a-numerical-semigroup.qmd) $\mathbf{C}(S)$, its [w-primality](w-primality-of-a-numerical-semigroup.qmd) $\omega(S)$ and its tame degree $\mathbf{t}(S)$, which is
+
+$$
+\max \Delta(S) + 2 \le \mathbf{C}(S) \le \omega(S) \le \mathbf{t}(S).
+$$
+
 ## Examples
 
 $\circ$ Let $S = \langle \rangle$.

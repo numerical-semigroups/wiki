@@ -1,0 +1,44 @@
+---
+title: "w-primality of an element"
+format: html
+engine: markdown
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $s \in S$. It is defined the $\omega-$primality of $s$ in $S$, denoted by $\omega(s, S)$ as the least integer $N$ such that whenever $s$ divides $a_1 + \cdots + a_n$ for some $a_1, \ldots, a_n \in S$, then $s$ divides $a_{i_1} + \cdots a_{i_N}$ for some $\{i_1, \ldots, i_N\} \subseteq \{1, \ldots, n\}$.
+
+From the $\omega-$primality of an element it is defined the [w-primality of a numerical semigroup](w-primality-of-a-numerical-semigroup.qmd).
+
+## Examples
+
+$\circ$ Let $S$ be a numerical semigroup [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $\{n_1, \ldots, n_p\}$. Let $i \in \{1, \ldots, p\}$ arbitrary but fixed, let us prove that $\omega(n_i, S) = 1$. Let us suppose that $n_i$ divides $a_1 + \cdots + a_n$ for some $a_1, \ldots, a_n \in S$, that means, $(a_1 + \cdots + a_n) - n_1 \in S$. Therefore, exists $j \in \{1, \ldots, p\}$ such that $a_j = \sum_{k = 1}^p \lambda_k n_k$ with $\lambda_i \ne 0$ and $a_j - n_i \in S$. Then, $n_i$ divides $a_j$ and $\omega(n_i, S) = 1$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 42, 56, 71, 90, 104 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(42, 56, 71, 90, 104);
+<Numerical semigroup with 5 generators>
+```
+
+Given a numerical semigroup $S$ and an element $n$ of it, the function `OmegaPrimality` computes the $\omega-$primality of $n$ in $S$.
+
+``` gap
+gap> OmegaPrimality(419, S);
+15
+gap> OmegaPrimality(S, 419);
+15
+```
+
+If we only give a numerical semigroup $S$, then it returns the $\omega-$primality of $S$.
+
+``` gap
+gap> OmegaPrimality(S);
+9
+```
+
+## References

@@ -1,0 +1,25 @@
+---
+title: "One point algebraic code"
+format: html
+engine: markdown
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), let $q$ be a power of a prime number, and let $\mathbb{F}_q$ be the finite field with $q$ elements. Let $R$ be the affine coordinate ring of an absolutely irreducible non-singular curve over $\mathbb{F}_q$ with a single rational point at infinity, say $Q$. Let $\mathcal{P} = \{P_1, \ldots, P_n\}$ be a set of $n$ distinct affine $\mathbb{F}_q-$rational points of the curve. It is defined the evaluation map on $\mathcal{P}$ as
+
+$$
+ev_{\mathcal{P}} : R \to \mathbb{F}_q^n ~ ; ~ ev_{\mathcal{P}}(f) = (f(P_1), \ldots, f(P_n)).
+$$
+
+Set $\mathcal{L}(mQ) = \{f \in R ~ | ~ v_Q(f) \ge -m\}$, where $v_Q$ is the discrete valuation at $Q$. The image of $-v_Q$ of $R^*$ is a numerical semigroup, say $S$. Given $s \in S$, it is defined the one point algebraic code as the orthogonal (with respect to the usual dot product) of $ev_{\mathcal{P}}(\mathcal{L}(sQ))$.
+
+## Examples
+
+$\circ$
+
+## Examples with GAP
+
+Nowadays, there are no functions in package NumericalSgps related to one point algebraic code.
+
+## References

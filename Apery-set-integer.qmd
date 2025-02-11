@@ -1,5 +1,0 @@
----
-title: "Apéry set of an integer"
-format: html
-editor: visual
----
