@@ -1,0 +1,43 @@
+---
+title: "Acute numerical semigroup"
+format: html
+engine: markdown
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), let $G(S)$ the set of [gaps](../Basic-concepts/Gap.qmd) of $S$ and let $C(S)$ be the [conductor](../Basic-concepts/Conductor.qmd) of $S$. Let assume that $S$ has positive [dominant](../Basic-concepts/Dominant.qmd) $d(S)$. For $s \in S$, it is defined $g(S)$ as the cardinality of $\{x \in G(S) ~ | ~ x < s\}$. Set
+
+$$
+c' = \min \{s \in S ~ | ~ g(s) = g(d) \}, \hspace{0.2cm} d' = \max \{s \in S ~ | ~ s < c' \}.
+$$
+
+It is said that $S$ is acute if $C(S) - d(S) \le c' - d'$.
+
+## Examples
+
+$\circ$ Let $S = \langle 4, 5, 10 \rangle = \{0, 4, 5, 8, 9, 10, 12, \rightarrow\}$. The conductor is $C(S) = 12$ and the dominant is $d(S) = 10$. On the other hand,
+
+$$
+c' = \min \{s \in S ~ | ~ g(s) = g(10) \} = 8, \hspace{0.2cm} d' = \max \{s \in S ~ | ~ s < 8 \} = 5.
+$$ Finally, $2 = d(S) - C(S) \le c' - d' = 3$ and $S$ is acute.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 11, 12, 25, 28, 41 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(11, 12, 25, 28, 41);
+<Numerical semigroup with 5 generators>
+```
+
+Given a numerical semigroup $S$, the function `IsAcute` returns true or false depending on whether a numerical semigroup is acute or not.
+
+``` gap
+gap> IsAcute(S);
+true
+```
+
+## References

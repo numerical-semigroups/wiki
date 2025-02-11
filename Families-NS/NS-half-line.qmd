@@ -1,0 +1,57 @@
+---
+title: "Half-line numerical semigroup"
+format: html
+engine: markdown
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $C(S)$ be the [conductor](../Basic-concepts/Conductor.qmd) of $S$. It is said that $S$ is half-line, or ordinary, if $S= \{0, C(S), \rightarrow\}$. Equivalently, $S$ is half-line, or ordinary, if $s \ge C(S)$ for all $s \in S \setminus \{0\}$.
+
+## Examples
+
+$\circ$ Let $S$ a numerical semigroup. Let us prove that its [dominant](../Basic-concepts/Dominant.qmd) is $d(S) = 0$ if, and only if, $S$ is half-line.
+
+$\Rightarrow$ If $d(S) = 0$, by definition,
+
+$$
+ d(S) = \max \{s \in S ~ | ~ s < C(S) \} = 0,
+ $$ therefore, $S = \{0, c(S), \rightarrow \}$.
+
+$\Leftarrow$ If $S = \{0, C(S), \rightarrow\}$, the only element $s \in S$ such that $s < C(S)$ is $s = 0$, thus, $d(S) = 0$.
+
+## Examples with GAP
+
+The following examples are made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 5, 7, 9 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(5, 7, 9);
+<Numerical semigroup with 3 generators>
+```
+
+Given a numerical semigroup $S$, the function `IsOrdinary` returns true or false depending on whether a numerical semigroup is ordinary or not.
+
+``` gap
+gap> IsOrdinary(S);
+false
+```
+
+$\diamond$ Let $S = \langle 6, 7, 8, 9, 10, 11 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(6, 7, 8, 9, 10, 11);
+<Numerical semigroup with 6 generators>
+```
+
+In this case,
+
+``` gap
+gap> IsOrdinary(S);
+true
+```
+
+It is concluded that $S = \{0, 6, \rightarrow\}$.
+
+## References
