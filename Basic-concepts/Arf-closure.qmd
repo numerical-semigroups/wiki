@@ -6,7 +6,7 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and $\mathcal{O}(S)$ the set of [oversemigroups](Oversemigroup.qmd) of $S$. It is defined the Arf closure as the smallest [Arf numerical semigroup](Arf-semigroup.qmd) containing $S$.
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and $\mathcal{O}(S)$ the set of [oversemigroups](Oversemigroup.qmd) of $S$. It is defined the Arf closure of $S$ as the smallest [Arf numerical semigroup](../Families-NS/Arf-semigroup.qmd) containing $S$, and it is denoted by $Arf(S)$.
 
 It can be proven that the intersection of Arf semigroups is also an Arf semigroup, from that it is deduced that the Arf closure is the intersection of all Arf numerical semigroups containing it, and since $\mathcal{O}(S)$ is finite, the intersection is also finite.
 

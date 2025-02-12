@@ -4,6 +4,8 @@ format: html
 engine: markdown
 ---
 
+<!-- Definición de Num. Sem. -->
+
 ## Definition
 
 Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $E \subseteq \mathbb{Z}$. It is said that $E$ is a principal ideal of $S$ if it is a [proper ideal](../Ideals-NS/Proper-ideal.qmd) of the form $E = s + S$ for some $s \in S \setminus \{0\}$.

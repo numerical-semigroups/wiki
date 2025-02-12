@@ -4,6 +4,8 @@ format: html
 engine: markdown
 ---
 
+<!-- Definición de Num. Sem. -->
+
 ## Definition
 
 Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](Minimal-set-of-generators.qmd) by $\{n_1, \ldots, n_p\}$ with $n_1 < n_2 < \cdots < n_p$. It is defined the ratio of $S$ as $n_2$.

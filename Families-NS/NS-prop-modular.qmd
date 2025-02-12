@@ -1,0 +1,25 @@
+---
+title: "Numerical semigroup proportionally modular"
+format: html
+engine: markdown
+---
+
+<!-- Definición de Num. Sem. -->
+
+## Definition
+
+Let 
+
+
+## Examples
+
+$\circ$ Let 
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let 
+
+
+## References

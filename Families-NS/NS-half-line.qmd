@@ -4,6 +4,8 @@ format: html
 engine: markdown
 ---
 
+<!-- Definición de Num. Sem. -->
+
 ## Definition
 
 Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $C(S)$ be the [conductor](../Basic-concepts/Conductor.qmd) of $S$. It is said that $S$ is half-line, or ordinary, if $S= \{0, C(S), \rightarrow\}$. Equivalently, $S$ is half-line, or ordinary, if $s \ge C(S)$ for all $s \in S \setminus \{0\}$.

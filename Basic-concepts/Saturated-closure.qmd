@@ -4,25 +4,50 @@ format: html
 engine: markdown
 ---
 
+<!-- Definición de Num. Sem. -->
+
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd).
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and $\mathcal{O}(S)$ the set of [oversemigroups](Oversemigroup.qmd) of $S$. It is defined the saturated closure of $S$ as the smallest [saturated numerical semigroup](../Families-NS/NS-saturated.qmd) containing $S$, and it is denoted by $Sat(S)$.
 
+It can be proven that the intersection of saturated semigroups is also a saturated semigroup, from that it is deduced that the saturated closure is the intersection of all saturated numerical semigroups containing it, and since $\mathcal{O}(S)$ is finite, the intersection is also finite.
 
 ## Examples
 
-$\circ$ Let $S = \langle \rangle$.
+$\circ$ Let $S = \langle 3, 7, 11 \rangle = \{0, 3, 6, 7, 9, \rightarrow\}$. Since $7 + 7 - 2\cdot3 = 8 \not \in S$, we have that $S$ is not saturated. The set of oversemigroups is
 
+$$
+\mathcal{O}(S) = \{\mathbb{N}, \{0, 2, \rightarrow \}, \{0, 3, \rightarrow \}, \{0, 3, 4, 6, \rightarrow\}, \{0, 3, 5, \rightarrow \}, \{0, 3, 6, \rightarrow \}, S\}
+$$
+
+Moreover, the saturated semigroups are
+
+$$
+T_0 = \mathbb{N}, T_1 = \{0, 2, \rightarrow \}, T_2 = \{0, 3, \rightarrow \}, T_3 = \{0, 3, 5, \rightarrow \}, T_4 = \{0, 3, 6, \rightarrow \}, 
+$$
+
+Therefore, the saturated closure of $S$ is $A = \bigcap_{i = 0}^4 T_i = \{0, 3, 6, \rightarrow \} = S \cup \{8\}$. In this case, the saturated closure of $S$ is the numerical semigroup $S$ to which its [Frobenius number](Frobenius-number.qmd) has been added.
 
 ## Examples with GAP
 
 The following example is made with the package NumericalSgps in GAP.
 
-$\diamond$ Let $S = \langle  \rangle$, in GAP:
+$\diamond$ Let $S = \langle 12, 25, 38, 40 \rangle$, in GAP:
 
+``` gap
+gap> S := NumericalSemigroup(12, 25, 38, 40);
+<Numerical semigroup with 4 generators>
+```
+
+The function `SaturatedClosure` computes the saturated closure of a numerical semigroup.
+
+``` gap
+gap> A := SaturatedClosure(S);
+<Numerical semigroup>
+gap> SmallElements(A);
+[ 0, 12, 24 ]
+```
+
+The function `SmallElements` returns a list with the [left elements](Left-elements.qmd) and the [conductor](Conductor.qmd) of the numerical semigroup. Then, the saturated closure of $S$ is $A = \{0, 12, 24, \rightarrow \}$.
 
 ## References
-
-
-
-

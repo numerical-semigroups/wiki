@@ -1,0 +1,21 @@
+---
+title: "Factor of a proportionally modular Diophantine inequality"
+format: html
+engine: markdown
+---
+
+<!-- Definición de Num. Sem. -->
+
+## Definition
+
+Let $a, b$ and $c$ positive integers and let $ax ~ (mod ~ b) \le cx$ be a [proportionally modular Diophantine inequality](Prop-mod-Diophantine-ineq.qmd). It is defined the factor of a proportionally modular Diophantine inequality as the integer $a$. The integer $b$ is called the [modulus](Modulus-prop-mod-Diophantine-ineq.qmd) and $c$ the [proportion](Proportion-prop-mod-Diophantine-ineq.qmd) of a proportionally modular Diophantine inequality.
+
+## Examples
+
+$\circ$ Let $14x ~ (mod ~ 52) \le 7x$. Then, the factor of the proportionally modular Diophantine inequality is $a = 14$, the modulus is $b = 52$ and the proportion is $c = 7$.
+
+## Examples with GAP
+
+Nowadays, there are no functions in package NumericalSgps related to factor of a proportionally modular Diophantine inequality.
+
+## References

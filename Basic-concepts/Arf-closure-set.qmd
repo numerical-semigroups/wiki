@@ -4,25 +4,63 @@ format: html
 engine: markdown
 ---
 
+<!-- Definición de Num. Sem. -->
+
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd).
-
+Let $X$ be a non-empty set of $\mathbb{N}$ with $gcd(X) = 1$. It is well known that the condition $gcd(X) = 1$ is sufficient for $\langle X \rangle$ to be a numerical semigroup. Moreover, every Arf semigroup that contains $X$ must contain $\langle X \rangle$. Then, it is defined the Arf closure of $X$ as the [Arf closure](Arf-closure.qmd) of $S = \langle X \rangle$.
 
 ## Examples
 
-$\circ$ Let $S = \langle \rangle$.
+$\circ$ Let $X = \{4, 6, 9\}$ and $S = \langle X \rangle = \langle 4, 6, 9 \rangle$. The set of oversemigroups is
 
+$$
+\mathcal{O}(S) = \{\mathbb{N}, \{0, 2, \rightarrow \}, \{0, 2, 4, \rightarrow \}, \{0, 2, 4, 6, \rightarrow\}, \{0, 2, 4, 6, 8, \rightarrow \}, \{0, 3, \rightarrow \},
+$$
+
+$$
+\{0, 3, 4, 6, \rightarrow \}, \{0, 4, \rightarrow \}, \{0, 4, 5, 6, 8, \rightarrow \}, \{0, 4, 6, \rightarrow \}, \{0, 4, 6, 8, \rightarrow \}, S \}.
+$$
+
+Moreover, the Arf semigroups are
+
+$$
+T_0 = \mathbb{N}, T_1 = \{0, 2, \rightarrow \}, T_2 = \{0, 2, 4, \rightarrow \}, T_3 = \{0, 2, 4, 6, \rightarrow \}, T_4 = \{0, 2, 4, 6, 8, \rightarrow \}, 
+$$
+
+$$
+T_5 = \{0, 3, \rightarrow \}, T_6 = \{0, 4, \rightarrow \}, T_7 = \{0, 4, 6, \rightarrow \}, T_8 = \{0, 4, 6, 8, \rightarrow \}.
+$$
+
+Therefore, the Arf closure of $X$ is $A = \bigcap_{i = 0}^8 T_i = \{0, 4, 6, 8, \rightarrow \} = S \cup \{11\}$. In this case, the Arf closure of $X$ is the numerical semigroup $\langle X \rangle$ to which its [Frobenius number](Frobenius-number.qmd) has been added.
 
 ## Examples with GAP
 
 The following example is made with the package NumericalSgps in GAP.
 
-$\diamond$ Let $S = \langle  \rangle$, in GAP:
+$\diamond$ Let $X = \{4, 13, 18, 23\}$ and $S = \langle X \rangle$, in GAP:
 
+``` gap
+gap> x := [4, 13, 18, 23];
+[ 4, 13, 18, 23 ]
+gap> S := NumericalSemigroup(x);
+<Numerical semigroup with 4 generators>
+```
+
+Given a numerical semigroup $S$, the function `ArfClosure` returns the Arf closure of $S$.
+
+``` gap
+gap> A := ArfClosure(S);
+<Numerical semigroup>
+```
+
+We can use the function `SmallElements` to compute the [left elements](Left-elements.qmd) and the [conductor](Conductor.qmd) of a numerical semigroup.
+
+``` gap
+gap> SmallElements(A)
+[ 0, 4, 8, 12 ]
+```
+
+Therefore, the Arf closure of $X$ is $A = \{0, 4, 8, 12, \rightarrow\}$.
 
 ## References
-
-
-
-

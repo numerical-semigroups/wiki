@@ -4,6 +4,8 @@ format: html
 engine: markdown
 ---
 
+<!-- Definición de Num. Sem. -->
+
 ## Definition
 
 Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) with positive [conductor](Conductor.qmd) $C(S)$. It is defined the dominant of $S$, denoted by $d(S)$, as $d(S) = \max \{s \in S ~ | ~ s < C(S)\}$.
