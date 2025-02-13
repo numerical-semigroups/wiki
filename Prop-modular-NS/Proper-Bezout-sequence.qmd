@@ -1,0 +1,25 @@
+---
+title: "Proper Bezout sequence"
+format: html
+engine: markdown
+---
+
+<!-- Definición de Num. Sem. -->
+
+## Definition
+
+Let $\frac{a_1}{b_1} < \frac{a_2}{b_2} < \cdots < \frac{a_p}{b_p}$ be a [Bézout sequence](Bezout-sequence.qmd). It is said that a Bézout sequence is proper if $a_{i+h}b_i - a_ib_{i+h} \ge 2$ for all $h \ge 2$ such that $i, i + h \in \{1, 2, \ldots, p\}$.
+
+Every Bézout sequence can be refined to a proper Bézout sequence by just removing those terms strictly between $\frac{a_i}{b_i}$ and $\frac{a_{i+h}}{b_{i+h}}$ whenever $a_{i+h}b_i - a_i b_{i+h} = 1$.
+
+## Examples
+
+<!-- Ejemplo de Num. Sem. -->
+
+$\circ$ The Bézout sequence $\frac{5}{3} < \frac{12}{7} < \frac{7}{4} < \frac{9}{5}$ is not proper, since $a_{1 + 2}b_1 - a_1 b_{1 + 2} = 7 \cdot 3 - 5 \cdot 4 = 1$. If we remove the fraction $\frac{12}{7}$, it is obtained the proper Bézout sequence $\frac{5}{3} < \frac{7}{4} < \frac{9}{5}$.
+
+## Examples with GAP
+
+Nowadays, there are no functions in package NumericalSgps related to proper Bézout sequence.
+
+## References

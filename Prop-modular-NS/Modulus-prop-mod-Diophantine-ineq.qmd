@@ -8,7 +8,7 @@ engine: markdown
 
 ## Definition
 
-Let $a, b$ and $c$ positive integers and let $ax ~ (mod ~ b) \le cx$ be a [proportionally modular Diophantine inequality](Prop-mod-Diophantine-ineq.qmd). It is defined the modulus of a proportionally modular Diophantine inequality as the integer $b$. The integer $a$ is called the [factor](Factor-prop-mod-Diophantine-ineq.qmd) and $c$ the [proportion](Proportion-prop-mod-Diophantine-ineq.qmd) of a proportionally modular Diophantine inequality.
+Let $a, b$ and $c$ be positive integers and let $ax ~ (mod ~ b) \le cx$ be a [proportionally modular Diophantine inequality](Prop-mod-Diophantine-ineq.qmd). It is defined the modulus of a proportionally modular Diophantine inequality as the integer $b$. The integer $a$ is called the [factor](Factor-prop-mod-Diophantine-ineq.qmd) and $c$ the [proportion](Proportion-prop-mod-Diophantine-ineq.qmd) of a proportionally modular Diophantine inequality.
 
 ## Examples
 

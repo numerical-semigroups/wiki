@@ -8,18 +8,46 @@ engine: markdown
 
 ## Definition
 
-Let 
+Let $S$ a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is said that $S$ is proportionally modular if there exist $a, b, c$ positive integers such that $S = S(a,b,c)$, where $S(a,b,c)$ denotes the set of solutions of the [proportionally modular Diophantine inequality](../Prop-modular-NS/Prop-mod-Diophantine-ineq.qmd) $ax ~ (mod ~ b) \le cx$. If $S = S(a,b,1)$ for some $a, b$ positive integers, then it is said that $S$ is a [modular](NS-modular.qmd) numerical semigroup.
 
+<!-- Ejemplo de Num. Sem. -->
 
 ## Examples
 
-$\circ$ Let 
+$\circ$ Let $S = \langle 3, 7, 8 \rangle = \{0, 3, 6, \rightarrow\}$. Let us prove that $S = S(12, 32, 3)$. We divide in cases:
+
+-   If $x = 0$, clearly $x \in S(12,32,3)$.
+
+-   If $x \in \{1, 2\}$, then $12x ~ (mod ~ 32) = 12x > 3x$ and $x \not \in S(12,32,3)$.
+
+-   If $x \ge 11$, $12x ~ (mod ~ 32) \le 31 < 3x$ and $x \in S(12,32,3)$.
+
+-   If $x \in \{3, 6, 7, 8, 9, 10\}$, checking the inequality on each number, we have that $x \in S(12,32,3)$ for all $x \in \{3, 6, 7, 8, 9, 10\}$.
+
+-   If $x \in \{4,5\}$, then $x \not \in S(12,32,3)$.
 
 ## Examples with GAP
 
 The following example is made with the package NumericalSgps in GAP.
 
-$\diamond$ Let 
+$\diamond$ Let $a, b, c$ positive integers. Te function `ProportionallyModularNumericalSemigroup` returns the numerical semigroup generated the proportionally modular Diophantine inequality $ax ~ (mod ~ b) \le cx$.
 
+``` gap
+gap> a := 14;
+14
+gap> b := 57;
+57
+gap> c := 6;
+6
+gap> S := ProportionallyModularNumericalSemigroup(a,b,c);
+<Proportionally modular numerical semigroup satisfying 14x mod 57 <= 6x >
+```
+
+The function `SmallElements` returns a list with the [left elements](../Basic-concepts/Left-elements.qmd) and the [conductor](../Basic-concepts/Conductor.qmd) of the numerical semigroup.
+
+``` gap
+gap> SmallElements(S);
+[ 0, 5, 6, 7, 9 ]
+```
 
 ## References

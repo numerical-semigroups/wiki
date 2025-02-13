@@ -1,0 +1,29 @@
+---
+title: "Bézout sequence"
+format: html
+engine: markdown
+---
+
+<!-- Definición de Num. Sem. -->
+
+## Definition
+
+Let us consider a sequence of fractions $\frac{a_1}{b_1} < \frac{a_2}{b_2} < \cdots < \frac{a_p}{b_p}$. Then, it is said that the sequence of fractions is a Bézout sequence if $a_1, \ldots, a_p, b_1, \ldots, b_p$ are positive integers and $a_{i+1}b_i - b_{i+1}a_i = 1$ for all $i \in \{1, \ldots, p-1\}$. It is defined the [length](Length-Bezout-sequence.qmd) of the Bézout sequence as the integer $p$ and the fractions $\frac{a_1}{b_1}, \frac{a_p}{b_p}$ are defined as the [ends](End-Bezout-sequence.qmd) of the Bézout sequence.
+
+## Examples
+
+<!-- Ejemplo de Num. Sem. -->
+
+$\circ$ Let
+
+$$
+\frac{131}{50} < \frac{76}{29} < \frac{21}{8} < \frac{8}{3}, 
+$$
+
+be a sequence of fractions. We have $a_1 = 131, a_2 = 76, a_3 = 21, a_4 = 8$ and $b_1 = 50, b_2 = 29, b_3 = 8, b_4 = 3$, and $76 \cdot 50 - 131 \cdot 29 = 21 \cdot 29 - 76 \cdot 8 = 8 \cdot 8 - 21 \cdot 3 = 1$. Therefore, is a Bézout sequence with length $p = 4$ and ends $\frac{131}{50}, \frac{8}{3}$.
+
+## Examples with GAP
+
+Nowadays, there are no functions in package NumericalSgps related to Bézout sequence.
+
+## References
