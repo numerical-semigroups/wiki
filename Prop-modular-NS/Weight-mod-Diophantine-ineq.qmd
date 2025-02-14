@@ -1,0 +1,29 @@
+---
+title: "Weight of a modular Diophantine inequality"
+format: html
+engine: markdown
+---
+
+<!-- Definición de Num. Sem. -->
+
+## Definition
+
+Let $a,b$ positive integers and let $ax ~ (mod ~ b) \le x$ the [modular Diophantine inequality](Mod-Diophantine-ineq.qmd). It is defined the weight of the modular Diophantine inequality, denoted by $w(a,b)$, as $w(a,b) = b - gcd(a, b) - gcd(a-1, b)$.
+
+
+## Examples
+
+
+$\circ$ Let $a = 15, b = 24$ and the modular Diophantine inequality $15x ~ (mod ~ 24)$. We have, $gcd(15, 24) = 3$ and $gcd(14, 24) = 2$, then the weight is
+
+$$
+w(a,b) = b - gcd(a,b) - gcd(a-1, b) = 24 - 3 - 2 = 19.
+$$
+
+
+## Examples with GAP
+
+Nowadays, there are no functions in package NumericalSgps related to weight of a modular Diophantine inequality
+
+## References
+

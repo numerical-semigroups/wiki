@@ -1,5 +1,5 @@
 ---
-title: "Numerical semigroup proportionally modular"
+title: "Proportionally modular numerical semigroup"
 format: html
 engine: markdown
 ---
@@ -8,7 +8,7 @@ engine: markdown
 
 ## Definition
 
-Let $S$ a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is said that $S$ is proportionally modular if there exist $a, b, c$ positive integers such that $S = S(a,b,c)$, where $S(a,b,c)$ denotes the set of solutions of the [proportionally modular Diophantine inequality](../Prop-modular-NS/Prop-mod-Diophantine-ineq.qmd) $ax ~ (mod ~ b) \le cx$. If $S = S(a,b,1)$ for some $a, b$ positive integers, then it is said that $S$ is a [modular](NS-modular.qmd) numerical semigroup.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is said that $S$ is proportionally modular if there exist $a, b, c$ positive integers such that $S = S(a,b,c)$, where $S(a,b,c)$ denotes the set of solutions of the [proportionally modular Diophantine inequality](../Prop-modular-NS/Prop-mod-Diophantine-ineq.qmd) $ax ~ (mod ~ b) \le cx$. If $S = S(a,b,1)$ for some $a, b$ positive integers, then it is said that $S$ is a [modular](NS-modular.qmd) numerical semigroup.
 
 <!-- Ejemplo de Num. Sem. -->
 

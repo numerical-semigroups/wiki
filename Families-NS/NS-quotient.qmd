@@ -1,0 +1,55 @@
+---
+title: "Quotient of a numerical semigroup by an integer"
+format: html
+engine: markdown
+---
+
+<!-- Definición de Num. Sem. -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $p$ be a positive integer. It is defined the quotient of $S$ by $p$ as
+
+$$
+\frac{S}{p} = \{ x \in \mathbb{N} ~ | ~ px \in S \}.
+$$
+
+It can be proven that $\frac{S}{p}$ is a numerical semigroup such that $S \subseteq \frac{S}{p}$.
+
+
+## Examples
+
+
+$\circ$ Let $S = \langle 5, 7, 9 \rangle = \{0, 5, 7, 9, 10, 12, 14, \rightarrow \}$ and $p = 2$. If $2x \ge 14$, then $2x \in S$, therefore $x \in \frac{S}{2}$ for $x \ge 7$. If $x \in \{5, 6\}$, then $2x \in \{10, 12\} \subseteq S$. Finally, if $x \in \{1, 2, 3, 4\}$, it is deduced that $2x \not \in S$, therefore, $\frac{S}{2} = \{0, 5, \rightarrow \}$.
+
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 13, 17, 31, 45 \rangle$, in GAP:
+
+```gap
+gap> S := NumericalSemigroup(13, 17, 31, 45);
+<Numerical semigroup with 4 generators>
+```
+
+Given a numerical semigroup and a positive integer $p$, the function `QuotientOfNumericalSemigroup` returns the numerical semigroup $\frac{S}{p}$.
+
+
+```gap
+gap> T := QuotientOfNumericalSemigroup(S, 6);
+<Numerical semigroup>
+```
+
+The function `SmallElements` returns a list with the [left elements](../Basic-concepts/Left-elements.qmd) and the [conductor](../Basic-concepts/Conductor.qmd) of the numerical semigroup.
+
+```gap
+gap> SmallElements(T);
+[ 0, 5, 8, 10, 13 ]
+```
+
+Hence, $\frac{S}{6} = \{0, 5, 8, 10, 13, \rightarrow \}$.
+
+
+## References
