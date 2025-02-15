@@ -1,5 +1,5 @@
 ---
-title: "Graph associated to an element"
+title: "Graph associated to an element by set of factorizations"
 format: html
 editor: visual
 execute: 

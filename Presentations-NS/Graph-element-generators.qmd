@@ -1,0 +1,33 @@
+---
+title: "Graph associated to an element by minimal generators"
+format: html
+engine: markdown
+---
+
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $\{n_1, \ldots, n_e\}$, and let $n \in S$. It is defined the graph associated to $n$ in $S$, denoted by $G_n = (V_n, E_n)$, as the graph with vertices
+
+$$
+V_n = \{n_i ~ | ~ n - n_i \in S\},
+$$
+
+and edges,
+
+$$
+E_n = \{\{n_i, n_j\} ~ | ~ n - (n_i + n_j) \in S, i \ne j\}.
+$$
+
+
+## Examples
+
+$\circ$ 
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle  \rangle$, in GAP:
+
+## References

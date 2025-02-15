@@ -6,7 +6,7 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) with [minimal set of generators](../Basic-concepts/Minimal-set-of-generators.qmd) $\{n_1, n_2, \ldots, n_p\}$ and [factorization homomorphism](Factorization-homomorphism.qmd) $\phi$. Given $s \in S$, it is defined the set of factorizations of $s$ in $S$ as
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) with [minimal set of generators](../Basic-concepts/Minimal-set-of-generators.qmd) $\{n_1, n_2, \ldots, n_p\}$ and [factorization homomorphism](Factorization-homomorphism.qmd) $\phi$. Given $s \in S$, it is defined the set of factorizations (or the set of expressions) of $s$ in $S$ as
 
 $$
 \mathbf{Z}(s) = \phi^{-1}(s) = \{a \in \mathbb{N}^p ~ | ~ \phi(a) = s\}.
