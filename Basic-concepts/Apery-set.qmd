@@ -12,7 +12,7 @@ $$
 Ap(S,n) = \{s \in S ~ | ~ s - n \not \in S\}.
 $$
 
-The knowledge of this set determines completely the numerical semigroup $S$. $Ap(S,n)$ always have $n$ elements and it is easy to obtain the [Frobenius number](Frobenius-number.qmd), the [multiplicity](Multiplicity.qmd) and the [genus](Genus.qmd) of $S$ from this set. This definition could be extended to the [Apéry set of an integer](Apery-set-integer.qmd).
+The knowledge of this set determines completely the numerical semigroup $S$. $Ap(S,n)$ always have $n$ elements and it is easy to obtain the [Frobenius number](Frobenius-number.qmd), the [multiplicity](Multiplicity.qmd) and the [genus](Genus.qmd) of $S$ from this set. This definition could be extended to the [Apéry set of an integer](../Fact-and-div/Apery-set-integer.qmd) or to the [Apéry set of a set of integers](../Gluing-NS/Apery-set-respect-set.qmd).
 
 ## Examples
 

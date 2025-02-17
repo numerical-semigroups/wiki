@@ -1,9 +1,12 @@
 ---
 title: "Graph associated to an element by minimal generators"
 format: html
-engine: markdown
+editor: visual
+execute: 
+  echo: false
 ---
 
+<!-- Definición de Num. Sem. -->
 
 ## Definition
 
@@ -19,15 +22,63 @@ $$
 E_n = \{\{n_i, n_j\} ~ | ~ n - (n_i + n_j) \in S, i \ne j\}.
 $$
 
-
 ## Examples
 
-$\circ$ 
+$\circ$ Let $S = \langle 6, 7, 11, 15 \rangle$ and $n = 25$. We have $25 - 6 = 19, 25 - 7 = 18, 25 - 11 = 14, 25 - 15 = 10$, where $\{19, 18, 14\} \subseteq S$ and $15 \not \in S$, then $V_{25} = \{6, 7, 11\}$. Now we compute the edges,
+
+$$
+25 - (6 + 7) = 12 \in S, \hspace{0.4cm} 25 - (6 + 11) = 8 \not \in S,
+$$ 
+
+$$
+25 - (7 + 11) = 7 \in S.
+$$
+
+The graph associated to $n = 25$ is as follows:
+
+```{r librerias, include=FALSE, warning=FALSE}
+
+library(tidyverse)
+library(tidygraph)
+library(ggraph)
+```
+
+```{r grafo ejemplo1, fig.height=3, fig.width=5}
+tabla_aristas = data.frame("from" = c( "6", "7" ),
+                           "to" = c( "7", "11" ))
+
+ggraph(tabla_aristas, layout = "igraph", algorithm = "kk") + 
+  geom_edge_link(width = 1, colour = "lightgray") +
+  geom_node_point(size = 4, colour = "lightblue") +
+  geom_node_text(aes(label = c("6", "7", "11")), repel = TRUE) +
+  coord_fixed() +
+  theme_graph()
+```
 
 ## Examples with GAP
 
 The following example is made with the package NumericalSgps in GAP.
 
-$\diamond$ Let $S = \langle  \rangle$, in GAP:
+$\diamond$ Let $S = \langle 14, 27, 31, 33, 77 \rangle$, in GAP:
+
+```gap
+gap> S := NumericalSemigroup(14, 27, 31, 33, 77);
+<Numerical semigroup with 5 generators>
+```
+
+Given a numerical semigroup $S$ and an element $n$ of it, the function `GraphAssociatedToElementInNumericalSemigroup` returns the graph associated to $n$ in $S$.
+
+
+```gap
+gap> GraphAssociatedToElementInNumericalSemigroup(114,S);
+[ [ 14, 27, 31, 33 ],
+  [ [ 14, 27 ], [ 14, 31 ], [ 27, 31 ], [ 27, 33 ] ] ]
+```
+
 
 ## References
+
+
+
+
+

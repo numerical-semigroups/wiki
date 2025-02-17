@@ -1,0 +1,23 @@
+---
+title: "Numerical semigroup with Apéry set of unique expression"
+format: html
+engine: markdown
+---
+
+<!-- Definición de Num. Sem. -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $\{n_1, \ldots, n_e\}$ with $n_1 < n_2 < \cdots < n_e$. It is said that $S$ is a numerical semigroup with Apéry set of unique expression if every element in $Ap(S, n_1)$ has unique expression, that is, $|\mathbf{Z}(s)| = 1$ for all $s \in Ap(S, n_1)$, where $\mathbf{Z}(s)$ is the [set of factorizations of s](../Presentations-NS/Set-of-factorizations.qmd).
+
+## Examples
+
+$\circ$ Let $S = \langle 4, 6, 11 \rangle$. It is easy to check that $Ap(S, 4) \subseteq \{0, 4, 6, 8, 10, 11, 12, 14, 15, 16, 17\}$ and $Ap(S, 4) = \{0, 6, 11, 17\}$. Since $s = 6$ and $s = 11$ are minimal generators, both have unique expression. For $s = 17$, we have the unique expression $17 = 6 + 11$. Therefore, $S$ is a numerical semigroup with Apéry set of unique expression
+
+## Examples with GAP
+
+Nowadays, there are no functions in package NumericalSgps related to numerical semigroup with Apéry set of unique expression.
+
+
+## References
+

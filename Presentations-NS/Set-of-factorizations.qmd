@@ -12,7 +12,7 @@ $$
 \mathbf{Z}(s) = \phi^{-1}(s) = \{a \in \mathbb{N}^p ~ | ~ \phi(a) = s\}.
 $$
 
-It can be proven that for any $s \in S$, the set of factorizations $\mathbf{Z}(s)$ is finite.
+It is said that $s \in S$ has unique expression if the set $\mathbf{Z}(s)$ has only one element. It can be proven that for any $s \in S$, the set of factorizations $\mathbf{Z}(s)$ is finite.
 
 ## Examples
 

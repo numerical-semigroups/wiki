@@ -10,11 +10,15 @@ Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [m
 
 $$
 d(x,y) = \max \{ | x - (x \land y) |, | y - (x \land y) | \}
-$$ where $|x|$ is the [length](Length-factorization.qmd) of $x$ and
+$$
+
+where $|x|$ is the [length](Length-factorization.qmd) of $x$ and $x \land y$ is the greatest common divisor of $x,y$, that is,
 
 $$
 x \land y = (\min \{x_1, y_1\}, \ldots, \min \{x_p, y_p\}).
-$$ It can be proven that $d(x,y) = \max \{|x|, |y|\} - |x \land y|$.
+$$
+
+It can be proven that $d(x,y) = \max \{|x|, |y|\} - |x \land y|$.
 
 ## Examples
 

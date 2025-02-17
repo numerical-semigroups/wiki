@@ -1,0 +1,37 @@
+---
+title: "Gluing of numerical semigroups"
+format: html
+engine: markdown
+---
+
+<!-- Definición de Num. Sem. -->
+
+## Definition
+
+Let $S_1$ and $S_2$ be two [numerical semigroups](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $\{n_1, \ldots, n_r\}$ and $\{n_{r+1}, \ldots, n_e\}$, respectively. It is said that a numerical semigroup $S$ is a gluing of $S_1$ and $S_2$ if it is of the form
+
+$$
+S = \langle \mu n_1, \ldots, \mu n_r, \lambda n_{r+1}, \ldots, \lambda n_e \rangle.
+$$
+
+for some $\lambda \in S_1 \setminus \{n_1, \ldots, n_r\}, ~ \mu \in S_2 \in \{n_{r+1}, \ldots, n_e\}$ such that $gcd(\lambda, \mu) = 1$.
+
+It can be proven that $S$ is a numerical semigroup with minimal system of generators $\{\mu n_1, \ldots, \mu n_r, \lambda n_{r+1}, \ldots, \lambda n_e \}$ if, and only if, $\{\mu n_1, \ldots, \mu n_r, \lambda n_{r+1}, \ldots, \lambda n_e\}$ is the [gluing](Gluing.qmd) of $\{\mu n_1, \ldots, \mu n_r\}$ and $\{ \lambda n_{r+1}, \ldots, \lambda n_e\}$.
+
+## Examples
+
+$\circ$ Let $S = \langle 8, 44, 147, 189 \rangle$. As $gcd(8, 147) = gcd(8, 189) = 1$, let us consider $B_1 = \{8, 44\}$ and $B_2 = \{147, 189\}$. We have, $gcd(8, 44) = 4$ and $gcd(147, 189) = 21$, then
+
+$$
+S = \langle 8, 44, 147, 189 \rangle = \langle 4 \cdot 2, 4 \cdot 11, 21 \cdot 7, 21 \cdot 9 \rangle,
+$$
+where $gcd(2,11) = gcd(7,9) = 1, 4 \in \langle 2, 11 \rangle$ and $21 \in \langle 7, 9 \rangle$. If we define $S_1 = \langle 2, 11 \rangle$ and $S_2 = \langle 7, 9 \rangle$, is is concluded that $S$ is a gluing of $S_1$ and $S_2$ with $\lambda = 4$ and $\mu = 21$.
+
+
+## Examples with GAP
+
+Nowadays, there are no functions in package NumericalSgps related to gluing of numerical semigroups.
+
+
+## References
+
