@@ -28,7 +28,7 @@ $\circ$ Let $S = \langle 6, 7, 11, 15 \rangle$ and $n = 25$. We have $25 - 6 = 1
 
 $$
 25 - (6 + 7) = 12 \in S, \hspace{0.4cm} 25 - (6 + 11) = 8 \not \in S,
-$$ 
+$$
 
 $$
 25 - (7 + 11) = 7 \in S.
@@ -61,24 +61,17 @@ The following example is made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 14, 27, 31, 33, 77 \rangle$, in GAP:
 
-```gap
+``` gap
 gap> S := NumericalSemigroup(14, 27, 31, 33, 77);
 <Numerical semigroup with 5 generators>
 ```
 
 Given a numerical semigroup $S$ and an element $n$ of it, the function `GraphAssociatedToElementInNumericalSemigroup` returns the graph associated to $n$ in $S$.
 
-
-```gap
+``` gap
 gap> GraphAssociatedToElementInNumericalSemigroup(114,S);
 [ [ 14, 27, 31, 33 ],
   [ [ 14, 27 ], [ 14, 31 ], [ 27, 31 ], [ 27, 33 ] ] ]
 ```
 
-
 ## References
-
-
-
-
-

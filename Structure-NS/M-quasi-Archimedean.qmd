@@ -1,0 +1,21 @@
+---
+title: "Quasi-Archimedean monoid"
+format: html
+engine: markdown
+---
+
+<!-- Definición de Num. Sem. -->
+
+## Definition
+
+Let $A$ be a monoid. It is said that $A$ is quasi-Archimedean if $A \setminus \{0\}$ is [Archimedean](Archimedean-property.qmd).
+
+## Examples
+
+$\circ$ Given a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) $S$, it holds that $S^* = S \setminus \{0\}$ is Archimedean. Let $F(S)$ be the [Frobenius number](../Basic-concepts/Frobenius-number.qmd) of $S$. Given $x, y \in S^*$, there exists $k \in \mathbb{N} \setminus \{0\}$ such that $kx - y > F(S)$. Then, $z := kx - y \in S^*$ and $kx = y + z$.
+
+## Examples with GAP
+
+Nowadays, there are no functions in package NumericalSgps related to quasi-Archimedean monoid.
+
+## References

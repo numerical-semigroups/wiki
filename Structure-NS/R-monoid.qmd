@@ -1,0 +1,21 @@
+---
+title: "R-monoid"
+format: html
+engine: markdown
+---
+
+<!-- Definición de Num. Sem. -->
+
+## Definition
+
+Let $A$ be a monoid. It is said that $A$ is a $\mathcal{R}-$monoid if it is a [cancellative](M-cancellative.qmd) that is not a group and with at least an [Archimedean element](Archimedean-property.qmd).
+
+## Examples
+
+$\circ$
+
+## Examples with GAP
+
+Nowadays, there are no functions in package NumericalSgps related to $\mathcal{R}-$monoid.
+
+## References

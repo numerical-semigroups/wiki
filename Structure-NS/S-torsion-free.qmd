@@ -1,0 +1,23 @@
+---
+title: "Torsion free semigroup"
+format: html
+engine: markdown
+---
+
+<!-- Definición de Num. Sem. -->
+
+## Definition
+
+Let $S$ be a semigroup. it is said that $S$ is torsion free if for any positive integer $k$ and $a,b \in S$ such that $ka = kb$, then $a = b$.
+
+It can be proven that a commutative monoid $A$ is isomorphic to a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) if, and only if, $A$ is finitely generated, [quasi-Archimedean](M-quasi-Archimedean.qmd), [torsion free](S-torsion-free.qmd) and with only one idempotent.
+
+## Examples
+
+$\circ$ Every subset of $\mathbb{N}$ is torsion free, in particular, every numerical semigroup is torsion free.
+
+## Examples with GAP
+
+Nowadays, there are no functions in package NumericalSgps related to torsion free semigroup.
+
+## References

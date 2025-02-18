@@ -1,0 +1,21 @@
+---
+title: "Weakly cancellative monoid"
+format: html
+engine: markdown
+---
+
+<!-- Definición de Num. Sem. -->
+
+## Definition
+
+Let $A$ be a monoid. It is said that $A$ is weakly cancellative if given $x, y \in A$ such that $x + a = y + a$ for all $a \in A \setminus \{0\}$, it holds $x = y$.
+
+## Examples
+
+$\circ$
+
+## Examples with GAP
+
+Nowadays, there are no functions in package NumericalSgps related to weakly cancellative monoid.
+
+## References

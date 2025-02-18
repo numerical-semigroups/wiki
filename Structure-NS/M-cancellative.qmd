@@ -1,0 +1,21 @@
+---
+title: "Cancellative monoid"
+format: html
+engine: markdown
+---
+
+<!-- Definición de Num. Sem. -->
+
+## Definition
+
+Let $A$ be a monoid. It is said that $A$ is a cancellative monoid if for any $a, b, c \in A$ such that $a + c = b + c$, it holds $a = b$.
+
+## Examples
+
+$\circ$
+
+## Examples with GAP
+
+Nowadays, there are no functions in package NumericalSgps related to cancellative monoid.
+
+## References

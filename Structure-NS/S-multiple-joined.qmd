@@ -1,0 +1,23 @@
+---
+title: "Multiple joined semigroup"
+format: html
+engine: markdown
+---
+
+<!-- Definición de Num. Sem. -->
+
+## Definition
+
+Let $S$ be a semigroup. It is said that $S$ is multiple joined if for all $x, y \in S$, there exist positive integers $p$ and $q$ such that $px = qy$.
+
+## Examples
+
+$\circ$ Given a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) $S$, then $S^* = S \setminus \{0\}$ is multiple joined.
+
+$\circ$ Every multiple joined semigroup is [Archimedean](Archimedean-property.qmd). Given $x, y \in S$, there exist $p, q \in \mathbb{N} \setminus \{0\}$ such that $px = qy$. Then, $px = qy = y + (q-1)y$ and $(q-1)y \in S$, so $S$ is Archimedean.
+
+## Examples with GAP
+
+Nowadays, there are no functions in package NumericalSgps related to multiple joined semigroup.
+
+## References

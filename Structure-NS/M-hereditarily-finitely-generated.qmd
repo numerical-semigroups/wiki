@@ -1,0 +1,21 @@
+---
+title: "Hereditarily finitely generated monoid"
+format: html
+engine: markdown
+---
+
+<!-- Definición de Num. Sem. -->
+
+## Definition
+
+Let $A$ be a monoid. It is said that $A$ is a hereditarily finitely generated monoid if for any of its submonoid is finitely generated.
+
+## Examples
+
+$\circ$
+
+## Examples with GAP
+
+Nowadays, there are no functions in package NumericalSgps related to weakly cancellative monoid.
+
+## References

@@ -18,6 +18,4 @@ $\circ$ Let $S = \langle 4, 6, 11 \rangle$. It is easy to check that $Ap(S, 4) \
 
 Nowadays, there are no functions in package NumericalSgps related to numerical semigroup with Apéry set of unique expression.
 
-
 ## References
-

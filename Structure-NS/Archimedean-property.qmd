@@ -1,0 +1,25 @@
+---
+title: "Archimedean property"
+format: html
+engine: markdown
+---
+
+<!-- Definición de Num. Sem. -->
+
+## Definition
+
+Let $S$ be a semigroup and let $x \in S$. It is said that $x$ is Archimedean if for all $y \in S$, there exists a positive integer $k$ and $z \in S$ such that $kx = y + z$. If each element in $S$ is Archimedean, it is said that $S$ is Archimedean.
+
+## Examples
+
+$\circ$ Let $A = \{a_1, \ldots, a_n\}$ be a set of symbols, let $*$ be the concatenation operation and let us consider the semigroup $S = \{ c_1c_2 \cdots c_k ~ | ~ c_i \in A, i \in \{1, 2, \ldots, k\} \}$. No element of $S$ is Archimedean, given $x = a_{i_1}\cdots a_{i_m}$ with $i_1, \ldots, i_m \in \{1,2,\ldots, n\}$, for $y = a_j$ with $j \ne i_1$, there no exist $k \in \mathbb{N} \setminus \{0\}$ and $z \in S$ such that $kx = y * z$.
+
+$\circ$ The semigroup $(\mathbb{N}^*, +)$, where $\mathbb{N}^* = \mathbb{N} \setminus \{0\}$ is Archimedean. Given $x, y \in \mathbb{N}^*$, let us consider $k \in \mathbb{N}^*$ such that $kx > y$. then, if we define $z = kx - y > 0$, it is obtained that $kx = y + z$.
+
+$\circ$ Given a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) $S$, it holds that $S^* = S \setminus \{0\}$ is Archimedean. Let $F(S)$ be the [Frobenius number](../Basic-concepts/Frobenius-number.qmd) of $S$. Given $x, y \in S^*$, there exists $k \in \mathbb{N} \setminus \{0\}$ such that $kx - y > F(S)$. Then, $z := kx - y \in S^*$ and $kx = y + z$.
+
+## Examples with GAP
+
+Nowadays, there are no functions in package NumericalSgps related to Archimedean property.
+
+## References

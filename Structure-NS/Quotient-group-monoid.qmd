@@ -1,0 +1,27 @@
+---
+title: "Quotient group of a monoid"
+format: html
+engine: markdown
+---
+
+<!-- Definición de Num. Sem. -->
+
+## Definition
+
+Let $A$ be a [cancellative](M-cancellative.qmd) monoid. It is defined the relation $\sim$ on $S \times S$ as follows:
+
+$$
+(a, b) \sim (c, d) \Longleftrightarrow a + d = b + c.
+$$
+
+It can be proven that the relation $\sim$ is a congruence. It is defined the quotient group, denoted by $Q(S)$, as $Q(S) = (S \times S)/ \sim$.
+
+## Examples
+
+$\circ$
+
+## Examples with GAP
+
+Nowadays, there are no functions in package NumericalSgps related to quotient group of a monoid.
+
+## References

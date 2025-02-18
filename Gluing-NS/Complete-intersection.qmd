@@ -20,21 +20,21 @@ The following examples are made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 22, 24, 51, 115, 122 \rangle$, in GAP:
 
-```gap
+``` gap
 gap> S := NumericalSemigroup(22, 24, 51, 115, 122);
 <Numerical semigroup with 5 generators>
 ```
 
 Given a numerical semigroup, the function `IsCompleteIntersection` returns true or false depending on whether a numerical semigroup is a complete intersection or not.
 
-```gap
+``` gap
 gap> IsCompleteIntersection(S);
 false
 ```
 
-The function `MinimalPresentation` returns a minimal presentation of a given numerical semigroup. On the other hand, the function `EmbeddingDimension` returns the embedding dimension of a given numerical semigroup.
+The function `MinimalPresentation` returns a minimal presentation of a given numerical semigroup. On the other hand, the function `EmbeddingDimension` returns the embedding dimension.
 
-```gap
+``` gap
 brk_3> Length(MinimalPresentation(S));
 11
 brk_3> EmbeddingDimension(S)-1;
@@ -43,14 +43,14 @@ brk_3> EmbeddingDimension(S)-1;
 
 $\diamond$ Given an integer $z \in \mathbb{Z}$, the function `CompleteIntersectionNumericalSemigroupsWithFrobeniusNumber` returns a list with all numerical semigroups with [Frobenius number](../Basic-concepts/Frobenius-number.qmd) $z$.
 
-```gap
+``` gap
 gap> Length(CompleteIntersectionNumericalSemigroupsWithFrobeniusNumber(21));
 5
 ```
 
 The code `List(List_NS, l -> Function(l));` return a list where it has applied `Function` to every element in $List\_NS$, for example, we can see the numerical semigroups with complete intersection and Frobenius number $f = 21$ by its [minimal generators](../Basic-concepts/Minimal-set-of-generators.qmd).
 
-```gap
+``` gap
 gap> Li := CompleteIntersectionNumericalSemigroupsWithFrobeniusNumber(21);
 [ <Numerical semigroup with 2 generators>,
   <Numerical semigroup with 3 generators>,
@@ -62,14 +62,4 @@ gap> List(Li, l -> MinimalGenerators(l));
   [ 6, 8, 11 ] ]
 ```
 
-
-
-
 ## References
-
-
-
-
-
-
-
