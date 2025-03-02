@@ -20,7 +20,7 @@ $\circ$ Every saturated numerical semigroup $S$ is Arf. Indeed, given $x \ge y \
 
 ## Examples with GAP
 
-The following example is made with the package NumericalSgps in GAP.
+The following examples are made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 14, 17, 46, 49 \rangle$, in GAP:
 
@@ -35,5 +35,8 @@ Given a numerical semigroup $S$, the function `IsSaturated` returns true or fals
 gap> IsSaturated(S);
 false
 ```
+
+$\diamond$ Given an integer $f$, the function `SaturatedNumericalSemigroupsWithFrobeniusNumber` returns a list with all the saturated numerical semigroups with frobenius number $f$.
+
 
 ## References

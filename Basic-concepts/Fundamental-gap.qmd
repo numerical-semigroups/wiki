@@ -6,7 +6,9 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and let $G(S)$ be the set formed by the [gaps](Gap.qmd) of $S$. A gap $g \in G(S)$ is a fundamental gap of $S$ if $\{2g, 3g\} \subseteq S$, or equivalently, for every $n \in \mathbb{N} \setminus \{0,1\}$, it holds that $ng \in S$. It is denoted by $FG(S)$ the set of fundamental gaps of $S$ and is always non-empty, due to $F(S) \in FG(S)$, where $F(S)$ is the [Frobenius number](Frobenius-number.qmd) of $S$.
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and let $G(S)$ be the set of [gaps](Gap.qmd) of $S$. A gap $g \in G(S)$ is a fundamental gap of $S$ if $\{2g, 3g\} \subseteq S$, or equivalently, for every $n \in \mathbb{N} \setminus \{0,1\}$, it holds that $ng \in S$. It is denoted by $FG(S)$ the set of fundamental gaps of $S$ and is always non-empty, due to $F(S) \in FG(S)$, where $F(S)$ is the [Frobenius number](Frobenius-number.qmd) of $S$.
+
+It can be proven that $FG(S)$ determines the numerical semigroup $S$.
 
 ## Examples
 
@@ -16,7 +18,7 @@ $\circ$ Let us consider $b \in \mathbb{N}$ an odd element arbitrary but fixed. T
 
 ## Examples with GAP
 
-The following example is made with the package NumericalSgps in GAP.
+The following examples are made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 8, 12, 14, 15, 25 \rangle$, in GAP:
 
@@ -25,11 +27,13 @@ gap> S := NumericalSemigroup(8, 12, 14, 15, 25);
 <Numerical semigroup with 5 generators>
 ```
 
-The function `FundamentalGaps` returns the set formed by the fundamental gaps of $S$.
+The functions `FundamentalGaps` and `FundamentalGapsOfNumericalSemigroup` return the set of fundamental gaps of $S$.
 
 ``` gap
 gap> FundamentalGaps(S);
 [ 4, 10, 11, 13, 17, 18, 19, 21 ]
+gap> FundamentalGaps(S) = FundamentalGapsOfNumericalSemigroup(S);
+true
 ```
 
 If we want to know all the gaps of $S$, then we have the function `Gaps`.
@@ -39,27 +43,19 @@ gap> Gaps(S);
 [ 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 13, 17, 18, 19, 21 ]
 ```
 
-In this case, the fundamental gaps are the greatest of the set, but that does not hold for every numerical semigroup.
-
-$\diamond$ Let $S = \langle 5, 12, 18 \rangle$, in GAP:
+$\diamond$ Given a list of positive integers, the function `NumericalSemigroupByFundamentalGaps` returns the numerical semigroup determined by the list if it is possible, which is considered as the list of fundamental gaps.
 
 ``` gap
-gap> S := NumericalSemigroup(5, 12, 18);
-<Numerical semigroup with 3 generators>
+gap> l := [6,8,13,15,17,20,22,29];
+[ 6, 8, 13, 15, 17, 20, 22, 29 ]
+gap> S := NumericalSemigroupByFundamentalGaps(l);
+<Numerical semigroup>
+gap> MinimalGenerators(S);
+[ 7, 9, 12 ]
 ```
 
-The gaps of $S$ are:
-
-``` gap
-gap> Gaps(S);
-[ 1, 2, 3, 4, 6, 7, 8, 9, 11, 13, 14, 16, 19, 21, 26, 31 ]
-```
-
-On the other hand, the fundamental gaps of $S$ are formed by:
-
-``` gap
-gap> FundamentalGaps(S);
-[ 6, 9, 11, 14, 16, 19, 21, 26, 31 ]
-```
+The function `MinimalGenerators` returns a list with the [minimal generators](Minimal-set-of-generators.qmd) of the numerical semigroup. Then, $S = \langle 7, 9, 12 \rangle$ and $FG(S) = \{6, 8, 13, 15, 17, 20, 22, 29\}$.
 
 ## References
+
+<!-- Num. Sem -->

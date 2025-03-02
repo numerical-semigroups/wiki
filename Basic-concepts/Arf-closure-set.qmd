@@ -47,11 +47,13 @@ gap> S := NumericalSemigroup(x);
 <Numerical semigroup with 4 generators>
 ```
 
-Given a numerical semigroup $S$, the function `ArfClosure` returns the Arf closure of $S$.
+The functions `ArfClosure` and `ArfNumericalSemigroupClosure` compute the Arf closure of a numerical semigroup.
 
 ``` gap
 gap> A := ArfClosure(S);
 <Numerical semigroup>
+gap> ArfClosure(S) = ArfNumericalSemigroupClosure(S);
+true
 ```
 
 We can use the function `SmallElements` to compute the [left elements](Left-elements.qmd) and the [conductor](Conductor.qmd) of a numerical semigroup.

@@ -1,18 +1,18 @@
 ---
-title: "Genus"
+title: "Genus / degree of singularity"
 format: html
 engine: markdown
 ---
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd). By definition of numerical semigroup, the set $\mathbb{N} \setminus S$, usually denoted by $G(S)$, is finite. It is defined the genus of $S$ as the cardinal of the set $|\mathbb{N} \setminus S|$, and it is denoted by $g(S)$.
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd). By definition of numerical semigroup, the set $\mathbb{N} \setminus S$, usually denoted by $G(S)$, is finite. It is defined the genus of $S$ as the cardinal of $\mathbb{N} \setminus S$, and it is denoted by $g(S)$ or $\Omega(S)$. Sometimes it is referred to as the degree of singularity of $S$.
 
 If $n(S)$ is the cardinal of the set formed by the [left elements](Left-elements.qmd) of $S$, and $C(S)$ is the [conductor](Conductor.qmd) of $S$, it is deduced the relation $n(S) + g(S) = C(S)$.
 
 ## Examples
 
-$\circ$ Let $S = \langle 6, 10, 13, 14, 15 \rangle$. Computing the first elements of $S$, we can note that $S = \{ 0, 6, 10, 12, 13, 14, 15, 16, 18, \rightarrow \}$, and $\mathbb{N} \setminus S = \{1, 2, 3, 4, 5, 7, 8, 9, 11, 17\}$, thus $g(S) = 10$.
+$\circ$ Let $S = \langle 6, 10, 13, 14, 15 \rangle$. Computing the first elements of $S$, it is obtained that $S = \{ 0, 6, 10, 12, 13, 14, 15, 16, 18, \rightarrow \}$, and $\mathbb{N} \setminus S = \{1, 2, 3, 4, 5, 7, 8, 9, 11, 17\}$. Thus, $g(S) = 10$.
 
 $\circ$ Let $S = \{ 0, 4, 8, 9, 11, 12, 13, 15, \rightarrow \}$. The set of left elements is $N(S) = \{0, 4, 8, 9, 11, 12, 13\}$ and the conductor is $C(S) = 15$, therefore $g(S) = C(S) - n(S) = 15 - 7 = 8$.
 
@@ -27,10 +27,12 @@ gap> S := NumericalSemigroup(8, 11, 13, 15, 19);
 <Numerical semigroup with 5 generators>
 ```
 
-In order to compute the genus of $S$, we can apply the function `Genus`.
+In order to compute the genus of $S$, we can apply the functions `Genus` or `GenusOfNumericalSemigroup`.
 
 ``` gap
 gap> Genus(S);
+15
+gap> GenusOfNumericalSemigroup(S);
 15
 ```
 
@@ -55,4 +57,23 @@ gap> Genus(S);
 10
 ```
 
+$\diamond$ Given a non-negative number $g$, the function `NumericalSemigroupsWithGenus` computes all the numerical semigroups with genus $g$.
+
+``` gap
+gap> A := NumericalSemigroupsWithGenus(3);
+[ <Numerical semigroup with 4 generators>,
+  <Numerical semigroup with 3 generators>,
+  <Numerical semigroup with 3 generators>,
+  <Numerical semigroup with 2 generators> ]
+```
+
+The code `List(List_NS, l -> Function(l));` applies the function `Function` to each element of a list $List\_NS$.
+
+``` gap
+gap> List(A, l -> SmallElements(l));
+[ [ 0, 4 ], [ 0, 3, 5 ], [ 0, 3, 4, 6 ], [ 0, 2, 4, 6 ] ]
+```
+
 ## References
+
+<!-- Appl. -->

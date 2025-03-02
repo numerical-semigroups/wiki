@@ -6,7 +6,7 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) arbitrary but fixed. It is said that $T$ is a oversemigroup of $S$ if $T$ is a numerical semigroup and $S \subseteq T$. The set of oversemigroups of $S$ is denoted by $\mathcal{O}(S)$.
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd). It is said that $T$ is a oversemigroup of $S$ if $T$ is a numerical semigroup and $S \subseteq T$. The set of oversemigroups of $S$ is denoted by $\mathcal{O}(S)$.
 
 The set $\mathcal{O}(S)$ is non-empty and finite for every numerical semigroup, since $S \in \mathcal{O}(S)$ and $|\mathbb{N} \setminus S|$ is finite.
 
@@ -16,13 +16,13 @@ $\circ$ Let $S = \langle 4, 5, 6 \rangle = \{ 0, 4, 5, 6, 8, \rightarrow\}$. The
 
 -   0 gaps: we have $S \subseteq S$ so $S$ is trivially a oversemigroup of $S$.
 
--   1 gap: the candidates are $T_{1,1} = S \cup \{1\}, T_{1,2} = S \cup \{2\}, T_{1,3} = S \cup \{3\}, T_{1,4} = S \cup \{7\}$ and $T_4$ is the only numerical semigroup.
+-   1 gap: the candidates are $T_{1,1} = S \cup \{1\}, T_{1,2} = S \cup \{2\}, T_{1,3} = S \cup \{3\}, T_{1,4} = S \cup \{7\}$. It is easy to check that $T_4$ is the only numerical semigroup.
 
 -   2 gaps: in this case the oversemigroups are $T_{2,1} = S \cup \{2, 7\}, T_{2,2} = S \cup \{3, 7\}$.
 
 -   3 gaps: the only oversemigroup is $T_{3,1} = S \cup \{2, 3, 7\}$.
 
--   4 gaps: we have the trivial oversemigroup $T_{4,1} = \mathbb{N}$.
+-   4 gaps: we have the oversemigroup $T_{4,1} = \mathbb{N}$.
 
 To sum up, $\mathcal{O}(S) = \{S, S \cup \{7\}, S \cup \{2, 7\}, S \cup \{3, 7\}, S \cup \{2, 3, 7\}, \mathbb{N}\}$.
 
@@ -30,21 +30,23 @@ To sum up, $\mathcal{O}(S) = \{S, S \cup \{7\}, S \cup \{2, 7\}, S \cup \{3, 7\}
 
 The following example is made with the package NumericalSgps in GAP.
 
-$\diamond$ Let $S = \langle 2, 5, 7 \rangle$, in GAP:
+$\diamond$ Let $S = \langle 2, 5 \rangle$, in GAP:
 
 ``` gap
-gap> S := NumericalSemigroup(2, 5, 7);
-<Numerical semigroup with 3 generators>
+gap> S := NumericalSemigroup(2, 5);
+<Numerical semigroup with 2 generators>
 ```
 
-To get the oversemigroups of $S$, the function `Oversemigroups` returns the set of oversemigroups.
+The functions `Oversemigroups` and `OverSemigroupsNumericalSemigroup` returns the set of oversemigroups.
 
 ``` gap
 gap> OverSemigroups(S);
 [ <The numerical semigroup N>, <Numerical semigroup with 2 generators>, <Numerical semigroup with 2 generators> ]
+gap> OverSemigroups(S) = OverSemigroupsNumericalSemigroup(S);
+true
 ```
 
-The code `List(List_NS, l -> Function(l));` return a list where it has applied `Function` to every element in $List\_NS$, for example, we can see the oversemigroups of $S$ by the set formed by its [left elements](Left-elements.qmd) and its [conductor](Conductor.qmd),
+The code `List(List_NS, l -> Function(l));` returns a list where it has applied `Function` to every element in $List\_NS$. For example, we can see the oversemigroups of $S$ by its [left elements](Left-elements.qmd) and its [conductor](Conductor.qmd),
 
 ``` gap
 gap> List(OverSemigroups(S), l -> SmallElements(l));

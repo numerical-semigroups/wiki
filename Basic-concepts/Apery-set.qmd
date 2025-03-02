@@ -1,22 +1,22 @@
 ---
-title: "Apéry Set"
+title: "Apéry set"
 format: html
 engine: markdown
 ---
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and $n \in S^*$. It is defined the Apéry set of $S$ with respect to $n$, denoted by $Ap(S,n)$, to be the set
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and let $n \in S \setminus \{0\}$. It is defined the Apéry set of $S$ with respect to $n$, denoted by $Ap(S,n)$ or $S(n)$, to be the set
 
 $$
 Ap(S,n) = \{s \in S ~ | ~ s - n \not \in S\}.
 $$
 
-The knowledge of this set determines completely the numerical semigroup $S$. $Ap(S,n)$ always have $n$ elements and it is easy to obtain the [Frobenius number](Frobenius-number.qmd), the [multiplicity](Multiplicity.qmd) and the [genus](Genus.qmd) of $S$ from this set. This definition could be extended to the [Apéry set of an integer](../Fact-and-div/Apery-set-integer.qmd) or to the [Apéry set of a set of integers](../Gluing-NS/Apery-set-respect-set.qmd).
+The knowledge of this set determines completely the numerical semigroup $S$. $Ap(S,n)$ always has $n$ elements and it is easy to obtain the [Frobenius number](Frobenius-number.qmd) and the [genus](Genus.qmd) of $S$ from this set. This definition could be extended to the [Apéry set of an integer](../Fact-and-div/Apery-set-integer.qmd) or to the [Apéry set of a set of integers](../Gluing-NS/Apery-set-respect-set.qmd).
 
 ## Examples
 
-$\circ$ Let $S = \langle 3, 8, 10 \rangle$, or equivalently, $S = \{0, 3, 6, 8, \rightarrow \}$, let's compute the Apéry set of $S$ with respect to $n = 3$. All the elements greater or equal than $11$ cannot be in the Apéry set. Indeed, the [conductor](Conductor.qmd) of $S$ is $C(S) = 8$ and if $n \ge 11$, $n - 3 \ge 11 - 3 = 8$, in conclusion, $n-3 \in S$. With the above reasoning, we have that $Ap(S, 3) \subseteq \{0, 3, 6, 8, 9, 10\}$, and if we check the condition on each element, it is deduced that $Ap(S,3) = \{0, 8, 10\}$.
+$\circ$ Let $S = \langle 3, 8, 10 \rangle$, or equivalently, $S = \{0, 3, 6, 8, \rightarrow \}$, let us compute the Apéry set of $S$ with respect to $n = 3$. All the elements greater or equal than $11$ cannot be in the Apéry set. Indeed, the [conductor](Conductor.qmd) of $S$ is $C(S) = 8$ and if $n \ge 11$, $n - 3 \ge 11 - 3 = 8$, concluding that $n-3 \in S$. With the above reasoning, we have that $Ap(S, 3) \subseteq \{0, 3, 6, 8, 9, 10\}$, and if we check the condition on each element, it is deduced that $Ap(S,3) = \{0, 8, 10\}$.
 
 $\circ$ Let $S = \langle 4, 6, 11, 13 \rangle$ and $n = 6$. If we compute the first elements of $S$, it is deduced that $S = \{0, 4, 6, 8, 10, \rightarrow \}$ and $C(S) = 10$, then if $n \ge 16$, it holds $n - 6 \in S$ and it must be $Ap(S,6) \subseteq \{0, 4, 6, 8, 10, 11, 12, 13, 14, 15\}$. If we check on each number, it follows that $Ap(S,6) = \{0, 4, 8, 11, 13, 15\}$.
 
@@ -31,11 +31,17 @@ gap> S := NumericalSemigroup(12, 14, 25, 33);
 <Numerical semigroup with 4 generators>
 ```
 
-We can use the function `AperyListOfNumericalSemigroupWRTElement` in order to compute the Apéry set of $S$ for any $n \in S^*$.
+Given a numerical semigroup $S$ and an element $n \in S \setminus \{0\}$, the functions `AperyListOfNumericalSemigroupWRTElement`, `AperyList` and `AperyListOfNumericalSemigroup` return the Apéry set of $S$ with respect to $n$. The codes `AperyList(S)` and `AperyListOfNumericalSemigroup(S)` return the Apéry set of $S$ with respect to $m(S)$, the [multiplicity](Multiplicity.qmd) of $S$. In this case $m(S) = 12$.
 
 ``` gap
-gap> AperyListOfNumericalSemigroupWRTElement(S, 12);
-[0, 25, 14, 39, 28, 53, 42, 67, 56, 33, 58, 47]
+gap> AperyListOfNumericalSemigroupWRTElement(S, 14);
+[ 0, 57, 58, 45, 60, 33, 48, 49, 36, 37, 24, 25, 12, 69 ]
+gap> AperyList(S, 12);
+[ 0, 25, 14, 39, 28, 53, 42, 67, 56, 33, 58, 47 ]
+gap> AperyList(S);
+[ 0, 25, 14, 39, 28, 53, 42, 67, 56, 33, 58, 47 ]
+brk> AperyListOfNumericalSemigroup(S);
+[ 0, 25, 14, 39, 28, 53, 42, 67, 56, 33, 58, 47 ]
 ```
 
 $\diamond$ Let $S = \langle 6,7,8,9 \rangle$. We first compute the [left elements](Left-elements.qmd) and the conductor of $S$ with the function `SmallElements`.
@@ -54,7 +60,7 @@ gap> AperyListOfNumericalSemigroupWRTElement(S, 6);
 [ 0, 7, 8, 9, 16, 17 ]
 ```
 
-The Apéry set determines completely the numerical semigroup. The function `NumericalSemigroupByAperyList` returns the numerical semigroup from the Apéry set.
+The Apéry set determines completely the numerical semigroup. The function `NumericalSemigroupByAperyList` returns the numerical semigroup obtained from a given Apéry set.
 
 ``` gap
 gap> T := NumericalSemigroupByAperyList([ 0, 7, 8, 9, 16, 17 ]);
@@ -63,7 +69,7 @@ gap> SmallElements(T);
 [ 0, 6, 7, 8, 9, 12 ]
 ```
 
-Thus, $S = \{0, 6, 7, 8, 9, 12, \rightarrow \} = T$ and the result holds. The function `IsAperyListOfNumericalSemigroup` tests whether a list of integers may represent the Apéry set of a numerical semigroup.
+Thus, $S = \{0, 6, 7, 8, 9, 12, \rightarrow \} = T$ and the result holds. The function `IsAperyListOfNumericalSemigroup` returns true or false depending on whether a list of integers may represent the Apéry set of a numerical semigroup.
 
 ``` gap
 gap> IsAperyListOfNumericalSemigroup([ 0, 7, 8, 9, 16, 17 ]);
@@ -71,3 +77,5 @@ true
 ```
 
 ## References
+
+<!-- J. C. Rosales, P. A. García-Sánchez, Numerical Semigroups, Springer, 2009. -->

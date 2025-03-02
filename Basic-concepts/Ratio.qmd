@@ -8,11 +8,11 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](Minimal-set-of-generators.qmd) by $\{n_1, \ldots, n_p\}$ with $n_1 < n_2 < \cdots < n_p$. It is defined the ratio of $S$ as $n_2$.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](Minimal-set-of-generators.qmd) by $P = \{n_1, \ldots, n_p\}$ with $n_1 < n_2 < \cdots < n_p$. It is defined the ratio of $S$ as $n_2$, and it is denoted by $r(S)$.
 
 ## Examples
 
-$\circ$ Let $S = \langle 6, 12, 14, 15 \rangle$. Since $12 = 2 \cdot 6$, the set $B = \{6, 12, 14, 15\}$ is not minimal and $12$ is not the ratio. It is easy to deduce that $B\setminus \{12\}$ is minimal, then the ratio of $S$ is $r = 14$.
+$\circ$ Let $S = \langle 6, 12, 14, 15 \rangle$. Since $12 = 2 \cdot 6$, the set $B = \{6, 12, 14, 15\}$ is not a minimal system of generators and $12$ is not the ratio. It is easy to deduce that $B\setminus \{12\}$ is minimal. Then, the ratio of $S$ is $r(S) = 14$.
 
 ## Examples with GAP
 

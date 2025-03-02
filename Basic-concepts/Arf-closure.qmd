@@ -6,11 +6,13 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and $\mathcal{O}(S)$ the set of [oversemigroups](Oversemigroup.qmd) of $S$. It is defined the Arf closure of $S$ as the smallest [Arf numerical semigroup](../Families-NS/Arf-semigroup.qmd) containing $S$, and it is denoted by $Arf(S)$.
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and let $\mathcal{O}(S)$ be the set of [oversemigroups](Oversemigroup.qmd) of $S$. It is defined the Arf closure of $S$ as the smallest [Arf numerical semigroup](../Families-NS/Arf-semigroup.qmd) containing $S$, and it is denoted by $Arf(S)$.
 
-It can be proven that the intersection of Arf semigroups is also an Arf semigroup, from that it is deduced that the Arf closure is the intersection of all Arf numerical semigroups containing it, and since $\mathcal{O}(S)$ is finite, the intersection is also finite.
+It can be proven that the intersection of Arf semigroups is also an Arf semigroup, from which it follows that the Arf closure is the intersection of all Arf numerical semigroups containing it. Since $\mathcal{O}(S)$ is finite, the intersection is also finite.
 
 ## Examples
+
+$\circ$ If $S$ is an Arf semigroup, then $Arf(S) = S$.
 
 $\circ$ Let $S = \langle 4, 6, 9 \rangle = \{0, 4, 6, 8, 9, 10, 12, \rightarrow \}$. The set of oversemigroups is
 
@@ -45,15 +47,19 @@ gap> S := NumericalSemigroup(15, 32, 49);
 <Numerical semigroup with 3 generators>
 ```
 
-The function `ArfClosure` computes the Arf closure of a numerical semigroup.
+The functions `ArfClosure` and `ArfNumericalSemigroupClosure` compute the Arf closure of a numerical semigroup.
 
 ``` gap
 gap> A := ArfClosure(S);
 <Numerical semigroup>
 gap> SmallElements(A);
 [ 0, 15, 30, 32, 34, 36, 38, 40, 42, 44 ]
+gap> ArfClosure(S) = ArfNumericalSemigroupClosure(S);
+true
 ```
 
 The function `SmallElements` returns a list with the [left elements](Left-elements.qmd) and the [conductor](Conductor.qmd) of the numerical semigroup. Then, the Arf closure of $S$ is $A = \{0,15, 30, 32, 34, 36, 38, 40, 42, 44, \rightarrow \}$.
 
 ## References
+
+\<!-- Appl. -\>

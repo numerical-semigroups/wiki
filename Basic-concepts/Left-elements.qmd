@@ -6,13 +6,13 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and $F(S)$ the [Frobenius number](Frobenius-number.qmd) of $S$. An element $s \in \mathbb{N}$ is a left element (or small element) of $S$ if $s \in S$ and $s < F(S)$. The set of left elements is denoted by $N(S)$.
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and $F(S)$ the [Frobenius number](Frobenius-number.qmd) of $S$. An element $s \in \mathbb{N}$ is a left element (or small element) of $S$ if $s \in S$ and $s < F(S)$. The set of left elements is denoted by $N(S)$ or $L(S)$.
 
 The set of left elements is always non-empty, due to $0 \in N(S)$, and determines the numerical semigroup.
 
 ## Examples
 
-$\circ$ Let $S = \langle 3, 8, 10 \rangle$. We have that $6 = 3 + 3 \in S$ and since $8,9,10 \in S$, adding $3$ to each number, we have that for $n \ge 8$, it holds $n \in S$ and $7 \not \in S$, so the Frobenius number is $F(S) = 7$ and the set of left elements is $N(S) = \{0, 3, 6\}$.
+$\circ$ Let $S = \langle 3, 8, 10 \rangle$. We have that $6 = 3 + 3 \in S$ and since $8,9,10 \in S$, adding $3$ to each number, we have that for $n \ge 8$, it holds $n \in S$ and $7 \not \in S$. Then, the Frobenius number is $F(S) = 7$ and the set of left elements is $N(S) = \{0, 3, 6\}$.
 
 $\circ$ Let us consider $b \in \mathbb{N}$ an odd integer arbitrary but fixed and $S = \langle 2, b \rangle$. Note that for $n \ge b-1$, it holds $n \in S$ and $b-2 \not \in S$, thus the Frobenius number is $F(S) = b-2$ and the set of left elements is $N(S) = \{0, 2, 4, \ldots, b-3\}$, in other words, the even elements between $0$ and $b-2$.
 

@@ -6,9 +6,9 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd). We say that $s \in S$ is the multiplicity of $S$ if it is the smallest non-zero element of $S$, and it is denoted by $m(S)$. Equivalently, the multiplicity of $S$ is defined as the minimum of the [minimal generator system](Minimal-set-of-generators.qmd) of S.
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd). It is said that $s \in S$ is the multiplicity of $S$ if it is the smallest non-zero element of $S$, and it is denoted by $m(S)$ or $\mu(S)$. Equivalently, the multiplicity of $S$ is defined as the minimum of the [minimal generator system](Minimal-set-of-generators.qmd) of S.
 
-As simple results, the multiplicity is an upper bound of the [embedding dimension](Embedding-dimension.qmd) of $S$, a minimal generator and does not determine the numerical semigroup.
+It can be proven that the multiplicity is an upper bound of the [embedding dimension](Embedding-dimension.qmd) of $S$, it is always a minimal generator and does not determine the numerical semigroup.
 
 ## Examples
 
@@ -27,10 +27,12 @@ gap> S := NumericalSemigroup(3, 7, 9, 13);
 <Numerical semigroup with 4 generators>
 ```
 
-The function `Multiplicity` returns the multiplicity of a numerical semigroup.
+The functions `Multiplicity` and `MultiplicityOfNumericalSemigroup` compute the multiplicity of a numerical semigroup.
 
 ``` gap
 gap> Multiplicity(S);
+3
+gap> MultiplicityOfNumericalSemigroup(S);
 3
 ```
 
@@ -40,7 +42,5 @@ We can check if $m(S) = 3$ is a minimal generator with the function `MinimalGene
 gap> MinimalGenerators(S);
 [3, 7]
 ```
-
-We can also note that the number of minimal generators is less than the multiplicity, this property holds for any numerical semigroup.
 
 ## References

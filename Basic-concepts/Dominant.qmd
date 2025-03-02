@@ -12,7 +12,7 @@ Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) with positive [condu
 
 ## Examples
 
-$\circ$ Let $S = \langle 3, 7, 11 \rangle$. We have that $9, 10, 11 \in S$ and $8 \not \in S$, therefore the conductor is $C(S) = 9$, and the dominant is $d(S) = 7$. This numerical semigroup is also [acute](../Families-NS/NS-Acute.qmd) since $C(S) - d(S) = 2$.
+$\circ$ Let $S = \langle 3, 7, 11 \rangle$. We have that $9, 10, 11 \in S$ and $8 \not \in S$, therefore the conductor is $C(S) = 9$, and the dominant is $d(S) = 7$. This numerical semigroup is also [acute](../Families-NS/NS-Acute.qmd), since $C(S) - d(S) = 2$.
 
 ## Examples with GAP
 

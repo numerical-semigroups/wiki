@@ -6,7 +6,7 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd), $t$ be an indeterminant and $\mathbb{K}$ be a field. As in the [semigroup ring](Semigroup-ring.qmd) case, it is defined $\mathbb{K}[[t^s ~ | ~ s \in S]]$, denoted by $\mathbb{K}[[S]]$, and is a subring of the ring power series $\mathbb{K}[[t]]$. It is defined the degree of singularity of $\mathbb{K}[[S]]$ as the length of the $\mathbb{K}[[S]]-$module $\mathbb{K}[[t]]/\mathbb{K}[[S]]$. Some authors use the terminology degree of singularity to refer the [genus](Genus.qmd) of a numerical semigroup.
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd), $t$ be an indeterminant and $\mathbb{K}$ be a field. As in the [semigroup ring](Semigroup-ring.qmd) case, it is defined $\mathbb{K}[[t^s ~ | ~ s \in S]]$, denoted by $\mathbb{K}[[S]]$, and is a subring of the ring power series $\mathbb{K}[[t]]$. It is defined the degree of singularity of $\mathbb{K}[[S]]$ as the length of the $\mathbb{K}[[S]]-$module $\mathbb{K}[[t]]/\mathbb{K}[[S]]$. Some authors use the terminology degree of singularity to refer to the [genus](Genus.qmd) of a numerical semigroup.
 
 ## Examples
 
