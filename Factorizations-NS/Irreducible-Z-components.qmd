@@ -8,13 +8,17 @@ engine: markdown
 
 Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $E$ a [relative ideal](../Ideals-NS/Relative-ideal.qmd) of $S$. The definition of irreducible $\mathbb{Z}-$components of a relative ideal comes from the following result.
 
-$\textbf{Proposition}$: Let $S$ be a numerical semigroup and let $E$ be a relative ideal of $S$. Let $x_1, x_2, \ldots, x_h$ be the minimal generators of the ideal $K - E$. Then,
+::: {.callout-note appearance="minimal"}
+## Proposition
+
+Let $S$ be a numerical semigroup and let $E$ be a relative ideal of $S$. Let $x_1, x_2, \ldots, x_h$ be the minimal generators of the ideal $K - E$. Then,
 
 $$
 E = (-x_1 + K) \cap \cdots \cap (-x_h + K), 
 $$
 
 where $K$ denotes the [standard canonical ideal](../Ideals-NS/Standard-canonical-ideal.qmd) of $S$. This decomposition is irredundant an unique.
+:::
 
 It is defined the irreducible $\mathbb{Z}-$components as the ideals $-x_i + K$ that generates the factorization.
 
@@ -34,21 +38,21 @@ $$
 
 The following example is made with the package NumericalSgps in GAP.
 
-$\diamond$ Let $S = \langle 17, 21, 30, 45, 61 \rangle$, $I = \{6, 10\}$ and $K = I + S$, in GAP:
+$\diamond$ Let $S = \langle 17, 21, 30, 45, 61 \rangle$, $I = \{6, 10\}$ and $F = I + S$, in GAP:
 
 ``` gap
 gap> S := NumericalSemigroup(17, 21, 30, 45, 61);
 <Numerical semigroup with 5 generators>
 gap> I := [6, 10];
 [ 6, 10 ]
-gap> K := I + S;
+gap> F := I + S;
 <Ideal of numerical semigroup>
 ```
 
-In order to compute the irreducible $\mathbb{Z}-$components of $K$, the function `IrreducibleZComponents` returns a list with the ideals that generate the decomposition of the relative ideal.
+In order to compute the irreducible $\mathbb{Z}-$components of the relative ideal $F$, the function `IrreducibleZComponents` returns a list with the ideals that generate the decomposition of the relative ideal.
 
 ``` gap
-gap> Irred := IrreducibleZComponents(K);
+gap> Irred := IrreducibleZComponents(F);
 [ <Ideal of numerical semigroup>, <Ideal of numerical 
 semigroup>, <Ideal of numerical semigroup>,
   <Ideal of numerical semigroup>, <Ideal of numerical semigroup> ]

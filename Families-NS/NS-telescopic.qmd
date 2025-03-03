@@ -6,13 +6,13 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $B = \{r_0, r_1, \ldots, r_h\}$ the [set of minimal generators](../Basic-concepts/Minimal-set-of-generators.qmd) of $S$. It is said that $S$ is telescopic if $S$ is [free](NS-free.qmd) for the arrangement $(r_0, r_1, \ldots, r_h)$ and $r_0 < r_1 < \cdots < r_h$.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $P = \{n_1, \ldots, n_e\}$ the [set of minimal generators](../Basic-concepts/Minimal-set-of-generators.qmd) of $S$. It is said that $S$ is telescopic if $S$ is [free](NS-free.qmd) for the arrangement $(n_1, \ldots, n_e)$ and $n_1 < \cdots < n_e$.
 
 ## Examples
 
-$\circ$ Let $S = \langle 4, 6, 9 \rangle$. We have, $h = 2, d_1 = 4, d_2 = 2$ and $d_3 = 1$. Thus, $e_1 = e_2 = 2$. As $2 \cdot 6 \in \langle 4 \rangle$ and $2 \cdot 9 \in \langle 4, 6 \rangle$, it is concluded that $S$ is telescopic.
+$\circ$ Let $S = \langle 4, 6, 9 \rangle$. We have, $d_2 = 4$ and $d_3 = 2$. Then, we have that $\overline{c}_2 = \overline{c}_3 = 2$. As $\overline{c}_2n_2 = 2 \cdot 6 \in \langle 4 \rangle$ and $\overline{c}_3n_3 = 2 \cdot 9 \in \langle 4, 6 \rangle$, it is concluded that $S$ is telescopic.
 
-$\circ$ Let $S = \langle 4, 9, 14 \rangle$ and the arrangement $B_1 = \{14, 4, 9\}$. We have, $d_1 = 14, d_2 = gcd(14, 4) = 2$ and $d_3 = gcd(2, 9) = 1$. Moreover, $e_1 = \frac{d_1}{d_2} = 7 > 1, e_2 = \frac{d_2}{d_3} = 2 > 1$, $e_1r_1 = 7 \cdot 4 \in \langle 14 \rangle$ and $e_2r_2 = 2 \cdot 9 \in \langle 14, 4 \rangle$, therefore $S$ is free for the arrangement $B_1$. If we check with the arrangement $B_2 = \{4, 9, 14\}$, is is obtained that $d_1 = 4, d_2 = gcd(4, 9) = 1, d_3 = 1$ and $e_2 = \frac{d_2}{d_3} = 1 \not > 1$, therefore $S$ is not telescopic.
+$\circ$ Let $S = \langle 4, 9, 14 \rangle$ and the arrangement $B_1 = \{14, 4, 9\}$. We have, $d_2 = 14, d_3 = gcd(14, 4) = 2$ and $d_4 = 1$. Moreover, $\overline{c}_2 = 7, \overline{c}_3 = 2$, $\overline{c}_2n_2 = 7 \cdot 4 \in \langle 14 \rangle$ and $\overline{c}_3n_3 = 2 \cdot 9 \in \langle 14, 4 \rangle$, therefore $S$ is free for the arrangement $B_1$. If we check with the arrangement $B_2 = \{4, 9, 14\}$, is is obtained that $d_2 = 4, d_3 = gcd(4, 9) = 1, d_4 = 1$ and $\overline{c}_3 = 1$. Therefore, $\overline{c}_3 \ne c_3^*$ and $S$ is not telescopic.
 
 ## Examples with GAP
 
@@ -25,11 +25,13 @@ gap> S := NumericalSemigroup(4, 11, 14);
 <Numerical semigroup with 3 generators>
 ```
 
-In order to know if $S$ is telescopic, we can use the function `IsTelescopic`.
+In order to know if $S$ is telescopic, we can use the functions `IsTelescopic` or `IsTelescopicNumericalSemigroup`.
 
 ``` gap
 gap> IsTelescopic(S);
 false
+gap> IsTelescopic(S) = IsTelescopicNumericalSemigroup(S);
+true
 ```
 
 $\diamond$ If we are interested in how many telescopic numerical semigroups have a fixed Frobenius number $f$, the function `TelescopicNumericalSemigroupsWithFrobeniusNumber` returns the set of all telescopic numerical semigroups with given Frobenius number $f$.

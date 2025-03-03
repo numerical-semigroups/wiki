@@ -48,6 +48,28 @@ gap> Smallelements(S);
 [ 0, 9, 11, 12, 18, 20, 21, 22, 23, 24, 27, 29, 30, 31, 32, 33, 34, 35, 36, 38 ]
 ```
 
-It is concluded that $S = \{ 0, 9, 11, 12, 18, 20, 21, 22, 23, 24, 27, 29, 30, 31, 32, 33, 34, 35, 36, 38, \rightarrow \}$.
+It is concluded that $S = \{ 0, 9, 11, 12, 18, 20, 21, 22, 23, 24, 27, 29, 30, 31, 32, 33, 34, 35, 36, 38, \rightarrow \}$. It can be checked if an element belongs to the numerical semigroup with the function `BelongsToNumericalSemigroup`.
+
+```gap
+gap> BelongsToNumericalSemigroup(37, S);
+false
+```
+
+$\diamond$ Given two numerical semigroups $S$ and $T$, the function `IsSubsemigroupOfNumericalSemigroup` checks if $T \subseteq S$, that means, checks if $S$ is an [oversemigroup](Oversemigroup.qmd) of $T$.
+
+```gap
+gap> S := NumericalSemigroup(17, 32, 45);
+<Numerical semigroup with 3 generators>
+gap> T := NumericalSemigroup(107, 109, 171);
+<Numerical semigroup with 3 generators>
+gap> IsSubsemigroupOfNumericalSemigroup(S,T);
+true
+```
+
+If $T$ is not a numerical semigroup, it can be used the function `IsSubset`.
+
 
 ## References
+
+
+

@@ -16,9 +16,9 @@ $\circ$ Let $S = \langle 3, 8 \rangle$. Clearly, $m(S) = 3$ and $e(S) = 2$, thus
 
 $\circ$ Let us consider $a,b \in \mathbb{N}$ with $gcd(a,b) = 1$ and $S = \langle a, a+1, a+2, \ldots, a+b \rangle$. By construction of $S$, $m(S) = a$. To compute $e(S)$, we divide into cases:
 
--   If $a = b$, then $B = {a, a+1, \ldots, 2a - 1}$ is the [minimal set of generators](../Basic-concepts/Minimal-set-of-generators.qmd) of $S$ and $e(S) = a$, therefore $S$ has maximal embedding dimension.
+-   If $b \ge a-1$, then $B = \{a, a+1, \ldots, 2a - 1\}$ is the [minimal set of generators](../Basic-concepts/Minimal-set-of-generators.qmd) of $S$ and $e(S) = a$. Therefore $S$ has maximal embedding dimension.
 
--   If $a \ne b$, then $B = \{a, a+1, \ldots, a+b\}$ is the minimal set of generators of $S$, $e(S) = b$ and $S$ does not have maximal embedding dimension.
+-   If $b < a-1$, then $B = \{a, a+1, \ldots, a+b\}$ is the minimal set of generators of $S$, $e(S) = b+1$ and $S$ does not have maximal embedding dimension.
 
 ## Examples with GAP
 

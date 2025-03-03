@@ -8,6 +8,12 @@ engine: markdown
 
 A [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) $S$ is said to be pseudo-symmetric if it is [irreducible](NS-irreducible.qmd) and its [Frobenius number](../Basic-concepts/Frobenius-number.qmd) is even.
 
+It can be proven that $S$ is pseudo-symmetric if, and only if,
+
+$$
+g(S) = \frac{F(S) + 2}{2},
+$$ where $g(S)$ denotes the [genus](../Basic-concepts/Genus.qmd) of $S$.
+
 ## Examples
 
 $\circ$ Let $S = \langle 4, 10, 17 \rangle$. This numerical semigroup is irreducible and if we compute the first elements of $S$, we obtain that $S = \{0, 4, 8, 10, 12, 14, 16, 17, 18, 20, 21, 22, 24, \rightarrow \}$, so $F(S) = 23$ and $S$ is not a pseudo-symmetric numerical semigroup. The irreducible numerical semigroups with odd Frobenius number are called [symmetric numerical semigroups](NS-symmetric.qmd).
@@ -23,10 +29,12 @@ gap> S := NumericalSemigroup(4, 5, 7);
 <Numerical semigroup with 3 generators>
 ```
 
-The function `IsPseudoSymmetric` returns true or false depending on whether the numerical semigroup is pseudo-symmetric or not.
+The functions `IsPseudoSymmetric` and `IsPseudoSymmetricNumericalSemigroup` return true or false depending on whether the numerical semigroup is pseudo-symmetric or not.
 
 ``` gap
 gap> IsPseudoSymmetric(S);
+true
+gap> IsPseudoSymmetric(S) = IsPseudoSymmetricNumericalSemigroup(S);
 true
 ```
 
@@ -43,5 +51,7 @@ Now, the function `FrobeniusNumber` computes the Frobenius number of $S$.
 gap> FrobeniusNumber(S);
 6
 ```
+
+Since $F(S)$ is even, it is concluded that $S$ is pseudo-symmetric.
 
 ## References

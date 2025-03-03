@@ -18,7 +18,7 @@ $\circ$ The Frobenius number is the only pseudo-Frobenius number (the type is $1
 
 ## Examples with GAP
 
-The following example is made with the package NumericalSgps in GAP.
+The following examples are made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 7, 9, 10, 15, 20 \rangle$, in GAP:
 
@@ -44,5 +44,22 @@ gap> FrobeniusNumber(S);
 ```
 
 It holds that for every numerical semigroup, $F(S) = \max PF(S)$.
+
+$\diamond$ Given a list $L$, the function `NumericalSemigroupsWithPseudoFrobeniusNumbers` returns all the numerical semigroups $S$ such that $PF(S) = L$. If we are looking for an example of a numerical semigroup $S$ so that $PF(S) = L$, we can apply `ANumericalSemigroupsWithPseudoFrobeniusNumbers`.
+
+``` gap
+gap> pf := [ 58, 64, 75 ];
+[ 58, 64, 75 ]
+gap> Length(NumericalSemigroupsWithPseudoFrobeniusNumbers(pf));
+561
+gap> pf := [58, 64, 75];
+[ 58, 64, 75 ]
+gap> S := ANumericalSemigroupWithPseudoFrobeniusNumbers(pf);     
+<Numerical semigroup>
+gap> MinimalGenerators(S);
+[ 12, 30, 31, 35, 37, 41, 50, 56, 57 ]
+```
+
+The function `MinimalGenerators` returns the set of [minimal generators]() of a given numerical semigroup. Then, there is $561$ numerical semigroups with set of pseudo-Frobenius numbers $L = \{58, 64, 75\}$ and one of them is $S = \langle 12, 30, 31, 35, 37, 41, 50, 56, 57 \rangle$.
 
 ## References

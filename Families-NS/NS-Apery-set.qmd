@@ -12,7 +12,7 @@ Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [m
 
 ## Examples
 
-$\circ$ Let $S = \langle 4, 6, 11 \rangle$. It is easy to check that $Ap(S, 4) \subseteq \{0, 4, 6, 8, 10, 11, 12, 14, 15, 16, 17\}$ and $Ap(S, 4) = \{0, 6, 11, 17\}$. Since $s = 6$ and $s = 11$ are minimal generators, both have unique expression. For $s = 17$, we have the unique expression $17 = 6 + 11$. Therefore, $S$ is a numerical semigroup with Apéry set of unique expression
+$\circ$ Let $S = \langle 4, 6, 11 \rangle$. It is easy to check that $Ap(S, 4) \subseteq \{0, 4, 6, 8, 10, 11, 12, 14, 15, 16, 17\}$ and $Ap(S, 4) = \{0, 6, 11, 17\}$. Since $s = 6$ and $s = 11$ are minimal generators, both have unique expression. For $s = 17$, we have the unique expression $17 = 6 + 11$. Therefore, $S$ is a numerical semigroup with Apéry set of unique expression.
 
 ## Examples with GAP
 

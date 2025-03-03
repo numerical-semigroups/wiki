@@ -8,10 +8,10 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $B = \{n_1, \ldots, n_e\}$ with $n_1 < n_2 < \cdots < n_e$. For each $i \in \{2, \ldots, e\}$, set
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $P = \{n_1, \ldots, n_e\}$ with $n_1 < n_2 < \cdots < n_e$. For each $i \in \{2, \ldots, e\}$, set
 
 $$
-c_i = \min \{k \in \mathbb{N} \setminus \{0\} ~ | ~ kn_i \in \langle B \setminus \{n_i\} \rangle\}.
+c_i = \min \{k \in \mathbb{N} \setminus \{0\} ~ | ~ kn_i \in \langle P \setminus \{n_i\} \rangle\}.
 $$
 
 It is said that $S$ is simple if $n_1 = (c_2 - 1) + \cdots + (c_e - 1)$.

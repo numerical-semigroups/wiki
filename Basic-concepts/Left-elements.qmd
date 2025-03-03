@@ -6,7 +6,7 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and $F(S)$ the [Frobenius number](Frobenius-number.qmd) of $S$. An element $s \in \mathbb{N}$ is a left element (or small element) of $S$ if $s \in S$ and $s < F(S)$. The set of left elements is denoted by $N(S)$ or $L(S)$.
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and $F(S)$ the [Frobenius number](Frobenius-number.qmd) of $S$. An element $s \in \mathbb{N}$ is a left element of $S$ if $s \in S$ and $s < F(S)$. The set of left elements is denoted by $N(S)$ or $L(S)$. If we include the [conductor](Conductor.qmd) in $N(S)$, they are said small elements.
 
 The set of left elements is always non-empty, due to $0 \in N(S)$, and determines the numerical semigroup.
 
@@ -18,7 +18,7 @@ $\circ$ Let us consider $b \in \mathbb{N}$ an odd integer arbitrary but fixed an
 
 ## Examples with GAP
 
-The following example is made with the package NumericalSgps in GAP.
+The following examples are made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 4, 13, 17, 20 \rangle$, in GAP:
 
@@ -27,7 +27,7 @@ gap> S := NumericalSemigroup(4, 13, 17, 20);
 <Numerical semigroup with 4 generators>
 ```
 
-If we want to compute the left elements of $S$, the function `SmallElements` returns a list with the left elements and the [conductor](Conductor.qmd) of $S$.
+If we want to compute the left elements of $S$, the function `SmallElements` returns a list with the small elements (left elements and the conductor) of $S$.
 
 ``` gap
 gap> SmallElements(S);
@@ -41,4 +41,30 @@ gap> Gaps(S);
 [ 1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 15, 18, 19, 22, 23, 27, 31, 35 ]
 ```
 
+
+$\diamond$ Given a list of non-negative integers, the function `NumericalSemigroupBySmallElements` generates a numerical semigroup determined by the list if it is possible, which is considered as the list of small elements of the numerical semigroup.
+
+
+```gap
+gap> l := [0,5,10,11,14,15,16,19,20,21,22,24];
+[ 0, 5, 10, 11, 14, 15, 16, 19, 20, 21, 22, 24 ]
+gap> S := NumericalSemigroupBySmallElements(l);
+<Numerical semigroup>
+gap> MinimalGenerators(S);
+[ 5, 11, 14 ]
+```
+The function `MinimalGenerators` returns the [minimal set of generators](Minimal-set-of-generators.qmd) of $S$. It is obtained that $S = \langle 5, 11, 14 \rangle$ and $N(S) = \{0, 5, 10, 11, 14, 15, 16, 19, 20, 21, 22\}$.
+
+
+The function `RepresentsSmallElementsOfNumericalSemigroup` returns true or false depending on whether a given list may represent the small elements of a numerical semigroup.
+
+```gap
+gap> RepresentsSmallElementsOfNumericalSemigroup(l);
+true
+```
+
+
+
 ## References
+
+

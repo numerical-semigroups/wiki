@@ -12,9 +12,7 @@ Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). I
 
 ## Examples
 
-<!-- Ejemplo de Num. Sem. -->
-
-$\circ$ Let $S = \langle 7, 11, 13, 15, 16, 17, 19 \rangle$ and let $s = s_1 = 11$ and $s_2 = 7$. For $z_1 = 2, z_2 = -3$, we have $z_1 s_1 + z_2 s_2 = 2 \cdot 11 - 3 \cdot 7 = 1 \ge 0$, but $11 + 1 = 12 \not \in S$. Therefore, $S$ is not saturated. It can be proven that $S$ is [Arf](Arf-semigroup.qmd).
+$\circ$ Let $S = \langle 7, 11, 15, 16, 17, 19, 20 \rangle$ and let $s = s_1 = 11$ and $s_2 = 7$. For $z_1 = 2, z_2 = -3$, we have $z_1 s_1 + z_2 s_2 = 2 \cdot 11 - 3 \cdot 7 = 1 \ge 0$, but $11 + 1 = 12 \not \in S$. Therefore, $S$ is not saturated. It can be proven that $S$ is [Arf](Arf-semigroup.qmd).
 
 $\circ$ Every saturated numerical semigroup $S$ is Arf. Indeed, given $x \ge y \ge z$, we have $y - z \ge 0$. Since $S$ is saturated, $x + y - z \in S$ and $S$ is Arf.
 
@@ -36,7 +34,11 @@ gap> IsSaturated(S);
 false
 ```
 
-$\diamond$ Given an integer $f$, the function `SaturatedNumericalSemigroupsWithFrobeniusNumber` returns a list with all the saturated numerical semigroups with frobenius number $f$.
+$\diamond$ Given an integer $f$, the function `SaturatedNumericalSemigroupsWithFrobeniusNumber` returns a list with all the saturated numerical semigroups with Frobenius number $f$.
 
+``` gap
+gap> Length(SaturatedNumericalSemigroupsWithFrobeniusNumber(23));
+84
+```
 
 ## References

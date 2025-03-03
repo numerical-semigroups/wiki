@@ -1,5 +1,5 @@
 ---
-title: "Half-line numerical semigroup"
+title: "Half-line / ordinary numerical semigroup"
 format: html
 engine: markdown
 ---
@@ -12,15 +12,17 @@ Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) an
 
 ## Examples
 
-$\circ$ Let $S$ a numerical semigroup. Let us prove that its [dominant](../Basic-concepts/Dominant.qmd) is $d(S) = 0$ if, and only if, $S$ is half-line.
+$\circ$ Let $S$ be a numerical semigroup. Let us prove that its [dominant](../Basic-concepts/Dominant.qmd) is $d(S) = 0$ if, and only if, $S$ is half-line.
 
 $\Rightarrow$ If $d(S) = 0$, by definition,
 
 $$
- d(S) = \max \{s \in S ~ | ~ s < C(S) \} = 0,
- $$ therefore, $S = \{0, c(S), \rightarrow \}$.
+ d(S) = \max \{s \in S ~ | ~ s < C(S) \} = 0.
+$$
 
-$\Leftarrow$ If $S = \{0, C(S), \rightarrow\}$, the only element $s \in S$ such that $s < C(S)$ is $s = 0$, thus, $d(S) = 0$.
+Therefore, $S = \{0, C(S), \rightarrow \}$.
+
+$\Leftarrow$ If $S = \{0, C(S), \rightarrow\}$, the only element $s \in S$ such that $s < C(S)$ is $s = 0$. Thus, $d(S) = 0$.
 
 ## Examples with GAP
 

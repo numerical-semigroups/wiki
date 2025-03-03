@@ -16,10 +16,10 @@ Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) an
 
 $\circ$ The set $\mathcal{P}(x_1 + x_2 - x_3)$ is the set of [Arf numerical semigroups](Arf-semigroup.qmd).
 
-$\circ$ Let $a_1x_1 + \cdots + a_nx_n$ be a pattern $P$. Let us prove that $\mathbb{N} \in \mathcal{S}(P)$ if, and only if, $\mathcal{S}(P)$ is non-empty. The sufficient condition is obvious. On the other hand, if the set is non-empty, there exists $S \in \mathcal{S}(P)$ such that for every $s_1, \ldots, s_n \in S$ with $s_1 \ge s_2 \ge \ldots \ge s_n$, the element $a_1s_1 + \cdots + a_n s_n$ belongs to $S$. If we take $s = s_1 = s_2 = \cdots = s_n \in S^*$, since $a_1 s_1 + \cdots a_n s_n \in S$, it must be $\sum_{i = 1}^n a_i \ge 0$. Then, given $m_1 \ge m_2 \ge \cdots \ge m_n$ non-negative integers, it can be proven by induction that
+$\circ$ Let $a_1x_1 + \cdots + a_nx_n$ be a pattern $P$. Let us prove that $\mathbb{N} \in \mathcal{S}(P)$ if, and only if, $\mathcal{S}(P)$ is non-empty. The sufficient condition is obvious. On the other hand, if the set is non-empty, there exists $S \in \mathcal{S}(P)$ such that for every $s_1, \ldots, s_n \in S$ with $s_1 \ge s_2 \ge \ldots \ge s_n$, the element $a_1s_1 + \cdots + a_n s_n$ belongs to $S$. If we take $s = s_1 = s_2 = \cdots = s_n \in S^*$, since $a_1 s_1 + \cdots + a_n s_n \in S$, it must be $\sum_{i = 1}^n a_i \ge 0$. Then, given $m_1 \ge m_2 \ge \cdots \ge m_n$ non-negative integers, it can be proven by induction that
 
 $$
-a_1 m_1 + \cdots a_n m_n \ge a_1 m_n + \cdots m_n = \left( \sum_{i = 0}^n a_i \right) m_n \ge 0
+a_1 m_1 + \cdots + a_n m_n \ge a_1 m_n + \cdots + a_nm_n = \left( \sum_{i = 0}^n a_i \right) m_n \ge 0
 $$
 
 Therefore, $\mathbb{N} \in \mathcal{S}(P)$.

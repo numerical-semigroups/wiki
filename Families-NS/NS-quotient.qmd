@@ -8,7 +8,7 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $p$ be a positive integer. It is defined the quotient of $S$ by $p$ as
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $p$ be a positive integer. It is defined the quotient of $S$ by $p$, denoted by $\frac{S}{p}$, as
 
 $$
 \frac{S}{p} = \{ x \in \mathbb{N} ~ | ~ px \in S \}.
@@ -18,7 +18,7 @@ It can be proven that $\frac{S}{p}$ is a numerical semigroup such that $S \subse
 
 ## Examples
 
-$\circ$ Let $S = \langle 5, 7, 9 \rangle = \{0, 5, 7, 9, 10, 12, 14, \rightarrow \}$ and $p = 2$. If $2x \ge 14$, then $2x \in S$, therefore $x \in \frac{S}{2}$ for $x \ge 7$. If $x \in \{5, 6\}$, then $2x \in \{10, 12\} \subseteq S$. Finally, if $x \in \{1, 2, 3, 4\}$, it is obtained that $2x \not \in S$, therefore, $\frac{S}{2} = \{0, 5, \rightarrow \}$.
+$\circ$ Let $S = \langle 5, 7, 9 \rangle = \{0, 5, 7, 9, 10, 12, 14, \rightarrow \}$ and $p = 2$. If $2x \ge 14$, then $2x \in S$, therefore $x \in \frac{S}{2}$ for $x \ge 7$. If $x \in \{5, 6\}$, then $2x \in \{10, 12\} \subseteq S$. Finally, if $x \in \{1, 2, 3, 4\}$, it is obtained that $2x \not \in S$. Therefore, $\frac{S}{2} = \{0, 5, \rightarrow \}$.
 
 ## Examples with GAP
 
@@ -36,6 +36,13 @@ Given a numerical semigroup and a positive integer $p$, the function `QuotientOf
 ``` gap
 gap> T := QuotientOfNumericalSemigroup(S, 6);
 <Numerical semigroup>
+```
+
+It is also possible to generate it with the / operator.
+
+``` gap
+gap> T = S / 6;
+true
 ```
 
 The function `SmallElements` returns a list with the [left elements](../Basic-concepts/Left-elements.qmd) and the [conductor](../Basic-concepts/Conductor.qmd) of the numerical semigroup.

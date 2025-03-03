@@ -12,11 +12,11 @@ Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), $
 
 $\circ$ Let $S = \langle 5, 7, 9 \rangle = \{0, 5, 7, 9, 10, 12, 14\}$. It is easy to see that the set of gaps is $G(S) = \{1, 2, 3, 4, 6, 8, 11, 13\}$, the Frobenius number is $F(S) = 13$ and the set of [pseudo-Frobenius numbers](../Basic-concepts/Pseudo-Frobenius-number.qmd) is $PF(S) = \{11, 13\}$. Therefore, $g(S) = |G(S)| = 8, t(S) = |PF(S)| = 2$ and $2g(S) = 16 \ne 15 = 13 + 2 = F(S) + t(S)$, to sum up, $S$ is not an almost symmetric numerical semigroup.
 
-$\circ$ Let $a,b \in \mathbb{N}$ with $gcd(a,b) = 1$ and $S = \langle a, b \rangle$. It is well known that for numerical semigroups of [embedding dimension](../Basic-concepts/Embedding-dimension.qmd) two, $t(S) = 1$ and $2g(S) = F(S) + 1 = F(S) + t(S)$, therefore, every numerical semigroup with embedding dimension two is almost symmetric.
+$\circ$ Let $a,b \in \mathbb{N}$ with $gcd(a,b) = 1$ and $S = \langle a, b \rangle$. It is well known that for numerical semigroups of [embedding dimension](../Basic-concepts/Embedding-dimension.qmd) two, $t(S) = 1$ and $2g(S) = F(S) + 1 = F(S) + t(S)$. Therefore, every numerical semigroup with embedding dimension two is almost symmetric.
 
 ## Examples with GAP
 
-The following example is made with the package NumericalSgps in GAP.
+The following examples are made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 12, 15, 19 \rangle$, in GAP:
 
@@ -25,10 +25,12 @@ gap> S := NumericalSemigroup(12, 15, 19);
 <Numerical semigroup with 3 generators>
 ```
 
-The function `IsAlmostSymmetric` returns true or false depending on whether a numerical semigroup is almost symmetric or not.
+The functions `IsAlmostSymmetric` and `IsAlmostSymmetricNumericalSemigroup` return true or false depending on whether a numerical semigroup is almost symmetric or not.
 
 ``` gap
 gap> IsAlmostSymmetric(S);
+true
+gap> IsAlmostSymmetric(S) = IsAlmostSymmetricNumericalSemigroup(S);
 true
 ```
 
@@ -45,14 +47,29 @@ gap> 2*g = F + t;
 true
 ```
 
-If we are interested in how many almost symmetric numerical semigroups exist with a fixed Frobenius number $f$ and type $t$, the function `AlmostSymmetricNumericalSemigroupsWithFrobeniusNumberAndType` returns a list of all these almost symmetric numerical semigroups.
+$\diamond$ Given a numerical semigroup, the function `AlmostSymmetricNumericalSemigroupsFromIrreducible` returns a list with all the numerical semigroups that can be constructed from by removing some of its generators.
+
+<!-- Ejemplo del tutorial GAP -->
+
+``` gap
+gap> S := NumericalSemigroup(5, 8, 9, 11);
+<Numerical semigroup with 4 generators>
+gap> l := AlmostSymmetricNumericalSemigroupsFromIrreducible(S);
+[ <Numerical semigroup with 4 generators>,
+  <Numerical semigroup with 5 generators>,
+  <Numerical semigroup with 5 generators> ]
+gap> List(l, MinimalGenerators);
+[ [ 5, 8, 9, 11 ], [ 5, 8, 11, 14, 17 ], [ 5, 9, 11, 13, 17 ] ]
+```
+
+$\diamond$ If we are interested in how many almost symmetric numerical semigroups exist with a fixed Frobenius number $f$ and type $t$, the function `AlmostSymmetricNumericalSemigroupsWithFrobeniusNumberAndType` returns a list of all these almost symmetric numerical semigroups.
 
 ``` gap
 gap> Length(AlmostSymmetricNumericalSemigroupsWithFrobeniusNumber(12));
 15
 ```
 
-There is an extension of the previous function, that is, `AlmostSymmetricNumericalSemigroupsWithFrobeniusNumber`, which returns all the almost symmetric numerical semigroups with fixed Frobenius number $f$ and type greater or equal to $t$.
+There is an extension of the previous function, that is, `AlmostSymmetricNumericalSemigroupsWithFrobeniusNumber`, which returns all the almost symmetric numerical semigroups with fixed Frobenius number $f$ and type greater than or equal to $t$.
 
 ``` gap
 gap> Length(AlmostSymmetricNumericalSemigroupsWithFrobeniusNumberAndType(12,6));

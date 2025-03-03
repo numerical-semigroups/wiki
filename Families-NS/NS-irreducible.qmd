@@ -6,7 +6,7 @@ engine: markdown
 
 ## Definition
 
-A [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) $S$ is said to be irreducible if it cannot be expressed as the intersection of two numerical semigroups properly containing it.
+A [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) $S$ is said to be irreducible if it cannot be expressed as the intersection of two numerical semigroups properly containing it. The set of irreducible numerical semigroups is divided in two big families: [symmetric numerical semigroups](NS-symmetric.qmd) and [pseudo-symmetric numerical semigroups](NS-pseudo-symmetric.qmd), depending on whether $F(S)$ is odd (symmetric case) or even (pseudo-symmetric case).
 
 It is well known that the intersection of two numerical semigroups is also a numerical semigroup.
 

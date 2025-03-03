@@ -8,9 +8,15 @@ engine: markdown
 
 A [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) $S$ is said to be symmetric if it is [irreducible](NS-irreducible.qmd) and its [Frobenius number](../Basic-concepts/Frobenius-number.qmd) is odd.
 
+It can be proven that $S$ is symmetric if, and only if,
+
+$$
+g(S) = \frac{F(S)+1}{2},
+$$ where $g(S)$ denotes the [genus](../Basic-concepts/Genus.qmd) of $S$.
+
 ## Examples
 
-$\circ$ Let $S = \langle 4, 10, 17 \rangle$. This numerical semigroup is irreducible and if we compute the first elements of $S$, we obtain that $S = \{0, 4, 8, 10, 12, 14, 16, 17, 18, 20, 21, 22, 24, \rightarrow \}$, so $F(S) = 23$ and $S$ is a symmetric numerical semigroup.
+$\circ$ Let $S = \langle 4, 10, 17 \rangle$. This numerical semigroup is irreducible and if we compute the first elements of $S$, we obtain that $S = \{0, 4, 8, 10, 12, 14, 16, 17, 18, 20, 21, 22, 24, \rightarrow \}$. Hence, $F(S) = 23$ and $S$ is a symmetric numerical semigroup.
 
 ## Examples with GAP
 
@@ -23,11 +29,13 @@ gap> S := NumericalSemigroup(4, 5, 7);
 <Numerical semigroup with 3 generators>
 ```
 
-The function `IsSymmetric` returns if $S$ is a symmetric numerical semigroup.
+The functions `IsSymmetric` and `IsSymmetricNumericalSemigroup` return if $S$ is a symmetric numerical semigroup.
 
 ``` gap
 gap> IsSymmetric(S);
 false
+gap> IsSymmetric(S) = IsSymmetricNumericalSemigroup(S);
+true
 ```
 
 The output is false, thus, $S$ is not a symmetric numerical semigroup, we can check where it fails. First, the function `IsIrreducible` returns true or false depending on whether the numerical semigroup is irreducible or not.
