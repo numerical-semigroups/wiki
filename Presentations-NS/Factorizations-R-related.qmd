@@ -12,7 +12,7 @@ Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), a
 
 -   for all $i \in \{1, 2, \ldots, t-1\}$, $a_i \cdot a_{i+1} \ne 0$, where the dot product is component by component.
 
-Note that two elements are $\mathcal{R}-$related is an equivalence relation. The equivalence classes are called $\mathcal{R}-$classes.
+It can be proven that two elements are $\mathcal{R}-$related is an equivalence relation. The equivalence classes are called $\mathcal{R}-$classes.
 
 ## Examples
 
@@ -35,7 +35,7 @@ gap> S := NumericalSemigroup(21, 22, 41, 42);
 <Numerical semigroup with 4 generators>
 ```
 
-The function `RClassesOfSetOfFactorizations` has as parameter the set of factorizations of an element of a numerical semigroup and returns its set of $\mathcal{R}-$classes. The set of factorizations of an element can be computed with the function `Factorizations`.
+Given a set of factorizations of an element $s \in S$, where $S$ is a numerical semigroup, the function `RClassesOfSetOfFactorizations` returns a list with the $\mathcal{R}-$classes in $\mathbf{Z}(s)$. The set of factorizations of an element can be computed with the functions `Factorizations` and `FactorizationsElementWRTNumericalSemigroup`.
 
 ``` gap
 

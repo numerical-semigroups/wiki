@@ -1,14 +1,14 @@
 ---
 title: "Graph associated to an element by set of factorizations"
 format: html
-editor: visual
-execute: 
-  echo: false
+engine: markdown
 ---
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $s \in S$. It is defined the graph associated to $s$ as the graph whose vertices are the elements of its [set of factorizations](Set-of-factorizations.qmd) and $a,b$ are related if $a \cdot b \ne 0$, where the dot product multiplies component by component The graph associated to an element $s \in S$ is denoted by $\nabla_s$.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $s \in S$. It is defined the graph associated to $s$ as the graph whose vertices are the elements of $\mathbf{Z}(s)$, the [set of factorizations](Set-of-factorizations.qmd) of $s$, and there is an edge between $a,b \in \mathbf{Z}(s)$ if $a \cdot b \ne 0$, where the dot product multiplies component by component. The graph associated to an element $s \in S$ is denoted by $\nabla_s$. The connected components of $\nabla_s$ are determined by the [R-classes](Factorizations-R-related.qmd) in $\mathbf{Z}(s)$.
+
+If the graph $\nabla_s$ is not connected, it is said that $s$ is a [Betti element](Betti-element.qmd).
 
 ## Examples
 
@@ -20,27 +20,55 @@ $$
 
 The graph associated to $s = 60$ is as follows.
 
-```{r librerias, include=FALSE, warning=FALSE}
+```{dot}
 
-library(tidyverse)
-library(tidygraph)
-library(ggraph)
-```
-
-```{r grafo ejemplo1, fig.height=3, fig.width=3}
-tabla_aristas = data.frame("from" = c( "(12,0,0)", "(12,0,0)", "(0,5,0)", "(0,5,0)", "(7,1,1)" ),
-                           "to" = c( "(7,1,1)", "(2,2,2)", "(7,1,1)", "(2,2,2)", "(2,2,2)" ))
-
-ggraph(tabla_aristas, layout = "igraph", algorithm = "kk") + 
-  geom_edge_link(width = 1, colour = "lightgray") +
-  geom_node_point(size = 6, colour = "lightblue") +
-  geom_node_text(aes(label = c("(12,0,0)", "(0,5,0)", "(7,1,1)", "(2,2,2)")), repel = TRUE) +
-  coord_fixed() +
-  theme_graph()
+graph G {
+  layout = neato
+  overlap = false
+  node [shape = circle, fixedsize = true, width = 0.9]; (12, 0, 0); (7, 1, 1); (0, 5, 0); (2, 2, 2);
+  (12, 0, 0) -> (7, 1, 1);
+  (12, 0, 0) -> (2, 2, 2);
+  (0, 5, 0) -> (7, 1, 1); 
+  (0, 5, 0) -> (2, 2 , 2);
+  (7, 1, 1) -> (2, 2, 2);
+}
 ```
 
 ## Examples with GAP
 
-Nowadays, there are no functions in package NumericalSgps related to graph associated to an element.
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 14, 17, 21, 30 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(14, 17, 21, 30);
+<Numerical semigroup with 4 generators>
+```
+
+Given a numerical semigroup $S$ and an element $n$ of it, the functions `Factorizations` and `FactorizationsElementWRTNumericalSemigroup` return the set of factorizations of $n$ in terms of the minimal generating set of $S$, therefore, they return the set of vertices of $\nabla_n$.
+
+``` gap
+gap> z := Factorizations(S, 215);
+[ [ 2, 11, 0, 0 ], [ 9, 4, 1, 0 ], [ 6, 4, 3, 0 ], [ 3, 4, 5, 0 ], [ 0, 4, 7, 0 ],
+  [ 12, 1, 0, 1 ], [ 2, 8, 1, 1 ], [ 9, 1, 2, 1 ], [ 6, 1, 4, 1 ], [ 3, 1, 6, 1 ],
+  [ 0, 1, 8, 1 ], [ 5, 5, 0, 2 ], [ 2, 5, 2, 2 ], [ 5, 2, 1, 3 ], [ 2, 2, 3, 3 ],
+  [ 1, 3, 0, 5 ], [ 1, 0, 1, 6 ] ]
+gap> Factorizations(S, 215) = Factorizations(215, S);
+true
+gap> Factorizations(S, 215) = FactorizationsElementWRTNumericalSemigroup(215, S);
+true
+```
+
+Given a set of factorizations of an element $n \in S$, where $S$ is a numerical semigroup, the function `RClassesOfSetOfFactorizations` returns a list with the $\mathcal{R}-$classes in $\mathbf{Z}(n)$, therefore, it returns the connected components of $\nabla_n$.
+
+``` gap
+gap> RClassesOfSetOfFactorizations(z);
+[ [ [ 0, 1, 8, 1 ], [ 0, 4, 7, 0 ], [ 1, 0, 1, 6 ], [ 1, 3, 0, 5 ], [ 2, 2, 3, 3 ],
+      [ 2, 5, 2, 2 ], [ 2, 8, 1, 1 ], [ 2, 11, 0, 0 ], [ 3, 1, 6, 1 ],
+      [ 3, 4, 5, 0 ], [ 5, 2, 1, 3 ], [ 5, 5, 0, 2 ], [ 6, 1, 4, 1 ], [ 6, 4, 3, 0 ],
+      [ 9, 1, 2, 1 ], [ 9, 4, 1, 0 ], [ 12, 1, 0, 1 ] ] ]
+```
+
+In this case, $\nabla_{215}$ is connected.
 
 ## References

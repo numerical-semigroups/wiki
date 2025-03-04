@@ -22,6 +22,8 @@ $$
 E_n = \{\{n_i, n_j\} ~ | ~ n - (n_i + n_j) \in S, i \ne j\}.
 $$
 
+It can be proven that the number of connected components of $G_n$ is equal to the number of [R-classes](Factorizations-R-related.qmd) in $\mathbf{Z}(s)$, where $\mathbf{Z}(s)$ denotes the [set of factorizations](Set-of-factorizations.qmd) of $s$ in $S$.
+
 ## Examples
 
 $\circ$ Let $S = \langle 6, 7, 11, 15 \rangle$ and $n = 25$. We have $25 - 6 = 19, 25 - 7 = 18, 25 - 11 = 14, 25 - 15 = 10$, where $\{19, 18, 14\} \subseteq S$ and $15 \not \in S$, then $V_{25} = \{6, 7, 11\}$. Now we compute the edges,
@@ -55,6 +57,17 @@ ggraph(tabla_aristas, layout = "igraph", algorithm = "kk") +
   theme_graph()
 ```
 
+```{dot}
+
+graph G {
+  layout = neato
+  overlap = false
+  node [shape = circle, fixedsize = true, width = 0.9]; (6, 7); (7, 11)
+  (6, 7) -> (7, 11);
+}
+
+```
+
 ## Examples with GAP
 
 The following example is made with the package NumericalSgps in GAP.
@@ -72,6 +85,22 @@ Given a numerical semigroup $S$ and an element $n$ of it, the function `GraphAss
 gap> GraphAssociatedToElementInNumericalSemigroup(114,S);
 [ [ 14, 27, 31, 33 ],
   [ [ 14, 27 ], [ 14, 31 ], [ 27, 31 ], [ 27, 33 ] ] ]
+```
+
+The graph $G_{114}$ is as follows.
+
+```{dot}
+
+graph G {
+  layout = neato
+  overlap = false
+  node [shape = circle, fixedsize = true, width = 0.9]; 14; 27; 31; 33;
+  14 -> 27;
+  14 -> 31;
+  27 -> 31;
+  27 -> 33;
+}
+
 ```
 
 ## References

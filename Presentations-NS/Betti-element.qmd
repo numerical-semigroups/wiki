@@ -8,11 +8,13 @@ engine: markdown
 
 Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), an element $s \in S$ and $\nabla_s$ the [graph associated](Graph-associated-to-an-element.qmd) to $s$. It is said that $s \in S$ is a Betti element if $\nabla_s$ is not connected.
 
+It can be proven that in order to obtain a [presentation](Presentation-NS.qmd) of a numerical semigroup, we only have to take into account the Betti elements.
+
 ## Examples
 
-$\circ$ Let $S = \langle 15, 18, 35 \rangle$ and $s = 90 \in S$. The [set of factorizations](Set-of-factorizations.qmd) of $s$ is $\mathbf{Z}(90) = \{(6,0,0), (0,5,0)\}$ and $(6,0,0), (0,5,0)$ are not [R-related](Factorizations-R-related.qmd), then $\nabla_{90}$ has two connected components and $s$ is a Betti element.
+$\circ$ Let $S = \langle 15, 18, 35 \rangle$ and $s = 90 \in S$. The [set of factorizations](Set-of-factorizations.qmd) of $s$ is $\mathbf{Z}(90) = \{(6,0,0), (0,5,0)\}$ and $(6,0,0), (0,5,0)$ are not [R-related](Factorizations-R-related.qmd). Then, $\nabla_{90}$ has two connected components and $s$ is a Betti element.
 
-$\circ$ Let $S = \langle 10, 11, 15 \rangle$ and $s = 100 \in S$. We have $\mathbf{Z}(100) = \{ (10, 0, 0), (3, 5, 1), (7, 0, 2), (0, 5, 3), (4, 0, 4), (1, 0, 6) \}$ but each pair is $\mathcal{R}-$related, therefore $s$ is not a Betti element.
+$\circ$ Let $S = \langle 10, 11, 15 \rangle$ and $s = 100 \in S$. We have $\mathbf{Z}(100) = \{ (10, 0, 0), (3, 5, 1), (7, 0, 2), (0, 5, 3), (4, 0, 4), (1, 0, 6) \}$ but each pair is $\mathcal{R}-$related. Therefore, $s$ is not a Betti element.
 
 ## Examples with GAP
 
@@ -25,11 +27,13 @@ gap> S := NumericalSemigroup(12, 34, 50, 79, 107);
 <Numerical semigroup with 5 generators>
 ```
 
-Given a numerical semigroup, its Betti elements can be computed with the function `BettiElements`.
+Given a numerical semigroup, its Betti elements can be computed with the functions `BettiElements` and `BettiElementsOfNumericalSemigroup`.
 
 ``` gap
 gap> BettiElements(S);
 [ 84, 136, 141, 150, 158, 179, 181, 186, 207, 214 ]
+gap> BettiElements(S) = BettiElementsOfNumericalSemigroup(S);
+true
 ```
 
 Let us check that $s = 84$ is a Betti element. The function `Factorizations` computes the factorization of an element with respect to a numerical semigroup.
@@ -39,7 +43,7 @@ gap> Factorizations(S, 84);
 [ [ 7, 0, 0, 0, 0 ], [ 0, 1, 1, 0, 0 ] ]
 ```
 
-On the other hand, the function `RClassesOfSetOfFactorizations` returns a list with the $\mathcal{R}-$classes. As each class represent a connected component of the graph $\nabla_s$, its length is equal to the number of components of the graph.
+On the other hand, the function `RClassesOfSetOfFactorizations` returns a list with the $\mathcal{R}-$classes. As each class represent a connected component of the graph $\nabla_s$, the number of $\mathcal{R}-$classes is equal to the number of components of the graph.
 
 ``` gap
 gap> RClassesOfSetOfFactorizations(Factorizations(S, 84));
@@ -47,5 +51,7 @@ gap> RClassesOfSetOfFactorizations(Factorizations(S, 84));
 gap> Length(RClassesOfSetOfFactorizations(Factorizations(S, 84)));
 2
 ```
+
+Therefore, $s = 84$ is a Betti element.
 
 ## References

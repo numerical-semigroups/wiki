@@ -1,5 +1,5 @@
 ---
-title: "Hilbert series"
+title: "Hilbert series / Generating function"
 format: html
 engine: markdown
 ---
@@ -16,11 +16,15 @@ The Hilbert series of a numerical semigroup is also known as the generating func
 
 $$
 \chi(\mathcal{F}(n)) = \sum_{L \in \mathcal{F}(n)} (-1)^{|L|},
-$$ is the Euler characteristic, it can be proven that
+$$
+
+is the Euler characteristic, it can be proven that
 
 $$
 H_S(x)(1 - x^{n_1})\cdots(1-x^{n_e}) = \sum_{s \in S} \chi(\mathcal{F}(s))x^s,
-$$ and consequently,
+$$
+
+and consequently,
 
 $$
 H_S(x) = \frac{\sum_{s \in S} \chi(\mathcal{F}(s))x^s}{(1 - x^{n_1})\cdots(1-x^{n_e})}.
@@ -36,7 +40,9 @@ $$
 
 $$
 \chi(\mathcal{F}(s)) = 0 \hspace{0.3cm} \text{for } s = 2,4,5,6,7,8,9.
-$$ Finally, the Hilbert series of $S$ is
+$$
+
+Finally, the Hilbert series of $S$ is
 
 $$
 H_S(x) = \frac{1 - x^{10}}{(1 - x^2)(1-x^5)}.
@@ -56,6 +62,8 @@ gap> S := NumericalSemigroup(7, 10, 13, 15, 19);
 Given an indeterminate $x$ and a numerical semigroup $S$, the function `HilbertSeriesOfNumericalSemigroup` returns the Hilbert series of $S$ with indeterminate $x$.
 
 ``` gap
+gap> x := X(Rationals, "x");
+x
 gap> HilbertSeriesOfNumericalSemigroup(S,x);
 (x^19-x^18+x^17-x^16+x^13-x^11+x^10-x^8+x^7-x+1)/(-x+1)
 ```
