@@ -22,7 +22,7 @@ $$
 \ker(\phi) = \{(a,b) \in \mathbb{N}^p ~ | ~ \phi(a) = \phi(b)\}.
 $$
 
-It can be proven that $\ker(\phi)$ is always finitely generated. A minimal relation $\rho$ of $\ker(\phi)$ is called a [minimal presentation](Presentations-NS.qmd) of $S$. A minimal presentation of a numerical semigroup provides us the essential relations between the minimal generators.
+It can be proven that $\ker(\phi)$ is always finitely generated. A minimal relation $\rho$ of $\ker(\phi)$ is called a [minimal presentation](Presentation-NS.qmd) of $S$. A minimal presentation of a numerical semigroup provides us the essential relations between the minimal generators.
 
 ## Examples with GAP
 

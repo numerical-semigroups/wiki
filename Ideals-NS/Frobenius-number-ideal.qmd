@@ -8,34 +8,42 @@ engine: markdown
 
 Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $E$ a [relative ideal](Relative-ideal.qmd) of $S$. The Frobenius number of $E$ is defined as the maximum of the set $\mathbb{Z} \setminus E$, and it is denoted as $F(E)$.
 
-It is easy to prove from the definition of relative ideal that the set $\mathbb{Z} \setminus E$ always has a maximum. Unlike the Frobenius number of a numerical semigroup, $F(E)$ can be negative.
+It can be proven from the definition of relative ideal that the set $\mathbb{Z} \setminus E$ always has a maximum. Unlike the [Frobenius number](../Basic-concepts/Frobenius-number.qmd) of a numerical semigroup (other than $\mathbb{N}$), $F(E)$ can be negative.
 
 ## Examples
 
-$\circ$ Let $S$ a numerical semigroup, $F(S)$ its [Frobenius number](../Basic-concepts/Frobenius-number.qmd) and $E$ a relative ideal of $S$. If we define $\tilde{E} = E + (F(S) - F(E))$, then the maximum of the set $\mathbb{Z} \setminus \tilde{E}$ is the maximum of $\mathbb{Z} \setminus E$ adding $F(S) - F(E)$, that means, $F(\tilde{E}) = F(E) + F(S) - F(E) = F(S)$. To sum up, every relative ideal $E$ of $S$ is equivalent (see definition of [equivalence of relative ideals](Relative-ideal.qmd)) to a relative ideal with same Frobenius number as $S$.
+$\circ$ Let $S$ a numerical semigroup, $F(S)$ its Frobenius number and $E$ a relative ideal of $S$. Let
 
-$\circ$ Let $S$ a numerical semigroup, $F(S)$ its Frobenius number and $K(S)$ its [standard canonical ideal](Standard-canonical-ideal.qmd). Recall that $x \in K(S)$ if, and only if, $F(S) - x \not \in S$, thus $F(S) \not \in K(S)$. Furthermore, if $x > F(S)$, $F(S) - x < 0$ and $x \in K(S)$, in conclusion, $F(K(S)) = F(S)$.
+$$
+\tilde{E} = E + (F(S) - F(E)) = \{e + F(S) - F(E) ~ | ~ e \in E \}.
+$$
+
+The maximum of $\mathbb{Z} \setminus \tilde{E}$ is the maximum of $\mathbb{Z} \setminus E$ adding $F(S) - F(E)$, that means, $F(\tilde{E}) = F(E) + F(S) - F(E) = F(S)$. To sum up, every relative ideal $E$ of $S$ is equivalent to a relative ideal with same Frobenius number of $S$.
+
+$\circ$ Let $S$ a numerical semigroup, $F(S)$ its Frobenius number and $K(S)$ its [standard canonical ideal](Standard-canonical-ideal.qmd). By definition, $x \in K(S)$ if, and only if, $F(S) - x \not \in S$. Thus, $F(S) \not \in K(S)$. Furthermore, if $x > F(S)$, $F(S) - x < 0$ and $x \in K(S)$. In conclusion, $F(K(S)) = F(S)$.
 
 ## Examples with GAP
 
 The following example is made with the package NumericalSgps in GAP.
 
-$\diamond$ Let $S = \langle 15, 17, 23 \rangle$, $I = \{-12, -5, 4, 10\}$ and $K = I + S$, in GAP:
+$\diamond$ Let $S = \langle 15, 17, 23 \rangle$, $I = \{-12, -5, 4, 10\}$ and $IS = I + S$, in GAP:
 
 ``` gap
 gap> S := NumericalSemigroup(15, 17, 23);
 <Numerical semigroup with 3 generators>
 gap> I := [-12, -5, 4, 10];
 [ -12, -5, 4, 10 ]
-gap> K := I + S;
+gap> IS := I + S;
 <Ideal of numerical semigroup>
 ```
 
-The function `FrobeniusNumber` returns the Frobenius number of the relative ideal. This function also returns the Frobenius number of a numerical semigroup.
+The functions `FrobeniusNumber` and `FrobeniusNumberOfIdealOfNumericalSemigroup` return the Frobenius number of a given relative ideal. The function `FrobeniusNumber` also returns the Frobenius number of a given numerical semigroup.
 
 ``` gap
-gap> FrobeniusNumber(K);
+gap> FrobeniusNumber(IS);
 47
+gap> FrobeniusNumber(IS) = FrobeniusNumberOfIdealOfNumericalSemigroup(IS);
+true
 gap> FrobeniusNumber(S);
 88
 ```

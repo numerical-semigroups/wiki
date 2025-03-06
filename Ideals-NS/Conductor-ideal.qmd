@@ -14,28 +14,40 @@ $\circ$ Let $S = \langle 5, 8, 11 \rangle$. Computing the first elements of $S$,
 
 ## Examples with GAP
 
-The following example is made with the package NumericalSgps in GAP.
+The following examples are made with the package NumericalSgps in GAP.
 
-$\diamond$ Let $S = \langle 13, 15, 20 \rangle$, $I = \{8, 9, \ldots, 15\}$ and $K = I + S$, in GAP:
+$\diamond$ Let $S = \langle 13, 15, 20 \rangle$, in GAP:
 
 ``` gap
 gap> S := NumericalSemigroup(13, 15, 20);
 <Numerical semigroup with 3 generators>
-gap> I := [8..15];
-[ 8 .. 15 ]
-gap> K := I + S;
+```
+
+Given a numerical semigroup, the function `Conductor` returns the conductor of the numerical semigroup.
+
+``` gap
+gap> C = Conductor(S);
+78
+```
+
+Then, the conductor ideal of $S$ is $S - \mathbb{N} = \{78, \rightarrow\}$. The minimal system of generators of the conductor ideal is $I = \{C(S), C(S) + 1, \ldots, C(S) + m(S)\}$, where $m(S)$ denotes the [multiplicity](../Basic-concepts/Multiplicity.qmd) of $S$. The function `Multiplicity` computes the multiplicity of a given numerical semigroup.
+
+``` gap
+gap> M := Multiplicity(S);
+13
+gap> IS := [C..C+M] + S;
 <Ideal of numerical semigroup>
 ```
 
-There are two ways to compute the conductor of a numerical semigroup from the relative ideal, these are with the functions `Conductor` and `ConductorOfIdealOfNumericalSemigroup`. The function `Conductor` also computes the conductor of a numerical semigroup.
+$\diamond$ Given a relative ideal $IS$ of $S$, it can be defined the conductor of $IS$ as the least element $x \in IS$ such that $s + \mathbb{N} \subseteq IS$. This element exists since $IS + S \subseteq IS$. The functions `Conductor` and `ConductorOfIdealOfNumericalSemigroup` compute the conductor of a given relative ideal.
 
 ``` gap
-gap> Conductor(K);
-21
-gap> ConductorOfNumericalSemigroup(K);
-21
+gap> S := NumericalSemigroup(33, 49, 76, 133);
+<Numerical semigroup with 4 generators>
+gap> IS := [-13, -5, 6, 21] + S;
+<Ideal of numerical semigroup>
+gap> Conductor(IS);
+232
 ```
-
-Therefore the conductor ideal of $K = I + S$ is $K - \mathbb{N} = \{21, \rightarrow\}$.
 
 ## References

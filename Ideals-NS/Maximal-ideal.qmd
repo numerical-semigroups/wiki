@@ -6,11 +6,11 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is defined the maximal ideal of $S$ as the subset $S^*$, and is denoted by $M(S)$. This definition is motivated by the definitions [relative ideal](Relative-ideal.qmd) of $S$ and [proper ideal](Proper-ideal.qmd) of $S$.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is defined the maximal ideal of $S$ as the subset $M = S^*$, and it is denoted by $M(S)$. This definition is motivated by the definitions of [relative ideal](Relative-ideal.qmd) of $S$ and [proper ideal](Proper-ideal.qmd) of $S$.
 
 ## Examples
 
-$\circ$ Let $S$ a numerical semigroup and $E$ a proper ideal of $S$. By definition, $E \subseteq S$, and if $0 \in E$, then $S \subseteq S + E$, but if $E$ is a proper ideal of $S$, $S + E \subseteq E$, therefore $E = S$. In conclusion, every proper ideal of $S$ is a subset of $S^*$.
+$\circ$ Let $S$ a numerical semigroup and $E$ a proper ideal of $S$. By definition, $E \subseteq S$, and if $0 \in E$, then $S \subseteq S + E$. On the other hand, by definition of proper ideal, $S + E \subseteq E$, concluding that $E = S$. In conclusion, every proper ideal of $S$ other than $S$ is a subset of $S^*$.
 
 ## Examples with GAP
 

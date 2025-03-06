@@ -35,18 +35,17 @@ ggraph(tabla_aristas, layout = "igraph", algorithm = "kk") +
   coord_fixed() +
   theme_graph()
 
-
 ```
 
-```{dot}
+```{r}
 
-graph G {
-  layout = neato
-  overlap = false
-  node [shape = circle, fixedsize = true, width = 0.9]; 
-  (3, 0, 1, 0) -> (1, 3, 0, 0);
-  (0, 0, 0, 2) -> (0, 0, 0, 2);
-}
+# graph G {
+  #layout = neato
+#  overlap = false
+#  node [shape = circle, fixedsize = true, width = 0.9]; 
+ # (3, 0, 1, 0) -> (1, 3, 0, 0);
+  #(0, 0, 0, 2) -> (0, 0, 0, 2);
+#}
 
 ```
 

@@ -16,7 +16,7 @@ It can be proven that the standard canonical ideal is a [relative ideal](Relativ
 
 ## Examples
 
-$\circ$ Let $S = \langle 4, 9, 10 \rangle = \{0, 4, 8, 9, 10, 12, 13, 14, 16, \rightarrow \}$. The Frobenius number of $S$ is $F(S) = 15$, thus $K(S) = \{x \in \mathbb{Z} ~ | ~ 15 - x \not \in S\}$. The set of [gaps](../Basic-concepts/Gap.qmd) of $S$ is $G(S) = \{1, 2, 3, 5, 6, 7, 11, 15\}$, then if we compute $15 -g$ for every $g \in G(S)$, we have that $K(S) = S \cup \{4, 8, 9, 10, 12, 13, 14\} = \{0, 4, 8, 9, 10, 12, 13, 14, 16, \rightarrow \} = S$. It can be proven that $S = K(S)$ if, and only if, $S$ is [symmetric](../Families-NS/NS-symmetric.qmd).
+$\circ$ Let $S = \langle 4, 9, 10 \rangle = \{0, 4, 8, 9, 10, 12, 13, 14, 16, \rightarrow \}$. The Frobenius number of $S$ is $F(S) = 15$, thus $K(S) = \{x \in \mathbb{Z} ~ | ~ 15 - x \not \in S\}$. The set of [gaps](../Basic-concepts/Gap.qmd) of $S$ is $G(S) = \{1, 2, 3, 5, 6, 7, 11, 15\}$, then if we compute $15 -g$ for every $g \in G(S)$, we have that $K(S) = S \cup \{4, 8, 9, 10, 12, 13, 14\} = S$. It can be proven that $S = K(S)$ if, and only if, $S$ is [symmetric](../Families-NS/NS-symmetric.qmd).
 
 ## Examples with GAP
 
@@ -29,14 +29,16 @@ gap> S := NumericalSemigroup(5, 7, 13, 16);
 <Numerical semigroup with 4 generators>
 ```
 
-To compute the canonical ideal of $S$, there are the functions `CanonicalIdeal` and `CanonicalIdealOfNumericalSemigroup`, which both returns the canonical ideal of the numerical semigroup.
+Given a numerical semigroup, the functions `CanonicalIdeal` and `CanonicalIdealOfNumericalSemigroup` return the standard canonical ideal of the numerical semigroup.
 
 ``` gap
 gap> K := CanonicalIdeal(S);
 <Ideal of numerical semigroup>
+gap> CanonicalIdeal(S) = CanonicalIdealOfNumericalSemigroup(S);
+true
 ```
 
-On the other hand, given an ideal $E$ of a numerical semigroup $S$, the functions `IsCanonicalIdeal` and `IsCanonicalIdealOfNumericalSemigroup` returns true or false depending on whether the ideal $E$ is a translation of the canonical ideal.
+On the other hand, given a relative ideal $E$ of a numerical semigroup $S$, the functions `IsCanonicalIdeal` and `IsCanonicalIdealOfNumericalSemigroup` return true or false depending on whether the relative ideal $E$ is a translation of the canonical ideal, that is, if there exists $x \in \mathbb{Z}$ such that $E = x + K(S)$. In this case, it is said that $E$ is a [canonical ideal](Canonical-ideal.qmd) of $S$.
 
 ``` gap
 gap> IsCanonicalIdeal(K);
@@ -44,6 +46,8 @@ true
 gap> K2 := 3 + K;
 <Ideal of numerical semigroup>
 gap> IsCanonicalIdeal(K2);
+true
+gap> IsCanonicalIdeal(K2) = IsCanonicalIdealOfNumericalSemigroup(K2);
 true
 ```
 

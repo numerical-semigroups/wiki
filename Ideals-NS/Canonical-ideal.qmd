@@ -10,28 +10,39 @@ Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) wi
 
 ## Examples
 
-$\circ$ Let $S = \langle 4, 5, 7 \rangle = \{0, 4, 5, 7, \rightarrow \}$ and $E = \{-15, -12, -11, -10, -8\} + S$. It is easy to check that $F(S) = 6$, $F(E) = -9$ and $K(S) = \{0, 3, 4, 5, 7, \rightarrow \}$, then $\tilde{E} = E + F(S) - F(E) = E + 15$. If $F(E) = -9$, $E = \{-15, -12, -11, -10, -8, \rightarrow\}$, so $\tilde{E} = \{0, 3, 4, 5, 7\} + S = K(S)$ and $E$ is a canonical ideal.
+$\circ$ Let $S = \langle 4, 5, 7 \rangle = \{0, 4, 5, 7, \rightarrow \}$ and $E = \{-15, -12, -11, -10, -8\} + S$. It is deduced that $F(S) = 6$, $F(E) = -9$ and $K(S) = \{0, 3, 4, 5, 7, \rightarrow \}$. Then, $\tilde{E} = E + F(S) - F(E) = E + 15$. It is concluded that $\tilde{E} = \{0, 3, 4, 5, 7\} + S = K(S)$ and $E$ is a canonical ideal.
 
 ## Examples with GAP
 
 The following example is made with the package NumericalSgps in GAP.
 
-$\diamond$ Let $S = \langle 30, 43, 45, 50 \rangle$, $I = \{30, 135, 140, 267\}$ and $K = I + S$, in GAP:
+$\diamond$ Let $S = \langle 30, 43, 45, 50 \rangle$, $I = \{30, 135, 140, 267\}$ and $IS = I + S$, in GAP:
 
 ``` gap
 gap> S := NumericalSemigroup(30, 43, 45, 50);
 <Numerical semigroup with 4 generators>
 gap> I := [30, 135, 140, 267];
 [ 30, 135, 140, 267 ]
-gap> K := I + S;
+gap> IS := I + S;
 <Ideal of numerical semigroup>
 ```
 
-To check if a relative ideal is a canonical ideal, we can use the function `IsCanonicalIdeal`.
+Given a numerical semigroup $S$, the function `CanonicalIdeal` and `CanonicalIdealOfNumericalSemigroup` return the standard canonical ideal of $S$.
 
 ``` gap
-gap> IsCanonicalIdeal(K);
+gap> K := CanonicalIdeal(S);
+<Ideal of numerical semigroup>
+gap> CanonicalIdeal(S) = CanonicalIdealOfNumericalSemigroup(S);
+true
+```
+
+To check if a relative ideal is a canonical ideal, we can use the functions `IsCanonicalIdeal` and `IsCanonicalIdealOfNumericalSemigroup`.
+
+``` gap
+gap> IsCanonicalIdeal(IS);
 false
+gap> IsCanonicalIdeal(IS) = IsCanonicalIdealOfNumericalSemigroup(IS);
+true
 ```
 
 In this case, $S = K(S)$ (this happens if, and only if, $S$ is [symmetric](../Families-NS/NS-symmetric.qmd)).

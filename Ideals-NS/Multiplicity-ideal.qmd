@@ -12,7 +12,7 @@ It can be proven that every relative ideal of a semigroup has a minimum. This pr
 
 ## Examples
 
-$\circ$ Let $E = \{-2, -1\} + S$. Clearly, $S + E \subseteq S$ and if we take $s = C(S) + 2$, where $C(S)$ is the [conductor](../Basic-concepts/Conductor.qmd) of $S$ then $s + E \subseteq S$, therefore $E$ is a relative ideal of $S$ and $m(E) = -2$.
+$\circ$ Let $E = \{-2, -1\} + S$. Clearly, $S + E \subseteq S$ and if we take $s = C(S) + 2$, where $C(S)$ is the [conductor](../Basic-concepts/Conductor.qmd) of $S$ then $s + E \subseteq S$. Therefore, $E$ is a relative ideal of $S$ and $m(E) = -2$.
 
 ## Examples with GAP
 
@@ -27,7 +27,7 @@ gap> S := NumericalSemigroup(6,8,15);
 <Numerical semigroup with 3 generators>
 ```
 
-In order to obtain the multiplicity of the relative ideal $E = I + S$ we can use the function `Minimum`, that returns the multiplicity of the relative ideal.
+In order to obtain the multiplicity of the relative ideal $E = I + S$, we can use the function `Minimum`.
 
 ``` gap
 gap> Minimum(I+S);

@@ -57,14 +57,14 @@ ggraph(tabla_aristas, layout = "igraph", algorithm = "kk") +
   theme_graph()
 ```
 
-```{dot}
+```{r}
 
-graph G {
-  layout = neato
-  overlap = false
-  node [shape = circle, fixedsize = true, width = 0.9]; (6, 7); (7, 11)
-  (6, 7) -> (7, 11);
-}
+#graph G {
+  #layout = neato
+#  overlap = false
+#  node [shape = circle, fixedsize = true, width = 0.9]; (6, 7); (7, 11)
+ # (6, 7) -> (7, 11);
+#}
 
 ```
 
@@ -89,17 +89,17 @@ gap> GraphAssociatedToElementInNumericalSemigroup(114,S);
 
 The graph $G_{114}$ is as follows.
 
-```{dot}
+```{r}
 
-graph G {
-  layout = neato
-  overlap = false
-  node [shape = circle, fixedsize = true, width = 0.9]; 14; 27; 31; 33;
-  14 -> 27;
-  14 -> 31;
-  27 -> 31;
-  27 -> 33;
-}
+#graph G {
+ # layout = neato
+#  overlap = false
+ # node [shape = circle, fixedsize = true, width = 0.9]; 14; 27; 31; 33;
+#  14 -> 27;
+  #14 -> 31;
+  #27 -> 31;
+  #27 -> 33;
+#}
 
 ```
 
