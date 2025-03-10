@@ -6,13 +6,13 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $E$ be a [relative ideal](Relative-ideal.qmd) of $S$. It is said that $E$ is $\mathbb{Z}$ irreducible if it cannot be expressed as a finite intersection of other relative ideals properly containing it.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $E$ be a [relative ideal](Relative-ideal.qmd) of $S$. It is said that $E$ is $\mathbb{Z}-$irreducible if it cannot be expressed as a finite intersection of other relative ideals properly containing it.
 
-It can be proven that every relative ideal has a unique finite factorization in $\mathbb{Z}-$irreducible components, they are called as the [$\mathbb{Z}-$irreducible components](../Factorizations-NS/Irreducible-Z-components.qmd) of $E$.
+It can be proven that every relative ideal has a unique finite factorization in $\mathbb{Z}-$irreducible components, which are called as the [Z-irreducible components](../Factorizations-NS/Irreducible-Z-components.qmd) of $E$.
 
 ## Examples
 
-$\circ$ Let $S = \langle 3, 5, 7 \rangle$, $I = \{4, 5\}$ and $E = I + S$. Making simple calculations, $F(S) = 4$ and $K(S) = \{0, 2, 3, 5, \rightarrow \}$, where $K(S)$ denotes the [standard canonical ideal](Standard-canonical-ideal.qmd) of $S$. We have that $E = (-2 + K(S)) \cap (2 + K(S))$. Indeed,
+$\circ$ Let $S = \langle 3, 5, 7 \rangle = \{0,3,5, \rightarrow\}$, $I = \{4, 5\}$ and $E = I + S$. Making simple calculations, $F(S) = 4$ and $K(S) = \{0, 2, 3, 5, \rightarrow \}$, where $K(S)$ denotes the [standard canonical ideal](Standard-canonical-ideal.qmd) of $S$. We have that $E = (-2 + K(S)) \cap (2 + K(S))$. Indeed,
 
 $$
 (-2 + K(S)) \cap (2 + K(S)) = \{-2, 0, 1, 3, \rightarrow \} \cap \{2, 4, 5, 7, \rightarrow\}
@@ -22,38 +22,42 @@ $$
 = \{4, 5, 7, \rightarrow \} = \{4, 5\} + S = E.
 $$
 
-$\circ$ Let $S$ a numerical semigroup with [Frobenius number](../Basic-concepts/Frobenius-number.qmd) $F(S)$, $K(S)$ the [standard canonical ideal](Standard-canonical-ideal.qmd) and $E$ a [canonical ideal](Canonical-ideal.qmd) of $S$ with [Frobenius number ideal](Frobenius-number-ideal.qmd) $F(E)$. If $E$ is a canonical ideal, $\tilde{E} = K$, where $\tilde{E} = E + F(S) - F(E)$.
+$\circ$ Let $S$ a numerical semigroup with [Frobenius number](../Basic-concepts/Frobenius-number.qmd) $F(S)$, $K(S)$ the standard canonical ideal and $E$ a [canonical ideal](Canonical-ideal.qmd) of $S$ with [Frobenius number ideal](Frobenius-number-ideal.qmd) $F(E)$, let us prove that $E$ is $\mathbb{Z}-$irreducible. If $E$ is a canonical ideal, by definition $\tilde{E} = K(S)$, where $\tilde{E} = E + F(S) - F(E)$. Let us suppose that there exist $K_1, K_2, \ldots, K_h$ relative ideals such that $E \subseteq K_i$ for all $i \in \{1, 2, \ldots, h\}$ and $E = K_1 \cap K_2 \cap \ldots \cap K_h$. Then, there exists $j \in \{1, 2, \ldots, h\}$ so that $F(E) \not \in K_j$ and $\{F(E) + 1, \rightarrow \} \subseteq K_j$, therefore $F(K_j) = F(E)$. If $E \subseteq K_j$, then
 
-Let's suppose that exist $K_1, K_2, \ldots, K_h$ relative ideals such that $E \subseteq K_i$ for all $i \in \{1, 2, \ldots, h\}$ and $E = K_1 \cap K_2 \cap \ldots \cap K_h$. Then, exist $j \in \{1, 2, \ldots, h\}$ so that $F(E) \not \in K_j$ and $\{F(E) + 1, \rightarrow \} \subseteq K_j$, therefore $F(K_j) = F(E)$. If $E \subset K_j$, then $K(S) = \tilde{E} \subseteq \tilde{K_j}$, but it is known that for any relative ideal, $\tilde{K_j} \subseteq K(S) = \tilde{E}$. To conclude, we have $\tilde{E} = \tilde{K_j}$, that means $E = K_j$ and $E$ is $\mathbb{Z}-$irreducible.
+$$
+K(S) = \tilde{E} = E + F(S) - F(E) \subseteq K_j + F(S) - F(E) = K_j + F(S) - F(K_j) = \tilde{K}_j,
+$$
+
+but for any relative ideal, $\tilde{K_j} \subseteq K(S)$. Hence, we have $\tilde{E} = \tilde{K_j}$, which means that $E = K_j$ and $E$ is $\mathbb{Z}-$irreducible.
 
 ## Examples with GAP
 
 The following example is made with the package NumericalSgps in GAP.
 
-$\diamond$ Let $S = \langle 14, 23, 30 \rangle$, $I = \{6, 10\}$ and $K = I + S$, in GAP:
+$\diamond$ Let $S = \langle 14, 23, 30 \rangle$, $I = \{6, 10\}$ and $IS = I + S$, in GAP:
 
 ``` gap
 gap> S := NumericalSemigroup(14, 23, 30);
 <Numerical semigroup with 3 generators>
 gap> I := [6, 10];
 [ 6, 10 ]
-gap> K := I + S;
+gap> IS := I + S;
 <Ideal of numerical semigroup>
 ```
 
-In order to compute the $\mathbb{Z}-$components of $K$, the function `IrreducibleZComponents` returns a list with the ideals that generate the decomposition of the relative ideal.
+In order to compute the $\mathbb{Z}-$components of $K$, the function `IrreducibleZComponents` returns a list with the relative ideals that generate the decomposition of a given relative ideal.
 
 ``` gap
-gap> Irred := IrreducibleZComponents(K);
+gap> Irred := IrreducibleZComponents(IS);
 [ <Ideal of numerical semigroup>, <Ideal of numerical semigroup>, <Ideal of numerical semigroup> ]
 gap> List(Irred, MinimalGenerators);
 [ [ -36, -20 ], [ -52, -36 ], [ -102, -86 ] ]
 ```
 
-The function `Intersection` computes the intersection of ideals of a numerical semigroup.
+The function `Intersection` computes the intersection of relative ideals of a numerical semigroup.
 
 ``` gap
-gap> K = Intersection(Irred);
+gap> IS = Intersection(Irred);
 true
 ```
 

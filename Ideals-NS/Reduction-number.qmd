@@ -9,10 +9,10 @@ engine: markdown
 Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $E$ be a [proper ideal](Proper-ideal.qmd) of $S$ with [multiplicity](Multiplicity-ideal.qmd) $m(E)$. It is defined the reduction number of $E$, denoted by $r(E)$, as the value
 
 $$
-r(E) = \min \{h \ge 1 ~ | ~ (h+1)E = m(E) + hE \}.
+r(E) = \min \{h \ge 1 ~ | ~ (h+1)E = m(E) + hE \},
 $$
 
-A proper ideal is said to be [stable](Stable-ideal.qmd) if $r(E) = 1$, that is, $2E = m(E) + E$.
+where $nE = \{e_1 + e_2 + \cdots + e_n ~ | ~ e_1, \ldots, e_n \in E\}$ for all $n \in \mathbb{N} \setminus \{0\}$. It can be proven that $r(E)$ exists for any proper ideal $E$. If $r(E) = 1$, that is, if $2E = m(E) + E$, it is said that $E$ is [stable](Stable-ideal.qmd).
 
 ## Examples
 
@@ -28,43 +28,43 @@ $$
 3E = (E + E) + E = \{6, 8, \rightarrow\} = 2 + 2E
 $$
 
-To sum up, $r(E) = 2$.
+To sum up, the reduction number of $E$ is $r(E) = 2$ and is not stable.
 
 ## Examples with GAP
 
 The following example is made with the package NumericalSgps in GAP.
 
-$\diamond$ Let $S = \langle 11, 14, 20 \rangle$, $I = \{22, 45, 53\}$ and $K = I + S$, in GAP:
+$\diamond$ Let $S = \langle 11, 14, 20 \rangle$, $I = \{22, 45, 53\}$ and $IS = I + S$, in GAP:
 
 ``` gap
 gap> S := NumericalSemigroup(11, 14, 20);
 <Numerical semigroup with 3 generators>
 gap> I := [22, 45, 53];
 [ 22, 45, 53 ]
-gap> K := I + S;
+gap> IS := I + S;
 <Ideal of numerical semigroup>
 ```
 
 The function `ReductionNumber` returns the reduction number of a proper ideal.
 
 ``` gap
-gap> ReductionNumber(K);
+gap> ReductionNumber(IS);
 2
 ```
 
-Then, $3K = m(K) + 2K$, lets check it. The function `Minimum` returns the multiplicity of a relative ideal, then,
+Then, $3IS = m(IS) + 2IS$, let us check it. The function `Minimum` returns the multiplicity of a relative ideal.
 
 ``` gap
-gap> Minimum(K);
+gap> Minimum(IS);
 22
-gap> 3*K = 22 + 2*K;
+gap> 3*IS = 22 + 2*IS;
 true
 ```
 
-If we prove with $h = 1$,
+If we consider the case $h = 1$,
 
 ``` gap
-gap> 2*K = 22 + K;
+gap> 2*IS = 22 + IS;
 false
 ```
 

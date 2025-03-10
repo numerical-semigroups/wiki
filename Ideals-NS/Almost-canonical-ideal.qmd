@@ -8,9 +8,11 @@ engine: markdown
 
 Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) with [Frobenius number](../Basic-concepts/Frobenius-number.qmd) $F(S)$ and [genus](../Basic-concepts/Genus.qmd) $g(S)$, and let $E$ be a [proper ideal](Proper-ideal.qmd) with [Frobenius number ideal](Frobenius-number-ideal.qmd) $F(E)$ and [type ideal](Type-ideal.qmd) $t(E)$. If $\tilde{E} = E + F(S) - F(E)$, it is said that $E$ is an almost canonical ideal if $g(\tilde{E}) + m(\tilde{E}) = F(S) - g(S) + t(E)$, where $g(\tilde{E})$ and $m(\tilde{E})$ refers to the [genus of an ideal](Genus-ideal.qmd) and the [multiplicity of an ideal](Multiplicity-ideal.qmd), respectively.
 
+If $A - B = \{z \in \mathbb{Z} ~ | ~ z + B \subseteq A \}$ for $A,B \subseteq \mathbb{N}$, it can be proven that $E$ is an almost canonical ideal if, and only if, $\tilde{E} - M = K(S) - M$, where $K(S)$ is the [standard-canonical ideal](Standard-canonical-ideal.qmd) and $M$ is the [maximal ideal](Maximal-ideal.qmd) of $S$.
+
 ## Examples
 
-$\circ$ Let $S = \langle 5, 7, 9 \rangle = \{0, 5, 7, 9, 10, 12, 14, \rightarrow \}$ and $E = \{10, 12, 14\} + S$. With simple calculations it is obtained that $E \subseteq S$ (is a proper ideal), $F(S) = 13, g(S) = 8$, $F(E) = 18$ and $t(E) = 3$. On the other hand, $\tilde{E} = E + F(S) - F(E) = E - 5$, $g(\tilde{E}) = 6$ and $m(\tilde{E}) = 5$. Finally, $F(S) - g(S) + t(E) = 13 - 8 + 3 = 8 \ne 11 = g(\tilde{E}) + m(\tilde{E})$. To sum up, $E$ is not an almost canonical ideal.
+$\circ$ Let $S = \langle 5, 7, 9 \rangle = \{0, 5, 7, 9, 10, 12, 14, \rightarrow \}$ and $E = \{10, 12, 14\} + S$. With simple calculations it is obtained that $E \subseteq S$ (is a proper ideal), $F(S) = 13, g(S) = 8$, $F(E) = 18$ and $t(E) = 3$. On the other hand, $\tilde{E} = E + F(S) - F(E) = E - 5$, $g(\tilde{E}) = 4$ and $m(\tilde{E}) = 5$. Finally, $F(S) - g(S) + t(E) = 13 - 8 + 3 = 8 \ne 9 = g(\tilde{E}) + m(\tilde{E})$. To sum up, $E$ is not an almost canonical ideal.
 
 ## Examples with GAP
 
@@ -34,4 +36,22 @@ gap> IsAlmostCanonical(IS);
 false
 ```
 
+The functions `CanonicalIdeal` and `MaximalIdeal` returns the standard canonical ideal and the maximal ideal of a given numerical semigroup, respectively.
+
+```gap
+gap> K := CanonicalIdeal(S);
+<Ideal of numerical semigroup>
+gap> M := MaximalIdeal(S);
+<Ideal of numerical semigroup>
+gap> IS2 := IS + FrobeniusNumber(S) - FrobeniusNumber(IS);
+<Ideal of numerical semigroup>
+gap> IS2 - M = K - M;
+false
+```
+
 ## References
+
+
+
+
+

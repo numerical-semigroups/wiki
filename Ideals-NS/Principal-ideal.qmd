@@ -8,15 +8,15 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $E \subseteq \mathbb{Z}$. It is said that $E$ is a principal ideal of $S$ if it is a [proper ideal](../Ideals-NS/Proper-ideal.qmd) of the form $E = s + S$ for some $s \in S \setminus \{0\}$.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $E \subseteq \mathbb{Z}$. It is said that $E$ is a principal ideal of $S$ if it is a [proper ideal](Proper-ideal.qmd) of the form $E = s + S$ for some $s \in S \setminus \{0\}$.
 
 ## Examples
 
 $\circ$ Let $S = \langle 5, 7, 9 \rangle = \{0, 5, 7, 9, 10, 12, 14, \rightarrow\}$ and $E = \{12, 17, 19, 21, 22, 24, 26, \rightarrow\}$, let us prove that $E = 12 + S$.
 
--   $\subseteq$ Let $x \in E$. If $x \ge 26$, then $x - 12 \ge 14$ and $x-12 \in S$, which means $x \in (12 + S)$. If $x < 26$, then $x \in \{12, 17, 19, 21, 22, 24\} = 12 + \{0, 5, 7, 9, 10, 12\} \subseteq (12 + S)$.
+-   $\subseteq$ Let $x \in E$. If $x \ge 26$, then $x - 12 \ge 14$ and $x-12 \in S$, which means that $x \in (12 + S)$. If $x < 26$, then $x \in \{12, 17, 19, 21, 22, 24\} = 12 + \{0, 5, 7, 9, 10, 12\} \subseteq (12 + S)$.
 
--   $\supseteq$ Let $x = 12 + s$ for some $s \in S$. If $x > 26$, clearly $x \in E$. If $x < 26$, then $s < 14$ and $s \in \{0, 5, 7, 9, 10, 12\}$, where in every case it holds $x \in E$.
+-   $\supseteq$ Let $x = 12 + s$ for some $s \in S$. If $x > 26$, clearly $x \in E$. If $x < 26$, then $s < 14$ and $s \in \{0, 5, 7, 9, 10, 12\}$, where in each case it holds $x \in E$.
 
 To sum up, $E$ is a principal ideal of $S$.
 

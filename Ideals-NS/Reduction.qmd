@@ -1,25 +1,27 @@
 ---
-title: "Reduction"
+title: "Reduction of a proper ideal"
 format: html
 engine: markdown
 ---
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $H,E$ two [proper ideals](Proper-ideal.qmd) of $S$ with $H \subseteq E$. We say that $H$ is a reduction of $E$ if, for some $h \in \mathbb{N} \setminus \{0\}$, the equality $(h+1)E = H + hE$ holds.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $H,E$ two [proper ideals](Proper-ideal.qmd) of $S$ with $H \subseteq E$. It is said that $H$ is a reduction of $E$ if, for some $h \in \mathbb{N} \setminus \{0\}$, the equality $(h+1)E = H + hE$ holds, where $nE = \{e_1 + e_2 + \cdots + e_n ~ | ~ e_1, \ldots, e_n \in E\}$ for all $n \in \mathbb{N} \setminus \{0\}$.
+
+It can be proven that $H$ is a reduction of $E$ if, and only if, $m(E) + S \subseteq H \subseteq E$, where $m(E)$ denotes the [multiplicity](Multiplicity-ideal.qmd) of $E$.
 
 ## Examples
 
-$\circ$ Let $S$ a numerical semigroup and $E$ a proper ideal of $S$ with [multiplicity](Multiplicity-ideal.qmd) $m(E)$. If we consider the following chain of relative ideals,
+$\circ$ Let $S$ a numerical semigroup and $E$ a proper ideal of $S$ with multiplicity $m(E)$. If $A - B = \{z \in \mathbb{Z} ~ | ~ z + B \subseteq A\}$ for any $A,B \subseteq \mathbb{Z}$, the following chain of relative ideals,
 
 $$
 S \subseteq E - m(E) \subseteq 2E - 2m(E) \subseteq \cdots \subseteq jE - jm(E) \subseteq \cdots \subseteq \mathbb{N},
 $$
 
-it eventually stabilizes, since $|\mathbb{N} \setminus S|$ is finite. Then, exists $h \in \mathbb{N} \setminus \{0\}$ such that $hE - hm(E) = (h+1)E - (h+1)m(E)$, or equivalently, $(h+1)E = hE + m(E) = [m(E) + S] + hE$, that means, $m(E) + S$ is a reduction of $E$.
+eventually stabilizes, since $|\mathbb{N} \setminus S|$ is finite. Then, there exists $h \in \mathbb{N} \setminus \{0\}$ such that $hE - hm(E) = (h+1)E - (h+1)m(E)$, or equivalently, $(h+1)E = hE + m(E) = [m(E) + S] + hE$. In conclusion, $m(E) + S$ is a reduction of $E$.
 
 ## Examples with GAP
 
-Nowadays, there are no functions in package NumericalSgps related to reduction of ideals.
+Nowadays, there are no functions in package NumericalSgps related to reduction of proper ideals.
 
 ## References

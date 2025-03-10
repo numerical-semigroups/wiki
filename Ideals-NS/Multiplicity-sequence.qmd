@@ -1,26 +1,28 @@
 ---
-title: "Multiplicity sequence"
+title: "Multiplicity sequence of a numerical semigroup"
 format: html
 engine: markdown
 ---
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), $M = S^*$ the [maximal ideal](Maximal-ideal.qmd) of $S$ and $\mathcal{B}(M)$ the [blowup](Blowup.qmd) of $M$. It is known that $\mathcal{B}(M)$ is a numerical semigroup such that $S \subseteq \mathcal{B}(M)$, then, setting $S^1 = \mathcal{B}(M)$, it can be considered the blowup of its maximal ideal, $S^2$, and repeating the argument, it is obtained a chain of numerical semigroups
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) other than $\mathbb{N}$, $M = S^* = S \setminus \{0\}$ the [maximal ideal](Maximal-ideal.qmd) of $S$ and $\mathcal{B}(M)$ the [blowup](Blowup.qmd) of $M$. It is known that $\mathcal{B}(M)$ is a numerical semigroup such that $S \subsetneq \mathcal{B}(M)$. Then, setting $S^1 = \mathcal{B}(M)$, it can be considered the blowup of its maximal ideal, $S^2$, and repeating the argument, it is obtained a chain of numerical semigroups
 
 $$
-S = S^0 \subseteq S^1 \subseteq S^2 \subseteq \cdots \subseteq S^i \subseteq S^{i+1} \subseteq\cdots
+S = S^0 \subsetneq S^1 \subsetneq S^2 \subsetneq \cdots \subsetneq S^i \subsetneq S^{i+1} \subsetneq \cdots \subsetneq \mathbb{N},
 $$
 
-where $S^{i+1}$ is the blowup of the maximal ideal of $S^i$ for all $i \in \mathbb{N}$. This chain stabilizes at $\mathbb{N}$, and if we consider the [multiplicity](../Basic-concepts/Multiplicity.qmd) $m_i = m(S^i)$ of each $S^i$, we get a non increasing sequence $(m_0, m_1, m_2, \ldots)$ that stabilizes at $1$. It is defined the multiplicity sequence of $S$ as the sequence $(m_0, m_1, m_2, \ldots)$.
+where $S^{i+1}$ is the blowup of the maximal ideal of $S^i$ for all $i \in \mathbb{N}$. This chain stabilizes at $\mathbb{N}$ since $|\mathbb{N} \setminus S|$ is finite, and if we consider the [multiplicity](../Basic-concepts/Multiplicity.qmd) $m_i = m(S^i)$ of each $S^i$, we get a non increasing sequence $(m_0, m_1, m_2, \ldots)$ that stabilizes at $1$. It is defined the multiplicity sequence of $S$ as the sequence $(m_0, m_1, m_2, \ldots)$.
 
 ## Examples
 
-$\circ$ Let $S = \langle 3, 5, 7 \rangle$. We have $m(S) = 3$ and $S^*$ has [reduction number](Reduction-number.qmd) $r(S^*) = 1$, since
+$\circ$ Let $S = \langle 3, 5, 7 \rangle$. Let us define for any $A,B \subseteq \mathbb{Z}$, $A + B = \{a + b ~ | ~ a \in A, b \in B\}$ and $A - B = \{z \in \mathbb{Z} ~ | ~ z + B \subseteq A\}$. We have $m(S) = 3$ and $S^*$ has [reduction number](Reduction-number.qmd) $r(S^*) = 1$, since
 
 $$
-2S^* = S^* + S^* = \{6, 8, \rightarrow \} = 3 + S^* = m(S) + S^*.
-$$ Then, $S^1 = \mathcal{B}(S^*) = S^* - S^* = \{0, 2, \rightarrow \}$. Now, $m(S^1) = 2$ and $r((S^1)^*) = 1$,
+2S^* = S^* + S^* = \{6, 8, \rightarrow \} = 3 + S^* = m(S^*) + S^*,
+$$
+
+where $m(S^*)$ denotes the [multiplicity](Multiplicity-ideal.qmd) of $S^*$ as [relative ideal](Relative-ideal.qmd).Then, $S^1 = \mathcal{B}(S^*) = S^* - S^* = \{0, 2, \rightarrow \}$. Now, $m(S^1) = 2$ and $r((S^1)^*) = 1$,
 
 $$
 2(S^1)^* = (S^1)^* + (S^1)^* = \{4, \rightarrow \} = 2 + (S^1)^*.
@@ -46,36 +48,28 @@ gap> MultiplicitySequence(S);
 [ 12, 5, 4, 1 ]
 ```
 
-If we are interested in the blowups and the maximal ideals generated in the process, the functions `BlowUp` and `MaximalIdeal` returns the blowup of a proper ideal and the maximal ideal of a numerical semigroup, respectively.
+If we are interested in the blowups generated in the process, given a numerical semigroup, the function `BlowUp` returns the blowup of $S^*$. Moreover, the function `MinimalGenerators` returns a list with the [minimal set of generators](../Basic-concepts/Minimal-set-of-generators.qmd) of a given numerical semigroup.
 
-``` gap
-gap> M0 := MaximalIdeal(S);
-<Ideal of numerical semigroup>
-gap> SmallElements(M0);
-[ 12, 17, 21, 24, 29, 30, 33, 34, 36, 38, 41, 42, 45, 46, 47, 48, 50, 51, 53, 54, 55, 57, 58, 59, 60, 62, 63, 64, 65,
-  66, 67, 68, 69, 70, 71, 72, 74 ]
-gap> S1 := BlowUp(M0);
-<Ideal of numerical semigroup>
-gap> SmallElements(S1);
-[ 0, 5, 9, 10, 12, 14, 15, 17 ]
-S1 := NumericalSemigroupBySmallElements(SmallElements(S1));
-<Numerical semigroup>
-gap> M1 := MaximalIdeal(S1);
-<Ideal of numerical semigroup>
-gap> S2 := BlowUp(M1);
-<Ideal of numerical semigroup>
-gap> SmallElements(S2);
-[ 0, 4, 5, 7 ]
-gap> S2 := NumericalSemigroupBySmallElements(SmallElements(S2));
-<Numerical semigroup>
-gap> M2 := MaximalIdeal(S2);
-<Ideal of numerical semigroup>
-gap> S3 := BlowUp(M2);
-<Ideal of numerical semigroup>
-gap> SmallElements(S3);
-[ 0 ]
+```gap
+gap> MinimalGenerators(S);
+[ 12, 17, 21, 30 ]
+gap> S1 := BlowUp(S);
+<Numerical semigroup with 4 generators>
+gap> MinimalGenerators(S1);
+[ 5, 9, 12 ]
+gap> S2 := BlowUp(S1);
+<Numerical semigroup with 3 generators>
+gap> MinimalGenerators(S2);
+[ 4, 5, 7 ]
+gap> S3 := BlowUp(S2);
+<The numerical semigroup N>
+gap> MinimalGenerators(S3);
+[ 1 ]
 ```
 
-The function `SmallElements` has been used to show the [left elements](../Basic-concepts/Left-elements.qmd) of the numerical semigroup and `NumericalSemigroupBySmallElements` have been used to generate the numerical semigroup from the blowup, because the `MaximalIdeal` function needs a numerical semigroup, not an ideal. As we can see, $S^1 = \{0, 5, 9, 10, 12, 14, 15, 17, \rightarrow \}, S^2 = \{0, 4, 5, 7, \rightarrow \}$ and $S^3 = \mathbb{N}$.
+
 
 ## References
+
+
+

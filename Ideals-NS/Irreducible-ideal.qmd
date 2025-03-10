@@ -8,11 +8,11 @@ engine: markdown
 
 Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $E$ be a [proper ideal](Proper-ideal.qmd) of $S$. It is said that $E$ is irreducible if it cannot be expressed as finite intersection of proper ideals of $S$ strictly containing it.
 
-If $D(X)$ denotes the [set of divisors of x](../Basic-concepts/Set-divisors.qmd) in $S$, it can be proven that every irreducible ideal containing $E$ is of the form $S \setminus D(x)$, with $x \in S \setminus E$ and the intersection of all this sets is equal to $E$.
+If $D(x)$ denotes the [set of divisors of x](../Basic-concepts/Set-divisors.qmd) in $S$, it can be proven that a proper ideal $E$ is irreducible if, and only if, $E = S \setminus D(x)$ for some $x \in S$. In particular, if $E$ is not irreducible, then is the intersection of $S \setminus D(x)$ with $x \in S \setminus E$.
 
 ## Examples
 
-$\circ$ Any numerical semigroup $S$ is irreducible as ideal of itself.
+$\circ$ Any numerical semigroup $S$ is irreducible as proper ideal of itself.
 
 $\circ$ Let $S = \langle 3, 5, 7 \rangle = \{0, 3, 5, \rightarrow \}$, $I = \{3, 5\}$ and $E = I + S$. First, we compute $S \setminus E$,
 
@@ -20,40 +20,40 @@ $$
 E = I + S = (3 + S) \cup (5 + S) = \{3, 6, 8, \rightarrow \} \cup \{5, 8, 10, \rightarrow \} = \{3, 5, 6, 8, \rightarrow \}.
 $$
 
-Therefore, $S \setminus E = \{0, 7\}$ and $E \subseteq (S \setminus D(0)) \cap (S \setminus D(7))$, but $S \setminus D(0) = S^*$ and $S \setminus D(7) = E$, then $E$ is a irreducible ideal of $S$.
+Therefore, $S \setminus E = \{0, 7\}$ and $E \subseteq (S \setminus D(0)) \cap (S \setminus D(7))$, but $S \setminus D(0) = S^*$ and $S \setminus D(7) = E$, concluding that $E$ is an irreducible proper ideal of $S$.
 
 ## Examples with GAP
 
 The following example is made with the package NumericalSgps in GAP.
 
-$\diamond$ Let $S = \langle 9, 11, 14, 20 \rangle, I = \{20, 27, 33\}$ and $E = I + S$, in GAP:
+$\diamond$ Let $S = \langle 9, 11, 14, 20 \rangle, I = \{20, 27, 33\}$ and $IS = I + S$, in GAP:
 
 ``` gap
 gap> S := NumericalSemigroup(9, 11, 14, 20);
 <Numerical semigroup with 4 generators>
 gap> I := [20, 27, 33];
 [ 20, 27, 33 ]
-gap> K := I + S;
+gap> IS := I + S;
 <Ideal of numerical semigroup>
 ```
 
-The function `Difference` has as parameters two ideals $I,J$ of a numerical semigroup with $J \subset I$ and returns $I \setminus J$, in this case, we need to compute $S \setminus E$.
+Given two proper ideals $I,J$ of the same numerical semigroup such that $J \subseteq I$, the function `Difference` returns $I \setminus J$. In this case, we need to compute $S \setminus IS$.
 
 ``` gap
-gap> Difference(0+S, K);
+gap> Difference(0+S, IS);
 [ 0, 9, 11, 14, 18, 22, 23, 25, 28, 32, 37, 39, 46 ]
 ```
 
-Then, $E = \bigcap_{x \in S \setminus E} (S \setminus D(x))$. It is known that there exist for every proper ideal a irredundant decomposition into proper irreducible ideals, the function `DecomposeIntegralIdealIntoIrreducibles` returns a list with the irreducible components.
+Then, $IS = \bigcap_{x \in S \setminus IS} (S \setminus D(x))$. It is known that for every proper ideal there exist an irredundant decomposition into proper irreducible proper ideals, considering $x \in Maximals_{\le_S}(S \setminus E)$, where $\le_S$ denotes the [relation order](../Basic-concepts/Relation-order-NS.qmd) of $S$. The function `DecomposeIntegralIdealIntoIrreducibles` returns a list with the non redundant irreducible components.
 
 ``` gap
-gap> DecomposeIntegralIdealIntoIrreducibles(K);
+gap> DecomposeIntegralIdealIntoIrreducibles(IS);
 [ <Ideal of numerical semigroup>, <Ideal of numerical semigroup>, <Ideal of numerical semigroup> ]
-gap> List(DecomposeIntegralIdealIntoIrreducibles(K),MinimalGenerators);
+gap> List(DecomposeIntegralIdealIntoIrreducibles(IS), MinimalGenerators);
 [ [ 9, 14, 33 ], [ 9, 22 ], [ 11, 27 ] ]
 ```
 
-Turns out that actually $E = ( S \setminus D(22) ) \cap ( S \setminus D(39) ) \cap ( S \setminus D(46) )$, let's check it. The function `DivisorsOfElementInNumericalSemigroup` compute the set $D(x)$.
+Turns out that actually $IS = ( S \setminus D(22) ) \cap ( S \setminus D(39) ) \cap ( S \setminus D(46) )$, let us check it. Given a numerical semigroup $S$ and an element $x \in S$, the function `DivisorsOfElementInNumericalSemigroup` returns $D(x)$.
 
 ``` gap
 gap> D1 := DivisorsOfElementInNumericalSemigroup(22,S);
@@ -77,10 +77,10 @@ gap> DifD3 := IdealByDivisorClosedSet(D3,S);
 <Ideal of numerical semigroup>
 ```
 
-Finally, the function `Intersection` computes the intersection of ideals of a numerical semigroup.
+Finally, the function `Intersection` computes the intersection of proper ideals of a numerical semigroup.
 
 ``` gap
-gap> K = Intersection(DifD1, DifD2, DifD3);
+gap> IS = Intersection(DifD1, DifD2, DifD3);
 true
 ```
 

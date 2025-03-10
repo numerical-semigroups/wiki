@@ -1,16 +1,16 @@
 ---
-title: "Stable ideal"
+title: "Stable proper ideal"
 format: html
 engine: markdown
 ---
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $E$ be a [proper ideal](Proper-ideal.qmd) of $S$ with [reduction number](Reduction-number.qmd) $r(E)$. It is said that $E$ is stable if $r(E) = 1$, that is, $2E = m(E) + E$.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $E$ be a [proper ideal](Proper-ideal.qmd) of $S$ with [reduction number](Reduction-number.qmd) $r(E)$. It is said that $E$ is stable if $r(E) = 1$, that is, if $2E = m(E) + E$, where $nE = \{e_1 + e_2 + \cdots + e_n ~ | ~ e_1, \ldots, e_n \in E\}$ for all $n \in \mathbb{N} \setminus \{0\}$ and $m(E)$ denotes the [multiplicity](Multiplicity-ideal.qmd) of $E$.
 
 ## Examples
 
-$\circ$ Let $S = \langle 3, 5, 7 \rangle$, $I = \{2, 4\}$ and $E = I + S = \{2, 4, 5, 7, \rightarrow \}$. Clearly, $m(E) = 2$, then we are looking for the smaller $h \in \mathbb{N} \setminus \{0\}$ such that $(h+1)E = 2 + hE$. If we take $h = 1$,
+$\circ$ Let $S = \langle 3, 5, 7 \rangle$, $I = \{2, 4\}$ and $E = I + S = \{2, 4, 5, 7, \rightarrow \}$. For $h = 1$, since $m(E) = 2$,
 
 $$
 2E = E + E = \{4, 6, \rightarrow\} \ne \{4, 6, 7, 9, \rightarrow \} = 2 + E.
@@ -22,22 +22,24 @@ Therefore, $E$ is not stable. It is easy to prove that $r(E) = 2$.
 
 The following example is made with the package NumericalSgps in GAP.
 
-$\diamond$ Let $S = \langle 12, 15, 19, 20 \rangle$, $I = \{24, 38, 40\}$ and $K = I + S$, in GAP:
+$\diamond$ Let $S = \langle 12, 15, 19, 20 \rangle$, $I = \{24, 38, 40\}$ and $IS = I + S$, in GAP:
 
 ``` gap
 gap> S := NumericalSemigroup(12, 15, 19, 20);
 <Numerical semigroup with 4 generators>
 gap> I := [24, 38, 40];
 [ 24, 38, 40 ]
-gap> K := I + S;
+gap> IS := I + S;
 <Ideal of numerical semigroup>
 ```
 
 There is no direct method that states if a proper ideal is stable or not, but the function `Reduction number` returns the reduction number of a proper ideal.
 
 ``` gap
-gap> ReductionNumber(K);
+gap> ReductionNumber(IS);
 1
 ```
+
+It is obtained that $IS$ is a stable proper ideal.
 
 ## References
