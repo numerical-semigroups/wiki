@@ -30,22 +30,20 @@ $$
 f(x + y) = 2(x + y) + 1 = 2x + 2y + 1 < (2x + 1) + (2y + 1) = f(x) + f(y).
 $$
 
-In conclusion. $f$ is a subadditive function.
+In conclusion, $f$ is a subadditive function.
 
 ## Examples with GAP
 
 The following example is made with the package NumericalSgps in GAP.
 
-$\diamond$ Let $f$ be a periodic subadditive function with period $m$. Given a list of images of the integers from $1$ to $m$, the function `NumericalSemigroupBySubAdditiveFunction` returns the numerical semigroup $M(f)$. The image of $m$ has to be $0$.
+$\diamond$ Let $f$ be a periodic subadditive function with period $m$. Given a list of images of the integers from $1$ to $m$, the function `NumericalSemigroupBySubAdditiveFunction` returns the numerical semigroup $M(f)$ if it is possible (that means, if the list generates a subadditive function). The image of $m$ has to be $0$.
 
 ``` gap
 gap> S := NumericalSemigroupBySubAdditiveFunction([6, 5, 3, 0]);
 <Numerical semigroup>
 ```
 
-$S$ is the numerical semigroup of the subadditive function $f$ such that $f(0) = 0, f(1) = 6, f(2) = 5, f(3) = 3$ and period $m = 4$.
-
-The function `SmallElements` returns a list with the [left elements](../Basic-concepts/Left-elements.qmd) and the [conductor](../Basic-concepts/Conductor.qmd) of the numerical semigroup.
+$S$ is the numerical semigroup of the subadditive function $f$ such that $f(0) = 0, f(1) = 6, f(2) = 5, f(3) = 3$ and period $m = 4$. The function `SmallElements` returns a list with the [left elements](../Basic-concepts/Left-elements.qmd) and the [conductor](../Basic-concepts/Conductor.qmd) of the numerical semigroup.
 
 ``` gap
 gap> SmallElements(S);

@@ -20,7 +20,7 @@ is a numerical semigroup. If $S$ is a numerical semigroup such that $S = S(a,b,c
 
 ## Examples
 
-$\circ$ Let $a = 4, b = 13$ and $c = 2$ and define the proportionally modular Diophantine inequality $4x ~ (mod ~ 13) \le 2x$. If $x \le 3$ and $x \ne 0$,
+$\circ$ Let $a = 4, b = 13$ and $c = 2$ and define the proportionally modular Diophantine inequality $4x ~ (mod ~ 13) \le 2x$. If $x \in \{1,2,3\}$,
 
 $$
 4x ~ (mod ~ 13) = 4x > 2x.

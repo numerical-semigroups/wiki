@@ -8,7 +8,7 @@ engine: markdown
 
 ## Definition
 
-Let $a_1, a_2, b_1, b_2$ be positive integers and the fractions $\frac{a_1}{b_1}, \frac{a_2}{b_2}$. It is said that $\frac{a_1}{b_1}$ and $\frac{a_2}{b_2}$ are adjacent if
+Let $a_1, a_2, b_1, b_2$ be positive integers and let us consider the fractions $\frac{a_1}{b_1}, \frac{a_2}{b_2}$. It is said that $\frac{a_1}{b_1}$ and $\frac{a_2}{b_2}$ are adjacent if
 
 $$
 \frac{a_2}{b_2 + 1} < \frac{a_1}{b_1}, \text{ and } b_1 = 1 \text{ or } \frac{a_2}{b_2} < \frac{a_1}{b_1-1}.
@@ -19,10 +19,10 @@ $$
 $\circ$ Let $a_1 = 7, a_2 = 15, b_1 = 3, b_2 = 4$ and the fractions $\frac{a_1}{b_1} = \frac{7}{3}, \frac{a_2}{b_2} = \frac{15}{4}$. We have,
 
 $$
-\frac{a_2}{b_2 + 1} = \frac{15}{5} = 3 > \frac{7}{3} = \frac{a_1}{b_1}, 
+\frac{a_2}{b_2 + 1} = \frac{15}{5} = 3 > \frac{7}{3} = \frac{a_1}{b_1}.
 $$
 
-then, $\frac{7}{3}$ and $\frac{15}{4}$ are not adjacent.
+Then, $\frac{7}{3}$ and $\frac{15}{4}$ are not adjacent fractions.
 
 $\circ$ Let $a_1 = 2, a_2 = 2, b_1 = 7, b_2 = 9$ and the fractions $\frac{a_1}{b_1} = \frac{2}{7}, \frac{a_2}{b_2} = \frac{2}{9}$. We have,
 
@@ -30,7 +30,7 @@ $$
 \frac{a_2}{b_2 + 1} = \frac{2}{10} < \frac{2}{7} = \frac{a_1}{b_1} \text{ and } \frac{a_2}{b_2} = \frac{2}{9} < \frac{2}{7-1} = \frac{a_1}{b_1 - 1}.
 $$
 
-In conclusion, $\frac{2}{7}$ and $\frac{2}{9}$ are adjacent fractions.
+Therefore, $\frac{2}{7}$ and $\frac{2}{9}$ are adjacent fractions.
 
 ## Examples with GAP
 

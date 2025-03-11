@@ -8,7 +8,7 @@ engine: markdown
 
 ## Definition
 
-Let us consider a sequence of fractions $\frac{a_1}{b_1} < \frac{a_2}{b_2} < \cdots < \frac{a_p}{b_p}$. Then, it is said that the sequence of fractions is a Bézout sequence if $a_1, \ldots, a_p, b_1, \ldots, b_p$ are positive integers and $a_{i+1}b_i - b_{i+1}a_i = 1$ for all $i \in \{1, \ldots, p-1\}$. It is defined the [length](Length-Bezout-sequence.qmd) of the Bézout sequence as the integer $p$ and the fractions $\frac{a_1}{b_1}, \frac{a_p}{b_p}$ are defined as the [ends](End-Bezout-sequence.qmd) of the Bézout sequence.
+Let us consider a sequence of fractions $\frac{a_1}{b_1} < \frac{a_2}{b_2} < \cdots < \frac{a_p}{b_p}$. Then, it is said that the sequence of fractions is a Bézout sequence if $a_1, \ldots, a_p, b_1, \ldots, b_p$ are positive integers and $a_{i+1}b_i - b_{i+1}a_i = 1$ for all $i \in \{1, \ldots, p-1\}$. It is defined the length of the Bézout sequence as the integer $p$ and the fractions $\frac{a_1}{b_1}, \frac{a_p}{b_p}$ are defined as the ends of the Bézout sequence.
 
 ## Examples
 
@@ -21,6 +21,36 @@ $$
 $$
 
 be a sequence of fractions. We have $a_1 = 131, a_2 = 76, a_3 = 21, a_4 = 8$ and $b_1 = 50, b_2 = 29, b_3 = 8, b_4 = 3$, and $76 \cdot 50 - 131 \cdot 29 = 21 \cdot 29 - 76 \cdot 8 = 8 \cdot 8 - 21 \cdot 3 = 1$. Therefore, is a Bézout sequence with length $p = 4$ and ends $\frac{131}{50}, \frac{8}{3}$.
+
+$\circ$ Let
+
+$$
+\frac{w}{10} < \frac{x}{9} < \frac{y}{8} < \frac{z}{7},
+$$
+
+be a sequence of fractions. Then, is a Bézout sequence if, and only if, $w \equiv 1 ~ (mod ~ 10)$ and $w > 0$, that is, if $w = 10q + 1$ for some $q \in \mathbb{N}$. Indeed, the equations
+
+$$
+10x - 9w = 1, ~~~ 9y - 8x = 1, ~~~ 8z - 7y = 1,
+$$
+
+can be rewritten as
+
+$$
+x = \frac{9w + 1}{10}, ~~~ y = \frac{36w + 9}{45}, ~~~ z = \frac{252w+108}{360}.
+$$
+
+Then, the sequence of fractions is a Bézout sequence if, and only if, $w > 0$ and
+
+$$
+\begin{cases}
+  9w + 1 \equiv 0 ~ (mod ~ 10), \\
+  36w + 9 \equiv 0 ~ (mod ~ 45), \\
+  252w + 108 \equiv 0 ~ (mod ~ 360).
+\end{cases}
+$$
+
+Simplifying the system of congruences, it turns out that the set of solutions are those $w \in \mathbb{Z}$ such that $w \equiv 1 ~ (mod ~ 10)$, where it is deduced the result.
 
 ## Examples with GAP
 

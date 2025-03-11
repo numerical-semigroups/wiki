@@ -1,5 +1,5 @@
 ---
-title: "Proper Bezout sequence"
+title: "Proper Bézout sequence"
 format: html
 engine: markdown
 ---

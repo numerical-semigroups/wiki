@@ -1,5 +1,5 @@
 ---
-title: "Gluing"
+title: "Gluing of a set of positive integers"
 format: html
 engine: markdown
 ---
@@ -8,34 +8,34 @@ engine: markdown
 
 ## Definition
 
-Let $A = \{m_1, \ldots, m_r\}$ be a subset of integers and let $A_1, A_2$ be a partition of $A$. For $B = \{ m_{i_1}, \ldots, m_{i_k} \} \in \{A, A_1, A_2\}$, it is defined the monoid homomorfism,
+Let $A = \{m_1, \ldots, m_r\}$ be a subset of positive integers and let $A_1, A_2$ be a partition of $A$. For each $B = \{ m_{i_1}, \ldots, m_{i_k} \} \in \{A, A_1, A_2\}$, let us consider $X_B = \{x_i ~ | ~ m_i \in B\}$, the free monoid of $B$,
 
 $$
-\phi_B: \mathbb{N}^k \to \mathbb{N} ~ ; ~ (a_1, \ldots, a_k) \to a_1 m_{i_1} + a_2 m_{i_2} + \cdots + a_k m_{i_k}.
+Free(X_B) = \{a_1x_{i_1} + \cdots + a_kx_{i_k} ~ | ~ a_1, \ldots, a_k \in \mathbb{N}\},
 $$
 
-Let us consider $\phi_{A}, \phi_{A_1}, \phi_{A_2}$ the monoid homomorfism and $\sigma_A, \sigma_{A_1}, \sigma_{A_2}$ the [kernel congruence](../Presentations-NS/Presentation-NS.qmd) of $\phi_A, \phi_{A_1}, \phi_{A_2}$ respectively. Then, it is said that $A$ is a gluing of $A_1$ and $A_2$ if there exists a system of generators $\rho$ of $\sigma$ such that $\rho = \rho_1 \cup \rho_2 \cup \{(a,b)\}$ with $\rho_1 \subseteq \sigma_{A_1}, \rho_2 \subseteq \sigma_{A_2}$, $0 \ne a \in \mathbb{N}^{|A_1|}$ and $0 \ne b \in \mathbb{N}^{|A_2|}$.
+the monoid homomorfism,
 
-It can be proven that $A$ is a gluing of $A_1$ and $A_2$ if, and only if, for $d_1 = gcd(A_1)$ and $d_2 = gcd(A_2)$, then $lcm(d_1, d_2) = \langle A_1 \rangle \cap \langle A_2 \rangle$, where $lcm(\cdot, \cdot)$ denotes the least common multiple.
+$$
+\phi_B: Free(X_B) \to \mathbb{N}, ~~ a_1x_{i_1} + \cdots + x_{i_k}a_k \to a_1 m_{i_1} + \cdots + a_k m_{i_k}.
+$$
 
-The gluing of a set of positive integers is closely related to [gluing of numerical semigroups](Gluing-NS.qmd)
+and the [kernel congruence](../Presentations-NS/Presentation-NS.qmd) of $\phi_B$. Then, it is said that $A$ is a gluing of $A_1$ and $A_2$ if there exists a system of generators $\rho$ of $\sigma$ such that $\rho = \rho_1 \cup \rho_2 \cup \{(a,b)\}$ with $\rho_1 \subseteq \sigma_{A_1}, \rho_2 \subseteq \sigma_{A_2}$, $0 \ne a \in Free(X_{A_1})$ and $0 \ne b \in Free(X_{A_2})$.
+
+It can be proven that $A$ is a gluing of $A_1$ and $A_2$ if, and only if, for $d_1 = gcd(A_1)$ and $d_2 = gcd(A_2)$, then $lcm(d_1, d_2) = \langle A_1 \rangle \cap \langle A_2 \rangle$, where $gcd(\cdot)$ denotes the great common divisor and $lcm(\cdot)$ denotes the least common multiple.
+
+The gluing of a set of positive integers is closely related to the concept of [gluing of numerical semigroups](Gluing-NS.qmd).
 
 ## Examples
 
-$\circ$ Let $A = \{15, 25, 24, 36\}$ and $A_1 = \{15, 25\}$, $A_2 = \{24, 36\}$. We have $gcd(A_1) = 5, gcd(A_2) = 12$ and $lcm(5, 12) = 60 \in \langle 15, 25 \rangle \cap \langle 24, 36 \rangle$, therefore $A$ is a gluing of $A_1, A_2$. A system of generators of $\sigma_1$ is $\{(0, 3), (5,0)\}$ and for $\sigma_2$ is $\{(0,2), (3,0)\}$. Moreover, we have $(4, 0, 0, 0) \sim (0, 0, 1, 1)$. A system of generators of $\sigma_A$ is
+$\circ$ Let $A = \{15, 25, 24, 36\}$ and let us consider the partition $A_1 = \{15, 25\}$, $A_2 = \{24, 36\}$. We have $gcd(A_1) = 5, gcd(A_2) = 12$ and $lcm(5, 12) = 60 \in \langle 15, 25 \rangle \cap \langle 24, 36 \rangle$. Therefore, $A$ is a gluing of $A_1, A_2$. A system of generators of $\sigma_1$ is $\{(3x_2,5x_1)\}$ and for $\sigma_2$ is $\{(2x_4, 3x_3)\}$. Moreover, there is the relation $(4x_1, x_3 + x_4) \in \sigma_{A}$, where $a = 4x_1 \in Free(X_{A_1}) \setminus \{0\}$ and $b = x_3 + x_4 \in Free(X_{A_2}) \setminus \{0\}$. A system of generators of $\sigma_A$ is
 
 $$
-\rho = \{[(0,3,0,0), (5,0,0,0)], [(0,0,0,2), (0,0,3,0)], [(4,0,0,0), (0,0,1,1)\}.
-$$
-
-If we rewrite the pairs as $(a_1, \ldots, a_k) = a_1 x_1 + \cdots + a_k x_k$,
-
-$$
-\rho = \{[(3x_2, 5x_1)], [(2x_4, 3x_3)], [(4x_1, x_3 + x_4)]\}.
+\rho = \{(3x_2, 5x_1), (2x_4, 3x_3), (4x_1, x_3 + x_4)\}.
 $$
 
 ## Examples with GAP
 
-Nowadays, there are no functions in package NumericalSgps related to gluing a set of positive integers.
+Nowadays, there are no functions in package NumericalSgps related to gluing of a set of positive integers.
 
 ## References

@@ -8,7 +8,7 @@ engine: markdown
 
 ## Definition
 
-Let $a$ and $b$ be positive integers. It is said that an expression is a modular Diophantine inequality if it is of the form $ax ~ (mod ~ b) \le x$. The integers $a,b$ are called the [factor](Factor-prop-mod-Diophantine-ineq.qmd) and [modulus](Modulus-prop-mod-Diophantine-ineq.qmd) respectively. An expression of the form $ax ~ (mod ~ b) \le cx$ for some $a,b,c$ positive integers, are called [proportionally modular Diophantine inequality](Prop-mod-Diophantine-ineq.qmd).
+Let $a$ and $b$ be positive integers. It is said that an expression is a modular Diophantine inequality if it is of the form $ax ~ (mod ~ b) \le x$. The integers $a,b$ are called the [factor](Factor-prop-mod-Diophantine-ineq.qmd) and [modulus](Modulus-prop-mod-Diophantine-ineq.qmd) respectively. An expression of the form $ax ~ (mod ~ b) \le cx$ for some $a,b,c$ positive integers are called [proportionally modular Diophantine inequality](Prop-mod-Diophantine-ineq.qmd).
 
 It can be proven that the set of solutions,
 

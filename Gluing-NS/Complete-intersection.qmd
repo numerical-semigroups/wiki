@@ -8,11 +8,15 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is said that $S$ is a complete intersection if the cardinality of any minimal [presentation](../Presentations-NS/Presentation-NS.qmd) is equal to $e(S) - 1$, where $e(S)$ denotes the [embedding dimension](../Basic-concepts/Embedding-dimension.qmd) of $S$.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is said that $S$ is a complete intersection if the cardinality of any minimal [presentation](../Presentations-NS/Presentation-NS.qmd) of $S$ is equal to $e(S) - 1$, where $e(S)$ denotes the [embedding dimension](../Basic-concepts/Embedding-dimension.qmd) of $S$.
+
+It can be proven that every numerical semigroup is finite presented, that every minimal presentation has the same cardinal and that every presentations $\rho$ of $S$ has cardinal $|\rho| \ge e(S) - 1$.
 
 ## Examples
 
-$\circ$ Let us consider $a,b \in \mathbb{N} \setminus \{0,1\}$ with $gcd(a,b) = 1$ and $S = \langle a, b \rangle$. The unique minimal presentation of $S$ is $\{(b, 0), (a, 0)\}$, whose cardinal is $1 = 2 - 1 = e(S) - 1$, then any numerical semigroup with embedding dimension two is a complete intersection.
+$\circ$ Let us consider $a,b \in \mathbb{N} \setminus \{0,1\}$ with $gcd(a,b) = 1$ and $S = \langle a, b \rangle$. A minimal presentation of $S$ is $\rho = \{(bx_1, ax_2)\}$, whose cardinal is $1 = e(S) - 1$. Then, any numerical semigroup with embedding dimension two is a complete intersection.
+
+$\circ$ Given a numerical semigroup with embedding dimension three, the concepts of [symmetric](../Families-NS/NS-symmetric.qmd), [free](../Familiess-NS/NS-free.qmd) and complete intersection are equivalent.
 
 ## Examples with GAP
 
@@ -41,14 +45,14 @@ brk_3> EmbeddingDimension(S)-1;
 4
 ```
 
-$\diamond$ Given an integer $z \in \mathbb{Z}$, the function `CompleteIntersectionNumericalSemigroupsWithFrobeniusNumber` returns a list with all numerical semigroups with [Frobenius number](../Basic-concepts/Frobenius-number.qmd) $z$.
+$\diamond$ Given an integer $z \in \mathbb{Z}$, the function `CompleteIntersectionNumericalSemigroupsWithFrobeniusNumber` returns a list with all numerical semigroups that are a complete intersection with [Frobenius number](../Basic-concepts/Frobenius-number.qmd) $z$.
 
 ``` gap
 gap> Length(CompleteIntersectionNumericalSemigroupsWithFrobeniusNumber(21));
 5
 ```
 
-The code `List(List_NS, l -> Function(l));` return a list where it has applied `Function` to every element in $List\_NS$, for example, we can see the numerical semigroups with complete intersection and Frobenius number $f = 21$ by its [minimal generators](../Basic-concepts/Minimal-set-of-generators.qmd).
+The code `List(List_NS, l -> Function(l));` returns a list where it has applied `Function` to every element in $List\_NS$, for example, we can see the numerical semigroups with complete intersection and Frobenius number $f = 21$ by its [minimal generators](../Basic-concepts/Minimal-set-of-generators.qmd).
 
 ``` gap
 gap> Li := CompleteIntersectionNumericalSemigroupsWithFrobeniusNumber(21);
