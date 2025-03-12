@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Graph associated to an element</title>
+<title>Graph associated to an element by set of factorizations – Wiki numerical semigroups</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -35,10 +69,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ae19251225fe89a8232519ecbffc7ebc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-831a6e13d34e89ab8943621a9b1bffba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -99,7 +133,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar docked fullcontent">
+<body class="nav-sidebar floating fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -108,7 +142,9 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Graph associated to an element</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Wiki numerical semigroups
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -120,12 +156,67 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Wiki numerical semigroups</a> 
+    </div>
+      </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
         </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Básico</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Apery-set.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Apéry set</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Conductor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conductor</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Otro</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Arf-closure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Arf closure</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Dominant.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dominant</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -135,7 +226,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Graph associated to an element</h1>
+<h1 class="title">Graph associated to an element by set of factorizations</h1>
 </div>
 
 
@@ -154,15 +245,51 @@ window.Quarto = {
 
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a>.</p>
+<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> and <span class="math inline">\(s \in S\)</span>. It is defined the graph associated to <span class="math inline">\(s\)</span> as the graph whose vertices are the elements of <span class="math inline">\(\mathbf{Z}(s)\)</span>, the <a href="../Presentations-NS/Set-of-factorizations.html">set of factorizations</a> of <span class="math inline">\(s\)</span>, and there is an edge between <span class="math inline">\(a,b \in \mathbf{Z}(s)\)</span> if <span class="math inline">\(a \cdot b \ne 0\)</span>, where the dot product multiplies component by component. The graph associated to an element <span class="math inline">\(s \in S\)</span> is denoted by <span class="math inline">\(\nabla_s\)</span>. The connected components of <span class="math inline">\(\nabla_s\)</span> are determined by the <a href="../Presentations-NS/Factorizations-R-related.html">R-classes</a> in <span class="math inline">\(\mathbf{Z}(s)\)</span>.</p>
+<p>If the graph <span class="math inline">\(\nabla_s\)</span> is not connected, it is said that <span class="math inline">\(s\)</span> is a <a href="../Presentations-NS/Betti-element.html">Betti element</a>.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span></p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 5, 12, 13 \rangle\)</span> and <span class="math inline">\(s = 60\)</span>. To compute the set of factorizations <span class="math inline">\(\mathbf{Z}(s)\)</span> of <span class="math inline">\(s \in S\)</span>, note that <span class="math inline">\((\alpha, \beta, \gamma) \in \mathbf{Z}(s)\)</span> implies <span class="math inline">\(0 \le \alpha \le 12, 0 \le \beta \le 5\)</span> and <span class="math inline">\(0 \le \gamma \le 4\)</span>. From this, it is deduced that</p>
+<p><span class="math display">\[
+\mathbf{Z}(60) = \{ (12, 0, 0), (0, 5, 0), (7, 1, 1), (2, 2, 2) \}.
+\]</span></p>
+<p>The graph associated to <span class="math inline">\(s = 60\)</span> is as follows.</p>
+<pre class="{r}"><code>
+#graph G {
+ # layout = neato
+  #overlap = false
+  #node [shape = circle, fixedsize = true, width = 0.9]; (12, 0, 0); (7, 1, 1); (0, 5, 0); (2, 2, 2);
+  #(12, 0, 0) -&gt; (7, 1, 1);
+  #(12, 0, 0) -&gt; (2, 2, 2);
+  #(0, 5, 0) -&gt; (7, 1, 1); 
+  #(0, 5, 0) -&gt; (2, 2 , 2);
+  #(7, 1, 1) -&gt; (2, 2, 2);
+#}</code></pre>
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>Nowadays there is no function in the package NumericalSgps related to congruence generated by a set.</p>
+<p>The following example is made with the package NumericalSgps in GAP.</p>
+<p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 14, 17, 21, 30 \rangle\)</span>, in GAP:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">14</span><span class="op">,</span> <span class="fl">17</span><span class="op">,</span> <span class="fl">21</span><span class="op">,</span> <span class="fl">30</span>)<span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">4</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Given a numerical semigroup <span class="math inline">\(S\)</span> and an element <span class="math inline">\(n\)</span> of it, the functions <code>Factorizations</code> and <code>FactorizationsElementWRTNumericalSemigroup</code> return the set of factorizations of <span class="math inline">\(n\)</span> in terms of the minimal generating set of <span class="math inline">\(S\)</span>, therefore, they return the set of vertices of <span class="math inline">\(\nabla_n\)</span>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">z</span> <span class="op">:=</span> <span class="va">Factorizations</span>(<span class="va">S</span><span class="op">,</span> <span class="fl">215</span>)<span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>[ [ <span class="fl">2</span><span class="op">,</span> <span class="fl">11</span><span class="op">,</span> <span class="fl">0</span><span class="op">,</span> <span class="fl">0</span> ]<span class="op">,</span> [ <span class="fl">9</span><span class="op">,</span> <span class="fl">4</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">0</span> ]<span class="op">,</span> [ <span class="fl">6</span><span class="op">,</span> <span class="fl">4</span><span class="op">,</span> <span class="fl">3</span><span class="op">,</span> <span class="fl">0</span> ]<span class="op">,</span> [ <span class="fl">3</span><span class="op">,</span> <span class="fl">4</span><span class="op">,</span> <span class="fl">5</span><span class="op">,</span> <span class="fl">0</span> ]<span class="op">,</span> [ <span class="fl">0</span><span class="op">,</span> <span class="fl">4</span><span class="op">,</span> <span class="fl">7</span><span class="op">,</span> <span class="fl">0</span> ]<span class="op">,</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  [ <span class="fl">12</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">0</span><span class="op">,</span> <span class="fl">1</span> ]<span class="op">,</span> [ <span class="fl">2</span><span class="op">,</span> <span class="fl">8</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">1</span> ]<span class="op">,</span> [ <span class="fl">9</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">1</span> ]<span class="op">,</span> [ <span class="fl">6</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">4</span><span class="op">,</span> <span class="fl">1</span> ]<span class="op">,</span> [ <span class="fl">3</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">6</span><span class="op">,</span> <span class="fl">1</span> ]<span class="op">,</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  [ <span class="fl">0</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">8</span><span class="op">,</span> <span class="fl">1</span> ]<span class="op">,</span> [ <span class="fl">5</span><span class="op">,</span> <span class="fl">5</span><span class="op">,</span> <span class="fl">0</span><span class="op">,</span> <span class="fl">2</span> ]<span class="op">,</span> [ <span class="fl">2</span><span class="op">,</span> <span class="fl">5</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">2</span> ]<span class="op">,</span> [ <span class="fl">5</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">3</span> ]<span class="op">,</span> [ <span class="fl">2</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">3</span><span class="op">,</span> <span class="fl">3</span> ]<span class="op">,</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  [ <span class="fl">1</span><span class="op">,</span> <span class="fl">3</span><span class="op">,</span> <span class="fl">0</span><span class="op">,</span> <span class="fl">5</span> ]<span class="op">,</span> [ <span class="fl">1</span><span class="op">,</span> <span class="fl">0</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">6</span> ] ]</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">Factorizations</span>(<span class="va">S</span><span class="op">,</span> <span class="fl">215</span>) <span class="op">=</span> <span class="va">Factorizations</span>(<span class="fl">215</span><span class="op">,</span> <span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="cn">true</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">Factorizations</span>(<span class="va">S</span><span class="op">,</span> <span class="fl">215</span>) <span class="op">=</span> <span class="va">FactorizationsElementWRTNumericalSemigroup</span>(<span class="fl">215</span><span class="op">,</span> <span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="cn">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Given a set of factorizations of an element <span class="math inline">\(n \in S\)</span>, where <span class="math inline">\(S\)</span> is a numerical semigroup, the function <code>RClassesOfSetOfFactorizations</code> returns a list with the <span class="math inline">\(\mathcal{R}-\)</span>classes in <span class="math inline">\(\mathbf{Z}(n)\)</span>, therefore, it returns the connected components of <span class="math inline">\(\nabla_n\)</span>.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">RClassesOfSetOfFactorizations</span>(<span class="va">z</span>)<span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>[ [ [ <span class="fl">0</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">8</span><span class="op">,</span> <span class="fl">1</span> ]<span class="op">,</span> [ <span class="fl">0</span><span class="op">,</span> <span class="fl">4</span><span class="op">,</span> <span class="fl">7</span><span class="op">,</span> <span class="fl">0</span> ]<span class="op">,</span> [ <span class="fl">1</span><span class="op">,</span> <span class="fl">0</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">6</span> ]<span class="op">,</span> [ <span class="fl">1</span><span class="op">,</span> <span class="fl">3</span><span class="op">,</span> <span class="fl">0</span><span class="op">,</span> <span class="fl">5</span> ]<span class="op">,</span> [ <span class="fl">2</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">3</span><span class="op">,</span> <span class="fl">3</span> ]<span class="op">,</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>      [ <span class="fl">2</span><span class="op">,</span> <span class="fl">5</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">2</span> ]<span class="op">,</span> [ <span class="fl">2</span><span class="op">,</span> <span class="fl">8</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">1</span> ]<span class="op">,</span> [ <span class="fl">2</span><span class="op">,</span> <span class="fl">11</span><span class="op">,</span> <span class="fl">0</span><span class="op">,</span> <span class="fl">0</span> ]<span class="op">,</span> [ <span class="fl">3</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">6</span><span class="op">,</span> <span class="fl">1</span> ]<span class="op">,</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>      [ <span class="fl">3</span><span class="op">,</span> <span class="fl">4</span><span class="op">,</span> <span class="fl">5</span><span class="op">,</span> <span class="fl">0</span> ]<span class="op">,</span> [ <span class="fl">5</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">3</span> ]<span class="op">,</span> [ <span class="fl">5</span><span class="op">,</span> <span class="fl">5</span><span class="op">,</span> <span class="fl">0</span><span class="op">,</span> <span class="fl">2</span> ]<span class="op">,</span> [ <span class="fl">6</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">4</span><span class="op">,</span> <span class="fl">1</span> ]<span class="op">,</span> [ <span class="fl">6</span><span class="op">,</span> <span class="fl">4</span><span class="op">,</span> <span class="fl">3</span><span class="op">,</span> <span class="fl">0</span> ]<span class="op">,</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>      [ <span class="fl">9</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">1</span> ]<span class="op">,</span> [ <span class="fl">9</span><span class="op">,</span> <span class="fl">4</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">0</span> ]<span class="op">,</span> [ <span class="fl">12</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">0</span><span class="op">,</span> <span class="fl">1</span> ] ] ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In this case, <span class="math inline">\(\nabla_{215}\)</span> is connected.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
