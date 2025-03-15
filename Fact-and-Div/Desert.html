@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Desert – Wiki numerical semigroups</title>
+<title>Desert of a numerical semigroup – Wiki numerical semigroups</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -226,7 +226,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Desert</h1>
+<h1 class="title">Desert of a numerical semigroup</h1>
 </div>
 
 
@@ -245,15 +245,16 @@ window.Quarto = {
 
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> and <span class="math inline">\(G(S)\)</span> the set of <a href="../Basic-concepts/Gap.html">gaps</a> of <span class="math inline">\(S\)</span>. A subset <span class="math inline">\(A \subseteq \mathbb{N}\)</span> is a desert of <span class="math inline">\(S\)</span> if <span class="math inline">\(A = \mathbb{Z}^{&lt; 0}\)</span> or <span class="math inline">\(A \subseteq G(S)\)</span> and <span class="math inline">\(\min A - 1, \max A + 1 \in S\)</span>. Equivalently, <span class="math inline">\(A\)</span> is a desert of <span class="math inline">\(S\)</span> if <span class="math inline">\(A\)</span> is a maximal interval of gaps of <span class="math inline">\(S\)</span> (counting also the set of all negative integers).</p>
-<p>It can be proven that the number of deserts is <span class="math inline">\(|Ap(S, 1)|\)</span>, where <span class="math inline">\(Ap(S,1)\)</span> denotes the <a href="../Fact-and-Div/Apery-set-integer.html">Apéry set of the integer 1</a></p>
+<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> and <span class="math inline">\(G(S)\)</span> the set of <a href="../Basic-concepts/Gap.html">gaps</a> of <span class="math inline">\(S\)</span>. A subset <span class="math inline">\(A \subseteq \mathbb{Z}\)</span> is a desert of <span class="math inline">\(S\)</span> if <span class="math inline">\(A = \mathbb{Z}^{&lt; 0}\)</span> or <span class="math inline">\(A \subseteq G(S)\)</span> and <span class="math inline">\(\min A - 1, \max A + 1 \in S\)</span>. Equivalently, <span class="math inline">\(A\)</span> is a desert of <span class="math inline">\(S\)</span> if <span class="math inline">\(A\)</span> is a maximal interval of gaps of <span class="math inline">\(S\)</span> (counting also the set of all negative integers).</p>
+<p>It can be proven that the number of deserts is <span class="math inline">\(|Ap(S, 1)|\)</span>, where <span class="math inline">\(Ap(S,1)\)</span> denotes the <a href="../Fact-and-Div/Apery-set-integer.html">Apéry set of the integer</a> <span class="math inline">\(1\)</span>.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
 <p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 4, 7, 10 \rangle = \{ 0, 4, 7, 8, 10, 11, 12, 14, \rightarrow \}\)</span>. The deserts of <span class="math inline">\(S\)</span> are</p>
 <p><span class="math display">\[
 A_0 = \mathbb{Z}^{&lt;0}, A_1 = \{1, 2, 3\}, A_2 = \{5, 6\}, A_3 = \{9\}, A_4 = \{13\}.
-\]</span> On the other hand,</p>
+\]</span></p>
+<p>On the other hand,</p>
 <p><span class="math display">\[
 Ap(S,1) = \{0, 4, 7, 10, 14\}.
 \]</span></p>
@@ -264,7 +265,7 @@ Ap(S,1) = \{0, 4, 7, 10, 14\}.
 <p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 21, 35, 43, 45, 79 \rangle\)</span>, in GAP:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">21</span><span class="op">,</span> <span class="fl">35</span><span class="op">,</span> <span class="fl">43</span><span class="op">,</span> <span class="fl">45</span><span class="op">,</span> <span class="fl">79</span>)<span class="op">;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">5</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Given a numerical semigroup <span class="math inline">\(S\)</span>, the function <code>Deserts</code> returns a list with all the deserts of <span class="math inline">\(S\)</span>.</p>
+<p>Given a numerical semigroup <span class="math inline">\(S\)</span>, the functions <code>Deserts</code> and <code>DesertsOfNumericalSemigroup</code> return a list with all the deserts of <span class="math inline">\(S\)</span>, not counting the desert formed by the all negative integers.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">Deserts</span>(<span class="va">S</span>)<span class="op">;</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>[ [ <span class="fl">1</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">3</span><span class="op">,</span> <span class="fl">4</span><span class="op">,</span> <span class="fl">5</span><span class="op">,</span> <span class="fl">6</span><span class="op">,</span> <span class="fl">7</span><span class="op">,</span> <span class="fl">8</span><span class="op">,</span> <span class="fl">9</span><span class="op">,</span> <span class="fl">10</span><span class="op">,</span> <span class="fl">11</span><span class="op">,</span> <span class="fl">12</span><span class="op">,</span> <span class="fl">13</span><span class="op">,</span> <span class="fl">14</span><span class="op">,</span> <span class="fl">15</span><span class="op">,</span> <span class="fl">16</span><span class="op">,</span> <span class="fl">17</span><span class="op">,</span> <span class="fl">18</span><span class="op">,</span> <span class="fl">19</span><span class="op">,</span> <span class="fl">20</span> ]<span class="op">,</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  [ <span class="fl">22</span><span class="op">,</span> <span class="fl">23</span><span class="op">,</span> <span class="fl">24</span><span class="op">,</span> <span class="fl">25</span><span class="op">,</span> <span class="fl">26</span><span class="op">,</span> <span class="fl">27</span><span class="op">,</span> <span class="fl">28</span><span class="op">,</span> <span class="fl">29</span><span class="op">,</span> <span class="fl">30</span><span class="op">,</span> <span class="fl">31</span><span class="op">,</span> <span class="fl">32</span><span class="op">,</span> <span class="fl">33</span><span class="op">,</span> <span class="fl">34</span> ]<span class="op">,</span> [ <span class="fl">36</span><span class="op">,</span> <span class="fl">37</span><span class="op">,</span> <span class="fl">38</span><span class="op">,</span> <span class="fl">39</span><span class="op">,</span> <span class="fl">40</span><span class="op">,</span> <span class="fl">41</span> ]<span class="op">,</span></span>

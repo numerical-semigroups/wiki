@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Archimedean property – Wiki numerical semigroups</title>
+<title>Archimedean property of an element – Wiki numerical semigroups</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -192,7 +192,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Archimedean property</h1>
+<h1 class="title">Archimedean property of an element</h1>
 </div>
 
 
@@ -216,13 +216,9 @@ window.Quarto = {
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(A = \{a_1, \ldots, a_n\}\)</span> be a set of symbols, let <span class="math inline">\(*\)</span> be the concatenation operation and let us consider the semigroup <span class="math inline">\(S = \{ c_1c_2 \cdots c_k ~ | ~ c_i \in A, i \in \{1, 2, \ldots, k\} \}\)</span>. No element of <span class="math inline">\(S\)</span> is Archimedean, given <span class="math inline">\(x = a_{i_1}\cdots a_{i_m}\)</span> with <span class="math inline">\(i_1, \ldots, i_m \in \{1,2,\ldots, n\}\)</span>, for <span class="math inline">\(y = a_j\)</span> with <span class="math inline">\(j \ne i_1\)</span>, there no exist <span class="math inline">\(k \in \mathbb{N} \setminus \{0\}\)</span> and <span class="math inline">\(z \in S\)</span> such that <span class="math inline">\(kx = y * z\)</span>.</p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(A = \{a_1, \ldots, a_n\}\)</span> be a set of symbols, let <span class="math inline">\(*\)</span> be the concatenation operation and let us consider the semigroup <span class="math inline">\(S = \{ c_1c_2 \cdots c_k ~ | ~ c_i \in A, i \in \{1, 2, \ldots, k\} \}\)</span>. No element of <span class="math inline">\(S\)</span> is Archimedean. Indeed, given <span class="math inline">\(x = a_{i_1}\cdots a_{i_m}\)</span> with <span class="math inline">\(i_1, \ldots, i_m \in \{1,2,\ldots, n\}\)</span>, for <span class="math inline">\(y = a_j\)</span> with <span class="math inline">\(j \ne i_1\)</span>, there no exist <span class="math inline">\(k \in \mathbb{N} \setminus \{0\}\)</span> and <span class="math inline">\(z \in S\)</span> such that <span class="math inline">\(kx = y * z\)</span>.</p>
 <p><span class="math inline">\(\circ\)</span> The semigroup <span class="math inline">\((\mathbb{N}^*, +)\)</span>, where <span class="math inline">\(\mathbb{N}^* = \mathbb{N} \setminus \{0\}\)</span> is Archimedean. Given <span class="math inline">\(x, y \in \mathbb{N}^*\)</span>, let us consider <span class="math inline">\(k \in \mathbb{N}^*\)</span> such that <span class="math inline">\(kx &gt; y\)</span>. then, if we define <span class="math inline">\(z = kx - y &gt; 0\)</span>, it is obtained that <span class="math inline">\(kx = y + z\)</span>.</p>
 <p><span class="math inline">\(\circ\)</span> Given a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> <span class="math inline">\(S\)</span>, it holds that <span class="math inline">\(S^* = S \setminus \{0\}\)</span> is Archimedean. Let <span class="math inline">\(F(S)\)</span> be the <a href="../Basic-concepts/Frobenius-number.html">Frobenius number</a> of <span class="math inline">\(S\)</span>. Given <span class="math inline">\(x, y \in S^*\)</span>, there exists <span class="math inline">\(k \in \mathbb{N} \setminus \{0\}\)</span> such that <span class="math inline">\(kx - y &gt; F(S)\)</span>. Then, <span class="math inline">\(z := kx - y \in S^*\)</span> and <span class="math inline">\(kx = y + z\)</span>.</p>
-</section>
-<section id="examples-with-gap" class="level2">
-<h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>Nowadays, there are no functions in package NumericalSgps related to Archimedean property.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>

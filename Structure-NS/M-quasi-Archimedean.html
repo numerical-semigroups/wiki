@@ -212,15 +212,11 @@ window.Quarto = {
 <!-- Definición de Num. Sem. -->
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(A\)</span> be a monoid. It is said that <span class="math inline">\(A\)</span> is quasi-Archimedean if <span class="math inline">\(A \setminus \{0\}\)</span> is <a href="../Structure-NS/Archimedean-property.html">Archimedean</a>.</p>
+<p>Let <span class="math inline">\(A\)</span> be a monoid with identity element <span class="math inline">\(0\)</span>. It is said that <span class="math inline">\(A\)</span> is quasi-Archimedean if <span class="math inline">\(0\)</span> is not an <a href="../Structure-NS/Archimedean-property.html">Archimedean</a> <span class="math inline">\(A \setminus \{0\}\)</span> is Archimedean.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> Given a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> <span class="math inline">\(S\)</span>, it holds that <span class="math inline">\(S^* = S \setminus \{0\}\)</span> is Archimedean. Let <span class="math inline">\(F(S)\)</span> be the <a href="../Basic-concepts/Frobenius-number.html">Frobenius number</a> of <span class="math inline">\(S\)</span>. Given <span class="math inline">\(x, y \in S^*\)</span>, there exists <span class="math inline">\(k \in \mathbb{N} \setminus \{0\}\)</span> such that <span class="math inline">\(kx - y &gt; F(S)\)</span>. Then, <span class="math inline">\(z := kx - y \in S^*\)</span> and <span class="math inline">\(kx = y + z\)</span>.</p>
-</section>
-<section id="examples-with-gap" class="level2">
-<h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>Nowadays, there are no functions in package NumericalSgps related to quasi-Archimedean monoid.</p>
+<p><span class="math inline">\(\circ\)</span> Given a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> <span class="math inline">\(S\)</span>, it holds that <span class="math inline">\(S\)</span> is Quasi-Archimedean. First, <span class="math inline">\(s = 0\)</span> is not an Archimedean. On the other hand, let <span class="math inline">\(F(S)\)</span> be the <a href="../Basic-concepts/Frobenius-number.html">Frobenius number</a> of <span class="math inline">\(S\)</span>. Given <span class="math inline">\(x, y \in S^*\)</span>, there exists <span class="math inline">\(k \in \mathbb{N} \setminus \{0\}\)</span> such that <span class="math inline">\(kx - y &gt; F(S)\)</span>. Then, <span class="math inline">\(z := kx - y \in S^*\)</span> and <span class="math inline">\(kx = y + z\)</span>.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>

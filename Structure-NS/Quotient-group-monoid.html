@@ -212,19 +212,19 @@ window.Quarto = {
 <!-- Definición de Num. Sem. -->
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(A\)</span> be a <a href="../Structure-NS/M-cancellative.html">cancellative</a> monoid. It is defined the relation <span class="math inline">\(\sim\)</span> on <span class="math inline">\(S \times S\)</span> as follows:</p>
+<p>Let <span class="math inline">\(S\)</span> be a <a href="../Structure-NS/M-cancellative.html">cancellative</a> monoid. It is defined the relation <span class="math inline">\(\sim\)</span> on <span class="math inline">\(S \times S\)</span> as follows:</p>
 <p><span class="math display">\[
 (a, b) \sim (c, d) \Longleftrightarrow a + d = b + c.
 \]</span></p>
-<p>It can be proven that the relation <span class="math inline">\(\sim\)</span> is a congruence. It is defined the quotient group, denoted by <span class="math inline">\(Q(S)\)</span>, as <span class="math inline">\(Q(S) = (S \times S)/ \sim\)</span>.</p>
+<p>It can be proven that the relation <span class="math inline">\(\sim\)</span> is a <a href="../Structure-NS/Congruence-on-a-semigroup.html">congruence</a>. It is defined the quotient group, denoted by <span class="math inline">\(Q(S)\)</span>, as <span class="math inline">\(Q(S) = (S \times S)/ \sim\)</span>.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span></p>
-</section>
-<section id="examples-with-gap" class="level2">
-<h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>Nowadays, there are no functions in package NumericalSgps related to quotient group of a monoid.</p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = (\mathbb{Z}\setminus \{0\}, \cdot)\)</span>. Then,</p>
+<p><span class="math display">\[
+(a,b) \sim (c,d) \Longleftrightarrow ad = bc.
+\]</span></p>
+<p>It is well known that the relation defined above on <span class="math inline">\(\mathbb{Z} \times (\mathbb{Z} \setminus \{0\})\)</span> generates the quotient field of <span class="math inline">\(\mathbb{Z}\)</span>, which is <span class="math inline">\(D(\mathbb{Z}) = \mathbb{Q}\)</span>. Since <span class="math inline">\((0,n) \sim (0,1)\)</span> for all <span class="math inline">\(n \in \mathbb{Z}\setminus \{0\}\)</span>, it is deduced that <span class="math inline">\(Q(S) = (S \times S) / \sim \hspace{0.1cm} = D(\mathbb{Z}) \setminus \{[(0,1)]\}\)</span>.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>

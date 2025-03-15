@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Set of lengths – Wiki numerical semigroups</title>
+<title>Set of lengths of an element – Wiki numerical semigroups</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -226,7 +226,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Set of lengths</h1>
+<h1 class="title">Set of lengths of an element</h1>
 </div>
 
 
@@ -253,8 +253,8 @@ window.Quarto = {
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 5, 12, 17 \rangle\)</span> and <span class="math inline">\(s = 70\)</span>. Its set of factorizations is <span class="math inline">\(\mathbf{Z}(70) = \{(14, 0), (2,5)\}\)</span>. The length of <span class="math inline">\((14,0)\)</span> is <span class="math inline">\(14\)</span> and the length of <span class="math inline">\((2,5)\)</span> is <span class="math inline">\(7\)</span>, therefore, <span class="math inline">\(\mathbf{L}(70) = \{14, 7\}\)</span>.</p>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 5, 9, 13 \rangle\)</span> and <span class="math inline">\(s = 41 \in S\)</span>. Its set of factorizations is <span class="math inline">\(\mathbf{Z}(41) = \{(1,4,0), (2,2,1), (3,0,2)\}\)</span>, therefore <span class="math inline">\(\mathbf{L}(41) = \{5\}\)</span>. It is said that a monoid <span class="math inline">\(A\)</span> is <a href="../Fact-and-Div/Half-factorial-monoid.html">half-factorial</a> if for all <span class="math inline">\(a \in A\)</span>, <span class="math inline">\(|\mathbf{L}(a)| = 1\)</span>.</p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 5, 12, 17 \rangle\)</span> and <span class="math inline">\(s = 70\)</span>. Its set of factorizations is <span class="math inline">\(\mathbf{Z}(70) = \{(14, 0), (2,5)\}\)</span>. The length of <span class="math inline">\((14,0)\)</span> is <span class="math inline">\(14\)</span> and the length of <span class="math inline">\((2,5)\)</span> is <span class="math inline">\(7\)</span>. Therefore, <span class="math inline">\(\mathbf{L}(70) = \{14, 7\}\)</span>.</p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 5, 9, 13 \rangle\)</span> and <span class="math inline">\(s = 41 \in S\)</span>. Its set of factorizations is <span class="math inline">\(\mathbf{Z}(41) = \{(1,4,0), (2,2,1), (3,0,2)\}\)</span>, therefore <span class="math inline">\(\mathbf{L}(41) = \{5\}\)</span>. It is said that a monoid <span class="math inline">\(A\)</span> is <a href="../Fact-and-Div/Half-factorial-monoid.html">half-factorial</a> if <span class="math inline">\(|\mathbf{L}(a)| = 1\)</span> for all <span class="math inline">\(a \in A\)</span>.</p>
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
@@ -265,6 +265,9 @@ window.Quarto = {
 <p>Given a numerical semigroup <span class="math inline">\(S\)</span> and an element <span class="math inline">\(n\)</span> of it, the function <code>LengthsOfFactorizationsElementWRTNumericalSemigroup</code> computes the set of lengths of <span class="math inline">\(n\)</span> in <span class="math inline">\(S\)</span>.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">LengthsOfFactorizationsElementWRTNumericalSemigroup</span>(<span class="fl">120</span><span class="op">,</span> <span class="va">S</span>)<span class="op">;</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>[ <span class="fl">6</span><span class="op">,</span> <span class="fl">8</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Given a list of integers <span class="math inline">\(Is\)</span> and an element <span class="math inline">\(n\)</span>, the function <code>LengthsOfFactorizationsIntegerWRTList</code> returns the set of lengths of the factorizations of <span class="math inline">\(n\)</span> in terms of the elements in <span class="math inline">\(Is\)</span>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">LengthsOfFactorizationsIntegerWRTList</span>(<span class="fl">120</span><span class="op">,</span> [<span class="fl">10</span><span class="op">,</span> <span class="fl">20</span><span class="op">,</span> <span class="fl">35</span>])<span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>[ <span class="fl">5</span><span class="op">,</span> <span class="fl">6</span><span class="op">,</span> <span class="fl">7</span><span class="op">,</span> <span class="fl">8</span><span class="op">,</span> <span class="fl">9</span><span class="op">,</span> <span class="fl">10</span><span class="op">,</span> <span class="fl">11</span><span class="op">,</span> <span class="fl">12</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
