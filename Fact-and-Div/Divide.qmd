@@ -1,5 +1,5 @@
 ---
-title: "Divide"
+title: "Division between elements in a numerical semigroup"
 format: html
 engine: markdown
 ---

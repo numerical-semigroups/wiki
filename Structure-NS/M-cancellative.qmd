@@ -12,10 +12,34 @@ Let $A$ be a monoid. It is said that $A$ is a cancellative monoid if for any $a,
 
 ## Examples
 
-$\circ$
+$\circ$ Every group is a cancellative monoid since every element has an inverse.
 
-## Examples with GAP
+$\circ$ Let $R$ be an unitary ring and let us consider $A = (M_2(R), \cdot)$, where $M_2(R)$ is the set of $2 \times 2$ matrix with coefficients in $R$ and $\cdot$ denotes the usual matrix product. It is well known that $A$ is a monoid. We have that
 
-Nowadays, there are no functions in package NumericalSgps related to cancellative monoid.
+$$
+\begin{pmatrix}
+  0 & 0 \\
+  1 & 0
+\end{pmatrix}
+\begin{pmatrix}
+  0 & 0 \\
+  1 & 0
+\end{pmatrix}
+=
+\begin{pmatrix}
+  0 & 0 \\
+  0 & 0
+\end{pmatrix}
+= \begin{pmatrix}
+  1 & 0 \\
+  1 & 0
+\end{pmatrix}
+\begin{pmatrix}
+  0 & 0 \\
+  1 & 0
+\end{pmatrix},
+$$
+
+where it is deduced that $(M_2(R), \cdot)$ is not a cancellative monoid.
 
 ## References

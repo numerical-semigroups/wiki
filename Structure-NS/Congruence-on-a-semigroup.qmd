@@ -8,13 +8,15 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a semigroup and let $\sigma \subseteq S \times S$. It is said that $\sigma$ is a congruence on $S$ if it is an equivalence relation and for all $a, b \in S$, $[a] + [b] = [a + b]$.
+Let $S$ be a semigroup and let $\sigma \subseteq S \times S$. It is said that $\sigma$ is a congruence on $S$ if it is an equivalence relation compatible with the binary operation, that is, for all $a,a', b,b' \in S$, if $a \sim a'$ and $b \sim b'$, then $a + b \sim a' + b'$.
 
 Given a semigroup $S$ and a congruence $\sigma$, the quotient set
 
 $$
 S / \sigma = \{[a] ~ | ~ a \in S\},
-$$ is a semigroup and it is called the quotient semigroup of $S$ by $\sigma$.
+$$
+
+is a semigroup and it is called the quotient semigroup of $S$ by $\sigma$.
 
 ## Examples
 
@@ -22,16 +24,14 @@ $\circ$ Let $S$ be a semigroup and $b \in S$. The relation $\sigma_b$ defined as
 
 $$
 a \sigma_b y \Longleftrightarrow a + nb = y + mb ~ \text{ for some } n,m \in \mathbb{N} \setminus \{0\},
-$$ is a congruence on $S$, let us prove it. Let $x, y, z \in S$ arbitrary but fixed.
+$$
+
+is a congruence on $S$, let us prove it. Let $x, y, z \in S$ arbitrary but fixed.
 
 -   Reflexive: $x + b = x + b$, therefore $x \sigma_b x$.
 
 -   Symmetry: if $x \sigma_b y$, there exist $n,m \in \mathbb{N} \setminus \{0\}$ such that $x + nb = y + mb$. Thus, $y + mb = x + nb$ and $y \sigma_b x$.
 
 -   Transitive: if $x \sigma_b y$ and $y \sigma_b z$, there exist $n,m, n', m' \in \mathbb{N} \setminus \{0\}$ such that $x + nb = y + mb$ and $y + n'b = z + m'b$. Then, $x + (n + n')b = y + mb + n'b = z + (m + m')b$ and $x \sigma_b z$.
-
-## Examples with GAP
-
-Nowadays, there are no functions in package NumericalSgps related to congruence on a semigroup.
 
 ## References

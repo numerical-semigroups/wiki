@@ -1,14 +1,12 @@
 ---
 title: "Chain of factorizations"
 format: html
-editor: visual
-execute: 
-  echo: false
+engine: markdown
 ---
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), let $s \in S$ and let $\mathbf{Z}(s)$ be the [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) of $s$ in $S$. Given $x,y \in \mathbf{Z}(s)$ and a non-negative integer $N$, it is said that $x_1, x_2, \ldots, x_k$ is an $N-$chain joining $x$ and $y$ if
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), let $s \in S$ and let $\mathbf{Z}(s)$ be the [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) of $s$ in $S$. Given $x,y \in \mathbf{Z}(s)$ and a non-negative integer $N$, it is said that $x_1, x_2, \ldots, x_k \in \mathbb{Z}(s)$ is an $N-$chain joining $x$ and $y$ if
 
 -   $x_1 = x$, $x_k = y$,
 

@@ -25,7 +25,9 @@ $\circ$ Let $P \equiv x_1 + x_2 - x_3$. It holds $\mathbb{N} \in \mathcal{S}(P)$
 
 $$
 m_1 + m_2 - m_3 = m_1 + (m_2 - m_3) \ge 0.
-$$ Hence, $P$ is admissible. On the other hand, $P' = x_2 - x_3$, which is also admissible. Therefore, $P$ is strongly admissible. The set $\mathcal{S}(x_1 + x_2 - x_3)$ is the set of [Arf semigroups](../Families-NS/Arf-semigroup.qmd).
+$$
+
+Hence, $P$ is admissible. On the other hand, $P' = x_2 - x_3$, which is also admissible. Therefore, $P$ is strongly admissible. The set $\mathcal{S}(x_1 + x_2 - x_3)$ is the set of [Arf semigroups](../Families-NS/Arf-semigroup.qmd).
 
 ## Examples with GAP
 

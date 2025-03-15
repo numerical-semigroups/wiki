@@ -8,14 +8,10 @@ engine: markdown
 
 ## Definition
 
-Let $A$ be a monoid. It is said that $A$ is a hereditarily finitely generated monoid if for any of its submonoid is finitely generated.
+Let $A$ be a monoid. It is said that $A$ is a hereditarily finitely generated monoid if every submonoid is finitely generated.
 
 ## Examples
 
-$\circ$
-
-## Examples with GAP
-
-Nowadays, there are no functions in package NumericalSgps related to weakly cancellative monoid.
+$\circ$ Let us consider $A = (\mathbb{N}, +)$ and $X$ a submonoid of $A$. Let $d = gcd(X)$ and $S = \left \{\frac{x}{d} ~ | ~ x \in X \right\}$. Since $gcd(S) = 1$, it is well known that $S$ is a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and it has a [minimal set of generators](../Basic-concepts/Minimal-set-of-generators.qmd) $P$. Then, $dP = \{dp ~ | ~ p \in P\}$ is a set of generators of $X$ and $A$ is a hereditarily finitely generated monoid.
 
 ## References

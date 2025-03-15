@@ -6,15 +6,17 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $x \in \mathbb{N} \setminus \{0\}$. It is defined the Apéry set of $x$ in $S$, denoted by $Ap(s,x)$, as
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $x \in \mathbb{N} \setminus \{0\}$. It is defined the Apéry set of $x$ in $S$, denoted by $Ap(S,x)$, as
 
 $$
-Ap(s,x) = \{s \in S ~ | ~ s - x \not \in S \}.
-$$ This definition generalizes the definition of [Apéry set](../Basic-concepts/Apery-set.qmd) of $s \in S \setminus \{0\}$ in $S$.
+Ap(S,x) = \{s \in S ~ | ~ s - x \not \in S \}.
+$$
+
+This definition generalizes the definition of [Apéry set](../Basic-concepts/Apery-set.qmd) of $s \in S \setminus \{0\}$ in $S$.
 
 ## Examples
 
-$\circ$ Let $S = \langle 3, 8, 13 \rangle = \{0, 3, 6, 8, 9, 11, \rightarrow\}$ and $x = 2 \not \in S$. The [conductor](../Basic-concepts/Conductor.qmd) of $S$ is $C(S) = 11$, then if $s \ge C(S) + 2 = 13$, then $s - 2 \ge C(S)$ and $s-2 \in S$, therefore $Ap(S,2) \subseteq \{0, 3, 6, 8, 9, 11, 12\}$. It is obtained that $Ap(S,2) = \{0, 3, 6, 9, 12\}$.
+$\circ$ Let $S = \langle 3, 8, 13 \rangle = \{0, 3, 6, 8, 9, 11, \rightarrow\}$ and $x = 2 \not \in S$. The [conductor](../Basic-concepts/Conductor.qmd) of $S$ is $C(S) = 11$, then if $s \ge C(S) + 2 = 13$, it holds $s - 2 \ge C(S)$ and $s-2 \in S$. Therefore, $Ap(S,2) \subseteq \{0, 3, 6, 8, 9, 11, 12\}$. It is obtained that $Ap(S,2) = \{0, 3, 6, 9, 12\}$.
 
 ## Examples with GAP
 
@@ -27,11 +29,15 @@ gap> S := NumericalSemigroup(9, 14, 29, 44);
 <Numerical semigroup with 4 generators>
 ```
 
-Given a numerical semigroup $S$ and an integer $x \in \mathbb{N} \setminus \{0\}$, the function `AperyList` returns the Apéry set of $x$ in $S$.
+Given a numerical semigroup $S$ and an integer $x \in \mathbb{N} \setminus \{0\}$, the functions `AperyList` and `AperyListOfNumericalSemigroupWRTInteger` return the Apéry set of $x$ in $S$.
 
 ``` gap
+gap> 15 in S;
+false
 gap> AperyList(S, 15);
 [ 0, 9, 14, 18, 23, 27, 28, 32, 36, 37, 41, 45, 46, 50, 54, 55, 63, 64 ]
+gap> AperyList(S, 15) = AperyListOfNumericalSemigroupWRTInteger(S, 15);
+true
 ```
 
 ## References

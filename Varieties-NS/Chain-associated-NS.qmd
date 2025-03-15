@@ -18,7 +18,7 @@ is well defined, since $S \cup \{F(S)\}$ is a numerical semigroup, and finite, s
 
 $$
 S_0 \subsetneq S_1 \subsetneq \cdots \subsetneq S_k = \mathbb{N}.
-$$ Moreover, this path connecting $S$ and $\mathbb{N}$ is unique. Then, it is defined the chain associated to $S$, denoted by $Ch(S)$, as
+$$ Moreover, this path connects $S$ with $\mathbb{N}$ in $\mathcal{G}(\mathcal{S})$ and is unique. It is defined the chain associated to $S$, denoted by $Ch(S)$, as
 
 $$
 Ch(S) = \{S_0, S_1, \ldots, S_k \}.

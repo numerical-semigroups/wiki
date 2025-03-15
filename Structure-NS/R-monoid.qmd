@@ -8,14 +8,12 @@ engine: markdown
 
 ## Definition
 
-Let $A$ be a monoid. It is said that $A$ is a $\mathcal{R}-$monoid if it is a [cancellative](M-cancellative.qmd) that is not a group and with at least an [Archimedean element](Archimedean-property.qmd).
+Let $A$ be a monoid. It is said that $A$ is a $\mathcal{R}-$monoid if it is a [cancellative monoid](M-cancellative.qmd) that is not a group and with at least an [Archimedean element](Archimedean-property.qmd).
 
 ## Examples
 
-$\circ$
+$\circ$ $(\mathbb{N}, +)$ is an $\mathcal{R}-$monoid. In particular, every [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) is a $\mathcal{R}-$monoid.
 
-## Examples with GAP
-
-Nowadays, there are no functions in package NumericalSgps related to $\mathcal{R}-$monoid.
+$\circ$ Let $R$ be an unitary ring and $A = (M_2(R), \cdot)$, where $M_2(R)$ is the set of $2 \times 2$ matrix with coefficients in $R$ and $\cdot$ denotes the usual product matrix. Since $A$ is not cancellative, $A$ is not a $\mathcal{R}-$monoid.
 
 ## References

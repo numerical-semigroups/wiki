@@ -16,7 +16,7 @@ From the elasticity of an element it is defined the [elasticity of a numerical s
 
 ## Examples
 
-$\circ$ Let $S = \langle 5, 9, 16 \rangle$, $s = 56 \in S$ and $\mathbf{Z}(s)$ the [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) of $s$ in $S$. If $(\alpha, \beta, \gamma) \in \mathbf{Z}(s)$, then $0 \le \alpha \le 11, 0 \le \beta \le 6, 0 \le \gamma \le 3$, from this it is deduced that $\mathbf{Z}(56) = \{(4,4,0), (8,0,1), (3,1,2)\}$. Its set of lengths is $\mathbf{L}(56) = \{6, 8, 9\}$ and the elasticity of $s = 56$ is $\rho(56) = 3/2$.
+$\circ$ Let $S = \langle 5, 9, 16 \rangle$, $s = 56 \in S$ and $\mathbf{Z}(s)$ the [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) of $s$ in $S$. If $(\alpha, \beta, \gamma) \in \mathbf{Z}(s)$, then $0 \le \alpha \le 11, 0 \le \beta \le 6, 0 \le \gamma \le 3$, from which it follows that $\mathbf{Z}(56) = \{(4,4,0), (8,0,1), (3,1,2)\}$. Its set of lengths is $\mathbf{L}(56) = \{6, 8, 9\}$ and the elasticity of $s = 56$ is $\rho(56) = 3/2$.
 
 ## Examples with GAP
 
@@ -29,11 +29,15 @@ gap> S := NumericalSemigroup(14, 31, 68, 81);
 <Numerical semigroup with 4 generators>
 ```
 
-Given a numerical semigroup $S$ and an element $n \in S$, the function `Elasticity` returns the elasticity of $n$ in $S$. Given only a numerical semigroup $S$, this function returns the elasticity of $S$.
+Given a numerical semigroup $S$ and an element $n \in S$, the functions `Elasticity` and `ElasticityOfFactorizationsElementWRTNumericalSemigroup` return the elasticity of $n$ in $S$. Given only a numerical semigroup $S$, this function returns the elasticity of $S$.
 
 ``` gap
 gap> Elasticity(250, S);
 2
+gap> Elasticity(S, 250);
+2
+gap> Elasticity(250, S) = ElasticityOfFactorizationsElementWRTNumericalSemigroup(250, S);
+true
 gap> Elasticity(S);
 81/14
 ```

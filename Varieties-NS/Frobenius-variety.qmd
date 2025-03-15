@@ -8,13 +8,13 @@ engine: markdown
 
 ## Definition
 
-Let $V$ be a set of [numerical semigroups](../Basic-concepts/Numerical-semigroup.qmd). It is said that $V$ is a Frobenius variety if fulfill the following conditions:
+Let $V$ be a non-empty set of [numerical semigroups](../Basic-concepts/Numerical-semigroup.qmd). It is said that $V$ is a Frobenius variety if fulfill the following conditions:
 
 1)  If $S, T \in V$, then $S \cap T \in V$,
 
 2)  If $S \in V$ and $S \ne \mathbb{N}$, then $S \cup \{F(S)\} \in V$,
 
-where $F(S)$ denotes the [Frobenius number](../Basic-concepts/Frobenius-number.qmd) of $S$. It is well known that the intersection of two numerical semigroups is also a numerical semigroup and for any numerical semigroup $S$, the set $S \cup \{F(S)\}$ is also a numerical semigroup, therefore the conditions of Frobenius variety are well defined.
+where $F(S)$ denotes the [Frobenius number](../Basic-concepts/Frobenius-number.qmd) of $S$. It is well known that the intersection of two numerical semigroups is also a numerical semigroup and for any numerical semigroup $S$, the set $S \cup \{F(S)\}$ is also a numerical semigroup. Therefore, the conditions of Frobenius variety are well defined.
 
 ## Examples
 

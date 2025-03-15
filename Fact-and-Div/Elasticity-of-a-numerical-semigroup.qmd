@@ -23,16 +23,16 @@ $$
 $\circ$ Let $S = \langle 17, 42, 89, 104 \rangle$. As $B = \{17, 42, 89, 104\}$ is a minimal set of generators, the elasticity of $S$ is $\rho(S) = 104/17$. If we take $s = 17 \cdot 104$, we have
 
 $$
-17 \cdot 104 = 104 \cdot 17 + 0 \cdot 42 + 0 \cdot 89 + 0 \cdot 104 = 0 \cdot 17 + 0 \cdot 42 + 0 \cdot 89 + 17 \cdot 104,
+17 \cdot 104 = 104 \cdot 17 + 0 \cdot 42 + 0 \cdot 89 + 0 \cdot 104 = 0 \cdot 17 + 0 \cdot 42 + 0 \cdot 89 + 17 \cdot 104.
 $$
 
-then $(104,0,0,0)$ and $(0,0,0,17)$ are factorizations of $17 \cdot 104$ with lengths $104$ and $17$ respectively, therefore
+Then, $(104,0,0,0)$ and $(0,0,0,17)$ are factorizations of $17 \cdot 104$ in $S$ with lengths $104$ and $17$, respectively. Therefore,
 
 $$
 \frac{104}{17} \le \rho(17 \cdot 104) \le \rho(S) = \frac{104}{17}.
 $$
 
-In conclusion, $\rho(17 \cdot 104) = 104/17$ and the elasticity of $S$ is reached by $17 \cdot 104$.
+In conclusion, $\rho(17 \cdot 104) = 104/17$ and the elasticity of $S$ is reached by $s = 17 \cdot 104$.
 
 ## Examples with GAP
 
@@ -45,11 +45,13 @@ gap> S := NumericalSemigroup(18, 43, 92, 105);
 <Numerical semigroup with 4 generators>
 ```
 
-Given a numerical semigroup $S$, the function `Elasticity` returns the elasticity of $S$. If we also give an element $n \in S$, the function returns the elasticity of $n$ in $S$.
+Given a numerical semigroup $S$, the functions `Elasticity` and `ElasticityOfNumericalSemigroup` return the elasticity of $S$. In the function `Elasticity`, if we also give an element $n \in S$, the function returns the elasticity of $n$ in $S$.
 
 ``` gap
 gap> Elasticity(S);
 35/6
+gap> Elasticity(S) = ElasticityOfNumericalSemigroup(S);
+true
 gap> Elasticity(S, 415);
 6/5
 gap> Elasticity(S, 1890);

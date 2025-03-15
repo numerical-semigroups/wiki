@@ -8,20 +8,22 @@ engine: markdown
 
 ## Definition
 
-Let $A$ be a [cancellative](M-cancellative.qmd) monoid. It is defined the relation $\sim$ on $S \times S$ as follows:
+Let $S$ be a [cancellative](M-cancellative.qmd) monoid. It is defined the relation $\sim$ on $S \times S$ as follows:
 
 $$
 (a, b) \sim (c, d) \Longleftrightarrow a + d = b + c.
 $$
 
-It can be proven that the relation $\sim$ is a congruence. It is defined the quotient group, denoted by $Q(S)$, as $Q(S) = (S \times S)/ \sim$.
+It can be proven that the relation $\sim$ is a [congruence](Congruence-on-a-semigroup.qmd). It is defined the quotient group, denoted by $Q(S)$, as $Q(S) = (S \times S)/ \sim$.
 
 ## Examples
 
-$\circ$
+$\circ$ Let $S = (\mathbb{Z}\setminus \{0\}, \cdot)$. Then,
 
-## Examples with GAP
+$$
+(a,b) \sim (c,d) \Longleftrightarrow ad = bc.
+$$
 
-Nowadays, there are no functions in package NumericalSgps related to quotient group of a monoid.
+It is well known that the relation defined above on $\mathbb{Z} \times (\mathbb{Z} \setminus \{0\})$ generates the quotient field of $\mathbb{Z}$, which is $D(\mathbb{Z}) = \mathbb{Q}$. Since $(0,n) \sim (0,1)$ for all $n \in \mathbb{Z}\setminus \{0\}$, it is deduced that $Q(S) = (S \times S) / \sim \hspace{0.1cm} = D(\mathbb{Z}) \setminus \{[(0,1)]\}$.
 
 ## References

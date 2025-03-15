@@ -10,6 +10,8 @@ engine: markdown
 
 Let $\mathcal{V}$ be a [Frobenius variety](Frobenius-variety.qmd). It is said that a submonoid $M$ of $\mathbb{N}$ is a $\mathcal{V}-$monoid if it can be expressed as the intersection of elements of $\mathcal{V}$.
 
+It is deduced from the definition that the intersection of $\mathcal{V}-$monoids is a $\mathcal{V}-$monoid.
+
 ## Examples
 
 $\circ$

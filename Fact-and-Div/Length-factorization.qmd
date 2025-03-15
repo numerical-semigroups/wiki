@@ -6,7 +6,7 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $\{n_1, n_2, \ldots, n_p\}$, let $s \in S$ and let $x = (x_1, x_2, \ldots, x_p) \in \mathbf{Z}(s)$, where $\mathbf{Z}(s)$ denotes the [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) of $s$. It is defined the length of the factorization $x$ as
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $\{n_1, n_2, \ldots, n_p\}$, let $s \in S$ and let $x = (x_1, x_2, \ldots, x_p) \in \mathbf{Z}(s)$, where $\mathbf{Z}(s)$ denotes the [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) of $s$ in $S$. It is defined the length of the factorization $x$ as
 
 $$
 |x| = x_1 + \cdots + x_p.
@@ -27,7 +27,7 @@ gap> S := NumericalSemigroup(5, 13, 27, 34);
 <Numerical semigroup with 4 generators>
 ```
 
-Let us consider $s = 60$. As $60 = 5 \cdot 4 + 13 dot 1 + 27 \cdot 1 + 34 \cdot 0$, we have that $x = (4, 1, 1, 0)$ is a factorization. To compute its length with the function `Sum`.
+Let us consider $s = 60$. As $60 = 5 \cdot 4 + 13 \cdot 1 + 27 \cdot 1 + 34 \cdot 0$, we have that $x = (4, 1, 1, 0)$ is a factorization of $s$ in $S$. Its length can be computed with the function `Sum`.
 
 ``` gap
 gap> x := [4,1,1,0];
@@ -36,18 +36,18 @@ gap> Sum(x);
 6
 ```
 
-The function `Factorizations` returns the set of generators given a numerical semigroup and an element of it.
+The function `Factorizations` returns the set of factorizations given a numerical semigroup and an element of it.
 
 ``` gap
 gap> Factorizations(S,60);
 [ [ 12, 0, 0, 0 ], [ 4, 1, 1, 0 ], [ 0, 2, 0, 1 ] ]
 ```
 
-The code `List(List_NS, l -> Function(l));` return a list where it has applied `Function` to every element in $List\_NS$. Therefore, if we want to compute the lengths of all factorizations of $s = 60$,
+Given a numerical semigroup $S$ and an element $n$ of it, the function `LengthsOfFactorizationsElementWRTNumericalSemigroup` returns a list with all distinct lengths of the factorizations of $n$ in $S$.
 
 ``` gap
-gap> List(Factorizations(S, 60), l -> Sum(l));
-[ 12, 6, 3 ]
+gap> LengthsOfFactorizationsElementWRTNumericalSemigroup(60, S);
+[ 3, 6, 12 ]
 ```
 
 The list obtained is the [set of lengths](Set-of-lengths.qmd) of $s = 60$ in $S$.

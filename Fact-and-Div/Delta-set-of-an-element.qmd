@@ -29,11 +29,17 @@ gap> S := NumericalSemigroup(25, 37, 38, 59);
 <Numerical semigroup with 4 generators>
 ```
 
-Given a numerical semigroup $S$ and an element $n \in S$, the function `DeltaSet` returns the delta set of $n$ in $S$.
+Given a numerical semigroup $S$ and an element $n \in S$, the functions `DeltaSet` and `DeltaSetOfFactorizationsElementWRTNumericalSemigroup` return the delta set of $n$ in $S$. If we only give a numerical semigroup $S$ in `DeltaSet`, then it computes the Delta set of $S$
 
 ``` gap
 gap> DeltaSet(S, 612);
 [ 1 ]
+gap> DeltaSet(612, S);
+[ 1 ]
+gap> DeltaSetOfFactorizationsElementWRTNumericalSemigroup(612, S);
+[ 1 ]
+gap> DeltaSet(S);
+[ 1, 2 ]
 ```
 
 The function `Factorizations` returns the factorizations of an element with respect to a numerical semigroup.

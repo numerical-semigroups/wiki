@@ -8,7 +8,7 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a semigroup. it is said that $S$ is torsion free if for any positive integer $k$ and $a,b \in S$ such that $ka = kb$, then $a = b$.
+Let $S$ be a semigroup. It is said that $S$ is torsion free if for any positive integer $k$ and $a,b \in S$ such that $ka = kb$, then $a = b$.
 
 It can be proven that a commutative monoid $A$ is isomorphic to a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) if, and only if, $A$ is finitely generated, [quasi-Archimedean](M-quasi-Archimedean.qmd), [torsion free](S-torsion-free.qmd) and with only one idempotent.
 
@@ -16,8 +16,6 @@ It can be proven that a commutative monoid $A$ is isomorphic to a [numerical sem
 
 $\circ$ Every subset of $\mathbb{N}$ is torsion free, in particular, every numerical semigroup is torsion free.
 
-## Examples with GAP
-
-Nowadays, there are no functions in package NumericalSgps related to torsion free semigroup.
+$\circ$ Let $S_3$ the group of permutations with three elements. If we consider the permutations $\sigma_1 = (1,2), \sigma_2 = (2,3)$, we have that $2\sigma_1 = \sigma_1 \circ \sigma_1 = Id = \sigma_2 \circ \sigma_2 = 2\sigma_2$, but $\sigma_1 \ne \sigma_2$. Then, $S_3$ is not a torsion free semigroup.
 
 ## References
