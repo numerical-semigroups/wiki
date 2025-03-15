@@ -3,6 +3,15 @@ project:
   type: website
   
 website:
+  title: "Wiki numerical semigroups"
   sidebar:
-    style: "docked"
-    search: true
+    collapse-level: 1
+    contents:
+      - section: "Básico"
+        contents: 
+          - Basic-concepts/Apery-set.qmd
+          - Basic-concepts/Conductor.qmd
+      - section: "Otro"
+        contents: 
+          - Basic-concepts/Arf-closure.qmd
+          - Basic-concepts/Dominant.qmd
