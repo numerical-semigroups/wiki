@@ -6,24 +6,20 @@ engine: markdown
 
 ## Definition
 
-The definition of Newton-Puiseux exponents comes from the following result.
+The definition of intersection multiplicity comes from the following result.
 
-$\textbf{Preposition}$: Let $f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]$. Suppose that $f(x,y)$ is irreducible. There exists $y(t) \in \mathbb{K}((t))$ such that $f(t^n, y(t)) = 0$.
+::: {.callout-note appearance="minimal"}
+## Proposition
 
-Let $f$ as in the preposition, $g \in \mathbb{K}((x))[y]$ with $g \ne 0$ and $y(t)$ a root of $f(t^n, y(t)) = 0$. It is defined the intersection multiplicity of $f$ with $g$, denoted by $int(f,g)$, to be
+Let $f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]$. Suppose that $f(x,y)$ is irreducible. Then, there exists $y(t) \in \mathbb{K}((t))$ such that $f(t^n, y(t)) = 0$.
+:::
+
+Let $f$ as in the proposition, $g \in \mathbb{K}((x))[y]$ with $g \ne 0$ and $y(t)$ a root of $f(t^n, y(t)) = 0$. It is defined the intersection multiplicity of $f$ with $g$, denoted by $int(f,g)$, as
 
 $$
 int(f,g) = ord_t g(t^n, y(t))
 $$
 
 It can be proven that this definition does not depend on the root $y(t)$, that is, $int(f,g) = ord_t g(t^n, y(wt))$ for all $w \in \mathbb{K}$ such that $w^n = 1$.
-
-## Examples
-
-$\circ$
-
-## Examples with GAP
-
-Nowadays, there are no functions in package NumericalSgps related to intersection multiplicity of formal series.
 
 ## References

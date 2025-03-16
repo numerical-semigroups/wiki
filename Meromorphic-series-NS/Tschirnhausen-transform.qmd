@@ -12,11 +12,17 @@ $$
 f = G^d + \alpha_1 G^{d-1} + \cdots + \alpha_d,
 $$
 
-with $\alpha_i \in \mathbb{K}((x))[y]$ and $deg_y \alpha(x,y) < \frac{n}{d}$ for all $i \in \{1, 2, \ldots, d\}$. It is defined the Tschirnhausen transform of $G$ as $T(G) = G + \frac{\alpha_1}{d}$.
+with $\alpha_i \in \mathbb{K}((x))[y]$ and $deg_y \alpha_i(x,y) < \frac{n}{d}$ for all $i \in \{1, 2, \ldots, d\}$. It is defined the Tschirnhausen transform of $G$ as $T(G) = G + \frac{\alpha_1}{d}$. This definition is related with the concept of [approximate root](Approximate-root.qmd) of an irreducible polynomial.
 
 ## Examples
 
-$\circ$ Let $f = y^6 + (12x^2 + 3)y^5 + (36x^4 + 18x^2 + 2)y^4 + 13xy^3 + (78x^3 + 2x^2 + 20x)y^2 + 42x^2$ and $g = y^3 + (6x^2 + 1)y^2 + 7x$. We have $n = 6$ and $d = 2$. Dividing,
+$\circ$ Let
+
+$$
+f = y^6 + (12x^2 + 3)y^5 + (36x^4 + 18x^2 + 2)y^4 + 13xy^3 + (78x^3 + 2x^2 + 20x)y^2 + 42x^2,
+$$
+
+and $g = y^3 + (6x^2 + 1)y^2 + 7x$. We have $n = 6$ and $d = 2$. Dividing,
 
 $$
 f = (y^3 + (6x^2 + 2)y^2 + 6x)G + 2x^2y^2 = QG + R,
@@ -39,9 +45,5 @@ with $\alpha_1(x,y) = y^2 - x$. Finally, the Tschirnhausen transform of $G$ is
 $$
 T(G) = G + \frac{\alpha_1(x,y)}{d} = y^3 + (6x^2 + 1)y^2 + 7x + \frac{y^2-x}{2}.
 $$
-
-## Examples with GAP
-
-Nowadays, there are no functions in package NumericalSgps related to Tschirnhausen transform.
 
 ## References

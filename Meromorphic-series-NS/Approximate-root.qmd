@@ -18,7 +18,7 @@ It can be proven that for any $d$ divisor of $n$, the $d^{th}$ approximate root 
 
 ## Examples
 
-$\circ$ Let $f = y^4 + 13x^2y^2 + 42x^2$, and $d = 2$, let us calculate $Ap(f, 2)$ applying an algorithm. First, let us consider $G = y^{\frac{n}{d}} = y^2$ and compute the $G-$adic expansion of $f$,
+$\circ$ Let $f = y^4 + 13x^2y^2 + 42x^2$, and $d = 2$, let us calculate $Ap(f; 2)$ applying the following algorithm. First, let us consider $G = y^{\frac{n}{d}} = y^2$ and compute the $G-$adic expansion of $f$,
 
 $$
 f = y^4 + 13x^2y^2 + 42x^2 = G^2 + 13x^2G  + 42x^2
@@ -28,12 +28,12 @@ We have $\alpha_1(x,y) = 13x^2 \ne 0$, then, we consider now $G_1 = T(G) = G + \
 
 $$
 f = G^2 + 13x^2G + 42x^2 = (G_1 - \frac{13}{2}x^2)^2 + 13x^2(G_1 - \frac{13}{2}x^2) + 42x^2
-$$ $$
+$$
+
+$$
 = G_1^2 - 13x^2G_1 + \frac{169}{4}x^4 + 13x^2G_1 - \frac{169}{2}x^4 + 42x^2 = G_1^2 - \frac{169}{4}x^4 + 42x^2.
-$$ and $\alpha_1(x,y) = 0$. To sum up, $Ap(f,2) = y^2 + \frac{13}{2}x^2$.
+$$ and $\alpha_1(x,y) = 0$.
 
-## Examples with GAP
-
-Nowadays, there are no functions in package NumericalSgps related to approximate root.
+To sum up, $Ap(f;2) = y^2 + \frac{13}{2}x^2$.
 
 ## References

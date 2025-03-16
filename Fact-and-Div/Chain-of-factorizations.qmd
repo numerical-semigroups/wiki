@@ -1,5 +1,5 @@
 ---
-title: "Chain of factorizations"
+title: "N-Chain of factorizations"
 format: html
 engine: markdown
 ---

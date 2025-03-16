@@ -1,5 +1,5 @@
 ---
-title: "Expansion"
+title: "Expansion with respect to a set of polynomials"
 format: html
 engine: markdown
 ---
@@ -8,7 +8,10 @@ engine: markdown
 
 Let $g,G_1, \ldots, G_h \in \mathbb{K}((x))[y]$ with $G_1, \ldots, G_h$ non-zero and let $f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]$ be an irreducible polynomial. The definition of expansion of $g$ with respect to $(G_1, G_2, \ldots, G_h, f)$ comes from the following result.
 
-$\textbf{Preposition}$: Let $g,G_1, \ldots, G_h \in \mathbb{K}((x))[y]$, with $G_1, \ldots, G_h$ non-zero and let $f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]$ be an irreducible polynomial. Then,
+::: {.callout-note appearance="minimal"}
+## Proposition
+
+Let $g,G_1, \ldots, G_h \in \mathbb{K}((x))[y]$, with $G_1, \ldots, G_h$ non-zero and let $f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]$ be an irreducible polynomial. Then,
 
 $$
 g = \sum_{\theta \in \Theta} c_{\theta} (x) G_1^{\theta_1} G_2^{\theta_2} \cdots G_h^{\theta_h} f^{\theta_{h+1}},
@@ -17,8 +20,9 @@ $$
 for some $\theta = (\theta_1, \ldots, \theta_{h+1}) \in \mathbb{N}^{h+1}$, with $0 \le \theta_k < e_k$ for all $k \in \{1, 2, \ldots, h\}$, where $(e_1, e_2, \ldots, e_h)$ comes from the definition of [characteristic sequences](Characteristic-sequences.qmd) of a formal series, and some $c_{\theta} (x) \in \mathbb{K}((x))$. Moreover,
 
 $$
-deg_y g = \max \{c_{\theta} (x) G_1^{\theta_1} G_2^{\theta_2} \cdots G_h^{\theta_h} f^{\theta_{h+1}} ~ | ~ \theta \in \Theta \}.
+deg_y g = \max \{deg_y ~~ c_{\theta} (x) G_1^{\theta_1} G_2^{\theta_2} \cdots G_h^{\theta_h} f^{\theta_{h+1}} ~ | ~ \theta \in \Theta \}.
 $$
+:::
 
 It is defined the expansion of $g$ with respect to $(G_1, G_2, \ldots, G_h, f)$ as the expression of $g$ obtained in the previous proposition.
 
@@ -45,9 +49,5 @@ $$
 $$
 = G_1G_2f + 3x^2G_1f + x^5G_1^2G_2 + 3x^4G_1G_2 + 3x^7G_1^2 + x^6G_1.
 $$
-
-## Examples with GAP
-
-Nowadays, there are no functions in package NumericalSgps related to expansion.
 
 ## References

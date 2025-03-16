@@ -18,7 +18,15 @@ $$
 \mathbf{t}_i(S) = \sup_{n \in S} \mathbf{t}_i(n),
 $$
 
-it can be proven that $\mathbf{t}_i(S) = \sup \{\mathbf{t}_i(S) ~ | ~ i \in \{1, 2, \ldots, p\}\}$.
+it can be proven that $\mathbf{t}_i(S) = \sup \{\mathbf{t}_i(S) ~ | ~ i \in \{1, 2, \ldots, p\}\}$. Moreover, if for all $i \in \{1, \ldots, p\}$, it is defined $S_i$ as the set of $s \in S$ such that $\mathbb{Z}(s) \cap Minimals_{\le_S}(\mathbb{Z}(n_i + S))$ is not empty, where $\mathbb{Z}(n)$ denotes the [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) of $n$ in $S$ and $\le_S$ denotes the relation
+
+$$
+(x_1, \ldots, x_p) \le (y_1, \ldots, y_p) \Longleftrightarrow x_i \le y_i ~~ \text{for all } i \in \{1, \ldots, p\}, 
+$$ it can be proven that
+
+$$
+\mathbf{t}_i(S) = \max \{\mathbf{t}_i(s) ~ | ~ s \in S_i\}.
+$$
 
 Given a numerical semigroup $S$, there is a relation between its [Delta set](Delta-set-of-a-numerical-semigroup.qmd) $\Delta(S)$, its [catenary degree](Catenary-degree-of-a-numerical-semigroup.qmd) $\mathbf{C}(S)$, its [w-primality](w-primality-of-a-numerical-semigroup.qmd) $\omega(S)$ and its tame degree $\mathbf{t}(S)$, which is
 
@@ -28,7 +36,7 @@ $$
 
 ## Examples
 
-$\circ$ Let $S = \langle \rangle$.
+$\circ$ Let $S = \langle 3, 5, 7 \rangle$. By definition, since $S_i$ is finite, there exists $n \in S$ such that $\mathbf{t}(S) = \mathbf{t}(n)$. Now, it is known that if $n$ is minimal satisfying the previous equality, then $G_n$ is not complete, where $G_n$ denotes the [graph associated to n](../Presentations-NS/Graph-element-generators.qmd) by generators. In this case, for $n \ge 5 + 7 = 12$ the graph $G_n$ is complete, then the candidates are in $B = \{3, 5, 6, 7, 8, 9, 10, 11, 12\}$. Computing the tame degree of each element in $B$, it is deduced that $\mathbf{t}(S) = \mathbf{t}(12) = 4$.
 
 ## Examples with GAP
 
@@ -41,14 +49,16 @@ gap> S := NumericalSemigroup(37, 42, 45, 65, 88);
 <Numerical semigroup with 5 generators>
 ```
 
-Given a numerical semigroup $S$, the function `TameDegree` returns the tame degree of $S$.
+Given a numerical semigroup $S$, the functions `TameDegree` and `TameDegreeOfNumericalSemigroup` return the tame degree of $S$.
 
 ``` gap
 gap> TameDegree(S);
 7
+gap> TameDegree(S) = TameDegreeOfNumericalSemigroup(S);
+true
 ```
 
-If we also give an element $n \in S$, then computes the tame degree of $n$ in $S$.
+If we also give an element $n \in S$ in `TameDegree`, then it computes the tame degree of $n$ in $S$.
 
 ``` gap
 gap> TameDegree(314, S);

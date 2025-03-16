@@ -6,14 +6,6 @@ engine: markdown
 
 ## Definition
 
-Let $F = y^n + a_1(x)y^{n-1} + \cdots + a_n(x)$ be a nonzero polynomial of $\mathbb{K}[x][y]$ and assume, possibly after a change of variables, that $deg_x a_i < i$ for all $i \in \{1, 2, \ldots, n\}$ such that $a_i(x) \ne 0$. Let $C = V(F)$ be the plane algebraic curve in $\mathbb{A}_{\mathbb{K}}^2$ defined by $F(x,y) = 0$, and let $h_F(u,x,y) = u^nF(\frac{x}{u}, \frac{y}{u})$. The projective curve $V(h_F)$ is the projective curve closure of $C$ in $\mathbb{P}_{\mathbb{K}}^2$. The embedding $\mathbb{A}_{\mathbb{K}}^2 \subset \mathbb{P}_{\mathbb{K}}^2$ that send $(x,y) \to (u : x : y)$ has been used. By hypothesis on the coefficients of $F$, $(0 : 1 : 0)$ is the unique point of $V(h_F)$ at the line at infinity $u = 0$. It is said that $F$ has one place at infinity if $h_F$ is analytically irreducible at $(0 : 1 : 0)$.
-
-## Examples
-
-$\circ$
-
-## Examples with GAP
-
-Nowadays, there are no functions in package NumericalSgps related to curves with one place at infinity.
+Let $F = y^n + a_1(x)y^{n-1} + \cdots + a_n(x)$ be a nonzero polynomial of $\mathbb{K}[x][y]$ and assume, possibly after a change of variables, that $deg_x ~ a_i(x) < i$ for all $i \in \{1, 2, \ldots, n\}$ such that $a_i(x) \ne 0$. Let $C = V(F)$ be the plane algebraic curve in $\mathbb{A}_{\mathbb{K}}^2$ defined by $F(x,y) = 0$, and let $h_F(u,x,y) = u^nF(\frac{x}{u}, \frac{y}{u})$. The projective curve $V(h_F)$ is the projective curve closure of $C$ in $\mathbb{P}_{\mathbb{K}}^2$. The embedding $\mathbb{A}_{\mathbb{K}}^2 \subset \mathbb{P}_{\mathbb{K}}^2$ that send $(x,y) \to (u : x : y)$ has been used. By hypothesis on the coefficients of $F$, $(0 : 1 : 0)$ is the unique point of $V(h_F)$ at the line at infinity $u = 0$. It is said that $F$ has one place at infinity if $h_F$ is analytically irreducible at $(0 : 1 : 0)$.
 
 ## References

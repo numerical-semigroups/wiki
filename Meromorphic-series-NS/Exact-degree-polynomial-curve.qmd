@@ -6,18 +6,12 @@ engine: markdown
 
 ## Definition
 
-Let $X(t) = t^n + \alpha_1t^{n-1} + \cdots + \alpha_n, Y(t) = t^m + \beta_1 t^{m-1} + \cdots + \beta_m$ be two polynomials of $\mathbb{K}[t]$, and let $\mathbf{A} = \mathbb{K}[X(t), Y(t)]$. Let $\mathbf{M} = X'(t)\mathbf{A} + Y'(t)\mathbf{A}$. It is defined the set
+Let $X(t) = t^n + \alpha_1t^{n-1} + \cdots + \alpha_n, Y(t) = t^m + \beta_1 t^{m-1} + \cdots + \beta_m$ be two polynomials of $\mathbb{K}[t]$ and $\mathbf{A} = \mathbb{K}[X(t), Y(t)]$. Let $f(X,Y)$ be the unique irreducible polynomial of $\mathbb{K}[X, Y]$, monic in $Y$, such that $f(X(T), Y(T)) = 0$. If $\mathbf{M} = X'(t)\mathbf{A} + Y'(t)\mathbf{A}$, it is defined the set
 
 $$
-I = \{ord_t(F) ~ | ~ F \in \mathbf{M}\},
-$$ it can be proven that $I$ is a [relative ideal](../Ideals-NS/Relative-ideal.qmd) of $S = \Gamma(f)$, where $\Gamma(f)$ is the [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [associated to f](Curve-NS.qmd). It is said that $i \in I$ is an exact degree if $i+1 \in S$. The other elements are said non exact degrees of $\mathbf{M}$. The set of non exact degrees is denoted by $NE(M)$.
+I = \{ord_t(F) ~ | ~ F \in \mathbf{M}\}.
+$$
 
-## Examples
-
-$\circ$
-
-## Examples with GAP
-
-Nowadays, there are no functions in package NumericalSgps related to exact degree of polynomial curve.
+It can be proven that $I$ is a [relative ideal](../Ideals-NS/Relative-ideal.qmd) of $S = \Gamma(f)$, where $\Gamma(f)$ is the [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [associated to f](Curve-NS.qmd). It is said that $i \in I$ is an exact degree if $i+1 \in S$. The other elements are said non exact degrees of $\mathbf{M}$. The set of non exact degrees is denoted by $NE(\mathbf{M})$.
 
 ## References

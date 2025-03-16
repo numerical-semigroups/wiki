@@ -47,7 +47,7 @@ ggraph(tabla_aristas, layout = "igraph", algorithm = "kk") +
   theme_graph()
 ```
 
-From this graph, it is deduced that the least $N$ is $N = 5$, then $\mathbf{C}(85) = 5$.
+From this graph, it is deduced that the least $N$ is $N = 5$, concluding that $\mathbf{C}(85) = 5$.
 
 ## Examples with GAP
 
@@ -60,7 +60,7 @@ gap> S := NumericalSemigroup(47, 63, 81, 90);
 <Numerical semigroup with 4 generators>
 ```
 
-Given the set of factorizations of an element, the function `CatenaryDegree` computes the catenary degree.
+Given the set of factorizations of an element, the functions `CatenaryDegree` and `CatenaryDegreeOfSetOfFactorizations` compute the catenary degree with respect to the given set of factorizations.
 
 ``` gap
 gap> z := Factorizations(715, S);
@@ -68,9 +68,11 @@ gap> z := Factorizations(715, S);
   [ 2, 0, 1, 6 ] ]
 gap> CatenaryDegree(z);
 4
+gap> CatenaryDegree(z) = CatenaryDegreeOfSetOfFactorizations(z);
+true
 ```
 
-If we give a numerical semigroup $S$ and an element $n$ of it, the function returns the catenary degree of $n$ in $S$.
+If we give a numerical semigroup $S$ and an element $n$ of it in `CatenaryDegree`, then the function returns the catenary degree of $n$ in $S$.
 
 ``` gap
 gap> CatenaryDegree(715, S);
@@ -79,7 +81,7 @@ gap> CatenaryDegree(S, 715);
 4
 ```
 
-Finally, if we give only a numerical semigroup $S$, the function returns the catenary degree of $S$.
+Moreover, if we give only a numerical semigroup $S$, the function returns the catenary degree of $S$.
 
 ``` gap
 gap> CatenaryDegree(S);

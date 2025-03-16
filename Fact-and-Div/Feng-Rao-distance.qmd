@@ -1,5 +1,5 @@
 ---
-title: "Feng-Rao distance"
+title: "Feng-Rao distance of an element"
 format: html
 engine: markdown
 ---
@@ -22,7 +22,7 @@ $$
 
 ## Examples
 
-$\circ$ Let $S = \langle 4, 6, 11 \rangle$. It is easy to see that $C(S) = 14$ and $g(S) = 7$, therefore if $s \in S$ is such that $s \ge 2C(S) - 1 = 27$, then $\delta_{FR}(s) = s + 1 -14$. For example, for $s = 35 = 4 \cdot 6 + 11 \in S$, it holds $\delta_{FR}(35) = 22$.
+$\circ$ Let $S = \langle 4, 6, 11 \rangle$. It is obtained that $C(S) = 14$ and $g(S) = 7$. Therefore, if $s \in S$ is such that $s \ge 2C(S) - 1 = 27$, then $\delta_{FR}(s) = s - 13$. For example, for $s = 35 = 4 \cdot 6 + 11 \in S$, it holds $\delta_{FR}(35) = 22$.
 
 ## Examples with GAP
 
@@ -42,6 +42,6 @@ gap> FengRaoDistance(S, 1, 231);
 26
 ```
 
-If we consider $r \in \mathbb{N} \setminus \{0, 1\}$, the function computes the [r-th Feng Rao distance](Feng-Rao-distance-generalized.qmd).
+If we consider $r \in \mathbb{N} \setminus \{0, 1\}$, the function computes the [r-th Feng Rao distance](Feng-Rao-distance-generalized.qmd) of $n$ in $S$.
 
 ## References

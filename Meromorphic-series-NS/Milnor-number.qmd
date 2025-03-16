@@ -6,16 +6,8 @@ engine: markdown
 
 ## Definition
 
-Let $f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]$ be an irreducible polynomial and let $f_x, f_y$ the partial derivatives of $f$. It is defined the Milnor number, denoted by $\mu(f)$, as $\mu(f) = int(f_x, f_y)$
+Let $f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]$ be an irreducible polynomial and let $f_x, f_y$ the partial derivatives of $f$. It is defined the Milnor number, denoted by $\mu(f)$, as $\mu(f) = int(f_x, f_y)$, where $int(f_x, f_y)$ denotes the [intersection multiplicity](Intersection-multiplicity.qmd) of $f_x$ and $f_y$.
 
 It can be proven that $\int(f_x, f_y) = rank_{\mathbb{K}}(\mathbb{K}[[x]][y] / (f_x, f_y))$.
-
-## Examples
-
-$\circ$
-
-## Examples with GAP
-
-Nowadays, there are no functions in package NumericalSgps related to Milnor number.
 
 ## References

@@ -4,8 +4,6 @@ format: html
 engine: markdown
 ---
 
-<!-- Def. de Num. Sem. -->
-
 ## Definition
 
 Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is defined the Delta set of $S$, denoted by $\Delta(S)$, as
@@ -28,7 +26,7 @@ $$
 
 ## Examples
 
-<!-- Ej. de Num. Sem. -->
+<!-- Ej. de Num. Sem. Appl. -->
 
 $\circ$ Let $S = \langle 2, 3 \rangle$. If $\nabla_s$ is not connected, where $\nabla_s$ denotes the [graph associated to s](../Presentations-NS/Graph-associated-to-an-element.qmd), then $s = n + w$ with $n \in \{2,3\}$ and $w \in Ap(S,2)$. From the above argument, it is deduced that $Betti(S) = \{6\}$, and its [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) is $\mathbf{Z}(6) = \{(3,0),(0,2)\}$. Thus, $\Delta(6) = \{1\}$ and $\max \Delta(S) = \{1\}$. Finally, $\Delta(S) = \{1\}$.
 

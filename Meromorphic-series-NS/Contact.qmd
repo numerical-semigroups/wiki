@@ -8,20 +8,16 @@ engine: markdown
 
 The definition of contact needs the following result.
 
-$\textbf{Preposition}$: Let $f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]$. Suppose that $f(x,y)$ is irreducible. Then, there exists $y(t) \in \mathbb{K}((t))$ such that $f(t^n, y(t)) = 0$ and there are finite polynomials satisfying this property.
+::: {.callout-note appearance="minimal"}
+## Proposition
 
-Let $f \in \mathbb{K}((x))[y]$ be a monic irreducible polynomial of degree $n$ in $y$ and $y_1(t), \ldots, y_q(t)$ the roots of $f(t^n, y) = 0$. Let $g \in \mathbb{K}((x))[y]$ be another irreducible polynomial of degree $p$ in $y$, and let $z_1(t), \ldots, z_p(t)$ be the set of roots of $g(t^p, y) = 0$. It is defined the contact of $f$ with $g$ as
+Let $f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]$. Suppose that $f(x,y)$ is irreducible. Then, there exists $y(t) \in \mathbb{K}((t))$ such that $f(t^n, y(t)) = 0$ and there are finite polynomials satisfying this property.
+:::
+
+Let $f \in \mathbb{K}((x))[y]$ be a monic irreducible polynomial of degree $n$ in $y$ and let $y_1(t), \ldots, y_q(t)$ be the roots of $f(t^n, y) = 0$. Let $g \in \mathbb{K}((x))[y]$ be another monic irreducible polynomial of degree $p$ in $y$, and let $z_1(t), \ldots, z_p(t)$ be the set of roots of $g(t^p, y) = 0$. It is defined the contact of $f$ with $g$, denoted by $c(f,g)$, as
 
 $$
 c(f,g) = \frac{1}{np} \max_{i,j} ord_t (y_i(t^p) - z_j(t^n)).
 $$
-
-## Examples
-
-$\circ$
-
-## Examples with GAP
-
-Nowadays, there are no functions in package NumericalSgps related to contact.
 
 ## References

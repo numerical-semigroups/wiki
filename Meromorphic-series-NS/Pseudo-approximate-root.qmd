@@ -1,25 +1,17 @@
 ---
-title: "Pseudo-approximate root"
+title: "Pseudo-approximate root of an irreducible polynomial"
 format: html
 engine: markdown
 ---
 
 ## Definition
 
-Let $f(x,y) \in \mathbb{K}((x))[y]$ irreducible and $y(t) = \sum_{p \in \mathbb{N}} c_p t^p \in \mathbb{K}((t))$ a root of $f(t^n, y(t)) = 0$. Let $\underline{m} = (m_0, m_1, \ldots, m_h)$, $\underline{d} = (d_1, d_2, \ldots, d_{h+1})$ and $\underline{r} = (r_0, r_1, \ldots, r_h)$ the [characteristic sequences](Characteristic-sequences.qmd) of $f$.
+Let $f(x,y) \in \mathbb{K}((x))[y]$ irreducible and $y(t) = \sum_{p \in \mathbb{N}} c_p t^p \in \mathbb{K}((t))$ a root of $f(t^n, y(t)) = 0$. Let $\underline{m} = (m_0, m_1, \ldots, m_h)$, $\underline{d} = (d_1, d_2, \ldots, d_{h+1})$ and $\underline{r} = (r_0, r_1, \ldots, r_h)$ the [characteristic sequences](Characteristic-sequences.qmd) of $f$. For all $k \in \{1, 2, \ldots, h\}$, let $\overline{y}(t) = \sum_{p < m_k} c_p t^p$ and $Y(t) = \overline{y}(t^{1/d_k}) \in \mathbb{K}((t))$. It is defined the $d_k^{th}-$pseudo-approximate root of $f$, denoted by $G_k(x,y)$, as the minimal polynomial of $Y(t)$ over $\mathbb{K}((t^{n/d_k}))$.
 
-Let $k \in \{1, 2, \ldots, h\}$. Let $\overline{y}(t) = \sum_{p < m_k} c_p t^p$ and let $Y(t) = \overline{y}(t^{1/d_k}) \in \mathbb{K}((t))$. It is defined the $d_k^{th}-$pseudo-approximate root of $f$ as
+It can be proven that the $d_k^{th}-$pseudo-approximate root of $f$ is of the form
 
 $$
-G_k(t^{\frac{n}{d_k}}, y) = \prod_{v, v^{\frac{n}{d_k}} = 1} (y - Y(vt)).
+G_k(t^{\frac{n}{d_k}}, y) = \prod_{v, v^{n/d_k} = 1} (y - Y(vt)).
 $$
-
-## Examples
-
-$\circ$
-
-## Examples with GAP
-
-Nowadays, there are no functions in package NumericalSgps related to pseudo-approximate root.
 
 ## References

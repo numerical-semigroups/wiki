@@ -1,23 +1,19 @@
 ---
-title: "Order"
+title: "Order of a formal series"
 format: html
 engine: markdown
 ---
 
 ## Definition
 
-Let $\mathbb{K}$ be a field and $x$ a variable. We denote by $\mathbb{K}[[x]]$ the set of formal series on $x$ with coefficients in $\mathbb{K}$, that is, the set of elements of the form $\sum_{i \in \mathbb{N}} a_i x^i$ with $a_i \in \mathbb{K}$ for all $i \in \mathbb{N}$.
+Let $\mathbb{K}$ be a field, $x$ a variable and let $\mathbb{K}[[x]]$ be the set of formal series on $x$ with coefficients in $\mathbb{K}$, that is, the set of elements of the form $\sum_{i \in \mathbb{N}} a_i x^i$ with $a_i \in \mathbb{K}$ for all $i \in \mathbb{N}$.
 
-Let $f(x) = \sum_{i \in \mathbb{N}} a_i x^i \in \mathbb{K}[[x]]$, it is defined the order of $f$ as the smallest $i \in \mathbb{N}$ such that $a_i \ne 0$, and it is denoted by $ord_x(f(x))$. For $f(x) = 0$, it is usually written $ord_x(0) = + \infty$.
+Let $f(x) = \sum_{i \in \mathbb{N}} a_i x^i \in \mathbb{K}[[x]]$. It is defined the order of $f$ as the smallest $i \in \mathbb{N}$ such that $a_i \ne 0$, and it is denoted by $ord_x(f(x))$. For $f(x) = 0$, it is usually written $ord_x(0) = + \infty$.
 
 ## Examples
 
 $\circ$ Let $f(x) = 7x^5 + 4x^3 - x^2$. The coefficients are: $a_0 = a_1 = 0, a_2 = -1, a_3 = 4, a_4 = 0$ and $a_5 = 7$. The order of $f(x)$ is $2$ since $a_0 = a_1 = 0$ and $a_2 = -1 \ne 0$.
 
-$\circ$ Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let us consider $f(x) = \sum_{s \in S \setminus \{0\}} x^s$. The order of $f$ is the smallest non-zero coefficient, equivalent to compute the minimum of $S^*$, which is the [multiplicity](../Basic-concepts/Multiplicity.qmd) of $S$, $m(S)$. Therefore, $ord_x(f) = m(S)$.
-
-## Examples with GAP
-
-Nowadays, there are no functions in package NumericalSgps related to order of a formal series.
+$\circ$ Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let us consider $f(x) = \sum_{s \in S \setminus \{0\}} x^s$. The order of $f$ is the smallest non-zero coefficient, equivalent to compute the minimum of $S\setminus \{0\}$, which is the [multiplicity](../Basic-concepts/Multiplicity.qmd) of $S$, $m(S)$. Therefore, $ord_x(f) = m(S)$.
 
 ## References

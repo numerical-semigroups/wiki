@@ -25,20 +25,34 @@ gap> S := NumericalSemigroup(42, 56, 71, 90, 104);
 <Numerical semigroup with 5 generators>
 ```
 
-Given a numerical semigroup $S$ and an element $n$ of it, the function `OmegaPrimality` computes the $\omega-$primality of $n$ in $S$.
+Given a numerical semigroup $S$ and an element $n$ of it, the functions `OmegaPrimality` and `OmegaPrimalityOfElementInNumericalSemigroup` compute the $\omega-$primality of $n$ in $S$.
 
 ``` gap
 gap> OmegaPrimality(419, S);
 15
 gap> OmegaPrimality(S, 419);
 15
+gap> OmegaPrimality(419, S) = OmegaPrimalityOfElementInNumericalSemigroup(419, S);
+true
 ```
 
-If we only give a numerical semigroup $S$, then the function `OmegaPrimality` returns the $\omega-$primality of $S$.
+If we only give a numerical semigroup $S$ in the function `OmegaPrimality`, then it returns the $\omega-$primality of $S$.
 
 ``` gap
 gap> OmegaPrimality(S);
 9
 ```
+
+Given a numerical semigroup $S$ and a list of integers $Is$ of $S$, the function `OmegaPrimalityOfElementListInNumericalSemigroup` returns a list with the $w-$primality of each element in $Is$.
+
+```gap
+gap> Is := [174, 175, 183, 300, 354];
+[ 174, 175, 183, 300, 354 ]
+gap> IsSubset(S,Is);
+true
+gap> OmegaPrimalityOfElementListInNumericalSemigroup(Is,S);
+[ 11, 10, 11, 14, 17 ]
+```
+
 
 ## References

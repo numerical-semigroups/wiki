@@ -8,16 +8,12 @@ engine: markdown
 
 The definition of very short parametrization comes from the following result.
 
-$\textbf{Preposition}$: Let $f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]$ be an irreducible polynomial and $S = \Gamma(f) = \langle r_0, r_1, \ldots, r_m \rangle$, with $r_0 = n$ and $r_0 = m$, where $\Gamma(f)$ is the [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [associated to f](Polynomial-NS.qmd) and $\underline{r} = (r_0, r_1, \ldots, r_h)$ comes from the definition of [characteristic sequences](Characteristic-sequences.qmd) of $f$. Let us assume, without loss of generality, that $x = t^n, y = t^m + \sum_{q \in G(S), q > m} c_q t^q$, where $G(S)$ is the set of [gaps](../Basic-concepts/Gap.qmd) of $S$. Let us suppose that $y - t^m \ne 0$, and let $\lambda = \inf(Supp(y - t^m))$. If $n + \lambda \in S$, then there exists a new parametrization $x_1, y_1$ such that either $x_1 = T^n, y_1 = T^m$ or $x_1 = T^m, y_1 = T^m + c_{\lambda_1}T^{\lambda_1} + \cdots$, with $c_{\lambda_1} \ne 0$ and $\lambda_1 > \lambda$.
+::: {.callout-note appearance="minimal"}
+## Proposition
 
-Let us consider the hypothesis of the preposition. Then, modulo automorphism of $\mathbb{K}[[x,y]]$, $f$ has a parametrization of the form $x = t^n$, $y = t^m + \sum_{g \in G(S), q > m} c_q t^q$ such that if $y - t^m \ne 0$ and $\lambda = inf(Supp(y - t^m))$, then $n + \lambda \not \in S$. It is said a very short parametrization of $f$ an expression as above.
+Let $f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}[[x]][y]$ be an irreducible polynomial, $S = \Gamma(f) = \langle r_0, r_1, \ldots, r_h \rangle$ the [numerical semigroup associated to f](Polynomial-NS.qmd) with $r_0 = n, r_1 = m$ and let $G(S)$ be the set of [gaps](../Basic-concepts/Gap.qmd). Then, modulo an automorphism of $\mathbb{K}[[x,y]]$, $f$ has a parametrization of the form $x = t^n$ and $y = t^m + \sum_{q \in G(S), q > m} c_q t^q$, such that if $y - t^m \ne 0$ and $\lambda = \inf( Supp(y - t^m))$, where $Supp(y-t^m)$ denotes the [support](Support.qmd) of $y$ and $t^m$, then $n + \lambda \not \in S$.
+:::
 
-## Examples
-
-$\circ$
-
-## Examples with GAP
-
-Nowadays, there are no functions in package NumericalSgps related to very short parametrization.
+Let us consider the hypothesis of the proposition. It is said that a parametrization of $f$ is a very short parametrization of $f$ if it has an expression as above and satisfies the condition mentioned.
 
 ## References

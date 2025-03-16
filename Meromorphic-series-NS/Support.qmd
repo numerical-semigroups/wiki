@@ -1,5 +1,5 @@
 ---
-title: "Support"
+title: "Support of a formal series"
 format: html
 engine: markdown
 ---
@@ -19,9 +19,5 @@ $\circ$ Let $\mathbb{K}$ be a field, $t$ and indeterminant and the rings $\mathb
 $$
 \mathbb{K}[t] = \{y(t) \in \mathbb{K}[[t]] ~ | ~ Supp(y(t)) < + \infty \} \subsetneq \mathbb{K}[[t]].
 $$
-
-## Examples with GAP
-
-Nowadays, there are no functions in package NumericalSgps related to support of a formal series.
 
 ## References
