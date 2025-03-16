@@ -14,11 +14,11 @@ $$
 Ap(C,x) = \{s \in \langle C \rangle ~ | ~ s - x \not \in \langle C \rangle \}.
 $$
 
-This definition comes from the concept of [Apéry set of an element in a numerical semigroup](../Basic-concepts/Apery-set.qmd).
+This definition comes from the concept of [Apéry set of an element in a numerical semigroup](Apery-set.qmd).
 
 ## Examples
 
-$\circ$ Let $C = \{5, 7, 13, 16 \}$, $C' := \langle C \rangle = \langle 5, 7, 13, 16 \rangle = \{0, 5, 7, 10, 12, \rightarrow \}$ and $x = 5$. If $s \ge 17$, it holds $s - x \in C'$, then $Ap(C, 5) \subseteq B$, where $B = \{0, 5, 7, 10, 12, 13, 14, 15, 16\}$. If we check the condition on each element of $B$, it is obtained that $Ap(C, 5) = \{0, 7, 13, 14, 16\}$. As $gcd(C) = 1$, $C'$ is a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and the definition of Apéry set of a set of integers and the Apéry set of a numerical semigroup are the same.
+$\circ$ Let $C = \{5, 7, 13, 16 \}$, $C' := \langle C \rangle = \langle 5, 7, 13, 16 \rangle = \{0, 5, 7, 10, 12, \rightarrow \}$ and $x = 5$. If $s \ge 17$, it holds $s - x \in C'$, then $Ap(C, 5) \subseteq B$, where $B = \{0, 5, 7, 10, 12, 13, 14, 15, 16\}$. If we check the condition on each element of $B$, it is obtained that $Ap(C, 5) = \{0, 7, 13, 14, 16\}$. As $gcd(C) = 1$, $C'$ is a [numerical semigroup](Numerical-semigroup.qmd) and the definition of Apéry set of a set of integers and the Apéry set of a numerical semigroup are the same.
 
 ## Examples with GAP
 

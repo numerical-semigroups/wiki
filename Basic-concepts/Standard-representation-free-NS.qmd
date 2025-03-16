@@ -6,7 +6,7 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). The definition of standard representation in a [free](../Families-NS/NS-free.qmd) numerical semigroup comes from the following result.
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd). The definition of standard representation in a [free](../Families-NS/NS-free.qmd) numerical semigroup comes from the following result.
 
 ::: {.callout-note appearance="minimal"}
 ## Proposition

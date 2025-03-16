@@ -24,7 +24,7 @@ and the [kernel congruence](../Presentations-NS/Presentation-NS.qmd) of $\phi_B$
 
 It can be proven that $A$ is a gluing of $A_1$ and $A_2$ if, and only if, for $d_1 = gcd(A_1)$ and $d_2 = gcd(A_2)$, then $lcm(d_1, d_2) = \langle A_1 \rangle \cap \langle A_2 \rangle$, where $gcd(\cdot)$ denotes the great common divisor and $lcm(\cdot)$ denotes the least common multiple.
 
-The gluing of a set of positive integers is closely related to the concept of [gluing of numerical semigroups](Gluing-NS.qmd).
+The gluing of a set of positive integers is closely related to the concept of [gluing of numerical semigroups](../Families-NS/NS-Gluing.qmd).
 
 ## Examples
 

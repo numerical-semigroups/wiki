@@ -6,7 +6,7 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $E$ a [relative ideal](../Ideals-NS/Relative-ideal.qmd) of $S$. The definition of irreducible $\mathbb{Z}-$components of a relative ideal comes from the following result.
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and $E$ a [relative ideal](../Ideals-NS/Relative-ideal.qmd) of $S$. The definition of irreducible $\mathbb{Z}-$components of a relative ideal comes from the following result.
 
 ::: {.callout-note appearance="minimal"}
 ## Proposition

@@ -8,7 +8,7 @@ engine: markdown
 
 Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $E$ be a [relative ideal](Relative-ideal.qmd) of $S$. It is said that $E$ is $\mathbb{Z}-$irreducible if it cannot be expressed as a finite intersection of other relative ideals properly containing it.
 
-It can be proven that every relative ideal has a unique finite factorization in $\mathbb{Z}-$irreducible components, which are called as the [Z-irreducible components](../Factorizations-NS/Irreducible-Z-components.qmd) of $E$.
+It can be proven that every relative ideal has a unique finite factorization in $\mathbb{Z}-$irreducible components, which are called as the [Z-irreducible components](../Basic-concepts/Irreducible-Z-components.qmd) of $E$.
 
 ## Examples
 
