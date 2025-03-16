@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Gluing of numerical semigroups – Wiki numerical semigroups</title>
+<title>Gluing of a set of positive integers – Wiki numerical semigroups</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -226,7 +192,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Gluing of numerical semigroups</h1>
+<h1 class="title">Gluing of a set of positive integers</h1>
 </div>
 
 
@@ -246,35 +212,28 @@ window.Quarto = {
 <!-- Definición de Num. Sem. -->
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(S_1\)</span> and <span class="math inline">\(S_2\)</span> be two <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroups</a> <a href="../Basic-concepts/Minimal-set-of-generators.html">minimally generated</a> by <span class="math inline">\(\{n_1, \ldots, n_r\}\)</span> and <span class="math inline">\(\{n_{r+1}, \ldots, n_e\}\)</span>, respectively. It is said that a numerical semigroup <span class="math inline">\(S\)</span> is a gluing of <span class="math inline">\(S_1\)</span> and <span class="math inline">\(S_2\)</span> if it is of the form</p>
+<p>Let <span class="math inline">\(A = \{m_1, \ldots, m_r\}\)</span> be a subset of positive integers and let <span class="math inline">\(A_1, A_2\)</span> be a partition of <span class="math inline">\(A\)</span>. For each <span class="math inline">\(B = \{ m_{i_1}, \ldots, m_{i_k} \} \in \{A, A_1, A_2\}\)</span>, let us consider <span class="math inline">\(X_B = \{x_i ~ | ~ m_i \in B\}\)</span>, the free monoid of <span class="math inline">\(B\)</span>,</p>
 <p><span class="math display">\[
-S = \langle \mu n_1, \ldots, \mu n_r, \lambda n_{r+1}, \ldots, \lambda n_e \rangle.
+Free(X_B) = \{a_1x_{i_1} + \cdots + a_kx_{i_k} ~ | ~ a_1, \ldots, a_k \in \mathbb{N}\},
 \]</span></p>
-<p>for some <span class="math inline">\(\lambda \in S_1 \setminus \{n_1, \ldots, n_r\}, ~ \mu \in S_2 \setminus \{n_{r+1}, \ldots, n_e\}\)</span> such that <span class="math inline">\(gcd(\lambda, \mu) = 1\)</span>.</p>
-<p>It can be proven that <span class="math inline">\(S\)</span> is a numerical semigroup with minimal system of generators <span class="math inline">\(\{\mu n_1, \ldots, \mu n_r, \lambda n_{r+1}, \ldots, \lambda n_e \}\)</span> and <span class="math inline">\(A = \{\mu n_1, \ldots, \mu n_r, \lambda n_{r+1}, \ldots, \lambda n_e\}\)</span> is a <a href="../Gluing-NS/Gluing.html">gluing</a> of <span class="math inline">\(A_1 = \{\mu n_1, \ldots, \mu n_r\}\)</span> and <span class="math inline">\(A_2 = \{ \lambda n_{r+1}, \ldots, \lambda n_e\}\)</span>.</p>
+<p>the monoid homomorfism,</p>
+<p><span class="math display">\[
+\phi_B: Free(X_B) \to \mathbb{N}, ~~ a_1x_{i_1} + \cdots + x_{i_k}a_k \to a_1 m_{i_1} + \cdots + a_k m_{i_k}.
+\]</span></p>
+<p>and the <a href="../Presentations-NS/Presentation-NS.html">kernel congruence</a> of <span class="math inline">\(\phi_B\)</span>. Then, it is said that <span class="math inline">\(A\)</span> is a gluing of <span class="math inline">\(A_1\)</span> and <span class="math inline">\(A_2\)</span> if there exists a system of generators <span class="math inline">\(\rho\)</span> of <span class="math inline">\(\sigma\)</span> such that <span class="math inline">\(\rho = \rho_1 \cup \rho_2 \cup \{(a,b)\}\)</span> with <span class="math inline">\(\rho_1 \subseteq \sigma_{A_1}, \rho_2 \subseteq \sigma_{A_2}\)</span>, <span class="math inline">\(0 \ne a \in Free(X_{A_1})\)</span> and <span class="math inline">\(0 \ne b \in Free(X_{A_2})\)</span>.</p>
+<p>It can be proven that <span class="math inline">\(A\)</span> is a gluing of <span class="math inline">\(A_1\)</span> and <span class="math inline">\(A_2\)</span> if, and only if, for <span class="math inline">\(d_1 = gcd(A_1)\)</span> and <span class="math inline">\(d_2 = gcd(A_2)\)</span>, then <span class="math inline">\(lcm(d_1, d_2) = \langle A_1 \rangle \cap \langle A_2 \rangle\)</span>, where <span class="math inline">\(gcd(\cdot)\)</span> denotes the great common divisor and <span class="math inline">\(lcm(\cdot)\)</span> denotes the least common multiple.</p>
+<p>The gluing of a set of positive integers is closely related to the concept of <a href="../Families-NS/NS-Gluing.qmd">gluing of numerical semigroups</a>.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 110, 154, 171, 247 \rangle\)</span>. First, <span class="math inline">\(gcd(110, 154, 171, 247) = 1\)</span> and <span class="math inline">\(S\)</span> is a numerical semigroup. Since <span class="math inline">\(gcd(110, 171) = gcd(110, 247) = 1\)</span>, let us consider <span class="math inline">\(B_1 = \{110, 154\}\)</span> and <span class="math inline">\(B_2 = \{171, 247\}\)</span>. We have, <span class="math inline">\(gcd(B_1) = 22\)</span> and <span class="math inline">\(gcd(171, 247) = 19\)</span>, then</p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(A = \{15, 25, 24, 36\}\)</span> and let us consider the partition <span class="math inline">\(A_1 = \{15, 25\}\)</span>, <span class="math inline">\(A_2 = \{24, 36\}\)</span>. We have <span class="math inline">\(gcd(A_1) = 5, gcd(A_2) = 12\)</span> and <span class="math inline">\(lcm(5, 12) = 60 \in \langle 15, 25 \rangle \cap \langle 24, 36 \rangle\)</span>. Therefore, <span class="math inline">\(A\)</span> is a gluing of <span class="math inline">\(A_1, A_2\)</span>. A system of generators of <span class="math inline">\(\sigma_1\)</span> is <span class="math inline">\(\{(3x_2,5x_1)\}\)</span> and for <span class="math inline">\(\sigma_2\)</span> is <span class="math inline">\(\{(2x_4, 3x_3)\}\)</span>. Moreover, there is the relation <span class="math inline">\((4x_1, x_3 + x_4) \in \sigma_{A}\)</span>, where <span class="math inline">\(a = 4x_1 \in Free(X_{A_1}) \setminus \{0\}\)</span> and <span class="math inline">\(b = x_3 + x_4 \in Free(X_{A_2}) \setminus \{0\}\)</span>. A system of generators of <span class="math inline">\(\sigma_A\)</span> is</p>
 <p><span class="math display">\[
-S = \langle 110, 154, 171, 247 \rangle = \langle 22 \cdot 5, 22 \cdot 7, 19 \cdot 9, 19 \cdot 13 \rangle.
+\rho = \{(3x_2, 5x_1), (2x_4, 3x_3), (4x_1, x_3 + x_4)\}.
 \]</span></p>
-<p>Let us consider <span class="math inline">\(S_1 = \langle 5,7 \rangle\)</span> and <span class="math inline">\(S_2 = \langle 9,13 \rangle\)</span>, Since <span class="math inline">\(19 = 5 + 2 \cdot 7 \in S_1 \setminus \{5,7\}\)</span> and <span class="math inline">\(22 = 9 + 13 \in S_2 \setminus \{9,13\}\)</span>, it is concluded that <span class="math inline">\(S\)</span> is a gluing of <span class="math inline">\(S_1\)</span> and <span class="math inline">\(S_2\)</span>.</p>
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>The following example is made with the package NumericalSgps in GAP.</p>
-<p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S \langle 40, 329, 338 \rangle\)</span>,in GAP:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">40</span><span class="op">,</span> <span class="fl">329</span><span class="op">,</span> <span class="fl">338</span>)<span class="op">;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">3</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Given a numerical semigroup <span class="math inline">\(S\)</span>, the function <code>AsGluingOfNumericalSemigroups</code> returns all partitions <span class="math inline">\(\{A_1, A_2\}\)</span> of the minimal generating set of <span class="math inline">\(S\)</span> such that <span class="math inline">\(S\)</span> is a gluing of <span class="math inline">\(\langle A_1 \rangle\)</span> and <span class="math inline">\(\langle A_2 \rangle\)</span> with <span class="math inline">\(\mu = gcd(A_1)\)</span> and <span class="math inline">\(\lambda = gcd(A_1)\)</span>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">AsGluingOfNumericalSemigroups</span>(<span class="va">S</span>)<span class="op">;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>[ [ [ <span class="fl">40</span><span class="op">,</span> <span class="fl">338</span> ]<span class="op">,</span> [ <span class="fl">329</span> ] ] ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>In this case, <span class="math inline">\(S\)</span> is a gluing of <span class="math inline">\(S_1 = \langle 20, 169 \rangle\)</span> and <span class="math inline">\(\mathbb{N} = \langle 1 \rangle\)</span> with <span class="math inline">\(\lambda = 329\)</span> and <span class="math inline">\(\mu = 2\)</span>. If there is no partitions, the function returns an empty list.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">13</span><span class="op">,</span> <span class="fl">14</span><span class="op">,</span> <span class="fl">21</span><span class="op">,</span> <span class="fl">22</span>)<span class="op">;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">4</span> <span class="va">generators</span><span class="op">&gt;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">AsGluingOfNumericalSemigroups</span>(<span class="va">S</span>)<span class="op">;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>[  ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Nowadays, there are no functions in package NumericalSgps related to gluing of a set of positive integers.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
