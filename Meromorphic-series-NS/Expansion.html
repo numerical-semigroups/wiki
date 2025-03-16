@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Expansion – Wiki numerical semigroups</title>
+<title>Expansion with respect to a set of polynomials – Wiki numerical semigroups</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -192,7 +192,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Expansion</h1>
+<h1 class="title">Expansion with respect to a set of polynomials</h1>
 </div>
 
 
@@ -212,14 +212,26 @@ window.Quarto = {
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
 <p>Let <span class="math inline">\(g,G_1, \ldots, G_h \in \mathbb{K}((x))[y]\)</span> with <span class="math inline">\(G_1, \ldots, G_h\)</span> non-zero and let <span class="math inline">\(f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]\)</span> be an irreducible polynomial. The definition of expansion of <span class="math inline">\(g\)</span> with respect to <span class="math inline">\((G_1, G_2, \ldots, G_h, f)\)</span> comes from the following result.</p>
-<p><span class="math inline">\(\textbf{Preposition}\)</span>: Let <span class="math inline">\(g,G_1, \ldots, G_h \in \mathbb{K}((x))[y]\)</span>, with <span class="math inline">\(G_1, \ldots, G_h\)</span> non-zero and let <span class="math inline">\(f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]\)</span> be an irreducible polynomial. Then,</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Proposition
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Let <span class="math inline">\(g,G_1, \ldots, G_h \in \mathbb{K}((x))[y]\)</span>, with <span class="math inline">\(G_1, \ldots, G_h\)</span> non-zero and let <span class="math inline">\(f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]\)</span> be an irreducible polynomial. Then,</p>
 <p><span class="math display">\[
 g = \sum_{\theta \in \Theta} c_{\theta} (x) G_1^{\theta_1} G_2^{\theta_2} \cdots G_h^{\theta_h} f^{\theta_{h+1}},
 \]</span></p>
 <p>for some <span class="math inline">\(\theta = (\theta_1, \ldots, \theta_{h+1}) \in \mathbb{N}^{h+1}\)</span>, with <span class="math inline">\(0 \le \theta_k &lt; e_k\)</span> for all <span class="math inline">\(k \in \{1, 2, \ldots, h\}\)</span>, where <span class="math inline">\((e_1, e_2, \ldots, e_h)\)</span> comes from the definition of <a href="../Meromorphic-series-NS/Characteristic-sequences.html">characteristic sequences</a> of a formal series, and some <span class="math inline">\(c_{\theta} (x) \in \mathbb{K}((x))\)</span>. Moreover,</p>
 <p><span class="math display">\[
-deg_y g = \max \{c_{\theta} (x) G_1^{\theta_1} G_2^{\theta_2} \cdots G_h^{\theta_h} f^{\theta_{h+1}} ~ | ~ \theta \in \Theta \}.
+deg_y g = \max \{deg_y ~~ c_{\theta} (x) G_1^{\theta_1} G_2^{\theta_2} \cdots G_h^{\theta_h} f^{\theta_{h+1}} ~ | ~ \theta \in \Theta \}.
 \]</span></p>
+</div>
+</div>
 <p>It is defined the expansion of <span class="math inline">\(g\)</span> with respect to <span class="math inline">\((G_1, G_2, \ldots, G_h, f)\)</span> as the expression of <span class="math inline">\(g\)</span> obtained in the previous proposition.</p>
 </section>
 <section id="examples" class="level2">
@@ -239,10 +251,6 @@ g = (yG_2 + 3x^2y)f + (x^5y^2 + 3x^4y)G_2 + 3x^7y^2 + x^6y
 <p><span class="math display">\[
 = G_1G_2f + 3x^2G_1f + x^5G_1^2G_2 + 3x^4G_1G_2 + 3x^7G_1^2 + x^6G_1.
 \]</span></p>
-</section>
-<section id="examples-with-gap" class="level2">
-<h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>Nowadays, there are no functions in package NumericalSgps related to expansion.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>

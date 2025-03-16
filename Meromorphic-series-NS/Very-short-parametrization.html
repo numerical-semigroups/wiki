@@ -212,16 +212,20 @@ window.Quarto = {
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
 <p>The definition of very short parametrization comes from the following result.</p>
-<p><span class="math inline">\(\textbf{Preposition}\)</span>: Let <span class="math inline">\(f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]\)</span> be an irreducible polynomial and <span class="math inline">\(S = \Gamma(f) = \langle r_0, r_1, \ldots, r_m \rangle\)</span>, with <span class="math inline">\(r_0 = n\)</span> and <span class="math inline">\(r_0 = m\)</span>, where <span class="math inline">\(\Gamma(f)\)</span> is the <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> <a href="../Meromorphic-series-NS/Polynomial-NS.html">associated to f</a> and <span class="math inline">\(\underline{r} = (r_0, r_1, \ldots, r_h)\)</span> comes from the definition of <a href="../Meromorphic-series-NS/Characteristic-sequences.html">characteristic sequences</a> of <span class="math inline">\(f\)</span>. Let us assume, without loss of generality, that <span class="math inline">\(x = t^n, y = t^m + \sum_{q \in G(S), q &gt; m} c_q t^q\)</span>, where <span class="math inline">\(G(S)\)</span> is the set of <a href="../Basic-concepts/Gap.html">gaps</a> of <span class="math inline">\(S\)</span>. Let us suppose that <span class="math inline">\(y - t^m \ne 0\)</span>, and let <span class="math inline">\(\lambda = \inf(Supp(y - t^m))\)</span>. If <span class="math inline">\(n + \lambda \in S\)</span>, then there exists a new parametrization <span class="math inline">\(x_1, y_1\)</span> such that either <span class="math inline">\(x_1 = T^n, y_1 = T^m\)</span> or <span class="math inline">\(x_1 = T^m, y_1 = T^m + c_{\lambda_1}T^{\lambda_1} + \cdots\)</span>, with <span class="math inline">\(c_{\lambda_1} \ne 0\)</span> and <span class="math inline">\(\lambda_1 &gt; \lambda\)</span>.</p>
-<p>Let us consider the hypothesis of the preposition. Then, modulo automorphism of <span class="math inline">\(\mathbb{K}[[x,y]]\)</span>, <span class="math inline">\(f\)</span> has a parametrization of the form <span class="math inline">\(x = t^n\)</span>, <span class="math inline">\(y = t^m + \sum_{g \in G(S), q &gt; m} c_q t^q\)</span> such that if <span class="math inline">\(y - t^m \ne 0\)</span> and <span class="math inline">\(\lambda = inf(Supp(y - t^m))\)</span>, then <span class="math inline">\(n + \lambda \not \in S\)</span>. It is said a very short parametrization of <span class="math inline">\(f\)</span> an expression as above.</p>
-</section>
-<section id="examples" class="level2">
-<h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span></p>
-</section>
-<section id="examples-with-gap" class="level2">
-<h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>Nowadays, there are no functions in package NumericalSgps related to very short parametrization.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Proposition
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Let <span class="math inline">\(f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}[[x]][y]\)</span> be an irreducible polynomial, <span class="math inline">\(S = \Gamma(f) = \langle r_0, r_1, \ldots, r_h \rangle\)</span> the <a href="../Meromorphic-series-NS/Polynomial-NS.html">numerical semigroup associated to f</a> with <span class="math inline">\(r_0 = n, r_1 = m\)</span> and let <span class="math inline">\(G(S)\)</span> be the set of <a href="../Basic-concepts/Gap.html">gaps</a>. Then, modulo an automorphism of <span class="math inline">\(\mathbb{K}[[x,y]]\)</span>, <span class="math inline">\(f\)</span> has a parametrization of the form <span class="math inline">\(x = t^n\)</span> and <span class="math inline">\(y = t^m + \sum_{q \in G(S), q &gt; m} c_q t^q\)</span>, such that if <span class="math inline">\(y - t^m \ne 0\)</span> and <span class="math inline">\(\lambda = \inf( Supp(y - t^m))\)</span>, where <span class="math inline">\(Supp(y-t^m)\)</span> denotes the <a href="../Meromorphic-series-NS/Support.html">support</a> of <span class="math inline">\(y\)</span> and <span class="math inline">\(t^m\)</span>, then <span class="math inline">\(n + \lambda \not \in S\)</span>.</p>
+</div>
+</div>
+<p>Let us consider the hypothesis of the proposition. It is said that a parametrization of <span class="math inline">\(f\)</span> is a very short parametrization of <span class="math inline">\(f\)</span> if it has an expression as above and satisfies the condition mentioned.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>

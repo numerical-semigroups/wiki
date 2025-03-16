@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Feng-Rao distance – Wiki numerical semigroups</title>
+<title>Feng-Rao distance of an element – Wiki numerical semigroups</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -226,7 +226,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Feng-Rao distance</h1>
+<h1 class="title">Feng-Rao distance of an element</h1>
 </div>
 
 
@@ -257,7 +257,7 @@ window.Quarto = {
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 4, 6, 11 \rangle\)</span>. It is easy to see that <span class="math inline">\(C(S) = 14\)</span> and <span class="math inline">\(g(S) = 7\)</span>, therefore if <span class="math inline">\(s \in S\)</span> is such that <span class="math inline">\(s \ge 2C(S) - 1 = 27\)</span>, then <span class="math inline">\(\delta_{FR}(s) = s + 1 -14\)</span>. For example, for <span class="math inline">\(s = 35 = 4 \cdot 6 + 11 \in S\)</span>, it holds <span class="math inline">\(\delta_{FR}(35) = 22\)</span>.</p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 4, 6, 11 \rangle\)</span>. It is obtained that <span class="math inline">\(C(S) = 14\)</span> and <span class="math inline">\(g(S) = 7\)</span>. Therefore, if <span class="math inline">\(s \in S\)</span> is such that <span class="math inline">\(s \ge 2C(S) - 1 = 27\)</span>, then <span class="math inline">\(\delta_{FR}(s) = s - 13\)</span>. For example, for <span class="math inline">\(s = 35 = 4 \cdot 6 + 11 \in S\)</span>, it holds <span class="math inline">\(\delta_{FR}(35) = 22\)</span>.</p>
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
@@ -268,7 +268,7 @@ window.Quarto = {
 <p>Given a numerical semigroup <span class="math inline">\(S\)</span>, an element <span class="math inline">\(s\)</span> of it and <span class="math inline">\(r = 1\)</span>, the function <code>FengRaoDistance</code> computes the Feng-Rao distance of <span class="math inline">\(n\)</span> in <span class="math inline">\(S\)</span>.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">FengRaoDistance</span>(<span class="va">S</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">231</span>)<span class="op">;</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fl">26</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>If we consider <span class="math inline">\(r \in \mathbb{N} \setminus \{0, 1\}\)</span>, the function computes the <a href="../Fact-and-Div/Feng-Rao-distance-generalized.html">r-th Feng Rao distance</a>.</p>
+<p>If we consider <span class="math inline">\(r \in \mathbb{N} \setminus \{0, 1\}\)</span>, the function computes the <a href="../Fact-and-Div/Feng-Rao-distance-generalized.html">r-th Feng Rao distance</a> of <span class="math inline">\(n\)</span> in <span class="math inline">\(S\)</span>.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>

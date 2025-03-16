@@ -211,21 +211,25 @@ window.Quarto = {
 
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>The definition of Newton-Puiseux exponents comes from the following result.</p>
-<p><span class="math inline">\(\textbf{Preposition}\)</span>: Let <span class="math inline">\(f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]\)</span>. Suppose that <span class="math inline">\(f(x,y)\)</span> is irreducible. There exists <span class="math inline">\(y(t) \in \mathbb{K}((t))\)</span> such that <span class="math inline">\(f(t^n, y(t)) = 0\)</span>.</p>
-<p>Let <span class="math inline">\(f\)</span> as in the preposition, <span class="math inline">\(g \in \mathbb{K}((x))[y]\)</span> with <span class="math inline">\(g \ne 0\)</span> and <span class="math inline">\(y(t)\)</span> a root of <span class="math inline">\(f(t^n, y(t)) = 0\)</span>. It is defined the intersection multiplicity of <span class="math inline">\(f\)</span> with <span class="math inline">\(g\)</span>, denoted by <span class="math inline">\(int(f,g)\)</span>, to be</p>
+<p>The definition of intersection multiplicity comes from the following result.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Proposition
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Let <span class="math inline">\(f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]\)</span>. Suppose that <span class="math inline">\(f(x,y)\)</span> is irreducible. Then, there exists <span class="math inline">\(y(t) \in \mathbb{K}((t))\)</span> such that <span class="math inline">\(f(t^n, y(t)) = 0\)</span>.</p>
+</div>
+</div>
+<p>Let <span class="math inline">\(f\)</span> as in the proposition, <span class="math inline">\(g \in \mathbb{K}((x))[y]\)</span> with <span class="math inline">\(g \ne 0\)</span> and <span class="math inline">\(y(t)\)</span> a root of <span class="math inline">\(f(t^n, y(t)) = 0\)</span>. It is defined the intersection multiplicity of <span class="math inline">\(f\)</span> with <span class="math inline">\(g\)</span>, denoted by <span class="math inline">\(int(f,g)\)</span>, as</p>
 <p><span class="math display">\[
 int(f,g) = ord_t g(t^n, y(t))
 \]</span></p>
 <p>It can be proven that this definition does not depend on the root <span class="math inline">\(y(t)\)</span>, that is, <span class="math inline">\(int(f,g) = ord_t g(t^n, y(wt))\)</span> for all <span class="math inline">\(w \in \mathbb{K}\)</span> such that <span class="math inline">\(w^n = 1\)</span>.</p>
-</section>
-<section id="examples" class="level2">
-<h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span></p>
-</section>
-<section id="examples-with-gap" class="level2">
-<h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>Nowadays, there are no functions in package NumericalSgps related to intersection multiplicity of formal series.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>

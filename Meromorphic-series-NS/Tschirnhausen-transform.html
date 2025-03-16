@@ -215,11 +215,15 @@ window.Quarto = {
 <p><span class="math display">\[
 f = G^d + \alpha_1 G^{d-1} + \cdots + \alpha_d,
 \]</span></p>
-<p>with <span class="math inline">\(\alpha_i \in \mathbb{K}((x))[y]\)</span> and <span class="math inline">\(deg_y \alpha(x,y) &lt; \frac{n}{d}\)</span> for all <span class="math inline">\(i \in \{1, 2, \ldots, d\}\)</span>. It is defined the Tschirnhausen transform of <span class="math inline">\(G\)</span> as <span class="math inline">\(T(G) = G + \frac{\alpha_1}{d}\)</span>.</p>
+<p>with <span class="math inline">\(\alpha_i \in \mathbb{K}((x))[y]\)</span> and <span class="math inline">\(deg_y \alpha_i(x,y) &lt; \frac{n}{d}\)</span> for all <span class="math inline">\(i \in \{1, 2, \ldots, d\}\)</span>. It is defined the Tschirnhausen transform of <span class="math inline">\(G\)</span> as <span class="math inline">\(T(G) = G + \frac{\alpha_1}{d}\)</span>. This definition is related with the concept of <a href="../Meromorphic-series-NS/Approximate-root.html">approximate root</a> of an irreducible polynomial.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(f = y^6 + (12x^2 + 3)y^5 + (36x^4 + 18x^2 + 2)y^4 + 13xy^3 + (78x^3 + 2x^2 + 20x)y^2 + 42x^2\)</span> and <span class="math inline">\(g = y^3 + (6x^2 + 1)y^2 + 7x\)</span>. We have <span class="math inline">\(n = 6\)</span> and <span class="math inline">\(d = 2\)</span>. Dividing,</p>
+<p><span class="math inline">\(\circ\)</span> Let</p>
+<p><span class="math display">\[
+f = y^6 + (12x^2 + 3)y^5 + (36x^4 + 18x^2 + 2)y^4 + 13xy^3 + (78x^3 + 2x^2 + 20x)y^2 + 42x^2,
+\]</span></p>
+<p>and <span class="math inline">\(g = y^3 + (6x^2 + 1)y^2 + 7x\)</span>. We have <span class="math inline">\(n = 6\)</span> and <span class="math inline">\(d = 2\)</span>. Dividing,</p>
 <p><span class="math display">\[
 f = (y^3 + (6x^2 + 2)y^2 + 6x)G + 2x^2y^2 = QG + R,
 \]</span></p>
@@ -235,10 +239,6 @@ f = QG + R = (Q^1G + R^1)G + R = G^2 + (y^2 - x)G + 2x^2y^2,
 <p><span class="math display">\[
 T(G) = G + \frac{\alpha_1(x,y)}{d} = y^3 + (6x^2 + 1)y^2 + 7x + \frac{y^2-x}{2}.
 \]</span></p>
-</section>
-<section id="examples-with-gap" class="level2">
-<h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>Nowadays, there are no functions in package NumericalSgps related to Tschirnhausen transform.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>

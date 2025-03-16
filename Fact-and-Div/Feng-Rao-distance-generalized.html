@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Feng-Rao distance generalized – Wiki numerical semigroups</title>
+<title>Generalized Feng-Rao distance of an element – Wiki numerical semigroups</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -226,7 +226,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Feng-Rao distance generalized</h1>
+<h1 class="title">Generalized Feng-Rao distance of an element</h1>
 </div>
 
 
@@ -245,7 +245,7 @@ window.Quarto = {
 
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a>, let <span class="math inline">\(s \in S\)</span> and <span class="math inline">\(r \in \mathbb{N} \setminus \{0\}\)</span>. It is defined the generalized Feng-Rao distance of <span class="math inline">\(s\)</span> in <span class="math inline">\(S\)</span>, denoted by <span class="math inline">\(\delta_{FR}^r\)</span>, as</p>
+<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a>, let <span class="math inline">\(s \in S\)</span> and <span class="math inline">\(r \in \mathbb{N} \setminus \{0\}\)</span>. It is defined the generalized Feng-Rao distance of <span class="math inline">\(s\)</span> in <span class="math inline">\(S\)</span>, denoted by <span class="math inline">\(\delta_{FR}^r(s)\)</span>, as</p>
 <p><span class="math display">\[
 \delta_{FR}^r(s) = \{ |D(s_1, \ldots, s_r)| ~ : ~ s \le s_1 \le \cdots \le s_r \text{ and }  s_1, \ldots, s_r \in S\},
 \]</span></p>
@@ -253,15 +253,17 @@ window.Quarto = {
 <p>Given a numerical semigroup <span class="math inline">\(S\)</span> with <a href="../Basic-concepts/Conductor.html">conductor</a> <span class="math inline">\(C(S)\)</span> and <a href="../Basic-concepts/Genus.html">genus</a> <span class="math inline">\(g(S)\)</span>, it can be proven that for all <span class="math inline">\(m \ge 2C(S) - 1\)</span>,</p>
 <p><span class="math display">\[
 \delta_{FR}^2(m) = m + 1 - 2g(S) + \min \{|Ap(S, n)| ~~ : ~ n \in \mathbb{N} \setminus \{0\}\},
-\]</span> where <span class="math inline">\(Ap(S,n)\)</span> is the <a href="../Fact-and-Div/Apery-set-integer.html">Apéry set of an integer</a> with respect to to <span class="math inline">\(S\)</span>.</p>
+\]</span></p>
+<p>where <span class="math inline">\(Ap(S,n)\)</span> is the <a href="../Fact-and-Div/Apery-set-integer.html">Apéry set of the integer</a> <span class="math inline">\(n\)</span> in <span class="math inline">\(S\)</span>.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
 <p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 3, 5, 7 \rangle = \{0, 3, 5, \rightarrow \}\)</span>. We have <span class="math inline">\(C(S) = 5\)</span> and <span class="math inline">\(g(S) = 3\)</span>. On the other hand, we know that for all <span class="math inline">\(n \in S\)</span>, it holds <span class="math inline">\(|Ap(S,n)| = n\)</span>, then it is sufficient to compute the Apéry set for <span class="math inline">\(n \in \{1, 2, 4\}\)</span> and for <span class="math inline">\(n = m(S) = 3\)</span>, where <span class="math inline">\(m(S)\)</span> denotes the <a href="../Basic-concepts/Multiplicity.html">multiplicity</a> of <span class="math inline">\(S\)</span>. It is obtained that</p>
 <p><span class="math display">\[
-Ap(S, 1) = \{0, 3, 5\}, Ap(S,2) = \{0, 3, 6\},
-\]</span> <span class="math display">\[
-|Ap(S, m(S))| = m(S) = 3, Ap(S,4) = \{0, 3, 5, 8\}.
+Ap(S, 1) = \{0, 3, 5\}, ~~ Ap(S,2) = \{0, 3, 6\},
+\]</span></p>
+<p><span class="math display">\[
+|Ap(S, m(S))| = m(S) = 3, ~~ Ap(S,4) = \{0, 3, 5, 8\}.
 \]</span></p>
 <p>Thus, if <span class="math inline">\(m \ge 2C(S) - 1 = 9\)</span>,</p>
 <p><span class="math display">\[

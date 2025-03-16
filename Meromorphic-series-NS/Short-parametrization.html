@@ -211,17 +211,21 @@ window.Quarto = {
 
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]\)</span> be an irreducible polynomial and <span class="math inline">\(S = \Gamma(f) = \langle r_0, r_1, \ldots, r_m \rangle\)</span>, with <span class="math inline">\(r_0 = n\)</span> and <span class="math inline">\(r_0 = m\)</span>, where <span class="math inline">\(\Gamma(f)\)</span> is the <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> <a href="../Meromorphic-series-NS/Polynomial-NS.html">associated to f</a> and <span class="math inline">\(\underline{r} = (r_0, r_1, \ldots, r_h)\)</span> comes from the definition of <a href="../Meromorphic-series-NS/Characteristic-sequences.html">characteristic sequences</a> of <span class="math inline">\(f\)</span>. Let <span class="math inline">\(C(f)\)</span> be the algebroid curve <span class="math inline">\(f = 0\)</span>.</p>
-<p>Let <span class="math inline">\(x(t) = t^n, y(t) = \sum_{p \ge m} c_p t^p\)</span> be a parametrization of <span class="math inline">\(f\)</span>, and suppose, after a possibly a change of variables, that <span class="math inline">\(c_m = 1\)</span>. Suppose that <span class="math inline">\(y(t) - t^m \ne 0\)</span>. Let <span class="math inline">\(p_1 = \inf (Supp(y(t) - t^m)\)</span>, where <span class="math inline">\(Supp(y(t) - t^m)\)</span> denotes the <a href="../Meromorphic-series-NS/Support.html">support</a> of <span class="math inline">\(y(t) - t^m\)</span>. If <span class="math inline">\(p_1 \in S\)</span>, then <span class="math inline">\(p_1 = \sum_{i = 0}^h a_i r_i\)</span> with <span class="math inline">\(a_0, \ldots, a_h \in \mathbb{N}\)</span> and we consider the change of variables <span class="math inline">\(x_1 = x, y_1 = y - c_{p_1}x^{a_0}y^{a_1}G_2^{a_2}\cdots G_h^{a_h}\)</span>, where for all <span class="math inline">\(i \in \{1, \ldots, h\}\)</span>, <span class="math inline">\(G_i\)</span> is an element of <span class="math inline">\(\mathbb{K}[[x, y]]\)</span> such that <span class="math inline">\(int(f, G_i) = r_i\)</span>. It follows that <span class="math inline">\(f_1(x_1, y_1) = f(x_1, y_1 + c_{p_1}x^{a_0}y^{a_1}G_2^{a_2}\cdots G_h^{a_h})\)</span> is an irreducible polynomial of <span class="math inline">\(\mathbb{K}[[x,y]]\)</span> with parametrization <span class="math inline">\(x_1(t) = t^n, y_1(t) = t^m + \sum_{p &gt; m} \tilde{c}_p t^p\)</span> and either <span class="math inline">\(y_1(t) - t^m = 0\)</span> or <span class="math inline">\(\inf (Supp(y_1(t) - t^m) &gt; p_1\)</span>. In the second case, we restart with <span class="math inline">\(f_1, x_1(t), y_1(t)\)</span>. The <a href="../Basic-concepts/Conductor.html">conductor</a> <span class="math inline">\(C(S)\)</span> of <span class="math inline">\(S\)</span> being finite, we get, after repeating the argument, the following:</p>
-<p>Let us consider the hypothesis of the preposition. Then, modulo an automorphism of <span class="math inline">\(\mathbb{K}[[x,y]]\)</span>, <span class="math inline">\(f\)</span> has a parametrization of the form <span class="math inline">\(x = t^n\)</span> and <span class="math inline">\(y = t^m + \sum_{q \in G(S), q &gt; m} c_q t^q\)</span>, where <span class="math inline">\(G(S)\)</span> denotes the set of <a href="../Basic-concepts/Gap.html">gaps</a> of <span class="math inline">\(S\)</span>. It is said a short parametrization of <span class="math inline">\(C(f)\)</span> an expression as above.</p>
-</section>
-<section id="examples" class="level2">
-<h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span></p>
-</section>
-<section id="examples-with-gap" class="level2">
-<h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>Nowadays, there are no functions in package NumericalSgps related to short parametrization.</p>
+<p>The definition of short parametrization comes form the following result.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Proposition
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Let <span class="math inline">\(f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}[[x]][y]\)</span> be an irreducible polynomial, <span class="math inline">\(S = \Gamma(f) = \langle r_0, r_1, \ldots, r_h \rangle\)</span> the <a href="../Meromorphic-series-NS/Polynomial-NS.html">numerical semigroup associated to f</a> with <span class="math inline">\(r_0 = n\)</span> and <span class="math inline">\(r_1 = m\)</span>. Then, modulo an automorphism of <span class="math inline">\(\mathbb{K}[[x,y]]\)</span>, <span class="math inline">\(f\)</span> has a parametrization of the form <span class="math inline">\(x = t^n\)</span> and <span class="math inline">\(y = t^m + \sum_{q \in G(S), q &gt; m} c_q t^q\)</span>, where <span class="math inline">\(G(S)\)</span> denotes the set of <a href="../Basic-concepts/Gap.html">gaps</a>.</p>
+</div>
+</div>
+<p>Let us consider the hypothesis of the proposition. It is said that a parametrization of <span class="math inline">\(f\)</span> is a short parametrization of <span class="math inline">\(C(f)\)</span> if it has an expression as above.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>

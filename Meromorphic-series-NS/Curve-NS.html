@@ -211,24 +211,29 @@ window.Quarto = {
 
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>The definition of numerical semigroup associated to a curve needs the following preposition.</p>
-<p><span class="math inline">\(\textbf{Preposition}\)</span>: Let <span class="math inline">\(F = y^n + a_1(x)y^{n-1} + \cdots + a_n(x)\)</span> be a nonzero polynomial of <span class="math inline">\(\mathbb{K}[x][y]\)</span> and assume, possibly after a change of variables, that <span class="math inline">\(deg_x a_i &lt; i\)</span> for all <span class="math inline">\(i \in \{1, 2, \ldots, n\}\)</span> such that <span class="math inline">\(a_i(x) \ne 0\)</span>. Let <span class="math inline">\(F_{\infty}(u,y) = h_F(u,1,y)\)</span> and <span class="math inline">\(f(x,y) = F(x^{-1}, y) \in \mathbb{K}[x^{-1}, y]\)</span>.</p>
+<p>The definition of numerical semigroup associated to a curve needs the following proposition.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Proposition
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Let <span class="math inline">\(F = y^n + a_1(x)y^{n-1} + \cdots + a_n(x)\)</span> be a nonzero polynomial of <span class="math inline">\(\mathbb{K}[x][y]\)</span> and assume, possibly after a change of variables, that <span class="math inline">\(deg_x ~ a_i(x) &lt; i\)</span> for all <span class="math inline">\(i \in \{1, 2, \ldots, n\}\)</span> such that <span class="math inline">\(a_i(x) \ne 0\)</span>. Let <span class="math inline">\(h_F(u,x,y) = u^n F \left( \frac{x}{u}, \frac{y}{v} \right)\)</span>, <span class="math inline">\(F_{\infty}(u,y) = h_F(u,1,y)\)</span> and <span class="math inline">\(f(x,y) = F(x^{-1}, y) \in \mathbb{K}[x^{-1}, y]\)</span>.</p>
 <ol type="1">
-<li><p><span class="math inline">\(f(x,y) = x^{-n}F(x, y)\)</span>.</p></li>
-<li><p><span class="math inline">\(F\)</span> has <a href="../Meromorphic-series-NS/Curves-one-place-infinity.html">one place at infinity</a> if, and only if, <span class="math inline">\(f(x,y)\)</span> is irreducible in <span class="math inline">\(\mathbb{K}[x^{-1}, y]\)</span>.</p></li>
+<li><p><span class="math inline">\(f(x,y) = x^{-n}F_{\infty}(x, y)\)</span>.</p></li>
+<li><p><span class="math inline">\(F\)</span> has <a href="../Meromorphic-series-NS/Curves-one-place-infinity.html">one place at infinity</a> if, and only if, <span class="math inline">\(f(x,y)\)</span> is irreducible in <span class="math inline">\(\mathbb{K}((x))[y]\)</span>.</p></li>
 </ol>
-<p>Let us consider the hypothesis of the preposition and also that <span class="math inline">\(F\)</span> has one place at the point at infinity. It is defined the numerical semigroup associated to <span class="math inline">\(f\)</span> as</p>
+</div>
+</div>
+<p>Let us consider the hypothesis of the proposition and also that <span class="math inline">\(F\)</span> has one place at the point at infinity. It is defined the numerical semigroup associated to <span class="math inline">\(f\)</span> as</p>
 <p><span class="math display">\[
 \Gamma(f) = \{int(f,g) ~ | ~ g \in \mathbb{K}[x^{-1}][y] \setminus (f)\}.
-\]</span> It can be proven that <span class="math inline">\(\Gamma(f)\)</span> is a subsemigroup of <span class="math inline">\(- \mathbb{N}\)</span>.</p>
-</section>
-<section id="examples" class="level2">
-<h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span></p>
-</section>
-<section id="examples-with-gap" class="level2">
-<h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>Nowadays, there are no functions in package NumericalSgps related to numerical semigroup associated to a curve.</p>
+\]</span></p>
+<p>It can be proven that <span class="math inline">\(\Gamma(f)\)</span> is a subsemigroup of <span class="math inline">\(- \mathbb{N}\)</span>.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>

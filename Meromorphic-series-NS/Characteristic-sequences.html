@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Characteristic sequences – Wiki numerical semigroups</title>
+<title>Characteristic sequences associated to an irreducible polynomial – Wiki numerical semigroups</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -192,7 +192,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Characteristic sequences</h1>
+<h1 class="title">Characteristic sequences associated to an irreducible polynomial</h1>
 </div>
 
 
@@ -210,31 +210,35 @@ window.Quarto = {
 
 
 <p>The definition of characteristic sequences comes from the following result.</p>
-<p><span class="math inline">\(\textbf{Preposition}\)</span>: Let <span class="math inline">\(f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]\)</span>. Suppose that <span class="math inline">\(f(x,y)\)</span> is irreducible. There exists <span class="math inline">\(y(t) \in \mathbb{K}((t))\)</span> such that <span class="math inline">\(f(t^n, y(t)) = 0\)</span>. Furthermore,</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Proposition
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Let <span class="math inline">\(f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]\)</span>. Suppose that <span class="math inline">\(f(x,y)\)</span> is irreducible. There exists <span class="math inline">\(y(t) \in \mathbb{K}((t))\)</span> such that <span class="math inline">\(f(t^n, y(t)) = 0\)</span>. Furthermore,</p>
 <ol type="i">
 <li><p><span class="math inline">\(f(t^n, y) = \prod_{w, w^n = 1} (y - y(wt))\)</span>,</p></li>
 <li><p>if <span class="math inline">\(w_1 \ne w_2\)</span> and <span class="math inline">\(w_1^n = w_2^n = 1\)</span>, then <span class="math inline">\(y(w_1t) \ne y(w_2t)\)</span>,</p></li>
 <li><p><span class="math inline">\(gcd(n, gcd(Supp(y(t)))) = 1\)</span>,</p></li>
 </ol>
 <p>where <span class="math inline">\(Supp(y(t))\)</span> is the <a href="../Meromorphic-series-NS/Support.html">support</a> of <span class="math inline">\(y(t)\)</span>.</p>
+</div>
+</div>
 <p>Let us consider <span class="math inline">\(f(x,y) \in \mathbb{K}((x))[y]\)</span> irreducible and let <span class="math inline">\(y = \sum_{p \in \mathbb{N}} c_p t^p \in \mathbb{K}((t))\)</span>.</p>
 <ul>
 <li><p>Let <span class="math inline">\(d_1 = n = deg_y(f)\)</span> and let <span class="math inline">\(m_1 = \min \{p \in Supp(y(t)) ~ | ~ d_1 \not | \ \ p\}\)</span>, <span class="math inline">\(d_2 = gcd(d_1, m_1)\)</span>. Then for all <span class="math inline">\(i \ge 2\)</span>, if <span class="math inline">\(d_i \ne 1\)</span>, let <span class="math inline">\(m_i = \min \{p \in Supp(y(t)) ~ | ~ d_i \not | \ \ p \}\)</span> and <span class="math inline">\(d_{i+1} = gcd(d_i, m_i)\)</span>. By the above preposition, <span class="math inline">\(m_i\)</span> is well defined and there exists <span class="math inline">\(h \ge 1\)</span> such that <span class="math inline">\(d_{h+1} = 1\)</span>. It is defined <span class="math inline">\(\underline{m} = (m_1, m_2, \ldots, m_h)\)</span> and <span class="math inline">\(\underline{d} = (d_1, d_2, \ldots, d_{h+1})\)</span>.</p></li>
 <li><p>It is also defined <span class="math inline">\(e_i = \frac{d_i}{d_{i+1}}\)</span> for all <span class="math inline">\(i \in \{1,2, \ldots, h\}\)</span>.</p></li>
-<li><p>Finally, it is defined the sequence <span class="math inline">\(\underline{r} = (r_0, r_1, \ldots, r_h\)</span> as follows: <span class="math inline">\(r_0 = n, r_1 = m_1\)</span> and for all <span class="math inline">\(i \in \{2, 3, \ldots, h\}\)</span>,</p></li>
+<li><p>Finally, it is defined the sequence <span class="math inline">\(\underline{r} = (r_0, r_1, \ldots, r_h)\)</span> as follows: <span class="math inline">\(r_0 = n, r_1 = m_1\)</span> and for all <span class="math inline">\(i \in \{2, 3, \ldots, h\}\)</span>,</p></li>
 </ul>
 <p><span class="math display">\[
 r_i = r_{i-1}e_{i-1} + m_i - m_{i-1}.
 \]</span></p>
 <p>It is defined the characteristic sequences of <span class="math inline">\(f\)</span> as the sequences <span class="math inline">\(\underline{m}, \underline{d}\)</span> and <span class="math inline">\(\underline{r}\)</span>. In particular, the sequence <span class="math inline">\(\underline{m}\)</span> is called the <a href="../Meromorphic-series-NS/Newton-Puiseux-exponents.html">Newton-Puiseux exponents</a> of <span class="math inline">\(f\)</span>.</p>
-<section id="examples" class="level2">
-<h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span></p>
-</section>
-<section id="examples-with-gap" class="level2">
-<h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>Nowadays, there are no functions in package NumericalSgps related to order of a characteristic sequences.</p>
-</section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 

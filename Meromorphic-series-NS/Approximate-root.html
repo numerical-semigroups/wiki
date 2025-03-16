@@ -220,20 +220,18 @@ f = G^d + \alpha_1 G^{d-1} + \cdots + \alpha_d,
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(f = y^4 + 13x^2y^2 + 42x^2\)</span>, and <span class="math inline">\(d = 2\)</span>, let us calculate <span class="math inline">\(Ap(f, 2)\)</span> applying an algorithm. First, let us consider <span class="math inline">\(G = y^{\frac{n}{d}} = y^2\)</span> and compute the <span class="math inline">\(G-\)</span>adic expansion of <span class="math inline">\(f\)</span>,</p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(f = y^4 + 13x^2y^2 + 42x^2\)</span>, and <span class="math inline">\(d = 2\)</span>, let us calculate <span class="math inline">\(Ap(f; 2)\)</span> applying the following algorithm. First, let us consider <span class="math inline">\(G = y^{\frac{n}{d}} = y^2\)</span> and compute the <span class="math inline">\(G-\)</span>adic expansion of <span class="math inline">\(f\)</span>,</p>
 <p><span class="math display">\[
 f = y^4 + 13x^2y^2 + 42x^2 = G^2 + 13x^2G  + 42x^2
 \]</span></p>
 <p>We have <span class="math inline">\(\alpha_1(x,y) = 13x^2 \ne 0\)</span>, then, we consider now <span class="math inline">\(G_1 = T(G) = G + \frac{\alpha_1(x,y)}{d} = y^2 + \frac{13}{2}x^2\)</span>, where <span class="math inline">\(T(G)\)</span> is the <a href="../Meromorphic-series-NS/Tschirnhausen-transform.html">Tschirnhausen transform</a>. If we compute the <span class="math inline">\(G_1-\)</span>adic expansion of <span class="math inline">\(f\)</span>,</p>
 <p><span class="math display">\[
 f = G^2 + 13x^2G + 42x^2 = (G_1 - \frac{13}{2}x^2)^2 + 13x^2(G_1 - \frac{13}{2}x^2) + 42x^2
-\]</span> <span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 = G_1^2 - 13x^2G_1 + \frac{169}{4}x^4 + 13x^2G_1 - \frac{169}{2}x^4 + 42x^2 = G_1^2 - \frac{169}{4}x^4 + 42x^2.
-\]</span> and <span class="math inline">\(\alpha_1(x,y) = 0\)</span>. To sum up, <span class="math inline">\(Ap(f,2) = y^2 + \frac{13}{2}x^2\)</span>.</p>
-</section>
-<section id="examples-with-gap" class="level2">
-<h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>Nowadays, there are no functions in package NumericalSgps related to approximate root.</p>
+\]</span> and <span class="math inline">\(\alpha_1(x,y) = 0\)</span>.</p>
+<p>To sum up, <span class="math inline">\(Ap(f;2) = y^2 + \frac{13}{2}x^2\)</span>.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>

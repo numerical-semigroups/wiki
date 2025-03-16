@@ -867,35 +867,21 @@
   {
     "objectID": "Meromorphic-series-NS/Newton-Puiseux-exponents.html",
     "href": "Meromorphic-series-NS/Newton-Puiseux-exponents.html",
-    "title": "Newton-Puiseux exponents",
+    "title": "Newton-Puiseux exponents of an irreducible polynomial",
     "section": "",
-    "text": "The definition of Newton-Puiseux exponents comes from the following result.\n\\(\\textbf{Preposition}\\): Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\). Suppose that \\(f(x,y)\\) is irreducible. There exists \\(y(t) \\in \\mathbb{K}((t))\\) such that \\(f(t^n, y(t)) = 0\\). Furthermore,\n\n\\(f(t^n, y) = \\prod_{w, w^n = 1} (y - y(wt))\\),\nif \\(w_1 \\ne w_2\\) and \\(w_1^n = w_2^n = 1\\), then \\(y(w_1t) \\ne y(w_2t)\\),\n\\(gcd(n, gcd(Supp(y(t)))) = 1\\),\n\nwhere \\(Supp(y(t))\\) is the support of \\(y(t)\\).\nLet us consider \\(f(x,y) \\in \\mathbb{K}((x))[y]\\) irreducible and let \\(y = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\).\n\nLet \\(d_1 = n = deg_y(f)\\) and let \\(m_1 = \\min \\{p \\in Supp(y(t)) ~ | ~ d_1 \\not | \\ \\ p\\}\\), \\(d_2 = gcd(d_1, m_1)\\). Then for all \\(i \\ge 2\\), if \\(d_i \\ne 1\\), let \\(m_i = \\min \\{p \\in Supp(y(t)) ~ | ~ d_i \\not | \\ \\ p \\}\\) and \\(d_{i+1} = gcd(d_i, m_i)\\). By the above preposition, \\(m_i\\) is well defined and there exists \\(h \\ge 1\\) such that \\(d_{h+1} = 1\\). It is defined the Newton-Poiseux exponents of \\(f\\) as \\((m_1, m_2, \\ldots, m_h)\\) and is denoted by \\(\\underline{m}\\)."
+    "text": "The definition of Newton-Puiseux exponents comes from the following result.\n\n\n\n\n\n\nProposition\n\n\n\nLet \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\). Suppose that \\(f(x,y)\\) is irreducible. There exists \\(y(t) \\in \\mathbb{K}((t))\\) such that \\(f(t^n, y(t)) = 0\\). Furthermore,\n\n\\(f(t^n, y) = \\prod_{w, w^n = 1} (y - y(wt))\\),\nif \\(w_1 \\ne w_2\\) and \\(w_1^n = w_2^n = 1\\), then \\(y(w_1t) \\ne y(w_2t)\\),\n\\(gcd(n, gcd(Supp(y(t)))) = 1\\),\n\nwhere \\(Supp(y(t))\\) is the support of \\(y(t)\\).\n\n\nLet us consider \\(f(x,y) \\in \\mathbb{K}((x))[y]\\) irreducible and let \\(y = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\). Let \\(d_1 = n = deg_y(f)\\) and let \\(m_1 = \\min \\{p \\in Supp(y(t)) ~ | ~ d_1 \\not | \\ \\ p\\}\\), \\(d_2 = gcd(d_1, m_1)\\). Then for all \\(i \\ge 2\\), if \\(d_i \\ne 1\\), let \\(m_i = \\min \\{p \\in Supp(y(t)) ~ | ~ d_i \\not | \\ \\ p \\}\\) and \\(d_{i+1} = gcd(d_i, m_i)\\). By the above proposition, \\(m_i\\) is well defined and there exists \\(h \\ge 1\\) such that \\(d_{h+1} = 1\\). It is defined the Newton-Poiseux exponents of \\(f\\) as \\((m_1, m_2, \\ldots, m_h)\\) and is denoted by \\(\\underline{m}\\)."
   },
   {
     "objectID": "Meromorphic-series-NS/Newton-Puiseux-exponents.html#definition",
     "href": "Meromorphic-series-NS/Newton-Puiseux-exponents.html#definition",
-    "title": "Newton-Puiseux exponents",
+    "title": "Newton-Puiseux exponents of an irreducible polynomial",
     "section": "",
-    "text": "The definition of Newton-Puiseux exponents comes from the following result.\n\\(\\textbf{Preposition}\\): Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\). Suppose that \\(f(x,y)\\) is irreducible. There exists \\(y(t) \\in \\mathbb{K}((t))\\) such that \\(f(t^n, y(t)) = 0\\). Furthermore,\n\n\\(f(t^n, y) = \\prod_{w, w^n = 1} (y - y(wt))\\),\nif \\(w_1 \\ne w_2\\) and \\(w_1^n = w_2^n = 1\\), then \\(y(w_1t) \\ne y(w_2t)\\),\n\\(gcd(n, gcd(Supp(y(t)))) = 1\\),\n\nwhere \\(Supp(y(t))\\) is the support of \\(y(t)\\).\nLet us consider \\(f(x,y) \\in \\mathbb{K}((x))[y]\\) irreducible and let \\(y = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\).\n\nLet \\(d_1 = n = deg_y(f)\\) and let \\(m_1 = \\min \\{p \\in Supp(y(t)) ~ | ~ d_1 \\not | \\ \\ p\\}\\), \\(d_2 = gcd(d_1, m_1)\\). Then for all \\(i \\ge 2\\), if \\(d_i \\ne 1\\), let \\(m_i = \\min \\{p \\in Supp(y(t)) ~ | ~ d_i \\not | \\ \\ p \\}\\) and \\(d_{i+1} = gcd(d_i, m_i)\\). By the above preposition, \\(m_i\\) is well defined and there exists \\(h \\ge 1\\) such that \\(d_{h+1} = 1\\). It is defined the Newton-Poiseux exponents of \\(f\\) as \\((m_1, m_2, \\ldots, m_h)\\) and is denoted by \\(\\underline{m}\\)."
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Newton-Puiseux-exponents.html#examples",
-    "href": "Meromorphic-series-NS/Newton-Puiseux-exponents.html#examples",
-    "title": "Newton-Puiseux exponents",
-    "section": "Examples",
-    "text": "Examples\n\\(\\circ\\)"
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Newton-Puiseux-exponents.html#examples-with-gap",
-    "href": "Meromorphic-series-NS/Newton-Puiseux-exponents.html#examples-with-gap",
-    "title": "Newton-Puiseux exponents",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to Newton-Puiseux exponents."
+    "text": "The definition of Newton-Puiseux exponents comes from the following result.\n\n\n\n\n\n\nProposition\n\n\n\nLet \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\). Suppose that \\(f(x,y)\\) is irreducible. There exists \\(y(t) \\in \\mathbb{K}((t))\\) such that \\(f(t^n, y(t)) = 0\\). Furthermore,\n\n\\(f(t^n, y) = \\prod_{w, w^n = 1} (y - y(wt))\\),\nif \\(w_1 \\ne w_2\\) and \\(w_1^n = w_2^n = 1\\), then \\(y(w_1t) \\ne y(w_2t)\\),\n\\(gcd(n, gcd(Supp(y(t)))) = 1\\),\n\nwhere \\(Supp(y(t))\\) is the support of \\(y(t)\\).\n\n\nLet us consider \\(f(x,y) \\in \\mathbb{K}((x))[y]\\) irreducible and let \\(y = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\). Let \\(d_1 = n = deg_y(f)\\) and let \\(m_1 = \\min \\{p \\in Supp(y(t)) ~ | ~ d_1 \\not | \\ \\ p\\}\\), \\(d_2 = gcd(d_1, m_1)\\). Then for all \\(i \\ge 2\\), if \\(d_i \\ne 1\\), let \\(m_i = \\min \\{p \\in Supp(y(t)) ~ | ~ d_i \\not | \\ \\ p \\}\\) and \\(d_{i+1} = gcd(d_i, m_i)\\). By the above proposition, \\(m_i\\) is well defined and there exists \\(h \\ge 1\\) such that \\(d_{h+1} = 1\\). It is defined the Newton-Poiseux exponents of \\(f\\) as \\((m_1, m_2, \\ldots, m_h)\\) and is denoted by \\(\\underline{m}\\)."
   },
   {
     "objectID": "Meromorphic-series-NS/Newton-Puiseux-exponents.html#references",
     "href": "Meromorphic-series-NS/Newton-Puiseux-exponents.html#references",
-    "title": "Newton-Puiseux exponents",
+    "title": "Newton-Puiseux exponents of an irreducible polynomial",
     "section": "References",
     "text": "References"
   },
@@ -904,28 +890,14 @@
     "href": "Meromorphic-series-NS/Contact.html",
     "title": "Contact",
     "section": "",
-    "text": "The definition of contact needs the following result.\n\\(\\textbf{Preposition}\\): Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\). Suppose that \\(f(x,y)\\) is irreducible. Then, there exists \\(y(t) \\in \\mathbb{K}((t))\\) such that \\(f(t^n, y(t)) = 0\\) and there are finite polynomials satisfying this property.\nLet \\(f \\in \\mathbb{K}((x))[y]\\) be a monic irreducible polynomial of degree \\(n\\) in \\(y\\) and \\(y_1(t), \\ldots, y_q(t)\\) the roots of \\(f(t^n, y) = 0\\). Let \\(g \\in \\mathbb{K}((x))[y]\\) be another irreducible polynomial of degree \\(p\\) in \\(y\\), and let \\(z_1(t), \\ldots, z_p(t)\\) be the set of roots of \\(g(t^p, y) = 0\\). It is defined the contact of \\(f\\) with \\(g\\) as\n\\[\nc(f,g) = \\frac{1}{np} \\max_{i,j} ord_t (y_i(t^p) - z_j(t^n)).\n\\]"
+    "text": "The definition of contact needs the following result.\n\n\n\n\n\n\nProposition\n\n\n\nLet \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\). Suppose that \\(f(x,y)\\) is irreducible. Then, there exists \\(y(t) \\in \\mathbb{K}((t))\\) such that \\(f(t^n, y(t)) = 0\\) and there are finite polynomials satisfying this property.\n\n\nLet \\(f \\in \\mathbb{K}((x))[y]\\) be a monic irreducible polynomial of degree \\(n\\) in \\(y\\) and let \\(y_1(t), \\ldots, y_q(t)\\) be the roots of \\(f(t^n, y) = 0\\). Let \\(g \\in \\mathbb{K}((x))[y]\\) be another monic irreducible polynomial of degree \\(p\\) in \\(y\\), and let \\(z_1(t), \\ldots, z_p(t)\\) be the set of roots of \\(g(t^p, y) = 0\\). It is defined the contact of \\(f\\) with \\(g\\), denoted by \\(c(f,g)\\), as\n\\[\nc(f,g) = \\frac{1}{np} \\max_{i,j} ord_t (y_i(t^p) - z_j(t^n)).\n\\]"
   },
   {
     "objectID": "Meromorphic-series-NS/Contact.html#definition",
     "href": "Meromorphic-series-NS/Contact.html#definition",
     "title": "Contact",
     "section": "",
-    "text": "The definition of contact needs the following result.\n\\(\\textbf{Preposition}\\): Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\). Suppose that \\(f(x,y)\\) is irreducible. Then, there exists \\(y(t) \\in \\mathbb{K}((t))\\) such that \\(f(t^n, y(t)) = 0\\) and there are finite polynomials satisfying this property.\nLet \\(f \\in \\mathbb{K}((x))[y]\\) be a monic irreducible polynomial of degree \\(n\\) in \\(y\\) and \\(y_1(t), \\ldots, y_q(t)\\) the roots of \\(f(t^n, y) = 0\\). Let \\(g \\in \\mathbb{K}((x))[y]\\) be another irreducible polynomial of degree \\(p\\) in \\(y\\), and let \\(z_1(t), \\ldots, z_p(t)\\) be the set of roots of \\(g(t^p, y) = 0\\). It is defined the contact of \\(f\\) with \\(g\\) as\n\\[\nc(f,g) = \\frac{1}{np} \\max_{i,j} ord_t (y_i(t^p) - z_j(t^n)).\n\\]"
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Contact.html#examples",
-    "href": "Meromorphic-series-NS/Contact.html#examples",
-    "title": "Contact",
-    "section": "Examples",
-    "text": "Examples\n\\(\\circ\\)"
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Contact.html#examples-with-gap",
-    "href": "Meromorphic-series-NS/Contact.html#examples-with-gap",
-    "title": "Contact",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to contact."
+    "text": "The definition of contact needs the following result.\n\n\n\n\n\n\nProposition\n\n\n\nLet \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\). Suppose that \\(f(x,y)\\) is irreducible. Then, there exists \\(y(t) \\in \\mathbb{K}((t))\\) such that \\(f(t^n, y(t)) = 0\\) and there are finite polynomials satisfying this property.\n\n\nLet \\(f \\in \\mathbb{K}((x))[y]\\) be a monic irreducible polynomial of degree \\(n\\) in \\(y\\) and let \\(y_1(t), \\ldots, y_q(t)\\) be the roots of \\(f(t^n, y) = 0\\). Let \\(g \\in \\mathbb{K}((x))[y]\\) be another monic irreducible polynomial of degree \\(p\\) in \\(y\\), and let \\(z_1(t), \\ldots, z_p(t)\\) be the set of roots of \\(g(t^p, y) = 0\\). It is defined the contact of \\(f\\) with \\(g\\), denoted by \\(c(f,g)\\), as\n\\[\nc(f,g) = \\frac{1}{np} \\max_{i,j} ord_t (y_i(t^p) - z_j(t^n)).\n\\]"
   },
   {
     "objectID": "Meromorphic-series-NS/Contact.html#references",
@@ -939,28 +911,14 @@
     "href": "Meromorphic-series-NS/Exact-degree-polynomial-curve.html",
     "title": "Exact degree of a polynomial curve",
     "section": "",
-    "text": "Let \\(X(t) = t^n + \\alpha_1t^{n-1} + \\cdots + \\alpha_n, Y(t) = t^m + \\beta_1 t^{m-1} + \\cdots + \\beta_m\\) be two polynomials of \\(\\mathbb{K}[t]\\), and let \\(\\mathbf{A} = \\mathbb{K}[X(t), Y(t)]\\). Let \\(\\mathbf{M} = X'(t)\\mathbf{A} + Y'(t)\\mathbf{A}\\). It is defined the set\n\\[\nI = \\{ord_t(F) ~ | ~ F \\in \\mathbf{M}\\},\n\\] it can be proven that \\(I\\) is a relative ideal of \\(S = \\Gamma(f)\\), where \\(\\Gamma(f)\\) is the numerical semigroup associated to f. It is said that \\(i \\in I\\) is an exact degree if \\(i+1 \\in S\\). The other elements are said non exact degrees of \\(\\mathbf{M}\\). The set of non exact degrees is denoted by \\(NE(M)\\)."
+    "text": "Let \\(X(t) = t^n + \\alpha_1t^{n-1} + \\cdots + \\alpha_n, Y(t) = t^m + \\beta_1 t^{m-1} + \\cdots + \\beta_m\\) be two polynomials of \\(\\mathbb{K}[t]\\) and \\(\\mathbf{A} = \\mathbb{K}[X(t), Y(t)]\\). Let \\(f(X,Y)\\) be the unique irreducible polynomial of \\(\\mathbb{K}[X, Y]\\), monic in \\(Y\\), such that \\(f(X(T), Y(T)) = 0\\). If \\(\\mathbf{M} = X'(t)\\mathbf{A} + Y'(t)\\mathbf{A}\\), it is defined the set\n\\[\nI = \\{ord_t(F) ~ | ~ F \\in \\mathbf{M}\\}.\n\\]\nIt can be proven that \\(I\\) is a relative ideal of \\(S = \\Gamma(f)\\), where \\(\\Gamma(f)\\) is the numerical semigroup associated to f. It is said that \\(i \\in I\\) is an exact degree if \\(i+1 \\in S\\). The other elements are said non exact degrees of \\(\\mathbf{M}\\). The set of non exact degrees is denoted by \\(NE(\\mathbf{M})\\)."
   },
   {
     "objectID": "Meromorphic-series-NS/Exact-degree-polynomial-curve.html#definition",
     "href": "Meromorphic-series-NS/Exact-degree-polynomial-curve.html#definition",
     "title": "Exact degree of a polynomial curve",
     "section": "",
-    "text": "Let \\(X(t) = t^n + \\alpha_1t^{n-1} + \\cdots + \\alpha_n, Y(t) = t^m + \\beta_1 t^{m-1} + \\cdots + \\beta_m\\) be two polynomials of \\(\\mathbb{K}[t]\\), and let \\(\\mathbf{A} = \\mathbb{K}[X(t), Y(t)]\\). Let \\(\\mathbf{M} = X'(t)\\mathbf{A} + Y'(t)\\mathbf{A}\\). It is defined the set\n\\[\nI = \\{ord_t(F) ~ | ~ F \\in \\mathbf{M}\\},\n\\] it can be proven that \\(I\\) is a relative ideal of \\(S = \\Gamma(f)\\), where \\(\\Gamma(f)\\) is the numerical semigroup associated to f. It is said that \\(i \\in I\\) is an exact degree if \\(i+1 \\in S\\). The other elements are said non exact degrees of \\(\\mathbf{M}\\). The set of non exact degrees is denoted by \\(NE(M)\\)."
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Exact-degree-polynomial-curve.html#examples",
-    "href": "Meromorphic-series-NS/Exact-degree-polynomial-curve.html#examples",
-    "title": "Exact degree of a polynomial curve",
-    "section": "Examples",
-    "text": "Examples\n\\(\\circ\\)"
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Exact-degree-polynomial-curve.html#examples-with-gap",
-    "href": "Meromorphic-series-NS/Exact-degree-polynomial-curve.html#examples-with-gap",
-    "title": "Exact degree of a polynomial curve",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to exact degree of polynomial curve."
+    "text": "Let \\(X(t) = t^n + \\alpha_1t^{n-1} + \\cdots + \\alpha_n, Y(t) = t^m + \\beta_1 t^{m-1} + \\cdots + \\beta_m\\) be two polynomials of \\(\\mathbb{K}[t]\\) and \\(\\mathbf{A} = \\mathbb{K}[X(t), Y(t)]\\). Let \\(f(X,Y)\\) be the unique irreducible polynomial of \\(\\mathbb{K}[X, Y]\\), monic in \\(Y\\), such that \\(f(X(T), Y(T)) = 0\\). If \\(\\mathbf{M} = X'(t)\\mathbf{A} + Y'(t)\\mathbf{A}\\), it is defined the set\n\\[\nI = \\{ord_t(F) ~ | ~ F \\in \\mathbf{M}\\}.\n\\]\nIt can be proven that \\(I\\) is a relative ideal of \\(S = \\Gamma(f)\\), where \\(\\Gamma(f)\\) is the numerical semigroup associated to f. It is said that \\(i \\in I\\) is an exact degree if \\(i+1 \\in S\\). The other elements are said non exact degrees of \\(\\mathbf{M}\\). The set of non exact degrees is denoted by \\(NE(\\mathbf{M})\\)."
   },
   {
     "objectID": "Meromorphic-series-NS/Exact-degree-polynomial-curve.html#references",
@@ -974,28 +932,14 @@
     "href": "Meromorphic-series-NS/Short-parametrization.html",
     "title": "Short parametrization",
     "section": "",
-    "text": "Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial and \\(S = \\Gamma(f) = \\langle r_0, r_1, \\ldots, r_m \\rangle\\), with \\(r_0 = n\\) and \\(r_0 = m\\), where \\(\\Gamma(f)\\) is the numerical semigroup associated to f and \\(\\underline{r} = (r_0, r_1, \\ldots, r_h)\\) comes from the definition of characteristic sequences of \\(f\\). Let \\(C(f)\\) be the algebroid curve \\(f = 0\\).\nLet \\(x(t) = t^n, y(t) = \\sum_{p \\ge m} c_p t^p\\) be a parametrization of \\(f\\), and suppose, after a possibly a change of variables, that \\(c_m = 1\\). Suppose that \\(y(t) - t^m \\ne 0\\). Let \\(p_1 = \\inf (Supp(y(t) - t^m)\\), where \\(Supp(y(t) - t^m)\\) denotes the support of \\(y(t) - t^m\\). If \\(p_1 \\in S\\), then \\(p_1 = \\sum_{i = 0}^h a_i r_i\\) with \\(a_0, \\ldots, a_h \\in \\mathbb{N}\\) and we consider the change of variables \\(x_1 = x, y_1 = y - c_{p_1}x^{a_0}y^{a_1}G_2^{a_2}\\cdots G_h^{a_h}\\), where for all \\(i \\in \\{1, \\ldots, h\\}\\), \\(G_i\\) is an element of \\(\\mathbb{K}[[x, y]]\\) such that \\(int(f, G_i) = r_i\\). It follows that \\(f_1(x_1, y_1) = f(x_1, y_1 + c_{p_1}x^{a_0}y^{a_1}G_2^{a_2}\\cdots G_h^{a_h})\\) is an irreducible polynomial of \\(\\mathbb{K}[[x,y]]\\) with parametrization \\(x_1(t) = t^n, y_1(t) = t^m + \\sum_{p &gt; m} \\tilde{c}_p t^p\\) and either \\(y_1(t) - t^m = 0\\) or \\(\\inf (Supp(y_1(t) - t^m) &gt; p_1\\). In the second case, we restart with \\(f_1, x_1(t), y_1(t)\\). The conductor \\(C(S)\\) of \\(S\\) being finite, we get, after repeating the argument, the following:\nLet us consider the hypothesis of the preposition. Then, modulo an automorphism of \\(\\mathbb{K}[[x,y]]\\), \\(f\\) has a parametrization of the form \\(x = t^n\\) and \\(y = t^m + \\sum_{q \\in G(S), q &gt; m} c_q t^q\\), where \\(G(S)\\) denotes the set of gaps of \\(S\\). It is said a short parametrization of \\(C(f)\\) an expression as above."
+    "text": "The definition of short parametrization comes form the following result.\n\n\n\n\n\n\nProposition\n\n\n\nLet \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}[[x]][y]\\) be an irreducible polynomial, \\(S = \\Gamma(f) = \\langle r_0, r_1, \\ldots, r_h \\rangle\\) the numerical semigroup associated to f with \\(r_0 = n\\) and \\(r_1 = m\\). Then, modulo an automorphism of \\(\\mathbb{K}[[x,y]]\\), \\(f\\) has a parametrization of the form \\(x = t^n\\) and \\(y = t^m + \\sum_{q \\in G(S), q &gt; m} c_q t^q\\), where \\(G(S)\\) denotes the set of gaps.\n\n\nLet us consider the hypothesis of the proposition. It is said that a parametrization of \\(f\\) is a short parametrization of \\(C(f)\\) if it has an expression as above."
   },
   {
     "objectID": "Meromorphic-series-NS/Short-parametrization.html#definition",
     "href": "Meromorphic-series-NS/Short-parametrization.html#definition",
     "title": "Short parametrization",
     "section": "",
-    "text": "Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial and \\(S = \\Gamma(f) = \\langle r_0, r_1, \\ldots, r_m \\rangle\\), with \\(r_0 = n\\) and \\(r_0 = m\\), where \\(\\Gamma(f)\\) is the numerical semigroup associated to f and \\(\\underline{r} = (r_0, r_1, \\ldots, r_h)\\) comes from the definition of characteristic sequences of \\(f\\). Let \\(C(f)\\) be the algebroid curve \\(f = 0\\).\nLet \\(x(t) = t^n, y(t) = \\sum_{p \\ge m} c_p t^p\\) be a parametrization of \\(f\\), and suppose, after a possibly a change of variables, that \\(c_m = 1\\). Suppose that \\(y(t) - t^m \\ne 0\\). Let \\(p_1 = \\inf (Supp(y(t) - t^m)\\), where \\(Supp(y(t) - t^m)\\) denotes the support of \\(y(t) - t^m\\). If \\(p_1 \\in S\\), then \\(p_1 = \\sum_{i = 0}^h a_i r_i\\) with \\(a_0, \\ldots, a_h \\in \\mathbb{N}\\) and we consider the change of variables \\(x_1 = x, y_1 = y - c_{p_1}x^{a_0}y^{a_1}G_2^{a_2}\\cdots G_h^{a_h}\\), where for all \\(i \\in \\{1, \\ldots, h\\}\\), \\(G_i\\) is an element of \\(\\mathbb{K}[[x, y]]\\) such that \\(int(f, G_i) = r_i\\). It follows that \\(f_1(x_1, y_1) = f(x_1, y_1 + c_{p_1}x^{a_0}y^{a_1}G_2^{a_2}\\cdots G_h^{a_h})\\) is an irreducible polynomial of \\(\\mathbb{K}[[x,y]]\\) with parametrization \\(x_1(t) = t^n, y_1(t) = t^m + \\sum_{p &gt; m} \\tilde{c}_p t^p\\) and either \\(y_1(t) - t^m = 0\\) or \\(\\inf (Supp(y_1(t) - t^m) &gt; p_1\\). In the second case, we restart with \\(f_1, x_1(t), y_1(t)\\). The conductor \\(C(S)\\) of \\(S\\) being finite, we get, after repeating the argument, the following:\nLet us consider the hypothesis of the preposition. Then, modulo an automorphism of \\(\\mathbb{K}[[x,y]]\\), \\(f\\) has a parametrization of the form \\(x = t^n\\) and \\(y = t^m + \\sum_{q \\in G(S), q &gt; m} c_q t^q\\), where \\(G(S)\\) denotes the set of gaps of \\(S\\). It is said a short parametrization of \\(C(f)\\) an expression as above."
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Short-parametrization.html#examples",
-    "href": "Meromorphic-series-NS/Short-parametrization.html#examples",
-    "title": "Short parametrization",
-    "section": "Examples",
-    "text": "Examples\n\\(\\circ\\)"
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Short-parametrization.html#examples-with-gap",
-    "href": "Meromorphic-series-NS/Short-parametrization.html#examples-with-gap",
-    "title": "Short parametrization",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to short parametrization."
+    "text": "The definition of short parametrization comes form the following result.\n\n\n\n\n\n\nProposition\n\n\n\nLet \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}[[x]][y]\\) be an irreducible polynomial, \\(S = \\Gamma(f) = \\langle r_0, r_1, \\ldots, r_h \\rangle\\) the numerical semigroup associated to f with \\(r_0 = n\\) and \\(r_1 = m\\). Then, modulo an automorphism of \\(\\mathbb{K}[[x,y]]\\), \\(f\\) has a parametrization of the form \\(x = t^n\\) and \\(y = t^m + \\sum_{q \\in G(S), q &gt; m} c_q t^q\\), where \\(G(S)\\) denotes the set of gaps.\n\n\nLet us consider the hypothesis of the proposition. It is said that a parametrization of \\(f\\) is a short parametrization of \\(C(f)\\) if it has an expression as above."
   },
   {
     "objectID": "Meromorphic-series-NS/Short-parametrization.html#references",
@@ -1007,35 +951,28 @@
   {
     "objectID": "Meromorphic-series-NS/Expansion.html",
     "href": "Meromorphic-series-NS/Expansion.html",
-    "title": "Expansion",
+    "title": "Expansion with respect to a set of polynomials",
     "section": "",
-    "text": "Let \\(g,G_1, \\ldots, G_h \\in \\mathbb{K}((x))[y]\\) with \\(G_1, \\ldots, G_h\\) non-zero and let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial. The definition of expansion of \\(g\\) with respect to \\((G_1, G_2, \\ldots, G_h, f)\\) comes from the following result.\n\\(\\textbf{Preposition}\\): Let \\(g,G_1, \\ldots, G_h \\in \\mathbb{K}((x))[y]\\), with \\(G_1, \\ldots, G_h\\) non-zero and let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial. Then,\n\\[\ng = \\sum_{\\theta \\in \\Theta} c_{\\theta} (x) G_1^{\\theta_1} G_2^{\\theta_2} \\cdots G_h^{\\theta_h} f^{\\theta_{h+1}},\n\\]\nfor some \\(\\theta = (\\theta_1, \\ldots, \\theta_{h+1}) \\in \\mathbb{N}^{h+1}\\), with \\(0 \\le \\theta_k &lt; e_k\\) for all \\(k \\in \\{1, 2, \\ldots, h\\}\\), where \\((e_1, e_2, \\ldots, e_h)\\) comes from the definition of characteristic sequences of a formal series, and some \\(c_{\\theta} (x) \\in \\mathbb{K}((x))\\). Moreover,\n\\[\ndeg_y g = \\max \\{c_{\\theta} (x) G_1^{\\theta_1} G_2^{\\theta_2} \\cdots G_h^{\\theta_h} f^{\\theta_{h+1}} ~ | ~ \\theta \\in \\Theta \\}.\n\\]\nIt is defined the expansion of \\(g\\) with respect to \\((G_1, G_2, \\ldots, G_h, f)\\) as the expression of \\(g\\) obtained in the previous proposition."
+    "text": "Let \\(g,G_1, \\ldots, G_h \\in \\mathbb{K}((x))[y]\\) with \\(G_1, \\ldots, G_h\\) non-zero and let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial. The definition of expansion of \\(g\\) with respect to \\((G_1, G_2, \\ldots, G_h, f)\\) comes from the following result.\n\n\n\n\n\n\nProposition\n\n\n\nLet \\(g,G_1, \\ldots, G_h \\in \\mathbb{K}((x))[y]\\), with \\(G_1, \\ldots, G_h\\) non-zero and let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial. Then,\n\\[\ng = \\sum_{\\theta \\in \\Theta} c_{\\theta} (x) G_1^{\\theta_1} G_2^{\\theta_2} \\cdots G_h^{\\theta_h} f^{\\theta_{h+1}},\n\\]\nfor some \\(\\theta = (\\theta_1, \\ldots, \\theta_{h+1}) \\in \\mathbb{N}^{h+1}\\), with \\(0 \\le \\theta_k &lt; e_k\\) for all \\(k \\in \\{1, 2, \\ldots, h\\}\\), where \\((e_1, e_2, \\ldots, e_h)\\) comes from the definition of characteristic sequences of a formal series, and some \\(c_{\\theta} (x) \\in \\mathbb{K}((x))\\). Moreover,\n\\[\ndeg_y g = \\max \\{deg_y ~~ c_{\\theta} (x) G_1^{\\theta_1} G_2^{\\theta_2} \\cdots G_h^{\\theta_h} f^{\\theta_{h+1}} ~ | ~ \\theta \\in \\Theta \\}.\n\\]\n\n\nIt is defined the expansion of \\(g\\) with respect to \\((G_1, G_2, \\ldots, G_h, f)\\) as the expression of \\(g\\) obtained in the previous proposition."
   },
   {
     "objectID": "Meromorphic-series-NS/Expansion.html#definition",
     "href": "Meromorphic-series-NS/Expansion.html#definition",
-    "title": "Expansion",
+    "title": "Expansion with respect to a set of polynomials",
     "section": "",
-    "text": "Let \\(g,G_1, \\ldots, G_h \\in \\mathbb{K}((x))[y]\\) with \\(G_1, \\ldots, G_h\\) non-zero and let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial. The definition of expansion of \\(g\\) with respect to \\((G_1, G_2, \\ldots, G_h, f)\\) comes from the following result.\n\\(\\textbf{Preposition}\\): Let \\(g,G_1, \\ldots, G_h \\in \\mathbb{K}((x))[y]\\), with \\(G_1, \\ldots, G_h\\) non-zero and let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial. Then,\n\\[\ng = \\sum_{\\theta \\in \\Theta} c_{\\theta} (x) G_1^{\\theta_1} G_2^{\\theta_2} \\cdots G_h^{\\theta_h} f^{\\theta_{h+1}},\n\\]\nfor some \\(\\theta = (\\theta_1, \\ldots, \\theta_{h+1}) \\in \\mathbb{N}^{h+1}\\), with \\(0 \\le \\theta_k &lt; e_k\\) for all \\(k \\in \\{1, 2, \\ldots, h\\}\\), where \\((e_1, e_2, \\ldots, e_h)\\) comes from the definition of characteristic sequences of a formal series, and some \\(c_{\\theta} (x) \\in \\mathbb{K}((x))\\). Moreover,\n\\[\ndeg_y g = \\max \\{c_{\\theta} (x) G_1^{\\theta_1} G_2^{\\theta_2} \\cdots G_h^{\\theta_h} f^{\\theta_{h+1}} ~ | ~ \\theta \\in \\Theta \\}.\n\\]\nIt is defined the expansion of \\(g\\) with respect to \\((G_1, G_2, \\ldots, G_h, f)\\) as the expression of \\(g\\) obtained in the previous proposition."
+    "text": "Let \\(g,G_1, \\ldots, G_h \\in \\mathbb{K}((x))[y]\\) with \\(G_1, \\ldots, G_h\\) non-zero and let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial. The definition of expansion of \\(g\\) with respect to \\((G_1, G_2, \\ldots, G_h, f)\\) comes from the following result.\n\n\n\n\n\n\nProposition\n\n\n\nLet \\(g,G_1, \\ldots, G_h \\in \\mathbb{K}((x))[y]\\), with \\(G_1, \\ldots, G_h\\) non-zero and let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial. Then,\n\\[\ng = \\sum_{\\theta \\in \\Theta} c_{\\theta} (x) G_1^{\\theta_1} G_2^{\\theta_2} \\cdots G_h^{\\theta_h} f^{\\theta_{h+1}},\n\\]\nfor some \\(\\theta = (\\theta_1, \\ldots, \\theta_{h+1}) \\in \\mathbb{N}^{h+1}\\), with \\(0 \\le \\theta_k &lt; e_k\\) for all \\(k \\in \\{1, 2, \\ldots, h\\}\\), where \\((e_1, e_2, \\ldots, e_h)\\) comes from the definition of characteristic sequences of a formal series, and some \\(c_{\\theta} (x) \\in \\mathbb{K}((x))\\). Moreover,\n\\[\ndeg_y g = \\max \\{deg_y ~~ c_{\\theta} (x) G_1^{\\theta_1} G_2^{\\theta_2} \\cdots G_h^{\\theta_h} f^{\\theta_{h+1}} ~ | ~ \\theta \\in \\Theta \\}.\n\\]\n\n\nIt is defined the expansion of \\(g\\) with respect to \\((G_1, G_2, \\ldots, G_h, f)\\) as the expression of \\(g\\) obtained in the previous proposition."
   },
   {
     "objectID": "Meromorphic-series-NS/Expansion.html#examples",
     "href": "Meromorphic-series-NS/Expansion.html#examples",
-    "title": "Expansion",
+    "title": "Expansion with respect to a set of polynomials",
     "section": "Examples",
     "text": "Examples\n\\(\\circ\\) Let \\(g = y^{10}\\), and \\(f = y^6 - 2x^2y^3 + x^4 - x^5y, G_1 = y, G_2 = y^3 - x^2\\), let us compute the expansion of \\(g\\) with respect to \\((G_1, G_2, f)\\). If we divide \\(g\\) by \\(f\\),\n\\[\ng = (2x^2y + y^4)f + (2x^7y^2 - 2x^6y + x^5y^5 + 3x^4y^4) = Qf + R.\n\\]\nSince \\(deg_y Q &lt; deg_y f\\), we start dividing \\(Q\\) and \\(R\\) by \\(G_2\\).\n\\[\nQ = yG_2 + 3x^2y, \\hspace{0.3cm} R = (x^5y^2 + 3x^4y)G_2 + 3x^7y^2 + x^6y.\n\\]\nFinally,\n\\[\ng = (yG_2 + 3x^2y)f + (x^5y^2 + 3x^4y)G_2 + 3x^7y^2 + x^6y\n\\]\n\\[\n= G_1G_2f + 3x^2G_1f + x^5G_1^2G_2 + 3x^4G_1G_2 + 3x^7G_1^2 + x^6G_1.\n\\]"
   },
   {
-    "objectID": "Meromorphic-series-NS/Expansion.html#examples-with-gap",
-    "href": "Meromorphic-series-NS/Expansion.html#examples-with-gap",
-    "title": "Expansion",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to expansion."
-  },
-  {
     "objectID": "Meromorphic-series-NS/Expansion.html#references",
     "href": "Meromorphic-series-NS/Expansion.html#references",
-    "title": "Expansion",
+    "title": "Expansion with respect to a set of polynomials",
     "section": "References",
     "text": "References"
   },
@@ -1044,28 +981,14 @@
     "href": "Meromorphic-series-NS/Intersection-multiplicity.html",
     "title": "Intersection multiplicity",
     "section": "",
-    "text": "The definition of Newton-Puiseux exponents comes from the following result.\n\\(\\textbf{Preposition}\\): Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\). Suppose that \\(f(x,y)\\) is irreducible. There exists \\(y(t) \\in \\mathbb{K}((t))\\) such that \\(f(t^n, y(t)) = 0\\).\nLet \\(f\\) as in the preposition, \\(g \\in \\mathbb{K}((x))[y]\\) with \\(g \\ne 0\\) and \\(y(t)\\) a root of \\(f(t^n, y(t)) = 0\\). It is defined the intersection multiplicity of \\(f\\) with \\(g\\), denoted by \\(int(f,g)\\), to be\n\\[\nint(f,g) = ord_t g(t^n, y(t))\n\\]\nIt can be proven that this definition does not depend on the root \\(y(t)\\), that is, \\(int(f,g) = ord_t g(t^n, y(wt))\\) for all \\(w \\in \\mathbb{K}\\) such that \\(w^n = 1\\)."
+    "text": "The definition of intersection multiplicity comes from the following result.\n\n\n\n\n\n\nProposition\n\n\n\nLet \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\). Suppose that \\(f(x,y)\\) is irreducible. Then, there exists \\(y(t) \\in \\mathbb{K}((t))\\) such that \\(f(t^n, y(t)) = 0\\).\n\n\nLet \\(f\\) as in the proposition, \\(g \\in \\mathbb{K}((x))[y]\\) with \\(g \\ne 0\\) and \\(y(t)\\) a root of \\(f(t^n, y(t)) = 0\\). It is defined the intersection multiplicity of \\(f\\) with \\(g\\), denoted by \\(int(f,g)\\), as\n\\[\nint(f,g) = ord_t g(t^n, y(t))\n\\]\nIt can be proven that this definition does not depend on the root \\(y(t)\\), that is, \\(int(f,g) = ord_t g(t^n, y(wt))\\) for all \\(w \\in \\mathbb{K}\\) such that \\(w^n = 1\\)."
   },
   {
     "objectID": "Meromorphic-series-NS/Intersection-multiplicity.html#definition",
     "href": "Meromorphic-series-NS/Intersection-multiplicity.html#definition",
     "title": "Intersection multiplicity",
     "section": "",
-    "text": "The definition of Newton-Puiseux exponents comes from the following result.\n\\(\\textbf{Preposition}\\): Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\). Suppose that \\(f(x,y)\\) is irreducible. There exists \\(y(t) \\in \\mathbb{K}((t))\\) such that \\(f(t^n, y(t)) = 0\\).\nLet \\(f\\) as in the preposition, \\(g \\in \\mathbb{K}((x))[y]\\) with \\(g \\ne 0\\) and \\(y(t)\\) a root of \\(f(t^n, y(t)) = 0\\). It is defined the intersection multiplicity of \\(f\\) with \\(g\\), denoted by \\(int(f,g)\\), to be\n\\[\nint(f,g) = ord_t g(t^n, y(t))\n\\]\nIt can be proven that this definition does not depend on the root \\(y(t)\\), that is, \\(int(f,g) = ord_t g(t^n, y(wt))\\) for all \\(w \\in \\mathbb{K}\\) such that \\(w^n = 1\\)."
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Intersection-multiplicity.html#examples",
-    "href": "Meromorphic-series-NS/Intersection-multiplicity.html#examples",
-    "title": "Intersection multiplicity",
-    "section": "Examples",
-    "text": "Examples\n\\(\\circ\\)"
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Intersection-multiplicity.html#examples-with-gap",
-    "href": "Meromorphic-series-NS/Intersection-multiplicity.html#examples-with-gap",
-    "title": "Intersection multiplicity",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to intersection multiplicity of formal series."
+    "text": "The definition of intersection multiplicity comes from the following result.\n\n\n\n\n\n\nProposition\n\n\n\nLet \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\). Suppose that \\(f(x,y)\\) is irreducible. Then, there exists \\(y(t) \\in \\mathbb{K}((t))\\) such that \\(f(t^n, y(t)) = 0\\).\n\n\nLet \\(f\\) as in the proposition, \\(g \\in \\mathbb{K}((x))[y]\\) with \\(g \\ne 0\\) and \\(y(t)\\) a root of \\(f(t^n, y(t)) = 0\\). It is defined the intersection multiplicity of \\(f\\) with \\(g\\), denoted by \\(int(f,g)\\), as\n\\[\nint(f,g) = ord_t g(t^n, y(t))\n\\]\nIt can be proven that this definition does not depend on the root \\(y(t)\\), that is, \\(int(f,g) = ord_t g(t^n, y(wt))\\) for all \\(w \\in \\mathbb{K}\\) such that \\(w^n = 1\\)."
   },
   {
     "objectID": "Meromorphic-series-NS/Intersection-multiplicity.html#references",
@@ -1079,28 +1002,21 @@
     "href": "Meromorphic-series-NS/Tschirnhausen-transform.html",
     "title": "Tschirnhausen transform",
     "section": "",
-    "text": "Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial. Let us consider \\(d\\) a divisor of \\(n\\) and let \\(G \\in \\mathbb{K}((x))[y]\\) be a monic polynomial of degree \\(\\frac{n}{d}\\) in \\(y\\). Then, the G-adic expansion of \\(f\\) has the form\n\\[\nf = G^d + \\alpha_1 G^{d-1} + \\cdots + \\alpha_d,\n\\]\nwith \\(\\alpha_i \\in \\mathbb{K}((x))[y]\\) and \\(deg_y \\alpha(x,y) &lt; \\frac{n}{d}\\) for all \\(i \\in \\{1, 2, \\ldots, d\\}\\). It is defined the Tschirnhausen transform of \\(G\\) as \\(T(G) = G + \\frac{\\alpha_1}{d}\\)."
+    "text": "Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial. Let us consider \\(d\\) a divisor of \\(n\\) and let \\(G \\in \\mathbb{K}((x))[y]\\) be a monic polynomial of degree \\(\\frac{n}{d}\\) in \\(y\\). Then, the G-adic expansion of \\(f\\) has the form\n\\[\nf = G^d + \\alpha_1 G^{d-1} + \\cdots + \\alpha_d,\n\\]\nwith \\(\\alpha_i \\in \\mathbb{K}((x))[y]\\) and \\(deg_y \\alpha_i(x,y) &lt; \\frac{n}{d}\\) for all \\(i \\in \\{1, 2, \\ldots, d\\}\\). It is defined the Tschirnhausen transform of \\(G\\) as \\(T(G) = G + \\frac{\\alpha_1}{d}\\). This definition is related with the concept of approximate root of an irreducible polynomial."
   },
   {
     "objectID": "Meromorphic-series-NS/Tschirnhausen-transform.html#definition",
     "href": "Meromorphic-series-NS/Tschirnhausen-transform.html#definition",
     "title": "Tschirnhausen transform",
     "section": "",
-    "text": "Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial. Let us consider \\(d\\) a divisor of \\(n\\) and let \\(G \\in \\mathbb{K}((x))[y]\\) be a monic polynomial of degree \\(\\frac{n}{d}\\) in \\(y\\). Then, the G-adic expansion of \\(f\\) has the form\n\\[\nf = G^d + \\alpha_1 G^{d-1} + \\cdots + \\alpha_d,\n\\]\nwith \\(\\alpha_i \\in \\mathbb{K}((x))[y]\\) and \\(deg_y \\alpha(x,y) &lt; \\frac{n}{d}\\) for all \\(i \\in \\{1, 2, \\ldots, d\\}\\). It is defined the Tschirnhausen transform of \\(G\\) as \\(T(G) = G + \\frac{\\alpha_1}{d}\\)."
+    "text": "Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial. Let us consider \\(d\\) a divisor of \\(n\\) and let \\(G \\in \\mathbb{K}((x))[y]\\) be a monic polynomial of degree \\(\\frac{n}{d}\\) in \\(y\\). Then, the G-adic expansion of \\(f\\) has the form\n\\[\nf = G^d + \\alpha_1 G^{d-1} + \\cdots + \\alpha_d,\n\\]\nwith \\(\\alpha_i \\in \\mathbb{K}((x))[y]\\) and \\(deg_y \\alpha_i(x,y) &lt; \\frac{n}{d}\\) for all \\(i \\in \\{1, 2, \\ldots, d\\}\\). It is defined the Tschirnhausen transform of \\(G\\) as \\(T(G) = G + \\frac{\\alpha_1}{d}\\). This definition is related with the concept of approximate root of an irreducible polynomial."
   },
   {
     "objectID": "Meromorphic-series-NS/Tschirnhausen-transform.html#examples",
     "href": "Meromorphic-series-NS/Tschirnhausen-transform.html#examples",
     "title": "Tschirnhausen transform",
     "section": "Examples",
-    "text": "Examples\n\\(\\circ\\) Let \\(f = y^6 + (12x^2 + 3)y^5 + (36x^4 + 18x^2 + 2)y^4 + 13xy^3 + (78x^3 + 2x^2 + 20x)y^2 + 42x^2\\) and \\(g = y^3 + (6x^2 + 1)y^2 + 7x\\). We have \\(n = 6\\) and \\(d = 2\\). Dividing,\n\\[\nf = (y^3 + (6x^2 + 2)y^2 + 6x)G + 2x^2y^2 = QG + R,\n\\]\nand \\(deg_y Q = 3 = deg_y G\\). Dividing \\(Q\\) by \\(G\\),\n\\[\nQ = G + y^2 - x = Q^1G + R^1.\n\\]\nThen, the \\(G-\\)adic expansion of \\(f\\) is\n\\[\nf = QG + R = (Q^1G + R^1)G + R = G^2 + (y^2 - x)G + 2x^2y^2,\n\\]\nwith \\(\\alpha_1(x,y) = y^2 - x\\). Finally, the Tschirnhausen transform of \\(G\\) is\n\\[\nT(G) = G + \\frac{\\alpha_1(x,y)}{d} = y^3 + (6x^2 + 1)y^2 + 7x + \\frac{y^2-x}{2}.\n\\]"
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Tschirnhausen-transform.html#examples-with-gap",
-    "href": "Meromorphic-series-NS/Tschirnhausen-transform.html#examples-with-gap",
-    "title": "Tschirnhausen transform",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to Tschirnhausen transform."
+    "text": "Examples\n\\(\\circ\\) Let\n\\[\nf = y^6 + (12x^2 + 3)y^5 + (36x^4 + 18x^2 + 2)y^4 + 13xy^3 + (78x^3 + 2x^2 + 20x)y^2 + 42x^2,\n\\]\nand \\(g = y^3 + (6x^2 + 1)y^2 + 7x\\). We have \\(n = 6\\) and \\(d = 2\\). Dividing,\n\\[\nf = (y^3 + (6x^2 + 2)y^2 + 6x)G + 2x^2y^2 = QG + R,\n\\]\nand \\(deg_y Q = 3 = deg_y G\\). Dividing \\(Q\\) by \\(G\\),\n\\[\nQ = G + y^2 - x = Q^1G + R^1.\n\\]\nThen, the \\(G-\\)adic expansion of \\(f\\) is\n\\[\nf = QG + R = (Q^1G + R^1)G + R = G^2 + (y^2 - x)G + 2x^2y^2,\n\\]\nwith \\(\\alpha_1(x,y) = y^2 - x\\). Finally, the Tschirnhausen transform of \\(G\\) is\n\\[\nT(G) = G + \\frac{\\alpha_1(x,y)}{d} = y^3 + (6x^2 + 1)y^2 + 7x + \\frac{y^2-x}{2}.\n\\]"
   },
   {
     "objectID": "Meromorphic-series-NS/Tschirnhausen-transform.html#references",
@@ -1114,28 +1030,14 @@
     "href": "Meromorphic-series-NS/Exact-degree-algebroid-curve.html",
     "title": "Exact degree of an algebroid curve",
     "section": "",
-    "text": "Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial, and let \\(x(t), y(t)\\) a short parametrization of \\(f\\). Let \\(\\mathbf{A} = \\mathbb{K}[[x(t), y(t)]]\\) and let \\(\\mathbf{M} = x'(t) \\mathbf{A} + y'(t) \\mathbf{A}\\). It is defined\n\\[\nI = \\{ord_t(g) ~ | ~ g \\in \\mathbf{M} \\}.\n\\] It can be proven that \\(I\\) is a relative ideal of \\(S = \\Gamma(f)\\), the numerical semigroup associated to f. It is said that \\(i \\in I\\) is an exact degree if \\(i+1 \\in S\\). The other elements are said non exact degrees of \\(\\mathbf{M}\\). The set of non exact degrees is denoted by \\(NE(M)\\)."
+    "text": "Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial, and let \\(x(t), y(t)\\) be a short parametrization of \\(f\\). Let \\(\\mathbf{A} = \\mathbb{K}[[x(t), y(t)]]\\) and let \\(\\mathbf{M} = x'(t) \\mathbf{A} + y'(t) \\mathbf{A}\\). It is defined\n\\[\nI = \\{ord_t(g) ~ | ~ g \\in \\mathbf{M} \\}.\n\\]\nIt can be proven that \\(I\\) is a relative ideal of \\(S = \\Gamma(f)\\), the numerical semigroup associated to f. It is said that \\(i \\in I\\) is an exact degree if \\(i+1 \\in S\\). The other elements are said non exact degrees of \\(\\mathbf{M}\\). The set of non exact degrees is denoted by \\(NE(\\textbf{M})\\)."
   },
   {
     "objectID": "Meromorphic-series-NS/Exact-degree-algebroid-curve.html#definition",
     "href": "Meromorphic-series-NS/Exact-degree-algebroid-curve.html#definition",
     "title": "Exact degree of an algebroid curve",
     "section": "",
-    "text": "Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial, and let \\(x(t), y(t)\\) a short parametrization of \\(f\\). Let \\(\\mathbf{A} = \\mathbb{K}[[x(t), y(t)]]\\) and let \\(\\mathbf{M} = x'(t) \\mathbf{A} + y'(t) \\mathbf{A}\\). It is defined\n\\[\nI = \\{ord_t(g) ~ | ~ g \\in \\mathbf{M} \\}.\n\\] It can be proven that \\(I\\) is a relative ideal of \\(S = \\Gamma(f)\\), the numerical semigroup associated to f. It is said that \\(i \\in I\\) is an exact degree if \\(i+1 \\in S\\). The other elements are said non exact degrees of \\(\\mathbf{M}\\). The set of non exact degrees is denoted by \\(NE(M)\\)."
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Exact-degree-algebroid-curve.html#examples",
-    "href": "Meromorphic-series-NS/Exact-degree-algebroid-curve.html#examples",
-    "title": "Exact degree of an algebroid curve",
-    "section": "Examples",
-    "text": "Examples\n\\(\\circ\\)"
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Exact-degree-algebroid-curve.html#examples-with-gap",
-    "href": "Meromorphic-series-NS/Exact-degree-algebroid-curve.html#examples-with-gap",
-    "title": "Exact degree of an algebroid curve",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to exact degree of algebroid curves."
+    "text": "Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial, and let \\(x(t), y(t)\\) be a short parametrization of \\(f\\). Let \\(\\mathbf{A} = \\mathbb{K}[[x(t), y(t)]]\\) and let \\(\\mathbf{M} = x'(t) \\mathbf{A} + y'(t) \\mathbf{A}\\). It is defined\n\\[\nI = \\{ord_t(g) ~ | ~ g \\in \\mathbf{M} \\}.\n\\]\nIt can be proven that \\(I\\) is a relative ideal of \\(S = \\Gamma(f)\\), the numerical semigroup associated to f. It is said that \\(i \\in I\\) is an exact degree if \\(i+1 \\in S\\). The other elements are said non exact degrees of \\(\\mathbf{M}\\). The set of non exact degrees is denoted by \\(NE(\\textbf{M})\\)."
   },
   {
     "objectID": "Meromorphic-series-NS/Exact-degree-algebroid-curve.html#references",
@@ -1149,28 +1051,14 @@
     "href": "Meromorphic-series-NS/Very-short-parametrization.html",
     "title": "Very short parametrization",
     "section": "",
-    "text": "The definition of very short parametrization comes from the following result.\n\\(\\textbf{Preposition}\\): Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial and \\(S = \\Gamma(f) = \\langle r_0, r_1, \\ldots, r_m \\rangle\\), with \\(r_0 = n\\) and \\(r_0 = m\\), where \\(\\Gamma(f)\\) is the numerical semigroup associated to f and \\(\\underline{r} = (r_0, r_1, \\ldots, r_h)\\) comes from the definition of characteristic sequences of \\(f\\). Let us assume, without loss of generality, that \\(x = t^n, y = t^m + \\sum_{q \\in G(S), q &gt; m} c_q t^q\\), where \\(G(S)\\) is the set of gaps of \\(S\\). Let us suppose that \\(y - t^m \\ne 0\\), and let \\(\\lambda = \\inf(Supp(y - t^m))\\). If \\(n + \\lambda \\in S\\), then there exists a new parametrization \\(x_1, y_1\\) such that either \\(x_1 = T^n, y_1 = T^m\\) or \\(x_1 = T^m, y_1 = T^m + c_{\\lambda_1}T^{\\lambda_1} + \\cdots\\), with \\(c_{\\lambda_1} \\ne 0\\) and \\(\\lambda_1 &gt; \\lambda\\).\nLet us consider the hypothesis of the preposition. Then, modulo automorphism of \\(\\mathbb{K}[[x,y]]\\), \\(f\\) has a parametrization of the form \\(x = t^n\\), \\(y = t^m + \\sum_{g \\in G(S), q &gt; m} c_q t^q\\) such that if \\(y - t^m \\ne 0\\) and \\(\\lambda = inf(Supp(y - t^m))\\), then \\(n + \\lambda \\not \\in S\\). It is said a very short parametrization of \\(f\\) an expression as above."
+    "text": "The definition of very short parametrization comes from the following result.\n\n\n\n\n\n\nProposition\n\n\n\nLet \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}[[x]][y]\\) be an irreducible polynomial, \\(S = \\Gamma(f) = \\langle r_0, r_1, \\ldots, r_h \\rangle\\) the numerical semigroup associated to f with \\(r_0 = n, r_1 = m\\) and let \\(G(S)\\) be the set of gaps. Then, modulo an automorphism of \\(\\mathbb{K}[[x,y]]\\), \\(f\\) has a parametrization of the form \\(x = t^n\\) and \\(y = t^m + \\sum_{q \\in G(S), q &gt; m} c_q t^q\\), such that if \\(y - t^m \\ne 0\\) and \\(\\lambda = \\inf( Supp(y - t^m))\\), where \\(Supp(y-t^m)\\) denotes the support of \\(y\\) and \\(t^m\\), then \\(n + \\lambda \\not \\in S\\).\n\n\nLet us consider the hypothesis of the proposition. It is said that a parametrization of \\(f\\) is a very short parametrization of \\(f\\) if it has an expression as above and satisfies the condition mentioned."
   },
   {
     "objectID": "Meromorphic-series-NS/Very-short-parametrization.html#definition",
     "href": "Meromorphic-series-NS/Very-short-parametrization.html#definition",
     "title": "Very short parametrization",
     "section": "",
-    "text": "The definition of very short parametrization comes from the following result.\n\\(\\textbf{Preposition}\\): Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial and \\(S = \\Gamma(f) = \\langle r_0, r_1, \\ldots, r_m \\rangle\\), with \\(r_0 = n\\) and \\(r_0 = m\\), where \\(\\Gamma(f)\\) is the numerical semigroup associated to f and \\(\\underline{r} = (r_0, r_1, \\ldots, r_h)\\) comes from the definition of characteristic sequences of \\(f\\). Let us assume, without loss of generality, that \\(x = t^n, y = t^m + \\sum_{q \\in G(S), q &gt; m} c_q t^q\\), where \\(G(S)\\) is the set of gaps of \\(S\\). Let us suppose that \\(y - t^m \\ne 0\\), and let \\(\\lambda = \\inf(Supp(y - t^m))\\). If \\(n + \\lambda \\in S\\), then there exists a new parametrization \\(x_1, y_1\\) such that either \\(x_1 = T^n, y_1 = T^m\\) or \\(x_1 = T^m, y_1 = T^m + c_{\\lambda_1}T^{\\lambda_1} + \\cdots\\), with \\(c_{\\lambda_1} \\ne 0\\) and \\(\\lambda_1 &gt; \\lambda\\).\nLet us consider the hypothesis of the preposition. Then, modulo automorphism of \\(\\mathbb{K}[[x,y]]\\), \\(f\\) has a parametrization of the form \\(x = t^n\\), \\(y = t^m + \\sum_{g \\in G(S), q &gt; m} c_q t^q\\) such that if \\(y - t^m \\ne 0\\) and \\(\\lambda = inf(Supp(y - t^m))\\), then \\(n + \\lambda \\not \\in S\\). It is said a very short parametrization of \\(f\\) an expression as above."
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Very-short-parametrization.html#examples",
-    "href": "Meromorphic-series-NS/Very-short-parametrization.html#examples",
-    "title": "Very short parametrization",
-    "section": "Examples",
-    "text": "Examples\n\\(\\circ\\)"
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Very-short-parametrization.html#examples-with-gap",
-    "href": "Meromorphic-series-NS/Very-short-parametrization.html#examples-with-gap",
-    "title": "Very short parametrization",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to very short parametrization."
+    "text": "The definition of very short parametrization comes from the following result.\n\n\n\n\n\n\nProposition\n\n\n\nLet \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}[[x]][y]\\) be an irreducible polynomial, \\(S = \\Gamma(f) = \\langle r_0, r_1, \\ldots, r_h \\rangle\\) the numerical semigroup associated to f with \\(r_0 = n, r_1 = m\\) and let \\(G(S)\\) be the set of gaps. Then, modulo an automorphism of \\(\\mathbb{K}[[x,y]]\\), \\(f\\) has a parametrization of the form \\(x = t^n\\) and \\(y = t^m + \\sum_{q \\in G(S), q &gt; m} c_q t^q\\), such that if \\(y - t^m \\ne 0\\) and \\(\\lambda = \\inf( Supp(y - t^m))\\), where \\(Supp(y-t^m)\\) denotes the support of \\(y\\) and \\(t^m\\), then \\(n + \\lambda \\not \\in S\\).\n\n\nLet us consider the hypothesis of the proposition. It is said that a parametrization of \\(f\\) is a very short parametrization of \\(f\\) if it has an expression as above and satisfies the condition mentioned."
   },
   {
     "objectID": "Meromorphic-series-NS/Very-short-parametrization.html#references",
@@ -1182,35 +1070,28 @@
   {
     "objectID": "Meromorphic-series-NS/Support.html",
     "href": "Meromorphic-series-NS/Support.html",
-    "title": "Support",
+    "title": "Support of a formal series",
     "section": "",
     "text": "Let \\(\\mathbb{K}\\) be a field and \\(t\\) a variable. Let us consider \\(y(t) = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\). It is defined the support of \\(y(t)\\) as\n\\[\nSupp(y(t)) = \\{p ~ | ~ c_p \\ne 0 \\}.\n\\]"
   },
   {
     "objectID": "Meromorphic-series-NS/Support.html#definition",
     "href": "Meromorphic-series-NS/Support.html#definition",
-    "title": "Support",
+    "title": "Support of a formal series",
     "section": "",
     "text": "Let \\(\\mathbb{K}\\) be a field and \\(t\\) a variable. Let us consider \\(y(t) = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\). It is defined the support of \\(y(t)\\) as\n\\[\nSupp(y(t)) = \\{p ~ | ~ c_p \\ne 0 \\}.\n\\]"
   },
   {
     "objectID": "Meromorphic-series-NS/Support.html#examples",
     "href": "Meromorphic-series-NS/Support.html#examples",
-    "title": "Support",
+    "title": "Support of a formal series",
     "section": "Examples",
     "text": "Examples\n\\(\\circ\\) Let \\(\\mathbb{K}\\) be a field, \\(t\\) and indeterminant and the rings \\(\\mathbb{K}[t], \\mathbb{K}[[t]]\\). By definition of polynomial ring, it holds that\n\\[\n\\mathbb{K}[t] = \\{y(t) \\in \\mathbb{K}[[t]] ~ | ~ Supp(y(t)) &lt; + \\infty \\} \\subsetneq \\mathbb{K}[[t]].\n\\]"
   },
   {
-    "objectID": "Meromorphic-series-NS/Support.html#examples-with-gap",
-    "href": "Meromorphic-series-NS/Support.html#examples-with-gap",
-    "title": "Support",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to support of a formal series."
-  },
-  {
     "objectID": "Meromorphic-series-NS/Support.html#references",
     "href": "Meromorphic-series-NS/Support.html#references",
-    "title": "Support",
+    "title": "Support of a formal series",
     "section": "References",
     "text": "References"
   },
@@ -1499,28 +1380,28 @@
     "href": "Fact-and-Div/Tame-degree-of-a-numerical-semigroup.html",
     "title": "Tame degree of a numerical semigroup",
     "section": "",
-    "text": "Let \\(S\\) be a numerical semigroup minimally generated by \\(\\{n_1, n_2, \\ldots, n_p\\}\\). It is defined the tame degree of \\(S\\), denoted by \\(\\mathbf{t}(S)\\), as\n\\[\n\\mathbf{t}(S) = \\sup_{n \\in S} \\mathbf{t}(n),\n\\]\nwhere \\(\\mathbf{t}(n)\\) denotes the tame degree of n in \\(S\\). If it is defined for all \\(i \\in \\{1, 2, \\ldots, p\\}\\) the set\n\\[\n\\mathbf{t}_i(S) = \\sup_{n \\in S} \\mathbf{t}_i(n),\n\\]\nit can be proven that \\(\\mathbf{t}_i(S) = \\sup \\{\\mathbf{t}_i(S) ~ | ~ i \\in \\{1, 2, \\ldots, p\\}\\}\\).\nGiven a numerical semigroup \\(S\\), there is a relation between its Delta set \\(\\Delta(S)\\), its catenary degree \\(\\mathbf{C}(S)\\), its w-primality \\(\\omega(S)\\) and its tame degree \\(\\mathbf{t}(S)\\), which is\n\\[\n\\max \\Delta(S) + 2 \\le \\mathbf{C}(S) \\le \\omega(S) \\le \\mathbf{t}(S).\n\\]"
+    "text": "Let \\(S\\) be a numerical semigroup minimally generated by \\(\\{n_1, n_2, \\ldots, n_p\\}\\). It is defined the tame degree of \\(S\\), denoted by \\(\\mathbf{t}(S)\\), as\n\\[\n\\mathbf{t}(S) = \\sup_{n \\in S} \\mathbf{t}(n),\n\\]\nwhere \\(\\mathbf{t}(n)\\) denotes the tame degree of n in \\(S\\). If it is defined for all \\(i \\in \\{1, 2, \\ldots, p\\}\\) the set\n\\[\n\\mathbf{t}_i(S) = \\sup_{n \\in S} \\mathbf{t}_i(n),\n\\]\nit can be proven that \\(\\mathbf{t}_i(S) = \\sup \\{\\mathbf{t}_i(S) ~ | ~ i \\in \\{1, 2, \\ldots, p\\}\\}\\). Moreover, if for all \\(i \\in \\{1, \\ldots, p\\}\\), it is defined \\(S_i\\) as the set of \\(s \\in S\\) such that \\(\\mathbb{Z}(s) \\cap Minimals_{\\le_S}(\\mathbb{Z}(n_i + S))\\) is not empty, where \\(\\mathbb{Z}(n)\\) denotes the set of factorizations of \\(n\\) in \\(S\\) and \\(\\le_S\\) denotes the relation\n\\[\n(x_1, \\ldots, x_p) \\le (y_1, \\ldots, y_p) \\Longleftrightarrow x_i \\le y_i ~~ \\text{for all } i \\in \\{1, \\ldots, p\\},\n\\] it can be proven that\n\\[\n\\mathbf{t}_i(S) = \\max \\{\\mathbf{t}_i(s) ~ | ~ s \\in S_i\\}.\n\\]\nGiven a numerical semigroup \\(S\\), there is a relation between its Delta set \\(\\Delta(S)\\), its catenary degree \\(\\mathbf{C}(S)\\), its w-primality \\(\\omega(S)\\) and its tame degree \\(\\mathbf{t}(S)\\), which is\n\\[\n\\max \\Delta(S) + 2 \\le \\mathbf{C}(S) \\le \\omega(S) \\le \\mathbf{t}(S).\n\\]"
   },
   {
     "objectID": "Fact-and-Div/Tame-degree-of-a-numerical-semigroup.html#definition",
     "href": "Fact-and-Div/Tame-degree-of-a-numerical-semigroup.html#definition",
     "title": "Tame degree of a numerical semigroup",
     "section": "",
-    "text": "Let \\(S\\) be a numerical semigroup minimally generated by \\(\\{n_1, n_2, \\ldots, n_p\\}\\). It is defined the tame degree of \\(S\\), denoted by \\(\\mathbf{t}(S)\\), as\n\\[\n\\mathbf{t}(S) = \\sup_{n \\in S} \\mathbf{t}(n),\n\\]\nwhere \\(\\mathbf{t}(n)\\) denotes the tame degree of n in \\(S\\). If it is defined for all \\(i \\in \\{1, 2, \\ldots, p\\}\\) the set\n\\[\n\\mathbf{t}_i(S) = \\sup_{n \\in S} \\mathbf{t}_i(n),\n\\]\nit can be proven that \\(\\mathbf{t}_i(S) = \\sup \\{\\mathbf{t}_i(S) ~ | ~ i \\in \\{1, 2, \\ldots, p\\}\\}\\).\nGiven a numerical semigroup \\(S\\), there is a relation between its Delta set \\(\\Delta(S)\\), its catenary degree \\(\\mathbf{C}(S)\\), its w-primality \\(\\omega(S)\\) and its tame degree \\(\\mathbf{t}(S)\\), which is\n\\[\n\\max \\Delta(S) + 2 \\le \\mathbf{C}(S) \\le \\omega(S) \\le \\mathbf{t}(S).\n\\]"
+    "text": "Let \\(S\\) be a numerical semigroup minimally generated by \\(\\{n_1, n_2, \\ldots, n_p\\}\\). It is defined the tame degree of \\(S\\), denoted by \\(\\mathbf{t}(S)\\), as\n\\[\n\\mathbf{t}(S) = \\sup_{n \\in S} \\mathbf{t}(n),\n\\]\nwhere \\(\\mathbf{t}(n)\\) denotes the tame degree of n in \\(S\\). If it is defined for all \\(i \\in \\{1, 2, \\ldots, p\\}\\) the set\n\\[\n\\mathbf{t}_i(S) = \\sup_{n \\in S} \\mathbf{t}_i(n),\n\\]\nit can be proven that \\(\\mathbf{t}_i(S) = \\sup \\{\\mathbf{t}_i(S) ~ | ~ i \\in \\{1, 2, \\ldots, p\\}\\}\\). Moreover, if for all \\(i \\in \\{1, \\ldots, p\\}\\), it is defined \\(S_i\\) as the set of \\(s \\in S\\) such that \\(\\mathbb{Z}(s) \\cap Minimals_{\\le_S}(\\mathbb{Z}(n_i + S))\\) is not empty, where \\(\\mathbb{Z}(n)\\) denotes the set of factorizations of \\(n\\) in \\(S\\) and \\(\\le_S\\) denotes the relation\n\\[\n(x_1, \\ldots, x_p) \\le (y_1, \\ldots, y_p) \\Longleftrightarrow x_i \\le y_i ~~ \\text{for all } i \\in \\{1, \\ldots, p\\},\n\\] it can be proven that\n\\[\n\\mathbf{t}_i(S) = \\max \\{\\mathbf{t}_i(s) ~ | ~ s \\in S_i\\}.\n\\]\nGiven a numerical semigroup \\(S\\), there is a relation between its Delta set \\(\\Delta(S)\\), its catenary degree \\(\\mathbf{C}(S)\\), its w-primality \\(\\omega(S)\\) and its tame degree \\(\\mathbf{t}(S)\\), which is\n\\[\n\\max \\Delta(S) + 2 \\le \\mathbf{C}(S) \\le \\omega(S) \\le \\mathbf{t}(S).\n\\]"
   },
   {
     "objectID": "Fact-and-Div/Tame-degree-of-a-numerical-semigroup.html#examples",
     "href": "Fact-and-Div/Tame-degree-of-a-numerical-semigroup.html#examples",
     "title": "Tame degree of a numerical semigroup",
     "section": "Examples",
-    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle \\rangle\\)."
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 3, 5, 7 \\rangle\\). By definition, since \\(S_i\\) is finite, there exists \\(n \\in S\\) such that \\(\\mathbf{t}(S) = \\mathbf{t}(n)\\). Now, it is known that if \\(n\\) is minimal satisfying the previous equality, then \\(G_n\\) is not complete, where \\(G_n\\) denotes the graph associated to n by generators. In this case, for \\(n \\ge 5 + 7 = 12\\) the graph \\(G_n\\) is complete, then the candidates are in \\(B = \\{3, 5, 6, 7, 8, 9, 10, 11, 12\\}\\). Computing the tame degree of each element in \\(B\\), it is deduced that \\(\\mathbf{t}(S) = \\mathbf{t}(12) = 4\\)."
   },
   {
     "objectID": "Fact-and-Div/Tame-degree-of-a-numerical-semigroup.html#examples-with-gap",
     "href": "Fact-and-Div/Tame-degree-of-a-numerical-semigroup.html#examples-with-gap",
     "title": "Tame degree of a numerical semigroup",
     "section": "Examples with GAP",
-    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 37, 42, 45, 65, 88 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(37, 42, 45, 65, 88);\n&lt;Numerical semigroup with 5 generators&gt;\nGiven a numerical semigroup \\(S\\), the function TameDegree returns the tame degree of \\(S\\).\ngap&gt; TameDegree(S);\n7\nIf we also give an element \\(n \\in S\\), then computes the tame degree of \\(n\\) in \\(S\\).\ngap&gt; TameDegree(314, S);\n4\ngap&gt; TameDegree(S, 314);\n4"
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 37, 42, 45, 65, 88 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(37, 42, 45, 65, 88);\n&lt;Numerical semigroup with 5 generators&gt;\nGiven a numerical semigroup \\(S\\), the functions TameDegree and TameDegreeOfNumericalSemigroup return the tame degree of \\(S\\).\ngap&gt; TameDegree(S);\n7\ngap&gt; TameDegree(S) = TameDegreeOfNumericalSemigroup(S);\ntrue\nIf we also give an element \\(n \\in S\\) in TameDegree, then it computes the tame degree of \\(n\\) in \\(S\\).\ngap&gt; TameDegree(314, S);\n4\ngap&gt; TameDegree(S, 314);\n4"
   },
   {
     "objectID": "Fact-and-Div/Tame-degree-of-a-numerical-semigroup.html#references",
@@ -1555,7 +1436,7 @@
     "href": "Fact-and-Div/w-primality-of-an-element.html#examples-with-gap",
     "title": "w-primality of an element",
     "section": "Examples with GAP",
-    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 42, 56, 71, 90, 104 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(42, 56, 71, 90, 104);\n&lt;Numerical semigroup with 5 generators&gt;\nGiven a numerical semigroup \\(S\\) and an element \\(n\\) of it, the function OmegaPrimality computes the \\(\\omega-\\)primality of \\(n\\) in \\(S\\).\ngap&gt; OmegaPrimality(419, S);\n15\ngap&gt; OmegaPrimality(S, 419);\n15\nIf we only give a numerical semigroup \\(S\\), then the function OmegaPrimality returns the \\(\\omega-\\)primality of \\(S\\).\ngap&gt; OmegaPrimality(S);\n9"
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 42, 56, 71, 90, 104 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(42, 56, 71, 90, 104);\n&lt;Numerical semigroup with 5 generators&gt;\nGiven a numerical semigroup \\(S\\) and an element \\(n\\) of it, the functions OmegaPrimality and OmegaPrimalityOfElementInNumericalSemigroup compute the \\(\\omega-\\)primality of \\(n\\) in \\(S\\).\ngap&gt; OmegaPrimality(419, S);\n15\ngap&gt; OmegaPrimality(S, 419);\n15\ngap&gt; OmegaPrimality(419, S) = OmegaPrimalityOfElementInNumericalSemigroup(419, S);\ntrue\nIf we only give a numerical semigroup \\(S\\) in the function OmegaPrimality, then it returns the \\(\\omega-\\)primality of \\(S\\).\ngap&gt; OmegaPrimality(S);\n9\nGiven a numerical semigroup \\(S\\) and a list of integers \\(Is\\) of \\(S\\), the function OmegaPrimalityOfElementListInNumericalSemigroup returns a list with the \\(w-\\)primality of each element in \\(Is\\).\ngap&gt; Is := [174, 175, 183, 300, 354];\n[ 174, 175, 183, 300, 354 ]\ngap&gt; IsSubset(S,Is);\ntrue\ngap&gt; OmegaPrimalityOfElementListInNumericalSemigroup(Is,S);\n[ 11, 10, 11, 14, 17 ]"
   },
   {
     "objectID": "Fact-and-Div/w-primality-of-an-element.html#references",
@@ -1567,35 +1448,35 @@
   {
     "objectID": "Fact-and-Div/Chain-of-factorizations.html",
     "href": "Fact-and-Div/Chain-of-factorizations.html",
-    "title": "Chain of factorizations",
+    "title": "N-Chain of factorizations",
     "section": "",
     "text": "Let \\(S\\) be a numerical semigroup, let \\(s \\in S\\) and let \\(\\mathbf{Z}(s)\\) be the set of factorizations of \\(s\\) in \\(S\\). Given \\(x,y \\in \\mathbf{Z}(s)\\) and a non-negative integer \\(N\\), it is said that \\(x_1, x_2, \\ldots, x_k \\in \\mathbb{Z}(s)\\) is an \\(N-\\)chain joining \\(x\\) and \\(y\\) if\n\n\\(x_1 = x\\), \\(x_k = y\\),\nfor all \\(i \\in \\{1, 2, \\ldots, k-1\\}\\), \\(d(x_i, x_{i+1}) \\le N\\), where \\(d(x_i, x_{i+1})\\) denotes the distance between \\(x_i\\) and \\(x_{i+1}\\)."
   },
   {
     "objectID": "Fact-and-Div/Chain-of-factorizations.html#definition",
     "href": "Fact-and-Div/Chain-of-factorizations.html#definition",
-    "title": "Chain of factorizations",
+    "title": "N-Chain of factorizations",
     "section": "",
     "text": "Let \\(S\\) be a numerical semigroup, let \\(s \\in S\\) and let \\(\\mathbf{Z}(s)\\) be the set of factorizations of \\(s\\) in \\(S\\). Given \\(x,y \\in \\mathbf{Z}(s)\\) and a non-negative integer \\(N\\), it is said that \\(x_1, x_2, \\ldots, x_k \\in \\mathbb{Z}(s)\\) is an \\(N-\\)chain joining \\(x\\) and \\(y\\) if\n\n\\(x_1 = x\\), \\(x_k = y\\),\nfor all \\(i \\in \\{1, 2, \\ldots, k-1\\}\\), \\(d(x_i, x_{i+1}) \\le N\\), where \\(d(x_i, x_{i+1})\\) denotes the distance between \\(x_i\\) and \\(x_{i+1}\\)."
   },
   {
     "objectID": "Fact-and-Div/Chain-of-factorizations.html#examples",
     "href": "Fact-and-Div/Chain-of-factorizations.html#examples",
-    "title": "Chain of factorizations",
+    "title": "N-Chain of factorizations",
     "section": "Examples",
     "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 5, 12, 16 \\rangle\\) and \\(s = 70\\). The set of factorizations is\n\\[\n\\mathbf{Z}(70) = \\{(14, 0, 0), (2, 5, 0), (6, 2, 1), (2, 1, 3)\\}.\n\\]\nIf we compute the distance between each pair, it is obtained the following graph.\n\n\n\n\n\n\n\nNSGraph\n\n\n\n1\n\n (14, 0, 0)\n\n\n\n2\n\n (2, 5, 0)\n\n\n\n1--2\n\n12\n\n\n\n3\n\n (6, 2, 1)\n\n\n\n1--3\n\n8\n\n\n\n4\n\n (2, 1, 3)\n\n\n\n1--4\n\n12\n\n\n\n2--3\n\n5\n\n\n\n2--4\n\n4\n\n\n\n3--4\n\n5\n\n\n\n\n\n\n\n\nLet us consider \\(x = (2,1,3)\\) and \\(y = (14,0,0)\\). We have an \\(8-\\)chain, since the sequence \\(x_1 = x, x_2 = (6,2,1), x_3 = y\\) is such that \\(d(x_1, x_2) = 5\\) and \\(d(x_2, x_3) = 8\\). In fact, \\(N = 8\\) is the least \\(N\\) so that for any two factorizations of \\(s = 70\\) there is an \\(8-\\)chain. It is said that \\(N = 8\\) is the catenary degree of \\(s = 70\\) in \\(S\\)."
   },
   {
     "objectID": "Fact-and-Div/Chain-of-factorizations.html#examples-with-gap",
     "href": "Fact-and-Div/Chain-of-factorizations.html#examples-with-gap",
-    "title": "Chain of factorizations",
+    "title": "N-Chain of factorizations",
     "section": "Examples with GAP",
     "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to \\(N-\\)chain of factorizations."
   },
   {
     "objectID": "Fact-and-Div/Chain-of-factorizations.html#references",
     "href": "Fact-and-Div/Chain-of-factorizations.html#references",
-    "title": "Chain of factorizations",
+    "title": "N-Chain of factorizations",
     "section": "References",
     "text": "References"
   },
@@ -3550,14 +3431,14 @@
     "href": "Fact-and-Div/Catenary-degree-of-an-element.html#examples",
     "title": "Catenary degree of an element",
     "section": "Examples",
-    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 6, 13, 17\\rangle\\) and \\(s = 85\\). The set of factorizations is\n\\[\n\\mathbf{Z}(85) = \\{(12, 1, 0), (7, 2, 1), (2, 3, 2), (0, 0, 5)\\}.\n\\]\nIf we compute the distance between each pair, it is obtained the following graph.\n```{r librerias, include=FALSE, warning=FALSE}\nlibrary(tidyverse) library(tidygraph) library(ggraph)\n\n```{r grafo ejemplo1, fig.height=5, fig.width=5}\ntabla_aristas = data.frame(\n  \"from\" = c( \"(12, 1, 0)\", \"(12, 1, 0)\", \"(12, 1, 0)\",\n              \"(7, 2, 1)\", \"(7, 2, 1)\",\n              \"(2, 3, 2)\"),\n  \"to\" = c( \"(7, 2, 1)\", \"(2, 3, 2)\", \"(0, 0, 5)\",\n            \"(2, 3, 2)\", \"(0, 0, 5)\",\n            \"(0, 0, 5)\"),\n  \"weight\" = c(5, 10, 13, 5, 9, 5))\n\n\nggraph(tabla_aristas, layout = \"igraph\", algorithm = \"kk\") + \n  geom_edge_link(width = 1, colour = \"lightgray\") +\n  geom_edge_hive(aes(label = tabla_aristas[, \"weight\"]), strength = 0) +\n  geom_node_point(size = 5.5, colour = \"lightblue\") +\n  geom_node_text(aes(label = c(\"(12,1,0)\", \"(7, 2, 1)\", \"(2, 3, 2)\", \"(0, 0, 5)\")), repel = TRUE, nudge_y = 0.1) +\n  coord_fixed() +\n  theme_graph()\nFrom this graph, it is deduced that the least \\(N\\) is \\(N = 5\\), then \\(\\mathbf{C}(85) = 5\\)."
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 6, 13, 17\\rangle\\) and \\(s = 85\\). The set of factorizations is\n\\[\n\\mathbf{Z}(85) = \\{(12, 1, 0), (7, 2, 1), (2, 3, 2), (0, 0, 5)\\}.\n\\]\nIf we compute the distance between each pair, it is obtained the following graph.\n```{r librerias, include=FALSE, warning=FALSE}\nlibrary(tidyverse) library(tidygraph) library(ggraph)\n\n```{r grafo ejemplo1, fig.height=5, fig.width=5}\ntabla_aristas = data.frame(\n  \"from\" = c( \"(12, 1, 0)\", \"(12, 1, 0)\", \"(12, 1, 0)\",\n              \"(7, 2, 1)\", \"(7, 2, 1)\",\n              \"(2, 3, 2)\"),\n  \"to\" = c( \"(7, 2, 1)\", \"(2, 3, 2)\", \"(0, 0, 5)\",\n            \"(2, 3, 2)\", \"(0, 0, 5)\",\n            \"(0, 0, 5)\"),\n  \"weight\" = c(5, 10, 13, 5, 9, 5))\n\n\nggraph(tabla_aristas, layout = \"igraph\", algorithm = \"kk\") + \n  geom_edge_link(width = 1, colour = \"lightgray\") +\n  geom_edge_hive(aes(label = tabla_aristas[, \"weight\"]), strength = 0) +\n  geom_node_point(size = 5.5, colour = \"lightblue\") +\n  geom_node_text(aes(label = c(\"(12,1,0)\", \"(7, 2, 1)\", \"(2, 3, 2)\", \"(0, 0, 5)\")), repel = TRUE, nudge_y = 0.1) +\n  coord_fixed() +\n  theme_graph()\nFrom this graph, it is deduced that the least \\(N\\) is \\(N = 5\\), concluding that \\(\\mathbf{C}(85) = 5\\)."
   },
   {
     "objectID": "Fact-and-Div/Catenary-degree-of-an-element.html#examples-with-gap",
     "href": "Fact-and-Div/Catenary-degree-of-an-element.html#examples-with-gap",
     "title": "Catenary degree of an element",
     "section": "Examples with GAP",
-    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 47, 63, 81, 90 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(47, 63, 81, 90);\n&lt;Numerical semigroup with 4 generators&gt;\nGiven the set of factorizations of an element, the function CatenaryDegree computes the catenary degree.\ngap&gt; z := Factorizations(715, S);\n[ [ 2, 6, 3, 0 ], [ 2, 2, 5, 1 ], [ 2, 7, 0, 2 ], [ 2, 3, 2, 3 ],\n  [ 2, 0, 1, 6 ] ]\ngap&gt; CatenaryDegree(z);\n4\nIf we give a numerical semigroup \\(S\\) and an element \\(n\\) of it, the function returns the catenary degree of \\(n\\) in \\(S\\).\ngap&gt; CatenaryDegree(715, S);\n4\ngap&gt; CatenaryDegree(S, 715);\n4\nFinally, if we give only a numerical semigroup \\(S\\), the function returns the catenary degree of \\(S\\).\ngap&gt; CatenaryDegree(S);\n9"
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 47, 63, 81, 90 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(47, 63, 81, 90);\n&lt;Numerical semigroup with 4 generators&gt;\nGiven the set of factorizations of an element, the functions CatenaryDegree and CatenaryDegreeOfSetOfFactorizations compute the catenary degree with respect to the given set of factorizations.\ngap&gt; z := Factorizations(715, S);\n[ [ 2, 6, 3, 0 ], [ 2, 2, 5, 1 ], [ 2, 7, 0, 2 ], [ 2, 3, 2, 3 ],\n  [ 2, 0, 1, 6 ] ]\ngap&gt; CatenaryDegree(z);\n4\ngap&gt; CatenaryDegree(z) = CatenaryDegreeOfSetOfFactorizations(z);\ntrue\nIf we give a numerical semigroup \\(S\\) and an element \\(n\\) of it in CatenaryDegree, then the function returns the catenary degree of \\(n\\) in \\(S\\).\ngap&gt; CatenaryDegree(715, S);\n4\ngap&gt; CatenaryDegree(S, 715);\n4\nMoreover, if we give only a numerical semigroup \\(S\\), the function returns the catenary degree of \\(S\\).\ngap&gt; CatenaryDegree(S);\n9"
   },
   {
     "objectID": "Fact-and-Div/Catenary-degree-of-an-element.html#references",
@@ -3569,35 +3450,35 @@
   {
     "objectID": "Fact-and-Div/Feng-Rao-distance.html",
     "href": "Fact-and-Div/Feng-Rao-distance.html",
-    "title": "Feng-Rao distance",
+    "title": "Feng-Rao distance of an element",
     "section": "",
     "text": "Let \\(S\\) be a numerical semigroup and let \\(s \\in S\\). It is defined the Feng-Rao distance of \\(s\\) in \\(S\\), denoted by \\(\\delta_{FR}(s)\\), as\n\\[\n\\delta_{FR}(s) = \\min \\{ |D(s')| ~ : ~ s \\le s' \\text{ and } s' \\in S\\},\n\\]\nwhere \\(D(s)\\) denotes the set of divisors of \\(s\\) in \\(S\\).\nIt can be proven that for any numerical semigroup \\(S\\) with conductor \\(C(S)\\) and genus \\(g(S)\\), if \\(s \\in S\\) is such that \\(s \\ge 2C(S) - 1\\), then\n\\[\n\\delta_{FR}(s) = s + 1 - 2g(S).\n\\]"
   },
   {
     "objectID": "Fact-and-Div/Feng-Rao-distance.html#definition",
     "href": "Fact-and-Div/Feng-Rao-distance.html#definition",
-    "title": "Feng-Rao distance",
+    "title": "Feng-Rao distance of an element",
     "section": "",
     "text": "Let \\(S\\) be a numerical semigroup and let \\(s \\in S\\). It is defined the Feng-Rao distance of \\(s\\) in \\(S\\), denoted by \\(\\delta_{FR}(s)\\), as\n\\[\n\\delta_{FR}(s) = \\min \\{ |D(s')| ~ : ~ s \\le s' \\text{ and } s' \\in S\\},\n\\]\nwhere \\(D(s)\\) denotes the set of divisors of \\(s\\) in \\(S\\).\nIt can be proven that for any numerical semigroup \\(S\\) with conductor \\(C(S)\\) and genus \\(g(S)\\), if \\(s \\in S\\) is such that \\(s \\ge 2C(S) - 1\\), then\n\\[\n\\delta_{FR}(s) = s + 1 - 2g(S).\n\\]"
   },
   {
     "objectID": "Fact-and-Div/Feng-Rao-distance.html#examples",
     "href": "Fact-and-Div/Feng-Rao-distance.html#examples",
-    "title": "Feng-Rao distance",
+    "title": "Feng-Rao distance of an element",
     "section": "Examples",
-    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 4, 6, 11 \\rangle\\). It is easy to see that \\(C(S) = 14\\) and \\(g(S) = 7\\), therefore if \\(s \\in S\\) is such that \\(s \\ge 2C(S) - 1 = 27\\), then \\(\\delta_{FR}(s) = s + 1 -14\\). For example, for \\(s = 35 = 4 \\cdot 6 + 11 \\in S\\), it holds \\(\\delta_{FR}(35) = 22\\)."
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 4, 6, 11 \\rangle\\). It is obtained that \\(C(S) = 14\\) and \\(g(S) = 7\\). Therefore, if \\(s \\in S\\) is such that \\(s \\ge 2C(S) - 1 = 27\\), then \\(\\delta_{FR}(s) = s - 13\\). For example, for \\(s = 35 = 4 \\cdot 6 + 11 \\in S\\), it holds \\(\\delta_{FR}(35) = 22\\)."
   },
   {
     "objectID": "Fact-and-Div/Feng-Rao-distance.html#examples-with-gap",
     "href": "Fact-and-Div/Feng-Rao-distance.html#examples-with-gap",
-    "title": "Feng-Rao distance",
+    "title": "Feng-Rao distance of an element",
     "section": "Examples with GAP",
-    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 17, 35, 53, 78, 90 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(17, 35, 53, 78, 90);\n&lt;Numerical semigroup with 5 generators&gt;\nGiven a numerical semigroup \\(S\\), an element \\(s\\) of it and \\(r = 1\\), the function FengRaoDistance computes the Feng-Rao distance of \\(n\\) in \\(S\\).\ngap&gt; FengRaoDistance(S, 1, 231);\n26\nIf we consider \\(r \\in \\mathbb{N} \\setminus \\{0, 1\\}\\), the function computes the r-th Feng Rao distance."
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 17, 35, 53, 78, 90 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(17, 35, 53, 78, 90);\n&lt;Numerical semigroup with 5 generators&gt;\nGiven a numerical semigroup \\(S\\), an element \\(s\\) of it and \\(r = 1\\), the function FengRaoDistance computes the Feng-Rao distance of \\(n\\) in \\(S\\).\ngap&gt; FengRaoDistance(S, 1, 231);\n26\nIf we consider \\(r \\in \\mathbb{N} \\setminus \\{0, 1\\}\\), the function computes the r-th Feng Rao distance of \\(n\\) in \\(S\\)."
   },
   {
     "objectID": "Fact-and-Div/Feng-Rao-distance.html#references",
     "href": "Fact-and-Div/Feng-Rao-distance.html#references",
-    "title": "Feng-Rao distance",
+    "title": "Feng-Rao distance of an element",
     "section": "References",
     "text": "References"
   },
@@ -3606,28 +3487,28 @@
     "href": "Fact-and-Div/w-primality-of-a-numerical-semigroup.html",
     "title": "w-primality of a numerical semigroup",
     "section": "",
-    "text": "Let \\(S\\) be a numerical semigroup minimally generated by \\(\\{n_1, \\ldots, n_p\\}\\). It is defined the \\(\\omega-\\)primality of \\(S\\), denoted by \\(\\omega(S)\\), as\n\\[\n\\omega(S) = \\max \\{ \\omega(S, n_i) ~ | ~ i \\in \\{1, \\ldots, p \\}\\,\n\\]\nwhere \\(\\omega(n_i)\\) denotes the w-primality of \\(n_i\\) in \\(S\\) for all \\(i \\in \\{1, \\ldots, p\\}\\).\nGiven a numerical semigroup \\(S\\), there is a relation between its Delta set \\(\\Delta(S)\\), its Catenary degree \\(\\mathbf{C}(S)\\), its \\(\\omega-\\)primality \\(\\omega(S)\\) and its tame degree \\(\\mathbf{t}(S)\\), which is\n\\[\n\\max \\Delta(S) + 2 \\le \\mathbf{C}(S) \\le \\omega(S) \\le \\mathbf{t}(S).\n\\]"
+    "text": "Let \\(S\\) be a numerical semigroup minimally generated by \\(\\{n_1, \\ldots, n_p\\}\\). It is defined the \\(\\omega-\\)primality of \\(S\\), denoted by \\(\\omega(S)\\), as\n\\[\n\\omega(S) = \\max \\{ \\omega(S, n_i) ~ | ~ i \\in \\{1, \\ldots, p \\}\\},\n\\]\nwhere \\(\\omega(S, n_i)\\) denotes the w-primality of \\(n_i\\) in \\(S\\) for all \\(i \\in \\{1, \\ldots, p\\}\\).\nGiven a numerical semigroup \\(S\\), there is a relation between its Delta set \\(\\Delta(S)\\), its Catenary degree \\(\\mathbf{C}(S)\\), its \\(\\omega-\\)primality \\(\\omega(S)\\) and its tame degree \\(\\mathbf{t}(S)\\), which is\n\\[\n\\max \\Delta(S) + 2 \\le \\mathbf{C}(S) \\le \\omega(S) \\le \\mathbf{t}(S).\n\\]"
   },
   {
     "objectID": "Fact-and-Div/w-primality-of-a-numerical-semigroup.html#definition",
     "href": "Fact-and-Div/w-primality-of-a-numerical-semigroup.html#definition",
     "title": "w-primality of a numerical semigroup",
     "section": "",
-    "text": "Let \\(S\\) be a numerical semigroup minimally generated by \\(\\{n_1, \\ldots, n_p\\}\\). It is defined the \\(\\omega-\\)primality of \\(S\\), denoted by \\(\\omega(S)\\), as\n\\[\n\\omega(S) = \\max \\{ \\omega(S, n_i) ~ | ~ i \\in \\{1, \\ldots, p \\}\\,\n\\]\nwhere \\(\\omega(n_i)\\) denotes the w-primality of \\(n_i\\) in \\(S\\) for all \\(i \\in \\{1, \\ldots, p\\}\\).\nGiven a numerical semigroup \\(S\\), there is a relation between its Delta set \\(\\Delta(S)\\), its Catenary degree \\(\\mathbf{C}(S)\\), its \\(\\omega-\\)primality \\(\\omega(S)\\) and its tame degree \\(\\mathbf{t}(S)\\), which is\n\\[\n\\max \\Delta(S) + 2 \\le \\mathbf{C}(S) \\le \\omega(S) \\le \\mathbf{t}(S).\n\\]"
+    "text": "Let \\(S\\) be a numerical semigroup minimally generated by \\(\\{n_1, \\ldots, n_p\\}\\). It is defined the \\(\\omega-\\)primality of \\(S\\), denoted by \\(\\omega(S)\\), as\n\\[\n\\omega(S) = \\max \\{ \\omega(S, n_i) ~ | ~ i \\in \\{1, \\ldots, p \\}\\},\n\\]\nwhere \\(\\omega(S, n_i)\\) denotes the w-primality of \\(n_i\\) in \\(S\\) for all \\(i \\in \\{1, \\ldots, p\\}\\).\nGiven a numerical semigroup \\(S\\), there is a relation between its Delta set \\(\\Delta(S)\\), its Catenary degree \\(\\mathbf{C}(S)\\), its \\(\\omega-\\)primality \\(\\omega(S)\\) and its tame degree \\(\\mathbf{t}(S)\\), which is\n\\[\n\\max \\Delta(S) + 2 \\le \\mathbf{C}(S) \\le \\omega(S) \\le \\mathbf{t}(S).\n\\]"
   },
   {
     "objectID": "Fact-and-Div/w-primality-of-a-numerical-semigroup.html#examples",
     "href": "Fact-and-Div/w-primality-of-a-numerical-semigroup.html#examples",
     "title": "w-primality of a numerical semigroup",
     "section": "Examples",
-    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 10, 11, 17, 23 \\rangle\\). It is easy to check that its catenary degree is \\(\\mathbf{C}(S) = 6\\), then \\(\\omega(S) \\ge 6\\). One can prove that also \\(\\mathbf{t}(S) = 6\\). Therefore, \\(\\omega(S) = 6\\)."
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 10, 11, 17, 23 \\rangle\\). Since \\(Betti(S) = \\{33, 34, 40, 69 \\}\\), where \\(Betti(S)\\) denotes the set of Betti elements of \\(S\\), it is deduced that its catenary degree is \\(\\mathbf{C}(S) = 6\\), then \\(\\omega(S) \\ge 6\\). One can also prove that \\(\\mathbf{t}(S) = 6\\), concluding that \\(\\omega(S) = 6\\)."
   },
   {
     "objectID": "Fact-and-Div/w-primality-of-a-numerical-semigroup.html#examples-with-gap",
     "href": "Fact-and-Div/w-primality-of-a-numerical-semigroup.html#examples-with-gap",
     "title": "w-primality of a numerical semigroup",
     "section": "Examples with GAP",
-    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 22, 33, 45, 60, 75 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(22, 33, 45, 60, 75);\n&lt;Numerical semigroup with 5 generators&gt;\nGiven a numerical semigroup \\(S\\), the function OmegaPrimality returns the \\(\\omega-\\)primality of \\(S\\).\ngap&gt; OmegaPrimality(S);\n9\nIf we give also an element \\(n \\in S\\), then it computes the \\(\\omega-\\)primality of \\(n\\) in \\(S\\).\ngap&gt; OmegaPrimality(S, 207);\n15"
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 22, 33, 45, 60, 75 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(22, 33, 45, 60, 75);\n&lt;Numerical semigroup with 5 generators&gt;\nGiven a numerical semigroup \\(S\\), the functions OmegaPrimality and OmegaPrimalityOfNumericalSemigroup return the \\(\\omega-\\)primality of \\(S\\).\ngap&gt; OmegaPrimality(S);\n9\ngap&gt; OmegaPrimality(S) = OmegaPrimalityOfNumericalSemigroup(S);\ntrue\nIf we give also an element \\(n \\in S\\) in the function OmegaPrimality, then it computes the \\(\\omega-\\)primality of \\(n\\) in \\(S\\).\ngap&gt; OmegaPrimality(S, 207);\n15\ngap&gt; OmegaPrimality(207, S);\n15"
   },
   {
     "objectID": "Fact-and-Div/w-primality-of-a-numerical-semigroup.html#references",
@@ -3674,35 +3555,35 @@
   {
     "objectID": "Fact-and-Div/Feng-Rao-distance-generalized.html",
     "href": "Fact-and-Div/Feng-Rao-distance-generalized.html",
-    "title": "Feng-Rao distance generalized",
+    "title": "Generalized Feng-Rao distance of an element",
     "section": "",
-    "text": "Let \\(S\\) be a numerical semigroup, let \\(s \\in S\\) and \\(r \\in \\mathbb{N} \\setminus \\{0\\}\\). It is defined the generalized Feng-Rao distance of \\(s\\) in \\(S\\), denoted by \\(\\delta_{FR}^r\\), as\n\\[\n\\delta_{FR}^r(s) = \\{ |D(s_1, \\ldots, s_r)| ~ : ~ s \\le s_1 \\le \\cdots \\le s_r \\text{ and }  s_1, \\ldots, s_r \\in S\\},\n\\]\nwhere \\(D(s_1, \\ldots, s_r) = \\bigcup_{i = 1}^r D(s_i)\\) and \\(D(s_i)\\) denotes the set of divisors of \\(s_i \\in S\\). If \\(r = 1\\), we have the Feng-Rao distance of \\(s\\) in \\(S\\).\nGiven a numerical semigroup \\(S\\) with conductor \\(C(S)\\) and genus \\(g(S)\\), it can be proven that for all \\(m \\ge 2C(S) - 1\\),\n\\[\n\\delta_{FR}^2(m) = m + 1 - 2g(S) + \\min \\{|Ap(S, n)| ~~ : ~ n \\in \\mathbb{N} \\setminus \\{0\\}\\},\n\\] where \\(Ap(S,n)\\) is the Apéry set of an integer with respect to to \\(S\\)."
+    "text": "Let \\(S\\) be a numerical semigroup, let \\(s \\in S\\) and \\(r \\in \\mathbb{N} \\setminus \\{0\\}\\). It is defined the generalized Feng-Rao distance of \\(s\\) in \\(S\\), denoted by \\(\\delta_{FR}^r(s)\\), as\n\\[\n\\delta_{FR}^r(s) = \\{ |D(s_1, \\ldots, s_r)| ~ : ~ s \\le s_1 \\le \\cdots \\le s_r \\text{ and }  s_1, \\ldots, s_r \\in S\\},\n\\]\nwhere \\(D(s_1, \\ldots, s_r) = \\bigcup_{i = 1}^r D(s_i)\\) and \\(D(s_i)\\) denotes the set of divisors of \\(s_i \\in S\\). If \\(r = 1\\), we have the Feng-Rao distance of \\(s\\) in \\(S\\).\nGiven a numerical semigroup \\(S\\) with conductor \\(C(S)\\) and genus \\(g(S)\\), it can be proven that for all \\(m \\ge 2C(S) - 1\\),\n\\[\n\\delta_{FR}^2(m) = m + 1 - 2g(S) + \\min \\{|Ap(S, n)| ~~ : ~ n \\in \\mathbb{N} \\setminus \\{0\\}\\},\n\\]\nwhere \\(Ap(S,n)\\) is the Apéry set of the integer \\(n\\) in \\(S\\)."
   },
   {
     "objectID": "Fact-and-Div/Feng-Rao-distance-generalized.html#definition",
     "href": "Fact-and-Div/Feng-Rao-distance-generalized.html#definition",
-    "title": "Feng-Rao distance generalized",
+    "title": "Generalized Feng-Rao distance of an element",
     "section": "",
-    "text": "Let \\(S\\) be a numerical semigroup, let \\(s \\in S\\) and \\(r \\in \\mathbb{N} \\setminus \\{0\\}\\). It is defined the generalized Feng-Rao distance of \\(s\\) in \\(S\\), denoted by \\(\\delta_{FR}^r\\), as\n\\[\n\\delta_{FR}^r(s) = \\{ |D(s_1, \\ldots, s_r)| ~ : ~ s \\le s_1 \\le \\cdots \\le s_r \\text{ and }  s_1, \\ldots, s_r \\in S\\},\n\\]\nwhere \\(D(s_1, \\ldots, s_r) = \\bigcup_{i = 1}^r D(s_i)\\) and \\(D(s_i)\\) denotes the set of divisors of \\(s_i \\in S\\). If \\(r = 1\\), we have the Feng-Rao distance of \\(s\\) in \\(S\\).\nGiven a numerical semigroup \\(S\\) with conductor \\(C(S)\\) and genus \\(g(S)\\), it can be proven that for all \\(m \\ge 2C(S) - 1\\),\n\\[\n\\delta_{FR}^2(m) = m + 1 - 2g(S) + \\min \\{|Ap(S, n)| ~~ : ~ n \\in \\mathbb{N} \\setminus \\{0\\}\\},\n\\] where \\(Ap(S,n)\\) is the Apéry set of an integer with respect to to \\(S\\)."
+    "text": "Let \\(S\\) be a numerical semigroup, let \\(s \\in S\\) and \\(r \\in \\mathbb{N} \\setminus \\{0\\}\\). It is defined the generalized Feng-Rao distance of \\(s\\) in \\(S\\), denoted by \\(\\delta_{FR}^r(s)\\), as\n\\[\n\\delta_{FR}^r(s) = \\{ |D(s_1, \\ldots, s_r)| ~ : ~ s \\le s_1 \\le \\cdots \\le s_r \\text{ and }  s_1, \\ldots, s_r \\in S\\},\n\\]\nwhere \\(D(s_1, \\ldots, s_r) = \\bigcup_{i = 1}^r D(s_i)\\) and \\(D(s_i)\\) denotes the set of divisors of \\(s_i \\in S\\). If \\(r = 1\\), we have the Feng-Rao distance of \\(s\\) in \\(S\\).\nGiven a numerical semigroup \\(S\\) with conductor \\(C(S)\\) and genus \\(g(S)\\), it can be proven that for all \\(m \\ge 2C(S) - 1\\),\n\\[\n\\delta_{FR}^2(m) = m + 1 - 2g(S) + \\min \\{|Ap(S, n)| ~~ : ~ n \\in \\mathbb{N} \\setminus \\{0\\}\\},\n\\]\nwhere \\(Ap(S,n)\\) is the Apéry set of the integer \\(n\\) in \\(S\\)."
   },
   {
     "objectID": "Fact-and-Div/Feng-Rao-distance-generalized.html#examples",
     "href": "Fact-and-Div/Feng-Rao-distance-generalized.html#examples",
-    "title": "Feng-Rao distance generalized",
+    "title": "Generalized Feng-Rao distance of an element",
     "section": "Examples",
-    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 3, 5, 7 \\rangle = \\{0, 3, 5, \\rightarrow \\}\\). We have \\(C(S) = 5\\) and \\(g(S) = 3\\). On the other hand, we know that for all \\(n \\in S\\), it holds \\(|Ap(S,n)| = n\\), then it is sufficient to compute the Apéry set for \\(n \\in \\{1, 2, 4\\}\\) and for \\(n = m(S) = 3\\), where \\(m(S)\\) denotes the multiplicity of \\(S\\). It is obtained that\n\\[\nAp(S, 1) = \\{0, 3, 5\\}, Ap(S,2) = \\{0, 3, 6\\},\n\\] \\[\n|Ap(S, m(S))| = m(S) = 3, Ap(S,4) = \\{0, 3, 5, 8\\}.\n\\]\nThus, if \\(m \\ge 2C(S) - 1 = 9\\),\n\\[\n\\delta_{FR}^2(m) = m + 1 - 2g(S) + 3 = m -2.\n\\]"
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 3, 5, 7 \\rangle = \\{0, 3, 5, \\rightarrow \\}\\). We have \\(C(S) = 5\\) and \\(g(S) = 3\\). On the other hand, we know that for all \\(n \\in S\\), it holds \\(|Ap(S,n)| = n\\), then it is sufficient to compute the Apéry set for \\(n \\in \\{1, 2, 4\\}\\) and for \\(n = m(S) = 3\\), where \\(m(S)\\) denotes the multiplicity of \\(S\\). It is obtained that\n\\[\nAp(S, 1) = \\{0, 3, 5\\}, ~~ Ap(S,2) = \\{0, 3, 6\\},\n\\]\n\\[\n|Ap(S, m(S))| = m(S) = 3, ~~ Ap(S,4) = \\{0, 3, 5, 8\\}.\n\\]\nThus, if \\(m \\ge 2C(S) - 1 = 9\\),\n\\[\n\\delta_{FR}^2(m) = m + 1 - 2g(S) + 3 = m -2.\n\\]"
   },
   {
     "objectID": "Fact-and-Div/Feng-Rao-distance-generalized.html#examples-with-gap",
     "href": "Fact-and-Div/Feng-Rao-distance-generalized.html#examples-with-gap",
-    "title": "Feng-Rao distance generalized",
+    "title": "Generalized Feng-Rao distance of an element",
     "section": "Examples with GAP",
     "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 14, 15, 20, 24 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(14, 15, 20, 24);\n&lt;Numerical semigroup with 4 generators&gt;\nGiven a numerical semigroup \\(S\\), an element \\(n \\in S\\) and \\(r \\in \\mathbb{N} \\setminus \\{0\\}\\), the function FengRaoDistance computes the \\(r\\) generalized Feng-Rao distance of \\(n\\) in \\(S\\).\ngap&gt; FengRaoDistance(S, 1, 62);\n8\ngap&gt; FengRaoDistance(S, 2, 62);\n12\ngap&gt; FengRaoDistance(S, 3, 62);\n14"
   },
   {
     "objectID": "Fact-and-Div/Feng-Rao-distance-generalized.html#references",
     "href": "Fact-and-Div/Feng-Rao-distance-generalized.html#references",
-    "title": "Feng-Rao distance generalized",
+    "title": "Generalized Feng-Rao distance of an element",
     "section": "References",
     "text": "References"
   },
@@ -3746,28 +3627,28 @@
     "href": "Fact-and-Div/Tame-degree-of-an-element.html",
     "title": "Tame degree of an element",
     "section": "",
-    "text": "Let \\(S\\) be a numerical semigroup minimally generated by \\(\\{n_1, n_2, \\ldots, n_p\\}\\), let \\(n \\in S\\) and let \\(\\mathbf{Z}(n)\\) be the set of generators of \\(n\\) in \\(S\\). Let us assume \\(n - n_i \\in S\\) for some \\(i \\in \\{1, 2, \\ldots, p\\}\\). It is defined\n\\[\n\\mathbf{t}_i(n) = \\sup \\{ d(z, \\mathbf{Z}(n) \\cap (\\mathbf{e}_i + \\mathbb{N}^p)) ~ | ~ z \\in \\mathbf{Z}(n) \\},\n\\]\nwhere: for all \\(i \\in \\{1, 2, \\ldots, p\\}\\), \\(\\mathbf{e}_i \\in \\mathbb{N}^p\\) has the \\(i-\\)th coordinate equals to \\(1\\) and the rest \\(0\\); for any set \\(A \\subseteq \\mathbb{N}^p\\), \\(d(z, A) = \\sup_{a \\in A} d(z, a)\\); for any \\(x, y \\in \\mathbf{Z}(n)\\), \\(d(x,y)\\) denotes the distance between \\(x\\) and \\(y\\). It is defined the tame degree of \\(n\\) in \\(S\\) as\n\\[\n\\mathbf{t}_i(n) = \\max \\{ \\mathbf{t}_i(n) ~ | ~ n - n_i \\in S, 1 \\le i \\le p\\}.\n\\] From the definition of tame degree of an element it is defined the tame degree of a numerical semigroup."
+    "text": "Let \\(S\\) be a numerical semigroup minimally generated by \\(\\{n_1, n_2, \\ldots, n_p\\}\\), let \\(n \\in S\\) and let \\(\\mathbf{Z}(n)\\) be the set of factorizations of \\(n\\) in \\(S\\). Let us assume that \\(n - n_i \\in S\\) for some \\(i \\in \\{1, 2, \\ldots, p\\}\\). It is defined\n\\[\n\\mathbf{t}_i(n) = \\sup \\{ d(z, \\mathbf{Z}(n) \\cap (\\mathbf{e}_i + \\mathbb{N}^p)) ~ | ~ z \\in \\mathbf{Z}(n) \\},\n\\]\nwhere: for all \\(i \\in \\{1, 2, \\ldots, p\\}\\), \\(\\mathbf{e}_i \\in \\mathbb{N}^p\\) has the \\(i-\\)th coordinate equals to \\(1\\) and the rest \\(0\\); for any set \\(A \\subseteq \\mathbb{N}^p\\), \\(d(z, A) = \\sup_{a \\in A} d(z, a)\\); for any \\(x, y \\in \\mathbf{Z}(n)\\), \\(d(x,y)\\) denotes the distance between \\(x\\) and \\(y\\). Then, it is defined the tame degree of \\(n\\) in \\(S\\) as\n\\[\n\\mathbf{t}_i(n) = \\max \\{ \\mathbf{t}_i(n) ~ | ~ n - n_i \\in S, 1 \\le i \\le p\\}.\n\\]\nFrom the definition of tame degree of an element it is defined the tame degree of a numerical semigroup."
   },
   {
     "objectID": "Fact-and-Div/Tame-degree-of-an-element.html#definition",
     "href": "Fact-and-Div/Tame-degree-of-an-element.html#definition",
     "title": "Tame degree of an element",
     "section": "",
-    "text": "Let \\(S\\) be a numerical semigroup minimally generated by \\(\\{n_1, n_2, \\ldots, n_p\\}\\), let \\(n \\in S\\) and let \\(\\mathbf{Z}(n)\\) be the set of generators of \\(n\\) in \\(S\\). Let us assume \\(n - n_i \\in S\\) for some \\(i \\in \\{1, 2, \\ldots, p\\}\\). It is defined\n\\[\n\\mathbf{t}_i(n) = \\sup \\{ d(z, \\mathbf{Z}(n) \\cap (\\mathbf{e}_i + \\mathbb{N}^p)) ~ | ~ z \\in \\mathbf{Z}(n) \\},\n\\]\nwhere: for all \\(i \\in \\{1, 2, \\ldots, p\\}\\), \\(\\mathbf{e}_i \\in \\mathbb{N}^p\\) has the \\(i-\\)th coordinate equals to \\(1\\) and the rest \\(0\\); for any set \\(A \\subseteq \\mathbb{N}^p\\), \\(d(z, A) = \\sup_{a \\in A} d(z, a)\\); for any \\(x, y \\in \\mathbf{Z}(n)\\), \\(d(x,y)\\) denotes the distance between \\(x\\) and \\(y\\). It is defined the tame degree of \\(n\\) in \\(S\\) as\n\\[\n\\mathbf{t}_i(n) = \\max \\{ \\mathbf{t}_i(n) ~ | ~ n - n_i \\in S, 1 \\le i \\le p\\}.\n\\] From the definition of tame degree of an element it is defined the tame degree of a numerical semigroup."
+    "text": "Let \\(S\\) be a numerical semigroup minimally generated by \\(\\{n_1, n_2, \\ldots, n_p\\}\\), let \\(n \\in S\\) and let \\(\\mathbf{Z}(n)\\) be the set of factorizations of \\(n\\) in \\(S\\). Let us assume that \\(n - n_i \\in S\\) for some \\(i \\in \\{1, 2, \\ldots, p\\}\\). It is defined\n\\[\n\\mathbf{t}_i(n) = \\sup \\{ d(z, \\mathbf{Z}(n) \\cap (\\mathbf{e}_i + \\mathbb{N}^p)) ~ | ~ z \\in \\mathbf{Z}(n) \\},\n\\]\nwhere: for all \\(i \\in \\{1, 2, \\ldots, p\\}\\), \\(\\mathbf{e}_i \\in \\mathbb{N}^p\\) has the \\(i-\\)th coordinate equals to \\(1\\) and the rest \\(0\\); for any set \\(A \\subseteq \\mathbb{N}^p\\), \\(d(z, A) = \\sup_{a \\in A} d(z, a)\\); for any \\(x, y \\in \\mathbf{Z}(n)\\), \\(d(x,y)\\) denotes the distance between \\(x\\) and \\(y\\). Then, it is defined the tame degree of \\(n\\) in \\(S\\) as\n\\[\n\\mathbf{t}_i(n) = \\max \\{ \\mathbf{t}_i(n) ~ | ~ n - n_i \\in S, 1 \\le i \\le p\\}.\n\\]\nFrom the definition of tame degree of an element it is defined the tame degree of a numerical semigroup."
   },
   {
     "objectID": "Fact-and-Div/Tame-degree-of-an-element.html#examples",
     "href": "Fact-and-Div/Tame-degree-of-an-element.html#examples",
     "title": "Tame degree of an element",
     "section": "Examples",
-    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 6, 14, 15 \\rangle\\) and \\(s = 36\\). First, we have \\(36 - 6 = 30 \\in S, 36 - 14 = 22 \\not \\in S\\) and \\(36 - 15 = 21 \\in S\\). The set of factorizations is \\(\\mathbf{Z}(36) = \\{(6,0,0), (1,0,2)\\}\\), then,\n\\[\n\\mathbf{t}_1(36) = \\sup \\{ d(z, \\mathbf{Z}(36) \\cap ((1,0,0) + \\mathbb{N}^3) ~ | ~ z \\in \\mathbf{Z}(36) \\} = \\max \\{0, 5\\} = 5.\n\\] \\[\n\\mathbf{t}_3(36) = \\sup \\{ d(z, \\mathbf{Z}(36) \\cap ((0, 0, 1) + \\mathbb{N}^3) ~ | ~ z \\in \\mathbf{Z}(36) \\} = \\max \\{0\\} = 0.\n\\]\nTherefore, the tame degree of \\(s = 36\\) in \\(S\\) is \\(\\mathbf{t}(n) = 5\\)."
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 6, 14, 15 \\rangle\\) and \\(s = 36\\). First, we have \\(36 - 6 = 30 \\in S, 36 - 14 = 22 \\not \\in S\\) and \\(36 - 15 = 21 \\in S\\). The set of factorizations is \\(\\mathbf{Z}(36) = \\{(6,0,0), (1,0,2)\\}\\), then,\n\\[\n\\mathbf{t}_1(36) = \\sup \\{ d(z, \\mathbf{Z}(36) \\cap ((1,0,0) + \\mathbb{N}^3) ~ | ~ z \\in \\mathbf{Z}(36) \\} = \\max \\{0, 5\\} = 5.\n\\]\n\\[\n\\mathbf{t}_3(36) = \\sup \\{ d(z, \\mathbf{Z}(36) \\cap ((0, 0, 1) + \\mathbb{N}^3) ~ | ~ z \\in \\mathbf{Z}(36) \\} = \\max \\{0\\} = 0.\n\\]\nTherefore, the tame degree of \\(s = 36\\) in \\(S\\) is \\(\\mathbf{t}(n) = 5\\)."
   },
   {
     "objectID": "Fact-and-Div/Tame-degree-of-an-element.html#examples-with-gap",
     "href": "Fact-and-Div/Tame-degree-of-an-element.html#examples-with-gap",
     "title": "Tame degree of an element",
     "section": "Examples with GAP",
-    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 35, 42, 61, 71, 89 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(35, 42, 61, 71, 89);\n&lt;Numerical semigroup with 5 generators&gt;\nGiven a numerical semigroup \\(S\\) and an element \\(n\\) of it, the function TameDegree returns the tame degree of \\(n\\) in \\(S\\).\ngap&gt; TameDegree(300, S);\n5\nIf we give only a numerical semigroup \\(S\\), the function computes the tame degree of \\(S\\).\ngap&gt; TameDegree(S);\n9"
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 35, 42, 61, 71, 89 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(35, 42, 61, 71, 89);\n&lt;Numerical semigroup with 5 generators&gt;\nGiven a numerical semigroup \\(S\\) and an element \\(n\\) of it, the functions TameDegree and TameDegreeOfElementInNumericalSemigroup return the tame degree of \\(n\\) in \\(S\\).\ngap&gt; TameDegree(300, S);\n5\ngap&gt; TameDegree(S, 300);\n5\ngap&gt; TameDegree(300, S) = TameDegreeOfElementInNumericalSemigroup(300, S);\ntrue\nIf we give only a numerical semigroup \\(S\\) in TameDegree, the function computes the tame degree of \\(S\\).\ngap&gt; TameDegree(S);\n9\nOn the other hand, given a set of factorizations of an element in a numerical semigroup, the functions TameDegree and TameDegreeOfSetOfFactorizations computes the tame degree with respect to the given set of factorizations.\ngap&gt; z := Factorizations(574, S);\n[ [ 14, 2, 0, 0, 0 ], [ 8, 7, 0, 0, 0 ], [ 2, 12, 0, 0, 0 ],\n  [ 3, 1, 7, 0, 0 ], [ 5, 2, 4, 1, 0 ], [ 7, 3, 1, 2, 0 ],\n  [ 1, 8, 1, 2, 0 ], [ 0, 4, 2, 4, 0 ], [ 1, 1, 0, 7, 0 ],\n  [ 1, 2, 6, 0, 1 ], [ 3, 3, 3, 1, 1 ], [ 5, 4, 0, 2, 1 ],\n  [ 4, 0, 1, 4, 1 ], [ 1, 4, 2, 1, 2 ], [ 0, 0, 3, 3, 2 ],\n  [ 2, 1, 0, 4, 2 ], [ 5, 0, 1, 1, 3 ], [ 1, 0, 3, 0, 4 ],\n  [ 3, 1, 0, 1, 4 ] ]\ngap&gt; TameDegree(z);\n9\ngap&gt; TameDegree(z) = TameDegreeOfSetOfFactorizations(z);\ntrue"
   },
   {
     "objectID": "Fact-and-Div/Tame-degree-of-an-element.html#references",
@@ -3802,7 +3683,7 @@
     "href": "Fact-and-Div/Catenary-degree-of-a-numerical-semigroup.html#examples-with-gap",
     "title": "Catenary degree of a numerical semigroup",
     "section": "Examples with GAP",
-    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 37, 42, 45, 80 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(37, 42, 45, 80);\n&lt;Numerical semigroup with 4 generators&gt;\nGiven only a numerical semigroup \\(S\\), the function CatenaryDegree returns the catenary degree of \\(S\\).\ngap&gt; CatenaryDegree(S);\n8\nGiven a numerical semigroup \\(S\\) and an element \\(n\\) of it, the function returns the catenary degree of \\(n\\) in \\(S\\).\ngap&gt; CatenaryDegree(S, 400);\n6\ngap&gt; CatenaryDegree(400, S);\n6\nFinally, if we give the set of factorizations of an element, the function also computes the catenary degree of the element.\ngap&gt; z := Factorizations(400, S);\n[ [ 4, 6, 0, 0 ], [ 5, 0, 3, 1 ], [ 3, 2, 1, 2 ], [ 0, 0, 0, 5 ] ]\ngap&gt; CatenaryDegree(z);\n6"
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 37, 42, 45, 80 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(37, 42, 45, 80);\n&lt;Numerical semigroup with 4 generators&gt;\nGiven a numerical semigroup \\(S\\), the functions CatenaryDegree and CatenaryDegreeOfNumericalSemigroup return the catenary degree of \\(S\\).\ngap&gt; CatenaryDegree(S);\n8\ngap&gt; CatenaryDegreeOfNumericalSemigroup(S) = CatenaryDegree(S);\ntrue\nIf we also give an element \\(n\\) of the numerical semigroup in CatenaryDegree, the function returns the catenary degree of \\(n\\) in \\(S\\).\ngap&gt; CatenaryDegree(S, 400);\n6\ngap&gt; CatenaryDegree(400, S);\n6"
   },
   {
     "objectID": "Fact-and-Div/Catenary-degree-of-a-numerical-semigroup.html#references",
@@ -4124,28 +4005,14 @@
     "href": "Meromorphic-series-NS/Milnor-number.html",
     "title": "Milnor number",
     "section": "",
-    "text": "Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial and let \\(f_x, f_y\\) the partial derivatives of \\(f\\). It is defined the Milnor number, denoted by \\(\\mu(f)\\), as \\(\\mu(f) = int(f_x, f_y)\\)\nIt can be proven that \\(\\int(f_x, f_y) = rank_{\\mathbb{K}}(\\mathbb{K}[[x]][y] / (f_x, f_y))\\)."
+    "text": "Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial and let \\(f_x, f_y\\) the partial derivatives of \\(f\\). It is defined the Milnor number, denoted by \\(\\mu(f)\\), as \\(\\mu(f) = int(f_x, f_y)\\), where \\(int(f_x, f_y)\\) denotes the intersection multiplicity of \\(f_x\\) and \\(f_y\\).\nIt can be proven that \\(\\int(f_x, f_y) = rank_{\\mathbb{K}}(\\mathbb{K}[[x]][y] / (f_x, f_y))\\)."
   },
   {
     "objectID": "Meromorphic-series-NS/Milnor-number.html#definition",
     "href": "Meromorphic-series-NS/Milnor-number.html#definition",
     "title": "Milnor number",
     "section": "",
-    "text": "Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial and let \\(f_x, f_y\\) the partial derivatives of \\(f\\). It is defined the Milnor number, denoted by \\(\\mu(f)\\), as \\(\\mu(f) = int(f_x, f_y)\\)\nIt can be proven that \\(\\int(f_x, f_y) = rank_{\\mathbb{K}}(\\mathbb{K}[[x]][y] / (f_x, f_y))\\)."
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Milnor-number.html#examples",
-    "href": "Meromorphic-series-NS/Milnor-number.html#examples",
-    "title": "Milnor number",
-    "section": "Examples",
-    "text": "Examples\n\\(\\circ\\)"
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Milnor-number.html#examples-with-gap",
-    "href": "Meromorphic-series-NS/Milnor-number.html#examples-with-gap",
-    "title": "Milnor number",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to Milnor number."
+    "text": "Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial and let \\(f_x, f_y\\) the partial derivatives of \\(f\\). It is defined the Milnor number, denoted by \\(\\mu(f)\\), as \\(\\mu(f) = int(f_x, f_y)\\), where \\(int(f_x, f_y)\\) denotes the intersection multiplicity of \\(f_x\\) and \\(f_y\\).\nIt can be proven that \\(\\int(f_x, f_y) = rank_{\\mathbb{K}}(\\mathbb{K}[[x]][y] / (f_x, f_y))\\)."
   },
   {
     "objectID": "Meromorphic-series-NS/Milnor-number.html#references",
@@ -4159,28 +4026,14 @@
     "href": "Meromorphic-series-NS/Polynomial-NS.html",
     "title": "Numerical semigroup associated to a polynomial",
     "section": "",
-    "text": "Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial. It is defined the numerical semigroup associated to a polynomial as\n\\[\n\\Gamma(f) = \\{int(f,g) ~ | ~ g \\in \\mathbb{K}((x))[y] \\setminus (f) \\},\n\\]\nwhere \\(int(f,g)\\) denotes the intersection multiplicity of \\(f\\) with \\(g\\).\nIt can be proven that for any polynomial \\(f\\) monic and irreducible in \\(\\mathbb{K}((x))[y]\\), \\(\\Gamma(f)\\) is a free numerical semigroup generated by \\(\\underline{r} = (r_0, r_1, \\ldots, r_h)\\), where \\(\\underline{r}\\) comes from the definition of characteristic sequences of \\(f\\)."
+    "text": "Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}[[x]][y]\\) be an irreducible polynomial. It is defined the numerical semigroup associated to a polynomial, denoted by \\(\\Gamma(f)\\), as\n\\[\n\\Gamma(f) = \\{int(f,g) ~ | ~ g \\in \\mathbb{K}[[x]][y] \\setminus (f) \\},\n\\]\nwhere \\(int(f,g)\\) denotes the intersection multiplicity of \\(f\\) with \\(g\\).\nIt can be proven that for any polynomial \\(f\\) monic and irreducible in \\(\\mathbb{K}[[x]][y]\\), \\(\\Gamma(f)\\) is a free numerical semigroup generated by \\(\\underline{r} = (r_0, r_1, \\ldots, r_h)\\), where \\(\\underline{r}\\) comes from the definition of characteristic sequences of \\(f\\)."
   },
   {
     "objectID": "Meromorphic-series-NS/Polynomial-NS.html#definition",
     "href": "Meromorphic-series-NS/Polynomial-NS.html#definition",
     "title": "Numerical semigroup associated to a polynomial",
     "section": "",
-    "text": "Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\) be an irreducible polynomial. It is defined the numerical semigroup associated to a polynomial as\n\\[\n\\Gamma(f) = \\{int(f,g) ~ | ~ g \\in \\mathbb{K}((x))[y] \\setminus (f) \\},\n\\]\nwhere \\(int(f,g)\\) denotes the intersection multiplicity of \\(f\\) with \\(g\\).\nIt can be proven that for any polynomial \\(f\\) monic and irreducible in \\(\\mathbb{K}((x))[y]\\), \\(\\Gamma(f)\\) is a free numerical semigroup generated by \\(\\underline{r} = (r_0, r_1, \\ldots, r_h)\\), where \\(\\underline{r}\\) comes from the definition of characteristic sequences of \\(f\\)."
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Polynomial-NS.html#examples",
-    "href": "Meromorphic-series-NS/Polynomial-NS.html#examples",
-    "title": "Numerical semigroup associated to a polynomial",
-    "section": "Examples",
-    "text": "Examples\n\\(\\circ\\)"
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Polynomial-NS.html#examples-with-gap",
-    "href": "Meromorphic-series-NS/Polynomial-NS.html#examples-with-gap",
-    "title": "Numerical semigroup associated to a polynomial",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to numerical semigroup associated to a polynomial."
+    "text": "Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}[[x]][y]\\) be an irreducible polynomial. It is defined the numerical semigroup associated to a polynomial, denoted by \\(\\Gamma(f)\\), as\n\\[\n\\Gamma(f) = \\{int(f,g) ~ | ~ g \\in \\mathbb{K}[[x]][y] \\setminus (f) \\},\n\\]\nwhere \\(int(f,g)\\) denotes the intersection multiplicity of \\(f\\) with \\(g\\).\nIt can be proven that for any polynomial \\(f\\) monic and irreducible in \\(\\mathbb{K}[[x]][y]\\), \\(\\Gamma(f)\\) is a free numerical semigroup generated by \\(\\underline{r} = (r_0, r_1, \\ldots, r_h)\\), where \\(\\underline{r}\\) comes from the definition of characteristic sequences of \\(f\\)."
   },
   {
     "objectID": "Meromorphic-series-NS/Polynomial-NS.html#references",
@@ -4192,63 +4045,42 @@
   {
     "objectID": "Meromorphic-series-NS/Order.html",
     "href": "Meromorphic-series-NS/Order.html",
-    "title": "Order",
+    "title": "Order of a formal series",
     "section": "",
-    "text": "Let \\(\\mathbb{K}\\) be a field and \\(x\\) a variable. We denote by \\(\\mathbb{K}[[x]]\\) the set of formal series on \\(x\\) with coefficients in \\(\\mathbb{K}\\), that is, the set of elements of the form \\(\\sum_{i \\in \\mathbb{N}} a_i x^i\\) with \\(a_i \\in \\mathbb{K}\\) for all \\(i \\in \\mathbb{N}\\).\nLet \\(f(x) = \\sum_{i \\in \\mathbb{N}} a_i x^i \\in \\mathbb{K}[[x]]\\), it is defined the order of \\(f\\) as the smallest \\(i \\in \\mathbb{N}\\) such that \\(a_i \\ne 0\\), and it is denoted by \\(ord_x(f(x))\\). For \\(f(x) = 0\\), it is usually written \\(ord_x(0) = + \\infty\\)."
+    "text": "Let \\(\\mathbb{K}\\) be a field, \\(x\\) a variable and let \\(\\mathbb{K}[[x]]\\) be the set of formal series on \\(x\\) with coefficients in \\(\\mathbb{K}\\), that is, the set of elements of the form \\(\\sum_{i \\in \\mathbb{N}} a_i x^i\\) with \\(a_i \\in \\mathbb{K}\\) for all \\(i \\in \\mathbb{N}\\).\nLet \\(f(x) = \\sum_{i \\in \\mathbb{N}} a_i x^i \\in \\mathbb{K}[[x]]\\). It is defined the order of \\(f\\) as the smallest \\(i \\in \\mathbb{N}\\) such that \\(a_i \\ne 0\\), and it is denoted by \\(ord_x(f(x))\\). For \\(f(x) = 0\\), it is usually written \\(ord_x(0) = + \\infty\\)."
   },
   {
     "objectID": "Meromorphic-series-NS/Order.html#definition",
     "href": "Meromorphic-series-NS/Order.html#definition",
-    "title": "Order",
+    "title": "Order of a formal series",
     "section": "",
-    "text": "Let \\(\\mathbb{K}\\) be a field and \\(x\\) a variable. We denote by \\(\\mathbb{K}[[x]]\\) the set of formal series on \\(x\\) with coefficients in \\(\\mathbb{K}\\), that is, the set of elements of the form \\(\\sum_{i \\in \\mathbb{N}} a_i x^i\\) with \\(a_i \\in \\mathbb{K}\\) for all \\(i \\in \\mathbb{N}\\).\nLet \\(f(x) = \\sum_{i \\in \\mathbb{N}} a_i x^i \\in \\mathbb{K}[[x]]\\), it is defined the order of \\(f\\) as the smallest \\(i \\in \\mathbb{N}\\) such that \\(a_i \\ne 0\\), and it is denoted by \\(ord_x(f(x))\\). For \\(f(x) = 0\\), it is usually written \\(ord_x(0) = + \\infty\\)."
+    "text": "Let \\(\\mathbb{K}\\) be a field, \\(x\\) a variable and let \\(\\mathbb{K}[[x]]\\) be the set of formal series on \\(x\\) with coefficients in \\(\\mathbb{K}\\), that is, the set of elements of the form \\(\\sum_{i \\in \\mathbb{N}} a_i x^i\\) with \\(a_i \\in \\mathbb{K}\\) for all \\(i \\in \\mathbb{N}\\).\nLet \\(f(x) = \\sum_{i \\in \\mathbb{N}} a_i x^i \\in \\mathbb{K}[[x]]\\). It is defined the order of \\(f\\) as the smallest \\(i \\in \\mathbb{N}\\) such that \\(a_i \\ne 0\\), and it is denoted by \\(ord_x(f(x))\\). For \\(f(x) = 0\\), it is usually written \\(ord_x(0) = + \\infty\\)."
   },
   {
     "objectID": "Meromorphic-series-NS/Order.html#examples",
     "href": "Meromorphic-series-NS/Order.html#examples",
-    "title": "Order",
+    "title": "Order of a formal series",
     "section": "Examples",
-    "text": "Examples\n\\(\\circ\\) Let \\(f(x) = 7x^5 + 4x^3 - x^2\\). The coefficients are: \\(a_0 = a_1 = 0, a_2 = -1, a_3 = 4, a_4 = 0\\) and \\(a_5 = 7\\). The order of \\(f(x)\\) is \\(2\\) since \\(a_0 = a_1 = 0\\) and \\(a_2 = -1 \\ne 0\\).\n\\(\\circ\\) Let \\(S\\) be a numerical semigroup and let us consider \\(f(x) = \\sum_{s \\in S \\setminus \\{0\\}} x^s\\). The order of \\(f\\) is the smallest non-zero coefficient, equivalent to compute the minimum of \\(S^*\\), which is the multiplicity of \\(S\\), \\(m(S)\\). Therefore, \\(ord_x(f) = m(S)\\)."
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Order.html#examples-with-gap",
-    "href": "Meromorphic-series-NS/Order.html#examples-with-gap",
-    "title": "Order",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to order of a formal series."
+    "text": "Examples\n\\(\\circ\\) Let \\(f(x) = 7x^5 + 4x^3 - x^2\\). The coefficients are: \\(a_0 = a_1 = 0, a_2 = -1, a_3 = 4, a_4 = 0\\) and \\(a_5 = 7\\). The order of \\(f(x)\\) is \\(2\\) since \\(a_0 = a_1 = 0\\) and \\(a_2 = -1 \\ne 0\\).\n\\(\\circ\\) Let \\(S\\) be a numerical semigroup and let us consider \\(f(x) = \\sum_{s \\in S \\setminus \\{0\\}} x^s\\). The order of \\(f\\) is the smallest non-zero coefficient, equivalent to compute the minimum of \\(S\\setminus \\{0\\}\\), which is the multiplicity of \\(S\\), \\(m(S)\\). Therefore, \\(ord_x(f) = m(S)\\)."
   },
   {
     "objectID": "Meromorphic-series-NS/Order.html#references",
     "href": "Meromorphic-series-NS/Order.html#references",
-    "title": "Order",
+    "title": "Order of a formal series",
     "section": "References",
     "text": "References"
   },
   {
     "objectID": "Meromorphic-series-NS/Characteristic-sequences.html",
     "href": "Meromorphic-series-NS/Characteristic-sequences.html",
-    "title": "Characteristic sequences",
+    "title": "Characteristic sequences associated to an irreducible polynomial",
     "section": "",
-    "text": "The definition of characteristic sequences comes from the following result.\n\\(\\textbf{Preposition}\\): Let \\(f(x,y) = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x) \\in \\mathbb{K}((x))[y]\\). Suppose that \\(f(x,y)\\) is irreducible. There exists \\(y(t) \\in \\mathbb{K}((t))\\) such that \\(f(t^n, y(t)) = 0\\). Furthermore,\nwhere \\(Supp(y(t))\\) is the support of \\(y(t)\\).\nLet us consider \\(f(x,y) \\in \\mathbb{K}((x))[y]\\) irreducible and let \\(y = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\).\n\\[\nr_i = r_{i-1}e_{i-1} + m_i - m_{i-1}.\n\\]\nIt is defined the characteristic sequences of \\(f\\) as the sequences \\(\\underline{m}, \\underline{d}\\) and \\(\\underline{r}\\). In particular, the sequence \\(\\underline{m}\\) is called the Newton-Puiseux exponents of \\(f\\)."
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Characteristic-sequences.html#examples",
-    "href": "Meromorphic-series-NS/Characteristic-sequences.html#examples",
-    "title": "Characteristic sequences",
-    "section": "Examples",
-    "text": "Examples\n\\(\\circ\\)"
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Characteristic-sequences.html#examples-with-gap",
-    "href": "Meromorphic-series-NS/Characteristic-sequences.html#examples-with-gap",
-    "title": "Characteristic sequences",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to order of a characteristic sequences."
+    "text": "The definition of characteristic sequences comes from the following result.\nLet us consider \\(f(x,y) \\in \\mathbb{K}((x))[y]\\) irreducible and let \\(y = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\).\n\\[\nr_i = r_{i-1}e_{i-1} + m_i - m_{i-1}.\n\\]\nIt is defined the characteristic sequences of \\(f\\) as the sequences \\(\\underline{m}, \\underline{d}\\) and \\(\\underline{r}\\). In particular, the sequence \\(\\underline{m}\\) is called the Newton-Puiseux exponents of \\(f\\)."
   },
   {
     "objectID": "Meromorphic-series-NS/Characteristic-sequences.html#references",
     "href": "Meromorphic-series-NS/Characteristic-sequences.html#references",
-    "title": "Characteristic sequences",
+    "title": "Characteristic sequences associated to an irreducible polynomial",
     "section": "References",
     "text": "References"
   },
@@ -4271,14 +4103,7 @@
     "href": "Meromorphic-series-NS/Approximate-root.html#examples",
     "title": "Approximate root",
     "section": "Examples",
-    "text": "Examples\n\\(\\circ\\) Let \\(f = y^4 + 13x^2y^2 + 42x^2\\), and \\(d = 2\\), let us calculate \\(Ap(f, 2)\\) applying an algorithm. First, let us consider \\(G = y^{\\frac{n}{d}} = y^2\\) and compute the \\(G-\\)adic expansion of \\(f\\),\n\\[\nf = y^4 + 13x^2y^2 + 42x^2 = G^2 + 13x^2G  + 42x^2\n\\]\nWe have \\(\\alpha_1(x,y) = 13x^2 \\ne 0\\), then, we consider now \\(G_1 = T(G) = G + \\frac{\\alpha_1(x,y)}{d} = y^2 + \\frac{13}{2}x^2\\), where \\(T(G)\\) is the Tschirnhausen transform. If we compute the \\(G_1-\\)adic expansion of \\(f\\),\n\\[\nf = G^2 + 13x^2G + 42x^2 = (G_1 - \\frac{13}{2}x^2)^2 + 13x^2(G_1 - \\frac{13}{2}x^2) + 42x^2\n\\] \\[\n= G_1^2 - 13x^2G_1 + \\frac{169}{4}x^4 + 13x^2G_1 - \\frac{169}{2}x^4 + 42x^2 = G_1^2 - \\frac{169}{4}x^4 + 42x^2.\n\\] and \\(\\alpha_1(x,y) = 0\\). To sum up, \\(Ap(f,2) = y^2 + \\frac{13}{2}x^2\\)."
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Approximate-root.html#examples-with-gap",
-    "href": "Meromorphic-series-NS/Approximate-root.html#examples-with-gap",
-    "title": "Approximate root",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to approximate root."
+    "text": "Examples\n\\(\\circ\\) Let \\(f = y^4 + 13x^2y^2 + 42x^2\\), and \\(d = 2\\), let us calculate \\(Ap(f; 2)\\) applying the following algorithm. First, let us consider \\(G = y^{\\frac{n}{d}} = y^2\\) and compute the \\(G-\\)adic expansion of \\(f\\),\n\\[\nf = y^4 + 13x^2y^2 + 42x^2 = G^2 + 13x^2G  + 42x^2\n\\]\nWe have \\(\\alpha_1(x,y) = 13x^2 \\ne 0\\), then, we consider now \\(G_1 = T(G) = G + \\frac{\\alpha_1(x,y)}{d} = y^2 + \\frac{13}{2}x^2\\), where \\(T(G)\\) is the Tschirnhausen transform. If we compute the \\(G_1-\\)adic expansion of \\(f\\),\n\\[\nf = G^2 + 13x^2G + 42x^2 = (G_1 - \\frac{13}{2}x^2)^2 + 13x^2(G_1 - \\frac{13}{2}x^2) + 42x^2\n\\]\n\\[\n= G_1^2 - 13x^2G_1 + \\frac{169}{4}x^4 + 13x^2G_1 - \\frac{169}{2}x^4 + 42x^2 = G_1^2 - \\frac{169}{4}x^4 + 42x^2.\n\\] and \\(\\alpha_1(x,y) = 0\\).\nTo sum up, \\(Ap(f;2) = y^2 + \\frac{13}{2}x^2\\)."
   },
   {
     "objectID": "Meromorphic-series-NS/Approximate-root.html#references",
@@ -4309,13 +4134,6 @@
     "text": "Examples\n\\(\\circ\\) Let \\(F = 3xy^4 + (6x + 1)y^3 + (6x^2 + 4x + 2)y^2 + (6x^2 + 2x + 3)y + 3x^3 + x^2 + x\\) and \\(G = y^2 + y + 1\\). If we compute the first division,\n\\[\nF(x,y) = [3xy^2 + (3x+1)y + (3x^2 + x + 1)]G + 2y = QG + R,\n\\]\nand \\(deg_y Q = 2 = deg_y G\\). Repeating the process,\n\\[\nQ = 3xG + (x + y + 1) = Q^1G + R^1,\n\\]\nand \\(deg_y Q^1 = 1 &lt; deg_y G\\). Therefore, the \\(G-\\)adic expansion of \\(G\\) is\n\\[\nF = QG + R = (Q^1G + R^1)G + R = Q^1G^2 + R^1G + R\n\\]\n\\[\n= 3xG^2 + (x + y + 1)G + 2y = \\alpha_2(x,y)G^2 + \\alpha_1(x,y)G + \\alpha_0(x,y).\n\\]\n\\(\\circ\\) Let \\(F = \\sum_{k = 0}^l \\alpha_k(x,y) G^k\\). It can be proven by induction on \\(l \\in \\mathbb{N}\\) that the \\(G-\\)adic expression is unique."
   },
   {
-    "objectID": "Meromorphic-series-NS/G-adic-expansion.html#examples-with-gap",
-    "href": "Meromorphic-series-NS/G-adic-expansion.html#examples-with-gap",
-    "title": "G-adic expansion",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to \\(G-\\)adic expansion."
-  },
-  {
     "objectID": "Meromorphic-series-NS/G-adic-expansion.html#references",
     "href": "Meromorphic-series-NS/G-adic-expansion.html#references",
     "title": "G-adic expansion",
@@ -4325,35 +4143,21 @@
   {
     "objectID": "Meromorphic-series-NS/Pseudo-approximate-root.html",
     "href": "Meromorphic-series-NS/Pseudo-approximate-root.html",
-    "title": "Pseudo-approximate root",
+    "title": "Pseudo-approximate root of an irreducible polynomial",
     "section": "",
-    "text": "Let \\(f(x,y) \\in \\mathbb{K}((x))[y]\\) irreducible and \\(y(t) = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\) a root of \\(f(t^n, y(t)) = 0\\). Let \\(\\underline{m} = (m_0, m_1, \\ldots, m_h)\\), \\(\\underline{d} = (d_1, d_2, \\ldots, d_{h+1})\\) and \\(\\underline{r} = (r_0, r_1, \\ldots, r_h)\\) the characteristic sequences of \\(f\\).\nLet \\(k \\in \\{1, 2, \\ldots, h\\}\\). Let \\(\\overline{y}(t) = \\sum_{p &lt; m_k} c_p t^p\\) and let \\(Y(t) = \\overline{y}(t^{1/d_k}) \\in \\mathbb{K}((t))\\). It is defined the \\(d_k^{th}-\\)pseudo-approximate root of \\(f\\) as\n\\[\nG_k(t^{\\frac{n}{d_k}}, y) = \\prod_{v, v^{\\frac{n}{d_k}} = 1} (y - Y(vt)).\n\\]"
+    "text": "Let \\(f(x,y) \\in \\mathbb{K}((x))[y]\\) irreducible and \\(y(t) = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\) a root of \\(f(t^n, y(t)) = 0\\). Let \\(\\underline{m} = (m_0, m_1, \\ldots, m_h)\\), \\(\\underline{d} = (d_1, d_2, \\ldots, d_{h+1})\\) and \\(\\underline{r} = (r_0, r_1, \\ldots, r_h)\\) the characteristic sequences of \\(f\\). For all \\(k \\in \\{1, 2, \\ldots, h\\}\\), let \\(\\overline{y}(t) = \\sum_{p &lt; m_k} c_p t^p\\) and \\(Y(t) = \\overline{y}(t^{1/d_k}) \\in \\mathbb{K}((t))\\). It is defined the \\(d_k^{th}-\\)pseudo-approximate root of \\(f\\), denoted by \\(G_k(x,y)\\), as the minimal polynomial of \\(Y(t)\\) over \\(\\mathbb{K}((t^{n/d_k}))\\).\nIt can be proven that the \\(d_k^{th}-\\)pseudo-approximate root of \\(f\\) is of the form\n\\[\nG_k(t^{\\frac{n}{d_k}}, y) = \\prod_{v, v^{n/d_k} = 1} (y - Y(vt)).\n\\]"
   },
   {
     "objectID": "Meromorphic-series-NS/Pseudo-approximate-root.html#definition",
     "href": "Meromorphic-series-NS/Pseudo-approximate-root.html#definition",
-    "title": "Pseudo-approximate root",
+    "title": "Pseudo-approximate root of an irreducible polynomial",
     "section": "",
-    "text": "Let \\(f(x,y) \\in \\mathbb{K}((x))[y]\\) irreducible and \\(y(t) = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\) a root of \\(f(t^n, y(t)) = 0\\). Let \\(\\underline{m} = (m_0, m_1, \\ldots, m_h)\\), \\(\\underline{d} = (d_1, d_2, \\ldots, d_{h+1})\\) and \\(\\underline{r} = (r_0, r_1, \\ldots, r_h)\\) the characteristic sequences of \\(f\\).\nLet \\(k \\in \\{1, 2, \\ldots, h\\}\\). Let \\(\\overline{y}(t) = \\sum_{p &lt; m_k} c_p t^p\\) and let \\(Y(t) = \\overline{y}(t^{1/d_k}) \\in \\mathbb{K}((t))\\). It is defined the \\(d_k^{th}-\\)pseudo-approximate root of \\(f\\) as\n\\[\nG_k(t^{\\frac{n}{d_k}}, y) = \\prod_{v, v^{\\frac{n}{d_k}} = 1} (y - Y(vt)).\n\\]"
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Pseudo-approximate-root.html#examples",
-    "href": "Meromorphic-series-NS/Pseudo-approximate-root.html#examples",
-    "title": "Pseudo-approximate root",
-    "section": "Examples",
-    "text": "Examples\n\\(\\circ\\)"
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Pseudo-approximate-root.html#examples-with-gap",
-    "href": "Meromorphic-series-NS/Pseudo-approximate-root.html#examples-with-gap",
-    "title": "Pseudo-approximate root",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to pseudo-approximate root."
+    "text": "Let \\(f(x,y) \\in \\mathbb{K}((x))[y]\\) irreducible and \\(y(t) = \\sum_{p \\in \\mathbb{N}} c_p t^p \\in \\mathbb{K}((t))\\) a root of \\(f(t^n, y(t)) = 0\\). Let \\(\\underline{m} = (m_0, m_1, \\ldots, m_h)\\), \\(\\underline{d} = (d_1, d_2, \\ldots, d_{h+1})\\) and \\(\\underline{r} = (r_0, r_1, \\ldots, r_h)\\) the characteristic sequences of \\(f\\). For all \\(k \\in \\{1, 2, \\ldots, h\\}\\), let \\(\\overline{y}(t) = \\sum_{p &lt; m_k} c_p t^p\\) and \\(Y(t) = \\overline{y}(t^{1/d_k}) \\in \\mathbb{K}((t))\\). It is defined the \\(d_k^{th}-\\)pseudo-approximate root of \\(f\\), denoted by \\(G_k(x,y)\\), as the minimal polynomial of \\(Y(t)\\) over \\(\\mathbb{K}((t^{n/d_k}))\\).\nIt can be proven that the \\(d_k^{th}-\\)pseudo-approximate root of \\(f\\) is of the form\n\\[\nG_k(t^{\\frac{n}{d_k}}, y) = \\prod_{v, v^{n/d_k} = 1} (y - Y(vt)).\n\\]"
   },
   {
     "objectID": "Meromorphic-series-NS/Pseudo-approximate-root.html#references",
     "href": "Meromorphic-series-NS/Pseudo-approximate-root.html#references",
-    "title": "Pseudo-approximate root",
+    "title": "Pseudo-approximate root of an irreducible polynomial",
     "section": "References",
     "text": "References"
   },
@@ -4362,28 +4166,14 @@
     "href": "Meromorphic-series-NS/Curves-one-place-infinity.html",
     "title": "Curve with one place at infinity",
     "section": "",
-    "text": "Let \\(F = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x)\\) be a nonzero polynomial of \\(\\mathbb{K}[x][y]\\) and assume, possibly after a change of variables, that \\(deg_x a_i &lt; i\\) for all \\(i \\in \\{1, 2, \\ldots, n\\}\\) such that \\(a_i(x) \\ne 0\\). Let \\(C = V(F)\\) be the plane algebraic curve in \\(\\mathbb{A}_{\\mathbb{K}}^2\\) defined by \\(F(x,y) = 0\\), and let \\(h_F(u,x,y) = u^nF(\\frac{x}{u}, \\frac{y}{u})\\). The projective curve \\(V(h_F)\\) is the projective curve closure of \\(C\\) in \\(\\mathbb{P}_{\\mathbb{K}}^2\\). The embedding \\(\\mathbb{A}_{\\mathbb{K}}^2 \\subset \\mathbb{P}_{\\mathbb{K}}^2\\) that send \\((x,y) \\to (u : x : y)\\) has been used. By hypothesis on the coefficients of \\(F\\), \\((0 : 1 : 0)\\) is the unique point of \\(V(h_F)\\) at the line at infinity \\(u = 0\\). It is said that \\(F\\) has one place at infinity if \\(h_F\\) is analytically irreducible at \\((0 : 1 : 0)\\)."
+    "text": "Let \\(F = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x)\\) be a nonzero polynomial of \\(\\mathbb{K}[x][y]\\) and assume, possibly after a change of variables, that \\(deg_x ~ a_i(x) &lt; i\\) for all \\(i \\in \\{1, 2, \\ldots, n\\}\\) such that \\(a_i(x) \\ne 0\\). Let \\(C = V(F)\\) be the plane algebraic curve in \\(\\mathbb{A}_{\\mathbb{K}}^2\\) defined by \\(F(x,y) = 0\\), and let \\(h_F(u,x,y) = u^nF(\\frac{x}{u}, \\frac{y}{u})\\). The projective curve \\(V(h_F)\\) is the projective curve closure of \\(C\\) in \\(\\mathbb{P}_{\\mathbb{K}}^2\\). The embedding \\(\\mathbb{A}_{\\mathbb{K}}^2 \\subset \\mathbb{P}_{\\mathbb{K}}^2\\) that send \\((x,y) \\to (u : x : y)\\) has been used. By hypothesis on the coefficients of \\(F\\), \\((0 : 1 : 0)\\) is the unique point of \\(V(h_F)\\) at the line at infinity \\(u = 0\\). It is said that \\(F\\) has one place at infinity if \\(h_F\\) is analytically irreducible at \\((0 : 1 : 0)\\)."
   },
   {
     "objectID": "Meromorphic-series-NS/Curves-one-place-infinity.html#definition",
     "href": "Meromorphic-series-NS/Curves-one-place-infinity.html#definition",
     "title": "Curve with one place at infinity",
     "section": "",
-    "text": "Let \\(F = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x)\\) be a nonzero polynomial of \\(\\mathbb{K}[x][y]\\) and assume, possibly after a change of variables, that \\(deg_x a_i &lt; i\\) for all \\(i \\in \\{1, 2, \\ldots, n\\}\\) such that \\(a_i(x) \\ne 0\\). Let \\(C = V(F)\\) be the plane algebraic curve in \\(\\mathbb{A}_{\\mathbb{K}}^2\\) defined by \\(F(x,y) = 0\\), and let \\(h_F(u,x,y) = u^nF(\\frac{x}{u}, \\frac{y}{u})\\). The projective curve \\(V(h_F)\\) is the projective curve closure of \\(C\\) in \\(\\mathbb{P}_{\\mathbb{K}}^2\\). The embedding \\(\\mathbb{A}_{\\mathbb{K}}^2 \\subset \\mathbb{P}_{\\mathbb{K}}^2\\) that send \\((x,y) \\to (u : x : y)\\) has been used. By hypothesis on the coefficients of \\(F\\), \\((0 : 1 : 0)\\) is the unique point of \\(V(h_F)\\) at the line at infinity \\(u = 0\\). It is said that \\(F\\) has one place at infinity if \\(h_F\\) is analytically irreducible at \\((0 : 1 : 0)\\)."
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Curves-one-place-infinity.html#examples",
-    "href": "Meromorphic-series-NS/Curves-one-place-infinity.html#examples",
-    "title": "Curve with one place at infinity",
-    "section": "Examples",
-    "text": "Examples\n\\(\\circ\\)"
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Curves-one-place-infinity.html#examples-with-gap",
-    "href": "Meromorphic-series-NS/Curves-one-place-infinity.html#examples-with-gap",
-    "title": "Curve with one place at infinity",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to curves with one place at infinity."
+    "text": "Let \\(F = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x)\\) be a nonzero polynomial of \\(\\mathbb{K}[x][y]\\) and assume, possibly after a change of variables, that \\(deg_x ~ a_i(x) &lt; i\\) for all \\(i \\in \\{1, 2, \\ldots, n\\}\\) such that \\(a_i(x) \\ne 0\\). Let \\(C = V(F)\\) be the plane algebraic curve in \\(\\mathbb{A}_{\\mathbb{K}}^2\\) defined by \\(F(x,y) = 0\\), and let \\(h_F(u,x,y) = u^nF(\\frac{x}{u}, \\frac{y}{u})\\). The projective curve \\(V(h_F)\\) is the projective curve closure of \\(C\\) in \\(\\mathbb{P}_{\\mathbb{K}}^2\\). The embedding \\(\\mathbb{A}_{\\mathbb{K}}^2 \\subset \\mathbb{P}_{\\mathbb{K}}^2\\) that send \\((x,y) \\to (u : x : y)\\) has been used. By hypothesis on the coefficients of \\(F\\), \\((0 : 1 : 0)\\) is the unique point of \\(V(h_F)\\) at the line at infinity \\(u = 0\\). It is said that \\(F\\) has one place at infinity if \\(h_F\\) is analytically irreducible at \\((0 : 1 : 0)\\)."
   },
   {
     "objectID": "Meromorphic-series-NS/Curves-one-place-infinity.html#references",
@@ -4397,28 +4187,14 @@
     "href": "Meromorphic-series-NS/Curve-NS.html",
     "title": "Numerical semigroup associated to a curve",
     "section": "",
-    "text": "The definition of numerical semigroup associated to a curve needs the following preposition.\n\\(\\textbf{Preposition}\\): Let \\(F = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x)\\) be a nonzero polynomial of \\(\\mathbb{K}[x][y]\\) and assume, possibly after a change of variables, that \\(deg_x a_i &lt; i\\) for all \\(i \\in \\{1, 2, \\ldots, n\\}\\) such that \\(a_i(x) \\ne 0\\). Let \\(F_{\\infty}(u,y) = h_F(u,1,y)\\) and \\(f(x,y) = F(x^{-1}, y) \\in \\mathbb{K}[x^{-1}, y]\\).\n\n\\(f(x,y) = x^{-n}F(x, y)\\).\n\\(F\\) has one place at infinity if, and only if, \\(f(x,y)\\) is irreducible in \\(\\mathbb{K}[x^{-1}, y]\\).\n\nLet us consider the hypothesis of the preposition and also that \\(F\\) has one place at the point at infinity. It is defined the numerical semigroup associated to \\(f\\) as\n\\[\n\\Gamma(f) = \\{int(f,g) ~ | ~ g \\in \\mathbb{K}[x^{-1}][y] \\setminus (f)\\}.\n\\] It can be proven that \\(\\Gamma(f)\\) is a subsemigroup of \\(- \\mathbb{N}\\)."
+    "text": "The definition of numerical semigroup associated to a curve needs the following proposition.\n\n\n\n\n\n\nProposition\n\n\n\nLet \\(F = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x)\\) be a nonzero polynomial of \\(\\mathbb{K}[x][y]\\) and assume, possibly after a change of variables, that \\(deg_x ~ a_i(x) &lt; i\\) for all \\(i \\in \\{1, 2, \\ldots, n\\}\\) such that \\(a_i(x) \\ne 0\\). Let \\(h_F(u,x,y) = u^n F \\left( \\frac{x}{u}, \\frac{y}{v} \\right)\\), \\(F_{\\infty}(u,y) = h_F(u,1,y)\\) and \\(f(x,y) = F(x^{-1}, y) \\in \\mathbb{K}[x^{-1}, y]\\).\n\n\\(f(x,y) = x^{-n}F_{\\infty}(x, y)\\).\n\\(F\\) has one place at infinity if, and only if, \\(f(x,y)\\) is irreducible in \\(\\mathbb{K}((x))[y]\\).\n\n\n\nLet us consider the hypothesis of the proposition and also that \\(F\\) has one place at the point at infinity. It is defined the numerical semigroup associated to \\(f\\) as\n\\[\n\\Gamma(f) = \\{int(f,g) ~ | ~ g \\in \\mathbb{K}[x^{-1}][y] \\setminus (f)\\}.\n\\]\nIt can be proven that \\(\\Gamma(f)\\) is a subsemigroup of \\(- \\mathbb{N}\\)."
   },
   {
     "objectID": "Meromorphic-series-NS/Curve-NS.html#definition",
     "href": "Meromorphic-series-NS/Curve-NS.html#definition",
     "title": "Numerical semigroup associated to a curve",
     "section": "",
-    "text": "The definition of numerical semigroup associated to a curve needs the following preposition.\n\\(\\textbf{Preposition}\\): Let \\(F = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x)\\) be a nonzero polynomial of \\(\\mathbb{K}[x][y]\\) and assume, possibly after a change of variables, that \\(deg_x a_i &lt; i\\) for all \\(i \\in \\{1, 2, \\ldots, n\\}\\) such that \\(a_i(x) \\ne 0\\). Let \\(F_{\\infty}(u,y) = h_F(u,1,y)\\) and \\(f(x,y) = F(x^{-1}, y) \\in \\mathbb{K}[x^{-1}, y]\\).\n\n\\(f(x,y) = x^{-n}F(x, y)\\).\n\\(F\\) has one place at infinity if, and only if, \\(f(x,y)\\) is irreducible in \\(\\mathbb{K}[x^{-1}, y]\\).\n\nLet us consider the hypothesis of the preposition and also that \\(F\\) has one place at the point at infinity. It is defined the numerical semigroup associated to \\(f\\) as\n\\[\n\\Gamma(f) = \\{int(f,g) ~ | ~ g \\in \\mathbb{K}[x^{-1}][y] \\setminus (f)\\}.\n\\] It can be proven that \\(\\Gamma(f)\\) is a subsemigroup of \\(- \\mathbb{N}\\)."
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Curve-NS.html#examples",
-    "href": "Meromorphic-series-NS/Curve-NS.html#examples",
-    "title": "Numerical semigroup associated to a curve",
-    "section": "Examples",
-    "text": "Examples\n\\(\\circ\\)"
-  },
-  {
-    "objectID": "Meromorphic-series-NS/Curve-NS.html#examples-with-gap",
-    "href": "Meromorphic-series-NS/Curve-NS.html#examples-with-gap",
-    "title": "Numerical semigroup associated to a curve",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to numerical semigroup associated to a curve."
+    "text": "The definition of numerical semigroup associated to a curve needs the following proposition.\n\n\n\n\n\n\nProposition\n\n\n\nLet \\(F = y^n + a_1(x)y^{n-1} + \\cdots + a_n(x)\\) be a nonzero polynomial of \\(\\mathbb{K}[x][y]\\) and assume, possibly after a change of variables, that \\(deg_x ~ a_i(x) &lt; i\\) for all \\(i \\in \\{1, 2, \\ldots, n\\}\\) such that \\(a_i(x) \\ne 0\\). Let \\(h_F(u,x,y) = u^n F \\left( \\frac{x}{u}, \\frac{y}{v} \\right)\\), \\(F_{\\infty}(u,y) = h_F(u,1,y)\\) and \\(f(x,y) = F(x^{-1}, y) \\in \\mathbb{K}[x^{-1}, y]\\).\n\n\\(f(x,y) = x^{-n}F_{\\infty}(x, y)\\).\n\\(F\\) has one place at infinity if, and only if, \\(f(x,y)\\) is irreducible in \\(\\mathbb{K}((x))[y]\\).\n\n\n\nLet us consider the hypothesis of the proposition and also that \\(F\\) has one place at the point at infinity. It is defined the numerical semigroup associated to \\(f\\) as\n\\[\n\\Gamma(f) = \\{int(f,g) ~ | ~ g \\in \\mathbb{K}[x^{-1}][y] \\setminus (f)\\}.\n\\]\nIt can be proven that \\(\\Gamma(f)\\) is a subsemigroup of \\(- \\mathbb{N}\\)."
   },
   {
     "objectID": "Meromorphic-series-NS/Curve-NS.html#references",
