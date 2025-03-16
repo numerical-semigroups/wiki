@@ -902,28 +902,6 @@
     ]
   },
   {
-    "objectID": "Basic-concepts/Degree-of-singularity.html#examples",
-    "href": "Basic-concepts/Degree-of-singularity.html#examples",
-    "title": "Degree of singularity",
-    "section": "Examples",
-    "text": "Examples\n\\(\\circ\\)",
-    "crumbs": [
-      "Basic concepts",
-      "Degree of singularity"
-    ]
-  },
-  {
-    "objectID": "Basic-concepts/Degree-of-singularity.html#examples-with-gap",
-    "href": "Basic-concepts/Degree-of-singularity.html#examples-with-gap",
-    "title": "Degree of singularity",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to degree of singularity.",
-    "crumbs": [
-      "Basic concepts",
-      "Degree of singularity"
-    ]
-  },
-  {
     "objectID": "Basic-concepts/Degree-of-singularity.html#references",
     "href": "Basic-concepts/Degree-of-singularity.html#references",
     "title": "Degree of singularity",
@@ -939,7 +917,7 @@
     "href": "Basic-concepts/Standard-representation-free-NS.html",
     "title": "Standard representation in a free Numerical semigroup",
     "section": "",
-    "text": "Let \\(S\\) be a numerical semigroup. The definition of standard representation in a free numerical semigroup comes from the following result.\n\n\n\n\n\n\nProposition\n\n\n\nAssume that \\(S\\) is free for the arrangement \\((r_0, r_1, \\ldots, r_h)\\), and let \\(x \\in \\mathbb{Z}\\). There exist unique \\(\\lambda_0, \\lambda_1, \\ldots, \\lambda_h \\in \\mathbb{Z}\\) such that the following holds.\n\n\\(\\displaystyle x = \\sum_{k = 0}^h \\lambda_k r_k\\).\nFor all \\(k \\in \\{1, 2, \\ldots, h\\}\\), \\(0 \\le \\lambda_k &lt; e_k\\).\n\nIt is defined the standard representation of an integer \\(x \\in \\mathbb{Z}\\) an expression of \\(x\\) like in the previous proposition.",
+    "text": "Let \\(S\\) be a numerical semigroup. The definition of standard representation in a free numerical semigroup comes from the following result.\n\n\n\n\n\n\nProposition\n\n\n\nAssume that \\(S\\) is free for the arrangement \\((r_0, r_1, \\ldots, r_h)\\), and let \\(x \\in \\mathbb{Z}\\). There exist unique \\(\\lambda_0, \\lambda_1, \\ldots, \\lambda_h \\in \\mathbb{Z}\\) such that the following holds.\n\n\\(\\displaystyle x = \\sum_{k = 0}^h \\lambda_k r_k\\).\nFor all \\(k \\in \\{1, 2, \\ldots, h\\}\\), \\(0 \\le \\lambda_k &lt; e_k\\).\n\n\n\nIt is defined the standard representation of an integer \\(x \\in \\mathbb{Z}\\) as the expression of \\(x\\) which satisfies the conditions of the above proposition.",
     "crumbs": [
       "Basic concepts",
       "Standard representation in a free Numerical semigroup"
@@ -950,7 +928,7 @@
     "href": "Basic-concepts/Standard-representation-free-NS.html#definition",
     "title": "Standard representation in a free Numerical semigroup",
     "section": "",
-    "text": "Let \\(S\\) be a numerical semigroup. The definition of standard representation in a free numerical semigroup comes from the following result.\n\n\n\n\n\n\nProposition\n\n\n\nAssume that \\(S\\) is free for the arrangement \\((r_0, r_1, \\ldots, r_h)\\), and let \\(x \\in \\mathbb{Z}\\). There exist unique \\(\\lambda_0, \\lambda_1, \\ldots, \\lambda_h \\in \\mathbb{Z}\\) such that the following holds.\n\n\\(\\displaystyle x = \\sum_{k = 0}^h \\lambda_k r_k\\).\nFor all \\(k \\in \\{1, 2, \\ldots, h\\}\\), \\(0 \\le \\lambda_k &lt; e_k\\).\n\nIt is defined the standard representation of an integer \\(x \\in \\mathbb{Z}\\) an expression of \\(x\\) like in the previous proposition.",
+    "text": "Let \\(S\\) be a numerical semigroup. The definition of standard representation in a free numerical semigroup comes from the following result.\n\n\n\n\n\n\nProposition\n\n\n\nAssume that \\(S\\) is free for the arrangement \\((r_0, r_1, \\ldots, r_h)\\), and let \\(x \\in \\mathbb{Z}\\). There exist unique \\(\\lambda_0, \\lambda_1, \\ldots, \\lambda_h \\in \\mathbb{Z}\\) such that the following holds.\n\n\\(\\displaystyle x = \\sum_{k = 0}^h \\lambda_k r_k\\).\nFor all \\(k \\in \\{1, 2, \\ldots, h\\}\\), \\(0 \\le \\lambda_k &lt; e_k\\).\n\n\n\nIt is defined the standard representation of an integer \\(x \\in \\mathbb{Z}\\) as the expression of \\(x\\) which satisfies the conditions of the above proposition.",
     "crumbs": [
       "Basic concepts",
       "Standard representation in a free Numerical semigroup"
@@ -2620,56 +2598,56 @@
   {
     "objectID": "Families-NS/NS-complete-intersection.html",
     "href": "Families-NS/NS-complete-intersection.html",
-    "title": "Complete intersection",
+    "title": "Complete intersection numerical semigroup",
     "section": "",
     "text": "Let \\(S\\) be a numerical semigroup. It is said that \\(S\\) is a complete intersection if the cardinality of any minimal presentation of \\(S\\) is equal to \\(e(S) - 1\\), where \\(e(S)\\) denotes the embedding dimension of \\(S\\).\nIt can be proven that every numerical semigroup is finite presented, that every minimal presentation has the same cardinal and that every presentations \\(\\rho\\) of \\(S\\) has cardinal \\(|\\rho| \\ge e(S) - 1\\).",
     "crumbs": [
       "Families of numerical semigroups",
-      "Complete intersection"
+      "Complete intersection numerical semigroup"
     ]
   },
   {
     "objectID": "Families-NS/NS-complete-intersection.html#definition",
     "href": "Families-NS/NS-complete-intersection.html#definition",
-    "title": "Complete intersection",
+    "title": "Complete intersection numerical semigroup",
     "section": "",
     "text": "Let \\(S\\) be a numerical semigroup. It is said that \\(S\\) is a complete intersection if the cardinality of any minimal presentation of \\(S\\) is equal to \\(e(S) - 1\\), where \\(e(S)\\) denotes the embedding dimension of \\(S\\).\nIt can be proven that every numerical semigroup is finite presented, that every minimal presentation has the same cardinal and that every presentations \\(\\rho\\) of \\(S\\) has cardinal \\(|\\rho| \\ge e(S) - 1\\).",
     "crumbs": [
       "Families of numerical semigroups",
-      "Complete intersection"
+      "Complete intersection numerical semigroup"
     ]
   },
   {
     "objectID": "Families-NS/NS-complete-intersection.html#examples",
     "href": "Families-NS/NS-complete-intersection.html#examples",
-    "title": "Complete intersection",
+    "title": "Complete intersection numerical semigroup",
     "section": "Examples",
     "text": "Examples\n\\(\\circ\\) Let us consider \\(a,b \\in \\mathbb{N} \\setminus \\{0,1\\}\\) with \\(gcd(a,b) = 1\\) and \\(S = \\langle a, b \\rangle\\). A minimal presentation of \\(S\\) is \\(\\rho = \\{(bx_1, ax_2)\\}\\), whose cardinal is \\(1 = e(S) - 1\\). Then, any numerical semigroup with embedding dimension two is a complete intersection.\n\\(\\circ\\) Given a numerical semigroup with embedding dimension three, the concepts of symmetric, free and complete intersection are equivalent.",
     "crumbs": [
       "Families of numerical semigroups",
-      "Complete intersection"
+      "Complete intersection numerical semigroup"
     ]
   },
   {
     "objectID": "Families-NS/NS-complete-intersection.html#examples-with-gap",
     "href": "Families-NS/NS-complete-intersection.html#examples-with-gap",
-    "title": "Complete intersection",
+    "title": "Complete intersection numerical semigroup",
     "section": "Examples with GAP",
     "text": "Examples with GAP\nThe following examples are made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 22, 24, 51, 115, 122 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(22, 24, 51, 115, 122);\n&lt;Numerical semigroup with 5 generators&gt;\nGiven a numerical semigroup, the function IsCompleteIntersection returns true or false depending on whether a numerical semigroup is a complete intersection or not.\ngap&gt; IsCompleteIntersection(S);\nfalse\nThe function MinimalPresentation returns a minimal presentation of a given numerical semigroup. On the other hand, the function EmbeddingDimension returns the embedding dimension.\nbrk_3&gt; Length(MinimalPresentation(S));\n11\nbrk_3&gt; EmbeddingDimension(S)-1;\n4\n\\(\\diamond\\) Given an integer \\(z \\in \\mathbb{Z}\\), the function CompleteIntersectionNumericalSemigroupsWithFrobeniusNumber returns a list with all numerical semigroups that are a complete intersection with Frobenius number \\(z\\).\ngap&gt; Length(CompleteIntersectionNumericalSemigroupsWithFrobeniusNumber(21));\n5\nThe code List(List_NS, l -&gt; Function(l)); returns a list where it has applied Function to every element in \\(List\\_NS\\), for example, we can see the numerical semigroups with complete intersection and Frobenius number \\(f = 21\\) by its minimal generators.\ngap&gt; Li := CompleteIntersectionNumericalSemigroupsWithFrobeniusNumber(21);\n[ &lt;Numerical semigroup with 2 generators&gt;,\n  &lt;Numerical semigroup with 3 generators&gt;,\n  &lt;Numerical semigroup with 3 generators&gt;,\n  &lt;Numerical semigroup with 3 generators&gt;,\n  &lt;Numerical semigroup with 3 generators&gt; ]\ngap&gt; List(Li, l -&gt; MinimalGenerators(l));\n[ [ 2, 23 ], [ 4, 6, 19 ], [ 4, 10, 15 ], [ 4, 11, 14 ],\n  [ 6, 8, 11 ] ]",
     "crumbs": [
       "Families of numerical semigroups",
-      "Complete intersection"
+      "Complete intersection numerical semigroup"
     ]
   },
   {
     "objectID": "Families-NS/NS-complete-intersection.html#references",
     "href": "Families-NS/NS-complete-intersection.html#references",
-    "title": "Complete intersection",
+    "title": "Complete intersection numerical semigroup",
     "section": "References",
     "text": "References",
     "crumbs": [
       "Families of numerical semigroups",
-      "Complete intersection"
+      "Complete intersection numerical semigroup"
     ]
   },
   {
@@ -2677,7 +2655,7 @@
     "href": "Families-NS/NS-simple.html",
     "title": "Simple numerical semigroup",
     "section": "",
-    "text": "Let \\(S\\) be a numerical semigroup minimally generated by \\(P = \\{n_1, \\ldots, n_e\\}\\) with \\(n_1 &lt; n_2 &lt; \\cdots &lt; n_e\\). For each \\(i \\in \\{2, \\ldots, e\\}\\), set\n\\[\nc_i = \\min \\{k \\in \\mathbb{N} \\setminus \\{0\\} ~ | ~ kn_i \\in \\langle P \\setminus \\{n_i\\} \\rangle\\}.\n\\]\nIt is said that \\(S\\) is simple if \\(n_1 = (c_2 - 1) + \\cdots + (c_e - 1)\\).",
+    "text": "Let \\(S\\) be a numerical semigroup minimally generated by \\(P = \\{n_1, \\ldots, n_e\\}\\) with \\(n_1 &lt; n_2 &lt; \\cdots &lt; n_e\\). For each \\(i \\in \\{2, \\ldots, e\\}\\), set\n\\[\nc_i = \\min \\{k \\in \\mathbb{N} \\setminus \\{0\\} ~ | ~ kn_i \\in \\langle P \\setminus \\{n_i\\} \\rangle\\}.\n\\]\nIt is said that \\(S\\) is simple if \\(n_1 = (c_2 - 1) + \\cdots + (c_e - 1)+1\\).",
     "crumbs": [
       "Families of numerical semigroups",
       "Simple numerical semigroup"
@@ -2688,7 +2666,7 @@
     "href": "Families-NS/NS-simple.html#definition",
     "title": "Simple numerical semigroup",
     "section": "",
-    "text": "Let \\(S\\) be a numerical semigroup minimally generated by \\(P = \\{n_1, \\ldots, n_e\\}\\) with \\(n_1 &lt; n_2 &lt; \\cdots &lt; n_e\\). For each \\(i \\in \\{2, \\ldots, e\\}\\), set\n\\[\nc_i = \\min \\{k \\in \\mathbb{N} \\setminus \\{0\\} ~ | ~ kn_i \\in \\langle P \\setminus \\{n_i\\} \\rangle\\}.\n\\]\nIt is said that \\(S\\) is simple if \\(n_1 = (c_2 - 1) + \\cdots + (c_e - 1)\\).",
+    "text": "Let \\(S\\) be a numerical semigroup minimally generated by \\(P = \\{n_1, \\ldots, n_e\\}\\) with \\(n_1 &lt; n_2 &lt; \\cdots &lt; n_e\\). For each \\(i \\in \\{2, \\ldots, e\\}\\), set\n\\[\nc_i = \\min \\{k \\in \\mathbb{N} \\setminus \\{0\\} ~ | ~ kn_i \\in \\langle P \\setminus \\{n_i\\} \\rangle\\}.\n\\]\nIt is said that \\(S\\) is simple if \\(n_1 = (c_2 - 1) + \\cdots + (c_e - 1)+1\\).",
     "crumbs": [
       "Families of numerical semigroups",
       "Simple numerical semigroup"
@@ -2699,7 +2677,7 @@
     "href": "Families-NS/NS-simple.html#examples",
     "title": "Simple numerical semigroup",
     "section": "Examples",
-    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 4, 5, 7 \\rangle\\). Then, \\(5, 10 \\not \\in \\langle 4, 7 \\rangle\\) and \\(15 = 2 \\cdot 4 + 7 \\in \\langle 4, 7 \\rangle\\), so \\(c_2 = 3\\). On the other hand, \\(7 \\not \\in \\langle 4, 5 \\rangle\\) but \\(14 = 4 + 2 \\cdot 5 \\in \\langle 4, 5 \\rangle\\), therefore \\(c_3 = 2\\). Finally, \\((c_2-1) + (c_3 - 1) = 3 \\ne 4\\) and \\(S\\) is not simple.",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 4, 5, 7 \\rangle\\). Then, \\(5, 10 \\not \\in \\langle 4, 7 \\rangle\\) and \\(15 = 2 \\cdot 4 + 7 \\in \\langle 4, 7 \\rangle\\), so \\(c_2 = 3\\). On the other hand, \\(7 \\not \\in \\langle 4, 5 \\rangle\\) but \\(14 = 4 + 2 \\cdot 5 \\in \\langle 4, 5 \\rangle\\), therefore \\(c_3 = 2\\). Finally, \\((c_2-1) + (c_3 - 1)+1 = 4\\) and \\(S\\) is simple.",
     "crumbs": [
       "Families of numerical semigroups",
       "Simple numerical semigroup"
@@ -3085,17 +3063,6 @@
     "title": "Weierstrass semigroup",
     "section": "Examples",
     "text": "Examples\n\\(\\circ\\)",
-    "crumbs": [
-      "Families of numerical semigroups",
-      "Weierstrass semigroup"
-    ]
-  },
-  {
-    "objectID": "Families-NS/Weierstrass-semigroup.html#examples-with-gap",
-    "href": "Families-NS/Weierstrass-semigroup.html#examples-with-gap",
-    "title": "Weierstrass semigroup",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to Weierstrass semigroup.",
     "crumbs": [
       "Families of numerical semigroups",
       "Weierstrass semigroup"
@@ -3861,17 +3828,6 @@
     ]
   },
   {
-    "objectID": "Varieties-NS/Frobenius-variety.html#examples-with-gap",
-    "href": "Varieties-NS/Frobenius-variety.html#examples-with-gap",
-    "title": "Frobenius variety",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to Frobenius variety.",
-    "crumbs": [
-      "Frobenius varieties",
-      "Frobenius variety"
-    ]
-  },
-  {
     "objectID": "Varieties-NS/Frobenius-variety.html#references",
     "href": "Varieties-NS/Frobenius-variety.html#references",
     "title": "Frobenius variety",
@@ -3917,17 +3873,6 @@
     "title": "V-monoid",
     "section": "Examples",
     "text": "Examples\n\\(\\circ\\)",
-    "crumbs": [
-      "Frobenius varieties",
-      "V-monoid"
-    ]
-  },
-  {
-    "objectID": "Varieties-NS/V-monoid.html#examples-with-gap",
-    "href": "Varieties-NS/V-monoid.html#examples-with-gap",
-    "title": "V-monoid",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to \\(\\mathcal{V}-\\)monoid.",
     "crumbs": [
       "Frobenius varieties",
       "V-monoid"
@@ -4907,17 +4852,6 @@
     "title": "Numerical semigroup admitting a pattern",
     "section": "Examples",
     "text": "Examples\n\n\\(\\circ\\) The set \\(\\mathcal{P}(x_1 + x_2 - x_3)\\) is the set of Arf numerical semigroups.\n\\(\\circ\\) Let \\(a_1x_1 + \\cdots + a_nx_n\\) be a pattern \\(P\\). Let us prove that \\(\\mathbb{N} \\in \\mathcal{S}(P)\\) if, and only if, \\(\\mathcal{S}(P)\\) is non-empty. The sufficient condition is obvious. On the other hand, if the set is non-empty, there exists \\(S \\in \\mathcal{S}(P)\\) such that for every \\(s_1, \\ldots, s_n \\in S\\) with \\(s_1 \\ge s_2 \\ge \\ldots \\ge s_n\\), the element \\(a_1s_1 + \\cdots + a_n s_n\\) belongs to \\(S\\). If we take \\(s = s_1 = s_2 = \\cdots = s_n \\in S^*\\), since \\(a_1 s_1 + \\cdots + a_n s_n \\in S\\), it must be \\(\\sum_{i = 1}^n a_i \\ge 0\\). Then, given \\(m_1 \\ge m_2 \\ge \\cdots \\ge m_n\\) non-negative integers, it can be proven by induction that\n\\[\na_1 m_1 + \\cdots + a_n m_n \\ge a_1 m_n + \\cdots + a_nm_n = \\left( \\sum_{i = 0}^n a_i \\right) m_n \\ge 0\n\\]\nTherefore, \\(\\mathbb{N} \\in \\mathcal{S}(P)\\).",
-    "crumbs": [
-      "Families of numerical semigroups",
-      "Numerical semigroup admitting a pattern"
-    ]
-  },
-  {
-    "objectID": "Families-NS/NS-admitting-pattern.html#examples-with-gap",
-    "href": "Families-NS/NS-admitting-pattern.html#examples-with-gap",
-    "title": "Numerical semigroup admitting a pattern",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to numerical semigroup admitting a pattern.",
     "crumbs": [
       "Families of numerical semigroups",
       "Numerical semigroup admitting a pattern"
@@ -7085,17 +7019,6 @@
     "title": "Semigroup ring",
     "section": "Examples",
     "text": "Examples\n\\(\\circ\\) Let us consider \\(b \\in \\mathbb{N}\\) an odd natural arbitrary but fixed and \\(S = \\langle 2, b \\rangle\\). It is easy to see that \\(S = \\{0, 2, 4, \\ldots, b-1, \\rightarrow \\}\\). Then \\[\n\\mathbb{K}[S] = \\{a_0 + a_1t^{s_1} + \\cdots + a_nt^{s_n} ~ | ~ a_0, \\ldots, a_n \\in \\mathbb{K}, ~~ s_0, s_1, \\ldots, s_n \\in S\\}.\n\\] In this case, \\(s_i\\) is even or greater or equal to \\(b\\) for all \\(i \\in \\{1, 2, \\ldots, n\\}\\).",
-    "crumbs": [
-      "Basic concepts",
-      "Semigroup ring"
-    ]
-  },
-  {
-    "objectID": "Basic-concepts/Semigroup-ring.html#examples-with-gap",
-    "href": "Basic-concepts/Semigroup-ring.html#examples-with-gap",
-    "title": "Semigroup ring",
-    "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to semigroup ring.",
     "crumbs": [
       "Basic concepts",
       "Semigroup ring"
