@@ -24,8 +24,4 @@ $\circ$ Let $A$ be a subset of $\mathbb{N}$, $\mathcal{S}$ the set of numerical 
 
 -   If $S \in V$, we have $A \subseteq S \subsetneq S \cup \{F(S)\}$, Therefore, $S \cup \{F(S)\} \in V$.
 
-## Examples with GAP
-
-Nowadays, there are no functions in package NumericalSgps related to Frobenius variety.
-
 ## References

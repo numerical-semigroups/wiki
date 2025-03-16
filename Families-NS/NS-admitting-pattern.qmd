@@ -24,8 +24,4 @@ $$
 
 Therefore, $\mathbb{N} \in \mathcal{S}(P)$.
 
-## Examples with GAP
-
-Nowadays, there are no functions in package NumericalSgps related to numerical semigroup admitting a pattern.
-
 ## References

@@ -1,5 +1,5 @@
 ---
-title: "Complete intersection"
+title: "Complete intersection numerical semigroup"
 format: html
 engine: markdown
 ---

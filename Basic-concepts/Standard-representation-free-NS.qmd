@@ -16,9 +16,9 @@ Assume that $S$ is free for the arrangement $(r_0, r_1, \ldots, r_h)$, and let $
 1.  $\displaystyle x = \sum_{k = 0}^h \lambda_k r_k$.
 
 2.  For all $k \in \{1, 2, \ldots, h\}$, $0 \le \lambda_k < e_k$.
-
-It is defined the standard representation of an integer $x \in \mathbb{Z}$ an expression of $x$ like in the previous proposition.
 :::
+
+It is defined the standard representation of an integer $x \in \mathbb{Z}$ as the expression of $x$ which satisfies the conditions of the above proposition.
 
 ## Examples
 

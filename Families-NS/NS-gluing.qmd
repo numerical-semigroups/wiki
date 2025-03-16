@@ -16,7 +16,7 @@ $$
 
 for some $\lambda \in S_1 \setminus \{n_1, \ldots, n_r\}, ~ \mu \in S_2 \setminus \{n_{r+1}, \ldots, n_e\}$ such that $gcd(\lambda, \mu) = 1$.
 
-It can be proven that $S$ is a numerical semigroup with minimal system of generators $\{\mu n_1, \ldots, \mu n_r, \lambda n_{r+1}, \ldots, \lambda n_e \}$ and $A = \{\mu n_1, \ldots, \mu n_r, \lambda n_{r+1}, \ldots, \lambda n_e\}$ is a [gluing](Gluing.qmd) of $A_1 = \{\mu n_1, \ldots, \mu n_r\}$ and $A_2 = \{ \lambda n_{r+1}, \ldots, \lambda n_e\}$.
+It can be proven that $S$ is a numerical semigroup with minimal system of generators $\{\mu n_1, \ldots, \mu n_r, \lambda n_{r+1}, \ldots, \lambda n_e \}$ and $A = \{\mu n_1, \ldots, \mu n_r, \lambda n_{r+1}, \ldots, \lambda n_e\}$ is a [gluing](../Basic-concepts/Gluing.qmd) of $A_1 = \{\mu n_1, \ldots, \mu n_r\}$ and $A_2 = \{ \lambda n_{r+1}, \ldots, \lambda n_e\}$.
 
 ## Examples
 

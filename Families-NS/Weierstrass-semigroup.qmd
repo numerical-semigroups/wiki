@@ -12,8 +12,4 @@ Let $C$ be a smooth algebraic curve over the complex numbers of genus $g$. Weier
 
 $\circ$
 
-## Examples with GAP
-
-Nowadays, there are no functions in package NumericalSgps related to Weierstrass semigroup.
-
 ## References

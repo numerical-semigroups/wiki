@@ -16,8 +16,4 @@ It is deduced from the definition that the intersection of $\mathcal{V}-$monoids
 
 $\circ$
 
-## Examples with GAP
-
-Nowadays, there are no functions in package NumericalSgps related to $\mathcal{V}-$monoid.
-
 ## References
