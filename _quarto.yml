@@ -7,11 +7,180 @@ website:
   sidebar:
     collapse-level: 1
     contents:
-      - section: "Básico"
+      - section: "Basic concepts"
         contents: 
           - Basic-concepts/Apery-set.qmd
-          - Basic-concepts/Conductor.qmd
-      - section: "Otro"
-        contents: 
+          - Basic-concepts/Apery-set-respect-set.qmd
+          - Basic-concepts/Apery-set.qmd
+          - Basic-concepts/Arf-closure-set.qmd
           - Basic-concepts/Arf-closure.qmd
+          - Basic-concepts/Conductor.qmd
+          - Basic-concepts/Degree-of-singularity.qmd
           - Basic-concepts/Dominant.qmd
+          - Basic-concepts/Embedding-dimension.qmd
+          - Basic-concepts/Frobenius-number.qmd
+          - Basic-concepts/Fundamental-gap.qmd
+          - Basic-concepts/Gap.qmd
+          - Basic-concepts/Genus.qmd
+          - Basic-concepts/Gluing.qmd
+          - Basic-concepts/Irreducible-Z-components.qmd
+          - Basic-concepts/Left-elements.qmd
+          - Basic-concepts/Minimal-set-of-generators.qmd
+          - Basic-concepts/Multiplicity.qmd
+          - Basic-concepts/Numerical-semigroup.qmd
+          - Basic-concepts/Oversemigroup.qmd
+          - Basic-concepts/Pseudo-Frobenius-number.qmd
+          - Basic-concepts/Ratio.qmd
+          - Basic-concepts/Relation-order-NS.qmd
+          - Basic-concepts/Saturated-closure.qmd
+          - Basic-concepts/Semigroup-ring.qmd
+          - Basic-concepts/Set-divisors.qmd
+          - Basic-concepts/Special-gap.qmd
+          - Basic-concepts/Standard-representation-free-NS.qmd
+          - Basic-concepts/Type.qmd
+          
+      - section: "Families of numerical semigroups"
+        contents:
+          - Families-NS/Arf-semigroup.qmd
+          - Families-NS/NS-Apery-set.qmd
+          - Families-NS/NS-acute.qmd
+          - Families-NS/NS-admitting-pattern.qmd
+          - Families-NS/NS-almost-symmetric.qmd
+          - Families-NS/NS-arithmetic.qmd
+          - Families-NS/NS-complete-intersection.qmd
+          - Families-NS/NS-free.qmd
+          - Families-NS/NS-gluing.qmd
+          - Families-NS/NS-half-line.qmd
+          - Families-NS/NS-irreducible.qmd
+          - Families-NS/NS-maximal-embedding-dimension.qmd
+          - Families-NS/NS-modular.qmd
+          - Families-NS/NS-prop-modular.qmd
+          - Families-NS/NS-pseudo-symmetric.qmd
+          - Families-NS/NS-quotient.qmd
+          - Families-NS/NS-saturated.qmd
+          - Families-NS/NS-set-rational-numbers.qmd
+          - Families-NS/NS-simple.qmd
+          - Families-NS/NS-symmetric.qmd
+          - Families-NS/NS-telescopic.qmd
+          - Families-NS/Weierstrass-semigroup.qmd
+
+      - section: "Ideals and numerical semigroups"
+        contents:
+          - Ideals-NS/Almost-canonical-ideal.qmd
+          - Ideals-NS/Blowup.qmd
+          - Ideals-NS/Canonical-ideal.qmd
+          - Ideals-NS/Conductor-ideal.qmd
+          - Ideals-NS/Frobenius-number-ideal.qmd
+          - Ideals-NS/Genus-ideal.qmd
+          - Ideals-NS/Integrally-closed-ideal.qmd
+          - Ideals-NS/Irreducible-ideal.qmd
+          - Ideals-NS/Maximal-ideal.qmd
+          - Ideals-NS/Maximum-sparse-ideal.qmd
+          - Ideals-NS/Multiplicity-ideal.qmd
+          - Ideals-NS/Multiplicity-sequence.qmd
+          - Ideals-NS/Principal-ideal.qmd
+          - Ideals-NS/Proper-ideal.qmd
+          - Ideals-NS/Reduction-number.qmd
+          - Ideals-NS/Reduction.qmd
+          - Ideals-NS/Relative-ideal.qmd
+          - Ideals-NS/Set-closed-divisors.qmd
+          - Ideals-NS/Stable-ideal.qmd
+          - Ideals-NS/Standard-canonical-ideal.qmd
+          - Ideals-NS/Type-ideal.qmd
+          - Ideals-NS/Z-irreducible-ideal.qmd
+      
+      - section: "Factorizations and divisibility"
+        contents: 
+          - Fact-and-Div/Apery-set-integer.qmd
+          - Fact-and-Div/Catenary-degree-of-a-numerical-semigroup.qmd
+          - Fact-and-Div/Catenary-degree-of-an-element.qmd
+          - Fact-and-Div/Chain-of-factorizations.qmd
+          - Fact-and-Div/Delta-set-of-a-numerical-semigroup.qmd
+          - Fact-and-Div/Delta-set-of-an-element.qmd
+          - Fact-and-Div/Desert.qmd
+          - Fact-and-Div/Distance-factorizations.qmd
+          - Fact-and-Div/Divide.qmd
+          - Fact-and-Div/Elasticity-of-a-numerical-semigroup.qmd
+          - Fact-and-Div/Elasticity-of-an-element.qmd
+          - Fact-and-Div/Feng-Rao-distance-generalized.qmd
+          - Fact-and-Div/Feng-Rao-distance.qmd
+          - Fact-and-Div/Half-factorial-monoid.qmd
+          - Fact-and-Div/Length-factorization.qmd
+          - Fact-and-Div/One-point-algebraic-code.qmd
+          - Fact-and-Div/Set-of-lengths.qmd
+          - Fact-and-Div/Tame-degree-of-a-numerical-semigroup.qmd
+          - Fact-and-Div/Tame-degree-of-an-element.qmd
+          - Fact-and-Div/w-primality-of-a-numerical-semigroup.qmd
+          - Fact-and-Div/w-primality-of-an-element.qmd
+
+      - section: "Frobenius varieties"
+        contents:
+          - Varieties-NS/Chain-associated-NS.qmd
+          - Varieties-NS/Directed-graph-all-NS.qmd
+          - Varieties-NS/Frobenius-variety-generated-NS.qmd
+          - Varieties-NS/Frobenius-variety.qmd
+          - Varieties-NS/Pattern.qmd
+          - Varieties-NS/V-monoid.qmd
+      
+      - section: "Presentations of a numerical smeigroup"
+        contents:
+          - Presentations-NS/Betti-element.qmd
+          - Presentations-NS/Congruence-compatible.qmd
+          - Presentations-NS/Congruence-set.qmd
+          - Presentations-NS/Factorization-homomorphism.qmd
+          - Presentations-NS/Factorizations-R-related.qmd
+          - Presentations-NS/Graph-associated-to-an-element.qmd
+          - Presentations-NS/Graph-element-generators.qmd
+          - Presentations-NS/Hilbert-series.qmd
+          - Presentations-NS/Presentation-NS.qmd
+          - Presentations-NS/Set-of-factorizations.qmd
+          - Presentations-NS/Shaded-set.qmd
+
+      - section: "Proportionally modular numerical semigroups"
+        contents:
+          - Prop-modular-NS/Adjacent-fractions.qmd
+          - Prop-modular-NS/Bezout-sequence.qmd
+          - Prop-modular-NS/Factor-prop-mod-Diophantine-ineq.qmd
+          - Prop-modular-NS/Mod-Diophantine-ineq.qmd
+          - Prop-modular-NS/Modulus-prop-mod-Diophantine-ineq.qmd
+          - Prop-modular-NS/Period-of-a-subadditive-function.qmd
+          - Prop-modular-NS/Prop-mod-Diophantine-ineq.qmd
+          - Prop-modular-NS/Proper-Bezout-sequence.qmd
+          - Prop-modular-NS/Proportion-prop-mod-Diophantine-ineq.qmd
+          - Prop-modular-NS/Subadditive-function.qmd
+          - Prop-modular-NS/Weight-mod-Diophantine-ineq.qmd
+
+      - section: "The structure of a numerical semigroup"
+        contents:
+          - Structure-NS/Archimedean-property.qmd
+          - Structure-NS/Congruence-on-a-semigroup.qmd
+          - Structure-NS/M-cancellative.qmd
+          - Structure-NS/M-hereditarily-finitely-generated.qmd
+          - Structure-NS/M-quasi-Archimedean.qmd
+          - Structure-NS/M-weakly-cancellative.qmd
+          - Structure-NS/Quotient-group-monoid.qmd
+          - Structure-NS/R-monoid.qmd
+          - Structure-NS/S-multiple-joined.qmd
+          - Structure-NS/S-torsion-free.qmd
+
+      - section: "Semigroup of an irreducible meromorphic series"
+        contents:
+          - Meromorphic-series-NS/Approximate-root.qmd
+          - Meromorphic-series-NS/Characteristic-sequences.qmd
+          - Meromorphic-series-NS/Contact.qmd
+          - Meromorphic-series-NS/Curve-NS.qmd
+          - Meromorphic-series-NS/Curves-one-place-infinity.qmd
+          - Meromorphic-series-NS/Exact-degree-algebroid-curve.qmd
+          - Meromorphic-series-NS/Exact-degree-polynomial-curve.qmd
+          - Meromorphic-series-NS/Expansion.qmd
+          - Meromorphic-series-NS/G-adic-expansion.qmd
+          - Meromorphic-series-NS/Intersection-multiplicity.qmd
+          - Meromorphic-series-NS/Milnor-number.qmd
+          - Meromorphic-series-NS/Newton-Puiseux-exponents.qmd
+          - Meromorphic-series-NS/Order.qmd
+          - Meromorphic-series-NS/Polynomial-NS.qmd
+          - Meromorphic-series-NS/Pseudo-approximate-root.qmd
+          - Meromorphic-series-NS/Short-parametrization.qmd
+          - Meromorphic-series-NS/Support.qmd
+          - Meromorphic-series-NS/Tschirnhausen-transform.qmd
+          - Meromorphic-series-NS/Very-short-parametrization.qmd
