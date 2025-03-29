@@ -1225,7 +1225,7 @@
     "href": "Basic-concepts/Dominant.html#examples-with-gap",
     "title": "Dominant",
     "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to dominant of a numerical semigroup.",
+    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to dominant of a numerical semigroup. However, the following function in GAP returns the dominant of a given numerical semigroup.\ngap&gt; DominantOfNumericalSemigroup := function(S)\n&gt;       if IsNumericalSemigroup(S) = false then\n&gt;               return \"The input must be a Numerical Semigroup\";\n&gt;       elif Conductor(S) &lt; 0 then\n&gt;               return \"The conductor must be a positive integer\";\n&gt;       else\n&gt;               n := Length(SmallElements(S));\n&gt;               return SmallElements(S)[n-1];\n&gt;       fi;\n&gt; end;\nfunction( S ) ... end\nFirst, we check if the input is a numerical semigroup with the function IsNumericalSemigroup. Afterwards, we check if \\(S\\) is a numerical semigroup with positive conductor. Finally, since the function SmallElements returns an ordered list formed by the left elements and the conductor of the given numerical semigroup, the penultimate element of the list is the dominant.\n\\(\\diamond\\) Let \\(S = \\langle 7, 22, 47, 52 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(7, 22, 47, 52);\n&lt;Numerical semigroup with 4 generators&gt;\nIf we compute the small elements of \\(S\\),\ngap&gt; SmallElements(S);\n[ 0, 7, 14, 21, 22, 28, 29, 35, 36, 42, 43, 44, 47, 49, 50, 51,\n  52, 54, 56, 57, 58, 59, 61, 63, 64, 65, 66, 68 ]\nThen, the dominant of \\(S\\) is \\(d(S) = 66\\). With the function defined above,\ngap&gt; DominantOfNumericalSemigroup(S);\n66\nThe only numerical semigroup with no positive conductor is \\(S = \\mathbb{N}\\), in this case,\ngap&gt; T := NumericalSemigroup(1);\n&lt;The numerical semigroup N&gt;\ngap&gt; DominantOfNumericalSemigroup(T);\n\"None\"\nIf \\(S\\) is not a numerical semigroup,\ngap&gt; DominantOfNumericalSemigroup(3);\n\"The input must be a Numerical Semigroup\"",
     "crumbs": [
       "Basic concepts",
       "Dominant"
@@ -2798,7 +2798,7 @@
     "href": "Families-NS/NS-Apery-set.html#examples-with-gap",
     "title": "Numerical semigroup with Apéry set of unique expression",
     "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to numerical semigroup with Apéry set of unique expression.",
+    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to numerical semigroup with Apéry set of unique expression. However, given a numerical semigroup \\(S\\), the following function returns true if \\(S\\) is a numerical semigroup with Apéry set of unique expression and false otherwise.\ngap&gt; IsAperySetOfUniqueExpression := function(S)\n&gt;       if IsNumericalSemigroup(S) = false then\n&gt;               return \"Input must be a Numerical Semigroup\";\n&gt;       fi;\n&gt;       for w in AperyList(S) do\n&gt;               if Length(Factorizations(w,S)) &gt; 1 then\n&gt;                       return false;\n&gt;               fi;\n&gt;       od;\n&gt;       return true;\n&gt; end;\nfunction( S ) ... end\n\\(\\diamond\\) Let \\(S = \\langle 13,14,15 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(13,14,15);\n&lt;Numerical semigroup with 3 generators&gt;\nThe Apéry set of \\(S\\) is \\(\\{0,4,5\\}\\) and every element (not taking into account \\(w = 0\\)) has unique expression, since there are minimal generators.\ngap&gt; IsAperySetOfUniqueExpression(S);\ntrue\n\\(\\diamond\\) If we consider \\(S = \\langle 17, 22, 24, 40 \\rangle\\),\ngap&gt; S := NumericalSemigroup(17, 22, 24, 40);\n&lt;Numerical semigroup with 4 generators&gt;\ngap&gt; IsAperySetOfUniqueExpression(S);\nfalse\nFor example, \\(88 \\in Ap(S, 17)\\) and \\(88 = 4 \\cdot 22 = 2 \\cdot 24 + 1 \\cdot 40\\).",
     "crumbs": [
       "Families of numerical semigroups",
       "Numerical semigroup with Apéry set of unique expression"
@@ -3612,7 +3612,7 @@
     "href": "Presentations-NS/Factorization-homomorphism.html#examples-with-gap",
     "title": "Factorization homomorphism",
     "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to factorization homomorphism of a numerical semigroup.",
+    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to factorization homomorphism of a numerical semigroup. However, given a numerical semigroup \\(S\\) and a list of integers \\(Is\\), the following function returns the image of the tuple formed by the elements of the list by the homomorfism defined by \\(S\\).\ngap&gt; ImageHomomorfismOfNumericalSemigroup := function(S, Is)\n&gt;       if IsNumericalSemigroup(S) = false then\n&gt;               return \"Input must be a Numerical Semigroup\";\n&gt;       fi;\n&gt;       Min_gen := MinimalGenerators(S);\n&gt;       p := Length(Min_gen);\n&gt;       if p = Length(Is) then\n&gt;               sum := 0;\n&gt;               j := 1;\n&gt;               for a in Is do\n&gt;                       sum := sum + a * Min_gen[j];\n&gt;                       j := j + 1;\n&gt;               od;\n&gt;               return sum;\n&gt;       fi;\n&gt; end;\nfunction( S, Is ) ... end\n\\(\\diamond\\) Let \\(S = \\langle 14, 30, 71, 73 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(14, 30, 71, 73);\n&lt;Numerical semigroup with 4 generators&gt;\nThe image of \\((0, 1, 2, 1)\\) by \\(\\phi_S\\) is as follows.\ngap&gt; ImageHomomorfismOfNumericalSemigroup(S, [0, 1, 2, 1]);\n245\nThen, \\(0 \\cdot 14 + 1 \\cdot 30 + 2 \\cdot 71 + 1 \\cdot 73 = 245\\).",
     "crumbs": [
       "Presentations of a numerical smeigroup",
       "Factorization homomorphism"
@@ -6358,7 +6358,7 @@
     "href": "Basic-concepts/Relation-order-NS.html#examples",
     "title": "Relation order of a numerical semigroup",
     "section": "Examples",
-    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 10, 14, 17, 21 \\rangle\\) and the integers \\(x_1 = 8, x_2 = 62\\). For \\(x_1\\), there is no positive integer \\(y \\ne x_1\\) such that \\(y \\le_S x_1\\), since \\(x_1 - y = 8 - y &lt; 10\\) and the only element in \\(S\\) smaller than \\(10\\) is \\(0\\), therefore \\(x_1\\) is a minimal in \\(\\mathbb{N}\\), but is not minimal in \\(\\mathbb{Z}\\), since \\(-2 \\le_S x_1\\). On the other hand, for \\(x_2 = 62\\) we have that \\(10 \\le_S 62\\) and \\(62 \\le_S 72\\).\n\\(\\diamond\\) Let \\(S\\) be a numerical semigroup and let \\(F(S)\\) be the Frobenius number of \\(S\\). If we suppose that \\(F(S) \\le_S x\\) for some \\(x \\in \\mathbb{Z} \\setminus S\\), then there exists \\(s \\in S\\) such that \\(x = F(S) + s\\), but that means \\(x \\in S\\), which is a contradiction. Therefore, \\(F(S)\\) is maximal in \\(\\mathbb{Z} \\setminus S\\).",
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 10, 14, 17, 21 \\rangle\\) and the integers \\(x_1 = 8, x_2 = 62\\). For \\(x_1\\), there is no positive integer \\(y \\ne x_1\\) such that \\(y \\le_S x_1\\), since \\(x_1 - y = 8 - y &lt; 10\\) and the only element in \\(S\\) smaller than \\(10\\) is \\(0\\), therefore \\(x_1\\) is a minimal in \\(\\mathbb{N}\\), but is not minimal in \\(\\mathbb{Z}\\), since \\(-2 \\le_S x_1\\). On the other hand, for \\(x_2 = 62\\) we have that \\(10 \\le_S 62\\) and \\(62 \\le_S 72\\).\n\\(\\circ\\) Let \\(S\\) be a numerical semigroup and let \\(F(S)\\) be the Frobenius number of \\(S\\). If we suppose that \\(F(S) \\le_S x\\) for some \\(x \\in \\mathbb{Z} \\setminus S\\), then there exists \\(s \\in S\\) such that \\(x = F(S) + s\\), but that means \\(x \\in S\\), which is a contradiction. Therefore, \\(F(S)\\) is maximal in \\(\\mathbb{Z} \\setminus S\\).",
     "crumbs": [
       "Basic concepts",
       "Relation order of a numerical semigroup"
@@ -6369,7 +6369,7 @@
     "href": "Basic-concepts/Relation-order-NS.html#examples-with-gap",
     "title": "Relation order of a numerical semigroup",
     "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to relation order.",
+    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to dominant of a numerical semigroup. However, given a numerical semigroup and two integers \\(a,b \\in \\mathbb{Z}\\), the following function in GAP returns true if \\(a \\le_S b\\) and false otherwise.\ngap&gt; AreRelatedNumericalSemigroup := function(S,a,b)\n&gt;       if IsNumericalSemigroup(S) = false then\n&gt;               return \"First parameter must be a Numerical Semigroup\";\n&gt;       fi;\n&gt;       if (b-a) in S then\n&gt;               return true;\n&gt;       else\n&gt;               return false;\n&gt;       fi;\n&gt; end;\nfunction( S, a, b ) ... end\n\\(\\diamond\\) Let \\(S = \\langle 18, 22, 25, 30 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(18, 22, 25, 30);\n&lt;Numerical semigroup with 4 generators&gt;\nSince \\(95 - 65 = 30 \\in S\\), the function should return true, and since \\(22 - 18 = 4 \\not \\in S\\), the function should return false. If we try it,\ngap&gt; AreRelatedNumericalSemigroup(S, 65, 95);\ntrue\ngap&gt; AreRelatedNumericalSemigroup(S, 18, 22);\nfalse\ngap&gt; AreRelatedNumericalSemigroup(18, S, 22);\n\"First parameter must be a Numerical Semigroup\"",
     "crumbs": [
       "Basic concepts",
       "Relation order of a numerical semigroup"
@@ -6556,7 +6556,7 @@
     "href": "Basic-concepts/Ratio.html",
     "title": "Ratio",
     "section": "",
-    "text": "Let \\(S\\) be a numerical semigroup minimally generated by \\(P = \\{n_1, \\ldots, n_p\\}\\) with \\(n_1 &lt; n_2 &lt; \\cdots &lt; n_p\\). It is defined the ratio of \\(S\\) as \\(n_2\\), and it is denoted by \\(r(S)\\).",
+    "text": "Let \\(S\\) be a numerical semigroup other than \\(\\mathbb{N}\\) and minimally generated by \\(P = \\{n_1, \\ldots, n_p\\}\\) with \\(n_1 &lt; n_2 &lt; \\cdots &lt; n_p\\). It is defined the ratio of \\(S\\) as \\(n_2\\), and it is denoted by \\(r(S)\\).",
     "crumbs": [
       "Basic concepts",
       "Ratio"
@@ -6567,7 +6567,7 @@
     "href": "Basic-concepts/Ratio.html#definition",
     "title": "Ratio",
     "section": "",
-    "text": "Let \\(S\\) be a numerical semigroup minimally generated by \\(P = \\{n_1, \\ldots, n_p\\}\\) with \\(n_1 &lt; n_2 &lt; \\cdots &lt; n_p\\). It is defined the ratio of \\(S\\) as \\(n_2\\), and it is denoted by \\(r(S)\\).",
+    "text": "Let \\(S\\) be a numerical semigroup other than \\(\\mathbb{N}\\) and minimally generated by \\(P = \\{n_1, \\ldots, n_p\\}\\) with \\(n_1 &lt; n_2 &lt; \\cdots &lt; n_p\\). It is defined the ratio of \\(S\\) as \\(n_2\\), and it is denoted by \\(r(S)\\).",
     "crumbs": [
       "Basic concepts",
       "Ratio"
@@ -6589,7 +6589,7 @@
     "href": "Basic-concepts/Ratio.html#examples-with-gap",
     "title": "Ratio",
     "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to ratio of a numerical semigroup.",
+    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to ratio of a numerical semigroup. However, given a numerical semigroup, the following function returns its ratio.\ngap&gt; RatioNumericalSemigroup := function(S)\n&gt;       if IsNumericalSemigroup(S) = false then\n&gt;               return \"Input must be a Numerical Semigroup\";\n&gt;       elif 1 in S then\n&gt;               return \"Numerical Semigroup must be other than N\";\n&gt;       else\n&gt;               return MinimalGenerators(S)[2];\n&gt;       fi;\n&gt; end;\nfunction( S ) ... end\n\\(\\diamond\\) Let \\(S = \\langle 18, 36, 37, 40, 72 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(18, 36, 37, 40, 72);\n&lt;Numerical semigroup with 5 generators&gt;\nGiven a numerical semigroup \\(S\\), the function MinimalGenerators returns a list with the minimal generators of \\(S\\).\ngap&gt; MinimalGenerators(S);\n[ 18, 37, 40 ]\nThen, the ratio of \\(S\\) is \\(r(S) = 37\\). With the function defined above,\ngap&gt; RatioNumericalSemigroup(S);\n37\ngap&gt; T := NumericalSemigroup(1);\n&lt;The numerical semigroup N&gt;\ngap&gt; RatioNumericalSemigroup(T);\n\"Numerical Semigroup must be other than N\"\ngap&gt; RatioNumericalSemigroup(2);\n\"Input must be a Numerical Semigroup\"",
     "crumbs": [
       "Basic concepts",
       "Ratio"
