@@ -36,6 +36,15 @@ $$
 
 ## Examples with GAP
 
-Nowadays, there are no functions in package NumericalSgps related to gluing of a set of positive integers.
+Nowadays, there are no functions in package NumericalSgps related to gluing of a set of positive integers. 
+
+<!-- However, given three set of integers $A,A_1, A_2$, the following function returns true if $A$ is a gluing of $A_1$ and $A_2$ and false otherwise. -->
+
+
+
+
 
 ## References
+
+
+<!-- https://docs.gap-system.org/doc/tut/chap0_mj.html#contents -->

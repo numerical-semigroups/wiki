@@ -16,6 +16,48 @@ $\circ$ Let $S = \langle 4, 6, 11 \rangle$. It is easy to check that $Ap(S, 4) \
 
 ## Examples with GAP
 
-Nowadays, there are no functions in package NumericalSgps related to numerical semigroup with Apéry set of unique expression.
+Nowadays, there are no functions in package NumericalSgps related to numerical semigroup with Apéry set of unique expression. However, given a numerical semigroup $S$, the following function returns true if $S$ is a numerical semigroup with Apéry set of unique expression and false otherwise.
+
+``` gap
+gap> IsAperySetOfUniqueExpression := function(S)
+>       if IsNumericalSemigroup(S) = false then
+>               return "Input must be a Numerical Semigroup";
+>       fi;
+>       for w in AperyList(S) do
+>               if Length(Factorizations(w,S)) > 1 then
+>                       return false;
+>               fi;
+>       od;
+>       return true;
+> end;
+function( S ) ... end
+```
+
+$\diamond$ Let $S = \langle 13,14,15 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(13,14,15);
+<Numerical semigroup with 3 generators>
+```
+
+The Apéry set of $S$ is $\{0,4,5\}$ and every element (not taking into account $w = 0$) has unique expression, since there are minimal generators.
+
+``` gap
+gap> IsAperySetOfUniqueExpression(S);
+true
+```
+
+$\diamond$ If we consider $S = \langle 17, 22, 24, 40 \rangle$,
+
+``` gap
+gap> S := NumericalSemigroup(17, 22, 24, 40);
+<Numerical semigroup with 4 generators>
+gap> IsAperySetOfUniqueExpression(S);
+false
+```
+
+For example, $88 \in Ap(S, 17)$ and $88 = 4 \cdot 22 = 2 \cdot 24 + 1 \cdot 40$.
 
 ## References
+
+<!-- https://docs.gap-system.org/doc/tut/chap0_mj.html#contents -->

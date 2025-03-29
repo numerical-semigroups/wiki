@@ -8,7 +8,7 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](Minimal-set-of-generators.qmd) by $P = \{n_1, \ldots, n_p\}$ with $n_1 < n_2 < \cdots < n_p$. It is defined the ratio of $S$ as $n_2$, and it is denoted by $r(S)$.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) other than $\mathbb{N}$ and [minimally generated](Minimal-set-of-generators.qmd) by $P = \{n_1, \ldots, n_p\}$ with $n_1 < n_2 < \cdots < n_p$. It is defined the ratio of $S$ as $n_2$, and it is denoted by $r(S)$.
 
 ## Examples
 
@@ -16,6 +16,48 @@ $\circ$ Let $S = \langle 6, 12, 14, 15 \rangle$. Since $12 = 2 \cdot 6$, the set
 
 ## Examples with GAP
 
-Nowadays, there are no functions in package NumericalSgps related to ratio of a numerical semigroup.
+Nowadays, there are no functions in package NumericalSgps related to ratio of a numerical semigroup. However, given a numerical semigroup, the following function returns its ratio.
+
+``` gap
+gap> RatioNumericalSemigroup := function(S)
+>       if IsNumericalSemigroup(S) = false then
+>               return "Input must be a Numerical Semigroup";
+>       elif 1 in S then
+>               return "Numerical Semigroup must be other than N";
+>       else
+>               return MinimalGenerators(S)[2];
+>       fi;
+> end;
+function( S ) ... end
+```
+
+$\diamond$ Let $S = \langle 18, 36, 37, 40, 72 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(18, 36, 37, 40, 72);
+<Numerical semigroup with 5 generators>
+```
+
+Given a numerical semigroup $S$, the function `MinimalGenerators` returns a list with the minimal generators of $S$.
+
+``` gap
+gap> MinimalGenerators(S);
+[ 18, 37, 40 ]
+```
+
+Then, the ratio of $S$ is $r(S) = 37$. With the function defined above,
+
+``` gap
+gap> RatioNumericalSemigroup(S);
+37
+gap> T := NumericalSemigroup(1);
+<The numerical semigroup N>
+gap> RatioNumericalSemigroup(T);
+"Numerical Semigroup must be other than N"
+gap> RatioNumericalSemigroup(2);
+"Input must be a Numerical Semigroup"
+```
 
 ## References
+
+<!-- https://docs.gap-system.org/doc/tut/chap0_mj.html#contents -->
