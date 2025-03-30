@@ -28,13 +28,13 @@ $$
 \frac{w}{10} < \frac{x}{9} < \frac{y}{8} < \frac{z}{7},
 $$
 
-be a sequence of fractions. Then, is a Bézout sequence if, and only if, $w \equiv 1 ~ (mod ~ 10)$ and $w > 0$, that is, if $w = 10q + 1$ for some $q \in \mathbb{N}$. Indeed, the equations
+be a sequence of fractions. Then, is a Bézout sequence if, and only if, $w \equiv 1 ~ (mod ~ 10)$, $w > 0$ and $x,y,z$ are determined by the equations
 
 $$
 10x - 9w = 1, ~~~ 9y - 8x = 1, ~~~ 8z - 7y = 1,
 $$
 
-can be rewritten as
+Indeed, note that the equations are the condition of Bézout sequence and can be rewritten as
 
 $$
 x = \frac{9w + 1}{10}, ~~~ y = \frac{36w + 9}{45}, ~~~ z = \frac{252w+108}{360}.
@@ -54,6 +54,34 @@ Simplifying the system of congruences, it turns out that the set of solutions ar
 
 ## Examples with GAP
 
-Nowadays, there are no functions in package NumericalSgps related to Bézout sequence.
+Nowadays, there are no functions in package NumericalSgps related to Bézout sequence. However, given a list $I = [[a_1, b_1], \ldots, [a_p, b_p]]$ where $a_i, b_i$ are positive integers for all $i \in \{1, \ldots, p\}$, the following function returns true if $\frac{a_1}{b_1} < \ldots < \frac{a_p}{b_p}$ is a Bézout sequence and false otherwise.
+
+``` gap
+gap> IsBezoutSeq := function(I)
+>       local n;
+>       n := Length(I);
+>       if n = 0 then
+>               Error("The argument is an empty list");
+>       fi;
+>       for i in [1..n-1] do
+>               if not I[i+1][1]*I[i][2] - I[i+1][2]*I[i][1] = 1 then
+>                        return false;
+>               fi;
+>       od;
+>       return true;
+> end;
+function( I ) ... end
+```
+
+<!-- Ejemplo de Num. Sem. -->
+
+$\diamond$ Let $\frac{5}{3} < \frac{12}{7} < \frac{7}{4} < \frac{9}{5}$.
+
+``` gap
+gap> IsBezoutSeq([ [5,3], [12, 7], [7,4], [9,5] ]);
+true
+```
+
+then, the sequence is a Bézout sequence.
 
 ## References

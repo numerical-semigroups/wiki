@@ -41,6 +41,105 @@ Let us consider $x = (2,1,3)$ and $y = (14,0,0)$. We have an $8-$chain, since th
 
 ## Examples with GAP
 
-Nowadays, there are no functions in package NumericalSgps related to $N-$chain of factorizations.
+Nowadays, there are no functions in package NumericalSgps related to $N-$chain of factorizations. However, given a numerical semigroup, a positive integer $N$, and a list of factorizations $I = \{x_1, \ldots, x_n\}$, the following function returns true if $I$ is an $N-$chain of factorizations joining $x_1$ and $x_n$.
+
+``` gap
+gap> NChainOfFactorizations := function(S,N,I)
+>       local n, value, list_fact;
+>       if not IsNumericalSemigroup(S) then
+>               Error("First argument must be a Numerical Semigroup");
+>       fi;
+>       n := Length(I);
+>       if n = 0 then
+>               Error("Third argument is an empty list");
+>       fi;
+>       value := ImageHomomorfismOfNumericalSemigroup(S, I[1]);
+>       list_fact := Factorizations(value, S);
+>       if not IsSubset(list_fact, I) then
+>             Error("Third argument is not a list of factorizations of the same value");
+>       fi;
+>       for i in [1..n-1] do
+>         if DistanceFactorizations(I[i], I[i+1]) > N then
+>             return false;
+>         fi;
+>       od;
+>       return true;
+> end;
+function( S, N, I ) ... end
+```
+
+The functions `ImageHomomorfismOfNumericalSemigroup` and `DistanceFactorizations` are not implemented in package NumericalSgps, their code are as follows.
+
+``` gap
+gap> ImageHomomorfismOfNumericalSemigroup := function(S, Is)
+>       local Min_gen, p, j, sum;
+>       if not IsNumericalSemigroup(S) then
+>               Error("First argument must be a Numerical Semigroup");
+>       fi;
+>       Min_gen := MinimalGenerators(S);
+>       p := Length(Min_gen);
+>       if p = Length(Is) then
+>               sum := 0;
+>               j := 1;
+>               for a in Is do
+>                       sum := sum + a * Min_gen[j];
+>                       j := j + 1;
+>               od;
+>               return sum;
+>       fi;
+> end;
+function( S, Is ) ... end
+```
+
+``` gap
+gap> DistanceFactorizations := function(x,y)
+>       local z_1, z_2, t_i, n;
+>       n := Length(x);
+>       if not Length(y) = n then
+>               Error("Lists must be of the same length");
+>       fi;
+>       z_1 := [];
+>       z_2 := [];
+>       for i in [1..n] do
+>           t_i := Minimum(x[i], y[i]);
+>           Add(z_1, x[i] - t_i);
+>           Add(z_2, y[i] - t_i);
+>       od;
+>       return Maximum(Sum(z_1), Sum(z_2));
+> end;
+function( x, y ) ... end
+```
+
+$\diamond$ Let $S = \langle 20, 21, 46, 53 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(20, 21, 46, 53);
+<Numerical semigroup with 4 generators>
+```
+
+Let us consider a list of factorizations of $s = 200 \in S$.
+
+``` gap
+gap> 200 in S;
+true
+gap> Factorizations(200,S);
+[ [ 10, 0, 0, 0 ], [ 1, 2, 3, 0 ], [ 0, 7, 0, 1 ], [ 4, 1, 1, 1 ],
+  [ 1, 1, 0, 3 ] ]
+gap> L := [[1,2,3,0], [0,7,0,1], [4,1,1,1], [1,1,0,3]];
+[ [ 1, 2, 3, 0 ], [ 0, 7, 0, 1 ], [ 4, 1, 1, 1 ], [ 1, 1, 0, 3 ] ]
+```
+
+It is defined the [catenary degree](Catenary-degree-of-an-element.qmd) of $s$ as the least $N$ such that for any two factorizations $x, y \in \mathbf{Z}(s)$, there is an $N$-chain joining them.
+
+``` gap
+gap> c := CatenaryDegree(200, S);
+6
+gap> List([1..c], x -> NChainOfFactorizations(S,x,L));              
+[ false, false, false, false, false, true ]
+```
+
+In this case, the chain of factorizations that we defined joining $x = (1,2,3,0)$ and $y = (1,1,0,3)$ is a $6-$chain.
 
 ## References
+
+<!-- https://docs.gap-system.org/doc/tut/chap0_mj.html#contents -->

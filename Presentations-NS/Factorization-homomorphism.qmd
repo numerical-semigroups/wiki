@@ -34,10 +34,7 @@ Nowadays, there are no functions in package NumericalSgps related to factorizati
 
 ``` gap
 gap> ImageHomomorfismOfNumericalSemigroup := function(S, Is)
->       local Min_gen;
->       local p;
->       local j;
->       local sum;
+>       local Min_gen, p, j, sum;
 >       if not IsNumericalSemigroup(S) then
 >               Error("First argument must be a Numerical Semigroup");
 >       fi;

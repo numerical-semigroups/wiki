@@ -20,6 +20,62 @@ $\circ$ The Bézout sequence $\frac{5}{3} < \frac{12}{7} < \frac{7}{4} < \frac{9
 
 ## Examples with GAP
 
-Nowadays, there are no functions in package NumericalSgps related to proper Bézout sequence.
+Nowadays, there are no functions in package NumericalSgps related to proper Bézout sequence. However, given a list $I = [[a_1, b_1], \ldots, [a_p, b_p]]$ where $a_i, b_i$ are positive integers for all $i \in \{1, \ldots, p\}$, the following function returns true if $\frac{a_1}{b_1} < \ldots < \frac{a_p}{b_p}$ is a proper Bézout sequence and false otherwise.
+
+``` gap
+gap> IsProperBezoutSequence := function(I)
+>       local n;
+>       n := Length(I);
+>       if n = 0 then
+>               Error("The argument is an empty list");
+>       fi;
+>       if not IsBezoutSeq(I) then
+>           return false;
+>       fi;
+>       for i in [1..n-2] do
+>           for j in [i+2..n] do
+>               if I[j][1]*I[i][2] - I[j][2]*I[i][1] < 2 then
+>                        return false;
+>               fi;
+>           od;
+>       od;
+>       return true;
+> end;
+function( I ) ... end
+```
+
+The function `IsBezoutSeq` is not implemented in package NumericalSgps, its code is as follows.
+
+``` gap
+gap> IsBezoutSeq := function(I)
+>       local n;
+>       n := Length(I);
+>       if n = 0 then
+>               Error("The argument is an empty list");
+>       fi;
+>       for i in [1..n-1] do
+>               if not I[i+1][1]*I[i][2] - I[i+1][2]*I[i][1] = 1 then
+>                        return false;
+>               fi;
+>       od;
+>       return true;
+> end;
+function( I ) ... end
+```
+
+$\diamond$ Let $\frac{131}{50} < \frac{76}{29} < \frac{21}{8} < \frac{8}{3}$.
+
+```gap
+gap> I := [ [131, 50], [76, 29], [21, 8], [8,3] ];
+[ [ 131, 50 ], [ 76, 29 ], [ 21, 8 ], [ 8, 3 ] ]
+gap> IsProperBezoutSequence(I);
+true
+```
+
+Then, the sequence is a Bézout sequence and is proper.
+
 
 ## References
+
+
+

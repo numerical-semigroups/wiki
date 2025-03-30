@@ -22,8 +22,7 @@ Nowadays, there are no functions in package NumericalSgps related to arithmetic 
 
 ``` gap
 gap> IsArithmetic := function(S)
->       local Min_gen;
->       local Diff;
+>       local Min_gen, Diff;
 >       if not IsNumericalSemigroup(S) then
 >               Error("The argument must be a Numerical Semigroup");
 >       fi;

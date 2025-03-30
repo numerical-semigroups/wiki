@@ -18,7 +18,9 @@ is well defined, since $S \cup \{F(S)\}$ is a numerical semigroup, and finite, s
 
 $$
 S_0 \subsetneq S_1 \subsetneq \cdots \subsetneq S_k = \mathbb{N}.
-$$ Moreover, this path connects $S$ with $\mathbb{N}$ in $\mathcal{G}(\mathcal{S})$ and is unique. It is defined the chain associated to $S$, denoted by $Ch(S)$, as
+$$
+
+Moreover, this path connects $S$ with $\mathbb{N}$ in $\mathcal{G}(\mathcal{S})$ and is unique. It is defined the chain associated to $S$, denoted by $Ch(S)$, as
 
 $$
 Ch(S) = \{S_0, S_1, \ldots, S_k \}.
@@ -34,6 +36,66 @@ $$
 
 ## Examples with GAP
 
-Nowadays, there are no functions in package NumericalSgps related to chain associated to a numerical semigroup.
+Nowadays, there are no functions in package NumericalSgps related to chain associated to a numerical semigroup. However, given a numerical semigroup $S$, the following function returns the chain associated to $S$.
+
+``` gap
+gap> ChainOfNumericalSemigroup := function(S)
+>       local g, C, F, Min_gen, I, T;
+>       if not IsNumericalSemigroup(S) then
+>               Error("The argument must be a Numerical Semigroup");
+>       fi;
+>       if 1 in S then
+>               return [NumericalSemigroup(1)];
+>       fi;
+>       g := Length(Gaps(S));
+>       C := [S];
+>       for i in [1..g] do
+>               F := FrobeniusNumber(C[i]);
+>               Min_gen := MinimalGenerators(C[i]);
+>               I := Union(Min_gen, [F]);
+>               T := NumericalSemigroupByGenerators(I);
+>               Add(C, T);
+>       od;
+>       return C;
+> end;
+```
+
+$\diamond$ Let $S = \langle 7, 8, 9, 19, 20 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(7, 8, 9, 19, 20);
+<Numerical semigroup with 5 generators>
+```
+
+The chain associated of $S$ is as follows.
+
+``` gap
+gap> C := ChainOfNumericalSemigroup(S);
+[ <Numerical semigroup with 5 generators>,
+  <Numerical semigroup with 5 generators>,
+  <Numerical semigroup with 5 generators>,
+  <Numerical semigroup with 6 generators>,
+  <Numerical semigroup with 7 generators>,
+  <Numerical semigroup with 6 generators>,
+  <Numerical semigroup with 5 generators>,
+  <Numerical semigroup with 4 generators>,
+  <Numerical semigroup with 3 generators>,
+  <Numerical semigroup with 2 generators>,
+  <The numerical semigroup N> ]
+gap> List(C, l -> MinimalGenerators(l));
+[ [ 7, 8, 9, 19, 20 ], [ 7, 8, 9, 13, 19 ], [ 7, 8, 9, 12, 13 ],
+  [ 7, 8, 9, 11, 12, 13 ], [ 7 .. 13 ], [ 6 .. 11 ], [ 5 .. 9 ],
+  [ 4 .. 7 ], [ 3 .. 5 ], [ 2, 3 ], [ 1 ] ]
+```
+
+Therefore,
+
+$$
+Ch(S) = \{S, \langle 7, 8, 9, 13, 19 \rangle, \langle 7, 8, 9, 12, 13 \rangle,
+$$
+
+$$
+\langle 7, 8, 9, 11, 12, 13 \rangle, \{7, \rightarrow\}, \{6, \rightarrow\}, \ldots, \{2, \rightarrow\}, \mathbb{N}\}.
+$$
 
 ## References

@@ -26,14 +26,60 @@ $\circ$ Let $S = \langle 7, 9, 14 \rangle$ and $s = 49$. The set of factorizatio
 
 $$
 (7,0,0) \land (1,3,1) = (1,0,0).
-$$ Therefore, the distance between the factorizations $(7,0,0)$ and $(1,3,1)$ is
+$$
+
+Therefore, the distance between the factorizations $(7,0,0)$ and $(1,3,1)$ is
 
 $$
-d((7,0,0), (1,3,1)) = \max \{ | x - (x \land y) |, | y - (x \land y) | \} = \max \{ 6, 4 \} = 4.
+d((7,0,0), (1,3,1)) = \max \{ | x - (x \land y) |, | y - (x \land y) | \} = \max \{ 6, 4 \} = 6.
 $$
 
 ## Examples with GAP
 
-Nowadays, there are no functions in package NumericalSgps related to distance between factorizations.
+Nowadays, there are no functions in package NumericalSgps related to distance between factorizations. However, given two lists of integers of the same length $I_1 = \{x_1, \ldots, x_n\}, I_2 = \{y_1, \ldots, y_n\}$, the following function returns the distance between $x = (x_1, \ldots, x_n)$ and $y = (y_1, \ldots, y_n)$.
+
+``` gap
+gap> DistanceFactorizations := function(x,y)
+>       local z_1, z_2, t_i, n;
+>       n := Length(x);
+>       if not Length(y) = n then
+>               Error("Lists must be of the same length");
+>       fi;
+>       z_1 := [];
+>       z_2 := [];
+>       for i in [1..n] do
+>           t_i := Minimum(x[i], y[i]);
+>           Add(z_1, x[i] - t_i);
+>           Add(z_2, y[i] - t_i);
+>       od;
+>       return Maximum(Sum(z_1), Sum(z_2));
+> end;
+function( x, y ) ... end
+```
+
+$\diamond$ Let $S = \langle 34, 38, 41, 77, 103 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(34, 38, 41, 77, 103);
+<Numerical semigroup with 5 generators>
+```
+
+Given a numerical semigroup $S$ and an integer $n \in S$, the function `Factorizations` returns the factorizations of $n$ in $S$.
+
+``` gap
+gap> 315 in S;
+true
+gap> Factorizations(315,S);
+[ [ 1, 2, 5, 0, 0 ], [ 7, 0, 0, 1, 0 ], [ 0, 1, 3, 2, 0 ],
+  [ 4, 2, 0, 0, 1 ], [ 2, 0, 1, 0, 2 ] ]
+```
+
+Let us consider $x = (1,2,5,0,0)$ and $y = (0,1,3,2,0)$, if we use the function defined above, the distance between $x$ an $y$ is
+
+``` gap
+gap> DistanceFactorizations([1,2,5,0,0],[0,1,3,2,0]);                 4
+```
 
 ## References
+
+<!-- https://docs.gap-system.org/doc/tut/chap0_mj.html#contents -->

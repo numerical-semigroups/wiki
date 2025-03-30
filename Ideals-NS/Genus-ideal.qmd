@@ -20,8 +20,7 @@ Nowadays, there are no functions in package NumericalSgps related to genus of a 
 
 ``` gap
 gap> GenusOfRelativeIdeal := function(I)
->       local m;
->       local T;
+>       local m, T;
 >       if not IsIdealOfNumericalSemigroup(I) then
 >               Error("The argument must be a relative ideal");
 >       fi;
