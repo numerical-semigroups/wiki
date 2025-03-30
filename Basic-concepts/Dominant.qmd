@@ -20,19 +20,19 @@ Nowadays, there are no functions in package NumericalSgps related to dominant of
 
 ``` gap
 gap> DominantOfNumericalSemigroup := function(S)
->       if IsNumericalSemigroup(S) = false then
->               return "The input must be a Numerical Semigroup";
->       elif Conductor(S) < 0 then
->               return "The conductor must be a positive integer";
->       else
->               n := Length(SmallElements(S));
->               return SmallElements(S)[n-1];
+>       local n;
+>       if not IsNumericalSemigroup(S) then
+>               Error("The argument must be a Numerical Semigroup");
 >       fi;
+>       if Conductor(S) <= 0 then
+>               Error("The conductor must be a positive integer");
+>       fi;
+>       n := Length(SmallElements(S));
+>       return SmallElements(S)[n-1];
+>       
 > end;
 function( S ) ... end
 ```
-
-First, we check if the input is a numerical semigroup with the function `IsNumericalSemigroup`. Afterwards, we check if $S$ is a numerical semigroup with positive conductor. Finally, since the function `SmallElements` returns an ordered list formed by the [left elements](Left-elements.qmd) and the conductor of the given numerical semigroup, the penultimate element of the list is the dominant.
 
 $\diamond$ Let $S = \langle 7, 22, 47, 52 \rangle$, in GAP:
 
@@ -41,7 +41,7 @@ gap> S := NumericalSemigroup(7, 22, 47, 52);
 <Numerical semigroup with 4 generators>
 ```
 
-If we compute the small elements of $S$,
+If we compute the [small elements](Left-elements.qmd) of $S$,
 
 ``` gap
 gap> SmallElements(S);
@@ -56,21 +56,6 @@ gap> DominantOfNumericalSemigroup(S);
 66
 ```
 
-The only numerical semigroup with no positive conductor is $S = \mathbb{N}$, in this case,
-
-``` gap
-gap> T := NumericalSemigroup(1);
-<The numerical semigroup N>
-gap> DominantOfNumericalSemigroup(T);
-"None"
-```
-
-If $S$ is not a numerical semigroup,
-
-``` gap
-gap> DominantOfNumericalSemigroup(3);
-"The input must be a Numerical Semigroup"
-```
 
 ## References
 

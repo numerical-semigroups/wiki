@@ -16,6 +16,42 @@ $\circ$ The definition of genus of a relative ideal is a generalization of the d
 
 ## Examples with GAP
 
-Nowadays, there are no functions in package NumericalSgps related to genus of a relative ideal.
+Nowadays, there are no functions in package NumericalSgps related to genus of a relative ideal. However, given a relative ideal $E$, the following function returns the genus of $E$.
+
+``` gap
+gap> GenusOfRelativeIdeal := function(I)
+>       local m;
+>       local T;
+>       if not IsIdealOfNumericalSemigroup(I) then
+>               Error("The argument must be a relative ideal");
+>       fi;
+>       m := Minimum(I);
+>       T := m + NumericalSemigroup(1);
+>       return Length(Difference(T, I));
+> end;
+```
+
+$\diamond$ Let $S = \langle 33, 37, 41, 45, 91 \rangle$ and $I = \{-14, -11, -3, 5, 12 \} + S$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(33, 37, 41, 45, 91);
+<Numerical semigroup with 5 generators>
+gap> I := [-14, -11, -3, 5, 12] + S;
+<Ideal of numerical semigroup>
+```
+
+Applying the function defined above, the genus of the relative ideal $I$ is
+
+``` gap
+gap> GenusOfRelativeIdeal(I);
+62
+```
+
+From the definition, it can be deduced that $g(I) = C(I) - m(I) + 1 - |N(I)|$, where $C(I)$ is the conductor of $I$, defined in the same way as the [conductor](../Basic-concepts/Conductor.qmd) of a numerical semigroup, and $N(I)$ is the set of left elements of $I$, again defined in the same way as the [left elements](../Basic-concepts/Left-elements.qmd) of a numerical semigroup.
+
+``` gap
+gap> Conductor(I) - Minimum(I) + 1 - Length(SmallElements(I));
+62
+```
 
 ## References

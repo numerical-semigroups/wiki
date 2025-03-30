@@ -26,14 +26,13 @@ Nowadays, there are no functions in package NumericalSgps related to dominant of
 
 ``` gap
 gap> AreRelatedNumericalSemigroup := function(S,a,b)
->       if IsNumericalSemigroup(S) = false then
->               return "First parameter must be a Numerical Semigroup";
+>       if not IsNumericalSemigroup(S) then
+>               Error("First argument must be a Numerical Semigroup");
 >       fi;
 >       if (b-a) in S then
 >               return true;
->       else
->               return false;
 >       fi;
+>       return false;
 > end;
 function( S, a, b ) ... end
 ```
@@ -52,8 +51,6 @@ gap> AreRelatedNumericalSemigroup(S, 65, 95);
 true
 gap> AreRelatedNumericalSemigroup(S, 18, 22);
 false
-gap> AreRelatedNumericalSemigroup(18, S, 22);
-"First parameter must be a Numerical Semigroup"
 ```
 
 ## References

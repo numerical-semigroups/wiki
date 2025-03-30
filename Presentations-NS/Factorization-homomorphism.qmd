@@ -30,12 +30,16 @@ Minimal generators only have a single preimage by definition of minimal set of g
 
 ## Examples with GAP
 
-Nowadays, there are no functions in package NumericalSgps related to factorization homomorphism of a numerical semigroup. However, given a numerical semigroup $S$ and a list of integers $Is$, the following function returns the image of the tuple formed by the elements of the list by the homomorfism defined by $S$.
+Nowadays, there are no functions in package NumericalSgps related to factorization homomorphism of a numerical semigroup. However, given a numerical semigroup $S$ and a list of integers $Is$, the following function returns the image by $\phi_S$ of the tuple defined by the list $Is$ .
 
-```gap
+``` gap
 gap> ImageHomomorfismOfNumericalSemigroup := function(S, Is)
->       if IsNumericalSemigroup(S) = false then
->               return "Input must be a Numerical Semigroup";
+>       local Min_gen;
+>       local p;
+>       local j;
+>       local sum;
+>       if not IsNumericalSemigroup(S) then
+>               Error("First argument must be a Numerical Semigroup");
 >       fi;
 >       Min_gen := MinimalGenerators(S);
 >       p := Length(Min_gen);
@@ -52,27 +56,22 @@ gap> ImageHomomorfismOfNumericalSemigroup := function(S, Is)
 function( S, Is ) ... end
 ```
 
-$\diamond$  Let $S = \langle 14, 30, 71, 73 \rangle$, in GAP:
+$\diamond$ Let $S = \langle 14, 30, 71, 73 \rangle$, in GAP:
 
-
-```gap
+``` gap
 gap> S := NumericalSemigroup(14, 30, 71, 73);
 <Numerical semigroup with 4 generators>
 ```
 
 The image of $(0, 1, 2, 1)$ by $\phi_S$ is as follows.
 
-```gap
+``` gap
 gap> ImageHomomorfismOfNumericalSemigroup(S, [0, 1, 2, 1]);
 245
 ```
 
 Then, $0 \cdot 14 + 1 \cdot 30 + 2 \cdot 71 + 1 \cdot 73 = 245$.
 
-
-
 ## References
 
-
 <!-- https://docs.gap-system.org/doc/tut/chap0_mj.html#contents -->
-

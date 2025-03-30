@@ -20,13 +20,13 @@ Nowadays, there are no functions in package NumericalSgps related to ratio of a 
 
 ``` gap
 gap> RatioNumericalSemigroup := function(S)
->       if IsNumericalSemigroup(S) = false then
->               return "Input must be a Numerical Semigroup";
->       elif 1 in S then
->               return "Numerical Semigroup must be other than N";
->       else
->               return MinimalGenerators(S)[2];
+>       if not IsNumericalSemigroup(S) then
+>               Error("The argument must be a Numerical Semigroup");
 >       fi;
+>       if 1 in S then
+>               Error("The Numerical Semigroup must be other than N");
+>       fi;
+>       return MinimalGenerators(S)[2];
 > end;
 function( S ) ... end
 ```
@@ -50,12 +50,6 @@ Then, the ratio of $S$ is $r(S) = 37$. With the function defined above,
 ``` gap
 gap> RatioNumericalSemigroup(S);
 37
-gap> T := NumericalSemigroup(1);
-<The numerical semigroup N>
-gap> RatioNumericalSemigroup(T);
-"Numerical Semigroup must be other than N"
-gap> RatioNumericalSemigroup(2);
-"Input must be a Numerical Semigroup"
 ```
 
 ## References

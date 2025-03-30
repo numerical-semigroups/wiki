@@ -10,6 +10,8 @@ engine: markdown
 
 Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $E \subseteq \mathbb{Z}$. It is said that $E$ is a principal ideal of $S$ if it is a [proper ideal](Proper-ideal.qmd) of the form $E = s + S$ for some $s \in S \setminus \{0\}$.
 
+It can be proven that $E$ is a principal ideal of $S$ if, and only if, $m(E) \in S$ and $E = m(E) + S$, where $m(E)$ denotes the [multiplicity ideal](Multiplicity-ideal.qmd) of $E$.
+
 ## Examples
 
 $\circ$ Let $S = \langle 5, 7, 9 \rangle = \{0, 5, 7, 9, 10, 12, 14, \rightarrow\}$ and $E = \{12, 17, 19, 21, 22, 24, 26, \rightarrow\}$, let us prove that $E = 12 + S$.
@@ -22,6 +24,44 @@ To sum up, $E$ is a principal ideal of $S$.
 
 ## Examples with GAP
 
-Nowadays, there are no functions in package NumericalSgps related to principal ideal.
+Nowadays, there are no functions in package NumericalSgps related to principal ideal. However, given a numerical semigroup $S$ and a relative ideal $I$, the following function returns true if $I$ is a principal ideal of $S$.
+
+``` gap
+gap> IsPrincipalIdeal := function(S,I)
+>       local m;
+>       if not IsNumericalSemigroup(S) then
+>               Error("First argument must be a Numerical Semigroup");
+>       fi;
+>       if not IsIdealOfNumericalSemigroup(I) then
+>               Error("Second argument must be a relative ideal");
+>       fi;
+>       m := Minimum(I);
+>       if m in S and Length(MinimalGenerators(I)) = 1 then
+>               return true;
+>       fi;
+>       return false;
+>       
+> end;
+```
+
+$\diamond$ Let $S = \langle 33, 28, 51, 64, 90 \rangle$ and $I = \{151,184, 207, 217, 273, 291\} + S$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(33, 28, 51, 64, 90);
+<Numerical semigroup with 5 generators>
+gap> I := [151,184, 207, 217, 273, 291] + S;
+<Ideal of numerical semigroup>
+```
+
+Applying the function defined above,
+
+``` gap
+gap> IsPrincipalIdeal(S,I);
+true
+```
+
+Then, $I = 151 + S$ and $151 \in S$.
 
 ## References
+
+<!-- https://docs.gap-system.org/doc/tut/chap0_mj.html -->

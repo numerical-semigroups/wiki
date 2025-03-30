@@ -20,8 +20,8 @@ Nowadays, there are no functions in package NumericalSgps related to numerical s
 
 ``` gap
 gap> IsAperySetOfUniqueExpression := function(S)
->       if IsNumericalSemigroup(S) = false then
->               return "Input must be a Numerical Semigroup";
+>       if not IsNumericalSemigroup(S) then
+>               Error("The argument must be a Numerical Semigroup");
 >       fi;
 >       for w in AperyList(S) do
 >               if Length(Factorizations(w,S)) > 1 then
@@ -40,7 +40,7 @@ gap> S := NumericalSemigroup(13,14,15);
 <Numerical semigroup with 3 generators>
 ```
 
-The Apéry set of $S$ is $\{0,4,5\}$ and every element (not taking into account $w = 0$) has unique expression, since there are minimal generators.
+The Apéry set of $S$ is $Ap(S,13) = \{0,4,5\}$ and every element (not taking into account $w = 0$) has unique expression, since there are minimal generators.
 
 ``` gap
 gap> IsAperySetOfUniqueExpression(S);
