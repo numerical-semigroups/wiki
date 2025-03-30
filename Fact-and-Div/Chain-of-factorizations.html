@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -1261,10 +1295,85 @@ window.Quarto = {
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>Nowadays, there are no functions in package NumericalSgps related to <span class="math inline">\(N-\)</span>chain of factorizations.</p>
+<p>Nowadays, there are no functions in package NumericalSgps related to <span class="math inline">\(N-\)</span>chain of factorizations. However, given a numerical semigroup, a positive integer <span class="math inline">\(N\)</span>, and a list of factorizations <span class="math inline">\(I = \{x_1, \ldots, x_n\}\)</span>, the following function returns true if <span class="math inline">\(I\)</span> is an <span class="math inline">\(N-\)</span>chain of factorizations joining <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_n\)</span>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">NChainOfFactorizations</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">S</span><span class="op">,</span><span class="va">N</span><span class="op">,</span><span class="va">I</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="ex">local</span> <span class="va">n</span><span class="op">,</span> <span class="va">value</span><span class="op">,</span> <span class="va">list_fact</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">if</span> <span class="cn">not</span> <span class="va">IsNumericalSemigroup</span>(<span class="va">S</span>) <span class="cf">then</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>               <span class="bu">Error</span>(<span class="st">"First argument must be a Numerical Semigroup"</span>)<span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">n</span> <span class="op">:=</span> <span class="bu">Length</span>(<span class="va">I</span>)<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">if</span> <span class="va">n</span> <span class="op">=</span> <span class="fl">0</span> <span class="cf">then</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>               <span class="bu">Error</span>(<span class="st">"Third argument is an empty list"</span>)<span class="op">;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">value</span> <span class="op">:=</span> <span class="va">ImageHomomorfismOfNumericalSemigroup</span>(<span class="va">S</span><span class="op">,</span> <span class="va">I</span>[<span class="fl">1</span>])<span class="op">;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">list_fact</span> <span class="op">:=</span> <span class="va">Factorizations</span>(<span class="va">value</span><span class="op">,</span> <span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">if</span> <span class="cn">not</span> <span class="bu">IsSubset</span>(<span class="va">list_fact</span><span class="op">,</span> <span class="va">I</span>) <span class="cf">then</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>             <span class="bu">Error</span>(<span class="st">"Third argument is not a list of factorizations of the same value"</span>)<span class="op">;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">for</span> <span class="va">i</span> <span class="ex">in</span> [<span class="fl">1</span><span class="op">..</span><span class="va">n</span><span class="op">-</span><span class="fl">1</span>] <span class="cf">do</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>         <span class="cf">if</span> <span class="va">DistanceFactorizations</span>(<span class="va">I</span>[<span class="va">i</span>]<span class="op">,</span> <span class="va">I</span>[<span class="va">i</span><span class="op">+</span><span class="fl">1</span>]) <span class="op">&gt;</span> <span class="va">N</span> <span class="cf">then</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>             <span class="ex">return</span> <span class="cn">false</span><span class="op">;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>         <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">od</span><span class="op">;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="ex">return</span> <span class="cn">true</span><span class="op">;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="fu">end</span><span class="op">;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">function</span>( <span class="va">S</span><span class="op">,</span> <span class="va">N</span><span class="op">,</span> <span class="va">I</span> ) <span class="op">..</span>. <span class="fu">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The functions <code>ImageHomomorfismOfNumericalSemigroup</code> and <code>DistanceFactorizations</code> are not implemented in package NumericalSgps, their code are as follows.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">ImageHomomorfismOfNumericalSemigroup</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">S</span><span class="op">,</span> <span class="va">Is</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="ex">local</span> <span class="va">Min_gen</span><span class="op">,</span> <span class="va">p</span><span class="op">,</span> <span class="va">j</span><span class="op">,</span> <span class="va">sum</span><span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">if</span> <span class="cn">not</span> <span class="va">IsNumericalSemigroup</span>(<span class="va">S</span>) <span class="cf">then</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>               <span class="bu">Error</span>(<span class="st">"First argument must be a Numerical Semigroup"</span>)<span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">Min_gen</span> <span class="op">:=</span> <span class="va">MinimalGenerators</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">p</span> <span class="op">:=</span> <span class="bu">Length</span>(<span class="va">Min_gen</span>)<span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">if</span> <span class="va">p</span> <span class="op">=</span> <span class="bu">Length</span>(<span class="va">Is</span>) <span class="cf">then</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>               <span class="va">sum</span> <span class="op">:=</span> <span class="fl">0</span><span class="op">;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>               <span class="va">j</span> <span class="op">:=</span> <span class="fl">1</span><span class="op">;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>               <span class="cf">for</span> <span class="va">a</span> <span class="ex">in</span> <span class="va">Is</span> <span class="cf">do</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>                       <span class="va">sum</span> <span class="op">:=</span> <span class="va">sum</span> <span class="op">+</span> <span class="va">a</span> <span class="op">*</span> <span class="va">Min_gen</span>[<span class="va">j</span>]<span class="op">;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>                       <span class="va">j</span> <span class="op">:=</span> <span class="va">j</span> <span class="op">+</span> <span class="fl">1</span><span class="op">;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>               <span class="cf">od</span><span class="op">;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>               <span class="ex">return</span> <span class="va">sum</span><span class="op">;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="fu">end</span><span class="op">;</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">function</span>( <span class="va">S</span><span class="op">,</span> <span class="va">Is</span> ) <span class="op">..</span>. <span class="fu">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">DistanceFactorizations</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">x</span><span class="op">,</span><span class="va">y</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="ex">local</span> <span class="va">z_1</span><span class="op">,</span> <span class="va">z_2</span><span class="op">,</span> <span class="va">t_i</span><span class="op">,</span> <span class="va">n</span><span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">n</span> <span class="op">:=</span> <span class="bu">Length</span>(<span class="va">x</span>)<span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">if</span> <span class="cn">not</span> <span class="bu">Length</span>(<span class="va">y</span>) <span class="op">=</span> <span class="va">n</span> <span class="cf">then</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>               <span class="bu">Error</span>(<span class="st">"Lists must be of the same length"</span>)<span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">z_1</span> <span class="op">:=</span> []<span class="op">;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">z_2</span> <span class="op">:=</span> []<span class="op">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">for</span> <span class="va">i</span> <span class="ex">in</span> [<span class="fl">1</span><span class="op">..</span><span class="va">n</span>] <span class="cf">do</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="va">t_i</span> <span class="op">:=</span> <span class="bu">Minimum</span>(<span class="va">x</span>[<span class="va">i</span>]<span class="op">,</span> <span class="va">y</span>[<span class="va">i</span>])<span class="op">;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="bu">Add</span>(<span class="va">z_1</span><span class="op">,</span> <span class="va">x</span>[<span class="va">i</span>] <span class="op">-</span> <span class="va">t_i</span>)<span class="op">;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="bu">Add</span>(<span class="va">z_2</span><span class="op">,</span> <span class="va">y</span>[<span class="va">i</span>] <span class="op">-</span> <span class="va">t_i</span>)<span class="op">;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">od</span><span class="op">;</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="ex">return</span> <span class="bu">Maximum</span>(<span class="bu">Sum</span>(<span class="va">z_1</span>)<span class="op">,</span> <span class="bu">Sum</span>(<span class="va">z_2</span>))<span class="op">;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="fu">end</span><span class="op">;</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="fu">function</span>( <span class="va">x</span><span class="op">,</span> <span class="va">y</span> ) <span class="op">..</span>. <span class="fu">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 20, 21, 46, 53 \rangle\)</span>, in GAP:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">20</span><span class="op">,</span> <span class="fl">21</span><span class="op">,</span> <span class="fl">46</span><span class="op">,</span> <span class="fl">53</span>)<span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">4</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Let us consider a list of factorizations of <span class="math inline">\(s = 200 \in S\)</span>.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="fl">200</span> <span class="ex">in</span> <span class="va">S</span><span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="cn">true</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">Factorizations</span>(<span class="fl">200</span><span class="op">,</span><span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>[ [ <span class="fl">10</span><span class="op">,</span> <span class="fl">0</span><span class="op">,</span> <span class="fl">0</span><span class="op">,</span> <span class="fl">0</span> ]<span class="op">,</span> [ <span class="fl">1</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">3</span><span class="op">,</span> <span class="fl">0</span> ]<span class="op">,</span> [ <span class="fl">0</span><span class="op">,</span> <span class="fl">7</span><span class="op">,</span> <span class="fl">0</span><span class="op">,</span> <span class="fl">1</span> ]<span class="op">,</span> [ <span class="fl">4</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">1</span> ]<span class="op">,</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  [ <span class="fl">1</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">0</span><span class="op">,</span> <span class="fl">3</span> ] ]</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">L</span> <span class="op">:=</span> [[<span class="fl">1</span><span class="op">,</span><span class="fl">2</span><span class="op">,</span><span class="fl">3</span><span class="op">,</span><span class="fl">0</span>]<span class="op">,</span> [<span class="fl">0</span><span class="op">,</span><span class="fl">7</span><span class="op">,</span><span class="fl">0</span><span class="op">,</span><span class="fl">1</span>]<span class="op">,</span> [<span class="fl">4</span><span class="op">,</span><span class="fl">1</span><span class="op">,</span><span class="fl">1</span><span class="op">,</span><span class="fl">1</span>]<span class="op">,</span> [<span class="fl">1</span><span class="op">,</span><span class="fl">1</span><span class="op">,</span><span class="fl">0</span><span class="op">,</span><span class="fl">3</span>]]<span class="op">;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>[ [ <span class="fl">1</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">3</span><span class="op">,</span> <span class="fl">0</span> ]<span class="op">,</span> [ <span class="fl">0</span><span class="op">,</span> <span class="fl">7</span><span class="op">,</span> <span class="fl">0</span><span class="op">,</span> <span class="fl">1</span> ]<span class="op">,</span> [ <span class="fl">4</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">1</span> ]<span class="op">,</span> [ <span class="fl">1</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">0</span><span class="op">,</span> <span class="fl">3</span> ] ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>It is defined the <a href="../Fact-and-Div/Catenary-degree-of-an-element.html">catenary degree</a> of <span class="math inline">\(s\)</span> as the least <span class="math inline">\(N\)</span> such that for any two factorizations <span class="math inline">\(x, y \in \mathbf{Z}(s)\)</span>, there is an <span class="math inline">\(N\)</span>-chain joining them.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">c</span> <span class="op">:=</span> <span class="va">CatenaryDegree</span>(<span class="fl">200</span><span class="op">,</span> <span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fl">6</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="bu">List</span>([<span class="fl">1</span><span class="op">..</span><span class="va">c</span>]<span class="op">,</span> <span class="va">x</span> <span class="op">-&gt;</span> <span class="va">NChainOfFactorizations</span>(<span class="va">S</span><span class="op">,</span><span class="va">x</span><span class="op">,</span><span class="va">L</span>))<span class="op">;</span>              </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>[ <span class="cn">false</span><span class="op">,</span> <span class="cn">false</span><span class="op">,</span> <span class="cn">false</span><span class="op">,</span> <span class="cn">false</span><span class="op">,</span> <span class="cn">false</span><span class="op">,</span> <span class="cn">true</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In this case, the chain of factorizations that we defined joining <span class="math inline">\(x = (1,2,3,0)\)</span> and <span class="math inline">\(y = (1,1,0,3)\)</span> is a <span class="math inline">\(6-\)</span>chain.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
+<!-- https://docs.gap-system.org/doc/tut/chap0_mj.html#contents -->
 
 
 </section>
