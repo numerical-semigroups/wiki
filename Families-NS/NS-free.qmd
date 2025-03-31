@@ -76,4 +76,59 @@ gap> Length(FreeNumericalSemigroupsWithFrobeniusNumber(57));
 33
 ```
 
+$\diamond$ Nowadays, there are no functions in NumericalSgps such that for a given numerical semigroup $S$ and an arrangement $(r_0, r_1, \ldots, r_h)$ return true or false depending on whether $S$ is free for the given arrangement. However, the following function computes it.
+
+``` gap
+gap> IsFreeForArrangement := function(S, I)
+>       local p, Min_gen, list_c;
+>       if not IsNumericalSemigroup(S) then
+>           Error("First argument must be a Numerical Semigroup");
+>       fi;
+>       p := Length(I);
+>       if p = 1 then return false; fi;
+>       Min_gen := MinimalGenerators(S);
+>       if not Min_gen = I then
+>           Error("Second argument is not a minimal system of generators of the first argument");
+>       fi;
+>       list_c := ConstantsFreeAsterisk(S);
+>       return Min_gen[1] = Product(list_c);
+> end;
+```
+
+The function `ConstantsFreeAsterisk` is not implemented in GAP, it computes the constants $c_i^*$ defined as above.
+
+```gap
+gap> ConstantsFreeAsterisk := function(S)
+>       local list_c, p, i, Min_gen, Sub_min_gen, d_i, S_i, k, n_i, q;
+>       if not IsNumericalSemigroup(S) then
+>           Error("The argument must be a Numerical Semigroup");
+>       fi;
+>       if 1 in S then return false; fi;
+>       Min_gen := MinimalGenerators(S);
+>       p := Length(Min_gen);
+>       list_c := [];
+>       for i in [2..p] do
+>           Sub_min_gen := Min_gen{[1..i-1]};
+>           d_i := Gcd(Sub_min_gen);
+>           S_i := NumericalSemigroup(Sub_min_gen/d_i);
+>           n_i := Min_gen[i];
+>           k := 2;
+>           while not RemInt(k*n_i, d_i) = 0 do
+>               k := k + 1;
+>           od;
+>           q := QuoInt(k*n_i, d_i);
+>           while not q in S_i do
+>               k := k + 1;
+>               while not RemInt(k*n_i, d_i) = 0 do
+>                   k := k + 1;
+>               od;
+>               q := QuoInt(k*n_i, d_i);
+>           od;
+>           Add(list_c, k);
+>       od;
+>       return list_c;
+> end;
+```
+
+
 ## References
