@@ -22,6 +22,84 @@ $\circ$ Let $S = \langle 4, 5, 7 \rangle$. Then, $5, 10 \not \in \langle 4, 7 \r
 
 ## Examples with GAP
 
-Nowadays, there are no functions in package NumericalSgps related to simple numerical semigroup.
+Nowadays, there are no functions in package NumericalSgps related to simple numerical semigroup. However, given a numerical semigroup $S$, the following function returns true if $S$ is simple and false otherwise.
+
+``` gap
+gap> IsSimpleNumericalSemigroup := function(S)
+>       local Min_gen, p, sum, i, n_i, d_i, S_i, k;
+>       if not IsNumericalSemigroup(S) then
+>           Error("The argument must be a Numerical Semigroup");
+>       fi;
+>       Min_gen := Set(MinimalGenerators(S));
+>       p := Length(Min_gen);
+>       if p = 1 then 
+>           return false; 
+>       fi;
+>       sum := 0;
+>       for i in [2, p] do
+>           n_i := Min_gen[i];
+>           Min_gen[i] := 0;
+>           d_i := Gcd(Min_gen);
+>           S_i := NumericalSemigroup(Min_gen / d_i);
+>           k := 2;
+>           while not k*n_i / d_i in S_i do
+>               k := k + 1;
+>           od;
+>           sum := sum + k-1;
+>           Min_gen[i] := n_i;
+>       od;
+>       return Min_gen[1] = sum+1;
+> end;
+```
+
+$\diamond$ Let $S = \langle 17, 21, 32 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(17, 21, 32);
+<Numerical semigroup with 3 generators>
+```
+
+If we use the function defined above,
+
+``` gap
+gap> IsSimpleNumericalSemigroup(S);
+false
+```
+
+Then, $S$ is not simple.
+
+$\diamond$ Let $S = \langle 13, 14, 15 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(13, 14, 15);
+<Numerical semigroup with 3 generators>
+```
+
+It can be proven that if $S$ is simple, then is a numerical semigroup with [Apéry set of unique expression](NS-Apery-set.qmd), but the reciprocal is false.
+
+``` gap
+gap> IsAperySetOfUniqueExpression(S);
+true
+gap> IsSimpleNumericalSemigroup(S);
+false
+```
+
+The function `IsAperySetOfUniqueExpression` is not implemented in GAP, its code is as follows.
+
+``` gap
+gap> IsAperySetOfUniqueExpression := function(S)
+>       local w;
+>       if not IsNumericalSemigroup(S) then
+>               Error("The argument must be a Numerical Semigroup");
+>       fi;
+>       for w in AperyList(S) do
+>               if Length(Factorizations(w,S)) > 1 then
+>                       return false;
+>               fi;
+>       od;
+>       return true;
+> end;
+function( S ) ... end
+```
 
 ## References

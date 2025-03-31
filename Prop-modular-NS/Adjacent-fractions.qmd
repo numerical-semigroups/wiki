@@ -14,6 +14,8 @@ $$
 \frac{a_2}{b_2 + 1} < \frac{a_1}{b_1}, \text{ and } b_1 = 1 \text{ or } \frac{a_2}{b_2} < \frac{a_1}{b_1-1}.
 $$
 
+It can be proven that if a sequence $\frac{a_1}{b_1} < \frac{a_2}{b_2} < \cdots < \frac{a_p}{b_p}$ is a [Bézout sequence](Bezout-sequence.qmd) and $\frac{a_1}{b_1}, \frac{a_p}{b_p}$ are adjacent fractions, then $\{a_1, \ldots, a_p\}$ is a minimal system of generators of $S = \langle a_1, \ldots, a_p \rangle$.
+
 ## Examples
 
 $\circ$ Let $a_1 = 7, a_2 = 15, b_1 = 3, b_2 = 4$ and the fractions $\frac{a_1}{b_1} = \frac{7}{3}, \frac{a_2}{b_2} = \frac{15}{4}$. We have,
@@ -34,6 +36,32 @@ Therefore, $\frac{2}{7}$ and $\frac{2}{9}$ are adjacent fractions.
 
 ## Examples with GAP
 
-Nowadays, there are no functions in package NumericalSgps related to adjacent fractions.
+Nowadays, there are no functions in package NumericalSgps related to adjacent fractions. However, given two lists $x = [a_1, b_1], y = [a_2, b_2]$ where $a_1, a_2, b_1, b_2$ are positive integers, the following function returns true if $\frac{a_1}{b_1}, \frac{a_2}{b_2}$ are adjacent fractions and false otherwise.
+
+``` gap
+gap> AdjacentFractions := function(I, J)
+>       local n;
+>       n := Length(I);
+>       if not (n = 2 and Length(J) = n) then
+>               Error("Each argument must be a list of two positive integers");
+>       fi;
+>       if J[1]*I[2] - I[1]*J[2] <= 0 then 
+>               return false; 
+>       fi;
+>       if I[1]*(J[2] + 1) - I[2]*J[1] > 0 then
+>               if I[2] = 1 then return true; fi;
+>               if I[1]*J[2] - J[1]*(I[2] - 1) > 0 then return true; fi;
+>       fi;
+>       return false;
+> end;
+function( I, J ) ... end
+```
+
+$\diamond$ Let $\frac{3}{1} < \frac{7}{2}$. Since $\frac{7}{3} < 3$ and $b_1 = 1$, they are adjacent fractions. If we use the function defined above,
+
+``` gap
+gap> AdjacentFractions([3,1], [7,2]);
+true
+```
 
 ## References

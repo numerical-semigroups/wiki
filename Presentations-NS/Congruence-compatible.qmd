@@ -13,6 +13,8 @@ Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [m
 -   $i_1 = i, i_k = j$,
 -   for every $m \in \{1, 2, \ldots, k-1\}$ either $(a_{i_m}, a_{i_{m+1}}) \in \tau$ or $(a_{i_{m+1}}, a_{i_m}) \in \tau$.
 
+The elements $s \in S$ such that $\nabla_s$ is not connected are called [Betti elements](Betti-element.qmd). It can be proven that $\tau$ is compatible with $s$ for all $s \in S$ if, and only if, is a [presentation](Presentation-NS.qmd) of $S$.
+
 ## Examples
 
 $\circ$ Let $S = \langle 5, 7, 11, 13 \rangle$ and $s = 26$. The graph $\nabla_{26}$ is as follows.

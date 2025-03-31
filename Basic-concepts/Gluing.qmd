@@ -36,15 +36,68 @@ $$
 
 ## Examples with GAP
 
-Nowadays, there are no functions in package NumericalSgps related to gluing of a set of positive integers. 
+Nowadays, there are no functions in package NumericalSgps related to gluing of a set of positive integers. However, given three set of integers $A, A_1, A_2$, the following function returns true if $A$ is a gluing of $A_1$ and $A_2$ and false otherwise.
 
-<!-- However, given three set of integers $A,A_1, A_2$, the following function returns true if $A$ is a gluing of $A_1$ and $A_2$ and false otherwise. -->
+``` gap
+gap> IsGluing := function(A, A_1, A_2)
+>       local d, S, T;
+>       if not Difference(A, Union(A_1, A_2)) = [] then
+>               return false;
+>       fi;
+>       if not Intersection(A_1, A_2) = [] then
+>               return false;
+>       fi;
+>       d_1 := Gcd(A_1);
+>       d_2 := Gcd(A_2);
+>       d := Lcm(Gcd(A_1), Gcd(A_2));
+>       S := NumericalSemigroup(A_1 / d_1);
+>       T := NumericalSemigroup(A_2 / d_2);
+>       if d/d_1 in S and d/d_2 in T then
+>           return true;
+>       fi;
+>       return false;
+> end;
+```
 
+Moreover, given a list of positive integers $A$, the following function returns a list $I = [ [A_1, B_1], \ldots, [A_n, B_n] ]$ such that $A_i, B_i$ is a gluing of $A$ for all $i \in \{1, \ldots, n\}$, that is, all the possible gluings of $A$.
 
+``` gap
+gap> AllGluings := function(A)
+>       local l_gluings, P;
+>       l_gluings := [];
+>       for P in PartitionsSet(Set(A), 2) do
+>               if IsGluing(A, P[1], P[2]) then
+>                       Add(l_gluings, P);
+>               fi;
+>       od;
+>       return l_gluings;
+> end;
+function( A ) ... end
+```
 
+$\diamond$ Let $A = \{3,7,19,22,47,51\}$ and the partition $A_1 = \{3, 7, 19, 22, 47\}, A_2 = \{51\}$. If we use the function defined above,
 
+``` gap
+gap> A := [3,7,19,22,47,51];
+[ 3, 7, 19, 22, 47, 51 ]
+gap> A_1 := [3,7,19,22,47];
+[ 3, 7, 19, 22, 47 ]
+gap> A_2 := [51];
+[ 51 ]
+gap> IsGluing(A, A_1, A_2);
+true
+```
+
+Then, $A$ is a gluing of $A_1$ and $A_2$. On the other hand, all the gluings of $A$ are as follows.
+
+``` gap
+gap> AllGluings(A);
+[ [ [ 3, 7, 19, 22, 47 ], [ 51 ] ],
+  [ [ 3, 7, 19, 22, 51 ], [ 47 ] ],
+  [ [ 3, 7, 19, 47, 51 ], [ 22 ] ],
+  [ [ 3, 7, 22, 47, 51 ], [ 19 ] ] ]
+```
 
 ## References
-
 
 <!-- https://docs.gap-system.org/doc/tut/chap0_mj.html#contents -->

@@ -20,6 +20,7 @@ Nowadays, there are no functions in package NumericalSgps related to numerical s
 
 ``` gap
 gap> IsAperySetOfUniqueExpression := function(S)
+>       local w;
 >       if not IsNumericalSemigroup(S) then
 >               Error("The argument must be a Numerical Semigroup");
 >       fi;
