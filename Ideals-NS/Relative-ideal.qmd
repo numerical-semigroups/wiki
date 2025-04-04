@@ -122,4 +122,23 @@ gap> NumberElement_IdealOfNumericalSemigroup(IS, -4);
 fail
 ```
 
+
+$\diamond$ Nowadays, there are no functions in GAP such that returns true or false depending on whether a subset $I$ of $\mathbb{Z}$ is a relative ideal of a given numerical semigroup $S$ or not, respectively. However, the following function computes it.
+
+
+```gap
+gap> IsRelativeIdeal := function(I,S)
+>       local
+>       if not IsNumericalSemigroup(S) then
+>           Error("Second argument must be a numerical semigroup");
+>       fi;
+>       if not IsIdealOfNumericalSemigroup(I) then
+>           return false;
+>       fi;
+>       
+
+```
+
+
+
 ## References

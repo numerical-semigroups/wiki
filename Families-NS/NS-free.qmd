@@ -84,6 +84,9 @@ gap> IsFreeForArrangement := function(S, I)
 >       if not IsNumericalSemigroup(S) then
 >           Error("First argument must be a Numerical Semigroup");
 >       fi;
+>       if not IsList(I) then
+>           Error("Second argument must be a list of minimal generators of the first argument");
+>       fi;
 >       p := Length(I);
 >       if p = 1 then return false; fi;
 >       Min_gen := MinimalGenerators(S);
@@ -97,7 +100,7 @@ gap> IsFreeForArrangement := function(S, I)
 
 The function `ConstantsFreeAsterisk` is not implemented in GAP, it computes the constants $c_i^*$ defined as above.
 
-```gap
+``` gap
 gap> ConstantsFreeAsterisk := function(S)
 >       local list_c, p, i, Min_gen, Sub_min_gen, d_i, S_i, k, n_i, q;
 >       if not IsNumericalSemigroup(S) then
@@ -129,6 +132,5 @@ gap> ConstantsFreeAsterisk := function(S)
 >       return list_c;
 > end;
 ```
-
 
 ## References

@@ -30,14 +30,15 @@ gap> IsSimpleNumericalSemigroup := function(S)
 >       if not IsNumericalSemigroup(S) then
 >           Error("The argument must be a Numerical Semigroup");
 >       fi;
->       Min_gen := Set(MinimalGenerators(S));
+>       Min_gen := MinimalGenerators(S);
 >       p := Length(Min_gen);
 >       if p = 1 then 
 >           return false; 
 >       fi;
 >       list_c := ConstantsFreeNumericalSemigroup(S);
->       return Min_gen[1] - 1 = Sum(I{[2..p]}) - p + 1;
+>       return Min_gen[1] - 1 = Sum(list_c{[2..p]} - 1);
 > end;
+function( S ) ... end
 ```
 
 The function `ConstantsFreeNumericalSemigroup` is not implemented in GAP, it computes the constants $c_i$ defined above.
@@ -48,7 +49,7 @@ gap> ConstantsFreeNumericalSemigroup := function(S)
 >       if not IsNumericalSemigroup(S) then
 >           Error("The argument must be a Numerical Semigroup");
 >       fi;
->       Min_gen := Set(MinimalGenerators(S));
+>       Min_gen := MinimalGenerators(S);
 >       p := Length(Min_gen);
 >       list_c := [];
 >       for i in [1..p] do

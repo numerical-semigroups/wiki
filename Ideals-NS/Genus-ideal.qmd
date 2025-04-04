@@ -16,7 +16,7 @@ $\circ$ The definition of genus of a relative ideal is a generalization of the d
 
 ## Examples with GAP
 
-Nowadays, there are no functions in package NumericalSgps related to genus of a relative ideal. However, given a relative ideal $E$, the following function returns the genus of $E$.
+Nowadays, there are no functions in package NumericalSgps related to genus of a relative ideal. However, given a relative ideal $I$, the following function returns the genus of $I$.
 
 ``` gap
 gap> GenusOfRelativeIdeal := function(I)
@@ -28,6 +28,7 @@ gap> GenusOfRelativeIdeal := function(I)
 >       T := m + NumericalSemigroup(1);
 >       return Length(Difference(T, I));
 > end;
+function( I ) ... end
 ```
 
 $\diamond$ Let $S = \langle 33, 37, 41, 45, 91 \rangle$ and $I = \{-14, -11, -3, 5, 12 \} + S$, in GAP:

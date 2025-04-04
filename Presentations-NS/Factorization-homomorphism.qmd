@@ -30,25 +30,35 @@ Minimal generators only have a single preimage by definition of minimal set of g
 
 ## Examples with GAP
 
-Nowadays, there are no functions in package NumericalSgps related to factorization homomorphism of a numerical semigroup. However, given a numerical semigroup $S$ and a list of integers $Is$, the following function returns the image by $\phi_S$ of the tuple defined by the list $Is$ .
+Nowadays, there are no functions in package NumericalSgps related to factorization homomorphism of a numerical semigroup. However, given a numerical semigroup $S$ and a list of integers $I$, the following function returns the image by $\phi_S$ of the tuple defined by the list $I$ .
 
 ``` gap
-gap> ImageHomomorfismOfNumericalSemigroup := function(S, Is)
->       local Min_gen, p, j, sum;
+gap> ImageHomomorfismOfNumericalSemigroup := function(S, I)
+>       local Min_gen, p, j, sum, a;
 >       if not IsNumericalSemigroup(S) then
 >               Error("First argument must be a Numerical Semigroup");
 >       fi;
+>       if not IsList(I) then
+>               Error("Second argument must be a non-empty list of positive integers");
+>       fi;
 >       Min_gen := MinimalGenerators(S);
 >       p := Length(Min_gen);
->       if p = Length(Is) then
->               sum := 0;
->               j := 1;
->               for a in Is do
->                       sum := sum + a * Min_gen[j];
->                       j := j + 1;
->               od;
->               return sum;
+>       if not p = Length(I) then
+>               Error("Length of minimal system of generators and length of second argument are different");
 >       fi;
+>       sum := 0;
+>       j := 1;
+>       for a in I do
+>               if not IsInt(a) then
+>                     Error("Second argument must be a list of positive integers");
+>               fi;
+>               if a < 0 then
+>                     Error("Second argument must be a list of positive integers");
+>               fi;
+>               sum := sum + a * Min_gen[j];
+>               j := j + 1;
+>       od;
+>       return sum;
 > end;
 function( S, Is ) ... end
 ```

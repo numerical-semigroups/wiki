@@ -58,7 +58,7 @@ gap> J := [26, 41] + S;
 <Ideal of numerical semigroup>
 ```
 
-Since $I,J \subseteq S$ are proper ideals and $m(E) + S \subseteq J \subseteq I$, then $J$ is a reduction of $I$.
+Since $I,J \subseteq S$ are proper ideals and $m(I) + S \subseteq J \subseteq I$, then $J$ is a reduction of $I$.
 
 ``` gap
 gap> IsReduction(S,J,I);
