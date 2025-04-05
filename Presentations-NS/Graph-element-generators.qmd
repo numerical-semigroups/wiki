@@ -38,7 +38,10 @@ $$
 
 The graph associated to $n = 25$ is as follows:
 
+::: {style="text-align:center;"}
 ```{dot}
+// | fig-width: 65%
+// | fig-height: 250px
 graph  NSGraph{
 1 [label="6"];
 2 [label="7"];
@@ -47,10 +50,12 @@ graph  NSGraph{
 3 -- 2;
 }
 ```
+:::
+
 
 ## Examples with GAP
 
-The following example is made with the package NumericalSgps in GAP.
+The following examples are made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 14, 27, 31, 33, 77 \rangle$, in GAP:
 
@@ -69,7 +74,10 @@ gap> GraphAssociatedToElementInNumericalSemigroup(114,S);
 
 The graph $G_{114}$ is as follows.
 
+::: {style="text-align:center;"}
 ```{dot}
+// | fig-width: 65%
+// | fig-height: 250px
 graph G {
  node [shape = circle, fixedsize = true, width = 0.9]; 14; 27; 31; 33;
   14 -- 27;
@@ -78,5 +86,56 @@ graph G {
   27 -- 33;
 }
 ```
+:::
+
+$\diamond$ Let $S = \langle 22, 23, 41, 50 \rangle$, in GAP:
+
+```gap
+gap> S := NumericalSemigroup(22, 23, 41, 50);
+<Numerical semigroup with 4 generators>
+```
+
+
+Given a numerical semigroup $S$ and an element $n \in S$, the function `DotRosalesGraph` returns the graph associated to $n$ in $S$ by minimal generators.
+
+```gap
+gap> 150 in S;
+true
+gap> h := DotRosalesGraph(150, S);;
+gap> Print(h);
+graph  NSGraph{
+1 [label="22"];
+2 [label="23"];
+3 [label="41"];
+4 [label="50"];
+2 -- 1;
+3 -- 1;
+3 -- 2;
+}
+```
+
+The obtained graph is as follows.
+
+::: {style="text-align:center;"}
+```{dot}
+// | fig-width: 65%
+// | fig-height: 250px
+graph  NSGraph{
+1 [label="22"];
+2 [label="23"];
+3 [label="41"];
+4 [label="50"];
+2 -- 1;
+3 -- 1;
+3 -- 2;
+}
+
+```
+:::
+
 
 ## References
+
+
+
+

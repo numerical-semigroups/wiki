@@ -28,7 +28,7 @@ To sum up, $\mathcal{O}(S) = \{S, S \cup \{7\}, S \cup \{2, 7\}, S \cup \{3, 7\}
 
 ## Examples with GAP
 
-The following example is made with the package NumericalSgps in GAP.
+The following examples are made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 2, 5 \rangle$, in GAP:
 
@@ -62,4 +62,68 @@ gap> List(OverSemigroups(S), l -> Gaps(l));
 
 It is concluded that $\mathcal{O}(S) = \{S, T, \mathbb{N}\}$, where $T = \{0, 2, \rightarrow\}$.
 
+
+$\diamond$ Let $S = \langle 4,5,6 \rangle$, in GAP:
+
+```gap
+gap> S := NumericalSemigroup(4,5,6);
+<Numerical semigroup with 3 generators>
+```
+
+Given a numerical semigroup $S$, the function `DotOverSemigroupsNumericalSemigroup` returns the Hasse diagram (in dot) of oversemigroups of $S$.
+
+
+```gap
+gap> h := DotOverSemigroupsNumericalSemigroup(S);;
+gap> Print(DotOverSemigroupsNumericalSemigroup(S));
+digraph  NSGraph{rankdir = TB; edge[dir=back];
+1 [label="〈 1 〉", style=filled];
+2 [label="〈 2, 3 〉", style=filled];
+3 [label="〈 2, 5 〉", style=filled];
+4 [label="〈 3, 4, 5 〉", style=filled];
+5 [label="〈 4, 5, 6, 7 〉"];
+6 [label="〈 4, 5, 6 〉", style=filled];
+1 -> 2;
+2 -> 3;
+2 -> 4;
+3 -> 5;
+4 -> 5;
+5 -> 6;
+}
+```
+
+The obtained graph is as follows.
+
+::: {style="text-align:center;"}
+```{dot}
+// | fig-width: 65%
+// | fig-height: 300px
+digraph  NSGraph{rankdir = TB; edge[dir=back];
+1 [label="〈 1 〉", style=filled];
+2 [label="〈 2, 3 〉", style=filled];
+3 [label="〈 2, 5 〉", style=filled];
+4 [label="〈 3, 4, 5 〉", style=filled];
+5 [label="〈 4, 5, 6, 7 〉"];
+6 [label="〈 4, 5, 6 〉", style=filled];
+1 -> 2;
+2 -> 3;
+2 -> 4;
+3 -> 5;
+4 -> 5;
+5 -> 6;
+}
+
+```
+:::
+
+The nodes with grey background are irreducible numerical semigroups.
+
+
 ## References
+
+
+
+
+
+
+

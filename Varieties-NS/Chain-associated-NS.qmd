@@ -96,4 +96,153 @@ $$
 \langle 7, 8, 9, 11, 12, 13 \rangle, \{7, \rightarrow\}, \{6, \rightarrow\}, \ldots, \{2, \rightarrow\}, \mathbb{N}\}.
 $$
 
+
+The chain would be as follows.
+
+::: {style="text-align:center;"}
+```{dot}
+// | fig-width: 100%
+// | fig-height: 500px
+digraph  NSGraph{rankdir = TB; edge[dir=back];
+1 [label="〈 1 〉", style=filled];
+2 [label="〈 2, 3 〉", style=filled];
+3 [label="〈 3, 4, 5 〉", style=filled];
+4 [label="〈 4, 5, 6, 7 〉"];
+5 [label="〈 5, 6, 7, 8, 9 〉"];
+6 [label="〈 6, 7, 8, 9, 10, 11 〉"];
+7 [label="〈 7, 8, 9, 10, 11, 12, 13 〉"];
+8 [label="〈 7, 8, 9, 11, 12, 13 〉"];
+9 [label="〈 7, 8, 9, 12, 13 〉"];
+10 [label="〈 7, 8, 9, 13, 19 〉"];
+11 [label="〈 7, 8, 9, 19, 20 〉"];
+1 -> 2;
+2 -> 3;
+3 -> 4;
+4 -> 5;
+5 -> 6;
+6 -> 7;
+7 -> 8;
+8 -> 9;
+9 -> 10;
+10 -> 11;
+}
+```
+:::
+
+
+$\diamond$ Let $S = \langle 5, 9, 12 \rangle$, in GAP:
+
+```gap
+gap> S := NumericalSemigroup(5, 9, 12);
+<Numerical semigroup with 3 generators>
+```
+
+Given a numerical semigroup $S$, the following function returns the graph (in dot) representing the chain associated to $S$.
+
+``` gap
+gap> DotChainOfNumericalSemigroup := function(S)
+>       local hasse, SystemOfGeneratorsToString, chain, n, out, output, i, c, r;
+>       if not IsNumericalSemigroup(S) then
+>           Error("The argument must be a Numerical Semigroup");
+>       fi;
+>       hasse:=function(rel)
+>           local dom, out;
+>           dom:=Flat(rel);
+>           out:=Filtered(rel, p-> ForAny(dom, x->([p[1],x] in rel) and ([x,p[2]] in rel)));
+>           return Difference(rel,out);
+>         end;
+>       SystemOfGeneratorsToString := function(sg)
+>          return Concatenation("〈 ", JoinStringsWithSeparator(sg, ", "), " 〉");
+>       end;
+>       chain := Reversed(ChainOfNumericalSemigroup(S));
+>       n := Length(chain);
+>       out := "";
+>       output := OutputTextString(out, true);
+>       SetPrintFormattingStatus(output, false);
+>       AppendTo(output,"digraph  NSGraph{rankdir = TB; edge[dir=back];\n");
+>       for i in [1..n] do
+>           if IsIrreducible(chain[i]) then 
+>               AppendTo(output,i," [label=\"",SystemOfGeneratorsToString(MinimalGenerators(chain[i])) ,"\", style=filled];\n");
+>           else 
+>               AppendTo(output,i," [label=\"",SystemOfGeneratorsToString(MinimalGenerators(chain[i])) ,"\"];\n");
+>           fi;
+>       od;
+>       c := [];
+>       for i in [1..(n-1)] do
+>           Add(c, [i, i+1]);
+>       od;
+>       c:=hasse(c);
+>       for r in c do
+>           AppendTo(output,r[1]," -> ",r[2],";\n");
+>       od;
+>       AppendTo(output, "}");
+>       CloseStream(output);
+>       return out;  
+> end;
+function( S ) ... end
+```
+
+```gap
+gap> h := DotChainOfNumericalSemigroup(S);;
+digraph  NSGraph{rankdir = TB; edge[dir=back];
+1 [label="〈 1 〉", style=filled];
+2 [label="〈 2, 3 〉", style=filled];
+3 [label="〈 3, 4, 5 〉", style=filled];
+4 [label="〈 4, 5, 6, 7 〉"];
+5 [label="〈 5, 6, 7, 8, 9 〉"];
+6 [label="〈 5, 7, 8, 9, 11 〉"];
+7 [label="〈 5, 8, 9, 11, 12 〉"];
+8 [label="〈 5, 9, 11, 12, 13 〉"];
+9 [label="〈 5, 9, 12, 13, 16 〉"];
+10 [label="〈 5, 9, 12, 16 〉"];
+11 [label="〈 5, 9, 12 〉"];
+1 -> 2;
+2 -> 3;
+3 -> 4;
+4 -> 5;
+5 -> 6;
+6 -> 7;
+7 -> 8;
+8 -> 9;
+9 -> 10;
+10 -> 11;
+}
+```
+
+The chain associated to $S$ is as follows.
+
+::: {style="text-align:center;"}
+```{dot}
+// | fig-width: 100%
+// | fig-height: 500px
+digraph  NSGraph{rankdir = TB; edge[dir=back];
+1 [label="〈 1 〉", style=filled];
+2 [label="〈 2, 3 〉", style=filled];
+3 [label="〈 3, 4, 5 〉", style=filled];
+4 [label="〈 4, 5, 6, 7 〉"];
+5 [label="〈 5, 6, 7, 8, 9 〉"];
+6 [label="〈 5, 7, 8, 9, 11 〉"];
+7 [label="〈 5, 8, 9, 11, 12 〉"];
+8 [label="〈 5, 9, 11, 12, 13 〉"];
+9 [label="〈 5, 9, 12, 13, 16 〉"];
+10 [label="〈 5, 9, 12, 16 〉"];
+11 [label="〈 5, 9, 12 〉"];
+1 -> 2;
+2 -> 3;
+3 -> 4;
+4 -> 5;
+5 -> 6;
+6 -> 7;
+7 -> 8;
+8 -> 9;
+9 -> 10;
+10 -> 11;
+}
+```
+:::
+
+
+The nodes with grey background are irreducible numerical semigroups.
+
+
 ## References

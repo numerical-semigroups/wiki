@@ -20,19 +20,25 @@ $$
 
 The graph associated to $s = 60$ is as follows.
 
-```{r}
-
-#graph G {
- # layout = neato
-  #overlap = false
-  #node [shape = circle, fixedsize = true, width = 0.9]; (12, 0, 0); (7, 1, 1); (0, 5, 0); (2, 2, 2);
-  #(12, 0, 0) -> (7, 1, 1);
-  #(12, 0, 0) -> (2, 2, 2);
-  #(0, 5, 0) -> (7, 1, 1); 
-  #(0, 5, 0) -> (2, 2 , 2);
-  #(7, 1, 1) -> (2, 2, 2);
-#}
+::: {style="text-align:center;"}
+```{dot}
+// | fig-width: 65%
+// | fig-height: 250px
+graph  NSGraph{
+1 [label=" (12, 0, 0)"];
+2 [label=" (0, 5, 0)"];
+3 [label=" (7, 1, 1)"];
+4 [label=" (2, 2, 2)"];
+2 -- 4;
+1 -- 3;
+3 -- 4;
+2 -- 3;
+1 -- 4;
+}
 ```
+:::
+
+
 
 ## Examples with GAP
 
@@ -71,4 +77,70 @@ gap> RClassesOfSetOfFactorizations(z);
 
 In this case, $\nabla_{215}$ is connected.
 
+
+$\diamond$ Let $S = \langle 15, 18, 22, 32 \rangle$, in GAP:
+
+```gap
+gap> S := NumericalSemigroup(15, 18, 22, 32);
+<Numerical semigroup with 4 generators>
+```
+
+Given a set of factorizations $f$, the function `DotEliahouGraph` returns the graph (in dot) of factorizations associated to $f$. Edges are labelled with [distances](../Fact-and-Div/Distance-factorizations.qmd) between nodes they join.
+
+
+```gap
+gap> 120 in S;
+true
+gap> f := Factorizations(S, 120);
+[ [ 8, 0, 0, 0 ], [ 2, 5, 0, 0 ], [ 0, 3, 3, 0 ], [ 2, 2, 1, 1 ],
+  [ 0, 0, 4, 1 ] ]
+gap> h := DotEliahouGraph(f);;
+gap> Print(h);
+graph  NSGraph{
+1 [label=" (8, 0, 0, 0)"];
+2 [label=" (2, 5, 0, 0)"];
+3 [label=" (0, 3, 3, 0)"];
+4 [label=" (2, 2, 1, 1)"];
+5 [label=" (0, 0, 4, 1)"];
+2 -- 4[label="3" ];
+3 -- 4[label="3" ];
+3 -- 5[label="3" ];
+2 -- 3[label="4" ];
+4 -- 5[label="4" ];
+1 -- 2[label="6" ];
+1 -- 4[label="6" ];
+}
+```
+
+The obtained graph is as follows.
+
+::: {style="text-align:center;"}
+```{dot}
+// | fig-width: 100%
+// | fig-height: 400px
+graph  NSGraph{
+1 [label=" (8, 0, 0, 0)"];
+2 [label=" (2, 5, 0, 0)"];
+3 [label=" (0, 3, 3, 0)"];
+4 [label=" (2, 2, 1, 1)"];
+5 [label=" (0, 0, 4, 1)"];
+2 -- 4[label="3" ];
+3 -- 4[label="3" ];
+3 -- 5[label="3" ];
+2 -- 3[label="4" ];
+4 -- 5[label="4" ];
+1 -- 2[label="6" ];
+1 -- 4[label="6" ];
+}
+
+```
+:::
+
+
 ## References
+
+
+
+
+
+
