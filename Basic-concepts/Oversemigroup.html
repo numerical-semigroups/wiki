@@ -1219,7 +1219,7 @@ window.Quarto = {
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>The following example is made with the package NumericalSgps in GAP.</p>
+<p>The following examples are made with the package NumericalSgps in GAP.</p>
 <p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 2, 5 \rangle\)</span>, in GAP:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">2</span><span class="op">,</span> <span class="fl">5</span>)<span class="op">;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">2</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1235,6 +1235,118 @@ window.Quarto = {
 <div class="sourceCode" id="cb4"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="bu">List</span>(<span class="va">OverSemigroups</span>(<span class="va">S</span>)<span class="op">,</span> <span class="va">l</span> <span class="op">-&gt;</span> <span class="va">Gaps</span>(<span class="va">l</span>))<span class="op">;</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>[ [  ]<span class="op">,</span> [ <span class="fl">1</span> ]<span class="op">,</span> [ <span class="fl">1</span><span class="op">,</span> <span class="fl">3</span> ] ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>It is concluded that <span class="math inline">\(\mathcal{O}(S) = \{S, T, \mathbb{N}\}\)</span>, where <span class="math inline">\(T = \{0, 2, \rightarrow\}\)</span>.</p>
+<p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 4,5,6 \rangle\)</span>, in GAP:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">4</span><span class="op">,</span><span class="fl">5</span><span class="op">,</span><span class="fl">6</span>)<span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">3</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Given a numerical semigroup <span class="math inline">\(S\)</span>, the function <code>DotOverSemigroupsNumericalSemigroup</code> returns the Hasse diagram (in dot) of oversemigroups of <span class="math inline">\(S\)</span>.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">h</span> <span class="op">:=</span> <span class="va">DotOverSemigroupsNumericalSemigroup</span>(<span class="va">S</span>)<span class="op">;;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="bu">Print</span>(<span class="va">DotOverSemigroupsNumericalSemigroup</span>(<span class="va">S</span>))<span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="va">digraph</span>  <span class="va">NSGraph</span>{<span class="va">rankdir</span> <span class="op">=</span> <span class="va">TB</span><span class="op">;</span> <span class="va">edge</span>[<span class="va">dir</span><span class="op">=</span><span class="va">back</span>]<span class="op">;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fl">1</span> [<span class="va">label</span><span class="op">=</span><span class="st">"〈 1 〉"</span><span class="op">,</span> <span class="va">style</span><span class="op">=</span><span class="va">filled</span>]<span class="op">;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fl">2</span> [<span class="va">label</span><span class="op">=</span><span class="st">"〈 2, 3 〉"</span><span class="op">,</span> <span class="va">style</span><span class="op">=</span><span class="va">filled</span>]<span class="op">;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fl">3</span> [<span class="va">label</span><span class="op">=</span><span class="st">"〈 2, 5 〉"</span><span class="op">,</span> <span class="va">style</span><span class="op">=</span><span class="va">filled</span>]<span class="op">;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fl">4</span> [<span class="va">label</span><span class="op">=</span><span class="st">"〈 3, 4, 5 〉"</span><span class="op">,</span> <span class="va">style</span><span class="op">=</span><span class="va">filled</span>]<span class="op">;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fl">5</span> [<span class="va">label</span><span class="op">=</span><span class="st">"〈 4, 5, 6, 7 〉"</span>]<span class="op">;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="fl">6</span> [<span class="va">label</span><span class="op">=</span><span class="st">"〈 4, 5, 6 〉"</span><span class="op">,</span> <span class="va">style</span><span class="op">=</span><span class="va">filled</span>]<span class="op">;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="fl">1</span> <span class="op">-&gt;</span> <span class="fl">2</span><span class="op">;</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="fl">2</span> <span class="op">-&gt;</span> <span class="fl">3</span><span class="op">;</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="fl">2</span> <span class="op">-&gt;</span> <span class="fl">4</span><span class="op">;</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="fl">3</span> <span class="op">-&gt;</span> <span class="fl">5</span><span class="op">;</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="fl">4</span> <span class="op">-&gt;</span> <span class="fl">5</span><span class="op">;</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="fl">5</span> <span class="op">-&gt;</span> <span class="fl">6</span><span class="op">;</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The obtained graph is as follows.</p>
+<div style="text-align:center;">
+<div class="cell" data-fig-width="65%" data-fig-height="300px" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<svg width="NaN" height="300" viewbox="0.00 0.00 224.33 332.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 328)">
+<title>NSGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-328 220.33,-328 220.33,4 -4,4"></polygon>
+<!-- 1 -->
+<g id="node1" class="node">
+<title>1</title>
+<ellipse fill="lightgrey" stroke="black" cx="102.84" cy="-306" rx="35.36" ry="18"></ellipse>
+<text text-anchor="middle" x="102.84" y="-301.8" font-family="Times,serif" font-size="14.00">〈 1 〉</text>
+</g>
+<!-- 2 -->
+<g id="node2" class="node">
+<title>2</title>
+<ellipse fill="lightgrey" stroke="black" cx="102.84" cy="-234" rx="44.67" ry="18"></ellipse>
+<text text-anchor="middle" x="102.84" y="-229.8" font-family="Times,serif" font-size="14.00">〈 2, 3 〉</text>
+</g>
+<!-- 1&#45;&gt;2 -->
+<g id="edge1" class="edge">
+<title>1-&gt;2</title>
+<path fill="none" stroke="black" d="M102.84,-277.67C102.84,-269.05 102.84,-259.79 102.84,-252.1"></path>
+<polygon fill="black" stroke="black" points="99.34,-277.7 102.84,-287.7 106.34,-277.7 99.34,-277.7"></polygon>
+</g>
+<!-- 3 -->
+<g id="node3" class="node">
+<title>3</title>
+<ellipse fill="lightgrey" stroke="black" cx="44.84" cy="-162" rx="44.67" ry="18"></ellipse>
+<text text-anchor="middle" x="44.84" y="-157.8" font-family="Times,serif" font-size="14.00">〈 2, 5 〉</text>
+</g>
+<!-- 2&#45;&gt;3 -->
+<g id="edge2" class="edge">
+<title>2-&gt;3</title>
+<path fill="none" stroke="black" d="M82.96,-209.01C74.94,-199.33 65.89,-188.41 58.62,-179.63"></path>
+<polygon fill="black" stroke="black" points="80.31,-211.3 89.38,-216.76 85.7,-206.83 80.31,-211.3"></polygon>
+</g>
+<!-- 4 -->
+<g id="node4" class="node">
+<title>4</title>
+<ellipse fill="lightgrey" stroke="black" cx="161.84" cy="-162" rx="54.49" ry="18"></ellipse>
+<text text-anchor="middle" x="161.84" y="-157.8" font-family="Times,serif" font-size="14.00">〈 3, 4, 5 〉</text>
+</g>
+<!-- 2&#45;&gt;4 -->
+<g id="edge3" class="edge">
+<title>2-&gt;4</title>
+<path fill="none" stroke="black" d="M123.06,-209.01C131.21,-199.33 140.42,-188.41 147.82,-179.63"></path>
+<polygon fill="black" stroke="black" points="120.29,-206.86 116.52,-216.76 125.64,-211.37 120.29,-206.86"></polygon>
+</g>
+<!-- 5 -->
+<g id="node5" class="node">
+<title>5</title>
+<ellipse fill="none" stroke="black" cx="102.84" cy="-90" rx="64.3" ry="18"></ellipse>
+<text text-anchor="middle" x="102.84" y="-85.8" font-family="Times,serif" font-size="14.00">〈 4, 5, 6, 7 〉</text>
+</g>
+<!-- 3&#45;&gt;5 -->
+<g id="edge4" class="edge">
+<title>3-&gt;5</title>
+<path fill="none" stroke="black" d="M64.72,-137.01C72.73,-127.33 81.78,-116.41 89.05,-107.63"></path>
+<polygon fill="black" stroke="black" points="61.97,-134.83 58.29,-144.76 67.36,-139.3 61.97,-134.83"></polygon>
+</g>
+<!-- 4&#45;&gt;5 -->
+<g id="edge5" class="edge">
+<title>4-&gt;5</title>
+<path fill="none" stroke="black" d="M141.18,-136.49C133.23,-127.07 124.34,-116.52 117.13,-107.96"></path>
+<polygon fill="black" stroke="black" points="138.73,-139.02 147.85,-144.41 144.09,-134.51 138.73,-139.02"></polygon>
+</g>
+<!-- 6 -->
+<g id="node6" class="node">
+<title>6</title>
+<ellipse fill="lightgrey" stroke="black" cx="102.84" cy="-18" rx="54.49" ry="18"></ellipse>
+<text text-anchor="middle" x="102.84" y="-13.8" font-family="Times,serif" font-size="14.00">〈 4, 5, 6 〉</text>
+</g>
+<!-- 5&#45;&gt;6 -->
+<g id="edge6" class="edge">
+<title>5-&gt;6</title>
+<path fill="none" stroke="black" d="M102.84,-61.67C102.84,-53.05 102.84,-43.79 102.84,-36.1"></path>
+<polygon fill="black" stroke="black" points="99.34,-61.7 102.84,-71.7 106.34,-61.7 99.34,-61.7"></polygon>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
+<p>The nodes with grey background are irreducible numerical semigroups.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
