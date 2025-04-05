@@ -40,12 +40,9 @@ Nowadays, there are no functions in package NumericalSgps related to chain assoc
 
 ``` gap
 gap> ChainOfNumericalSemigroup := function(S)
->       local g, C, F, Min_gen, I, T;
+>       local g, C, i, F, Min_gen, I, T;
 >       if not IsNumericalSemigroup(S) then
 >               Error("The argument must be a Numerical Semigroup");
->       fi;
->       if 1 in S then
->               return [NumericalSemigroup(1)];
 >       fi;
 >       g := Length(Gaps(S));
 >       C := [S];
@@ -58,6 +55,7 @@ gap> ChainOfNumericalSemigroup := function(S)
 >       od;
 >       return C;
 > end;
+function( S ) ... end
 ```
 
 $\diamond$ Let $S = \langle 7, 8, 9, 19, 20 \rangle$, in GAP:

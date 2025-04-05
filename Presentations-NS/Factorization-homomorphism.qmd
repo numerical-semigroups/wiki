@@ -38,7 +38,7 @@ gap> ImageHomomorfismOfNumericalSemigroup := function(S, I)
 >       if not IsNumericalSemigroup(S) then
 >               Error("First argument must be a Numerical Semigroup");
 >       fi;
->       if not IsList(I) then
+>       if not IsList(I) or I = [] then
 >               Error("Second argument must be a non-empty list of positive integers");
 >       fi;
 >       Min_gen := MinimalGenerators(S);

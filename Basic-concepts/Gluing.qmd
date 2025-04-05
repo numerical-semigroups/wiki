@@ -40,34 +40,16 @@ Nowadays, there are no functions in package NumericalSgps related to gluing of a
 
 ``` gap
 gap> IsGluing := function(A, A_1, A_2)
->       local a, a_1, a_2, d_1, d_2, d, S, T;
->       if not IsList(A) or A = [] then
+>       local d_1, d_2, d, S, T;
+>       if not IsListOfIntegersNS(A) then
 >               Error("First argument must be a non-empty list of positive integers");
 >       fi;
->       for a in A do
->           if not IsInt(a) then 
->               Error("First argument must be a non-empty list of positive integers");
->           fi;
->       od;
->       if not IsList(A_1) then
->               Error("Second argument must be a list of positive integers");
+>       if not IsListOfIntegersNS(A_1) then
+>               Error("Second argument must be a non-empty list of positive integers");
 >       fi;
->       if not IsList(A_2) then
->               Error("Third argument must be a list of positive integers");
+>       if not IsListOfIntegersNS(A_2) then
+>               Error("Third argument must be a non-empty list of positive integers");
 >       fi;
->       if A_1 = [] or A_2 = [] then
->               return false;
->       fi;
->       for a_1 in A_1 do
->           if not IsInt(a_1) then 
->               Error("Second argument must be a list of positive integers");
->           fi;
->       od;
->       for a_2 in A_2 do
->           if not IsInt(a_2) then 
->               Error("Third argument must be a list of positive integers");
->           fi;
->       od;
 >       if not (IsSubset(A, A_1) and IsSubset(A, A_2)) then
 >               return false;
 >       fi;
@@ -87,6 +69,7 @@ gap> IsGluing := function(A, A_1, A_2)
 >       fi;
 >       return false;
 > end;
+function( A, A_1, A_2 ) ... end
 ```
 
 Moreover, given a list of positive integers $A$, the following function returns a list $I = [ [A_1, B_1], \ldots, [A_n, B_n] ]$ such that $A$ is a gluing of $A_i, B_i$ for all $i \in \{1, \ldots, n\}$, that is, all the possible gluings of $A$.
@@ -94,14 +77,9 @@ Moreover, given a list of positive integers $A$, the following function returns 
 ``` gap
 gap> AllGluings := function(A)
 >       local a, l_gluings, P;
->       if not IsList(A) or A = [] then
+>       if not IsListOfIntegersNS(A) then
 >               Error("The argument must be a non-empty list of positive integers");
 >       fi;
->       for a in A do
->           if not IsInt(a) then 
->               Error("The argument must be a non-empty list of positive integers");
->           fi;
->       od;
 >       l_gluings := [];
 >       for P in PartitionsSet(Set(A), 2) do
 >               if IsGluing(A, P[1], P[2]) then

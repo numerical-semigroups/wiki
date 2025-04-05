@@ -22,33 +22,34 @@ $$
 
 Nowadays, there are no functions in package NumericalSgps related to weight of a modular Diophantine inequality. However, given two positive integers $a,b$, the following function returns the weight of the modular Diophantine inequality $a'x ~ (mod ~ b) \le x$, where $a' = a ~ (mod ~ b)$.
 
-```gap
+``` gap
 gap> WeightModDiophantineIneq := function(a,b)
 >       local c;
+>       if not IsInt(a) then
+>           Error("First argument must be a positive integer");
+>       fi;
+>       if a <= 0 then
+>           Error("First argument must be a positive integer");
+>       fi;
+>       if not IsInt(b) then
+>           Error("First argument must be a positive integer");
+>       fi;
+>       if b <= 0 then
+>           Error("First argument must be a positive integer");
+>       fi;
 >       c := a mod b;
 >       return b - Gcd(c,b) - Gcd(c-1,b);
 > end;
 function( a, b ) ... end
 ```
 
-
 $\diamond$ Let $a = 12, b = 27$ and the modular Diophantine inequality $ax ~ (mod ~ b) \le x$. If we use the function defined above,
 
-```gap
+``` gap
 gap> WeightModDiophantineIneq(12, 27);
 23
 ```
 
-Then, the weight of the modular Diophantine inequality is $w(12,27) = 23$.
-
-
+Then, the weight of the modular Diophantine inequality $12x ~ (mod ~ 27) \le x$ is $w(12,27) = 23$.
 
 ## References
-
-
-
-
-
-
-
-

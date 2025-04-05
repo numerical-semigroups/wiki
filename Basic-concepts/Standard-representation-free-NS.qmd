@@ -28,16 +28,98 @@ $\circ$ Consider the free numerical semigroup $S = \langle 4, 6, 9 \rangle$ and 
 
 Nowadays, there are no functions in NumericalSgps related to standard representations in a free numerical semigroup. However, given a list $I = \{r_0, \ldots, r_h\}$ such that $S = \langle I \rangle$ is free for the arrangement $(r_0, \ldots, r_h)$ and an integer $z \in \mathbb{Z}$, the following function returns a list with the coefficients of the standard representation of $z$ in $S$.
 
-
-
-```gap
-gap> StandardRepresentation := function(S, I, z)
->       local
->       
+``` gap
+gap> StandardRepresentationNS := function(S, I, z)
+>       local Min_gen, p, list_c, list_mu, list_lambda, i, mu_i, c_i, q, j, d_i, s, list_subrep;
+>       if not IsNumericalSemigroup(S) then
+>           Error("First argument must be a Numerical Semigroup");
+>       fi;
+>       if not IsListOfIntegersNS(I) then
+>           Error("Second argument must be an arrangement of the minimal system of generators of the first argument");
+>       fi;
+>       Min_gen := MinimalGenerators(S);
+>       p := Length(Min_gen);
+>       if not Min_gen = SortedList(I) then
+>           Error("Second argument must be an arrangement of the minimal system of generators of the first argument");
+>       fi;
+>       if not IsFreeForArrangement(S,I) then
+>           Error("First argument is not free for the considered arrangement");
+>       fi;
+>       if not IsInt(z) then
+>           Error("Third argument must be an integer");
+>       fi;
+>       list_c := pivots(S, I);
+>       list_mu := GcdRepresentation(I);
+>       list_lambda := [];
+>       for i in Reversed([2..p]) do
+>           mu_i := list_mu[i];
+>           c_i := list_c[i];
+>           q := QuoInt(mu_i, c_i);
+>           Add(list_lambda(RemInt(mu_i, c_i)));
+>           d_i := Gcd(I{[1..(i-1)]});
+>           s := c_i*I[i]/d_i;
+>           list_subrep := q*s*GcdRepresentation(I{[1..(i-1)]});
+>           for j in [1..(i-1)] do
+>           list_mu[j] := list_mu[j] + list_subrep[j];
+>           od;
+>       od;
+>       return list_lambda;
+> end;
+function( S, I, z ) ... end
 ```
 
+The functions `IsFreeForArrangement` and `pivots` are not implemented in GAP, its code is as follows.
 
+``` gap
+gap> IsFreeForArrangement := function(S, I)
+>       local p, Min_gen, n_p;
+>       if not IsNumericalSemigroup(S) then
+>           Error("First argument must be a Numerical Semigroup");
+>       fi;
+>       Min_gen := MinimalGenerators(S);
+>       if not (IsList(I) and Min_gen = SortedList(I)) then
+>           Error("Second argument must be an arrangement of the minimal system of generators of the first argument");
+>       fi;
+>       p := Length(I);
+>       if p = 1 then 
+>           return false; 
+>       fi;
+>       n_p := I[p];
+>       return gluing([n_p],Difference(I,[n_p])) and IsFreeNumericalSemigroup(NumericalSemigroup(Difference(I,[n_p])/Gcd(Difference(I,[n_p]))));
+> end;
+function( S, I ) ... end
+```
 
+```gap
+gap> pivots:=function(s, I...)
+>    local cs,msg,e,a,c,ap,i,rmsg,rs,d;
+>    if Length(I) = 0 then
+>       msg:=MinimalGenerators(s);
+>    elif Length(I) = 1 then
+>       msg:=I[1];
+>    else
+>       Error("The number of arguments must be one or two");
+>    fi;
+>    if not IsList(msg) or msg = [] then
+>       Error("Second argument must be an arrangement of the minimal system of generators of the first argument");
+>    fi;
+>    if not SortedList(msg) = MinimalGenerators(S) then
+>       Error("Second argument must be an arrangement of the minimal system of generators of the first argument");
+>    fi;   
+>    e:=EmbeddingDimension(s);
+>    cs:=[]; 
+>    for i in [1..e] do
+>        a:=msg[i];
+>        rmsg:=Difference(msg,[a]);
+>        d:=Gcd(rmsg);
+>        rs:=NumericalSemigroup(rmsg/d);
+>        c:=First([2..Minimum(rmsg)], k->((k*a) mod d=0) and (k*a/d in rs));
+>        Add(cs,c);
+>    od;
+>    return cs;
+> end;
+function( s ) ... end
+```
 
 
 ## References

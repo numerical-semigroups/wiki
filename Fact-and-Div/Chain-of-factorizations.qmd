@@ -171,7 +171,7 @@ In this case, the chain of factorizations that we defined joining $x = (1,2,3,0)
 
 $\diamond$ Given a numerical semigroup and a list of factorizations $I = \{x_1, \ldots, x_n\}$, the following function returns the value $N$ such that $I$ is an $N-$chain of factorizations joining $x_1$ and $x_n$.
 
-```gap
+``` gap
 gap> NChainOfFactorizations := function(S,I)
 >       local n, value, N, i, dist_i;
 >       if not IsNumericalSemigroup(S) then
@@ -197,10 +197,9 @@ gap> NChainOfFactorizations := function(S,I)
 function( S, I ) ... end
 ```
 
-For example, considering $S = \langle 37, 42, 43, 50, 66 \rangle$, $s = 240$ and $I = \{(3, 0, 3, 0, 0), (4, 1, 0, 1, 0), (2, 0, 0, 2, 1), (0, 1, 0, 0, 3) \}$, 
-  
-  
-```gap
+For example, considering $S = \langle 37, 42, 43, 50, 66 \rangle$, $s = 240$ and $I = \{(3, 0, 3, 0, 0), (4, 1, 0, 1, 0), (2, 0, 0, 2, 1), (0, 1, 0, 0, 3) \}$,
+
+``` gap
 gap> 240 in S;
 true
 gap> I := [ [3,0,3,0,0], [4,1,0,1,0], [2,0,0,2,1], [0,1,0,0,3] ];
@@ -210,9 +209,6 @@ gap> NChainOfFactorizations(S,I);
 gap> IsNChainOfFactorizations(S,3,I);
 false
 ```
-
-
-
 
 ## References
 

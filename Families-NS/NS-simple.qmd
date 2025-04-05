@@ -35,45 +35,31 @@ gap> IsSimpleNumericalSemigroup := function(S)
 >       if p = 1 then 
 >           return false; 
 >       fi;
->       list_c := ConstantsFreeNumericalSemigroup(S);
+>       list_c := pivots(S);
 >       return Min_gen[1] - 1 = Sum(list_c{[2..p]} - 1);
 > end;
 function( S ) ... end
 ```
 
-The function `ConstantsFreeNumericalSemigroup` is not implemented in GAP, it computes the constants $c_i$ defined above.
+The function `pivots` is not yet implemented in GAP, it computes the constants $c_i$ defined above.
 
 ``` gap
-gap> ConstantsFreeNumericalSemigroup := function(S)
->       local Min_gen, p, list_c, i, n_i, d_i, S_i, k, q;
->       if not IsNumericalSemigroup(S) then
->           Error("The argument must be a Numerical Semigroup");
->       fi;
->       Min_gen := MinimalGenerators(S);
->       p := Length(Min_gen);
->       list_c := [];
->       for i in [1..p] do
->           n_i := Min_gen[i];
->           Min_gen[i] := 0;
->           d_i := Gcd(Min_gen);
->           S_i := NumericalSemigroup(Min_gen / d_i);
->           k := 2;
->           while not RemInt(k*n_i, d_i) = 0 do
->               k := k + 1;
->           od;
->           q := QuoInt(k*n_i, d_i);
->           while not q in S_i do
->               k := k + 1;
->               while not RemInt(k*n_i, d_i) = 0 do
->                   k := k + 1;
->               od;
->               q := QuoInt(k*n_i, d_i);
->           od;
->           Add(list_c, k);
->           Min_gen[i] := n_i;
->       od;
->       return list_c;
+gap> pivots:=function(s)
+>    local cs,msg,e,a,c,ap,i,rmsg,rs,d;
+>    msg:=MinimalGenerators(s);
+>    e:=EmbeddingDimension(s);
+>    cs:=[]; 
+>    for i in [1..e] do
+>        a:=msg[i];
+>        rmsg:=Difference(msg,[a]);
+>        d:=Gcd(rmsg);
+>        rs:=NumericalSemigroup(rmsg/d);
+>        c:=First([2..Minimum(rmsg)], k->((k*a) mod d=0) and (k*a/d in rs));
+>        Add(cs,c);
+>    od;
+>    return cs;
 > end;
+function( s ) ... end
 ```
 
 $\diamond$ Let $S = \langle 17, 21, 32 \rangle$, in GAP:

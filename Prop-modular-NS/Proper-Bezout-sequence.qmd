@@ -24,18 +24,17 @@ Nowadays, there are no functions in package NumericalSgps related to proper Béz
 
 ``` gap
 gap> IsProperBezoutSequence := function(I)
->       local n, a_i, b_i, a_j, b_j, i, j;
->       n := Length(I);
->       if n = 0 then
->               Error("The argument is an empty list");
->       fi;
+>       local n, q_i, q_j, a_i, b_i, a_j, b_j, i, j;
 >       if not IsBezoutSequence(I) then
 >           return false;
 >       fi;
+>       n := Length(I);
 >       for i in [1..n-2] do
+>               q_i := I[i];
 >           for j in [i+2..n] do
->               a_i := NumeratorRat(I[i]); b_i := DenominatorRat(I[i]);
->               a_j := NumeratorRat(I[j]); b_j := DenominatorRat(I[j]);
+>               q_j := I[j];
+>               a_i := NumeratorRat(q_i); b_i := DenominatorRat(q_i);
+>               a_j := NumeratorRat(q_j); b_j := DenominatorRat(q_j);
 >               if a_j*b_i - a_i*b_j < 2 then
 >                        return false;
 >               fi;
@@ -46,19 +45,61 @@ gap> IsProperBezoutSequence := function(I)
 function( I ) ... end
 ```
 
-
 $\diamond$ Let $\frac{131}{50} < \frac{76}{29} < \frac{21}{8} < \frac{8}{3}$.
 
 ``` gap
-gap> I := [ [131, 50], [76, 29], [21, 8], [8,3] ];
-[ [ 131, 50 ], [ 76, 29 ], [ 21, 8 ], [ 8, 3 ] ]
+gap> I := [ 131/50, 76/29, 21/8, 8/3 ];
+[ 131/50, 76/29, 21/8, 8/3 ]
 gap> IsProperBezoutSequence(I);
 true
 ```
 
 Then, the sequence is a Bézout sequence and is proper.
 
+$\diamond$ Let $I = \{4/5, 1, 2, 3, 10/3, 17/5 \}$, in GAP:
+
+``` gap
+gap> I := [4/5, 1, 2, 3, 10/3, 17/5];
+[ 4/5, 1, 2, 3, 10/3, 17/5 ]
+```
+
+Given a list $I = [a_1/b_1, \ldots, a_p/b_p]$ such that $\frac{a_1}{b_1} < \ldots < \frac{a_p}{b_p}$ is a Bézout sequence, the following function returns the proper Bézout sequence using the method described in the definition.
+
+``` gap
+gap> BezoutSequenceToProper := function(I)
+>       local list_ind, n, i, j, q_i, q_j, a_i, b_i, a_j, b_j;
+>       if not IsBezoutSequence(I) then
+>           Error("The argument is not a Bézout sequence");
+>       fi;
+>       list_ind := [];
+>       n := Length(I);
+>       i := 1;
+>       while i < n+1 do
+>           Add(list_ind, i);
+>           q_i := I[i];
+>           for j in [i+2..n] do
+>               q_j := I[j];
+>               a_i := NumeratorRat(q_i); b_i := DenominatorRat(q_i);
+>               a_j := NumeratorRat(q_j); b_j := DenominatorRat(q_j);
+>               if a_j*b_i - a_i*b_j < 2 then
+>                       i := j-1;
+>                       break;
+>               fi;
+>           od;
+>           i := i + 1;
+>       od;
+>       return I{list_ind};
+> end;
+function( I ) ... end
+```
+
+In this case, $I$ is a proper Bézout sequence.
+
+``` gap
+gap> BezoutSequenceToProper(I);
+[ 4/5, 1, 2, 3, 10/3, 17/5 ]
+gap> IsProperBezoutSequence(I);
+true
+```
+
 ## References
-
-
-
