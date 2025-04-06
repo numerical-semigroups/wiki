@@ -34,21 +34,21 @@ The following examples are made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S \langle 40, 329, 338 \rangle$,in GAP:
 
-```gap
+``` gap
 gap> S := NumericalSemigroup(40, 329, 338);
 <Numerical semigroup with 3 generators>
 ```
 
 Given a numerical semigroup $S$, the function `AsGluingOfNumericalSemigroups` returns all partitions $\{A_1, A_2\}$ of the minimal generating set of $S$ such that $S$ is a gluing of $\langle A_1 \rangle$ and $\langle A_2 \rangle$ with $\mu = gcd(A_1)$ and $\lambda = gcd(A_1)$.
 
-
-```gap
+``` gap
 gap> AsGluingOfNumericalSemigroups(S);
 [ [ [ 40, 338 ], [ 329 ] ] ]
 ```
+
 In this case, $S$ is a gluing of $S_1 = \langle 20, 169 \rangle$ and $\mathbb{N} = \langle 1 \rangle$ with $\lambda = 329$ and $\mu = 2$. If there is no partitions, the function returns an empty list.
 
-```gap
+``` gap
 gap> S := NumericalSemigroup(13, 14, 21, 22);
 <Numerical semigroup with 4 generators>
 gap> AsGluingOfNumericalSemigroups(S);
@@ -57,14 +57,14 @@ gap> AsGluingOfNumericalSemigroups(S);
 
 $\diamond$ Let $S = \langle 4, 6, 9 \rangle$, in GAP:
 
-```gap
+``` gap
 gap> S := NumericalSemigroup(4,6,9);
 <Numerical semigroup with 3 generators>
 ```
 
 Given a numerical semigroup, the function `DotTreeOfGluingsOfNumericalSemigroup` returns a tree (in dot) representing the many ways $S$ can be decomposed as a gluing of numerical semigroups.
 
-```gap
+``` gap
 gap> h := DotTreeOfGluingsOfNumericalSemigroup(S);;
 gap> Print(h);
 digraph  NSGraph{rankdir = TB;
@@ -98,7 +98,6 @@ digraph  NSGraph{rankdir = TB;
 ```
 
 The obtained graph is as follows.
-
 
 ::: {style="text-align:center;"}
 ```{dot}
@@ -135,7 +134,4 @@ digraph  NSGraph{rankdir = TB;
 ```
 :::
 
-
 ## References
-
-

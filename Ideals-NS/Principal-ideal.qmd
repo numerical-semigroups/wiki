@@ -33,8 +33,11 @@ gap> IsPrincipalIdeal := function(S,I)
 >               Error("First argument must be a Numerical Semigroup");
 >       fi;
 >       if not IsIdealOfNumericalSemigroup(I) then
->               Error("Second argument must be a relative ideal");
+>               Error("Second argument must be a relative ideal of the first argument");
 >       fi;
+>       if not AmbientNumericalSemigroupOfIdeal(I) = S then
+>               Error("Second argument must be a relative ideal of the first argument");
+>       fi;  
 >       m := Minimum(I);
 >       if m in S and Length(MinimalGenerators(I)) = 1 then
 >               return true;
@@ -42,6 +45,7 @@ gap> IsPrincipalIdeal := function(S,I)
 >       return false;
 >       
 > end;
+function( S, I ) ... end
 ```
 
 $\diamond$ Let $S = \langle 33, 28, 51, 64, 90 \rangle$ and $I = \{151,184, 207, 217, 273, 291\} + S$, in GAP:
@@ -49,7 +53,7 @@ $\diamond$ Let $S = \langle 33, 28, 51, 64, 90 \rangle$ and $I = \{151,184, 207,
 ``` gap
 gap> S := NumericalSemigroup(33, 28, 51, 64, 90);
 <Numerical semigroup with 5 generators>
-gap> I := [151,184, 207, 217, 273, 291] + S;
+gap> I := [151, 184, 207, 217, 273, 291] + S;
 <Ideal of numerical semigroup>
 ```
 
@@ -60,7 +64,7 @@ gap> IsPrincipalIdeal(S,I);
 true
 ```
 
-Then, $I = 151 + S$ and $151 \in S$.
+Then, $I = 151 + S$ with $s = 151 \in S$.
 
 ## References
 

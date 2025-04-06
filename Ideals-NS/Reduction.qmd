@@ -22,7 +22,7 @@ eventually stabilizes, since $|\mathbb{N} \setminus S|$ is finite. Then, there e
 
 ## Examples with GAP
 
-Nowadays, there are no functions in package NumericalSgps related to reduction of proper ideals. However, given a numerical semigroup $S$ and two proper ideals $H,E$ of $S$, the following function returns true if $H$ is a reduction of $E$ and false otherwise.
+Nowadays, there are no functions in package NumericalSgps related to reduction of proper ideals. However, given a numerical semigroup $S$ and two proper ideals $J,I$ of $S$, the following function returns true if $J$ is a reduction of $I$ and false otherwise.
 
 ``` gap
 gap> IsReduction := function(S,J,I)
@@ -30,14 +30,18 @@ gap> IsReduction := function(S,J,I)
 >               Error("First argument must be a Numerical Semigroup");
 >       fi;
 >       if not IsIdealOfNumericalSemigroup(J) then
->               Error("Second argument must be a relative ideal")
+>               Error("Second argument must be a relative ideal of the first argument");
+>       fi;
+>       if not AmbientNumericalSemigroupOfIdeal(J) = S then
+>               Error("Second argument must be a relative ideal of the first argument");
 >       fi;
 >       if not IsIdealOfNumericalSemigroup(I) then
->               Error("Third argument must be a relative ideal")
+>               Error("Third argument must be a relative ideal of the first argument");
 >       fi;
->       if not (IsSubset(0+S,J) and IsSubset(0+S,I)) then
->               return false;
->       elif not (IsIntegral(J) and IsIntegral(I)) then
+>       if not AmbientNumericalSemigroupOfIdeal(I) = S then
+>               Error("Third argument must be a relative ideal of the first argument");
+>       fi;
+>       if not (IsIntegral(J) and IsIntegral(I)) then
 >               return false;
 >       fi;
 >       if IsSubset(J, Minimum(I) + S) and IsSubset(I,J) then
@@ -45,6 +49,7 @@ gap> IsReduction := function(S,J,I)
 >       fi;
 >       return false;
 > end;
+function( S, J, I ) ... end
 ```
 
 $\diamond$ Let $S = \langle 13, 15, 22, 27 \rangle$, $I = \{26, 28, 40, 41\} + S$ and $J = \{26, 41\} + S$, in GAP:

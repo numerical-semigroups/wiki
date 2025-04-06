@@ -10,11 +10,36 @@ engine: markdown
 
 Let $\mathcal{S}$ be the set of [numerical semigroups](../Basic-concepts/Numerical-semigroup.qmd). It is defined the directed graph $\mathcal{G}(\mathcal{S})$ of all numerical semigroups as the graph whose vertices are the elements of $\mathcal{S}$ and $(T, S) \in \mathcal{S} \times \mathcal{S}$ is an edge if $S = T \cup \{F(T)\}$, where $F(T)$ denotes the [Frobenius number](../Basic-concepts/Frobenius-number.qmd) of $T$.
 
-From the definition of edge in $\mathcal{G}(\mathcal{S})$, it is deduced that for all $T, S', S' \in \mathcal{S}$, if $(T,S)$ and $(T,S')$ are edges, then $S = S'$.
+It can be proven that the directed graph is a tree rooted in $\mathbb{N}$, and the sons of $S \in \mathcal{G}(\mathcal{S})$ are $S \setminus \{x_1\}, \ldots, S \setminus \{x_r\}$ with $x_1, \ldots, x_r$ those minimal generators greater than $F(S)$.
 
 ## Examples
 
-$\circ$
+$\circ$ Given a numerical semigroup $S$, other than $\mathbb{N}$, with [genus](../Basic-concepts/Genus.qmd) $g(S)$, from the definition of edge in $\mathcal{G}(\mathcal{S})$, it is deduced that for all $T, S', S' \in \mathcal{S}$, if $(T,S)$ and $(T,S')$ are edges, then $S = S'$. Therefore, $\mathcal{G}(\mathcal{S})$ can be represented by levels where each level represents the genus of the numerical semigroup. For genus up to $4$, we have the following graph.
+
+::: {style="text-align:center;"}
+```{dot}
+// | fig-width: 55%
+// | fig-height: 300px
+digraph  NSGraph{rankdir = TB; edge[dir=back];
+1 [label="〈 1 〉", style=filled];
+2 [label="〈 2, 3 〉", style=filled];
+3 [label="〈 3, 4, 5 〉", style=filled];
+4 [label="〈 2, 5 〉", style=filled];
+5 [label="〈 4, 5, 6 〉", style=filled];
+6 [label="〈 3, 5, 7 〉", style=filled];
+7 [label="〈 3, 4 〉", style=filled];
+8 [label="〈 2, 7 〉", style=filled];
+1 -> 2;
+2 -> 3;
+2 -> 4;
+3 -> 5;
+3 -> 6;
+3 -> 7;
+4 -> 8;
+}
+```
+:::
+
 
 ## Examples with GAP
 
