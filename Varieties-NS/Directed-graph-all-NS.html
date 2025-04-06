@@ -1170,11 +1170,119 @@ window.Quarto = {
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
 <p>Let <span class="math inline">\(\mathcal{S}\)</span> be the set of <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroups</a>. It is defined the directed graph <span class="math inline">\(\mathcal{G}(\mathcal{S})\)</span> of all numerical semigroups as the graph whose vertices are the elements of <span class="math inline">\(\mathcal{S}\)</span> and <span class="math inline">\((T, S) \in \mathcal{S} \times \mathcal{S}\)</span> is an edge if <span class="math inline">\(S = T \cup \{F(T)\}\)</span>, where <span class="math inline">\(F(T)\)</span> denotes the <a href="../Basic-concepts/Frobenius-number.html">Frobenius number</a> of <span class="math inline">\(T\)</span>.</p>
-<p>From the definition of edge in <span class="math inline">\(\mathcal{G}(\mathcal{S})\)</span>, it is deduced that for all <span class="math inline">\(T, S', S' \in \mathcal{S}\)</span>, if <span class="math inline">\((T,S)\)</span> and <span class="math inline">\((T,S')\)</span> are edges, then <span class="math inline">\(S = S'\)</span>.</p>
+<p>It can be proven that the directed graph is a tree rooted in <span class="math inline">\(\mathbb{N}\)</span>, and the sons of <span class="math inline">\(S \in \mathcal{G}(\mathcal{S})\)</span> are <span class="math inline">\(S \setminus \{x_1\}, \ldots, S \setminus \{x_r\}\)</span> with <span class="math inline">\(x_1, \ldots, x_r\)</span> those minimal generators greater than <span class="math inline">\(F(S)\)</span>.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span></p>
+<p><span class="math inline">\(\circ\)</span> Given a numerical semigroup <span class="math inline">\(S\)</span>, other than <span class="math inline">\(\mathbb{N}\)</span>, with <a href="../Basic-concepts/Genus.html">genus</a> <span class="math inline">\(g(S)\)</span>, from the definition of edge in <span class="math inline">\(\mathcal{G}(\mathcal{S})\)</span>, it is deduced that for all <span class="math inline">\(T, S', S' \in \mathcal{S}\)</span>, if <span class="math inline">\((T,S)\)</span> and <span class="math inline">\((T,S')\)</span> are edges, then <span class="math inline">\(S = S'\)</span>. Therefore, <span class="math inline">\(\mathcal{G}(\mathcal{S})\)</span> can be represented by levels where each level represents the genus of the numerical semigroup. For genus up to <span class="math inline">\(4\)</span>, we have the following graph.</p>
+<div style="text-align:center;">
+<div class="cell" data-fig-width="55%" data-fig-height="300px" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<svg width="NaN" height="300" viewbox="0.00 0.00 459.33 260.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 256)">
+<title>NSGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-256 455.33,-256 455.33,4 -4,4"></polygon>
+<!-- 1 -->
+<g id="node1" class="node">
+<title>1</title>
+<ellipse fill="lightgrey" stroke="black" cx="293.49" cy="-234" rx="35.36" ry="18"></ellipse>
+<text text-anchor="middle" x="293.49" y="-229.8" font-family="Times,serif" font-size="14.00">〈 1 〉</text>
+</g>
+<!-- 2 -->
+<g id="node2" class="node">
+<title>2</title>
+<ellipse fill="lightgrey" stroke="black" cx="293.49" cy="-162" rx="44.67" ry="18"></ellipse>
+<text text-anchor="middle" x="293.49" y="-157.8" font-family="Times,serif" font-size="14.00">〈 2, 3 〉</text>
+</g>
+<!-- 1&#45;&gt;2 -->
+<g id="edge1" class="edge">
+<title>1-&gt;2</title>
+<path fill="none" stroke="black" d="M293.49,-205.67C293.49,-197.05 293.49,-187.79 293.49,-180.1"></path>
+<polygon fill="black" stroke="black" points="289.99,-205.7 293.49,-215.7 296.99,-205.7 289.99,-205.7"></polygon>
+</g>
+<!-- 3 -->
+<g id="node3" class="node">
+<title>3</title>
+<ellipse fill="lightgrey" stroke="black" cx="235.49" cy="-90" rx="54.49" ry="18"></ellipse>
+<text text-anchor="middle" x="235.49" y="-85.8" font-family="Times,serif" font-size="14.00">〈 3, 4, 5 〉</text>
+</g>
+<!-- 2&#45;&gt;3 -->
+<g id="edge2" class="edge">
+<title>2-&gt;3</title>
+<path fill="none" stroke="black" d="M273.61,-137.01C265.6,-127.33 256.55,-116.41 249.27,-107.63"></path>
+<polygon fill="black" stroke="black" points="270.97,-139.3 280.04,-144.76 276.36,-134.83 270.97,-139.3"></polygon>
+</g>
+<!-- 4 -->
+<g id="node4" class="node">
+<title>4</title>
+<ellipse fill="lightgrey" stroke="black" cx="379.49" cy="-90" rx="44.67" ry="18"></ellipse>
+<text text-anchor="middle" x="379.49" y="-85.8" font-family="Times,serif" font-size="14.00">〈 2, 5 〉</text>
+</g>
+<!-- 2&#45;&gt;4 -->
+<g id="edge3" class="edge">
+<title>2-&gt;4</title>
+<path fill="none" stroke="black" d="M320.7,-138.85C333.63,-128.33 348.78,-116 360.46,-106.49"></path>
+<polygon fill="black" stroke="black" points="318.13,-136.44 312.58,-145.46 322.54,-141.87 318.13,-136.44"></polygon>
+</g>
+<!-- 5 -->
+<g id="node5" class="node">
+<title>5</title>
+<ellipse fill="lightgrey" stroke="black" cx="54.49" cy="-18" rx="54.49" ry="18"></ellipse>
+<text text-anchor="middle" x="54.49" y="-13.8" font-family="Times,serif" font-size="14.00">〈 4, 5, 6 〉</text>
+</g>
+<!-- 3&#45;&gt;5 -->
+<g id="edge4" class="edge">
+<title>3-&gt;5</title>
+<path fill="none" stroke="black" d="M191.95,-72.16C160.16,-59.86 117.67,-43.43 88.38,-32.11"></path>
+<polygon fill="black" stroke="black" points="190.86,-75.49 201.45,-75.83 193.38,-68.96 190.86,-75.49"></polygon>
+</g>
+<!-- 6 -->
+<g id="node6" class="node">
+<title>6</title>
+<ellipse fill="lightgrey" stroke="black" cx="181.49" cy="-18" rx="54.49" ry="18"></ellipse>
+<text text-anchor="middle" x="181.49" y="-13.8" font-family="Times,serif" font-size="14.00">〈 3, 5, 7 〉</text>
+</g>
+<!-- 3&#45;&gt;6 -->
+<g id="edge5" class="edge">
+<title>3-&gt;6</title>
+<path fill="none" stroke="black" d="M216.59,-64.49C209.31,-55.07 201.18,-44.52 194.57,-35.96"></path>
+<polygon fill="black" stroke="black" points="213.82,-66.63 222.7,-72.41 219.36,-62.36 213.82,-66.63"></polygon>
+</g>
+<!-- 7 -->
+<g id="node7" class="node">
+<title>7</title>
+<ellipse fill="lightgrey" stroke="black" cx="298.49" cy="-18" rx="44.67" ry="18"></ellipse>
+<text text-anchor="middle" x="298.49" y="-13.8" font-family="Times,serif" font-size="14.00">〈 3, 4 〉</text>
+</g>
+<!-- 3&#45;&gt;7 -->
+<g id="edge6" class="edge">
+<title>3-&gt;7</title>
+<path fill="none" stroke="black" d="M257.14,-64.95C265.89,-55.23 275.76,-44.26 283.67,-35.47"></path>
+<polygon fill="black" stroke="black" points="254.51,-62.64 250.42,-72.41 259.71,-67.32 254.51,-62.64"></polygon>
+</g>
+<!-- 8 -->
+<g id="node8" class="node">
+<title>8</title>
+<ellipse fill="lightgrey" stroke="black" cx="406.49" cy="-18" rx="44.67" ry="18"></ellipse>
+<text text-anchor="middle" x="406.49" y="-13.8" font-family="Times,serif" font-size="14.00">〈 2, 7 〉</text>
+</g>
+<!-- 4&#45;&gt;8 -->
+<g id="edge7" class="edge">
+<title>4-&gt;8</title>
+<path fill="none" stroke="black" d="M389.69,-62.57C393.08,-53.77 396.77,-44.2 399.83,-36.28"></path>
+<polygon fill="black" stroke="black" points="386.36,-61.47 386.03,-72.05 392.89,-63.98 386.36,-61.47"></polygon>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
