@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -1174,106 +1208,106 @@ window.Quarto = {
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> Given a numerical semigroup <span class="math inline">\(S\)</span>, other than <span class="math inline">\(\mathbb{N}\)</span>, with <a href="../Basic-concepts/Genus.html">genus</a> <span class="math inline">\(g(S)\)</span>, from the definition of edge in <span class="math inline">\(\mathcal{G}(\mathcal{S})\)</span>, it is deduced that for all <span class="math inline">\(T, S', S' \in \mathcal{S}\)</span>, if <span class="math inline">\((T,S)\)</span> and <span class="math inline">\((T,S')\)</span> are edges, then <span class="math inline">\(S = S'\)</span>. Therefore, <span class="math inline">\(\mathcal{G}(\mathcal{S})\)</span> can be represented by levels where each level represents the genus of the numerical semigroup. For genus up to <span class="math inline">\(4\)</span>, we have the following graph.</p>
+<p><span class="math inline">\(\circ\)</span> Given a numerical semigroup <span class="math inline">\(S\)</span>, other than <span class="math inline">\(\mathbb{N}\)</span>, with <a href="../Basic-concepts/Genus.html">genus</a> <span class="math inline">\(g(S)\)</span>, from the definition of edge in <span class="math inline">\(\mathcal{G}(\mathcal{S})\)</span>, it is deduced that for all <span class="math inline">\(T, S', S' \in \mathcal{S}\)</span>, if <span class="math inline">\((T,S)\)</span> and <span class="math inline">\((T,S')\)</span> are edges, then <span class="math inline">\(S = S'\)</span>. Therefore, <span class="math inline">\(\mathcal{G}(\mathcal{S})\)</span> can be represented by levels where each level represents the genus of the numerical semigroup. For genus up to <span class="math inline">\(3\)</span>, we have the following graph.</p>
 <div style="text-align:center;">
 <div class="cell" data-fig-width="55%" data-fig-height="300px" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-<svg width="NaN" height="300" viewbox="0.00 0.00 459.33 260.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<svg width="NaN" height="300" viewbox="0.00 0.00 478.99 260.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 256)">
 <title>NSGraph</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-256 455.33,-256 455.33,4 -4,4"></polygon>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-256 474.99,-256 474.99,4 -4,4"></polygon>
 <!-- 1 -->
 <g id="node1" class="node">
 <title>1</title>
-<ellipse fill="lightgrey" stroke="black" cx="293.49" cy="-234" rx="35.36" ry="18"></ellipse>
-<text text-anchor="middle" x="293.49" y="-229.8" font-family="Times,serif" font-size="14.00">〈 1 〉</text>
+<ellipse fill="lightgrey" stroke="black" cx="313.15" cy="-234" rx="35.36" ry="18"></ellipse>
+<text text-anchor="middle" x="313.15" y="-229.8" font-family="Times,serif" font-size="14.00">〈 1 〉</text>
 </g>
 <!-- 2 -->
 <g id="node2" class="node">
 <title>2</title>
-<ellipse fill="lightgrey" stroke="black" cx="293.49" cy="-162" rx="44.67" ry="18"></ellipse>
-<text text-anchor="middle" x="293.49" y="-157.8" font-family="Times,serif" font-size="14.00">〈 2, 3 〉</text>
+<ellipse fill="lightgrey" stroke="black" cx="313.15" cy="-162" rx="44.67" ry="18"></ellipse>
+<text text-anchor="middle" x="313.15" y="-157.8" font-family="Times,serif" font-size="14.00">〈 2, 3 〉</text>
 </g>
 <!-- 1&#45;&gt;2 -->
 <g id="edge1" class="edge">
 <title>1-&gt;2</title>
-<path fill="none" stroke="black" d="M293.49,-205.67C293.49,-197.05 293.49,-187.79 293.49,-180.1"></path>
-<polygon fill="black" stroke="black" points="289.99,-205.7 293.49,-215.7 296.99,-205.7 289.99,-205.7"></polygon>
+<path fill="none" stroke="black" d="M313.15,-205.67C313.15,-197.05 313.15,-187.79 313.15,-180.1"></path>
+<polygon fill="black" stroke="black" points="309.65,-205.7 313.15,-215.7 316.65,-205.7 309.65,-205.7"></polygon>
 </g>
 <!-- 3 -->
 <g id="node3" class="node">
 <title>3</title>
-<ellipse fill="lightgrey" stroke="black" cx="235.49" cy="-90" rx="54.49" ry="18"></ellipse>
-<text text-anchor="middle" x="235.49" y="-85.8" font-family="Times,serif" font-size="14.00">〈 3, 4, 5 〉</text>
+<ellipse fill="lightgrey" stroke="black" cx="255.15" cy="-90" rx="54.49" ry="18"></ellipse>
+<text text-anchor="middle" x="255.15" y="-85.8" font-family="Times,serif" font-size="14.00">〈 3, 4, 5 〉</text>
 </g>
 <!-- 2&#45;&gt;3 -->
 <g id="edge2" class="edge">
 <title>2-&gt;3</title>
-<path fill="none" stroke="black" d="M273.61,-137.01C265.6,-127.33 256.55,-116.41 249.27,-107.63"></path>
-<polygon fill="black" stroke="black" points="270.97,-139.3 280.04,-144.76 276.36,-134.83 270.97,-139.3"></polygon>
+<path fill="none" stroke="black" d="M293.27,-137.01C285.25,-127.33 276.2,-116.41 268.93,-107.63"></path>
+<polygon fill="black" stroke="black" points="290.62,-139.3 299.7,-144.76 296.01,-134.83 290.62,-139.3"></polygon>
 </g>
 <!-- 4 -->
 <g id="node4" class="node">
 <title>4</title>
-<ellipse fill="lightgrey" stroke="black" cx="379.49" cy="-90" rx="44.67" ry="18"></ellipse>
-<text text-anchor="middle" x="379.49" y="-85.8" font-family="Times,serif" font-size="14.00">〈 2, 5 〉</text>
+<ellipse fill="lightgrey" stroke="black" cx="399.15" cy="-90" rx="44.67" ry="18"></ellipse>
+<text text-anchor="middle" x="399.15" y="-85.8" font-family="Times,serif" font-size="14.00">〈 2, 5 〉</text>
 </g>
 <!-- 2&#45;&gt;4 -->
 <g id="edge3" class="edge">
 <title>2-&gt;4</title>
-<path fill="none" stroke="black" d="M320.7,-138.85C333.63,-128.33 348.78,-116 360.46,-106.49"></path>
-<polygon fill="black" stroke="black" points="318.13,-136.44 312.58,-145.46 322.54,-141.87 318.13,-136.44"></polygon>
+<path fill="none" stroke="black" d="M340.36,-138.85C353.29,-128.33 368.44,-116 380.12,-106.49"></path>
+<polygon fill="black" stroke="black" points="337.78,-136.44 332.24,-145.46 342.2,-141.87 337.78,-136.44"></polygon>
 </g>
 <!-- 5 -->
 <g id="node5" class="node">
 <title>5</title>
-<ellipse fill="lightgrey" stroke="black" cx="54.49" cy="-18" rx="54.49" ry="18"></ellipse>
-<text text-anchor="middle" x="54.49" y="-13.8" font-family="Times,serif" font-size="14.00">〈 4, 5, 6 〉</text>
+<ellipse fill="lightgrey" stroke="black" cx="64.15" cy="-18" rx="64.3" ry="18"></ellipse>
+<text text-anchor="middle" x="64.15" y="-13.8" font-family="Times,serif" font-size="14.00">〈 4, 5, 6, 7 〉</text>
 </g>
 <!-- 3&#45;&gt;5 -->
 <g id="edge4" class="edge">
 <title>3-&gt;5</title>
-<path fill="none" stroke="black" d="M191.95,-72.16C160.16,-59.86 117.67,-43.43 88.38,-32.11"></path>
-<polygon fill="black" stroke="black" points="190.86,-75.49 201.45,-75.83 193.38,-68.96 190.86,-75.49"></polygon>
+<path fill="none" stroke="black" d="M210.67,-72.7C177.56,-60.56 132.86,-44.18 101.57,-32.71"></path>
+<polygon fill="black" stroke="black" points="209.52,-76.01 220.12,-76.16 211.93,-69.43 209.52,-76.01"></polygon>
 </g>
 <!-- 6 -->
 <g id="node6" class="node">
 <title>6</title>
-<ellipse fill="lightgrey" stroke="black" cx="181.49" cy="-18" rx="54.49" ry="18"></ellipse>
-<text text-anchor="middle" x="181.49" y="-13.8" font-family="Times,serif" font-size="14.00">〈 3, 5, 7 〉</text>
+<ellipse fill="lightgrey" stroke="black" cx="201.15" cy="-18" rx="54.49" ry="18"></ellipse>
+<text text-anchor="middle" x="201.15" y="-13.8" font-family="Times,serif" font-size="14.00">〈 3, 5, 7 〉</text>
 </g>
 <!-- 3&#45;&gt;6 -->
 <g id="edge5" class="edge">
 <title>3-&gt;6</title>
-<path fill="none" stroke="black" d="M216.59,-64.49C209.31,-55.07 201.18,-44.52 194.57,-35.96"></path>
-<polygon fill="black" stroke="black" points="213.82,-66.63 222.7,-72.41 219.36,-62.36 213.82,-66.63"></polygon>
+<path fill="none" stroke="black" d="M236.24,-64.49C228.97,-55.07 220.84,-44.52 214.23,-35.96"></path>
+<polygon fill="black" stroke="black" points="233.47,-66.63 242.35,-72.41 239.02,-62.36 233.47,-66.63"></polygon>
 </g>
 <!-- 7 -->
 <g id="node7" class="node">
 <title>7</title>
-<ellipse fill="lightgrey" stroke="black" cx="298.49" cy="-18" rx="44.67" ry="18"></ellipse>
-<text text-anchor="middle" x="298.49" y="-13.8" font-family="Times,serif" font-size="14.00">〈 3, 4 〉</text>
+<ellipse fill="lightgrey" stroke="black" cx="318.15" cy="-18" rx="44.67" ry="18"></ellipse>
+<text text-anchor="middle" x="318.15" y="-13.8" font-family="Times,serif" font-size="14.00">〈 3, 4 〉</text>
 </g>
 <!-- 3&#45;&gt;7 -->
 <g id="edge6" class="edge">
 <title>3-&gt;7</title>
-<path fill="none" stroke="black" d="M257.14,-64.95C265.89,-55.23 275.76,-44.26 283.67,-35.47"></path>
-<polygon fill="black" stroke="black" points="254.51,-62.64 250.42,-72.41 259.71,-67.32 254.51,-62.64"></polygon>
+<path fill="none" stroke="black" d="M276.8,-64.95C285.54,-55.23 295.42,-44.26 303.33,-35.47"></path>
+<polygon fill="black" stroke="black" points="274.17,-62.64 270.08,-72.41 279.37,-67.32 274.17,-62.64"></polygon>
 </g>
 <!-- 8 -->
 <g id="node8" class="node">
 <title>8</title>
-<ellipse fill="lightgrey" stroke="black" cx="406.49" cy="-18" rx="44.67" ry="18"></ellipse>
-<text text-anchor="middle" x="406.49" y="-13.8" font-family="Times,serif" font-size="14.00">〈 2, 7 〉</text>
+<ellipse fill="lightgrey" stroke="black" cx="426.15" cy="-18" rx="44.67" ry="18"></ellipse>
+<text text-anchor="middle" x="426.15" y="-13.8" font-family="Times,serif" font-size="14.00">〈 2, 7 〉</text>
 </g>
 <!-- 4&#45;&gt;8 -->
 <g id="edge7" class="edge">
 <title>4-&gt;8</title>
-<path fill="none" stroke="black" d="M389.69,-62.57C393.08,-53.77 396.77,-44.2 399.83,-36.28"></path>
-<polygon fill="black" stroke="black" points="386.36,-61.47 386.03,-72.05 392.89,-63.98 386.36,-61.47"></polygon>
+<path fill="none" stroke="black" d="M409.34,-62.57C412.74,-53.77 416.43,-44.2 419.49,-36.28"></path>
+<polygon fill="black" stroke="black" points="406.02,-61.47 405.69,-72.05 412.55,-63.98 406.02,-61.47"></polygon>
 </g>
 </g>
 </svg>
@@ -1286,7 +1320,295 @@ window.Quarto = {
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>Nowadays, there are no functions in package NumericalSgps related to directed graph of all numerical semigroups.</p>
+<p>Nowadays, there are no functions in package NumericalSgps related to directed graph of all numerical semigroups. However, given a non-negative integer <span class="math inline">\(g\)</span>, the following function returns the graph (in dot) of the directed graph <span class="math inline">\(\mathcal{G}(\mathcal{S})\)</span> up to genus <span class="math inline">\(g\)</span>, where the nodes with grey background are <a href="../Families-NS/NS-irreducible.html">irreducible</a> numerical semigroups.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">DirectedGraphAllNumericalSemigroups</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">g</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>   <span class="ex">local</span> <span class="va">hasse</span><span class="op">,</span> <span class="va">SystemOfGeneratorsToString</span><span class="op">,</span> <span class="va">count</span><span class="op">,</span> <span class="va">edges</span><span class="op">,</span> <span class="va">N</span><span class="op">,</span> <span class="va">collect_ns</span><span class="op">,</span> <span class="va">obj_ns</span><span class="op">,</span> <span class="va">ns</span><span class="op">,</span> <span class="va">pos_ns</span><span class="op">,</span> <span class="va">Frob</span><span class="op">,</span> <span class="va">Min_gen</span><span class="op">,</span> <span class="va">Sub_min_gen</span><span class="op">,</span> <span class="va">s</span><span class="op">,</span> <span class="va">sm_elements</span><span class="op">,</span> <span class="va">S_i</span><span class="op">,</span> <span class="va">gen</span><span class="op">,</span> <span class="va">out</span><span class="op">,</span> <span class="va">output</span><span class="op">,</span> <span class="va">r</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>   <span class="va">hasse</span><span class="op">:=</span><span class="fu">function</span>(<span class="va">rel</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="ex">local</span> <span class="va">dom</span><span class="op">,</span> <span class="va">out</span><span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">dom</span><span class="op">:=</span><span class="bu">Flat</span>(<span class="va">rel</span>)<span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">out</span><span class="op">:=</span><span class="bu">Filtered</span>(<span class="va">rel</span><span class="op">,</span> <span class="va">p</span><span class="op">-&gt;</span> <span class="bu">ForAny</span>(<span class="va">dom</span><span class="op">,</span> <span class="va">x</span><span class="op">-&gt;</span>([<span class="va">p</span>[<span class="fl">1</span>]<span class="op">,</span><span class="va">x</span>] <span class="ex">in</span> <span class="va">rel</span>) <span class="cn">and</span> ([<span class="va">x</span><span class="op">,</span><span class="va">p</span>[<span class="fl">2</span>]] <span class="ex">in</span> <span class="va">rel</span>)))<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="ex">return</span> <span class="bu">Difference</span>(<span class="va">rel</span><span class="op">,</span><span class="va">out</span>)<span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>     <span class="fu">end</span><span class="op">;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>   <span class="va">SystemOfGeneratorsToString</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">sg</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="ex">return</span> <span class="bu">Concatenation</span>(<span class="st">"〈 "</span><span class="op">,</span> <span class="bu">JoinStringsWithSeparator</span>(<span class="va">sg</span><span class="op">,</span> <span class="st">", "</span>)<span class="op">,</span> <span class="st">" 〉"</span>)<span class="op">;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>   <span class="fu">end</span><span class="op">;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>   <span class="cf">if</span> <span class="cn">not</span> <span class="bu">IsInt</span>(<span class="va">g</span>) <span class="cf">then</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="bu">Error</span>(<span class="st">"The argument must be a non-negative integer"</span>)<span class="op">;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>   <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>   <span class="va">out</span> <span class="op">:=</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>   <span class="va">output</span> <span class="op">:=</span> <span class="bu">OutputTextString</span>(<span class="va">out</span><span class="op">,</span> <span class="cn">true</span>)<span class="op">;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>   <span class="bu">SetPrintFormattingStatus</span>(<span class="va">output</span><span class="op">,</span> <span class="cn">false</span>)<span class="op">;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>   <span class="bu">AppendTo</span>(<span class="va">output</span><span class="op">,</span><span class="st">"digraph  NSGraph{rankdir = TB;\n"</span>)<span class="op">;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> </span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>   <span class="va">count</span> <span class="op">:=</span> <span class="fl">2</span><span class="op">;</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>   <span class="va">edges</span> <span class="op">:=</span> []<span class="op">;</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>   <span class="va">N</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">1</span>)<span class="op">;</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>   <span class="va">collect_ns</span> <span class="op">:=</span> [[<span class="va">N</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">0</span>]]<span class="op">;</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>   <span class="cf">for</span> <span class="va">obj_ns</span> <span class="ex">in</span> <span class="va">collect_ns</span> <span class="cf">do</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>    </span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">ns</span> <span class="op">:=</span> <span class="va">obj_ns</span>[<span class="fl">1</span>]<span class="op">;</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">pos_ns</span> <span class="op">:=</span> <span class="va">obj_ns</span>[<span class="fl">2</span>]<span class="op">;</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">Min_gen</span> <span class="op">:=</span> <span class="va">MinimalGenerators</span>(<span class="va">ns</span>)<span class="op">;</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> </span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">if</span> <span class="bu">IsIrreducible</span>(<span class="va">ns</span>) <span class="cf">then</span> </span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="bu">AppendTo</span>(<span class="va">output</span><span class="op">,</span> <span class="va">pos_ns</span><span class="op">,</span><span class="st">" [label=\""</span><span class="op">,</span><span class="va">SystemOfGeneratorsToString</span>(<span class="va">Min_gen</span>) <span class="op">,</span><span class="st">"\", style=filled];\n"</span>)<span class="op">;</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">else</span> </span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="bu">AppendTo</span>(<span class="va">output</span><span class="op">,</span> <span class="va">pos_ns</span><span class="op">,</span><span class="st">" [label=\""</span><span class="op">,</span><span class="va">SystemOfGeneratorsToString</span>(<span class="va">Min_gen</span>) <span class="op">,</span><span class="st">"\"];\n"</span>)<span class="op">;</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> </span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">if</span> <span class="va">obj_ns</span>[<span class="fl">3</span>] <span class="op">&lt;=</span> <span class="va">g</span><span class="op">-</span><span class="fl">1</span> <span class="cf">then</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="va">Frob</span> <span class="op">:=</span> <span class="va">FrobeniusNumber</span>(<span class="va">ns</span>)<span class="op">;</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="va">Sub_min_gen</span> <span class="op">:=</span> <span class="bu">Filtered</span>(<span class="va">MinimalGenerators</span>(<span class="va">ns</span>)<span class="op">,</span> <span class="va">l</span> <span class="op">-&gt;</span> <span class="va">l</span> <span class="op">&gt;</span> <span class="va">Frob</span>)<span class="op">;</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="cf">for</span> <span class="va">gen</span> <span class="ex">in</span> <span class="va">Sub_min_gen</span> <span class="cf">do</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>               <span class="va">s</span> <span class="op">:=</span> <span class="bu">Union</span>(<span class="va">SmallElements</span>(<span class="va">ns</span>)<span class="op">,</span> [(<span class="va">Frob</span><span class="op">+</span><span class="fl">1</span>)<span class="op">..</span>(<span class="va">gen</span><span class="op">+</span><span class="fl">1</span>)])<span class="op">;</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>               <span class="va">sm_elements</span> <span class="op">:=</span> <span class="bu">Difference</span>(<span class="va">s</span><span class="op">,</span> [<span class="va">gen</span>])<span class="op">;</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>               <span class="va">S_i</span> <span class="op">:=</span> <span class="va">NumericalSemigroupBySmallElements</span>(<span class="va">sm_elements</span>)<span class="op">;</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>               <span class="bu">Add</span>(<span class="va">edges</span><span class="op">,</span> [<span class="va">count</span><span class="op">,</span> <span class="va">pos_ns</span>])<span class="op">;</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>               <span class="bu">Add</span>(<span class="va">collect_ns</span><span class="op">,</span> [<span class="va">S_i</span><span class="op">,</span> <span class="va">count</span><span class="op">,</span> <span class="va">obj_ns</span>[<span class="fl">3</span>] <span class="op">+</span> <span class="fl">1</span>])<span class="op">;</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>               <span class="va">count</span> <span class="op">:=</span> <span class="va">count</span> <span class="op">+</span> <span class="fl">1</span><span class="op">;</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="cf">od</span><span class="op">;</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>   <span class="cf">od</span><span class="op">;</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> </span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>   <span class="cf">for</span> <span class="va">r</span> <span class="ex">in</span> <span class="va">edges</span> <span class="cf">do</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="bu">AppendTo</span>(<span class="va">output</span><span class="op">,</span><span class="va">r</span>[<span class="fl">1</span>]<span class="op">,</span><span class="st">" -&gt; "</span><span class="op">,</span><span class="va">r</span>[<span class="fl">2</span>]<span class="op">,</span><span class="st">";\n"</span>)<span class="op">;</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>   <span class="cf">od</span><span class="op">;</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> </span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>   <span class="bu">AppendTo</span>(<span class="va">output</span><span class="op">,</span> <span class="st">"}"</span>)<span class="op">;</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>   <span class="bu">CloseStream</span>(<span class="va">output</span>)<span class="op">;</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>   <span class="ex">return</span> <span class="va">out</span><span class="op">;</span>  </span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="fu">end</span><span class="op">;</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="fu">function</span>( <span class="va">g</span> ) <span class="op">..</span>. <span class="fu">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="math inline">\(\diamond\)</span> For <span class="math inline">\(g = 4\)</span>, the function defined above has the following output.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">h</span> <span class="op">:=</span> <span class="va">DirectedGraphAllNumericalSemigroups</span>(<span class="fl">4</span>)<span class="op">;;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="bu">Print</span>(<span class="va">h</span>)<span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="va">digraph</span>  <span class="va">NSGraph</span>{<span class="va">rankdir</span> <span class="op">=</span> <span class="va">TB</span><span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fl">1</span> [<span class="va">label</span><span class="op">=</span><span class="st">"〈 1 〉"</span><span class="op">,</span> <span class="va">style</span><span class="op">=</span><span class="va">filled</span>]<span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fl">2</span> [<span class="va">label</span><span class="op">=</span><span class="st">"〈 2, 3 〉"</span><span class="op">,</span> <span class="va">style</span><span class="op">=</span><span class="va">filled</span>]<span class="op">;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fl">3</span> [<span class="va">label</span><span class="op">=</span><span class="st">"〈 3, 4, 5 〉"</span><span class="op">,</span> <span class="va">style</span><span class="op">=</span><span class="va">filled</span>]<span class="op">;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fl">4</span> [<span class="va">label</span><span class="op">=</span><span class="st">"〈 2, 5 〉"</span><span class="op">,</span> <span class="va">style</span><span class="op">=</span><span class="va">filled</span>]<span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fl">5</span> [<span class="va">label</span><span class="op">=</span><span class="st">"〈 4, 5, 6, 7 〉"</span>]<span class="op">;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fl">6</span> [<span class="va">label</span><span class="op">=</span><span class="st">"〈 3, 5, 7 〉"</span><span class="op">,</span> <span class="va">style</span><span class="op">=</span><span class="va">filled</span>]<span class="op">;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fl">7</span> [<span class="va">label</span><span class="op">=</span><span class="st">"〈 3, 4 〉"</span><span class="op">,</span> <span class="va">style</span><span class="op">=</span><span class="va">filled</span>]<span class="op">;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fl">8</span> [<span class="va">label</span><span class="op">=</span><span class="st">"〈 2, 7 〉"</span><span class="op">,</span> <span class="va">style</span><span class="op">=</span><span class="va">filled</span>]<span class="op">;</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fl">9</span> [<span class="va">label</span><span class="op">=</span><span class="st">"〈 5, 6, 7, 8, 9 〉"</span>]<span class="op">;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fl">10</span> [<span class="va">label</span><span class="op">=</span><span class="st">"〈 4, 6, 7, 9 〉"</span>]<span class="op">;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fl">11</span> [<span class="va">label</span><span class="op">=</span><span class="st">"〈 4, 5, 7 〉"</span><span class="op">,</span> <span class="va">style</span><span class="op">=</span><span class="va">filled</span>]<span class="op">;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fl">12</span> [<span class="va">label</span><span class="op">=</span><span class="st">"〈 4, 5, 6 〉"</span><span class="op">,</span> <span class="va">style</span><span class="op">=</span><span class="va">filled</span>]<span class="op">;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fl">13</span> [<span class="va">label</span><span class="op">=</span><span class="st">"〈 3, 7, 8 〉"</span>]<span class="op">;</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="fl">14</span> [<span class="va">label</span><span class="op">=</span><span class="st">"〈 3, 5 〉"</span><span class="op">,</span> <span class="va">style</span><span class="op">=</span><span class="va">filled</span>]<span class="op">;</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fl">15</span> [<span class="va">label</span><span class="op">=</span><span class="st">"〈 2, 9 〉"</span><span class="op">,</span> <span class="va">style</span><span class="op">=</span><span class="va">filled</span>]<span class="op">;</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="fl">2</span> <span class="op">-&gt;</span> <span class="fl">1</span><span class="op">;</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="fl">3</span> <span class="op">-&gt;</span> <span class="fl">2</span><span class="op">;</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="fl">4</span> <span class="op">-&gt;</span> <span class="fl">2</span><span class="op">;</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="fl">5</span> <span class="op">-&gt;</span> <span class="fl">3</span><span class="op">;</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="fl">6</span> <span class="op">-&gt;</span> <span class="fl">3</span><span class="op">;</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="fl">7</span> <span class="op">-&gt;</span> <span class="fl">3</span><span class="op">;</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="fl">8</span> <span class="op">-&gt;</span> <span class="fl">4</span><span class="op">;</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="fl">9</span> <span class="op">-&gt;</span> <span class="fl">5</span><span class="op">;</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="fl">10</span> <span class="op">-&gt;</span> <span class="fl">5</span><span class="op">;</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="fl">11</span> <span class="op">-&gt;</span> <span class="fl">5</span><span class="op">;</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="fl">12</span> <span class="op">-&gt;</span> <span class="fl">5</span><span class="op">;</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="fl">13</span> <span class="op">-&gt;</span> <span class="fl">6</span><span class="op">;</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="fl">14</span> <span class="op">-&gt;</span> <span class="fl">6</span><span class="op">;</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="fl">15</span> <span class="op">-&gt;</span> <span class="fl">8</span><span class="op">;</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The graph obtained is as follows.</p>
+<div style="text-align:center;">
+<div class="cell" data-fig-width="150%" data-fig-height="450px" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<svg width="NaN" height="450" viewbox="0.00 0.00 898.64 332.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 328)">
+<title>NSGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-328 894.64,-328 894.64,4 -4,4"></polygon>
+<!-- 1 -->
+<g id="node1" class="node">
+<title>1</title>
+<ellipse fill="lightgrey" stroke="black" cx="732.81" cy="-306" rx="35.36" ry="18"></ellipse>
+<text text-anchor="middle" x="732.81" y="-301.8" font-family="Times,serif" font-size="14.00">〈 1 〉</text>
+</g>
+<!-- 2 -->
+<g id="node2" class="node">
+<title>2</title>
+<ellipse fill="lightgrey" stroke="black" cx="732.81" cy="-234" rx="44.67" ry="18"></ellipse>
+<text text-anchor="middle" x="732.81" y="-229.8" font-family="Times,serif" font-size="14.00">〈 2, 3 〉</text>
+</g>
+<!-- 2&#45;&gt;1 -->
+<g id="edge1" class="edge">
+<title>2-&gt;1</title>
+<path fill="none" stroke="black" d="M732.81,-252.3C732.81,-260.02 732.81,-269.29 732.81,-277.89"></path>
+<polygon fill="black" stroke="black" points="729.31,-277.9 732.81,-287.9 736.31,-277.9 729.31,-277.9"></polygon>
+</g>
+<!-- 3 -->
+<g id="node3" class="node">
+<title>3</title>
+<ellipse fill="lightgrey" stroke="black" cx="674.81" cy="-162" rx="54.49" ry="18"></ellipse>
+<text text-anchor="middle" x="674.81" y="-157.8" font-family="Times,serif" font-size="14.00">〈 3, 4, 5 〉</text>
+</g>
+<!-- 3&#45;&gt;2 -->
+<g id="edge2" class="edge">
+<title>3-&gt;2</title>
+<path fill="none" stroke="black" d="M688.55,-179.59C695.78,-188.31 704.76,-199.15 712.75,-208.79"></path>
+<polygon fill="black" stroke="black" points="710.08,-211.06 719.16,-216.53 715.47,-206.6 710.08,-211.06"></polygon>
+</g>
+<!-- 4 -->
+<g id="node4" class="node">
+<title>4</title>
+<ellipse fill="lightgrey" stroke="black" cx="818.81" cy="-162" rx="44.67" ry="18"></ellipse>
+<text text-anchor="middle" x="818.81" y="-157.8" font-family="Times,serif" font-size="14.00">〈 2, 5 〉</text>
+</g>
+<!-- 4&#45;&gt;2 -->
+<g id="edge3" class="edge">
+<title>4-&gt;2</title>
+<path fill="none" stroke="black" d="M799.72,-178.54C788.03,-188.05 772.88,-200.38 759.95,-210.9"></path>
+<polygon fill="black" stroke="black" points="757.39,-208.48 751.84,-217.51 761.8,-213.91 757.39,-208.48"></polygon>
+</g>
+<!-- 5 -->
+<g id="node5" class="node">
+<title>5</title>
+<ellipse fill="none" stroke="black" cx="366.81" cy="-90" rx="64.3" ry="18"></ellipse>
+<text text-anchor="middle" x="366.81" y="-85.8" font-family="Times,serif" font-size="14.00">〈 4, 5, 6, 7 〉</text>
+</g>
+<!-- 5&#45;&gt;3 -->
+<g id="edge4" class="edge">
+<title>5-&gt;3</title>
+<path fill="none" stroke="black" d="M414.93,-101.94C470.79,-114.63 562.68,-135.52 620.9,-148.75"></path>
+<polygon fill="black" stroke="black" points="620.48,-152.24 631,-151.05 622.03,-145.42 620.48,-152.24"></polygon>
+</g>
+<!-- 6 -->
+<g id="node6" class="node">
+<title>6</title>
+<ellipse fill="lightgrey" stroke="black" cx="620.81" cy="-90" rx="54.49" ry="18"></ellipse>
+<text text-anchor="middle" x="620.81" y="-85.8" font-family="Times,serif" font-size="14.00">〈 3, 5, 7 〉</text>
+</g>
+<!-- 6&#45;&gt;3 -->
+<g id="edge5" class="edge">
+<title>6-&gt;3</title>
+<path fill="none" stroke="black" d="M633.6,-107.59C640.17,-116.09 648.29,-126.63 655.59,-136.09"></path>
+<polygon fill="black" stroke="black" points="652.85,-138.26 661.73,-144.04 658.39,-133.99 652.85,-138.26"></polygon>
+</g>
+<!-- 7 -->
+<g id="node7" class="node">
+<title>7</title>
+<ellipse fill="lightgrey" stroke="black" cx="737.81" cy="-90" rx="44.67" ry="18"></ellipse>
+<text text-anchor="middle" x="737.81" y="-85.8" font-family="Times,serif" font-size="14.00">〈 3, 4 〉</text>
+</g>
+<!-- 7&#45;&gt;3 -->
+<g id="edge6" class="edge">
+<title>7-&gt;3</title>
+<path fill="none" stroke="black" d="M723.19,-107.24C715.28,-116.03 705.34,-127.07 696.54,-136.86"></path>
+<polygon fill="black" stroke="black" points="693.86,-134.59 689.78,-144.37 699.07,-139.28 693.86,-134.59"></polygon>
+</g>
+<!-- 8 -->
+<g id="node8" class="node">
+<title>8</title>
+<ellipse fill="lightgrey" stroke="black" cx="845.81" cy="-90" rx="44.67" ry="18"></ellipse>
+<text text-anchor="middle" x="845.81" y="-85.8" font-family="Times,serif" font-size="14.00">〈 2, 7 〉</text>
+</g>
+<!-- 8&#45;&gt;4 -->
+<g id="edge7" class="edge">
+<title>8-&gt;4</title>
+<path fill="none" stroke="black" d="M839.27,-107.95C836.23,-115.82 832.54,-125.38 829.14,-134.21"></path>
+<polygon fill="black" stroke="black" points="825.8,-133.14 825.47,-143.72 832.33,-135.65 825.8,-133.14"></polygon>
+</g>
+<!-- 9 -->
+<g id="node9" class="node">
+<title>9</title>
+<ellipse fill="none" stroke="black" cx="73.81" cy="-18" rx="73.61" ry="18"></ellipse>
+<text text-anchor="middle" x="73.81" y="-13.8" font-family="Times,serif" font-size="14.00">〈 5, 6, 7, 8, 9 〉</text>
+</g>
+<!-- 9&#45;&gt;5 -->
+<g id="edge8" class="edge">
+<title>9-&gt;5</title>
+<path fill="none" stroke="black" d="M124.51,-31.11C176.16,-43.45 256.11,-62.55 309.9,-75.41"></path>
+<polygon fill="black" stroke="black" points="309.09,-78.81 319.63,-77.73 310.72,-72 309.09,-78.81"></polygon>
+</g>
+<!-- 10 -->
+<g id="node10" class="node">
+<title>10</title>
+<ellipse fill="none" stroke="black" cx="229.81" cy="-18" rx="64.3" ry="18"></ellipse>
+<text text-anchor="middle" x="229.81" y="-13.8" font-family="Times,serif" font-size="14.00">〈 4, 6, 7, 9 〉</text>
+</g>
+<!-- 10&#45;&gt;5 -->
+<g id="edge9" class="edge">
+<title>10-&gt;5</title>
+<path fill="none" stroke="black" d="M259.2,-34.02C279.28,-44.28 306.12,-57.99 327.97,-69.16"></path>
+<polygon fill="black" stroke="black" points="326.5,-72.33 336.99,-73.77 329.68,-66.1 326.5,-72.33"></polygon>
+</g>
+<!-- 11 -->
+<g id="node11" class="node">
+<title>11</title>
+<ellipse fill="lightgrey" stroke="black" cx="366.81" cy="-18" rx="54.49" ry="18"></ellipse>
+<text text-anchor="middle" x="366.81" y="-13.8" font-family="Times,serif" font-size="14.00">〈 4, 5, 7 〉</text>
+</g>
+<!-- 11&#45;&gt;5 -->
+<g id="edge10" class="edge">
+<title>11-&gt;5</title>
+<path fill="none" stroke="black" d="M366.81,-36.3C366.81,-44.02 366.81,-53.29 366.81,-61.89"></path>
+<polygon fill="black" stroke="black" points="363.31,-61.9 366.81,-71.9 370.31,-61.9 363.31,-61.9"></polygon>
+</g>
+<!-- 12 -->
+<g id="node12" class="node">
+<title>12</title>
+<ellipse fill="lightgrey" stroke="black" cx="493.81" cy="-18" rx="54.49" ry="18"></ellipse>
+<text text-anchor="middle" x="493.81" y="-13.8" font-family="Times,serif" font-size="14.00">〈 4, 5, 6 〉</text>
+</g>
+<!-- 12&#45;&gt;5 -->
+<g id="edge11" class="edge">
+<title>12-&gt;5</title>
+<path fill="none" stroke="black" d="M466.87,-33.85C448.44,-44.01 423.76,-57.61 403.53,-68.76"></path>
+<polygon fill="black" stroke="black" points="401.65,-65.8 394.58,-73.69 405.03,-71.93 401.65,-65.8"></polygon>
+</g>
+<!-- 13 -->
+<g id="node13" class="node">
+<title>13</title>
+<ellipse fill="none" stroke="black" cx="620.81" cy="-18" rx="54.49" ry="18"></ellipse>
+<text text-anchor="middle" x="620.81" y="-13.8" font-family="Times,serif" font-size="14.00">〈 3, 7, 8 〉</text>
+</g>
+<!-- 13&#45;&gt;6 -->
+<g id="edge12" class="edge">
+<title>13-&gt;6</title>
+<path fill="none" stroke="black" d="M620.81,-36.3C620.81,-44.02 620.81,-53.29 620.81,-61.89"></path>
+<polygon fill="black" stroke="black" points="617.31,-61.9 620.81,-71.9 624.31,-61.9 617.31,-61.9"></polygon>
+</g>
+<!-- 14 -->
+<g id="node14" class="node">
+<title>14</title>
+<ellipse fill="lightgrey" stroke="black" cx="737.81" cy="-18" rx="44.67" ry="18"></ellipse>
+<text text-anchor="middle" x="737.81" y="-13.8" font-family="Times,serif" font-size="14.00">〈 3, 5 〉</text>
+</g>
+<!-- 14&#45;&gt;6 -->
+<g id="edge13" class="edge">
+<title>14-&gt;6</title>
+<path fill="none" stroke="black" d="M713.85,-33.33C696.76,-43.56 673.56,-57.44 654.6,-68.78"></path>
+<polygon fill="black" stroke="black" points="652.73,-65.82 645.95,-73.96 656.32,-71.83 652.73,-65.82"></polygon>
+</g>
+<!-- 15 -->
+<g id="node15" class="node">
+<title>15</title>
+<ellipse fill="lightgrey" stroke="black" cx="845.81" cy="-18" rx="44.67" ry="18"></ellipse>
+<text text-anchor="middle" x="845.81" y="-13.8" font-family="Times,serif" font-size="14.00">〈 2, 9 〉</text>
+</g>
+<!-- 15&#45;&gt;8 -->
+<g id="edge14" class="edge">
+<title>15-&gt;8</title>
+<path fill="none" stroke="black" d="M845.81,-36.3C845.81,-44.02 845.81,-53.29 845.81,-61.89"></path>
+<polygon fill="black" stroke="black" points="842.31,-61.9 845.81,-71.9 849.31,-61.9 842.31,-61.9"></polygon>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
