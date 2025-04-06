@@ -1,0 +1,70 @@
+---
+title: "Depth and remainder"
+format: html
+engine: markdown
+---
+
+<!-- Wilf’s conjecture and Macaulay’s theorem -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) with [conductor](Conductor.qmd) $C(S)$ and [multiplicity](Multiplicity.qmd) $m(S)$. It is defined the depth of $S$, denoted by $q(S)$, as the value $q(S) = \lceil C(S)/m(S) \rceil$. On the other hand, the remainder of $S$, denoted by $\rho(S)$, is defined as $\rho(S) = q(S)m(S) - C(S)$.
+
+## Examples
+
+$\circ$ Let $S = \langle 6,7,11 \rangle = \{0, 6, 7, 11, 12, 13, 14, 17, \rightarrow \}$. The conductor of $S$ is $C(S) = 17$ and the multiplicity is $m(S) = 6$. Therefore, the depth of $S$ is $q(S) = \lceil \frac{17}{6} \rceil = 3$ and the remainder is $\rho(S) = 1$.
+
+## Examples with GAP
+
+Nowadays, there are no functions in NumericalSgps related to depth or remainder of a numerical semigroup. However, given a numerical semigroup, the following functions return the depth and the remainder of $S$, respectively.
+
+``` gap
+gap> DepthOfNumericalSemigroup := function(S)
+>       if not IsNumericalSemigroup(S) then
+>           Error("The argument must be a Numerical Semigroup");
+>       fi;
+> 
+>       return CeilingOfRational(Conductor(S)/Multiplicity(S));
+> end;
+function( S ) ... end
+```
+
+``` gap
+gap> RemainderOfNumericalSemigroup := function(S)
+>       if not IsNumericalSemigroup(S) then
+>           Error("The argument must be a Numerical Semigroup");
+>       fi;
+> 
+>       return DepthOfNumericalSemigroup(S)*Multiplicity(S) - Conductor(S);
+> end;
+function( S ) ... end
+```
+
+$\diamond$ Let $S = \langle 27, 29, 41, 66, 94 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(27, 29, 41, 66, 94);
+<Numerical semigroup with 5 generators>
+```
+
+Given a numerical semigroup, the functions `Conductor` and `Multiplicity` return the conductor and the multiplicity of $S$, respectively.
+
+``` gap
+gap> Conductor(S);
+213
+gap> Multiplicity(S);
+27
+```
+
+If we use the functions defined above,
+
+``` gap
+gap> DepthOfNumericalSemigroup(S);
+8
+gap> RemainderOfNumericalSemigroup(S);
+3
+```
+
+Then, the depth of $S$ is $q(S) = 8$ and the remainder is $\rho(S) = 3$.
+
+## References

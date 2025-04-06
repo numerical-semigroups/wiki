@@ -1,0 +1,58 @@
+---
+title: "Minimal set of generators of an ideal"
+format: html
+engine: markdown
+---
+
+<!-- Sem. Num. Appl. -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and $E$ a [relative ideal](Relative-ideal.qmd) of $S$. It is said that $I = \{e_1, \ldots, e_h\}$ with $I \subseteq E$ is a set of generators of $E$ if $E = \{e_1, \ldots, e_h\} + S$, where for any two subsets $A,B \subseteq \mathbb{Z}$, the sum is defined as
+
+$$
+A + B = \{a + b ~ | ~ a \in A, ~ b \in B\}.
+$$Moreover, if no proper subset of $I$ generates $E$, then it is said that $I$ is a minimal set of generators of $E$.
+
+It can be proven that for every relative ideal $E$, there exists a unique minimal set of generators, which is $I = E \setminus (M + E)$, where $M = S\setminus \{0\}$, and $I$ is always finite.
+
+## Examples
+
+<!-- Ejemplo de Num. Appl. -->
+
+$\circ$ Let $S = \langle 4,6,9 \rangle$ and $E = \{10, 18, 21\} + S$. Considering $I = \{10, 18, 21\}$, it is clear that $I$ is a system of generators. Moreover, since $18 = 10 + 4 \cdot 2 \in \{10, 21\} + S$ and $21 \not \in \{10\} + S$, it is deduced that $I^* = \{10, 21\}$ is a minimal set of generators of $E$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 17, 18, 32, 40, 41, 55 \rangle$ and $IS = \{-12, -6, 5, 11, 14\} + S$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(17, 18, 32, 40, 41, 55);
+<Numerical semigroup with 6 generators>
+gap> IS := [-12, -6, 5, 11, 14] + S;
+<Ideal of numerical semigroup>
+```
+
+Given a relative ideal $IS$, the functions `Generators` and `GeneratorsOfIdealOfNumericalSemigroup` return a system of generators of the ideal. The system might not be minimal.
+
+``` gap
+gap> Generators(IS);
+[ -12, -6, 5, 11, 14 ]
+gap> GeneratorsOfIdealOfNumericalSemigroup(IS);
+[ -12, -6, 5, 11, 14 ]
+```
+
+On the other hand, the functions `MinimalGenerators`, `MinimalGeneratingSystem` and `MinimalGeneratingSystemOfIdealOfNumericalSemigroup` return a minimal set of generators of the given relative ideal.
+
+``` gap
+gap> MinimalGenerators(IS);
+[ -12, -6, 14 ]
+gap> MinimalGeneratingSystem(IS);
+[ -12, -6, 14 ]
+gap> MinimalGeneratingSystemOfIdealOfNumericalSemigroup(IS);
+[ -12, -6, 14 ]
+```
+
+## References

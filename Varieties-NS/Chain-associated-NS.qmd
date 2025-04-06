@@ -242,7 +242,7 @@ digraph  NSGraph{rankdir = TB; edge[dir=back];
 :::
 
 
-The nodes with grey background are irreducible numerical semigroups.
+The nodes with grey background are [irreducible](../Families-NS/NS-irreducible.qmd) numerical semigroups.
 
 
 ## References

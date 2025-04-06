@@ -6,7 +6,7 @@ engine: markdown
 
 ## thatDefinition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $E$ be a [relative ideal](Relative-ideal.qmd) of $S$ with [multiplicity ideal](Multiplicity-ideal.qmd) $m(E)$ and [reduction number](Reduction-number.qmd) $r(E)$. It is defined the blowup of $E$, denoted by $\mathcal{B}(E)$, as the relative ideal $\mathcal{B}(E) = r(E)E - r(E)m(E)$, where $nE = \{e_1 + e_2 + \cdots + e_n ~ | ~ e_1, \ldots, e_n \in E\}$ for all $n \in \mathbb{N} \setminus \{0\}$ and $A - B = \{z \in \mathbb{Z} ~ | ~ z + B \subseteq A\}$ for $A,B \subseteq \mathbb{Z}$.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $E$ be a [relative ideal](Relative-ideal.qmd) of $S$ with [multiplicity ideal](Multiplicity-ideal.qmd) $m(E)$ and [reduction number](Reduction-number.qmd) $r(E)$. It is defined the blowup of $E$, also known as Lipman semigroup of $S$, denoted by $\mathcal{B}(E)$, as the relative ideal $\mathcal{B}(E) = r(E)E - r(E)m(E)$, where $nE = \{e_1 + e_2 + \cdots + e_n ~ | ~ e_1, \ldots, e_n \in E\}$ for all $n \in \mathbb{N} \setminus \{0\}$ and $A - B = \{z \in \mathbb{Z} ~ | ~ z + B \subseteq A\}$ for $A,B \subseteq \mathbb{Z}$.
 
 It can be proven that $\mathcal{B}(E)$ is a numerical semigroup and the equality $\mathcal{B}(E) = r(E)E - r(E)E$ holds.
 

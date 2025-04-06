@@ -14,7 +14,7 @@ It can be proven that the directed graph is a tree rooted in $\mathbb{N}$, and t
 
 ## Examples
 
-$\circ$ Given a numerical semigroup $S$, other than $\mathbb{N}$, with [genus](../Basic-concepts/Genus.qmd) $g(S)$, from the definition of edge in $\mathcal{G}(\mathcal{S})$, it is deduced that for all $T, S', S' \in \mathcal{S}$, if $(T,S)$ and $(T,S')$ are edges, then $S = S'$. Therefore, $\mathcal{G}(\mathcal{S})$ can be represented by levels where each level represents the genus of the numerical semigroup. For genus up to $4$, we have the following graph.
+$\circ$ Given a numerical semigroup $S$, other than $\mathbb{N}$, with [genus](../Basic-concepts/Genus.qmd) $g(S)$, from the definition of edge in $\mathcal{G}(\mathcal{S})$, it is deduced that for all $T, S', S' \in \mathcal{S}$, if $(T,S)$ and $(T,S')$ are edges, then $S = S'$. Therefore, $\mathcal{G}(\mathcal{S})$ can be represented by levels where each level represents the genus of the numerical semigroup. For genus up to $3$, we have the following graph.
 
 ::: {style="text-align:center;"}
 ```{dot}
@@ -25,7 +25,7 @@ digraph  NSGraph{rankdir = TB; edge[dir=back];
 2 [label="〈 2, 3 〉", style=filled];
 3 [label="〈 3, 4, 5 〉", style=filled];
 4 [label="〈 2, 5 〉", style=filled];
-5 [label="〈 4, 5, 6 〉", style=filled];
+5 [label="〈 4, 5, 6, 7 〉", style=filled];
 6 [label="〈 3, 5, 7 〉", style=filled];
 7 [label="〈 3, 4 〉", style=filled];
 8 [label="〈 2, 7 〉", style=filled];
@@ -40,9 +40,155 @@ digraph  NSGraph{rankdir = TB; edge[dir=back];
 ```
 :::
 
-
 ## Examples with GAP
 
-Nowadays, there are no functions in package NumericalSgps related to directed graph of all numerical semigroups.
+Nowadays, there are no functions in package NumericalSgps related to directed graph of all numerical semigroups. However, given a non-negative integer $g$, the following function returns the graph (in dot) of the directed graph $\mathcal{G}(\mathcal{S})$ up to genus $g$, where the nodes with grey background are [irreducible](../Families-NS/NS-irreducible.qmd) numerical semigroups.
+
+``` gap
+gap> DirectedGraphAllNumericalSemigroups := function(g)
+>   local hasse, SystemOfGeneratorsToString, count, edges, N, collect_ns, obj_ns, ns, pos_ns, Frob, Min_gen, Sub_min_gen, s, sm_elements, S_i, gen, out, output, r;
+>   hasse:=function(rel)
+>       local dom, out;
+>       dom:=Flat(rel);
+>       out:=Filtered(rel, p-> ForAny(dom, x->([p[1],x] in rel) and ([x,p[2]] in rel)));
+>       return Difference(rel,out);
+>     end;
+> 
+>   SystemOfGeneratorsToString := function(sg)
+>       return Concatenation("〈 ", JoinStringsWithSeparator(sg, ", "), " 〉");
+>   end;
+> 
+>   if not IsInt(g) then
+>       Error("The argument must be a non-negative integer");
+>   fi;
+> 
+>   out := "";
+>   output := OutputTextString(out, true);
+>   SetPrintFormattingStatus(output, false);
+>   AppendTo(output,"digraph  NSGraph{rankdir = TB;\n");
+> 
+>   count := 2;
+>   edges := [];
+>   N := NumericalSemigroup(1);
+>   collect_ns := [[N, 1, 0]];
+>   for obj_ns in collect_ns do
+>    
+>       ns := obj_ns[1];
+>       pos_ns := obj_ns[2];
+>       Min_gen := MinimalGenerators(ns);
+> 
+>       if IsIrreducible(ns) then 
+>           AppendTo(output, pos_ns," [label=\"",SystemOfGeneratorsToString(Min_gen) ,"\", style=filled];\n");
+>       else 
+>           AppendTo(output, pos_ns," [label=\"",SystemOfGeneratorsToString(Min_gen) ,"\"];\n");
+>       fi;
+> 
+>       if obj_ns[3] <= g-1 then
+>           Frob := FrobeniusNumber(ns);
+>           Sub_min_gen := Filtered(MinimalGenerators(ns), l -> l > Frob);
+>           for gen in Sub_min_gen do
+>               s := Union(SmallElements(ns), [(Frob+1)..(gen+1)]);
+>               sm_elements := Difference(s, [gen]);
+>               S_i := NumericalSemigroupBySmallElements(sm_elements);
+>               Add(edges, [count, pos_ns]);
+>               Add(collect_ns, [S_i, count, obj_ns[3] + 1]);
+>               count := count + 1;
+>           od;
+>       fi;
+>   od;
+> 
+>   for r in edges do
+>       AppendTo(output,r[1]," -> ",r[2],";\n");
+>   od;
+> 
+>   AppendTo(output, "}");
+>   CloseStream(output);
+>   return out;  
+> end;
+function( g ) ... end
+```
+
+$\diamond$ For $g = 4$, the function defined above has the following output.
+
+```gap
+gap> h := DirectedGraphAllNumericalSemigroups(4);;
+gap> Print(h);
+digraph  NSGraph{rankdir = TB;
+1 [label="〈 1 〉", style=filled];
+2 [label="〈 2, 3 〉", style=filled];
+3 [label="〈 3, 4, 5 〉", style=filled];
+4 [label="〈 2, 5 〉", style=filled];
+5 [label="〈 4, 5, 6, 7 〉"];
+6 [label="〈 3, 5, 7 〉", style=filled];
+7 [label="〈 3, 4 〉", style=filled];
+8 [label="〈 2, 7 〉", style=filled];
+9 [label="〈 5, 6, 7, 8, 9 〉"];
+10 [label="〈 4, 6, 7, 9 〉"];
+11 [label="〈 4, 5, 7 〉", style=filled];
+12 [label="〈 4, 5, 6 〉", style=filled];
+13 [label="〈 3, 7, 8 〉"];
+14 [label="〈 3, 5 〉", style=filled];
+15 [label="〈 2, 9 〉", style=filled];
+2 -> 1;
+3 -> 2;
+4 -> 2;
+5 -> 3;
+6 -> 3;
+7 -> 3;
+8 -> 4;
+9 -> 5;
+10 -> 5;
+11 -> 5;
+12 -> 5;
+13 -> 6;
+14 -> 6;
+15 -> 8;
+}
+```
+
+The graph obtained is as follows.
+
+
+::: {style="text-align:center;"}
+```{dot}
+// | fig-width: 150%
+// | fig-height: 450px
+digraph  NSGraph{rankdir = BT;
+1 [label="〈 1 〉", style=filled];
+2 [label="〈 2, 3 〉", style=filled];
+3 [label="〈 3, 4, 5 〉", style=filled];
+4 [label="〈 2, 5 〉", style=filled];
+5 [label="〈 4, 5, 6, 7 〉"];
+6 [label="〈 3, 5, 7 〉", style=filled];
+7 [label="〈 3, 4 〉", style=filled];
+8 [label="〈 2, 7 〉", style=filled];
+9 [label="〈 5, 6, 7, 8, 9 〉"];
+10 [label="〈 4, 6, 7, 9 〉"];
+11 [label="〈 4, 5, 7 〉", style=filled];
+12 [label="〈 4, 5, 6 〉", style=filled];
+13 [label="〈 3, 7, 8 〉"];
+14 [label="〈 3, 5 〉", style=filled];
+15 [label="〈 2, 9 〉", style=filled];
+2 -> 1;
+3 -> 2;
+4 -> 2;
+5 -> 3;
+6 -> 3;
+7 -> 3;
+8 -> 4;
+9 -> 5;
+10 -> 5;
+11 -> 5;
+12 -> 5;
+13 -> 6;
+14 -> 6;
+15 -> 8;
+}
+```
+:::
+
+
 
 ## References
+
+
