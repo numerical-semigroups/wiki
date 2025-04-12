@@ -1,0 +1,81 @@
+---
+title: "Eliahou slices"
+format: html
+engine: markdown
+---
+
+<!-- Wilf_conjecture_Macaulay_Shalom_Eliahou -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) with [multiplicity](Multiplicity.qmd) $m(S)$ and [depth and remainder](Depth-and-remainder.qmd) $q(S), \rho(S)$ respectively. If
+
+$$
+I_j = [jm(S) - \rho(S), (j+1)m(S) - \rho(S)) \cap \mathbb{Z}, ~~~~ \text{for } ~ j \in \{1, \ldots, q(S)\},
+$$
+
+it is defined the Eliahou slices of $S$ as the sets
+
+$$
+S_j = S \cap I_j ~~~~ \text{for } ~ j \in \{1, \ldots, q(S)\}. 
+$$
+
+## Examples
+
+$\circ$ Let $S = \langle 7, 8, 13, 17 \rangle = \{0, 7, 8, 13, 14, 15, 16, 17, 20, \rightarrow\}$. Since the multiplicity of $S$ is $m(S) = 7$ and its [conductor](Conductor.qmd) is $C(S) = 20$, we have $q(S) = 3$ and $\rho(S) = 1$. Then,
+
+$$
+I_j = [7j - 1, 7(j+1) - 1) \cap \mathbb{Z}, ~~~~ \text{for } ~ j = 1, 2, 3.
+$$
+
+The Eliahou slices of $S$ are
+
+$$
+S_1 = S \cap I_1 = S \cap [6, 13) = \{7, 8\}, ~~~~ S_2 = S \cap I_2 = S \cap [13, 20) = \{13, 14, 15, 16, 17 \},
+$$
+
+$$
+S_3 = S \cap I_3 = S \cap [20, 26) = \{20, \ldots, 26\}.
+$$
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 9, 14, 21, 31 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(9, 14, 21, 31);
+<Numerical semigroup with 4 generators>
+```
+
+Given a numerical semigroup $S$, the function `EliahouSlicesOfNumericalSemigroup` returns a list with the Eliahou slices of $S$ for $j = 1, \ldots, q(S)-1$.
+
+``` gap
+gap> EliahouSlicesOfNumericalSemigroup(S);
+[ [ 9 ], [ 14, 18 ], [ 21, 23, 27, 28 ],
+  [ 30, 31, 32, 35, 36, 37 ],
+  [ 39, 40, 41, 42, 44, 45, 46 ] ]
+```
+
+In order to obtain $S_q = S \cap I_q$, the following functions computes it. The interval $S_q$ is called the [threshold interval](Threshold%20interval) of $S$.
+
+``` gap
+gap> ThresholdIntervalOfNumericalSemigroup := function(S)
+>       local c, m;
+>       if not IsNumericalSemigroup(S) then
+>           Error("The argument must be a Numerical Semigroup");
+>       fi;
+>       c := Conductor(S);
+>       m := Multiplicity(S);
+>       return [c..(c + m - 1)];
+> end;
+function( S ) ... end
+```
+
+``` gap
+gap> ThresholdIntervalOfNumericalSemigroup(S);
+[ 48 .. 56 ]
+```
+
+## References

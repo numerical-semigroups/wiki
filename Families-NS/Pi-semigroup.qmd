@@ -1,0 +1,121 @@
+---
+title: "Pi-semigroup"
+format: html
+engine: markdown
+---
+
+<!-- Num. sem. -->
+
+## Definition
+
+Let $T$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is said that $S$ is a pi-semigroup if there exists a numerical semigroup $S$ such that $T = (x + S) \cup \{0\}$ with $x \in S \setminus \{0\}$. This definition comes from the concept of [principal ideal](../Ideals-NS/Principal-ideal.qmd).
+
+For a given numerical semigroup $S$, it is defined the set of pi-semigroup of $S$ as
+
+$$
+\mathscr{P}I(S) = \{(x + S) \cup \{0\} ~ | ~ x \in S \setminus \{0\}\}.
+$$
+
+If $x \ne 1$ and $T = (x+S) \cup \{0\}$, it can be proven that $F(T) = F(S) + x$, $g(T) = g(S) + x - 1$ and $m(T) = x$, where $F(T)$ denotes the [Frobenius number](../Basic-concepts/Frobenius-number.qmd) of $T$, $g(T)$ denotes the [genus](../Basic-concepts/Genus.qmd) of $T$ and $m(T)$ denotes the [multiplicity](../Basic-concepts/Multiplicity.qmd) of $T$.
+
+## Examples
+
+$\circ$ Let $S = \langle 5, 6, 8 \rangle$ and $T = \langle 6, 11, 16, 19, 21 \rangle$. With few operations, it turns out that $S = \{0, 5, 6, 8, 10, \rightarrow\}$ and $T = \{0, 6, 11, 12, 14, 16, \rightarrow\}$, from which it is deduced that
+
+$$
+T = \{0, 6, 11, 12, 14, 16, \rightarrow\} = (6 + \{0, 5, 6, 8, 10, \rightarrow\}) \cup \{0\} = (6 + S) \cup \{0\},
+$$
+
+concluding that $T$ is a pi-semigroup of $S$.
+
+## Examples with GAP
+
+Nowadays, there are no functions in NumericalSgps related to pi-semigroups. However, given two numerical semigroups $T$ and $S$, the following function returns true if $T$ is a pi-semigroup of $S$.
+
+``` gap
+gap> IsPiSemigroup := function(T,S)
+>       local m, I;
+>       if not IsNumericalSemigroup(T) then
+>           Error("First argument must be a Numerical Semigroup");
+>       fi;
+>       if not IsNumericalSemigroup(S) then
+>           Error("Second argument must be a Numerical Semigroup");
+>       fi;
+>       m := Multiplicity(T);
+>       I := m + S;
+>       return SmallElements(T) = Union(SmallElements(I),[0]);
+> end;
+function( T, S ) ... end
+```
+
+Moreover, given a numerical semigroup $S$ and $s \in S \setminus \{0\}$, the following function returns $T = (s + S) \cup \{0\}$.
+
+``` gap
+gap> PiSemigroup := function(S, s)
+>       local I, sm_elem;
+>       if not IsNumericalSemigroup(S) then
+>           Error("First argument must be a Numerical Semigroup");
+>       fi;
+>       if not IsPosInt(s) then
+>           Error("Second argument must be a positive integer");
+>       fi;
+>       if not s in S then
+>           Error("Second argument must be an element of the first argument");
+>       fi;
+>       I := s + S;
+>       sm_elem := Union(SmallElements(I), [0]);
+>       return NumericalSemigroupBySmallElements(sm_elem);
+> end;
+function( S, s ) ... end
+```
+
+$\diamond$ Let $S = \langle 9, 15, 37, 41, 58, 62 \rangle$ and $T = \langle 9, 24, 39, 46, 50, 61, 65, 67, 71 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(9, 15, 37, 41, 58, 62);
+<Numerical semigroup with 6 generators>
+gap> T := NumericalSemigroup(9, 24, 39, 46, 50, 61, 65, 67, 71);
+<Numerical semigroup with 9 generators>
+```
+
+It holds that $T$ is a pi-semigroup of $S$. Indeed,
+
+``` gap
+gap> IsPiSemigroup(T,S);
+true
+gap> Multiplicity(T);
+9
+```
+
+Given a numerical semigroup $S$, the function `Multiplicity` returns the multiplicity of $S$. Therefore, $T = (m(T) + S) \cup \{0\} = (9+S) \cup \{0\}$.
+
+$\diamond$ Let $S = \langle 7, 13, 15 \rangle$ and $s= 22 \in S$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(7, 13, 15);
+<Numerical semigroup with 3 generators>
+gap> s := 22;
+22
+```
+
+In order to obtain $T = (s + S) \cup \{0\}$, we can use the function defined above,
+
+``` gap
+gap> T := PiSemigroup(S, 22);
+<Numerical semigroup>
+gap> MinimalGenerators(T);
+[ 22, 29, 35, 36, 37, 42, 43, 48, 49, 50, 52, 55, 56, 61, 62, 63, 67, 68, 69, 75, 76, 82 ]
+```
+
+Given a numerical semigroup $T$, the function `MinimalGenerators` returns the [minimal generators](../Basic-concepts/Minimal-set-of-generators.qmd) of $T$. Then,
+
+$$
+T = (22 + S) \cup \{0\} = \langle 22, 29, 35, 36, 37, 42, 43, 48, 49, 50, 52, 55, 56, 61, 
+$$
+
+$$
+62, 63, 67, 68, 69, 75, 76, 82 \rangle.
+$$
+
+
+## References

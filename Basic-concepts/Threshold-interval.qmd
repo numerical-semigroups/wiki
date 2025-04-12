@@ -1,0 +1,50 @@
+---
+title: "Threshold interval"
+format: html
+engine: markdown
+---
+
+<!-- Wilf survey -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd), $m(S)$ the [multiplicity](Multiplicity.qmd) of $S$ and $C(S)$ the [conductor](Conductor.qmd) of $S$. It is defined the threshold interval of $S$ as $[C(S), C(S) + m(S)) = \{C(S), C(S) + 1, \ldots, C(S) + m(S) - 1\}$.
+
+## Examples
+
+$\circ$ Let $S = \langle 6, 8, 9 \rangle$. With some calculations, it is deduced that $S = \{0, 6, 8, 9, 12, 14, 15, 16, 17, 18, 20, \rightarrow \}$, then $m(S) = 6$ and $C(S) = 20$. The threshold interval of $S$ is $\{20, 21, \ldots, 25\}$.
+
+## Examples with GAP
+
+Nowadays, there are no functions in NumericalSgps related to threshold interval of a numerical semigroup. However, given a numerical semigroup $S$, the following function returns the threshold interval of $S$.
+
+``` gap
+gap> ThresholdIntervalOfNumericalSemigroup := function(S)
+>       local c, m;
+>       if not IsNumericalSemigroup(S) then
+>           Error("The argument must be a Numerical Semigroup");
+>       fi;
+>       c := Conductor(S);
+>       m := Multiplicity(S);
+>       return [c..(c + m - 1)];
+> end;
+function( S ) ... end
+```
+
+$\diamond$ Let $S = \langle 11, 17, 42, 71 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(11, 17, 42, 71);
+<Numerical semigroup with 4 generators>
+```
+
+From the function defined above,
+
+``` gap
+gap> ThresholdIntervalOfNumericalSemigroup(S);
+[ 92 .. 102 ]
+```
+
+Therefore, the threshold interval of $S$ is $\{92, 93, \ldots, 102\}$.
+
+## References

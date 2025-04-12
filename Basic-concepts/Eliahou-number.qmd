@@ -1,0 +1,79 @@
+---
+title: "Eliahou number"
+format: html
+engine: markdown
+---
+
+<!-- Wilf_conjecture_Macaulay_Shalom_Eliahou -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) [minimally generated](Minimal-set-of-generators.qmd) by $P(S)$, let $N(S)$ be the set of [left elements](Left-elements.qmd) with $n(S) = |N(S)|$, [depth and remainder](Depth_and-remainder.qmd) $q(S)$, $\rho(S)$ respectively, and [threshold interval](Threshold-interval.qmd) $D$. If $p_q$ denotes the minimal generators in $D$ and $d_q = |D| - p_q$, it is defined the Eliahou number of $S$, denoted by $E(S)$ or $W_0(S)$, as the value
+
+$$
+E(S) = |P(S) \cap N(S)|n(S) - q(S)d_q + \rho(S).
+$$
+
+If $W(S)$ is the [Wilf number](Wilf-number.qmd) of $S$, it can be proven that $W(S) \ge E(S)$. In particular, if $E(S) \ge 0$, then $S$ is a [Wilf semigroup](../Families-NS/Wilf-semigroup.qmd).
+
+
+## Examples
+
+$\circ$ Let $S = \langle 14, 22, 23, 57, 61, 62, 63 \rangle = \langle  14, 22, 23, 57, 61, 62, 63 \rangle$. The set of left elements of $S$ is
+
+$$
+N(S) = \{0, 14, 22, 23, 28, 36, 37, 42, 44, 45, 46, 50, 51\},
+$$
+and the threshold is
+
+$$
+I = \{56, 57, \ldots, 69\}.
+$$
+Therefore, $|P(S) \cap N(S)| = |\{14, 22, 23\}| = 3$, $n(S) = 13, q(S) = 4, \rho(S) = 0, d_q = |D| - p_q = 14 - p_q = 10$ and
+
+$$
+E(S) = |P(S) \cap N(S)|n(S) - q(S)d_q + \rho(S) = 3 \cdot 13 - 4 \cdot 10 = -1 < 0.
+$$
+
+On the other hand, $W(S) = e(S)n(S) - C(S) = 35$. This example shows that there exists numerical semigroups such that $E(S) < 0$ but $W(S) > 0$.
+
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+
+$\diamond$ Let $S = \langle 16, 17, 41, 70 \rangle$, in GAP:
+
+
+```gap
+gap> S := NumericalSemigroup(16, 17, 41, 70);
+<Numerical semigroup with 4 generators>
+```
+
+Given a numerical semigroup $S$, the functions `EliahouNumber` and `TruncatedWilfNumberOfNumericalSemigroup` compute the Eliahou number of $S$.
+
+```gap
+gap> EliahouNumber(S);
+81
+gap> TruncatedWilfNumberOfNumericalSemigroup(S);
+81
+```
+
+The function `WilfNumber` returns the Wilf number given a numerical semigroup. In this case
+
+```gap
+gap> WilfNumber(S);
+81
+```
+
+concluding that there exist numerical semigroups so that $W(S) = E(S)$.
+
+
+
+## References
+
+
+
+
+

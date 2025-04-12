@@ -1,0 +1,57 @@
+---
+title: "Wilf semigroup"
+format: html
+engine: markdown
+---
+
+<!-- Wilf survey -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) with [embedding dimension](Embedding-dimension.qmd) $e(S)$, $n(S)$ [left elements](Left-elements.qmd) and [conductor](Conductor.qmd) $C(S)$. It is said that $S$ is a Wilf semigroup if $W(S) \ge 0$, where
+
+$$
+W(S) = e(S) n(S) - C(S).
+$$ 
+It is said that $W(S)$ is the [Wilf number](../Basic-concepts/Wilf-number.qmd) of $S$. Nowadays, it is not known a numerical semigroup such that $W(S) < 0$, Wilf's conjecture states that every numerical semigroup is a Wilf semigroup.
+
+## Examples
+
+$\circ$ Let $S = \langle 4, 7, 10 \rangle = \{ 0, 4, 7, 8, 10, 11, 12, 14, \rightarrow\}$. We have $e(S) = 3, n(S) = 7$ and $C(S) = 14$. The Wilf number of $S$ is $W(S) = e(S) n(S) - C(S) = 7 \ge 0$ and $S$ is a Wilf semigroup.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 17, 31, 66, 80, 91 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(17, 31, 66, 80, 91);
+<Numerical semigroup with 5 generators>
+```
+
+Given a numerical semigroup $S$; the functions `EmbeddingDimension`, `SmallElements` and `Condcutor` returns the embedding dimension, the list of small elements (left elements with the conductor) and the conductor, respectively.
+
+``` gap
+gap> e := EmbeddingDimension(S);
+5
+gap> n := Length(SmallElements(S)) - 1;
+67
+gap> C := Conductor(S);
+170
+gap> e*n - C;
+165
+```
+
+The functions `WilfNumber` and `WilfNumberOfNumericalSemigroup` return the Wilf number given a numerical semigroup.
+
+``` gap
+gap> WilfNumber(S);
+165
+gap> WilfNumberOfNumericalSemigroup(S);
+165
+```
+
+therefore, $W(S) = 165 \ge 0$ and $S$ is Wilf.
+
+## References

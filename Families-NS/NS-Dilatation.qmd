@@ -1,0 +1,64 @@
+---
+title: "Dilatation of a numerical semigroup"
+format: html
+engine: markdown
+---
+
+<!-- Dilatations_of_NS_V_Barucci -->
+
+## Definition
+
+Let $T$ and $S$ be [numerical semigroups](Numerical-semigroup.qmd). It is said that $T$ is a dilatation of $S$ if there exists $a \in S$ such that $T = \{a + s ~ | ~ s \in S \setminus \{0\}\} \cup \{0\}$. Although the definition of dilatation and [pi-semigroup](Pi-semigroup.qmd) is apparently similar, the constructions are deeply different.
+
+## Examples
+
+$\circ$ Let $S = \{0, 15, 17, 19, 20, 22, 24, \rightarrow \}$. If $S$ is a dilatation of a numerical semigroup $T$ with $t \in T \setminus \{0\}$, then $t + m(T) = 15$, where $m(T)$ denotes the [multiplicity](../Basic-concepts/Multiplicity.qmd) of $T$, then $t \in \{1, \ldots, 14\}$. If we consider
+
+$$
+T_j = \{15-j, 17-j, 19-j, 20-j, 22-j, 24-j, \rightarrow\}, ~~~~ \text{for } ~ j \in \{1, \ldots, 14\},
+$$
+
+it is deduced that $S$ is a dilatation of a numerical semigroup if, an only if, there exists $j \in \{1, \ldots, 14\}$ such that $T_j$ is a numerical semigroup and $j \in T_j$. The first condition is true for $j \in \{1, 2, 3, 4, 5, 6, 8, 10\}$ and the second condition it holds for $j \in \{10, 11, 12, 13, 14\}$, concluding that $j = 10$ is the only possibility and
+
+$$ 
+S = \{15, 17, 19, 20, 22, 24, \rightarrow \} \cup {0} = (10 + \{5,7,9,10,12,14, \rightarrow\}) \cup {0}
+$$
+
+$$
+\Longrightarrow S = (10 + \langle 5,7,9 \rangle) \cup \{0\},
+$$
+
+concluding that $S$ is a dilatation of $\langle 5, 7, 9 \rangle$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(14, 15, 27, 40, 46, 65);
+<Numerical semigroup with 6 generators>
+```
+
+Given a numerical semigroup $S$ and a non-negative integer $a \in S$, the function `DilatationOfNumericalSemigroup` returns the dilatation of $S$ with respect to $a$.
+
+``` gap
+gap> 29 in S;
+true
+gap> T := DilatationOfNumericalSemigroup(S, 29);
+<Numerical semigroup>
+gap> I := MinimalGenerators(T);
+[ 41, 42, 54, 55, 56, 57, 67, 68, 69, 70, 71, 72, 73, 81, 85, 86, 87, 88, 92, 94, 100, 101, 102, 103, 106, 107, 116, 117, 118, 119, 120, 131, 132 ]
+gap> L := SmallElements(T);
+[ 0, 41, 42, 54, 55, 56, 57, 67, 68, 69, 70, 71, 72, 73, 81, 82, 83, 84,
+  85, 86, 87, 88, 92, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 106 ]
+```
+
+Therefore, $T = (\{29 + s ~ | ~ s \in S \setminus \{0\}\}) \cup \{0\} = \langle I \rangle = \{L, \rightarrow\}$.
+
+
+
+$\diamond$
+
+## References

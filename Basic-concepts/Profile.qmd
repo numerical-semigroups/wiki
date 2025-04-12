@@ -1,0 +1,49 @@
+---
+title: "Profile"
+format: html
+engine: markdown
+---
+
+<!-- Wilf_conjecture_Macaulay_Shalom_Eliahou -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) [minimally generated](Minimal-set-of-generators.qmd) by $P(S)$, with [Eliahou slices](Eliahou-slices.qmd) $S_1, \ldots, S_q$. If $P_j = P(S) \cap S_j$ and $p_j = |P_j|$ for $j \in \{1, \ldots, q(S)-1\}$, where $q(S)$ denotes the [depth and remainder](Depth-and-remainder.qmd) of $S$, it is defined the profile of $S$ as the $(q(S)-1)-$tuple $(p_1, \ldots, p_{q(S)-1}) \in \mathbb{N}^{q(S) - 1}$.
+
+## Examples
+
+$\circ$ Let $S = \langle 4, 9, 10 \rangle = \{ 0, 4, 8, 9, 10, 12, 13, 14, 16, \rightarrow\}$. Since $m(S) = 4$ and $C(S) = 16$, where $m(S)$ and $C(S)$ denotes the [multiplicity](Multiplicity.qmd) and the [conductor](Conductor.qmd) of $S$, respectively, we have that $q(S) = 4$. With few calculations, we have that
+
+$$
+S_1 = \{4\}, ~~ S_2 = \{8,9,10\}, ~~ \text{and } ~~ S_3 = \{12,13,14\},
+$$ concluding that the profile of $S$ is $(1, 2, 0)$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 19, 31, 60, 78, 80 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(19, 31, 60, 78, 80);
+<Numerical semigroup with 5 generators>
+```
+
+Given a numerical semigroup $S$, the function `ProfileOfNumericalSemigroup` returns the profile of $S$. On the other hand, the function `EliahouSlicesOfNumericalSemigroup` returns the Eliahou slices $S_1, \ldots, S_{q(S)-1}$ of the numerical semigroup.
+
+``` gap
+gap> ProfileOfNumericalSemigroup(S);
+[ 2, 0, 1, 2, 0, 0, 0, 0 ]
+gap> EliahouSlicesOfNumericalSemigroup(S);
+[ [ 19, 31 ], [ 38, 50 ], [ 57, 60, 62, 69 ],
+  [ 76, 78, 79, 80, 81, 88 ],
+  [ 91, 93, 95, 97, 98, 99, 100, 107 ],
+  [ 109, 110, 111, 112, 114, 116, 117, 118, 119, 120,
+      122, 124, 126 ],
+  [ 128, 129, 130, 131, 133, 135, 136, 137, 138, 139,
+      140, 141, 142, 143, 145 ],
+  [ 147, 148, 149, 150, 151, 152, 153, 154, 155, 156,
+      157, 158, 159, 160, 161, 162, 164 ] ]
+```
+
+## References
