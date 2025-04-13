@@ -54,4 +54,24 @@ gap> Length(IrreducibleNumericalSemigroupsWithFrobeniusNumberAndMultiplicity(16,
 1
 ```
 
+$\diamond$ Given a numerical semigroup $S$, the function `DecomposeIntoIrreducibles` returns a list of numerical semigroups $[S_1, \ldots, S_k]$ such that $S = S_1 \cap \ldots \cap S_k$.
+
+```gap
+gap> S := NumericalSemigroup(13, 17, 21, 40, 58);
+<Numerical semigroup with 5 generators>
+gap> D := DecomposeIntoIrreducibles(S);
+[ <Numerical semigroup with 12 generators>,
+  <Numerical semigroup with 12 generators>,
+  <Numerical semigroup with 8 generators>,
+  <Numerical semigroup with 8 generators> ]
+gap> List(D, T -> MinimalGenerators(T));
+[ [ 13, 17, 21, 24, 25, 28, 29, 32, 33, 35, 36, 40 ],
+  [ 13, 17, 21, 25, 28, 29, 32, 33, 36, 37, 40, 44 ],
+  [ 13, 17, 21, 33, 35, 37, 40, 44 ],
+  [ 13, 17, 21, 35, 36, 40, 44, 45 ] ]
+
+```
+
+
+
 ## References

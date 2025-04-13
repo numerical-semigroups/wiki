@@ -8,7 +8,7 @@ engine: markdown
 
 ## Definition
 
-Let $T$ and $S$ be [numerical semigroups](Numerical-semigroup.qmd). It is said that $T$ is a dilatation of $S$ if there exists $a \in S$ such that $T = \{a + s ~ | ~ s \in S \setminus \{0\}\} \cup \{0\}$. Although the definition of dilatation and [pi-semigroup](Pi-semigroup.qmd) is apparently similar, the constructions are deeply different.
+Let $T$ and $S$ be [numerical semigroups](../Basic-concepts/Numerical-semigroup.qmd). It is said that $T$ is a dilatation of $S$ if there exists $a \in S$ such that $T = \{a + s ~ | ~ s \in S \setminus \{0\}\} \cup \{0\}$. Although the definition of dilatation and [pi-semigroup](Pi-semigroup.qmd) is apparently similar, the constructions are deeply different.
 
 It can be proven that if $S$ is a [Wilf semigroup](Wilf-semigroup.qmd), then every dilatation of $S$ is a Wilf semigroup.
 

@@ -1,0 +1,54 @@
+---
+title: "Arf system of generators"
+format: html
+engine: markdown
+---
+
+<!--  -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and $M = \{m_1, \ldots, m_k\}$ a set of positive integers with $gcd(M) = 1$ and $m_1 < \ldots < m_k$. It is said that $M$ is an Arf system of generators of $S$ if the [Arf closure](Arf-closure.qmd) of $M$ is $S$.
+
+From the definition, if $M$ is a Arf system of generators with Arf closure $S$, then $M$ is minimal, since every proper subset of $M$ is not an Arf system of generators of $S$. Moreover, $M$ is unique and is a subset of the [minimal set of generators](Minimal-set-of-generators.qmd) of $S$.
+
+## Examples
+
+$\circ$ Let us consider the Arf semigroup $S = \langle 3, 7, 8 \rangle = \{0, 3, 6\}$. From the condition $gcd(M) = 1$, the candidates are
+
+$$
+M_1 = \{4, 7\}, ~~ M_2 = \{4, 9\}, ~~ M_3 = \{6, 7\}, ~~ M_4 = \{7,9\},
+$$
+
+$$
+M_5 = \{4, 6, 7\}, ~~ M_6 = \{4, 6, 9\}, ~~ M_7 = \{6, 7, 9\}, ~~ M_8 = \{4, 6, 7, 9\}.
+$$ Computing the Arf closure of each $M_j$ for $j \in \{1, \dots, 8\}$, it is obtained that $M_5 = \{4, 6, 7\}$ is the Arf system of generators of $S$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 8, 10, 12, 14, 19, 21, 23, 25 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(8, 10, 12, 14, 19, 21, 23, 25);
+<Numerical semigroup with 8 generators>
+```
+
+Given a numerical semigroup $S$, the function `IsArf` returns true if $S$ is an Arf numerical semigroup and false otherwise.
+
+``` gap
+gap> IsArf(S);
+true
+```
+
+Given a numerical semigroup $S$, the functions `ArfCharactersOfArfNumericalSemigroup` and `MinimalArfGeneratingSystemOfArfNumericalSemigroup` return the Arf system of generators of $S$.
+
+``` gap
+gap> ArfCharactersOfArfNumericalSemigroup(S);
+[ 8, 10, 19 ]
+gap> MinimalArfGeneratingSystemOfArfNumericalSemigroup(S);
+[ 8, 10, 19 ]
+```
+
+## References

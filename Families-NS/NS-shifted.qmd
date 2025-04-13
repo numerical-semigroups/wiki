@@ -10,7 +10,7 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be [numerical semigroup](Numerical-semigroup.qmd). It is said that $S$ is a shifted numerical semigroup if there exist $r_1, \ldots, r_k$ positive integers with $r_1 < r_2 < \ldots < r_k$ and $d = gcd(r_1, \ldots, r_k)$, and an integer $n > r_k$ such that $gcd(n, d) = 1$, satisfying that
+Let $S$ be [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is said that $S$ is a shifted numerical semigroup if there exist $r_1, \ldots, r_k$ positive integers with $r_1 < r_2 < \ldots < r_k$ and $d = gcd(r_1, \ldots, r_k)$, and an integer $n > r_k$ such that $gcd(n, d) = 1$, satisfying that
 
 $$
 S = \langle n, n + r_1, \ldots, n + r_k \rangle.

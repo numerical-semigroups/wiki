@@ -6,7 +6,7 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), $e(S)$ the [embedding dimension](../Basic-concepts/Embedding-dimension.qmd) and $m(S)$ the [multiplicity](../Basic-concepts/Multiplicity.qmd) of $S$. Then, it is said that $S$ is a numerical semigroup with maximal embedding dimension if $e(S) = m(S)$.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), $e(S)$ the [embedding dimension](../Basic-concepts/Embedding-dimension.qmd) and $m(S)$ the [multiplicity](../Basic-concepts/Multiplicity.qmd) of $S$. Then, it is said that $S$ has maximal embedding dimension (or MED) if $e(S) = m(S)$.
 
 It is well known that for every numerical semigroup, it holds the inequality $e(S) \le m(S)$.
 
@@ -31,20 +31,22 @@ gap> S := NumericalSemigroup(4, 15, 20, 21, 22, 30, 31, 38);
 <Numerical semigroup with 8 generators>
 ```
 
-To check if $S$ has maximal embedding dimension, we need to compute the embedding dimension and the multiplicity of $S$. The function `EmbeddingDimension` returns the embedding dimension of a numerical semigroup.
+Given a numerical semigroup $S$, the functions `IsMED` and `IsMEDNumericalSemigroup` return true if $S$ is MED (maximal embedding dimension) and false otherwise.
 
 ``` gap
-gap> EmbeddingDimension(S);
-4
+gap> IsMED(S);
+true
+gap> IsMEDNumericalSemigroup(S);
+true
 ```
 
-Now, the function `Multiplicity` returns the multiplicity of $S$.
+Therefore, $e(S) = m(S)$. Given a numerical semigroup $S$, the functions `EmbeddingDimension` and `Multiplicity` computes the embedding dimension and the multiplicity of $S$.
 
 ``` gap
 gap> Multiplicity(S);
 4
+gap> EmbeddingDimension(S);
+4
 ```
-
-Therefore, $S$ has maximal embedding dimension.
 
 ## References

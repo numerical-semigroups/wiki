@@ -67,4 +67,32 @@ gap> FactorizationsElementListWRTNumericalSemigroup([320, 321, 322], S);
       [ 5, 1, 1, 1 ] ] ]
 ```
 
+$\diamond$ Let $S = \langle 14, 17, 20, 32 \rangle$, in GAP:
+
+```gap
+gap> S := NumericalSemigroup(14, 17, 20, 32);
+<Numerical semigroup with 4 generators>
+```
+
+Given a numerical semigroup $S$ and a positive integer $n$, the function `DenumerantOfElementInNumericalSemigroup` returns the number of factorizations of $n$ in terms of the minimal generating set of $S$, that is, $|\mathbf{Z}(n)|$ in $S$.
+
+```gap
+gap> DenumerantOfElementInNumericalSemigroup(100, S);
+4
+gap> DenumerantOfElementInNumericalSemigroup(21, S);
+0
+```
+
+Moreover, given a numerical semigroup $S$, the function `DenumerantFunction` returns a function such that for a given $n$ computes the number of factorizations of $n$ in terms of the minimal generating set of $S$.
+
+```gap
+gap> f := DenumerantFunction(S);
+function( n ) ... end
+gap> f(101);
+2
+gap> DenumerantOfElementInNumericalSemigroup(101, S);
+2
+```
+
+
 ## References

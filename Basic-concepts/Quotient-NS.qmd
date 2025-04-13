@@ -1,0 +1,56 @@
+---
+title: "Quotient of a numerical semigroup"
+format: html
+engine: markdown
+---
+
+<!-- Numerical semigroups problem list -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and $p$ be a positive integer. It is defined the quotient of $S$ by $p$, denoted by $\frac{S}{p}$, as
+
+$$
+\frac{S}{p} = \{x \in \mathbb{N} ~ | ~ px \in S\}.
+$$
+
+It can be proven that $\frac{S}{p}$ is always a numerical semigroup.
+
+## Examples
+
+$\circ$ Let $S = \langle 10, 12, 13 \rangle$ and $p = 3$. Since $3 \cdot 10 = 30 = 10 \cdot 3 \in S$, $3 \cdot 11 = 33 = 10 \cdot 2 + 13 \cdot 1 \in S$ and $3 \cdot 12 = 12 \cdot 3 \in S$, we have that $\{10, \rightarrow\} \subseteq \frac{S}{3}$. On the other hand, considering $x \in \{0, 1, \ldots, 9\}$, it holds that $3x \in S$ if, and only if, $x \in \{0, 4, 8\}$, concluding that
+
+$$
+\frac{S}{3} = \{0, 4, 8, 10, \rightarrow\}.
+$$
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 13, 17, 21, 40, 58 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(13, 17, 21, 40, 58);
+<Numerical semigroup with 5 generators>
+```
+
+Given a numerical semigroup $S$ and a positive integer $p$, the function `QuotientOfNumericalSemigroup` returns the numerical semigroup $\frac{S}{p}$.
+
+``` gap
+gap> S_2 := QuotientOfNumericalSemigroup(S, 2);
+<Numerical semigroup>
+gap> MinimalGenerators(S_2);
+[ 13, 15, 17, 19, 20, 21, 29 ]
+```
+
+The function `MinimalGenerators` returns the [minimal generators](Minimal-set-of-generators.qmd) of the given numerical semigroup, then $\frac{S}{2} = \langle 13, 15, 17, 19, 20, 21, 29 \rangle$. It is also possible to generate it with the $/$ operator.
+
+``` gap
+gap> T := S/2;
+<Numerical semigroup>
+gap> S_2 = T;
+true
+```
+
+## References

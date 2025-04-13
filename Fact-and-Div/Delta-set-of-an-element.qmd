@@ -20,7 +20,7 @@ $\circ$ Let $S = \langle 6, 13, 20 \rangle$, $s = 72$ and $\mathbf{Z}(s)$ the [s
 
 ## Examples with GAP
 
-The following example is made with the package NumericalSgps in GAP.
+The following examples are made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 25, 37, 38, 59 \rangle$, in GAP:
 
@@ -29,7 +29,7 @@ gap> S := NumericalSemigroup(25, 37, 38, 59);
 <Numerical semigroup with 4 generators>
 ```
 
-Given a numerical semigroup $S$ and an element $n \in S$, the functions `DeltaSet` and `DeltaSetOfFactorizationsElementWRTNumericalSemigroup` return the delta set of $n$ in $S$. If we only give a numerical semigroup $S$ in `DeltaSet`, then it computes the Delta set of $S$
+Given a numerical semigroup $S$ and an element $n \in S$, the functions `DeltaSet` and `DeltaSetOfFactorizationsElementWRTNumericalSemigroup` return the delta set of $n$ in $S$. If we only give a numerical semigroup $S$ in `DeltaSet`, then it computes the Delta set of $S$.
 
 ``` gap
 gap> DeltaSet(S, 612);
@@ -67,6 +67,41 @@ As we can see, $l_i - l_{i-1} = 1$ for all $i = 1, 2, \ldots, |\mathbf{L}(612)|$
 ``` gap
 gap> DeltaSet(I);
 [ 1 ]
+```
+
+$\diamond$ Let $S = \langle 7, 9, 13, 24 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(7, 9, 13, 24);
+<Numerical semigroup with 4 generators>
+```
+
+Given a numerical semigroup $S$ and an integer $n$, the function `DeltaSetListUpToElementWRTNumericalSemigroup` returns a list with the Delta sets of the integers up to (and including) $n$. If an integer is not in $S$, the corresponding Delta set is empty.
+
+``` gap
+gap> DeltaSetListUpToElementWRTNumericalSemigroup(100, S);
+[ [  ], [  ], [  ], [  ], [  ], [  ], [  ], [  ], [  ],
+  [  ], [  ], [  ], [  ], [  ], [  ], [  ], [  ], [  ],
+  [  ], [  ], [  ], [  ], [  ], [  ], [  ], [  ], [  ],
+  [  ], [  ], [  ], [ 1 ], [  ], [ 1 ], [  ], [ 2 ], [  ],
+  [ 3 ], [ 1 ], [ 2 ], [ 1 ], [  ], [ 1, 2 ], [  ],
+  [ 1, 2 ], [ 1 ], [ 1, 2 ], [ 1 ], [ 2 ], [ 1, 2 ], [ 3 ],
+  [ 1, 2 ], [ 1 ], [ 1, 2 ], [ 1 ], [ 1, 2 ], [ 1, 2 ],
+  [ 1, 2 ], [ 1, 2 ], [ 1 ], [ 1, 2 ], [ 1, 2 ], [ 1, 2 ],
+  [ 1, 2 ], [ 1, 2 ], [ 1, 2 ], [ 1 ], [ 1, 2 ], [ 1 ],
+  [ 1, 2 ], [ 1, 2 ], [ 1, 2 ], [ 1, 2 ], [ 1 ], [ 1, 2 ],
+  [ 1 ], [ 1, 2 ], [ 1, 2 ], [ 1, 2 ], [ 1, 2 ], [ 1 ],
+  [ 1, 2 ], [ 1 ], [ 1, 2 ], [ 1, 2 ], [ 1, 2 ], [ 1, 2 ],
+  [ 1, 2 ], [ 1, 2 ], [ 1 ], [ 1, 2 ], [ 1, 2 ], [ 1, 2 ],
+  [ 1, 2 ], [ 1 ], [ 1, 2 ], [ 1, 2 ], [ 1, 2 ], [ 1, 2 ],
+  [ 1, 2 ], [ 1, 2 ] ]
+```
+
+On the other hand, given a numerical semigroup $S$ and a non-negative integer $n$, the function `DeltaSetUnionUpToElementWRTNumericalSemigroup` returns the union of the Delta sets of the elements of $S$ up to (and including) $n$.
+
+``` gap
+gap> DeltaSetUnionUpToElementWRTNumericalSemigroup(1000, S);
+[ 1 .. 3 ]
 ```
 
 ## References

@@ -8,7 +8,7 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) with [embedding dimension](Embedding-dimension.qmd) $e(S)$, $n(S)$ [left elements](Left-elements.qmd) and [conductor](Conductor.qmd) $C(S)$. It is said that $S$ is a Wilf semigroup if $W(S) \ge 0$, where
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) with [embedding dimension](../Basic-concepts/Embedding-dimension.qmd) $e(S)$, $n(S)$ [left elements](../Basic-concepts/Left-elements.qmd) and [conductor](../Basic-concepts/Conductor.qmd) $C(S)$. It is said that $S$ is a Wilf semigroup if $W(S) \ge 0$, where
 
 $$
 W(S) = e(S) n(S) - C(S).

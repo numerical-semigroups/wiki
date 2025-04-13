@@ -1,0 +1,53 @@
+---
+title: "Denumerant ideal"
+format: html
+engine: markdown
+---
+
+<!-- ??? -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $n$ a non-negative integer. It is defined the denumerant ideal of $S$ with respect to $n$ as the subset of $S$ defined as
+
+$$
+D(S, n) = \{x \in S ~ | ~ |\mathbf{Z}(x)| > n \},
+$$
+
+where $\mathbf{Z}(x)$ denotes the [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) of $x$ in $S$. It can be proven that $D(S, n)$ is always a [proper ideal](Proper-ideal.qmd) of $S$. If we add zero to this set, it is called $n-$semigroup.
+
+From the definition, if $n \le m$, then $D(S, m) \subseteq D(S, n)$.
+
+## Examples
+
+$\circ$ Let $S = \langle 5, 7, 9 \rangle$ and $n = 4$. The [conductor](../Basic-concepts/Conductor.qmd) of $S$ is $C(S) = 14$ and considering $s = 42$, we have that
+
+$$
+\mathbf{Z}(42) = \{(7, 1, 0), (0, 6, 0), (1, 4, 1), (2, 2, 2), (3, 0, 3) \} \Longrightarrow 42 \in D(S, 4).
+$$ It is deduced that $s \in D(S, 4)$ for all $s \ge C(S) + 42 = 56$ (since $s - 42 \in S$ and $42$ has more than $4$ factorizations). Checking the factorizations on the remaining elements, it is concluded that $D(S, 4) = \{40, 42, \rightarrow \}$
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 17, 31, 32, 40, 58 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(17, 31, 32, 40, 58);
+<Numerical semigroup with 5 generators>
+```
+
+Given a numerical semigroup $S$ and a non-negative element $n \in S$, the function `DenumerantIdeal` returns the denumerant ideal of $S$ with respect to to $n$.
+
+``` gap
+gap> I := DenumerantIdeal(S, 20);
+<Ideal of numerical semigroup>
+gap> DenumerantIdeal(S, 20) = I;
+true
+gap> SmallElements(I);
+[ 280, 284, 288, 289, 290, 292 ]
+```
+
+Therefore, $D(S, 20) = \{280, 284, 288, 289, 290, 292, \rightarrow\}$.
+
+## References
