@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Eliahou slices – Wiki numerical semigroups</title>
+<title>Arf-irreducible – Wiki numerical semigroups</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -1185,7 +1185,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Eliahou slices</h1>
+<h1 class="title">Arf-irreducible</h1>
 </div>
 
 
@@ -1202,56 +1202,40 @@ window.Quarto = {
 </header>
 
 
-<!-- Wilf_conjecture_Macaulay_Shalom_Eliahou -->
+<!--  -->
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> with <a href="../Basic-concepts/Multiplicity.html">multiplicity</a> <span class="math inline">\(m(S)\)</span> and <a href="../Basic-concepts/Depth-and-remainder.html">depth and remainder</a> <span class="math inline">\(q(S), \rho(S)\)</span> respectively. If</p>
-<p><span class="math display">\[
-I_j = [jm(S) - \rho(S), (j+1)m(S) - \rho(S)) \cap \mathbb{Z}, ~~~~ \text{for } ~ j \in \{1, \ldots, q(S)\},
-\]</span></p>
-<p>it is defined the Eliahou slices of <span class="math inline">\(S\)</span> as the sets</p>
-<p><span class="math display">\[
-S_j = S \cap I_j ~~~~ \text{for } ~ j \in \{1, \ldots, q(S)\}.
-\]</span></p>
+<p>Let <span class="math inline">\(S\)</span> be an <a href="../Families-NS/Arf-semigroup.html">Arf</a> <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a>. It is said that <span class="math inline">\(S\)</span> is Arf-irreducible if <span class="math inline">\(S\)</span> is irreducible in the <a href="../Varieties-NS/Frobenius-variety.html">Frobenius variety</a> of Arf numerical semigroups.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 7, 8, 13, 17 \rangle = \{0, 7, 8, 13, 14, 15, 16, 17, 20, \rightarrow\}\)</span>. Since the multiplicity of <span class="math inline">\(S\)</span> is <span class="math inline">\(m(S) = 7\)</span> and its <a href="../Basic-concepts/Conductor.html">conductor</a> is <span class="math inline">\(C(S) = 20\)</span>, we have <span class="math inline">\(q(S) = 3\)</span> and <span class="math inline">\(\rho(S) = 1\)</span>. Then,</p>
+<p><span class="math inline">\(\circ\)</span> Let us consider the Arf semigroup <span class="math inline">\(S = \langle 2, 9 \rangle\)</span>. The Arf oversemigroups of <span class="math inline">\(S\)</span>, other than <span class="math inline">\(S\)</span> and <span class="math inline">\(\mathbb{N}\)</span>, are</p>
 <p><span class="math display">\[
-I_j = [7j - 1, 7(j+1) - 1) \cap \mathbb{Z}, ~~~~ \text{for } ~ j = 1, 2, 3.
-\]</span></p>
-<p>The Eliahou slices of <span class="math inline">\(S\)</span> are</p>
-<p><span class="math display">\[
-S_1 = S \cap I_1 = S \cap [6, 13) = \{7, 8\}, ~~~~ S_2 = S \cap I_2 = S \cap [13, 20) = \{13, 14, 15, 16, 17 \},
-\]</span></p>
-<p><span class="math display">\[
-S_3 = S \cap I_3 = S \cap [20, 26) = \{20, \ldots, 26\}.
-\]</span></p>
+S_1 = \langle 2, 3 \rangle, ~~ S_2 = \langle 2, 5 \rangle, ~~ S_3 = \langle 2, 9 \rangle.
+\]</span> Since <span class="math inline">\(S_3 \subseteq S_2 \subseteq S_1\)</span>, all the intersections generates <span class="math inline">\(S_1, S_2\)</span> or <span class="math inline">\(S_3\)</span>. Therefore, <span class="math inline">\(S\)</span> is Arf-irreducible.</p>
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
 <p>The following example is made with the package NumericalSgps in GAP.</p>
-<p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 9, 14, 21, 31 \rangle\)</span>, in GAP:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">9</span><span class="op">,</span> <span class="fl">14</span><span class="op">,</span> <span class="fl">21</span><span class="op">,</span> <span class="fl">31</span>)<span class="op">;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">4</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Given a numerical semigroup <span class="math inline">\(S\)</span>, the function <code>EliahouSlicesOfNumericalSemigroup</code> returns a list with the Eliahou slices of <span class="math inline">\(S\)</span> for <span class="math inline">\(j = 1, \ldots, q(S)-1\)</span>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">EliahouSlicesOfNumericalSemigroup</span>(<span class="va">S</span>)<span class="op">;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>[ [ <span class="fl">9</span> ]<span class="op">,</span> [ <span class="fl">14</span><span class="op">,</span> <span class="fl">18</span> ]<span class="op">,</span> [ <span class="fl">21</span><span class="op">,</span> <span class="fl">23</span><span class="op">,</span> <span class="fl">27</span><span class="op">,</span> <span class="fl">28</span> ]<span class="op">,</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  [ <span class="fl">30</span><span class="op">,</span> <span class="fl">31</span><span class="op">,</span> <span class="fl">32</span><span class="op">,</span> <span class="fl">35</span><span class="op">,</span> <span class="fl">36</span><span class="op">,</span> <span class="fl">37</span> ]<span class="op">,</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  [ <span class="fl">39</span><span class="op">,</span> <span class="fl">40</span><span class="op">,</span> <span class="fl">41</span><span class="op">,</span> <span class="fl">42</span><span class="op">,</span> <span class="fl">44</span><span class="op">,</span> <span class="fl">45</span><span class="op">,</span> <span class="fl">46</span> ] ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>In order to obtain <span class="math inline">\(S_q = S \cap I_q\)</span>, the following functions computes it. The interval <span class="math inline">\(S_q\)</span> is called the <a href="Threshold interval">threshold interval</a> of <span class="math inline">\(S\)</span>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">ThresholdIntervalOfNumericalSemigroup</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">S</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="ex">local</span> <span class="va">c</span><span class="op">,</span> <span class="va">m</span><span class="op">;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">if</span> <span class="cn">not</span> <span class="va">IsNumericalSemigroup</span>(<span class="va">S</span>) <span class="cf">then</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="bu">Error</span>(<span class="st">"The argument must be a Numerical Semigroup"</span>)<span class="op">;</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">fi</span><span class="op">;</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">c</span> <span class="op">:=</span> <span class="bu">Conductor</span>(<span class="va">S</span>)<span class="op">;</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">m</span> <span class="op">:=</span> <span class="va">Multiplicity</span>(<span class="va">S</span>)<span class="op">;</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="ex">return</span> [<span class="va">c</span><span class="op">..</span>(<span class="va">c</span> <span class="op">+</span> <span class="va">m</span> <span class="op">-</span> <span class="fl">1</span>)]<span class="op">;</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="fu">end</span><span class="op">;</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="fu">function</span>( <span class="va">S</span> ) <span class="op">..</span>. <span class="fu">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">ThresholdIntervalOfNumericalSemigroup</span>(<span class="va">S</span>)<span class="op">;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>[ <span class="fl">48</span> <span class="op">..</span> <span class="fl">56</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 9, 21, 22, 23, 24, 25, 26, 28, 29 \rangle\)</span>, in GAP:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">9</span><span class="op">,</span> <span class="fl">21</span><span class="op">,</span> <span class="fl">22</span><span class="op">,</span> <span class="fl">23</span><span class="op">,</span> <span class="fl">24</span><span class="op">,</span> <span class="fl">25</span><span class="op">,</span> <span class="fl">26</span><span class="op">,</span> <span class="fl">28</span><span class="op">,</span> <span class="fl">29</span>)<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">9</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Given a numerical semigroup <span class="math inline">\(S\)</span>, the function <code>IsArf</code> returns true if <span class="math inline">\(S\)</span> is an Arf semigroup and false otherwise.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">IsArf</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cn">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Given a numerical semigroup <span class="math inline">\(S\)</span>, the function <code>IsArfIrreducible</code> returns true if <span class="math inline">\(S\)</span> is Arf-irreducible and false otherwise.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">IsArfIrreducible</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cn">false</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In order to obtain the decomposition into Arf-irreducible, we can apply the function <code>DecomposeIntoArfIrreducibles</code>.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">A</span> <span class="op">:=</span> <span class="va">DecomposeIntoArfIrreducibles</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>[ <span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">3</span> <span class="va">generators</span><span class="op">&gt;,</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">9</span> <span class="va">generators</span><span class="op">&gt;</span> ]</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="bu">List</span>(<span class="va">A</span><span class="op">,</span> <span class="va">l</span> <span class="op">-&gt;</span> <span class="va">MinimalGenerators</span>(<span class="va">l</span>))<span class="op">;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>[ [ <span class="fl">3</span><span class="op">,</span> <span class="fl">22</span><span class="op">,</span> <span class="fl">23</span> ]<span class="op">,</span> [ <span class="fl">9</span><span class="op">,</span> <span class="fl">16</span><span class="op">,</span> <span class="fl">20</span><span class="op">,</span> <span class="fl">21</span><span class="op">,</span> <span class="fl">22</span><span class="op">,</span> <span class="fl">23</span><span class="op">,</span> <span class="fl">24</span><span class="op">,</span> <span class="fl">26</span><span class="op">,</span> <span class="fl">28</span> ] ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The function <code>MinimalGenerators</code> returns the <a href="../Basic-concepts/Minimal-set-of-generators.html">minimal set of generators</a> of the given numerical semigroup. Therefore, the decomposition of <span class="math inline">\(S\)</span> into Arf-irreducible is</p>
+<p><span class="math display">\[
+S = \langle 3, 22, 23 \rangle \cap \langle 9, 16, 20, 21, 22, 23, 24, 26, 28  \rangle.
+\]</span></p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
