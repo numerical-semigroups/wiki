@@ -10,6 +10,8 @@ engine: markdown
 
 Let $T$ and $S$ be [numerical semigroups](Numerical-semigroup.qmd). It is said that $T$ is a dilatation of $S$ if there exists $a \in S$ such that $T = \{a + s ~ | ~ s \in S \setminus \{0\}\} \cup \{0\}$. Although the definition of dilatation and [pi-semigroup](Pi-semigroup.qmd) is apparently similar, the constructions are deeply different.
 
+It can be proven that if $S$ is a [Wilf semigroup](Wilf-semigroup.qmd), then every dilatation of $S$ is a Wilf semigroup.
+
 ## Examples
 
 $\circ$ Let $S = \{0, 15, 17, 19, 20, 22, 24, \rightarrow \}$. If $S$ is a dilatation of a numerical semigroup $T$ with $t \in T \setminus \{0\}$, then $t + m(T) = 15$, where $m(T)$ denotes the [multiplicity](../Basic-concepts/Multiplicity.qmd) of $T$, then $t \in \{1, \ldots, 14\}$. If we consider
@@ -34,7 +36,7 @@ concluding that $S$ is a dilatation of $\langle 5, 7, 9 \rangle$.
 
 The following example is made with the package NumericalSgps in GAP.
 
-$\diamond$ Let $S = \langle \rangle$, in GAP:
+$\diamond$ Let $S = \langle 14, 15, 27, 40, 46, 65 \rangle$, in GAP:
 
 ``` gap
 gap> S := NumericalSemigroup(14, 15, 27, 40, 46, 65);
@@ -57,8 +59,75 @@ gap> L := SmallElements(T);
 
 Therefore, $T = (\{29 + s ~ | ~ s \in S \setminus \{0\}\}) \cup \{0\} = \langle I \rangle = \{L, \rightarrow\}$.
 
+$\diamond$ Given a numerical semigroup $S$, the following function returns true if $S$ is a dilatation of a certain numerical semigroup and false otherwise.
 
+``` gap
+gap> IsDilatationOfNumericalSemigroup := function(S)
+>       local m, C, sm_elem, j, sm_elem_j;
+>       if not IsNumericalSemigroup(S) then
+>           Error("The argument must be a Numerical Semigroup");
+>       fi;
+>       if 1 in S then
+>           return false;
+>       fi;
+>       m := Multiplicity(S);
+>       C := Conductor(S);
+>       sm_elem := SmallElements(MaximalIdeal(S));
+>       for j in [1..(m-1)] do
+>       sm_elem_j := sm_elem - j;
+>       if RepresentsSmallElementsOfNumericalSemigroup(Union(sm_elem_j, [0])) then
+>           if j in sm_elem_j or j > C-j then
+>               return true;
+>           fi;
+>       fi;
+>       od;
+>       return false;
+> end;
+function( S ) ... end
+```
 
-$\diamond$
+Moreover, given a dilatation numerical semigroup $T$, the following function returns a list with two elements, a numerical semigroup $S$ and an element $s \in S \setminus \{0\}$ such that $T$ is a dilatation of $S$ with respect to $s$.
+
+``` gap
+gap> WhichDilatationOfNumericalSemigroup := function(S)
+>       local m, C, sm_elem, j, sm_elem_j, S_j;
+>       if not IsNumericalSemigroup(S) then
+>           Error("The argument must be a Numerical Semigroup");
+>       fi;
+>       if 1 in S then
+>           return false;
+>       fi;
+>       m := Multiplicity(S);
+>       C := Conductor(S);
+>       sm_elem := SmallElements(MaximalIdeal(S));
+>       for j in [1..(m-1)] do
+>       sm_elem_j := sm_elem - j;
+>       if RepresentsSmallElementsOfNumericalSemigroup(Union(sm_elem_j, [0])) then
+>           if j in sm_elem_j or j > C-j then
+>               S_j := NumericalSemigroupBySmallElements(Union(sm_elem_j, [0]));
+>               return [S_j, j];
+>           fi;
+>       fi;
+>       od;
+>       Error("The argument must be a dilatation Numerical Semigroup");
+> end;    
+function( S ) ... end
+```
+
+Let $S = \langle 13, 14, 25, 29 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(13, 14, 25, 29);
+<Numerical semigroup with 4 generators>
+```
+
+We have that $S$ is not a dilatation of any numerical semigroup.
+
+``` gap
+gap> IsDilatationOfNumericalSemigroup(S);
+false
+```
+
+Therefore, there exist non-trivial numerical semigroups that are not a dilatation.
 
 ## References

@@ -1,0 +1,132 @@
+---
+title: "Shifted numerical semigroups"
+format: html
+engine: markdown
+---
+
+<!-- Apery_sets_of_shifted_N_monoids -->
+
+<!-- Wilf survey -->
+
+## Definition
+
+Let $S$ be [numerical semigroup](Numerical-semigroup.qmd). It is said that $S$ is a shifted numerical semigroup if there exist $r_1, \ldots, r_k$ positive integers with $r_1 < r_2 < \ldots < r_k$ and $d = gcd(r_1, \ldots, r_k)$, and an integer $n > r_k$ such that $gcd(n, d) = 1$, satisfying that
+
+$$
+S = \langle n, n + r_1, \ldots, n + r_k \rangle.
+$$
+
+It can be proven that every shifted numerical semigroup is a numerical semigroup [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $\{n, n+r_1, \ldots, n + r_k\}$. Moreover, if $n > r_k^2$, then $S$ is a [Wilf semigroup](Wilf-semigroup.qmd). From the definition of shifted numerical semigroup it holds that $m(S) = n$, where $m(S)$ denotes the [multiplicity](../Basic-concepts/Multiplicity.qmd) of $S$.
+
+## Examples
+
+$\circ$ Let $S = \langle 5, 7, 9 \rangle$. The multiplicity of $S$ is $m(S) = 5$, then we can rewrite the minimal generators as $S = \langle 5, 5 + 2, 5 + 4 \rangle$. Considering $r_1 = 2, r_2 = 4$, then $n = 5$, $r_1 < r_2 < n$, $d = gcd(r_1, r_2) = 2$ and $gcd(n, d) = 1$. Therefore, $S$ is a shifted numerical semigroup.
+
+## Examples with GAP
+
+Nowadays, there are no functions in NumericalSgps related to shifted numerical semigroup. However, given a numerical semigroup $S$, the following function returns true if $S$ is a shifted numerical semigroup and false otherwise.
+
+``` gap
+gap> IsShiftedNumericalSemigroup := function(S)
+>       local m, e, list_r, d;
+>       if not IsNumericalSemigroup(S) then
+>           Error("The argument must be a Numerical Semigroup");
+>       fi;
+>       if 1 in S then
+>           return false;
+>       fi;
+>       m := Multiplicity(S);
+>       e := EmbeddingDimension(S);
+>       list_r := MinimalGenerators(S) - m;
+>       d := Gcd(list_r);
+>       if list_r[e] >= m then
+>           return false;
+>       fi;
+>       if not Gcd(m, d) = 1 then
+>           return false;
+>       fi;
+>       return true;
+> end;
+function( S ) ... end
+```
+
+$\diamond$ Let $S = \langle 13, 17, 19, 21 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(13, 17, 19, 21);
+<Numerical semigroup with 4 generators>
+```
+
+From the function defined above,
+
+``` gap
+gap> IsShiftedNumericalSemigroup(S);
+true
+```
+
+Indeed, $S = \langle 13, 13 + 4, 13 + 6, 13 + 8 \rangle$. On the other hand, if $T = \langle 13, 17, 19, 80 \rangle$,
+
+``` gap
+gap> T := NumericalSemigroup(13, 17, 19, 80);
+<Numerical semigroup with 4 generators>
+gap> IsShiftedNumericalSemigroup(T);
+false
+```
+
+$\diamond$ Given a positive integer $n$ and a list of positive integers $[r_1, \ldots, r_k]$, the following function returns the shifted numerical semigroup $\langle n, n + r_1, \ldots, n + r_k \rangle$, if the integers meet the conditions.
+
+``` gap
+gap> ShiftedNumericalSemigroup := function(n, list_r)
+>       local k, i, r_j, d;
+>       if not IsInt(n) then
+>           Error("First argument must be a positive integer");
+>       fi;
+>       if n <= 0 then
+>           Error("First argument must be a positive integer");
+>       fi;
+> 
+>       if not IsListOfIntegersNS(list_r) then
+>           Error("Second argument must be a list of different positive integers ordered from smallest to largest");
+>       fi;
+>       if list_r[1] <= 0 then
+>           Error("Second argument must be a list of different positive integers ordered from smallest to largest");
+>       fi;
+> 
+>       k := Length(list_r);
+>       for i in [1..k-1] do;
+>           r_j := list_r[i+1];
+>           if r_j <= 0 then
+>               Error("Second argument must be a list of different positive integers ordered from smallest to largest");
+>           fi;
+> 
+>           if list_r[i] >= r_j then
+>               Error("Second argument must be a list of different positive integers ordered from smallest to largest");
+>           fi;
+>       od;
+> 
+>       d := Gcd(list_r);
+>       if not Gcd(n, d) = 1 then
+>           Error("Great common divisor between first argument and great common divisor of the elements of the second argument is not 1");
+>       fi;
+>       if list_r[k] >= n then
+>           Error("Largest element in second argument is greater or equal to first argument");
+>       fi;
+>       return NumericalSemigroup(Union([n], n + list_r));
+> end;
+function( n, list_r ) ... end
+```
+
+Let $n = 15$ and $I = \{7, 9, 10, 11, 13\}$. Since they meet the conditions,
+
+``` gap
+gap> n := 15;
+15
+gap> I := [7,9,10,11,13];
+[ 7, 9, 10, 11, 13 ]
+gap> S := ShiftedNumericalSemigroup(n, I);
+<Numerical semigroup with 6 generators>
+```
+
+Then, it is obtained the shifted numerical semigroup $S = \langle 15, 15 + 7, 15 + 9, 15 + 10, 15 + 11, 15 + 13 \rangle = \langle 15, 22, 24, 25, 26, 28 \rangle$.
+
+## References

@@ -1,0 +1,86 @@
+---
+title: "Uniquely presented numerical semigroup"
+format: html
+engine: markdown
+---
+
+<!-- ??? -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is said that $S$ is uniquely presented if $S$ has a unique [minimal presentation](../Presentations-NS/Presentation-NS.qmd).
+
+It is well known that every numerical semigroup has a minimal presentation.
+
+## Examples
+
+$\circ$ Let $S = \langle 3, 5, 7 \rangle$. In order to obtain a minimal presentation, we have to consider the [Betti elements](../Presentations-NS/Betti-element.qmd) of $S$, which are $Betti(S) = \{10, 12, 14\}$. Its [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) are
+
+$$
+\mathbf{Z}(10) = \{(0,2,0), (1,0,1)\}, ~~ \mathbf{Z}(12) = \{(4,0,0), (0,1,1)\},
+$$
+
+$$
+\mathbf{Z}(14) = \{(3,1,0), (0,0,2)\},
+$$
+
+where it is deduced that $S$ is uniquely presented with minimal presentation
+
+$$
+\rho = \{[(0,2,0), (1,0,1)], [(4,0,0), (0,1,1)], [(3,1,0), (0,0,2)]\}.
+$$
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 12, 15, 17, 20 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(12, 15, 17, 20);
+<Numerical semigroup with 4 generators>
+```
+
+Given a numerical semigroup $S$, the functions `IsUniquelyPresented` and `IsUniquelyPresentedNumericalSemigroup` return true if $S$ is uniquely presented and false otherwise.
+
+``` gap
+gap> IsUniquelyPresented(S);
+false
+gap> IsUniquelyPresentedNumericalSemigroup(S);
+false
+```
+
+Given a numerical semigroup $S$, the function `BettiElements` returns the Betti elements of $S$.
+
+``` gap
+gap> BettiElements(S);
+[ 32, 51, 54, 57, 60, 65, 70 ]
+```
+
+On the other hand, the function `AllMinimalRelationsOfNumericalSemigroup` returns a list with the union of all minimal presentations of $S$.
+
+``` gap
+gap> relations := AllMinimalRelationsOfNumericalSemigroup(S);
+[ [ [ 0, 4, 0, 0 ], [ 0, 0, 0, 3 ] ],
+  [ [ 1, 0, 0, 1 ], [ 0, 1, 1, 0 ] ],
+  [ [ 1, 3, 0, 0 ], [ 0, 0, 1, 2 ] ],
+  [ [ 2, 2, 0, 0 ], [ 0, 0, 2, 1 ] ],
+  [ [ 3, 0, 2, 0 ], [ 0, 2, 0, 2 ] ],
+  [ [ 3, 1, 0, 0 ], [ 0, 0, 3, 0 ] ],
+  [ [ 4, 0, 1, 0 ], [ 0, 3, 0, 1 ] ],
+  [ [ 5, 0, 0, 0 ], [ 0, 0, 0, 3 ] ],
+  [ [ 5, 0, 0, 0 ], [ 0, 4, 0, 0 ] ] ]
+```
+
+It is clear that $S$ is uniquely presented if, and only if, the number of minimal relators is equal to the number of Betti elements, since each Betti element generates at least one minimal relation, and if $S$ is uniquely presented, it has to be exactly one minimal relation. In this case,
+
+``` gap
+gap> Length(BettiElements(S));
+7
+gap> Length(relations);
+9
+```
+
+and $S$ is not uniquely presented, as we obtained before.
+
+## References
