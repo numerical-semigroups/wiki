@@ -12,7 +12,7 @@ $$
 \mathbf{L}(s) = \{|x| ~ | ~ x \in \mathbf{Z}(s)\},
 $$
 
-where $|x|$ denotes the [length factorization](Length-factorization.qmd) of $x$.
+where $|x|$ denotes the [length factorization](Length-factorization.qmd) of $x$. A factorization $x \in \mathbf{Z}(s)$ is said to be maximal in $\mathbf{Z}(s)$ if $|x|$ is a maximum in $\mathbf{L}(s)$, that is, $|x|$ is equal to the [order of s in S](Order-of-an-element.qmd). The number of maximal factorizations is called the [maximal denumerant](Maximal-denumerant-of-an-element.qmd) of $s$ in $S$.
 
 ## Examples
 

@@ -1,5 +1,54 @@
 ---
-title: "."
+title: "Maximal denumerant of a numerical semigroup"
 format: html
-editor: visual
+engine: markdown
 ---
+
+<!-- Maximal-denumerant-NS -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is defined the maximal denumerant of $S$, denoted by $d_{max}(S)$, as
+
+$$
+d_{max}(S) = \max_{s \in S} \{d_{max}(s;S)\},
+$$
+
+where $d_{max}(s;S)$ denotes the [maximal denumerant](Maximal-denumerant-of-an-element.qmd) of $s$ in S\$.
+
+It can be proven that the maximal denumerant of a numerical semigroup $S$ is always finite.
+
+## Examples
+
+$\circ$
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 31, 49, 74, 118, 128, 150 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(31, 49, 74, 118, 128, 150);
+<Numerical semigroup with 6 generators>
+```
+
+Given a numerical semigroup $S$, the functions `MaximalDenumerant` and `MaximalDenumerantOfNumericalSemigroup` return the maximal denumerant of $S$.
+
+``` gap
+gap> MaximalDenumerant(S);
+3
+gap> MaximalDenumerantOfNumericalSemigroup(S);
+3
+```
+
+If in function `MaximalDenumerant` we give an element $n \in S$, then the function returns the maximal denumerant of $n$ in $S$.
+
+``` gap
+gap> 720 in S;
+true
+gap> MaximalDenumerant(S, 720);
+2
+```
+
+## References

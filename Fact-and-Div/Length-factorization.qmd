@@ -55,23 +55,23 @@ The list obtained is the [set of lengths](Set-of-lengths.qmd) of $s = 60$ in $S$
 
 $\diamond$ Let $S = \langle 39, 41, 57, 81, 110 \rangle$, in GAP:
 
-```gap
+``` gap
 gap> S := NumericalSemigroup(39, 41, 57, 81, 110);
 <Numerical semigroup with 5 generators>
 ```
 
-Given a numerical semigroup $S$ and a non-negative integer $n \in S$. The functions `MaximumDegree` and `MaximumDegreeOfElementWRTNumericalSemigroup` return the maximum length of the set of factorizations of $n$ in $S$.
+Given a numerical semigroup $S$ and a non-negative integer $n \in S$. The functions `MaximumDegree` and `MaximumDegreeOfElementWRTNumericalSemigroup` return the maximum length of the set of factorizations of $n$ in $S$, that is, the [order](Order-of-an-element.qmd) of $n$ in $S$.
 
-```gap
+``` gap
 gap> MaximumDegree(S, 200);
 4
 gap> MaximumDegreeOfElementWRTNumericalSemigroup(200, S);
 4
 ```
 
-Moreover, given a numerical semigroup $S$ and an element $n \in S$, the functions `MaximalDenumerant` and `MaximalDenumerantOfElementInNumericalSemigroup` return the number of factorizations of $n$ in $S$ with maximal length.
+Moreover, given a numerical semigroup $S$ and an element $n \in S$, the functions `MaximalDenumerant` and `MaximalDenumerantOfElementInNumericalSemigroup` return the number of factorizations of $n$ in $S$ with maximal length, that is, the [maximal denumerant](Maximal-denumerant-of-an-element.qmd) of $n$ in $S$.
 
-```gap
+``` gap
 gap> 335 in S;
 true
 gap> MaximalDenumerant(S, 335);
@@ -79,34 +79,6 @@ gap> MaximalDenumerant(S, 335);
 gap> MaximalDenumerant(335, S);
 2
 gap> MaximalDenumerantOfElementInNumericalSemigroup(335, S);
-2
-```
-
-If we only give a numerical semigroup, or we consider the function `MaximalDenumerantOfNumericalSemigroup`, both functions return the [maximal denumerant of the numerical semigroup](Maximal-denumerant-NS.qmd).
-
-```gap
-gap> MaximalDenumerant(S);
-7
-gap> MaximalDenumerantOfNumericalSemigroup(S);
-7
-```
-
-
-Considering a set of factorizations $Is$, the function `MaximalDenumerantOfSetOfFactorizations` returns the number of elements in $Is$ with maximal length.
-
-```gap
-gap> MaximalDenumerantOfSetOfFactorizations(Is);
-2
-```
-
-
-More general, given a list of lists $Is$, where each one is a list of non-negative integers of the same length, the function `MaximalDenumerantOfSetOfFactorizations` returns the number of elements of $Is$ with maximal length.
-
-```gap
-gap> I := [[3,1,0], [2,2,0], [4,0,2], [0,5,0], [2, 1, 3]];
-[ [ 3, 1, 0 ], [ 2, 2, 0 ], [ 4, 0, 2 ], [ 0, 5, 0 ],
-  [ 2, 1, 3 ] ]
-gap> MaximalDenumerantOfSetOfFactorizations(I);
 2
 ```
 

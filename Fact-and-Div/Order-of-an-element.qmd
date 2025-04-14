@@ -1,0 +1,90 @@
+---
+title: "Order of an element"
+format: html
+engine: markdown
+---
+
+<!-- Maximal-denumerant-NS -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $s \in S$ with [set of lengths](Set-of-lengths.qmd) $\mathbf{L}(s)$. It is defined the order of $s$ in $S$, denoted by $ord(s;S)$ or simply $ord(s)$, as
+
+$$
+ord(s) = \max \mathbf{L}(s).
+$$
+
+That means, the order of $s$ in $S$ is the maximum [length](Length-factorization.qmd) between its [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd).
+
+## Examples
+
+$\circ$ Let $S = \langle 10, 12, 15 \rangle$ and $s = 70$. If $(\alpha, \beta, \gamma) \in \mathbf{Z}(70)$, where $\mathbf{Z}(70)$ denotes the set of factorizations of $70$ in $S$,
+
+$$
+70 = 10 \cdot \alpha + 12 \cdot \beta + 15 \cdot \gamma,
+$$
+
+obtaining that $0 \le \alpha \le 7, 0 \le \beta \le 4$ and $0 \le \gamma \le 5$. From the previous argument, it is deduced that
+
+$$
+\mathbf{Z}(70) = \{(7, 0, 0), (1, 5, 0), (4, 0, 2), (1, 0, 4) \},
+$$
+
+and $\mathbf{L}(70) = \{5, 6, 7\}$, concluding that $ord(70) = 7$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 12, 27, 28, 70, 101 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(12, 27, 28, 70, 101);
+<Numerical semigroup with 5 generators>
+```
+
+Given a numerical semigroup $S$ and an element $n \in S$, the functions `MaximumDegree` and `MaximumDegreeOfElementWRTNumericalSemigroup` return the order of $n$ in $S$.
+
+``` gap
+gap> 415 in S;
+true
+gap> MaximumDegree(S, 415);
+32
+gap> MaximumDegreeOfElementWRTNumericalSemigroup(415, S);
+32
+```
+
+On the other hand, given a numerical semigroup $S$ and an element $n \in S$, the function `Factorizations` returns its set of factorizations in $S$ and `LengthsOfFactorizationsElementWRTNumericalSemigroup` returns the set of lengths in $S$.
+
+``` gap
+gap> Factorizations(415, S);
+[ [ 30, 1, 1, 0, 0 ], [ 21, 5, 1, 0, 0 ], [ 12, 9, 1, 0, 0 ],
+  [ 3, 13, 1, 0, 0 ], [ 23, 1, 4, 0, 0 ], [ 14, 5, 4, 0, 0 ],
+  [ 5, 9, 4, 0, 0 ], [ 16, 1, 7, 0, 0 ], [ 7, 5, 7, 0, 0 ],
+  [ 9, 1, 10, 0, 0 ], [ 0, 5, 10, 0, 0 ], [ 2, 1, 13, 0, 0 ],
+  [ 22, 3, 0, 1, 0 ], [ 13, 7, 0, 1, 0 ], [ 4, 11, 0, 1, 0 ],
+  [ 15, 3, 3, 1, 0 ], [ 6, 7, 3, 1, 0 ], [ 8, 3, 6, 1, 0 ],
+  [ 1, 3, 9, 1, 0 ], [ 16, 1, 2, 2, 0 ], [ 7, 5, 2, 2, 0 ],
+  [ 9, 1, 5, 2, 0 ], [ 0, 5, 5, 2, 0 ], [ 2, 1, 8, 2, 0 ],
+  [ 8, 3, 1, 3, 0 ], [ 1, 3, 4, 3, 0 ], [ 9, 1, 0, 4, 0 ],
+  [ 0, 5, 0, 4, 0 ], [ 2, 1, 3, 4, 0 ], [ 17, 2, 2, 0, 1 ],
+  [ 8, 6, 2, 0, 1 ], [ 10, 2, 5, 0, 1 ], [ 1, 6, 5, 0, 1 ],
+  [ 3, 2, 8, 0, 1 ], [ 18, 0, 1, 1, 1 ], [ 9, 4, 1, 1, 1 ],
+  [ 0, 8, 1, 1, 1 ], [ 11, 0, 4, 1, 1 ], [ 2, 4, 4, 1, 1 ],
+  [ 4, 0, 7, 1, 1 ], [ 10, 2, 0, 2, 1 ], [ 1, 6, 0, 2, 1 ],
+  [ 3, 2, 3, 2, 1 ], [ 4, 0, 2, 3, 1 ], [ 11, 3, 0, 0, 2 ],
+  [ 2, 7, 0, 0, 2 ], [ 4, 3, 3, 0, 2 ], [ 5, 1, 2, 1, 2 ],
+  [ 7, 0, 1, 0, 3 ], [ 0, 0, 4, 0, 3 ] ]
+gap> LengthsOfFactorizationsElementWRTNumericalSemigroup(415, S);
+[ 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,
+  26, 27, 28, 32 ]
+```
+
+With the function `MaximalDenumerant`, we can compute the number of factorizations in $\mathbf{Z}(415)$ with maximal length, that is, the [maximal denumerant](Maximal-denumerant-of-an-element.qmd) of $415$ in $S$.
+
+``` gap
+gap> MaximalDenumerant(415,S);
+1
+```
+
+## References

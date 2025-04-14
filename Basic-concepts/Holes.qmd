@@ -1,0 +1,48 @@
+---
+title: "Holes"
+format: html
+engine: markdown
+---
+
+<!--  -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) with set of [gaps](Gaps.qmd) $G(S)$ and [Frobenius number](Frobenius-number.qmd) $F(S)$. It is said that $g \in G(S)$ is a hole of $S$ if $F(S) - g \in G(S)$. The set of holes of $S$, denoted by $H(S)$, is
+
+$$
+H(S) = \{x \in G(S) ~ | ~ F(S) - x \in G(S)\} \subseteq G(S).
+$$
+
+Since $F(S) \in G(S)$ and $F(S) - F(S) = 0 \in S$, it holds that $H(S) \subsetneq G(S)$ for any numerical semigroup. It can be proven that $H(S) = \emptyset$ if, and only if, $S$ is [symmetric](../Families-NS/Symmetric.qmd).
+
+## Examples
+
+$\circ$ Let $S = \langle 4, 6, 11 \rangle = \{0, 4, 6, 8, 10, 11, 12, 14, \rightarrow\}$. The Frobenius number of $S$ is $F(S) = 13$ and the set of gaps is $G(S) = \{1, 2, 3, 5, 7, 9, 13\}$. if we compute $F(S) - g$ for all $g \in G(S)$, we obtain that $F(S) - G(S) = \{12, 11, 10, 8, 6, 4, 0\}$. Therefore, $H(S) = \emptyset$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 30, 82, 99, 109, 113 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(30, 82, 99, 109, 113);
+<Numerical semigroup with 5 generators>
+```
+
+Given a numerical semigroup $S$, the functions `Holes` and `HolesOfNumericalSemigroup` return the set of holes of $S$.
+
+``` gap
+gap> Holes(S);
+[ 17, 44, 47, 68, 74, 77, 78, 86, 98, 104, 106, 107, 108, 116, 123,
+  126, 128, 130, 134, 136, 137, 138, 146, 153, 156, 157, 158, 160,
+  166, 167, 168, 176, 177, 183, 185, 186, 187, 188, 190, 196, 197,
+  205, 206, 207, 213, 215, 216, 217, 220, 227, 235, 236, 237, 239,
+  243, 245, 247, 250, 257, 265, 266, 267, 269, 275, 287, 295, 296,
+  299, 305, 326, 329, 356 ]
+gap> Holes(S) = HolesOfNumericalSemigroup(S);
+true
+```
+
+## References

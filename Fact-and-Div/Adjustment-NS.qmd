@@ -1,0 +1,81 @@
+---
+title: "Adjustment of a numerical semigroup"
+format: html
+engine: markdown
+---
+
+<!-- Maximal-denumerant-NS -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is defined the adjustment of $S$, denoted by $adj(S)$, as
+
+$$
+adj(S) = \{adj(s;S) ~ | ~ s \in S \},
+$$
+
+where $adj(s;S)$ denotes the [adjustment of the element](Adjustment-of-an-element.qmd) $s$ in $S$. It can be proven that the adjustment of a numerical semigroup is always finite.
+
+More generally, if $U \subseteq S$, the adjustment of $U$ in $S$ is
+
+$$
+adj(U) = \{adj(u;S) ~ | ~ u \in U \}.
+$$
+
+Since $|adj(S)| < + \infty$ and $adj(U) \subseteq adj(S)$, it is deduced that $|adj(U)| < + \infty$.
+
+## Examples
+
+$\circ$
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 32, 52, 56, 76, 82, 113 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(32, 52, 56, 76, 82, 113);
+<Numerical semigroup with 6 generators>
+```
+
+Given a numerical semigroup $S$, the functions `Adjustment` and `AdjustmentOfNumericalSemigroup` return the adjustment of $S$.
+
+``` gap
+gap> Adjustment(S);
+[ 0, 20, 24, 40, 44, 48, 50, 60, 68, 70, 74, 81, 90, 94, 98, 101,
+  105, 110, 118, 121, 125, 129, 131, 141, 149, 151, 155, 171, 175,
+  179, 191, 199 ]
+gap> AdjustmentOfNumericalSemigroup(S) = Adjustment(S);
+true
+```
+
+Given a numerical semigroup $S$ and an element $n \in S$, the following function returns the adjustment of $n$ in $S$.
+
+``` gap
+gap> AdjustmentOfElementInNumericalSemigroup := function(S,n)
+>       local n_1, ord_n;
+>       if not IsNumericalSemigroup(S) then
+>           Error("The first argument must be a Numerical Semigroup");
+>       fi;
+>       if not IsInt(n) then
+>           Error("Second argument must be an integer belonging to the first argument");
+>       fi;
+>       if not n in S then
+>           Error("Second argument must be an integer belonging to the first argument");
+>       fi;
+>       n_1 := MinimalGenerators(S)[1];
+>       ord_n := MaximumDegree(S,n);
+>       return n - ord_n*n_1;
+> end;
+function( S, n ) ... end
+```
+
+``` gap
+gap> 300 in S;
+true
+gap> AdjustmentOfElementInNumericalSemigroup(S, 300);
+44
+```
+
+## References

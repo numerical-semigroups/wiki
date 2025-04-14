@@ -1,0 +1,47 @@
+---
+title: "Weierstrass weight"
+format: html
+engine: markdown
+---
+
+<!--  -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and let $G(S) = \{l_1, \ldots, l_g\}$ be the set of [gaps](Gaps.qmd) of $S$ with $l_1 < l_2 < \ldots < l_g$. It is defined the Weierstrass weight of $S$, denoted by $w(S)$, as
+
+$$
+w(S) = \sum_{i = 1}^g (l_i - i).
+$$ 
+
+From the definition, since the least possible gap is $1$, we have that $i \le l_i$ for all $i \in \{1, \ldots, g\}$, from which it follows that the Weierstrass weight is always non-negative and $w(S) = 0$ if, and only if, $S$ is a [half-line](../Families-NS/NS-half-line.qmd).
+
+## Examples
+
+$\circ$ Let $S = \langle 5, 9, 12 \rangle = \{0, 5, 9, 10, 12, 14, 15, 17, \rightarrow\}$. The set of gaps of $S$ is
+
+$$
+G(S) = \{1, 2, 3, 4, 6, 7, 8, 11, 13, 16 \}.
+$$ 
+
+Then, the Weierstrass weight of $S$ is $w(S) = 16$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 23, 82, 93, 94, 143 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(23, 82, 93, 94, 143);
+<Numerical semigroup with 5 generators>
+```
+
+Given a numerical semigroup $S$, the function `Weight` returns the Weierstrass weight of $S$.
+
+``` gap
+gap> Weight(S);
+5642
+```
+
+## References

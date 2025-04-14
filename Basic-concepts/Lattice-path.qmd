@@ -1,0 +1,32 @@
+---
+title: "Lattice path associated to a numerical semigroup"
+format: html
+engine: markdown
+---
+
+
+<!-- Geometrical-illustration-NS -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd), let $p,q$ be two coprime in $S$ and $H_{p,q} = \langle p, q \rangle$. It holds that $H_{p,q}$ is a numerical semigroup and $H_{p,q} \subseteq S$, then every [gap](Gap.qmd) of $S$ is a gap of $H_{p,q}$. If $c$ is the [conductor](Conductor.qmd) of $H_{p,q}$, every gap $g$ of $H_{p,q}$ can be written uniquely as $g = c - 1 - (ap  + bq)$, for some non-negative integers $a,b$. It is said that $(a,b)$ are the coordinates associated to $g$. Then, it is defined the lattice path of $S$ with respect to $H_{p,q}$ as the path in $\mathbb{N}^2$ such that the coordinates of the gaps of $S$ correspond exactly with the points in $\mathbb{N}^2$ that are between the path and the line $px + qy = c - 1$.
+
+From the definition, there is no gap in the line $px + qy = c-1$.
+
+## Examples
+
+$\circ$ 
+
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle \rangle, in GAP:
+
+```gap
+
+```
+
+## References
+

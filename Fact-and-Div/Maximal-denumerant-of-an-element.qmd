@@ -1,0 +1,126 @@
+---
+title: "Maximal denumerant of an element"
+format: html
+engine: markdown
+---
+
+<!-- Maximal-denumerant-NS -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), $s \in S$, let $\mathbf{Z}(s)$ be the [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) and let $\mathbf{L}(s)$ be the [set of lengths](../Fact-and-div/Set-of-lengths.qmd) of $s$ in $S$. It is defined the maximal denumerant of $s$ in $S$, denoted by $d_{max}(s;S)$, as the number of factorizations $x \in \mathbf{Z}(s)$ such that the [length](../Fact-and-div/Length-factorization.qmd) of $x$ is maximum in $\mathbf{L}(s)$, that is,
+
+$$
+d_{max}(s;S) = |\{x \in \mathbf{Z}(s) ~ | ~ |x| = \max \mathbf{L}(s) \}|,
+$$ 
+
+where $|x|$ denotes the length of $x$.
+
+## Examples
+
+$\circ$ Let $S = \langle 6, 7, 9 \rangle$ and $s = 70$. Since, $s = 70 = 7 \cdot 10$, we have that $s \in S$. The set of factorizations of $s$ in $S$ is
+
+$$
+\mathbf{Z}(s) = \{(7, 4, 0), (0, 10, 0), (9, 1, 1), (2, 7, 1), (4, 4, 2),
+$$
+
+$$
+(6, 1, 3), (1, 4, 4), (3, 1, 5), (0, 1, 7) \},
+$$ 
+
+and $\mathbf{L}(s) = \{8,9,10,11\}$. Therefore, the maximal denumerant of $s = 70$ in $S$ are the number of factorizations of $70$ with length $11$. It is deduced from the set of factorizations that
+
+$$
+d_{max}(70;S) = |\{(7,4,0), (9,1,1)\}| = 2.
+$$
+
+## Examples with GAP
+
+The following examples are made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 19, 32, 40, 52, 73, 75, 125 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(19, 32, 40, 52, 73, 75, 125);
+<Numerical semigroup with 7 generators>
+```
+
+Given a numerical semigroup $S$ and an element $n \in S$, the functions `MaximalDenumerant` and `MaximalDenumerantOfElementInNumericalSemigroup` return the maximal denumerant of $n$ in $S$.
+
+``` gap
+gap> 126 in S;
+true
+gap> MaximalDenumerant(S, 126);
+1
+gap> MaximalDenumerant(126, S);
+1
+gap> MaximalDenumerantOfElementInNumericalSemigroup(126, S);
+1
+```
+
+Given a numerical semigroup $S$ and an element $n \in S$, the following function returns the factorizations $x \in \mathbf{Z}(s)$ such that $|x|$ is maximum in $\mathbf{L}(s)$.
+
+```gap
+gap> WhichMaximalDenumerantOfElementInNumericalSemigroup := function(S,n)
+>       local list_fact, length_max, list_max_den, fact, length_fact;
+>       if not IsNumericalSemigroup(S) then
+>           Error("First argument must be a Numerical Semigroup");
+>       fi;
+>       if not IsInt(n) then
+>           Error("Second argument must be an integer belonging to the first argument");
+>       fi;
+>       if not n in S then
+>           Error("Second argument must be an integer belonging to the first argument");
+>       fi;
+> 
+>       list_fact := Factorizations(S,n);
+>       length_max := Sum(Factorizations(S,n)[1]);
+>       list_max_den := [];
+>       for fact in list_fact do
+>           length_fact := Sum(fact);
+>           if Sum(fact) = length_max then
+>               Add(list_max_den, fact);
+>           fi;
+> 
+>           if length_fact > length_max then
+>               list_max_den := [fact];
+>               length_max := length_fact;
+>           fi;
+>       od;
+>       return list_max_den;
+> end;
+function( S, n ) ... end
+```
+
+```gap
+gap> 179 in S;
+true
+gap> Factorizations(S, 179);
+[ [ 1, 5, 0, 0, 0, 0 ], [ 1, 0, 4, 0, 0, 0 ], [ 5, 1, 0, 1, 0, 0 ],
+  [ 0, 2, 1, 0, 0, 1 ], [ 0, 0, 0, 2, 0, 1 ] ]
+gap> WhichMaximalDenumerantOfElementInNumericalSemigroup(S, 179);
+[ [ 5, 1, 0, 1, 0, 0 ] ]
+```
+
+If we compute the [maximal denumerant of S](Maximal-denumerant-NS.qmd), that is, $\max_{s \in S} \{d_{max}(s;S)\}$ with the function `MaximalDenumerant`,
+
+``` gap
+gap> MaximalDenumerant(S);
+2
+```
+
+Therefore, each element has at most two factorizations with maximal length. 
+
+
+
+$\diamond$ Given a list of lists of non-negative integers with the same length $Is$ (in particular a set of factorizations), the function `MaximalDenumerantOfSetOfFactorizations` returns the maximal denumerant of $Is$.
+
+``` gap
+gap> I := [[3,1,0], [2,2,0], [4,0,2], [0,5,0], [2, 1, 3]];
+[ [ 3, 1, 0 ], [ 2, 2, 0 ], [ 4, 0, 2 ], [ 0, 5, 0 ], [ 2, 1, 3 ] ]
+gap> MaximalDenumerantOfSetOfFactorizations(I);
+2
+```
+
+
+## References
