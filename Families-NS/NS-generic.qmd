@@ -1,0 +1,84 @@
+---
+title: "Generic numerical semigroup"
+format: html
+engine: markdown
+---
+
+<!-- Semigroup-theoretical-charact-arithm-invariants-appl-Num-monoids-Krull-monoids -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is said that $S$ is a generic numerical semigroup if in every [minimal relation](../Presentations-NS/Presentation-NS.qmd) all [minimal generators](../Basic-concepts/Minimal-set-of-generators.qmd) occur.
+
+It can be proven that every generic numerical semigroup is [uniquely presented](NS-uniquely-presented.qmd).
+
+## Examples
+
+$\circ$ Let $S = \langle 3, 7, 11 \rangle$. In order to compute all minimal relators, we have to consider the [Betti elements](../Presentations-NS/Betti-elements.qmd) of $S$, which are $Betti(S) = \{14, 18, 22\}$. Their [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) are
+
+$$
+\mathbf{Z}(14) = \{(0,2,0), (1,0,1)\}, ~~ \mathbf{Z}(18) = \{(6,0,0), (0,1,1)\}, ~~ \mathbf{Z}(22) = \{(5,1,0), (0,0,2)\},
+$$
+
+from which it follows that the set of minimal relations of $S$ is
+
+$$
+\rho = \{[ (1, 0, 1), (0, 2, 0) ], [ (5, 1, 0), (0, 0, 2) ],
+  [ (6, 0, 0), (0, 1, 1) ] \},
+$$
+
+and every minimal generator appears in each minimal relation. Therefore, $S$ is generic.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 31, 49, 74, 118, 128, 150 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(31, 49, 74, 118, 128, 150);
+<Numerical semigroup with 6 generators>
+```
+
+Given a numerical semigroup $S$, the functions `IsGeneric` and `IsGenericNumericalSemigroup` return true if $S$ is a generic numerical semigroup and false otherwise.
+
+``` gap
+gap> IsGeneric(S);
+false
+```
+
+The function `AllMinimalRelationsOfNumericalSemigroup` returns a list with all minimal relations of a given numerical semigroup.
+
+``` gap
+gap> AllMinimalRelationsOfNumericalSemigroup(S);
+[ [ [ 0, 0, 2, 2, 0, 0 ], [ 0, 0, 0, 0, 3, 0 ] ],
+  [ [ 0, 2, 0, 0, 2, 0 ], [ 0, 0, 0, 3, 0, 0 ] ],
+  [ [ 0, 2, 1, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 2 ] ],
+  [ [ 0, 2, 2, 0, 0, 0 ], [ 0, 0, 0, 1, 1, 0 ] ],
+  [ [ 1, 0, 1, 1, 0, 1 ], [ 0, 5, 0, 0, 1, 0 ] ],
+  [ [ 1, 5, 0, 0, 0, 0 ], [ 0, 0, 2, 0, 1, 0 ] ],
+  [ [ 2, 0, 0, 1, 0, 1 ], [ 0, 0, 1, 0, 2, 0 ] ],
+  [ [ 2, 0, 0, 2, 0, 0 ], [ 0, 0, 2, 0, 0, 1 ] ],
+  [ [ 2, 0, 1, 0, 2, 0 ], [ 0, 8, 0, 0, 0, 0 ] ],
+  [ [ 2, 2, 0, 0, 0, 1 ], [ 0, 0, 1, 2, 0, 0 ] ],
+  [ [ 2, 2, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 1, 1 ] ],
+  [ [ 2, 2, 1, 0, 0, 1 ], [ 0, 0, 0, 0, 3, 0 ] ],
+  [ [ 2, 4, 0, 0, 1, 0 ], [ 0, 0, 0, 2, 0, 1 ] ],
+  [ [ 3, 0, 0, 0, 1, 0 ], [ 0, 3, 1, 0, 0, 0 ] ],
+  [ [ 3, 0, 1, 0, 0, 0 ], [ 0, 1, 0, 1, 0, 0 ] ],
+  [ [ 4, 0, 0, 1, 0, 1 ], [ 0, 8, 0, 0, 0, 0 ] ],
+  [ [ 4, 2, 0, 0, 0, 0 ], [ 0, 0, 3, 0, 0, 0 ] ],
+  [ [ 5, 0, 0, 0, 0, 1 ], [ 0, 1, 0, 0, 2, 0 ] ],
+  [ [ 5, 0, 0, 1, 0, 0 ], [ 0, 1, 1, 0, 0, 1 ] ],
+  [ [ 5, 1, 0, 0, 0, 1 ], [ 0, 0, 0, 3, 0, 0 ] ],
+  [ [ 5, 1, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 1 ] ],
+  [ [ 7, 1, 0, 0, 0, 0 ], [ 0, 0, 2, 1, 0, 0 ] ],
+  [ [ 7, 1, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 3, 0 ] ],
+  [ [ 8, 0, 0, 0, 0, 0 ], [ 0, 2, 0, 0, 0, 1 ] ],
+  [ [ 10, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 2, 0, 0 ] ],
+  [ [ 10, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 3, 0 ] ] ]
+```
+
+For example, $[ (0, 0, 2, 2, 0, 0), (0, 0, 0, 0, 3, 0) ]$ is a minimal relation but not all minimal generators occur.
+
+## References

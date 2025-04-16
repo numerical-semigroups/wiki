@@ -8,7 +8,7 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be an [Arf](../Families-NS/Arf-semigroup.qmd) [numerical semigroup](Numerical-semigroup.qmd). It is said that $S$ is Arf-irreducible if $S$ is irreducible in the [Frobenius variety](../Varieties-NS/Frobenius-variety.qmd) of Arf numerical semigroups.
+Let $S$ be an [Arf](Arf-semigroup.qmd) [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is said that $S$ is Arf-irreducible if $S$ is irreducible in the [Frobenius variety](../Varieties-NS/Frobenius-variety.qmd) of Arf numerical semigroups.
 
 ## Examples
 
@@ -16,7 +16,9 @@ $\circ$ Let us consider the Arf semigroup $S = \langle 2, 9 \rangle$. The Arf ov
 
 $$
 S_1 = \langle 2, 3 \rangle, ~~ S_2 = \langle 2, 5 \rangle, ~~ S_3 = \langle 2, 9 \rangle.
-$$ Since $S_3 \subseteq S_2 \subseteq S_1$, all the intersections generates $S_1, S_2$ or $S_3$. Therefore, $S$ is Arf-irreducible.
+$$ 
+
+Since $S_3 \subseteq S_2 \subseteq S_1$, all the intersections generates $S_1, S_2$ or $S_3$. Therefore, $S$ is Arf-irreducible.
 
 ## Examples with GAP
 
@@ -53,7 +55,7 @@ gap> List(A, l -> MinimalGenerators(l));
 [ [ 3, 22, 23 ], [ 9, 16, 20, 21, 22, 23, 24, 26, 28 ] ]
 ```
 
-The function `MinimalGenerators` returns the [minimal set of generators](Minimal-set-of-generators.qmd) of the given numerical semigroup. Therefore, the decomposition of $S$ into Arf-irreducible is
+The function `MinimalGenerators` returns the [minimal set of generators](../Basic-concepts/Minimal-set-of-generators.qmd) of the given numerical semigroup. Therefore, the decomposition of $S$ into Arf-irreducible is
 
 $$
 S = \langle 3, 22, 23 \rangle \cap \langle 9, 16, 20, 21, 22, 23, 24, 26, 28  \rangle.

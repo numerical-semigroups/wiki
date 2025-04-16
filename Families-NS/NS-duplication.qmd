@@ -1,0 +1,90 @@
+---
+title: "Duplication of a numerical semigroup"
+format: html
+engine: markdown
+---
+
+<!--  -->
+
+## Definition
+
+Let $T$ and $S$ be [numerical semigroups](../Basic-concepts/Numerical-semigroup.qmd), $E$ a [proper ideal](../Ideals-NS/Proper-ideal.qmd) of $S$ and $b$ a positive odd integer. It is said that $T$ is a duplication of $S$ by $E$ and $b$ if $T = 2S \cup (2E + b)$, where
+
+$$
+2S = \{s + t ~ | ~ s \in S, t \in S\}, ~~ 2E = \{e + e' ~ | ~ e,e' \in E\}, ~~ 2E + b = \{e + b ~ | ~ e \in 2E\}.
+$$
+
+The set $2S \cup (2E + b)$ is not always a numerical semigroup, but it can be proven that $2E + b \subseteq S$ is a sufficient condition.
+
+## Examples
+
+$\circ$ Let $S = \langle 3, 8, 10 \rangle, ~ T = \langle 6, 13, 16, 20 \rangle$, $I = \{6\} + S$ and $b = 1$, let us prove that $T$ is a duplication of $S$ by $I$ and $b$. Computing the first elements of $T$, $2S$ and $2I + b$,
+
+$$
+T = \{0, 6, 12, 13, 16, 18, 19, 20, 22, 24, 25, 26, 28, \rightarrow\},
+$$
+
+$$
+2S \supseteq \{0, 3, 6, 8, 9, 10, 11, 12, 13, 14\} + \{0, 3, 6, 8, 9, 10, 11, 12, 13, 14\}
+$$
+
+$$
+= \{0, 3, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28 \}
+$$
+
+$$
+2I + b = \{13, 16, 19, 21, \rightarrow \}
+$$
+
+## Examples with GAP
+
+The following examples are made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 23, 82, 93, 94, 143 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(23, 82, 93, 94, 143);
+<Numerical semigroup with 5 generators>
+```
+
+Given a numerical semigroup $S$, a proper ideal $I$, and an odd integer $b$, the function `NumericalDuplication` returns the duplication of $S$ by $I$ and $b$ if the condition $2I + b \subseteq S$ is satisfied.
+
+``` gap
+gap> I := [92, 138] + S;
+<Ideal of numerical semigroup>
+gap> IsIntegral(I);
+true
+gap> b := 13;
+13
+gap> D := NumericalDuplication(S, I, b);
+<Numerical semigroup with 6 generators>
+```
+
+$\diamond$ Let $T = \langle 8, 12, 14, 27 \rangle$, in GAP:
+
+``` gap
+gap> T := NumericalSemigroup(8, 12, 14, 27);
+<Numerical semigroup with 4 generators>
+```
+
+Given a numerical semigroup $T$, the function `AsNumericalDuplication` returns a list $[S, E, b]$ if $T$ is a duplication of $S$ by $E$ and $b$ if this is possible, and `fail` otherwise
+
+``` gap
+gap> L := AsNumericalDuplication(T);
+[ <Numerical semigroup with 3 generators>, <Ideal of numerical semigroup>,
+  7 ]
+gap> S := L[1];
+<Numerical semigroup with 3 generators>
+gap> MinimalGenerators(S);
+[ 4, 6, 7 ]
+gap> I := L[2];
+<Ideal of numerical semigroup>
+gap> MinimalGenerators(I);
+[ 10 ]
+gap> b := L[3];
+7
+```
+
+Then, $T = 2S \cup (2I + b)$ where $S = \langle 4, 6, 7 \rangle, I = \{10\} + S$ and $b = 7$.
+
+## References
