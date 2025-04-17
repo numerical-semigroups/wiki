@@ -1202,14 +1202,28 @@ window.Quarto = {
 </header>
 
 
-<!--  -->
+<!-- Maximal-denumerant-NS -->
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> and let <span class="math inline">\(m(S)\)</span> be the <a href="../Basic-concepts/Multiplicity.html">multiplicity</a> of <span class="math inline">\(S\)</span>. It is said that <span class="math inline">\(S\)</span> is additive if <span class="math inline">\(ord(m+x) = ord(x) + 1\)</span> for all <span class="math inline">\(x \in S \setminus \{0\}\)</span>, where <span class="math inline">\(ord(x)\)</span> denotes the <a href="../Fact-and-div/Order-of-an-element.qmd">order</a> of <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span>.</p>
+<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> and let <span class="math inline">\(m\)</span> be the <a href="../Basic-concepts/Multiplicity.html">multiplicity</a> of <span class="math inline">\(S\)</span>. It is said that <span class="math inline">\(S\)</span> is additive if <span class="math inline">\(ord(m+x) = ord(x) + 1\)</span> for all <span class="math inline">\(x \in S \setminus \{0\}\)</span>, where <span class="math inline">\(ord(x)\)</span> denotes the <a href="../Fact-and-div/Order-of-an-element.qmd">order</a> of <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span>.</p>
+<p>It can be proven that <span class="math inline">\(S\)</span> is an additive numerical semigroup if, and only if, <span class="math inline">\(adj(S) = Ap(B, m)\)</span>, where <span class="math inline">\(adj(S)\)</span> is the <a href="../Fact-and-div/Adjustment-NS.qmd">adjustment</a> of <span class="math inline">\(S\)</span>, <span class="math inline">\(B\)</span> is the <a href="../Ideals-NS/Blowup.html">blowup</a> of <span class="math inline">\(S\)</span> and <span class="math inline">\(Ap(B, m)\)</span> is the <a href="../Basic-concepts/Aper-set.qmd">Apéry set</a> of <span class="math inline">\(B\)</span> in <span class="math inline">\(m\)</span>.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle \rangle\)</span>.</p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 5, 9, 12, 13 \rangle\)</span>. In order to compute the blowup of <span class="math inline">\(S\)</span>, we have to compute the <a href="../Ideals-NS/Reduction-number.html">reduction number</a> <span class="math inline">\(r(M)\)</span> of <span class="math inline">\(M = S \setminus \{0\}\)</span>, that is, the first positive integer <span class="math inline">\(h\)</span> such that <span class="math inline">\((h+1)M = m(M) + hM\)</span>, where <span class="math inline">\(m(M)\)</span> is the <a href="../Ideals-NS/Multiplicity-ideal.html">multiplicity ideal</a> of <span class="math inline">\(M\)</span> and</p>
+<p><span class="math display">\[
+hM = \{e_1 + e_2 + \cdots + e_h ~ | ~ e_1, \ldots, e_h \in M\}.
+\]</span></p>
+<p>Since <span class="math inline">\(m(M) = m(S) = 5\)</span>, we have</p>
+<p><span class="math display">\[
+2M = M + M \{10, 14, 15, 17, \rightarrow \} \ne \{10, 14, 15, 17, 18, 19, 20, 2, \rightarrow \} = 5 + M,
+\]</span> and</p>
+<p><span class="math display">\[
+3M = \{15, 19, 20, 22, \rightarrow \} = 5 + 2M,
+\]</span> obtaining that <span class="math inline">\(r(M) = 2\)</span>. The blowup of <span class="math inline">\(S\)</span> is <span class="math inline">\(B = 2M - 2M = \{0, 4, 5, 7, \rightarrow \}\)</span>, where</p>
+<p><span class="math display">\[
+2M - 2M = \{z \in \mathbb{Z} ~ | ~ z + 2M \subseteq 2M \}.
+\]</span> Since the adjustment of <span class="math inline">\(S\)</span> is <span class="math inline">\(Adj(S) = \{0, 4, 7, 8, 11\}\)</span> and the Apéry set of <span class="math inline">\(B\)</span> in <span class="math inline">\(m = 5\)</span> is <span class="math inline">\(Ap(B, 5) = \{0, 4, 7, 8, 11\}\)</span>, we conclude that <span class="math inline">\(S\)</span> is additive.</p>
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
