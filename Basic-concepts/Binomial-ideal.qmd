@@ -1,0 +1,62 @@
+---
+title: "Binomial ideal of a numerical semigroup"
+format: html
+engine: markdown
+---
+
+<!-- Gen-and-relations-Ab-semigroups-and-semigroups-rings -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) [minimally generated](Minimal-set-of-generators.qmd) by $P(S) = \{n_1, \ldots, n_e\}$ and $\mathbb{K}$ a field. Let us consider $\mathbb{K}[x_1, \ldots, x_e]$ the polynomial ring with indeterminate $x_1, \ldots, x_e$ and $\mathbb{K}[t]$ the polynomial ring with indeterminate $t$. Let us also consider the ring homomorphism
+
+$$
+\varphi: \mathbb{K}[x_1, \ldots, x_e] \to \mathbb{K}[t], ~~ \varphi(x_i) = t^{n_i} ~~ \text{for all } i \in \{1, \ldots, e\},
+$$
+
+and extended linearly. It is defined the binomial ideal of $S$ as the kernel of $\varphi$, $\ker(\varphi)$. The image of the homomorphism is the [semigroup ring](Semigroup-ring.qmd) associated to $S$. Since $\mathbb{K}$ is a filed, it is well known that $\mathbb{K}[x_1, \ldots, x_e]$ is a noetherian ring, from which it is deduced that $\ker(\varphi)$ is finitely generated.
+
+Moreover, it can be proven that $\rho = \{(\alpha_1, \beta_1), \ldots, (\alpha_n, \beta_n)\}$ with $\alpha_1, \ldots, \alpha_n, \beta_1, \ldots, \beta_n \in \mathbb{N}^e$ is a [minimal presentation](Minimal-set-of-generators.qmd) of $S$ if, and only if,
+
+$$
+\ker(\varphi) = \langle X^{\alpha_1} - X^{\beta_1}, \ldots, X^{\alpha_n} - X^{\beta_n} \rangle,
+$$
+
+where $\alpha_i = (\alpha_{i,1}, \ldots, \alpha_{i,e})$, $X^{\alpha_i} = X_1^{\alpha_{i,1}} \cdots X_e^{\alpha_{i,e}}$ and $\beta_i = (\beta_{i,1}, \ldots, \beta_{i,e})$ and $X^{\beta_i} = X_1^{\beta_{i,1}} \cdots X_e^{\beta_{i,e}}$.
+
+## Examples
+
+$\circ$ Let $S = \langle 15, 24, 25, 36 \rangle$. Since $S$ is a [gluing](../Families-NS/NS-gluing.qmd) of $S_1 = \langle 3, 5 \rangle$ and $S_2 = \langle 2, 3 \rangle$ with $\lambda = 12$ and $\mu = 5$ and $1 \cdot 24 + 1 \cdot 36 = 4 \cdot 15$, it is deduced that a minimal presentation of $S$ is
+
+$$
+\rho = \{[ (0, 0, 0, 2), (0, 3, 0, 0) ], [ (0, 0, 3, 0), (1, 1, 0, 1) ], [ (0, 1, 0, 1), (4, 0, 0, 0 ) ] \}.
+$$
+
+Then, the binomial ideal of $S$ in $\mathbb{Q}$ is
+
+$$
+\ker(\varphi) = \langle X_4^{2} - X_2^3, X_3^3 - X_1X_2X_4, X_2X_4 - X_1^4 \rangle.
+$$
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 12, 21, 30, 39, 56, 64 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(12, 21, 30, 39, 56, 64);
+<Numerical semigroup with 6 generators>
+```
+
+Given a numerical semigroup $S$ and a field $\mathbb{K}$, the function `BinomialIdealOfNumericalSemigroup` returns the binomial ideal of $S$ in $\mathbb{K}$. If no field is given, then it is considered the field of rational numbers. The function `GeneratorsOfTwoSidedIdeal` returns a list with the generators of the ideal.
+
+``` gap
+gap> I := BinomialIdealOfNumericalSemigroup(S);
+<two-sided ideal in Rationals[x_1,x_2,x_3,x_4,x_5,x_6], (9 generators)>
+gap> GeneratorsOfTwoSidedIdeal(I);
+[ -x_2^2*x_3*x_5+x_6^2, -x_3^4+x_5*x_6, -x_1^4*x_6+x_5^2, -x_1^3*x_2^2+x_4^2,
+  -x_1^4*x_2+x_3*x_4, -x_1^5+x_3^2, -x_1^5+x_2*x_4, -x_1*x_4+x_2*x_3, -x_1*x_3+x_2^2 ]
+```
+
+## References

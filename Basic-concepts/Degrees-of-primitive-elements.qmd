@@ -1,0 +1,66 @@
+---
+title: "Degrees of primitive elements"
+format: html
+engine: markdown
+---
+
+<!--  -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) [minimally generated](Minimal-set-of-generators.qmd) by $P(S) = \{n_1, \ldots, n_e\}$. it is said that $s \in S$ is a degree of primitive elements in $S$ if there exists a minimal solution to $(n_1, \ldots, n_e) \cdot x - (n_1, \ldots, n_e) \cdot y = 0$, where $x,y$ are [factorizations](../Presentations-NS/Set-of-factorizations.qmd) of $s$ in $S$ and the dot product is the usual vector scalar product.
+
+It can be proven that [Betti elements](../Presentations-NS/Betti-elements.qmd) are primitive, and as a consequence every numerical semigroup has a primitive element.
+
+## Examples
+
+$\circ$ Let $S = \langle \rangle$.
+
+## Examples with GAP
+
+The following examples are made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 5, 9, 13, 16 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(5, 9, 13, 16);
+<Numerical semigroup with 4 generators>
+```
+
+Given a numerical semigroup $S$, the function `DegreesOfPrimitiveElementsOfNumericalSemigroup` returns the degrees of primitive elements of $S$.
+
+```gap
+gap> DegreesOfPrimitiveElementsOfNumericalSemigroup(S);
+[ 5, 9, 13, 16, 18, 25, 26, 29, 31, 32, 35, 36, 39, 40, 41, 42, 45, 48, 52, 53, 55, 57, 58,
+  63, 64, 65, 68, 78, 80, 81, 85, 90, 91, 96, 104, 112, 117, 130, 144, 169, 208 ]
+```
+
+
+$\diamond$ Given $M$ and $m$ integers, the function `NumericalSemigroupsWithMaxPrimitiveAndMultiplicity` returns a list of numerical semigroups with maximum primitive $M$ and [multiplicity](Multiplicity.qmd) $m$.
+
+```gap
+gap> Length(NumericalSemigroupsWithMaxPrimitiveAndMultiplicity(15,6));
+27
+```
+
+Moreover, given an integer $M$, the function `NumericalSemigroupsWithMaxPrimitive` returns a list with of numerical semigroups with maximum primitive $M$. 
+
+```gap
+gap> NumericalSemigroupsWithMaxPrimitive(5);
+[ <Numerical semigroup with 2 generators>, 
+  <Numerical semigroup with 2 generators>, 
+  <Numerical semigroup with 3 generators>, 
+  <Numerical semigroup with 2 generators> ]
+gap> Length(NumericalSemigroupsWithMaxPrimitive(15));
+194
+```
+
+
+
+## References
+
+
+
+
+
+

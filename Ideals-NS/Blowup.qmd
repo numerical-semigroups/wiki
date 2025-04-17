@@ -22,7 +22,7 @@ For $h = 2$,
 
 $$
 3E = (E + E) + E = \{42, 45, 47, 48, 50 , \rightarrow\} = 12 + 2E.
-$$ 
+$$
 
 Therefore, $r(E) = 2$ and the blowup of $E$ is $\mathcal{B}(E) = 2E - 2E = \{0, 3, 5, 6, 8, \rightarrow\}$.
 
@@ -63,8 +63,7 @@ true
 
 $\diamond$ Given a numerical semigroup, the functions `BlowUp` and `BlowUpOfNumericalSemigroup` returns the blowup of the [maximal ideal](Maximal-ideal.qmd) of $S$, that is, $M = S\setminus \{0\}$.
 
-
-```gap
+``` gap
 gap> S := NumericalSemigroup(33, 41, 46, 70, 83);
 <Numerical semigroup with 5 generators>
 gap> BM := BlowUp(S);
@@ -78,6 +77,3 @@ gap> Generators(BM);
 Since the blowup of a relative ideal is a numerical semigroup, this process can be repeated. From this, process, it is defined the [multiplicity sequence](Multiplicity-sequence.qmd) of $S$.
 
 ## References
-
-
-

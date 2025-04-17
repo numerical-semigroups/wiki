@@ -4,16 +4,35 @@ format: html
 engine: markdown
 ---
 
-<!--  -->
+<!-- Maximal-denumerant-NS -->
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $m(S)$ be the [multiplicity](../Basic-concepts/Multiplicity.qmd) of $S$. It is said that $S$ is additive if $ord(m+x) = ord(x) + 1$ for all $x \in S \setminus \{0\}$, where $ord(x)$ denotes the [order](../Fact-and-div/Order-of-an-element.qmd) of $x$ in $S$.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $m$ be the [multiplicity](../Basic-concepts/Multiplicity.qmd) of $S$. It is said that $S$ is additive if $ord(m+x) = ord(x) + 1$ for all $x \in S \setminus \{0\}$, where $ord(x)$ denotes the [order](../Fact-and-div/Order-of-an-element.qmd) of $x$ in $S$.
+
+It can be proven that $S$ is an additive numerical semigroup if, and only if, $adj(S) = Ap(B, m)$, where $adj(S)$ is the [adjustment](../Fact-and-div/Adjustment-NS.qmd) of $S$, $B$ is the [blowup](../Ideals-NS/Blowup.qmd) of $S$ and $Ap(B, m)$ is the [Apéry set](../Basic-concepts/Aper-set.qmd) of $B$ in $m$.
 
 ## Examples
 
-$\circ$ Let $S = \langle \rangle$.
+$\circ$ Let $S = \langle 5, 9, 12, 13 \rangle$. In order to compute the blowup of $S$, we have to compute the [reduction number](../Ideals-NS/Reduction-number.qmd) $r(M)$ of $M = S \setminus \{0\}$, that is, the first positive integer $h$ such that $(h+1)M = m(M) + hM$, where $m(M)$ is the [multiplicity ideal](../Ideals-NS/Multiplicity-ideal.qmd) of $M$ and
 
+$$
+hM = \{e_1 + e_2 + \cdots + e_h ~ | ~ e_1, \ldots, e_h \in M\}.
+$$
+
+Since $m(M) = m(S) = 5$, we have
+
+$$
+2M = M + M \{10, 14, 15, 17, \rightarrow \} \ne \{10, 14, 15, 17, 18, 19, 20, 2, \rightarrow \} = 5 + M,
+$$ and
+
+$$
+3M = \{15, 19, 20, 22, \rightarrow \} = 5 + 2M,
+$$ obtaining that $r(M) = 2$. The blowup of $S$ is $B = 2M - 2M = \{0, 4, 5, 7, \rightarrow \}$, where
+
+$$
+2M - 2M = \{z \in \mathbb{Z} ~ | ~ z + 2M \subseteq 2M \}.
+$$ Since the adjustment of $S$ is $Adj(S) = \{0, 4, 7, 8, 11\}$ and the Apéry set of $B$ in $m = 5$ is $Ap(B, 5) = \{0, 4, 7, 8, 11\}$, we conclude that $S$ is additive.
 
 ## Examples with GAP
 
@@ -21,7 +40,7 @@ The following example is made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 22, 30, 58, 67, 78, 93, 94, 99, 103, 117 \rangle$, in GAP:
 
-```gap
+``` gap
 gap> S := NumericalSemigroup(22, 30, 58, 67, 78, 93, 94, 99, 103, 117);
 <Numerical semigroup with 10 generators>
 gap> m := Multiplicity(S);
@@ -30,14 +49,14 @@ gap> m := Multiplicity(S);
 
 The function `Multiplicity` returns the multiplicity of the given numerical semigroup. On the other hand, given a numerical semigroup $S$, the function `IsAdditiveNumericalSemigroup` returns true if $S$ is additive and false otherwise.
 
-```gap
+``` gap
 gap> IsAdditiveNumericalSemigroup(S);
 false
 ```
 
 Given a numerical semigroup $S$ and an integer $n \in S$, the function `MaximumDegree` computes the order of $n$ in $S$. If we consider the first $1000$ elements of $S$ (removing the zero), the first $x \in S$ such that $ord(m + x) \ne ord(x) + 1$ is $s = 158$.
 
-```gap
+``` gap
 gap> First(S{[2..1000]}, l -> MaximumDegree(S,l+m) <> MaximumDegree(S, l) + 1);
 158
 gap> MaximumDegree(S, 158);
@@ -46,8 +65,4 @@ gap> MaximumDegree(S, 158+m);
 6
 ```
 
-
-
 ## References
-
-

@@ -32,7 +32,7 @@ Let us consider $S_1 = \langle 5,7 \rangle$ and $S_2 = \langle 9,13 \rangle$, Si
 
 The following examples are made with the package NumericalSgps in GAP.
 
-$\diamond$ Let $S \langle 40, 329, 338 \rangle$,in GAP:
+$\diamond$ Let $S = \langle 40, 329, 338 \rangle$,in GAP:
 
 ``` gap
 gap> S := NumericalSemigroup(40, 329, 338);
