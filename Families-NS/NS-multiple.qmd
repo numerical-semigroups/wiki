@@ -93,7 +93,7 @@ gap> IsMultipleOfNumericalSemigroup := function(T,S)
 function( T, S ) ... end
 ```
 
-Moreover, if $T$ is a multiple of $S$, the following function returns the integers $a,b$ such that $T = aS \cup \{b, \rightarrow\}$.
+Moreover, if $T$ is a multiple of $S$, the following function returns the integers $a,b$ such that $T = aS \cup \{b, \rightarrow\}$. If $T$ is not multiple, it returns `fail`.
 
 ``` gap
 gap> WhichIsMultipleOfNumericalSemigroup := function(T,S)
@@ -124,7 +124,7 @@ gap> WhichIsMultipleOfNumericalSemigroup := function(T,S)
 >           fi;
 >           a := a + 1;
 >       od;
->       return Error("The first argument is not a multiple numerical semigroup of the second argument");
+>       return fail;
 > end;
 function( T, S ) ... end
 ```

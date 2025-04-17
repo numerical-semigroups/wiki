@@ -1,0 +1,373 @@
+---
+title: "Graph associated to an element by Apéry set"
+format: html
+engine: markdown
+---
+
+<!--  -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd), $n \in S$ and let $Ap(S,n)$ be the [Apéry set](Apery-set.qmd) of $S$ with respect to $n$. It is defined the graph associated to $n$ by Apéry list as the graph with vertices $Ap(S, n)$ and $(u,v)$ is an edge if, and only if, $v - u \in Ap(S, n)$. The graph is denoted by $(Ap(S,n), E_n)$.
+
+The relation $u \le v \Longleftrightarrow v-u \in Ap(S,n)$ in $Ap(S,n)$ is a partial order, since the conditions $v-u \in S$, $v \in AP(S,n)$ and $u \in S$ implies that $v-u \in Ap(S,n)$.
+
+## Examples
+
+$\circ$ Let $S = \langle 3, 7, 11 \rangle = \{0, 3, 6, 7, 9 , \rightarrow \}$ and $n = 7$. The Apéry set of $S$ with respect to $n$ is
+
+$$
+Ap(S, n) = \{s \in S ~ | ~ s - n \not \in S\},
+$$
+
+and is well known that $|Ap(S, n)| = n$, where it is deduced that $Ap(S, 7) = \{0, 3, 6, 9, 11, 12, 15\}$. Taking into account that if $(u,v)$ is an edge, then $u \le v$, with few calculations we have that the set of edges is
+
+$$
+E_7 = \{(0, v) ~ | ~ v \in Ap(S, 7) \} \cup \{(v,v) ~ | ~ v \in Ap(S,7)\} \cup B_3 \cup B_6 \cup B_9 \cup B_{12},
+$$
+
+where
+
+$$
+B_3 = \{(3, v) ~ | ~ v \in \{6,9,12,15\} \}, ~~ B_6 = \{(6, v) ~ | ~ v \in \{9,12,15\}\},
+$$
+
+$$
+B_9 = \{(9,12), (9,15)\}, ~~ B_{12} = \{(12,15)\}. 
+$$
+
+The graph $(Ap(S,7), E_7)$ is as follows.
+
+::: {style="text-align:center;"}
+```{dot}
+// | fig-width: 80%
+// | fig-height: 400px
+digraph  NSGraph{
+0 -> 0;
+0 -> 3;
+0 -> 6;
+0 -> 9;
+0 -> 11;
+0 -> 12;
+0 -> 15;
+
+3 -> 3;
+3 -> 6;
+3 -> 9;
+3 -> 12;
+3 -> 15;
+
+6 -> 6;
+6 -> 9;
+6 -> 12;
+6 -> 15;
+
+9 -> 9;
+9 -> 12;
+9 -> 15;
+
+11 -> 11;
+
+12 -> 12;
+12 -> 15;
+
+15 -> 15;
+}
+```
+:::
+
+Since the relation that defines the graph is a partial order, it is more representative the Hasse diagram associated.
+
+::: {style="text-align:center;"}
+```{dot}
+// | fig-width: 80%
+// | fig-height: 400px
+digraph  NSGraph{rankdir = TB; edge[dir=back];
+1 [label="0"];
+2 [label="3"];
+3 [label="6"];
+4 [label="9"];
+5 [label="11"];
+6 [label="12"];
+7 [label="15"];
+2 -> 1;
+5 -> 1;
+3 -> 2;
+4 -> 3;
+6 -> 4;
+7 -> 6;
+}
+```
+:::
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 8, 67, 106, 140 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(8, 67, 106, 140);
+<Numerical semigroup with 4 generators>
+```
+
+Given an Apéry set $Ap(S, n)$, the function `AperyListOfNumericalSemigroupAsGraph` returns the adjacency list of the graph associated to $n$ by Apéry set. Given a numerical semigroup $S$ and an element $n \in S$, the function `AperyList` returns $Ap(S, n)$.
+
+``` gap
+gap> Ap := AperyList(S,8);
+[ 0, 201, 106, 67, 140, 173, 134, 207 ]
+gap> AperyListOfNumericalSemigroupAsGraph(Ap);
+[ ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, [ 67, 134, 173, 
+201, 207 ],,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, [ 106, 173 ],,,,,,,,,,,,,,,,,,,,
+,,,,,,,, [ 134, 201 ],,,,,, [ 140, 207 ],,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,, [173 ],,,,,,,,,,,,,,,,,,,,,,,,,,,, [ 201 ],,,,,, [ 207 ] ]
+```
+
+The graph $(Ap(S,8), E_8)$ is as follows.
+
+::: {style="text-align:center;"}
+```{dot}
+// | fig-width: 60%
+// | fig-height: 300px
+digraph  NSGraph{
+0 -> 0
+0 -> 67;
+0 -> 106;
+0 -> 134;
+0 -> 140;
+0 -> 173;
+0 -> 201;
+0 -> 207;
+
+67 -> 67;
+67 -> 134;
+67 -> 173;
+67 -> 201;
+67 -> 207;
+
+106 -> 106;
+106 -> 173;
+
+134 -> 134;
+134 -> 201;
+
+140 -> 140;
+140 -> 207;
+
+173 -> 173;
+
+201 -> 201;
+
+207 -> 207;
+}
+```
+:::
+
+The Hasse diagram associated is
+
+::: {style="text-align:center;"}
+```{dot}
+// | fig-width: 60%
+// | fig-height: 300px
+digraph  NSGraph{rankdir = TB; edge[dir=back];
+1 [label="0"];
+2 [label="67"];
+3 [label="106"];
+4 [label="134"];
+5 [label="140"];
+6 [label="173"];
+7 [label="201"];
+8 [label="207"];
+2 -> 1;
+3 -> 1;
+5 -> 1;
+4 -> 2;
+6 -> 2;
+8 -> 2;
+6 -> 3;
+7 -> 4;
+8 -> 5;
+}
+
+```
+:::
+
+$\diamond$ Let $S = \langle 22, 26, 38, 45, 58 \rangle$ and $n = 26$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(22, 26, 38, 45, 58);
+<Numerical semigroup with 5 generators>
+```
+
+Given a numerical semigroup $S$ and an element $n \in S$, the function `HasseDiagramOfAperyListOfNumericalSemigroup` returns the Hasse diagram by the relation $u \le v$ if, and only if, $v - u \in Ap(S, n)$, with $u,v \in Ap(S, n)$. The function `DotBinaryRelation` return a GraphViz dot that represents the given binary relation.
+
+``` gap
+gap> H := HasseDiagramOfAperyListOfNumericalSemigroup(S, 26);
+<general mapping: Domain([ 0, 22, 38, 44, 45, 58, 60, 66, 67, 76, 80, 82, 83, 88,
+  89, 98, 103, 105, 111, 120, 121, 125, 127, 133, 143, 165 ]) -> Domain(
+[ 0, 22, 38, 44, 45, 58, 60, 66, 67, 76, 80, 82, 83, 88, 89, 98, 103, 105, 111,
+  120, 121, 125, 127, 133, 143, 165 ]) >
+gap> h := DotBinaryRelation(H);;
+gap> Print(h);
+digraph  NSGraph{rankdir = TB; edge[dir=back];
+1 [label="0"];
+2 [label="22"];
+3 [label="38"];
+4 [label="44"];
+5 [label="45"];
+6 [label="58"];
+7 [label="60"];
+8 [label="66"];
+9 [label="67"];
+10 [label="76"];
+11 [label="80"];
+12 [label="82"];
+13 [label="83"];
+14 [label="88"];
+15 [label="89"];
+16 [label="98"];
+17 [label="103"];
+18 [label="105"];
+19 [label="111"];
+20 [label="120"];
+21 [label="121"];
+22 [label="125"];
+23 [label="127"];
+24 [label="133"];
+25 [label="143"];
+26 [label="165"];
+2 -> 1;
+3 -> 1;
+5 -> 1;
+6 -> 1;
+4 -> 2;
+7 -> 2;
+9 -> 2;
+11 -> 2;
+7 -> 3;
+10 -> 3;
+13 -> 3;
+8 -> 4;
+12 -> 4;
+15 -> 4;
+9 -> 5;
+13 -> 5;
+17 -> 5;
+11 -> 6;
+17 -> 6;
+12 -> 7;
+16 -> 7;
+18 -> 7;
+14 -> 8;
+19 -> 8;
+15 -> 9;
+18 -> 9;
+22 -> 9;
+16 -> 10;
+21 -> 10;
+22 -> 11;
+20 -> 12;
+23 -> 12;
+18 -> 13;
+21 -> 13;
+24 -> 14;
+19 -> 15;
+23 -> 15;
+20 -> 16;
+25 -> 16;
+22 -> 17;
+23 -> 18;
+25 -> 18;
+24 -> 19;
+26 -> 20;
+25 -> 21;
+26 -> 23;
+26 -> 25;
+}
+```
+
+The Hasse diagram is as follows.
+
+::: {style="text-align:center;"}
+```{dot}
+// | fig-width: 60%
+// | fig-height: 400px
+digraph  NSGraph{rankdir = TB; edge[dir=back];
+1 [label="0"];
+2 [label="22"];
+3 [label="38"];
+4 [label="44"];
+5 [label="45"];
+6 [label="58"];
+7 [label="60"];
+8 [label="66"];
+9 [label="67"];
+10 [label="76"];
+11 [label="80"];
+12 [label="82"];
+13 [label="83"];
+14 [label="88"];
+15 [label="89"];
+16 [label="98"];
+17 [label="103"];
+18 [label="105"];
+19 [label="111"];
+20 [label="120"];
+21 [label="121"];
+22 [label="125"];
+23 [label="127"];
+24 [label="133"];
+25 [label="143"];
+26 [label="165"];
+2 -> 1;
+3 -> 1;
+5 -> 1;
+6 -> 1;
+4 -> 2;
+7 -> 2;
+9 -> 2;
+11 -> 2;
+7 -> 3;
+10 -> 3;
+13 -> 3;
+8 -> 4;
+12 -> 4;
+15 -> 4;
+9 -> 5;
+13 -> 5;
+17 -> 5;
+11 -> 6;
+17 -> 6;
+12 -> 7;
+16 -> 7;
+18 -> 7;
+14 -> 8;
+19 -> 8;
+15 -> 9;
+18 -> 9;
+22 -> 9;
+16 -> 10;
+21 -> 10;
+22 -> 11;
+20 -> 12;
+23 -> 12;
+18 -> 13;
+21 -> 13;
+24 -> 14;
+19 -> 15;
+23 -> 15;
+20 -> 16;
+25 -> 16;
+22 -> 17;
+23 -> 18;
+25 -> 18;
+24 -> 19;
+26 -> 20;
+25 -> 21;
+26 -> 23;
+26 -> 25;
+}
+```
+:::
+
+## References

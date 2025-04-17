@@ -1,0 +1,53 @@
+---
+title: "Additive numerical semigroup"
+format: html
+engine: markdown
+---
+
+<!--  -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $m(S)$ be the [multiplicity](../Basic-concepts/Multiplicity.qmd) of $S$. It is said that $S$ is additive if $ord(m+x) = ord(x) + 1$ for all $x \in S \setminus \{0\}$, where $ord(x)$ denotes the [order](../Fact-and-div/Order-of-an-element.qmd) of $x$ in $S$.
+
+## Examples
+
+$\circ$ Let $S = \langle \rangle$.
+
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 22, 30, 58, 67, 78, 93, 94, 99, 103, 117 \rangle$, in GAP:
+
+```gap
+gap> S := NumericalSemigroup(22, 30, 58, 67, 78, 93, 94, 99, 103, 117);
+<Numerical semigroup with 10 generators>
+gap> m := Multiplicity(S);
+22
+```
+
+The function `Multiplicity` returns the multiplicity of the given numerical semigroup. On the other hand, given a numerical semigroup $S$, the function `IsAdditiveNumericalSemigroup` returns true if $S$ is additive and false otherwise.
+
+```gap
+gap> IsAdditiveNumericalSemigroup(S);
+false
+```
+
+Given a numerical semigroup $S$ and an integer $n \in S$, the function `MaximumDegree` computes the order of $n$ in $S$. If we consider the first $1000$ elements of $S$ (removing the zero), the first $x \in S$ such that $ord(m + x) \ne ord(x) + 1$ is $s = 158$.
+
+```gap
+gap> First(S{[2..1000]}, l -> MaximumDegree(S,l+m) <> MaximumDegree(S, l) + 1);
+158
+gap> MaximumDegree(S, 158);
+3
+gap> MaximumDegree(S, 158+m);
+6
+```
+
+
+
+## References
+
+

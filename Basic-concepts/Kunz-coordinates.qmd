@@ -1,0 +1,69 @@
+---
+title: "Kunz coordinates"
+format: html
+engine: markdown
+---
+
+<!-- Parametrizing_Arf_NS  -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd), $n \in S$ and let $Ap(S,n)$ be the [Apéry set](Apery-set) of $S$ in $n$. It is well known that
+
+$$
+Ap(S,n) := \{w \in S ~ | ~ w - n \not \in S\} = \{w(0) = 0, w(1), \ldots, w(n-1)\},
+$$
+
+where $w(k) \in S$ is the first element in $S$ such that $w(k) \equiv k ~ (mod ~ n)$ for all $k \in \{0, \ldots, n-1\}$. Therefore, there exist $x_1, \ldots, x_{n-1} \in \mathbb{N}$ such that
+
+$$
+w(k) = x_kn + k, ~~ \text{for all } ~ k \in \{0, \ldots, n-1\}.
+$$
+
+It is defined the Kunz coordinates of $S$ with respect to $n$ as the tuple $(x_1, \ldots, x_{n-1}) \in \mathbb{N}^n$. If we consider $n = m(S)$, where $m(S)$ denotes the [multiplicity](Multiplicity.qmd) of $S$, it is said directly as the Kunz coordinates of $S$.
+
+## Examples
+
+$\circ$ Let $S = \langle 5, 7, 9 \rangle = \{0, 5, 7, 9, 10, 12, 14, \rightarrow\}$ and $n = 5$. From the definition, $Ap(S, 5) = \{0, 7, 9, 16, 18\}$. It holds that
+
+$$
+w(1) = 16 = 3 \cdot 5 + 1, ~ w(2) = 7 = 1 \cdot 5 + 2,
+$$
+
+$$
+w(3) = 18 = 3 \cdot 5 + 3, ~ w(4) = 9 = 1 \cdot 5 + 4,
+$$
+
+obtaining that the tuple $(3, 1, 3, 1)$ is the Kunz coordinate of $S$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 13, 42, 43, 72, 79 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(13, 42, 43, 72, 79);
+<Numerical semigroup with 5 generators>
+```
+
+Given a numerical semigroup $S$ and an integer $n \in S$, the functions `KunzCoordinates` and `KunzCoordinatesOfNumericalSemigroup` return the Kunz coordinates of $S$ with respect to $n$.
+
+``` gap
+gap> KunzCoordinates(S, 42);
+[ 1, 2, 3, 3, 3, 4, 2, 2, 3, 1, 2, 3, 0, 1, 2, 3, 3, 3, 4, 2, 2, 3, 1, 2, 3, 0, 1,
+  2, 3, 1, 2, 3, 2, 2, 3, 1, 1, 2, 0, 1, 2 ]
+gap> KunzCoordinatesOfNumericalSemigroup(S, 42) = KunzCoordinates(S, 42);
+true
+```
+
+If we only give a numerical semigroup, the functions computes the Kunz coordinates of $S$.
+
+``` gap
+gap> KunzCoordinates(S);
+[ 6, 12, 3, 3, 9, 6, 5, 6, 9, 8, 8, 9 ]
+gap> KunzCoordinatesOfNumericalSemigroup(S) = KunzCoordinates(S);
+true
+```
+
+## References
