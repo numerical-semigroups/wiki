@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Characteristic sequences associated to an irreducible polynomial – Wiki numerical semigroups</title>
+<title>Translation of a relative ideal – Wiki numerical semigroups</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -108,7 +142,9 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Meromorphic-series-NS/Approximate-root.html">Semigroup of an irreducible meromorphic series</a></li><li class="breadcrumb-item"><a href="../Meromorphic-series-NS/Characteristic-sequences.html">Characteristic sequences associated to an irreducible polynomial</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Wiki numerical semigroups
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -1015,13 +1051,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
  <span class="menu-text">Semigroup of an irreducible meromorphic series</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Meromorphic-series-NS/Approximate-root.html" class="sidebar-item-text sidebar-link">
@@ -1030,7 +1066,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Meromorphic-series-NS/Characteristic-sequences.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Meromorphic-series-NS/Characteristic-sequences.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Characteristic sequences associated to an irreducible polynomial</span></a>
   </div>
 </li>
@@ -1147,9 +1183,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Meromorphic-series-NS/Approximate-root.html">Semigroup of an irreducible meromorphic series</a></li><li class="breadcrumb-item"><a href="../Meromorphic-series-NS/Characteristic-sequences.html">Characteristic sequences associated to an irreducible polynomial</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Characteristic sequences associated to an irreducible polynomial</h1>
+<h1 class="title">Translation of a relative ideal</h1>
 </div>
 
 
@@ -1166,36 +1202,30 @@ window.Quarto = {
 </header>
 
 
-<p>The definition of characteristic sequences comes from the following result.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Proposition
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Let <span class="math inline">\(f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]\)</span>. Suppose that <span class="math inline">\(f(x,y)\)</span> is irreducible. There exists <span class="math inline">\(y(t) \in \mathbb{K}((t))\)</span> such that <span class="math inline">\(f(t^n, y(t)) = 0\)</span>. Furthermore,</p>
-<ol type="i">
-<li><p><span class="math inline">\(f(t^n, y) = \prod_{w, w^n = 1} (y - y(wt))\)</span>,</p></li>
-<li><p>if <span class="math inline">\(w_1 \ne w_2\)</span> and <span class="math inline">\(w_1^n = w_2^n = 1\)</span>, then <span class="math inline">\(y(w_1t) \ne y(w_2t)\)</span>,</p></li>
-<li><p><span class="math inline">\(gcd(n, gcd(Supp(y(t)))) = 1\)</span>,</p></li>
-</ol>
-<p>where <span class="math inline">\(Supp(y(t))\)</span> is the <a href="../Meromorphic-series-NS/Support.html">support</a> of <span class="math inline">\(y(t)\)</span>.</p>
-</div>
-</div>
-<p>Let us consider <span class="math inline">\(f(x,y) \in \mathbb{K}((x))[y]\)</span> irreducible and let <span class="math inline">\(y = \sum_{p \in \mathbb{N}} c_p t^p \in \mathbb{K}((t))\)</span>.</p>
-<ul>
-<li><p>Let <span class="math inline">\(d_1 = n = deg_y(f)\)</span> and let <span class="math inline">\(m_1 = \min \{p \in Supp(y(t)) ~ | ~ d_1 \not \mid \ \ p\}\)</span>, <span class="math inline">\(d_2 = gcd(d_1, m_1)\)</span>. Then for all <span class="math inline">\(i \ge 2\)</span>, if <span class="math inline">\(d_i \ne 1\)</span>, let <span class="math inline">\(m_i = \min \{p \in Supp(y(t)) ~ | ~ d_i \not \mid \ \ p \}\)</span> and <span class="math inline">\(d_{i+1} = gcd(d_i, m_i)\)</span>. By the above preposition, <span class="math inline">\(m_i\)</span> is well defined and there exists <span class="math inline">\(h \ge 1\)</span> such that <span class="math inline">\(d_{h+1} = 1\)</span>. It is defined <span class="math inline">\(\underline{m} = (m_1, m_2, \ldots, m_h)\)</span> and <span class="math inline">\(\underline{d} = (d_1, d_2, \ldots, d_{h+1})\)</span>.</p></li>
-<li><p>It is also defined <span class="math inline">\(e_i = \frac{d_i}{d_{i+1}}\)</span> for all <span class="math inline">\(i \in \{1,2, \ldots, h\}\)</span>.</p></li>
-<li><p>Finally, it is defined the sequence <span class="math inline">\(\underline{r} = (r_0, r_1, \ldots, r_h)\)</span> as follows: <span class="math inline">\(r_0 = n, r_1 = m_1\)</span> and for all <span class="math inline">\(i \in \{2, 3, \ldots, h\}\)</span>,</p></li>
-</ul>
-<p><span class="math display">\[
-r_i = r_{i-1}e_{i-1} + m_i - m_{i-1}.
-\]</span></p>
-<p>It is defined the characteristic sequences of <span class="math inline">\(f\)</span> as the sequences <span class="math inline">\(\underline{m}, \underline{d}\)</span> and <span class="math inline">\(\underline{r}\)</span>. In particular, the sequence <span class="math inline">\(\underline{m}\)</span> is called the <a href="../Meromorphic-series-NS/Newton-Puiseux-exponents.html">Newton-Puiseux exponents</a> of <span class="math inline">\(f\)</span>.</p>
+<!-- Num. appl. -->
+<section id="definition" class="level2">
+<h2 class="anchored" data-anchor-id="definition">Definition</h2>
+<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> and let <span class="math inline">\(I,J\)</span> be <a href="../Ideals-NS/Relative-ideal.html">relative ideals</a> of <span class="math inline">\(S\)</span>, with <span class="math inline">\(J\)</span> <a href="../Ideals-NS/Minimal-set-generators-ideal.html">minimally generated</a> by <span class="math inline">\(\{j_1, \ldots, j_n\}\)</span>. It is said that <span class="math inline">\(I\)</span> is a translation of <span class="math inline">\(J\)</span> if there exists <span class="math inline">\(k \in \mathbb{Z}\)</span> such that <span class="math inline">\(I\)</span> is generated by <span class="math inline">\(\{j_1 + k, \ldots, j_n + k\}\)</span>. In this case, it is said that <span class="math inline">\(I\)</span> and <span class="math inline">\(J\)</span> are equivalents.</p>
+</section>
+<section id="examples" class="level2">
+<h2 class="anchored" data-anchor-id="examples">Examples</h2>
+<p><span class="math inline">\(\circ\)</span> If <span class="math inline">\(J\)</span> is a relative ideal of a numerical semigroup <span class="math inline">\(I\)</span> minimally generated by <span class="math inline">\(\{j_1, \ldots, j_n\}\)</span>, then for any <span class="math inline">\(k \in \mathbb{Z}\)</span>, the translation of <span class="math inline">\(J\)</span> by <span class="math inline">\(k\)</span> is minimally generated by <span class="math inline">\(\{j_1 + k, \ldots, j_n + k\}\)</span>. Indeed, if <span class="math inline">\(I\)</span> is a translation of <span class="math inline">\(J\)</span> by <span class="math inline">\(k\)</span>, Then its set of minimal generators is <span class="math inline">\(I \setminus (I + M)\)</span> and <span class="math inline">\(j + k \in I \setminus (M + I)\)</span> if, and only if, <span class="math inline">\(j \in J \setminus (M + J)\)</span>, concluding that <span class="math inline">\(j_i + k\)</span> is minimal and <span class="math inline">\(\{j_1+k, \ldots, j_n + k\}\)</span> is the set of minimal generators of <span class="math inline">\(I\)</span>.</p>
+</section>
+<section id="examples-with-gap" class="level2">
+<h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
+<p>The following example is made with the package NumericalSgps in GAP.</p>
+<p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 25, 26, 33, 65, 80, 81 \rangle\)</span>, in GAP:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">25</span><span class="op">,</span> <span class="fl">26</span><span class="op">,</span> <span class="fl">33</span><span class="op">,</span> <span class="fl">65</span><span class="op">,</span> <span class="fl">80</span><span class="op">,</span> <span class="fl">81</span>)<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">6</span> <span class="va">generators</span><span class="op">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">I</span> <span class="op">:=</span> [<span class="fl">8</span><span class="op">,</span> <span class="fl">17</span><span class="op">,</span> <span class="fl">38</span><span class="op">,</span> <span class="fl">45</span><span class="op">,</span> <span class="fl">65</span>] <span class="op">+</span> <span class="va">S</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="bu">Ideal</span> <span class="va">of</span> <span class="va">numerical</span> <span class="va">semigroup</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Given a relative ideal of a numerical semigroup and an integer <span class="math inline">\(k\)</span>, the function <code>TranslationOfIdealOfNumericalSemigroup</code> returns the translation of <span class="math inline">\(I\)</span> by <span class="math inline">\(k\)</span>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">J</span> <span class="op">:=</span> <span class="va">TranslationOfIdealOfNumericalSemigroup</span>(<span class="fl">15</span><span class="op">,</span> <span class="va">I</span>)<span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="bu">Ideal</span> <span class="va">of</span> <span class="va">numerical</span> <span class="va">semigroup</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The translation can be also computed with the <span class="math inline">\(+\)</span> operator.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">J</span> <span class="op">=</span> <span class="va">I</span> <span class="op">+</span> <span class="fl">15</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cn">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 
