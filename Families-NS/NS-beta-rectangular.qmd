@@ -1,0 +1,152 @@
+---
+title: "Beta rectangular numerical semigroup"
+format: html
+engine: markdown
+---
+
+<!-- Classes-of-complete-intersection-NS -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $P(S) = \{n_1, \ldots, n_e\}$ with $n_1 < n_2 < \ldots < n_e$. It is defined for each $i \in \{2, \ldots, e\}$ ,
+
+$$
+\beta_i = \max \{h \in \mathbb{N} ~ | ~ h n_i \in Ap(S, n_1) ~ \text{ and } ~ ord(hn_i) = h \},
+$$
+
+where $Ap(S, n_1)$ denotes the [Apéry set](../Basic-concepts/Apery-set.qmd) of $S$ in $n_1$ and $ord(hn_i)$ denotes the [order](../Fact-and-div/Order-of-an-element.qmd) of $hn_i$ in $S$. It is said that $S$ has $\beta-$rectangular Apéry set if
+
+$$
+Ap(S, n_1) = \left \{ \sum_{i = 2}^e \lambda_i n_i ~ | ~ 0 \le \lambda_i \le \beta_i \right \}.
+$$
+
+It can be proven that the inclusion $\subseteq$ is always fulfilled. Moreover, if $S$ is $\beta-$rectangular, then $S$ is $\gamma-$[rectangular](NS-gamma-rectangular.qmd).
+
+## Examples
+
+$\circ$ Let $S = \langle 12, 15, 46 \rangle$. The Apéry set of $S$ in $n_1 = 12$ is $Ap(S, 12) = \{0, 61, 122, 15, 76, 137, 30, 91, 92, 45, 46, 107, \rightarrow \}$. With few calculations,
+
+$$
+\beta_2 = \max \{h \in \mathbb{N} ~ | ~ 15h \in Ap(S, n_1) ~ \text{ and } ~ ord(15h) = h \} = 3,
+$$
+
+$$
+\beta_3 = \max \{h \in \mathbb{N} ~ | ~ 46h \in Ap(S, n_1) ~ \text{ and } ~ ord(46h) = h \} = 2.
+$$
+
+Hence,
+
+$$
+\left \{ \sum_{i = 2}^e \lambda_i n_i ~ | ~ 0 \le \lambda_i \le \beta_i \right \} = \{0, 15, 2 \cdot 15, 3\cdot 15, 46, 2 \cdot 46, 15 + 46, 2 \cdot 15 + 46, 3 \cdot 15 + 46, 15 + 2 \cdot 46,
+$$
+
+$$
+2 \cdot 15 + 2 \cdot 46, 3 \cdot 15 + 2 \cdot 46 \} = \{0, 61, 122, 15, 76, 137, 30, 91, 92, 45, 46, 107, \rightarrow \} = Ap(S n_1),
+$$ and $S$ is $\beta-$rectangular.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 20, 50, 54, 78, 115, 116, 119 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(20, 50, 54, 78, 115, 116, 119);
+<Numerical semigroup with 7 generators>
+```
+
+Given a numerical semigroup $S$, the function `IsAperySetBetaRectangular` returns true if $S$ is $\beta-$rectangular and false otherwise.
+
+``` gap
+gap> IsAperySetBetaRectangular(S);
+false
+```
+
+$\diamond$ Given a numerical semigroup $S$, the following function returns the constants $\beta_2, \ldots, \beta_e$.
+
+``` gap
+gap> BetaConstantsOfNumericalSemigroup := function(S)
+>       local e, min_gen, Ap, list_beta, i, h, n_i;
+>       if not IsNumericalSemigroup(S) then
+>           Error("The argument must be a Numerical Semigroup");
+>       fi;
+>       e := EmbeddingDimension(S);
+>       min_gen := MinimalGenerators(S);
+>       Ap := AperyList(S);
+>       list_beta := [];
+>       for i in [2..e] do
+>           h := 0;
+>           n_i := min_gen[i];
+>           while h*n_i in Ap and  MaximumDegreeOfElementWRTNumericalSemigroup(h*n_i, S) = h do
+>             h := h + 1;
+>           od;
+>           Add(list_beta, h-1);
+>       od;
+>       return list_beta;
+> end;
+function( S ) ... end
+```
+
+Let $S = \langle 16, 28, 41, 91, 95, 103 \rangle$, in GAP;
+
+``` gap
+gap> S := NumericalSemigroup(16, 28, 41, 91, 95, 103);
+<Numerical semigroup with 6 generators>
+```
+
+From the function defined above,
+
+``` gap
+gap> BetaConstantsOfNumericalSemigroup(S);
+[ 3, 2, 1, 1, 1 ]
+```
+
+$\diamond$ Given $n,a,b,k$ integers, the following function tries to find in $k$ attempts a ''random'' $\beta-$rectangular numerical semigroup with no more than $n$ generators in $[a..b]$.
+
+``` gap
+gap> RandomBetaRectangularNumericalSemigroup := function(n, a, b, k)
+>       local i;
+>       if not IsPosInt(n) then
+>           Error("First argument must be a positive integer");
+>       fi;
+>       if not IsPosInt(a) then
+>           Error("Second argument must be a positive integer");
+>       fi;
+>       if not IsPosInt(b) then
+>           Error("Third argument must be a positive integer");
+>       fi;
+>       if not IsPosInt(k) then
+>           Error("Fourth argument must be a positive integer");
+>       fi;
+> 
+>       if a >= b then
+>           Error("The second argument must be smaller than the third argument");
+>       fi;
+>       for i in [1..k] do
+>         S := RandomNumericalSemigroup(n, a, b);
+>         if IsAperySetBetaRectangular(S) then
+>             return S;
+>         fi;
+>       od;
+>       return fail;
+> end;
+function( n, a, b, k ) ... end
+```
+
+Let us consider $n = 100, a = 30, b = 5000$ and $k = 1000$,
+
+``` gap
+gap> S := RandomBetaRectangularNumericalSemigroup(100, 30, 5000, 1000);
+<Numerical semigroup with 4 generators>
+gap> MinimalGenerators(S);
+[ 96, 360, 745, 800 ]
+```
+
+Then, $S = \langle 96, 360, 745, 800 \rangle$ is a $\beta-$rectangular numerical semigroup. In fact, is $\alpha-$rectangular,
+
+``` gap
+gap> IsAperySetAlphaRectangular(S);
+true
+```
+
+## References

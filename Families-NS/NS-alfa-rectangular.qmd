@@ -4,31 +4,142 @@ format: html
 engine: markdown
 ---
 
-<!--  -->
+<!-- Classes-of-complete-intersection-NS -->
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $P(S) = \{n_1, \ldots, n_e\}$. It is defined for each $i \in \{2, \ldots, e\}$ ,
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $P(S) = \{n_1, \ldots, n_e\}$ with $n_1 < n_2 < \ldots < n_e$. It is defined for each $i \in \{2, \ldots, e\}$ ,
 
 $$
 \alpha_i = \max \{h \in \mathbb{N} ~ | ~ h n_i \in Ap(S, n_1) \},
-$$ where $Ap(S, n_1)$ denotes the [Apéry set](../Basic-concepts/Apery-set.qmd) of $S$ in $n_1$. It is said that $S$ has $\alpha-$rectangular Apéry set if
+$$
+
+where $Ap(S, n_1)$ denotes the [Apéry set](../Basic-concepts/Apery-set.qmd) of $S$ in $n_1$. It is said that $S$ has $\alpha-$rectangular Apéry set if
 
 $$
 Ap(S, n_1) = \left \{ \sum_{i = 2}^e \lambda_i n_i ~ | ~ 0 \le \lambda_i \le \alpha_i \right \}.
-$$ It can be proven that the inclusion $\subseteq$ is always fulfilled. Moreover, if $S$ is $\alpha-$rectangular, then $S$ is $\beta-$[rectangular](NS-beta-rectangular.qmd) and $\gamma-$[rectangular](NS-gamma-rectangular.qmd).
+$$
+
+It can be proven that the inclusion $\subseteq$ is always fulfilled and if $S$ is $\alpha-$rectangular, then $S$ is $\beta-$[rectangular](NS-beta-rectangular.qmd) and $\gamma-$[rectangular](NS-gamma-rectangular.qmd). Moreover, $S$ is $\alpha-$rectangular if, and only if, $S$ is [symmetric](NS-symmetric.qmd) and has [Apéry set of unique expression](NS-Apery-set.qmd).
 
 ## Examples
 
-$\circ$ Let $S = \langle \rangle$.
+$\circ$ Let $S = \langle 4, 6, 11 \rangle = \{0, 4, 6, 8, 10, 11, 12, 14, \rightarrow\}$. The Apéry set of $S$ in $n_1 = 4$ is $Ap(S, n_1) = \{0, 6, 11, 17\}$. With few calculations,
+
+$$
+\alpha_2 = \max \{h \in \mathbb{N} ~ | ~ 6h \in Ap(S, n_1) \} = 1,
+$$
+
+$$
+\alpha_3 = \max \{h \in \mathbb{N} ~ | ~ 11h \in Ap(S, n_1) \} = 1.
+$$
+
+Then,
+
+$$
+\left \{ \sum_{i = 2}^3 \lambda_i n_i ~ | ~ 0 \le \lambda_i \le \alpha_i \right \} = \{0, n_2, n_3, n_2 + n_3\} = \{0, 6, 11, 17\} = Ap(S, n_1),
+$$
+
+and $S$ is $\alpha-$rectangular.
 
 ## Examples with GAP
 
 The following example is made with the package NumericalSgps in GAP.
 
-$\diamond$ Let $S = \langle \rangle$, in GAP:
+$\diamond$ Let $S = \langle 12, 21, 30, 39, 56, 64 \rangle$, in GAP:
 
 ``` gap
+gap> S := NumericalSemigroup(12, 21, 30, 39, 56, 64);
+<Numerical semigroup with 6 generators>
 ```
+
+Given a numerical semigroup $S$, the function `IsAperySetAlphaRectangular` returns true if $S$ is $\alpha-$rectangular and false otherwise.
+
+``` gap
+gap> IsAperySetAlphaRectangular(S);
+false
+```
+
+$\diamond$ Given a numerical semigroup $S$, the following functions returns the constants $\alpha_2, \ldots, \alpha_e$.
+
+``` gap
+gap> AlphaConstantsOfNumericalSemigroup := function(S)
+>       local e, min_gen, Ap, list_alpha, i, h, n_i;
+>       if not IsNumericalSemigroup(S) then
+>           Error("The argument must be a Numerical Semigroup");
+>       fi;
+>       e := EmbeddingDimension(S);
+>       min_gen := MinimalGenerators(S);
+>       Ap := AperyList(S);
+>       list_alpha := [];
+>       for i in [2..e] do
+>           h := 1;
+>           n_i := min_gen[i];
+>           while h*n_i in Ap do
+>             h := h + 1;
+>           od;
+>           Add(list_alpha, h-1);
+>       od;
+>       return list_alpha;
+> end;
+function( S ) ... end
+```
+
+Let $S = \langle 39, 56, 93, 96, 104, 105 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(39, 56, 93, 96, 104, 105);
+<Numerical semigroup with 6 generators>
+```
+
+From the function defined above,
+
+``` gap
+gap> AlphaConstantsOfNumericalSemigroup(S);
+[ 5, 2, 2, 2, 1 ]
+```
+
+$\diamond$ Given $n,a,b,k$ integers, the following function tries to find in $k$ attempts a ''random'' $\alpha-$rectangular numerical semigroup with no more than $n$ generators in $[a..b]$.
+
+``` gap
+gap> RandomAlphaRectangularNumericalSemigroup := function(n, a, b, k)
+>       local i;
+>       if not IsPosInt(n) then
+>           Error("First argument must be a positive integer");
+>       fi;
+>       if not IsPosInt(a) then
+>           Error("Second argument must be a positive integer");
+>       fi;
+>       if not IsPosInt(b) then
+>           Error("Third argument must be a positive integer");
+>       fi;
+>       if not IsPosInt(k) then
+>           Error("Fourth argument must be a positive integer");
+>       fi;
+> 
+>       if a >= b then
+>           Error("The second argument must be smaller than the third argument");
+>       fi;
+>       for i in [1..k] do
+>         S := RandomNumericalSemigroup(n, a, b);
+>         if IsAperySetAlphaRectangular(S) then
+>             return S;
+>         fi;
+>       od;
+>       return fail;
+> end;
+function( n, a, b, k ) ... end
+```
+
+Let us consider $n = 100, a = 30, b = 5000$ and $k = 1000$,
+
+``` gap
+gap> S := RandomAlphaRectangularNumericalSemigroup(100, 30, 5000, 1000);
+<Numerical semigroup with 3 generators>
+gap> MinimalGenerators(S);
+[ 45, 80, 153 ]
+```
+
+Then, $S = \langle 45, 80, 153 \rangle$ is an $\alpha-$rectangular numerical semigroup.
 
 ## References

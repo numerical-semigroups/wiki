@@ -159,7 +159,7 @@ gap> ConstantsFreeAsterisk := function(S, I...)
 >           Error("Second argument must be an arrangement of the minimal system of generators of the first argument");
 >       fi;
 >       if 1 in S then 
->           return false; 
+>           Error("The argument must be a Numerical semigroup other than N"); 
 >       fi;
 >       p := Length(Min_gen);
 >       list_c := [];

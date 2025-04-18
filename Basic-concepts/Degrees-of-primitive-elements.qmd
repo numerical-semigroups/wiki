@@ -29,38 +29,43 @@ gap> S := NumericalSemigroup(5, 9, 13, 16);
 
 Given a numerical semigroup $S$, the function `DegreesOfPrimitiveElementsOfNumericalSemigroup` returns the degrees of primitive elements of $S$.
 
-```gap
+``` gap
 gap> DegreesOfPrimitiveElementsOfNumericalSemigroup(S);
 [ 5, 9, 13, 16, 18, 25, 26, 29, 31, 32, 35, 36, 39, 40, 41, 42, 45, 48, 52, 53, 55, 57, 58,
   63, 64, 65, 68, 78, 80, 81, 85, 90, 91, 96, 104, 112, 117, 130, 144, 169, 208 ]
 ```
 
+$\diamond$ Given $M$ and $m$ integers, the function `NumericalSemigroupsWithMaxPrimitiveAndMultiplicity` returns a list of numerical semigroups with maximum $M$ primitive elements and [multiplicity](Multiplicity.qmd) $m$.
 
-$\diamond$ Given $M$ and $m$ integers, the function `NumericalSemigroupsWithMaxPrimitiveAndMultiplicity` returns a list of numerical semigroups with maximum primitive $M$ and [multiplicity](Multiplicity.qmd) $m$.
-
-```gap
-gap> Length(NumericalSemigroupsWithMaxPrimitiveAndMultiplicity(15,6));
-27
+``` gap
+gap> N := NumericalSemigroupsWithMaxPrimitiveAndMultiplicity (20, 7);;
+gap> Length(N);
+96
+gap> S := N[96];
+<Numerical semigroup with 3 generators>
+gap> D := DegreesOfPrimitiveElementsOfNumericalSemigroup(S);
+[ 7, 19, 20, 40, 76, 77, 95, 98, 114, 119, 133, 140, 247, 380 ]
+gap> Length(D);
+14
+gap> Multiplicity(S);
+7
 ```
 
-Moreover, given an integer $M$, the function `NumericalSemigroupsWithMaxPrimitive` returns a list with of numerical semigroups with maximum primitive $M$. 
+Moreover, given an integer $M$, the function `NumericalSemigroupsWithMaxPrimitive` returns a list with of numerical semigroups with maximum primitive $M$.
 
-```gap
-gap> NumericalSemigroupsWithMaxPrimitive(5);
-[ <Numerical semigroup with 2 generators>, 
-  <Numerical semigroup with 2 generators>, 
-  <Numerical semigroup with 3 generators>, 
+``` gap
+gap> T := NumericalSemigroupsWithMaxPrimitive(10);
+[ <Numerical semigroup with 2 generators>, <Numerical semigroup with 3 generators>,
+  <Numerical semigroup with 3 generators>, <Numerical semigroup with 3 generators>,
+  <Numerical semigroup with 4 generators>, <Numerical semigroup with 3 generators>,
+  <Numerical semigroup with 3 generators>, <Numerical semigroup with 4 generators>,
+  <Numerical semigroup with 4 generators>, <Numerical semigroup with 4 generators>,
+  <Numerical semigroup with 5 generators>, <Numerical semigroup with 2 generators>,
+  <Numerical semigroup with 3 generators>, <Numerical semigroup with 3 generators>,
+  <Numerical semigroup with 4 generators>, <Numerical semigroup with 3 generators>,
   <Numerical semigroup with 2 generators> ]
-gap> Length(NumericalSemigroupsWithMaxPrimitive(15));
-194
+gap> Length(T);
+17
 ```
-
-
 
 ## References
-
-
-
-
-
-

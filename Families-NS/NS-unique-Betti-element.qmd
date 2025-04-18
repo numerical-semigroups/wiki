@@ -1,0 +1,63 @@
+---
+title: "Unique Betti element numerical semigroup"
+format: html
+engine: markdown
+---
+
+<!-- Affine-NS-unique-Betti-element // Num. Sem.  -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is said that $S$ is a unique Betti element numerical semigroup if $S$ has a unique [Betti element](../Presentations-NS/Betti-elements.qmd), that is,
+
+$$
+|Betti(S)| = |\{s \in S ~ | ~ \nabla_s ~ \text{ is not connected} ~ \}| = 1,
+$$ where $\nabla_s$ denotes the [graph associated to s by set of factorizations](../Presentations-NS/Graph-associated-to-an-element.qmd).
+
+It can be proven that if $S$ has a unique Betti element, then $S$ is [telescopic](NS-telescopic.qmd) and $\alpha-$[rectangular](NS-alpha-rectangular.qmd).
+
+## Examples
+
+$\circ$ Let $S = \langle 10, 18, 45 \rangle$ and $n_1 = 10 n_2 = 18, n_3 = 45$. It is well known that if $s \in S$ is a Betti element, then $s = w + n_i$ with $w \in Ap(S, n_1) \setminus \{0\}$ and $i = 2,3$, where $Ap(S, n_1)$ denotes the [Apéry set](../Basic-concepts/Apery-set.qmd) of $n_1$ in $S$. With few calculations,
+
+$$
+Ap(S, 10) = \{0, 81, 72, 63, 54, 45, 36, 117, 18, 99\},
+$$ and the candidates to be Betti elements are
+
+$$
+C := \{18, 36, 45, 54, 63, 72, 81, 90, 99, 108, 117, 126, 135, 144, 162 \}.
+$$
+
+Computing the graph $\nabla_s$ for each $s \in C$, it is concluded that $\nabla_{90}$ is the unique non-connected graph and $Betti(S) = \{90\}$. Therefore, $S$ has unique Betti element.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 26, 59, 61, 68, 75, 80, 86, 95, 96, 116 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(26, 59, 61, 68, 75, 80, 86, 95, 96, 116);
+<Numerical semigroup with 10 generators>
+```
+
+Given a numerical semigroup $S$, the function `BettiElements` returns a list with the Betti elements of $S$.
+
+``` gap
+gap> BettiElements(S);
+[ 120, 122, 127, 136, 139, 147, 148, 154, 155, 156, 160, 163, 164, 170, 171, 172, 175, 176, 177,
+  181, 182, 184, 190, 191, 192, 193, 196, 202, 204, 209, 211, 212, 218, 220, 225, 232, 236 ]
+```
+
+Therefore, $S$ has not a unique Betti element. From this function it can be defined a function such that given a numerical semigroup $S$, it returns true if $S$ has unique Betti element and false otherwise.
+
+``` gap
+gap> IsUniqueBettiElementNumericalSemigroup := function(S)
+>       if not IsNumericalSemigroup(S) then
+>           Error("The argument must be a Numerical Semigroup");
+>       fi;
+>       return Length(BettiElements(S)) = 1;
+> end;
+```
+
+## References

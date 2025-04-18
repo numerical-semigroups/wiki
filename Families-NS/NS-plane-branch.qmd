@@ -1,0 +1,103 @@
+---
+title: "Numerical semigroup associated to a plane branch"
+format: html
+engine: markdown
+---
+
+<!-- Classes-of-complete-intersection-NS -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $P(S) = \{n_1, \ldots, n_e\}$ with $n_1 < n_2 < \ldots < n_e$. For $i \in \{2, \ldots, e\}$ it is defined
+
+$$
+\tau_i = \min \{h \in \mathbb{N} ~ | ~ hn_i \in \langle n_1, \ldots, n_{i-1} \rangle \} - 1.
+$$
+
+It is said that $S$ is associated to a plane branch, or $S$ is plane branch, if $S$ is [telescopic](NS-telescopic.qmd) and $(\tau_i + 1)n_i < n_{i+1}$ for all $i \in \{2, \ldots, e-1\}$.
+
+It can be proven that if $S$ is plane branch, then $S$ is $\alpha-$[rectangular](NS-alpha-rectangular.qmd).
+
+## Examples
+
+$\circ$ Let $S = \langle 4, 6, 17 \rangle$. With few calculations,
+
+$$
+\tau_2 = \min \{h \in \mathbb{N} ~ | ~ 6h \in \langle 4 \rangle \} - 1 = 2 - 1 = 1,
+$$ $$
+\tau_3 = \min \{h \in \mathbb{N} ~ | ~ 17h \in \langle 4, 6 \rangle \} - 1 = 2 - 1 = 1.
+$$ It holds that $S$ is telescopic since $n_1 = 4 = 2 \cdot 2 = (\tau_2 + 1) \cdot (\tau_3 + 1)$ and $(\tau_2 + 1)n_2 = 2 \cdot 6 < 17$. In conclusion, $S$ is plane branch.
+
+## Examples with GAP
+
+Nowadays, there are no functions in package NumericalSgps related to numerical semigroup associated to a plane branch. However, given a numerical semigroup $S$, the following function in GAP returns true if $S$ is plane branch and false otherwise.
+
+``` gap
+gap> IsPlaneBranchNumericalSemigroup := function(S)
+>       local Min_gen, e, list_tau, i;
+>       if not IsNumericalSemigroup(S) then
+>           Error("The argument must be a Numerical Semigroup");
+>       fi;
+>       Min_gen := MinimalGenerators(S);
+>       e := Length(Min_gen);
+>       if e = 1 then
+>           return false;
+>       fi;
+>       if not IsTelescopic(S) then
+>           return false;
+>       fi;
+>       list_tau := ConstantsTau(S);
+>       for i in [2..e-1] do
+>           if (list_tau[i-1] + 1)*Min_gen[i] >= Min_gen[i+1] then
+>               return false;
+>           fi;
+>       od;
+>       return true;
+> end;
+function( S ) ... end
+```
+
+Where `ConstantsTau` is the following function.
+
+``` gap
+gap> ConstantsTau := function(S)
+>       local Min_gen, p, list_tau, i, Sub_min_gen, d_i, S_i, n_i, tau;
+>       if not IsNumericalSemigroup(S) then
+>           Error("The argument must be a Numerical Semigroup");
+>       fi;
+>       Min_gen := MinimalGenerators(S);
+>       if 1 in S then 
+>           Error("The argument must be a Numerical Semigroup other than N"); 
+>       fi;
+>       p := Length(Min_gen);
+>       list_tau := [];
+>       for i in [2..p] do
+>           Sub_min_gen := Min_gen{[1..i-1]};
+>           d_i := Gcd(Sub_min_gen);
+>           S_i := NumericalSemigroup(Sub_min_gen/d_i);
+>           n_i := Min_gen[i];
+>           tau := First([2..Minimum(Sub_min_gen)], k->((k*n_i) mod d_i=0) and (k*n_i/d_i in S_i)) - 1;
+>           Add(list_tau, tau);
+>       od;
+>       return list_tau;
+> end;
+function( S ) ... end
+```
+
+$\diamond$ Let $S = \langle 6, 9, 23 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(6, 9, 23);
+<Numerical semigroup with 3 generators>
+```
+
+From the functions defined above,
+
+``` gap
+gap> IsPlaneBranchNumericalSemigroup(S);
+true
+gap> ConstantsTau(S);
+[ 1, 2 ]
+```
+
+## References

@@ -1,0 +1,153 @@
+---
+title: "Gamma rectangular numerical semigroup"
+format: html
+engine: markdown
+---
+
+<!-- Classes-of-complete-intersection-NS -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $P(S) = \{n_1, \ldots, n_e\}$ with $n_1 < n_2 < \ldots < n_e$. It is defined for each $i \in \{2, \ldots, e\}$ ,
+
+$$
+\gamma_i = \max \{h \in \mathbb{N} ~ | ~ h n_i \in Ap(S, n_1) ~ \text{ and } ~ ord(hn_i) = h ~ \text{ and } ~ d_{max}(hn_i) = 1\},
+$$
+
+where $Ap(S, n_1)$ denotes the [Apéry set](../Basic-concepts/Apery-set.qmd) of $S$ in $n_1$, $ord(hn_i)$ denotes the [order](../Fact-and-div/Order-of-an-element.qmd) of $hn_i$ in $S$ and $d_{max}(hn_i)$ denotes the [maximal denumerant](../Fact-and-div/Maximal-denumerant-of-an-element.qmd) of $s$ in $S$. It is said that $S$ has $\gamma-$rectangular Apéry set if
+
+$$
+Ap(S, n_1) = \left \{ \sum_{i = 2}^e \lambda_i n_i ~ | ~ 0 \le \lambda_i \le \gamma_i \right \}.
+$$
+
+It can be proven that the inclusion $\subseteq$ is always fulfilled. Moreover, if $S$ is $\gamma-$rectangular, then is a [free](NS-free.qmd) numerical semigroup.
+
+## Examples
+
+$\circ$ Let $S = \langle 10, 11, 12 \rangle$. The Apéry set of $S$ in $n_1 = 10$ is $Ap(S, 10) = \{0, 11, 12, 23, 24, 35, 36, 47, 48, 59 \}$. With few calculations,
+
+$$
+\gamma_2 = \max \{h \in \mathbb{N} ~ | ~ 11h \in Ap(S, 10) ~ \text{ and } ~ ord(11h) = h ~ \text{ and } ~ d_{max}(11h) = 1\} = 1,
+$$
+
+$$
+\gamma_3 = \max \{h \in \mathbb{N} ~ | ~ 12h \in Ap(S, 10) ~ \text{ and } ~ ord(12h) = h ~ \text{ and } ~ d_{max}(12h) = 1\} = 4.
+$$
+
+Therefore,
+
+$$
+\begin{align*}
+\left \{ \sum_{i = 2}^e \lambda_i n_i ~ | ~ 0 \le \lambda_i \le \gamma_i \right \} &= \{0, 12, 2 \cdot 12, 3 \cdot 12, 4 \cdot 12, 11, 11 + 12, 11 + 2 \cdot 12, \\
+& 11 + 3 \cdot 12, 11 + 4 \cdot 12\} = \{0, 11, 12, 23, 24, 35, 36, 47, 48, 59 \} = Ap(S, 10).
+\end{align*}
+$$
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 18, 49, 50, 55, 58, 65, 84, 95 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(18, 49, 50, 55, 58, 65, 84, 95);
+<Numerical semigroup with 8 generators>
+```
+
+Given a numerical semigroup $S$, the function `IsAperySetGammaRectangular` returns true if $S$ is $\gamma-$rectangular and false otherwise.
+
+``` gap
+gap> IsAperySetGammaRectangular(S);
+false
+```
+
+$\diamond$ Given a numerical semigroup $S$, the following function returns the constants $\gamma_2, \ldots, \gamma_e$.
+
+``` gap
+gap> GammaConstantsOfNumericalSemigroup := function(S)
+>       local e, min_gen, Ap, list_gamma, i, h, n_i;
+>       if not IsNumericalSemigroup(S) then
+>           Error("The argument must be a Numerical Semigroup");
+>       fi;
+>       e := EmbeddingDimension(S);
+>       min_gen := MinimalGenerators(S);
+>       Ap := AperyList(S);
+>       list_gamma := [];
+>       for i in [2..e] do
+>           h := 0;
+>           n_i := min_gen[i];
+>           while h*n_i in Ap and  MaximumDegreeOfElementWRTNumericalSemigroup(h*n_i, S) = h and MaximalDenumerant(h*n_i, S) = 1 do
+>             h := h + 1;
+>           od;
+>           Add(list_gamma, h-1);
+>       od;
+>       return list_gamma;
+> end;
+function( S ) ... end
+```
+
+Let $S = \langle 19, 28, 32, 43, 50 \rangle$, in GAP;
+
+``` gap
+gap> S := NumericalSemigroup(19, 28, 32, 43, 50 );
+<Numerical semigroup with 5 generators>
+```
+
+From the function defined above,
+
+``` gap
+gap> GammaConstantsOfNumericalSemigroup(S);
+[ 3, 3, 2, 1 ]
+```
+
+$\diamond$ Given $n,a,b,k$ integers, the following function tries to find in $k$ attempts a ''random'' $\gamma-$rectangular numerical semigroup with no more than $n$ generators in $[a..b]$.
+
+``` gap
+gap> RandomGammaRectangularNumericalSemigroup := function(n, a, b, k)
+>       local i;
+>       if not IsPosInt(n) then
+>           Error("First argument must be a positive integer");
+>       fi;
+>       if not IsPosInt(a) then
+>           Error("Second argument must be a positive integer");
+>       fi;
+>       if not IsPosInt(b) then
+>           Error("Third argument must be a positive integer");
+>       fi;
+>       if not IsPosInt(k) then
+>           Error("Fourth argument must be a positive integer");
+>       fi;
+> 
+>       if a >= b then
+>           Error("The second argument must be smaller than the third argument");
+>       fi;
+>       for i in [1..k] do
+>         S := RandomNumericalSemigroup(n, a, b);
+>         if IsAperySetGammaRectangular(S) then
+>             return S;
+>         fi;
+>       od;
+>       return fail;
+> end;
+function( n, a, b, k ) ... end
+```
+
+Let us consider $n = 100, a = 30, b = 5000$ and $k = 1000$,
+
+``` gap
+gap> S := RandomGammaRectangularNumericalSemigroup(100, 30, 5000, 1000);
+<Numerical semigroup with 4 generators>
+gap> MinimalGenerators(S);
+[ 18, 27, 29, 30 ]
+```
+
+Then, $S = \langle 18, 27, 29, 30 \rangle$ is a $\gamma-$rectangular numerical semigroup and is neither $\beta-$rectangular nor $\alpha-$rectangular numerical semigroup.
+
+``` gap
+gap> IsAperySetAlphaRectangular(S);
+false
+gap> IsAperySetBetaRectangular(S);
+false
+```
+
+## References

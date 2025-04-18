@@ -8,6 +8,8 @@ engine: markdown
 
 Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $P = \{n_1, \ldots, n_e\}$ the [set of minimal generators](../Basic-concepts/Minimal-set-of-generators.qmd) of $S$. It is said that $S$ is telescopic if $S$ is [free](NS-free.qmd) for the arrangement $(n_1, \ldots, n_e)$ and $n_1 < \cdots < n_e$.
 
+It can be proven that if $S$ is telescopic, then is $\beta-$[rectangular](NS-beta-rectangular.qmd).
+
 ## Examples
 
 $\circ$ Let $S = \langle 4, 6, 9 \rangle$. We have, $d_2 = 4$ and $d_3 = 2$. Then, we have that $\overline{c}_2 = \overline{c}_3 = 2$. As $\overline{c}_2n_2 = 2 \cdot 6 \in \langle 4 \rangle$ and $\overline{c}_3n_3 = 2 \cdot 9 \in \langle 4, 6 \rangle$, it is concluded that $S$ is telescopic.
