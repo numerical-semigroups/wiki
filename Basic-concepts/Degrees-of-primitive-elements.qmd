@@ -10,7 +10,7 @@ engine: markdown
 
 Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) [minimally generated](Minimal-set-of-generators.qmd) by $P(S) = \{n_1, \ldots, n_e\}$. it is said that $s \in S$ is a degree of primitive elements in $S$ if there exists a minimal solution to $(n_1, \ldots, n_e) \cdot x - (n_1, \ldots, n_e) \cdot y = 0$, where $x,y$ are [factorizations](../Presentations-NS/Set-of-factorizations.qmd) of $s$ in $S$ and the dot product is the usual vector scalar product.
 
-It can be proven that [Betti elements](../Presentations-NS/Betti-elements.qmd) are primitive, and as a consequence every numerical semigroup has a primitive element.
+It can be proven that [Betti elements](../Presentations-NS/Betti-element.qmd) are primitive, and as a consequence every numerical semigroup has a primitive element.
 
 ## Examples
 

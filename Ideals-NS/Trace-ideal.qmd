@@ -1,0 +1,68 @@
+---
+title: "Trace ideal"
+format: html
+engine: markdown
+---
+
+<!-- Canonical-trace-ideal-and-residue-for-NS-rings -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $K$ be its [canonical ideal](Canonical-ideal.qmd). It is defined the trace ideal of $S$, denoted by $tr(S)$, as $tr(S) = K + (S - K)$, where
+
+$$
+S - K = \{z \in \mathbb{Z} ~ | ~ z + K \subseteq S\},
+$$ and
+
+$$
+K + (S - K) = \{k + s' ~ | ~ k \in K, s' \in S-K \}.
+$$
+
+## Examples
+
+$\circ$ Let $S = \langle 7, 9, 11, 12 \rangle = \{0, 7, 9, 11, 12, 14, 16, 18, \rightarrow\}$. By definition, its canonical ideal is
+
+$$
+K(S) := \{x \in \mathbb{Z} ~ | ~ F(S) - x \not \in S \},
+$$ where $F(S)$ denotes the [Frobenius number](../Basic-concepts/Frobenius-number.qmd) of $S$. Since $F(S) = 17$ and $S \subseteq K(S) \subseteq \mathbb{N}$, it is deduced that
+
+$$
+K(S) = \{0, 2, 4, 7, 9, 11, 12, 13, 14, 15, 16, 18, \rightarrow\}.
+$$ Moreover, since $0 \in K(S)$, then $S - K \subseteq S$ and taking into account that $\{18, \rightarrow\} \subseteq K-S$, it is obtained the following:
+
+$$
+S - K = \{ 7, 12, 14, 16, 18, \rightarrow \}.
+$$ Finally,
+
+$$
+\begin{align*}
+tr(S) &= K + (S - K) = \{0, 2, 4, 7, 9, 11, 12, 13, 14, 15, 16, 18, \rightarrow\} + \{ 7, 12, 14, 16, 18, \rightarrow \} \\
+& = (\{0, 2, 4, 7, 9\} + \{ 7, 12, 14, 16\}) \cup \{18, \rightarrow\} = \{ 7, 9, 11, 12, 14, 16, 18, \rightarrow\}.
+\end{align*}
+$$
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 12, 15, 17, 20, 28, 38 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(12, 15, 17, 20, 28, 38);
+<Numerical semigroup with 6 generators>
+```
+
+Given a numerical semigroup $S$, the functions `TraceIdeal` and `TraceIdealOfNumericalSemigroup` return the trace ideal of $S$.
+
+``` gap
+gap> tr := TraceIdeal(S);
+<Ideal of numerical semigroup>
+gap> TraceIdealOfNumericalSemigroup(S) = tr;
+true
+gap> SmallElements(tr);
+[ 27, 28, 29, 30, 32, 34 ]
+```
+
+The function `SmallElements` returns a list with the [small elements](Left-elements-ideal.qmd) of the given ideal. Then, $tr(S) = \{27, 28, 29, 30, 32, 34, \rightarrow\}$.
+
+## References

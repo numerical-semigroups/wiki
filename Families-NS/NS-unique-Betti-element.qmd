@@ -8,11 +8,13 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is said that $S$ is a unique Betti element numerical semigroup if $S$ has a unique [Betti element](../Presentations-NS/Betti-elements.qmd), that is,
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is said that $S$ is a unique Betti element numerical semigroup if $S$ has a unique [Betti element](../Presentations-NS/Betti-element.qmd), that is,
 
 $$
 |Betti(S)| = |\{s \in S ~ | ~ \nabla_s ~ \text{ is not connected} ~ \}| = 1,
-$$ where $\nabla_s$ denotes the [graph associated to s by set of factorizations](../Presentations-NS/Graph-associated-to-an-element.qmd).
+$$ 
+
+where $\nabla_s$ denotes the [graph associated to s by set of factorizations](../Presentations-NS/Graph-associated-to-an-element.qmd).
 
 It can be proven that if $S$ has a unique Betti element, then $S$ is [telescopic](NS-telescopic.qmd) and $\alpha-$[rectangular](NS-alpha-rectangular.qmd).
 

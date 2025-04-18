@@ -1,0 +1,66 @@
+---
+title: "Generalized almost symmetric numerical semigroup"
+format: html
+engine: markdown
+---
+
+<!--  -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $P(S)$ with [Frobenius number](../Basic-concepts/Frobenius-number.qmd) $F(S)$ and set of [pseudo-Frobenius numbers](../Basic-concepts/Pseudo-Frobenius-number.qmd) $PF(S)$, and let $K(S)$ be its [canonical ideal](../Ideals-NS/Canonical-ideal). It is said that $S$ is a generalized almost symmetric numerical semigroup if either $2K(S) = K(S)$ (that is, $S$ is [symmetric](NS-symmetric.qmd)), where
+
+$$
+2K = \{k + k' ~ | ~ k,k' \in K\},
+$$
+
+or $2K \setminus K = \{F(S) - x_1, \ldots, F(S) - x_r, F(S)\}$ for some $x_1, \ldots, x_r \not \in P(S)$ such that $x_i - x_j \not \in PF(S)$.
+
+It can be proven that every [almost symmetric numerical semigroup](NS-almost-symmetric.qmd) is a generalized almost symmetric numerical semigroup.
+
+## Examples
+
+$\circ$ Let $S = \langle 10, 11, 19 \rangle$. With few calculations, we have that $F(S) = 56$ and $PF(S) = \{47, 56\}$. Since $F(S)$ is even, $S$ is not symmetric and $K(S) \ne K(S)$. It canonical ideal is
+
+$$
+K(S) := \{x \in \mathbb{N} ~ | ~ F(S) - x \not \in S \} = \{0,9\} + S,
+$$
+
+and
+
+$$
+2K \setminus K = (\{0, 9, 18\} + S) \setminus (\{0,9\} + S) = (\{18\} + S) \setminus (\{0,9\} + S) = \{18, 37, 56\}.
+$$
+Furthermore, $x_1 = F(S) - 18 = 38, x_2 = F(S) - 37 = 19$, and it holds $x_1, x_2 \not \in P(S) = \{10, 11, 19\}$ and $x_1 - x_2 = 19 \not \in PF(S)$. In conclusion, $S$ is generalized almost symmetric numerical semigroup.
+
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 11, 14, 15, 16, 17, 18, 20  \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(11, 14, 15, 16, 17, 18, 20);
+<Numerical semigroup with 7 generators>
+```
+
+Given a numerical semigroup, the function `IsGeneralizedAlmostSymmetric` returns true if $S$ is almost symmetric generalized numerical semigroup and false otherwise. On the other hand, the function `IsAlmostSymmetric` returns true if $S$ is almost symmetric and false otherwise.
+
+```gap
+gap> IsGeneralizedAlmostSymmetric(S);
+true
+gap> IsAlmostSymmetric(S);
+false
+```
+
+
+
+
+
+## References
+
+
+
+
+

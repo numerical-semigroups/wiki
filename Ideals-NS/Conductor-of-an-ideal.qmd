@@ -1,0 +1,63 @@
+---
+title: "Conductor of an ideal"
+format: html
+engine: markdown
+---
+
+<!--  -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $E$ a [relative ideal](Relative-ideal.qmd) of $S$. By definition of relative ideal, it holds that $E+S \subseteq E$, where
+
+$$
+E + S = \{e + s ~ | ~ e \in E, s \in S\},
+$$
+
+and then there exists $c \in E$ such that $c + \mathbb{N} \subseteq E$. It is defined the conductor of $E$ as the least element satisfying the previous property, and it is denoted by $C(I)$.
+
+This definitions is an extension of the definition of [conductor](../Basic-concepts/Conductor.qmd) of a numerical semigroup, considering $S$ as ideal of itself.
+
+## Examples
+
+$\circ$ Let $S = \langle 6, 8, 13 \rangle = \{0, 6, 8, 12, 13, 14, 16, 18, 19, 20, 21, 22, 24, \rightarrow\}$ and $I = \{-5, -3, -2\} + S$. Let $L = \{0, 6, 8, 12, 13, 14, 16, 18, 19, 20, 21, 22\}$ and $L - n = \{l - n ~ | ~ l \in l\}$, with few computations,
+
+$$
+\begin{align*}
+I &= (\{-5\} + S) \cup (\{-3\} + S) \cup (\{2\} + S) = (L - 5) \cup (L-3) \cup (L + 2) \cup \{19, \rightarrow\} \\
+& = \{-5, -3, 1, 2, 3, 5, 7, 8, 9, 10, 11, 13, \rightarrow \}, 
+\end{align*}
+$$
+
+concluding that $C(I) = 13$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 14, 23, 43, 68, 81, 87 \rangle$ and $I = \{-97, -85\} + S$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(14, 23, 43, 68, 81, 87);
+<Numerical semigroup with 6 generators>
+gap> I := [-97, -85] + S;
+<Ideal of numerical semigroup>
+```
+
+Given a relative ideal $I$ of a numerical semigroup, the functions `Conductor` and `ConductorOfIdealOfNumericalSemigroup` return the conductor of $I$.
+
+``` gap
+gap> Conductor(I);
+-6
+gap> ConductorOfIdealOfNumericalSemigroup(I) = Conductor(I);
+true
+```
+
+If in function `Conductor` we give a numerical semigroup $S$, then it computes the conductor of $S$.
+
+``` gap
+gap> Conductor(S);
+91
+```
+
+## References

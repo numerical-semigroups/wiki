@@ -10,7 +10,7 @@ engine: markdown
 
 Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $m$ be the [multiplicity](../Basic-concepts/Multiplicity.qmd) of $S$. It is said that $S$ is additive if $ord(m+x) = ord(x) + 1$ for all $x \in S \setminus \{0\}$, where $ord(x)$ denotes the [order](../Fact-and-div/Order-of-an-element.qmd) of $x$ in $S$.
 
-It can be proven that $S$ is an additive numerical semigroup if, and only if, $adj(S) = Ap(B, m)$, where $adj(S)$ is the [adjustment](../Fact-and-div/Adjustment-NS.qmd) of $S$, $B$ is the [blowup](../Ideals-NS/Blowup.qmd) of $S$ and $Ap(B, m)$ is the [Apéry set](../Basic-concepts/Aper-set.qmd) of $B$ in $m$.
+It can be proven that $S$ is an additive numerical semigroup if, and only if, $adj(S) = Ap(B, m)$, where $adj(S)$ is the [adjustment](../Fact-and-div/Adjustment-NS.qmd) of $S$, $B$ is the [blowup](../Ideals-NS/Blowup.qmd) of $S$ and $Ap(B, m)$ is the [Apéry set](../Basic-concepts/Apery-set.qmd) of $B$ in $m$.
 
 ## Examples
 

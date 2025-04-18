@@ -1,0 +1,62 @@
+---
+title: "Left elements of a relative ideal"
+format: html
+engine: markdown
+---
+
+<!--  -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $E$ a [relative ideal](Relative-ideal.qmd) of $S$ with [conductor](Conductor-of-an-ideal.qmd) $C(E)$. It is defined set of left elements of $E$, denoted by $N(E)$, as
+
+$$
+N(E) = \{e \in E ~ | ~ e < C(E)\}.
+$$ If we also include $e = C(E)$, then it is called the set of small elements of $E$.
+
+This definitions is an extension of the definition of [left elements](../Basic-concepts/Left-elements.qmd) of a numerical semigroup, considering $S$ as ideal of itself.
+
+## Examples
+
+$\circ$ Let $S = \langle 6, 7, 11 \rangle = \{0, 6, 7, 11, 12, 13, 14, 17, \rightarrow\}$ and $I = \{-1, 8, 9\} + S$. If $L = \{0, 6, 7, 11, 12, 13, 14\}$ and $L - n = \{l - n ~ | ~ l \in L\}$, with few computations,
+
+$$
+\begin{align*}
+I & = (\{-1\} + S) \cup (\{8\} + S) \cup (\{9\} + S) = (L-1) \cup (L+8) \cup (L+9) \cup \{16, \rightarrow\} \\
+& = \{ -1, 5, 6, 8, \rightarrow \}.
+\end{align*}
+$$
+
+Then, $C(I) = 8$ and $N(I) = \{-1, 5, 6\}$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 15, 17, 25, 26, 53, 63 \rangle$ and $I = \{11, 13, 59\} + S$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(15, 17, 25, 26, 53, 63);
+<Numerical semigroup with 6 generators>
+gap> I := [11, 13, 59] + S;
+<Ideal of numerical semigroup>
+```
+
+Given a relative ideal $I$ of a numerical semigroup, the functions `SmallElements` and `SmallElementsOfIdealOfNumericalSemigroup` return a list with the small elements of $I$.
+
+``` gap
+gap> SmallElements(I);
+[ 11, 13, 26, 28, 30, 36, 37, 38, 39, 41, 43, 45, 47, 51, 52, 53, 54, 55, 56, 58 ]
+gap> SmallElementsOfIdealOfNumericalSemigroup(I) = SmallElements(I);
+true
+```
+
+In function `SmallElements`, if we give a numerical semigroup $S$, the function returns the small elements of $S$.
+
+``` gap
+gap> SmallElements(S);
+[ 0, 15, 17, 25, 26, 30, 32, 34, 40, 41, 42, 43, 45, 47, 49, 50, 51, 52, 53, 55, 56, 57,
+  58, 59, 60, 62 ]
+```
+
+## References

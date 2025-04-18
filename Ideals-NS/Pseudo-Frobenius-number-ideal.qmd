@@ -1,0 +1,55 @@
+---
+title: "Pseudo-Frobenius number of a relative ideal"
+format: html
+engine: markdown
+---
+
+<!-- Num. appl. -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $E$ a [relative ideal](Relative-ideal.qmd) of $S$. If $M = S \setminus \{0\}$ is the [maximal ideal](Maximal-ideal.qmd) of $S$, it is defined the set of pseudo-Frobenius numbers of $E$, denoted by $PF(E)$, as
+
+$$
+PF(E) = (E-M) \setminus E = \{x \in \mathbb{Z} ~ | ~ z \not \in E ~ \land ~ z + M \subseteq E\},
+$$
+
+where
+
+$$
+z + M = \{z + m ~ | ~ m \in M\}.
+$$
+
+The cardinal of $PF(E)$ is called the [type](Type-ideal.qmd) of the relative ideal $E$ and is a generalizations of the [type of a numerical semigroup](../Basic-concepts/Type.qmd).
+
+## Examples
+
+$\circ$ Let $S = \langle 5, 7, 9 \rangle = \{ 0, 5, 7, 9, 10, 12, 14, \rightarrow \}$ and $I = \{-1, -2\} + S$. Since $I = (\{-1\} + S) \cup (\{-2\} + S)$, it is deduced that $I = \{-2, -1, 3, \rightarrow\}$ and
+
+$$
+I - M = \{z \in \mathbb{Z} ~ | ~ z + M \subseteq I\} = \{-2, \rightarrow\},
+$$ concluding that $PF(I) = \{0, 1, 2\}$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 19, 47, 50, 55, 68, 89 \rangle$ and $I = \{3, 23, 37, 86\} + S$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(19, 47, 50, 55, 68, 89);
+<Numerical semigroup with 6 generators>
+gap> I := [3, 23, 37, 86] + S;
+<Ideal of numerical semigroup>
+```
+
+Given a relative ideal of a numerical semigroup $I$, the functions `PseudoFrobenius` and `PseudoFrobeniusOfIdealOfNumericalSemigroup` return the set of pseudo-Frobenius numbers of $I$.
+
+``` gap
+gap> PseudoFrobenius(I);
+[ 39, 65, 68, 81, 93, 101, 102, 104, 114 ]
+gap> PseudoFrobeniusOfIdealOfNumericalSemigroup(I) = PseudoFrobenius(I);
+true
+```
+
+## References
