@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Telescopic numerical semigroup – Wiki numerical semigroups</title>
+<title>Beta rectangular numerical semigroup – Wiki numerical semigroups</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -142,7 +142,9 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Families-NS/Arf-semigroup.html">Families of numerical semigroups</a></li><li class="breadcrumb-item"><a href="../Families-NS/NS-telescopic.html">Telescopic numerical semigroup</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Wiki numerical semigroups
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -354,13 +356,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Families of numerical semigroups</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Families-NS/Arf-semigroup.html" class="sidebar-item-text sidebar-link">
@@ -483,7 +485,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Families-NS/NS-telescopic.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Families-NS/NS-telescopic.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Telescopic numerical semigroup</span></a>
   </div>
 </li>
@@ -1181,9 +1183,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Families-NS/Arf-semigroup.html">Families of numerical semigroups</a></li><li class="breadcrumb-item"><a href="../Families-NS/NS-telescopic.html">Telescopic numerical semigroup</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Telescopic numerical semigroup</h1>
+<h1 class="title">Beta rectangular numerical semigroup</h1>
 </div>
 
 
@@ -1200,30 +1202,108 @@ window.Quarto = {
 </header>
 
 
+<!-- Classes-of-complete-intersection-NS -->
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> and <span class="math inline">\(P = \{n_1, \ldots, n_e\}\)</span> the <a href="../Basic-concepts/Minimal-set-of-generators.html">set of minimal generators</a> of <span class="math inline">\(S\)</span>. It is said that <span class="math inline">\(S\)</span> is telescopic if <span class="math inline">\(S\)</span> is <a href="../Families-NS/NS-free.html">free</a> for the arrangement <span class="math inline">\((n_1, \ldots, n_e)\)</span> and <span class="math inline">\(n_1 &lt; \cdots &lt; n_e\)</span>.</p>
-<p>It can be proven that if <span class="math inline">\(S\)</span> is telescopic, then is <span class="math inline">\(\beta-\)</span><a href="../Families-NS/NS-beta-rectangular.html">rectangular</a>.</p>
+<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> <a href="../Basic-concepts/Minimal-set-of-generators.html">minimally generated</a> by <span class="math inline">\(P(S) = \{n_1, \ldots, n_e\}\)</span> with <span class="math inline">\(n_1 &lt; n_2 &lt; \ldots &lt; n_e\)</span>. It is defined for each <span class="math inline">\(i \in \{2, \ldots, e\}\)</span> ,</p>
+<p><span class="math display">\[
+\beta_i = \max \{h \in \mathbb{N} ~ | ~ h n_i \in Ap(S, n_1) ~ \text{ and } ~ ord(hn_i) = h \},
+\]</span></p>
+<p>where <span class="math inline">\(Ap(S, n_1)\)</span> denotes the <a href="../Basic-concepts/Apery-set.html">Apéry set</a> of <span class="math inline">\(S\)</span> in <span class="math inline">\(n_1\)</span> and <span class="math inline">\(ord(hn_i)\)</span> denotes the <a href="../Fact-and-div/Order-of-an-element.qmd">order</a> of <span class="math inline">\(hn_i\)</span> in <span class="math inline">\(S\)</span>. It is said that <span class="math inline">\(S\)</span> has <span class="math inline">\(\beta-\)</span>rectangular Apéry set if</p>
+<p><span class="math display">\[
+Ap(S, n_1) = \left \{ \sum_{i = 2}^e \lambda_i n_i ~ | ~ 0 \le \lambda_i \le \beta_i \right \}.
+\]</span></p>
+<p>It can be proven that the inclusion <span class="math inline">\(\subseteq\)</span> is always fulfilled. Moreover, if <span class="math inline">\(S\)</span> is <span class="math inline">\(\beta-\)</span>rectangular, then <span class="math inline">\(S\)</span> is <span class="math inline">\(\gamma-\)</span><a href="../Families-NS/NS-gamma-rectangular.html">rectangular</a>.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 4, 6, 9 \rangle\)</span>. We have, <span class="math inline">\(d_2 = 4\)</span> and <span class="math inline">\(d_3 = 2\)</span>. Then, we have that <span class="math inline">\(\overline{c}_2 = \overline{c}_3 = 2\)</span>. As <span class="math inline">\(\overline{c}_2n_2 = 2 \cdot 6 \in \langle 4 \rangle\)</span> and <span class="math inline">\(\overline{c}_3n_3 = 2 \cdot 9 \in \langle 4, 6 \rangle\)</span>, it is concluded that <span class="math inline">\(S\)</span> is telescopic.</p>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 4, 9, 14 \rangle\)</span> and the arrangement <span class="math inline">\(B_1 = \{14, 4, 9\}\)</span>. We have, <span class="math inline">\(d_2 = 14, d_3 = gcd(14, 4) = 2\)</span> and <span class="math inline">\(d_4 = 1\)</span>. Moreover, <span class="math inline">\(\overline{c}_2 = 7, \overline{c}_3 = 2\)</span>, <span class="math inline">\(\overline{c}_2n_2 = 7 \cdot 4 \in \langle 14 \rangle\)</span> and <span class="math inline">\(\overline{c}_3n_3 = 2 \cdot 9 \in \langle 14, 4 \rangle\)</span>, therefore <span class="math inline">\(S\)</span> is free for the arrangement <span class="math inline">\(B_1\)</span>. If we check with the arrangement <span class="math inline">\(B_2 = \{4, 9, 14\}\)</span>, is is obtained that <span class="math inline">\(d_2 = 4, d_3 = gcd(4, 9) = 1, d_4 = 1\)</span> and <span class="math inline">\(\overline{c}_3 = 1\)</span>. Therefore, <span class="math inline">\(\overline{c}_3 \ne c_3^*\)</span> and <span class="math inline">\(S\)</span> is not telescopic.</p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 12, 15, 46 \rangle\)</span>. The Apéry set of <span class="math inline">\(S\)</span> in <span class="math inline">\(n_1 = 12\)</span> is <span class="math inline">\(Ap(S, 12) = \{0, 61, 122, 15, 76, 137, 30, 91, 92, 45, 46, 107, \rightarrow \}\)</span>. With few calculations,</p>
+<p><span class="math display">\[
+\beta_2 = \max \{h \in \mathbb{N} ~ | ~ 15h \in Ap(S, n_1) ~ \text{ and } ~ ord(15h) = h \} = 3,
+\]</span></p>
+<p><span class="math display">\[
+\beta_3 = \max \{h \in \mathbb{N} ~ | ~ 46h \in Ap(S, n_1) ~ \text{ and } ~ ord(46h) = h \} = 2.
+\]</span></p>
+<p>Hence,</p>
+<p><span class="math display">\[
+\left \{ \sum_{i = 2}^e \lambda_i n_i ~ | ~ 0 \le \lambda_i \le \beta_i \right \} = \{0, 15, 2 \cdot 15, 3\cdot 15, 46, 2 \cdot 46, 15 + 46, 2 \cdot 15 + 46, 3 \cdot 15 + 46, 15 + 2 \cdot 46,
+\]</span></p>
+<p><span class="math display">\[
+2 \cdot 15 + 2 \cdot 46, 3 \cdot 15 + 2 \cdot 46 \} = \{0, 61, 122, 15, 76, 137, 30, 91, 92, 45, 46, 107, \rightarrow \} = Ap(S n_1),
+\]</span> and <span class="math inline">\(S\)</span> is <span class="math inline">\(\beta-\)</span>rectangular.</p>
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>The following examples are made with the package NumericalSgps in GAP.</p>
-<p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 4, 11, 14 \rangle\)</span>, in GAP:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">4</span><span class="op">,</span> <span class="fl">11</span><span class="op">,</span> <span class="fl">14</span>)<span class="op">;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">3</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>In order to know if <span class="math inline">\(S\)</span> is telescopic, we can use the functions <code>IsTelescopic</code> or <code>IsTelescopicNumericalSemigroup</code>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">IsTelescopic</span>(<span class="va">S</span>)<span class="op">;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cn">false</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">IsTelescopic</span>(<span class="va">S</span>) <span class="op">=</span> <span class="va">IsTelescopicNumericalSemigroup</span>(<span class="va">S</span>)<span class="op">;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="cn">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><span class="math inline">\(\diamond\)</span> If we are interested in how many telescopic numerical semigroups have a fixed Frobenius number <span class="math inline">\(f\)</span>, the function <code>TelescopicNumericalSemigroupsWithFrobeniusNumber</code> returns the set of all telescopic numerical semigroups with given Frobenius number <span class="math inline">\(f\)</span>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="bu">Length</span>(<span class="va">TelescopicNumericalSemigroupsWithFrobeniusNumber</span>(<span class="fl">11</span>))<span class="op">;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fl">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The following example is made with the package NumericalSgps in GAP.</p>
+<p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 20, 50, 54, 78, 115, 116, 119 \rangle\)</span>, in GAP:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">20</span><span class="op">,</span> <span class="fl">50</span><span class="op">,</span> <span class="fl">54</span><span class="op">,</span> <span class="fl">78</span><span class="op">,</span> <span class="fl">115</span><span class="op">,</span> <span class="fl">116</span><span class="op">,</span> <span class="fl">119</span>)<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">7</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Given a numerical semigroup <span class="math inline">\(S\)</span>, the function <code>IsAperySetBetaRectangular</code> returns true if <span class="math inline">\(S\)</span> is <span class="math inline">\(\beta-\)</span>rectangular and false otherwise.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">IsAperySetBetaRectangular</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cn">false</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="math inline">\(\diamond\)</span> Given a numerical semigroup <span class="math inline">\(S\)</span>, the following function returns the constants <span class="math inline">\(\beta_2, \ldots, \beta_e\)</span>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">BetaConstantsOfNumericalSemigroup</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">S</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="ex">local</span> <span class="va">e</span><span class="op">,</span> <span class="va">min_gen</span><span class="op">,</span> <span class="va">Ap</span><span class="op">,</span> <span class="va">list_beta</span><span class="op">,</span> <span class="va">i</span><span class="op">,</span> <span class="va">h</span><span class="op">,</span> <span class="va">n_i</span><span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">if</span> <span class="cn">not</span> <span class="va">IsNumericalSemigroup</span>(<span class="va">S</span>) <span class="cf">then</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="bu">Error</span>(<span class="st">"The argument must be a Numerical Semigroup"</span>)<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">e</span> <span class="op">:=</span> <span class="va">EmbeddingDimension</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">min_gen</span> <span class="op">:=</span> <span class="va">MinimalGenerators</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">Ap</span> <span class="op">:=</span> <span class="va">AperyList</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">list_beta</span> <span class="op">:=</span> []<span class="op">;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">for</span> <span class="va">i</span> <span class="ex">in</span> [<span class="fl">2</span><span class="op">..</span><span class="va">e</span>] <span class="cf">do</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="va">h</span> <span class="op">:=</span> <span class="fl">0</span><span class="op">;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="va">n_i</span> <span class="op">:=</span> <span class="va">min_gen</span>[<span class="va">i</span>]<span class="op">;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="cf">while</span> <span class="va">h</span><span class="op">*</span><span class="va">n_i</span> <span class="ex">in</span> <span class="va">Ap</span> <span class="cn">and</span>  <span class="va">MaximumDegreeOfElementWRTNumericalSemigroup</span>(<span class="va">h</span><span class="op">*</span><span class="va">n_i</span><span class="op">,</span> <span class="va">S</span>) <span class="op">=</span> <span class="va">h</span> <span class="cf">do</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>             <span class="va">h</span> <span class="op">:=</span> <span class="va">h</span> <span class="op">+</span> <span class="fl">1</span><span class="op">;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="cf">od</span><span class="op">;</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="bu">Add</span>(<span class="va">list_beta</span><span class="op">,</span> <span class="va">h</span><span class="op">-</span><span class="fl">1</span>)<span class="op">;</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">od</span><span class="op">;</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="ex">return</span> <span class="va">list_beta</span><span class="op">;</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="fu">end</span><span class="op">;</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="fu">function</span>( <span class="va">S</span> ) <span class="op">..</span>. <span class="fu">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Let <span class="math inline">\(S = \langle 16, 28, 41, 91, 95, 103 \rangle\)</span>, in GAP;</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">16</span><span class="op">,</span> <span class="fl">28</span><span class="op">,</span> <span class="fl">41</span><span class="op">,</span> <span class="fl">91</span><span class="op">,</span> <span class="fl">95</span><span class="op">,</span> <span class="fl">103</span>)<span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">6</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>From the function defined above,</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">BetaConstantsOfNumericalSemigroup</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>[ <span class="fl">3</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">1</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="math inline">\(\diamond\)</span> Given <span class="math inline">\(n,a,b,k\)</span> integers, the following function tries to find in <span class="math inline">\(k\)</span> attempts a ‘’random’’ <span class="math inline">\(\beta-\)</span>rectangular numerical semigroup with no more than <span class="math inline">\(n\)</span> generators in <span class="math inline">\([a..b]\)</span>.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">RandomBetaRectangularNumericalSemigroup</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">n</span><span class="op">,</span> <span class="va">a</span><span class="op">,</span> <span class="va">b</span><span class="op">,</span> <span class="va">k</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="ex">local</span> <span class="va">i</span><span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">if</span> <span class="cn">not</span> <span class="bu">IsPosInt</span>(<span class="va">n</span>) <span class="cf">then</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="bu">Error</span>(<span class="st">"First argument must be a positive integer"</span>)<span class="op">;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">if</span> <span class="cn">not</span> <span class="bu">IsPosInt</span>(<span class="va">a</span>) <span class="cf">then</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="bu">Error</span>(<span class="st">"Second argument must be a positive integer"</span>)<span class="op">;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">if</span> <span class="cn">not</span> <span class="bu">IsPosInt</span>(<span class="va">b</span>) <span class="cf">then</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="bu">Error</span>(<span class="st">"Third argument must be a positive integer"</span>)<span class="op">;</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">if</span> <span class="cn">not</span> <span class="bu">IsPosInt</span>(<span class="va">k</span>) <span class="cf">then</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="bu">Error</span>(<span class="st">"Fourth argument must be a positive integer"</span>)<span class="op">;</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> </span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">if</span> <span class="va">a</span> <span class="op">&gt;=</span> <span class="va">b</span> <span class="cf">then</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="bu">Error</span>(<span class="st">"The second argument must be smaller than the third argument"</span>)<span class="op">;</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">for</span> <span class="va">i</span> <span class="ex">in</span> [<span class="fl">1</span><span class="op">..</span><span class="va">k</span>] <span class="cf">do</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>         <span class="va">S</span> <span class="op">:=</span> <span class="va">RandomNumericalSemigroup</span>(<span class="va">n</span><span class="op">,</span> <span class="va">a</span><span class="op">,</span> <span class="va">b</span>)<span class="op">;</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>         <span class="cf">if</span> <span class="va">IsAperySetBetaRectangular</span>(<span class="va">S</span>) <span class="cf">then</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>             <span class="ex">return</span> <span class="va">S</span><span class="op">;</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>         <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">od</span><span class="op">;</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="ex">return</span> <span class="cn">fail</span><span class="op">;</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="fu">end</span><span class="op">;</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="fu">function</span>( <span class="va">n</span><span class="op">,</span> <span class="va">a</span><span class="op">,</span> <span class="va">b</span><span class="op">,</span> <span class="va">k</span> ) <span class="op">..</span>. <span class="fu">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Let us consider <span class="math inline">\(n = 100, a = 30, b = 5000\)</span> and <span class="math inline">\(k = 1000\)</span>,</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">RandomBetaRectangularNumericalSemigroup</span>(<span class="fl">100</span><span class="op">,</span> <span class="fl">30</span><span class="op">,</span> <span class="fl">5000</span><span class="op">,</span> <span class="fl">1000</span>)<span class="op">;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">4</span> <span class="va">generators</span><span class="op">&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">MinimalGenerators</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>[ <span class="fl">96</span><span class="op">,</span> <span class="fl">360</span><span class="op">,</span> <span class="fl">745</span><span class="op">,</span> <span class="fl">800</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Then, <span class="math inline">\(S = \langle 96, 360, 745, 800 \rangle\)</span> is a <span class="math inline">\(\beta-\)</span>rectangular numerical semigroup. In fact, is <span class="math inline">\(\alpha-\)</span>rectangular,</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">IsAperySetAlphaRectangular</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="cn">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>

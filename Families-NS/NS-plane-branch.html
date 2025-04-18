@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Telescopic numerical semigroup – Wiki numerical semigroups</title>
+<title>Numerical semigroup associated to a plane branch – Wiki numerical semigroups</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -142,7 +142,9 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Families-NS/Arf-semigroup.html">Families of numerical semigroups</a></li><li class="breadcrumb-item"><a href="../Families-NS/NS-telescopic.html">Telescopic numerical semigroup</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Wiki numerical semigroups
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -354,13 +356,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Families of numerical semigroups</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Families-NS/Arf-semigroup.html" class="sidebar-item-text sidebar-link">
@@ -483,7 +485,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Families-NS/NS-telescopic.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Families-NS/NS-telescopic.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Telescopic numerical semigroup</span></a>
   </div>
 </li>
@@ -1181,9 +1183,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Families-NS/Arf-semigroup.html">Families of numerical semigroups</a></li><li class="breadcrumb-item"><a href="../Families-NS/NS-telescopic.html">Telescopic numerical semigroup</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Telescopic numerical semigroup</h1>
+<h1 class="title">Numerical semigroup associated to a plane branch</h1>
 </div>
 
 
@@ -1200,30 +1202,81 @@ window.Quarto = {
 </header>
 
 
+<!-- Classes-of-complete-intersection-NS -->
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> and <span class="math inline">\(P = \{n_1, \ldots, n_e\}\)</span> the <a href="../Basic-concepts/Minimal-set-of-generators.html">set of minimal generators</a> of <span class="math inline">\(S\)</span>. It is said that <span class="math inline">\(S\)</span> is telescopic if <span class="math inline">\(S\)</span> is <a href="../Families-NS/NS-free.html">free</a> for the arrangement <span class="math inline">\((n_1, \ldots, n_e)\)</span> and <span class="math inline">\(n_1 &lt; \cdots &lt; n_e\)</span>.</p>
-<p>It can be proven that if <span class="math inline">\(S\)</span> is telescopic, then is <span class="math inline">\(\beta-\)</span><a href="../Families-NS/NS-beta-rectangular.html">rectangular</a>.</p>
+<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> <a href="../Basic-concepts/Minimal-set-of-generators.html">minimally generated</a> by <span class="math inline">\(P(S) = \{n_1, \ldots, n_e\}\)</span> with <span class="math inline">\(n_1 &lt; n_2 &lt; \ldots &lt; n_e\)</span>. For <span class="math inline">\(i \in \{2, \ldots, e\}\)</span> it is defined</p>
+<p><span class="math display">\[
+\tau_i = \min \{h \in \mathbb{N} ~ | ~ hn_i \in \langle n_1, \ldots, n_{i-1} \rangle \} - 1.
+\]</span></p>
+<p>It is said that <span class="math inline">\(S\)</span> is associated to a plane branch, or <span class="math inline">\(S\)</span> is plane branch, if <span class="math inline">\(S\)</span> is <a href="../Families-NS/NS-telescopic.html">telescopic</a> and <span class="math inline">\((\tau_i + 1)n_i &lt; n_{i+1}\)</span> for all <span class="math inline">\(i \in \{2, \ldots, e-1\}\)</span>.</p>
+<p>It can be proven that if <span class="math inline">\(S\)</span> is plane branch, then <span class="math inline">\(S\)</span> is <span class="math inline">\(\alpha-\)</span><a href="NS-alpha-rectangular.qmd">rectangular</a>.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 4, 6, 9 \rangle\)</span>. We have, <span class="math inline">\(d_2 = 4\)</span> and <span class="math inline">\(d_3 = 2\)</span>. Then, we have that <span class="math inline">\(\overline{c}_2 = \overline{c}_3 = 2\)</span>. As <span class="math inline">\(\overline{c}_2n_2 = 2 \cdot 6 \in \langle 4 \rangle\)</span> and <span class="math inline">\(\overline{c}_3n_3 = 2 \cdot 9 \in \langle 4, 6 \rangle\)</span>, it is concluded that <span class="math inline">\(S\)</span> is telescopic.</p>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 4, 9, 14 \rangle\)</span> and the arrangement <span class="math inline">\(B_1 = \{14, 4, 9\}\)</span>. We have, <span class="math inline">\(d_2 = 14, d_3 = gcd(14, 4) = 2\)</span> and <span class="math inline">\(d_4 = 1\)</span>. Moreover, <span class="math inline">\(\overline{c}_2 = 7, \overline{c}_3 = 2\)</span>, <span class="math inline">\(\overline{c}_2n_2 = 7 \cdot 4 \in \langle 14 \rangle\)</span> and <span class="math inline">\(\overline{c}_3n_3 = 2 \cdot 9 \in \langle 14, 4 \rangle\)</span>, therefore <span class="math inline">\(S\)</span> is free for the arrangement <span class="math inline">\(B_1\)</span>. If we check with the arrangement <span class="math inline">\(B_2 = \{4, 9, 14\}\)</span>, is is obtained that <span class="math inline">\(d_2 = 4, d_3 = gcd(4, 9) = 1, d_4 = 1\)</span> and <span class="math inline">\(\overline{c}_3 = 1\)</span>. Therefore, <span class="math inline">\(\overline{c}_3 \ne c_3^*\)</span> and <span class="math inline">\(S\)</span> is not telescopic.</p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 4, 6, 17 \rangle\)</span>. With few calculations,</p>
+<p><span class="math display">\[
+\tau_2 = \min \{h \in \mathbb{N} ~ | ~ 6h \in \langle 4 \rangle \} - 1 = 2 - 1 = 1,
+\]</span> <span class="math display">\[
+\tau_3 = \min \{h \in \mathbb{N} ~ | ~ 17h \in \langle 4, 6 \rangle \} - 1 = 2 - 1 = 1.
+\]</span> It holds that <span class="math inline">\(S\)</span> is telescopic since <span class="math inline">\(n_1 = 4 = 2 \cdot 2 = (\tau_2 + 1) \cdot (\tau_3 + 1)\)</span> and <span class="math inline">\((\tau_2 + 1)n_2 = 2 \cdot 6 &lt; 17\)</span>. In conclusion, <span class="math inline">\(S\)</span> is plane branch.</p>
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>The following examples are made with the package NumericalSgps in GAP.</p>
-<p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 4, 11, 14 \rangle\)</span>, in GAP:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">4</span><span class="op">,</span> <span class="fl">11</span><span class="op">,</span> <span class="fl">14</span>)<span class="op">;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">3</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>In order to know if <span class="math inline">\(S\)</span> is telescopic, we can use the functions <code>IsTelescopic</code> or <code>IsTelescopicNumericalSemigroup</code>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">IsTelescopic</span>(<span class="va">S</span>)<span class="op">;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cn">false</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">IsTelescopic</span>(<span class="va">S</span>) <span class="op">=</span> <span class="va">IsTelescopicNumericalSemigroup</span>(<span class="va">S</span>)<span class="op">;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="cn">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><span class="math inline">\(\diamond\)</span> If we are interested in how many telescopic numerical semigroups have a fixed Frobenius number <span class="math inline">\(f\)</span>, the function <code>TelescopicNumericalSemigroupsWithFrobeniusNumber</code> returns the set of all telescopic numerical semigroups with given Frobenius number <span class="math inline">\(f\)</span>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="bu">Length</span>(<span class="va">TelescopicNumericalSemigroupsWithFrobeniusNumber</span>(<span class="fl">11</span>))<span class="op">;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fl">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Nowadays, there are no functions in package NumericalSgps related to numerical semigroup associated to a plane branch. However, given a numerical semigroup <span class="math inline">\(S\)</span>, the following function in GAP returns true if <span class="math inline">\(S\)</span> is plane branch and false otherwise.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">IsPlaneBranchNumericalSemigroup</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">S</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="ex">local</span> <span class="va">Min_gen</span><span class="op">,</span> <span class="va">e</span><span class="op">,</span> <span class="va">list_tau</span><span class="op">,</span> <span class="va">i</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">if</span> <span class="cn">not</span> <span class="va">IsNumericalSemigroup</span>(<span class="va">S</span>) <span class="cf">then</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="bu">Error</span>(<span class="st">"The argument must be a Numerical Semigroup"</span>)<span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">Min_gen</span> <span class="op">:=</span> <span class="va">MinimalGenerators</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">e</span> <span class="op">:=</span> <span class="bu">Length</span>(<span class="va">Min_gen</span>)<span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">if</span> <span class="va">e</span> <span class="op">=</span> <span class="fl">1</span> <span class="cf">then</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="ex">return</span> <span class="cn">false</span><span class="op">;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">if</span> <span class="cn">not</span> <span class="va">IsTelescopic</span>(<span class="va">S</span>) <span class="cf">then</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="ex">return</span> <span class="cn">false</span><span class="op">;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">list_tau</span> <span class="op">:=</span> <span class="va">ConstantsTau</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">for</span> <span class="va">i</span> <span class="ex">in</span> [<span class="fl">2</span><span class="op">..</span><span class="va">e</span><span class="op">-</span><span class="fl">1</span>] <span class="cf">do</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="cf">if</span> (<span class="va">list_tau</span>[<span class="va">i</span><span class="op">-</span><span class="fl">1</span>] <span class="op">+</span> <span class="fl">1</span>)<span class="op">*</span><span class="va">Min_gen</span>[<span class="va">i</span>] <span class="op">&gt;=</span> <span class="va">Min_gen</span>[<span class="va">i</span><span class="op">+</span><span class="fl">1</span>] <span class="cf">then</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>               <span class="ex">return</span> <span class="cn">false</span><span class="op">;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">od</span><span class="op">;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="ex">return</span> <span class="cn">true</span><span class="op">;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="fu">end</span><span class="op">;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">function</span>( <span class="va">S</span> ) <span class="op">..</span>. <span class="fu">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Where <code>ConstantsTau</code> is the following function.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">ConstantsTau</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">S</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="ex">local</span> <span class="va">Min_gen</span><span class="op">,</span> <span class="va">p</span><span class="op">,</span> <span class="va">list_tau</span><span class="op">,</span> <span class="va">i</span><span class="op">,</span> <span class="va">Sub_min_gen</span><span class="op">,</span> <span class="va">d_i</span><span class="op">,</span> <span class="va">S_i</span><span class="op">,</span> <span class="va">n_i</span><span class="op">,</span> <span class="va">tau</span><span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">if</span> <span class="cn">not</span> <span class="va">IsNumericalSemigroup</span>(<span class="va">S</span>) <span class="cf">then</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="bu">Error</span>(<span class="st">"The argument must be a Numerical Semigroup"</span>)<span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">Min_gen</span> <span class="op">:=</span> <span class="va">MinimalGenerators</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">if</span> <span class="fl">1</span> <span class="ex">in</span> <span class="va">S</span> <span class="cf">then</span> </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="bu">Error</span>(<span class="st">"The argument must be a Numerical Semigroup other than N"</span>)<span class="op">;</span> </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">fi</span><span class="op">;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">p</span> <span class="op">:=</span> <span class="bu">Length</span>(<span class="va">Min_gen</span>)<span class="op">;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="va">list_tau</span> <span class="op">:=</span> []<span class="op">;</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">for</span> <span class="va">i</span> <span class="ex">in</span> [<span class="fl">2</span><span class="op">..</span><span class="va">p</span>] <span class="cf">do</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="va">Sub_min_gen</span> <span class="op">:=</span> <span class="va">Min_gen</span>{[<span class="fl">1</span><span class="op">..</span><span class="va">i</span><span class="op">-</span><span class="fl">1</span>]}<span class="op">;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="va">d_i</span> <span class="op">:=</span> <span class="bu">Gcd</span>(<span class="va">Sub_min_gen</span>)<span class="op">;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="va">S_i</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="va">Sub_min_gen</span><span class="op">/</span><span class="va">d_i</span>)<span class="op">;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="va">n_i</span> <span class="op">:=</span> <span class="va">Min_gen</span>[<span class="va">i</span>]<span class="op">;</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="va">tau</span> <span class="op">:=</span> <span class="bu">First</span>([<span class="fl">2</span><span class="op">..</span><span class="bu">Minimum</span>(<span class="va">Sub_min_gen</span>)]<span class="op">,</span> <span class="va">k</span><span class="op">-&gt;</span>((<span class="va">k</span><span class="op">*</span><span class="va">n_i</span>) <span class="ot">mod</span> <span class="va">d_i</span><span class="op">=</span><span class="fl">0</span>) <span class="cn">and</span> (<span class="va">k</span><span class="op">*</span><span class="va">n_i</span><span class="op">/</span><span class="va">d_i</span> <span class="ex">in</span> <span class="va">S_i</span>)) <span class="op">-</span> <span class="fl">1</span><span class="op">;</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>           <span class="bu">Add</span>(<span class="va">list_tau</span><span class="op">,</span> <span class="va">tau</span>)<span class="op">;</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="cf">od</span><span class="op">;</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>       <span class="ex">return</span> <span class="va">list_tau</span><span class="op">;</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="fu">end</span><span class="op">;</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="fu">function</span>( <span class="va">S</span> ) <span class="op">..</span>. <span class="fu">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 6, 9, 23 \rangle\)</span>, in GAP:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">6</span><span class="op">,</span> <span class="fl">9</span><span class="op">,</span> <span class="fl">23</span>)<span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">3</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>From the functions defined above,</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">IsPlaneBranchNumericalSemigroup</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cn">true</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">ConstantsTau</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>[ <span class="fl">1</span><span class="op">,</span> <span class="fl">2</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
