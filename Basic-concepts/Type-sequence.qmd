@@ -8,12 +8,11 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd), let $G(S) = \{x_1, \ldots, x_g\}$ be the [gaps](Gaps.qmd) of $S$ and $N(S) = \{s_1, \ldots, s_n\}$ the set of [left elements](Left-elements.qmd) of $S$, both ordered from smallest to larger. For each $j \in \{1, \ldots, g\}$, it is defined
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd), let $G(S) = \{x_1, \ldots, x_g\}$ be the [gaps](Gap.qmd) of $S$ and $N(S) = \{s_1, \ldots, s_n\}$ the set of [left elements](Left-elements.qmd) of $S$, both ordered from smallest to larger. For each $j \in \{1, \ldots, g\}$, it is defined
 
 $$
 \sigma_j = \max ~ \{i \in \{1, \ldots, n\} ~ | ~ x_j + s_i \not \in S \}.
-$$
-Then, it is defined the type sequence of $S$ as the tuple $(t_1(S), \ldots, t_n(S))$, where for all $i \in \{1, \ldots, g\}$,
+$$ Then, it is defined the type sequence of $S$ as the tuple $(t_1(S), \ldots, t_n(S))$, where for all $i \in \{1, \ldots, g\}$,
 
 $$
 t_i(S) = |\{j \in \{1, \ldots, g\} ~ | ~ \sigma_j = i \}|.
@@ -21,20 +20,15 @@ $$
 
 Since $0 \in N(S)$, it follows that $\sigma_j$ is well defined. Moreover, from the definition it is deduced that $t_1(S)$ is the [type](Type.qmd) of $S$ and its sum is $\sum_{i = 1}^n t_i(S) = |G(S)|$, the [genus](Genus.qmd) of $S$.
 
-
 ## Examples
 
-$\circ$ For any numerical semigroup with set of gaps $G(S) = \{x_1, \ldots, x_g\}$ and left elements $N(S) = \{s_1, \ldots, s_n\}$ both ordered from smallest to larger, it holds that $t_i(S) \ne 0$ for all $i \in \{1, \ldots, n\}$. Indeed,
-
-
+$\circ$ For any numerical semigroup with set of gaps $G(S) = \{x_1, \ldots, x_g\}$ and left elements $N(S) = \{s_1, \ldots, s_n\}$, both ordered from smallest to larger, it holds that $t_i(S) \ne 0$ for all $i \in \{1, \ldots, n\}$. Indeed, for any $i \in \{1, \ldots, n\}$, it is well known that $F(S) - s_i \in G(S)$, where $F(S)$ denotes the [Frobenius number](Frobenius-number.qmd) of $S$, and by definition, it holds that $F(S) - s_i + s_{j} \in S$ for all $j \in \{i+1, \ldots, n\}$. Therefore, taking into account that $F(S) - s_i + s_i = F(S) \not \in S$, if $x_j = F(S) - s_i$, it is concluded that $\sigma_j = i$ and $t_i(S) \ne 0$.
 
 $\circ$ Let $S = \langle 5, 7, 9 \rangle$. Its set of gaps and its set of left elements are respectively $G(S) = \{1, 2, 3, 4, 6, 8, 11, 13\}$ and $N(S) = \{0, 5, 7, 9, 10, 12\}$. With few computations,
 
 $$
 \sigma_{13} = 1, ~~ \sigma_{11} = 1, ~~ \sigma_8 = 2, ~~ \sigma_6 = 3, ~~ \sigma_4 = 4, ~~ \sigma_3 = 5, ~~ \sigma_2 = 4, ~~ \sigma_1 = 6,
-$$
-concluding that $(2, 1, 1, 2, 1, 1)$ is the type sequence of $S$.
-
+$$ concluding that $(2, 1, 1, 2, 1, 1)$ is the type sequence of $S$.
 
 ## Examples with GAP
 
@@ -49,8 +43,7 @@ gap> S := NumericalSemigroup(18, 21, 46, 49, 59, 61, 104);
 
 Given a numerical semigroup $S$, the functions `TypeSequence` and `TypeSequenceOfNumericalSemigroup` return the type sequence of $S$.
 
-
-```gap
+``` gap
 gap> TypeSequence(S);
 [ 6, 4, 5, 3, 2, 3, 3, 2, 1, 2, 1, 2, 2, 2, 3, 2, 1, 1, 1, 1, 2, 1, 1, 2, 2, 2, 1, 1, 1,
   1, 1, 1 ]
@@ -58,9 +51,4 @@ gap> TypeSequenceOfNumericalSemigroup(S) = TypeSequence(S);
 true
 ```
 
-
 ## References
-
-
-
-

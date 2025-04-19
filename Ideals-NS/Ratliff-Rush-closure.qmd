@@ -1,0 +1,95 @@
+---
+title: "Ratliff-Rush closure"
+format: html
+engine: markdown
+---
+
+<!-- [DGH01] D'Anna, M., Guerrieri, A. and Heinzer, W., Invariants of ideals having principal reductions, Comm. Algebra, 29 (2) (2001), 889--906. -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $E$ a [relative ideal](Relative-ideal.qmd) of $S$. It is defined the Ratliff-Rush closure of $E$, denoted by $RR(E)$ as
+
+$$
+RR(E) = S \cap \bigcup_{n \in \mathbb{N}} (n+1)I - nI,
+$$ where for any $A,B \subseteq \mathbb{Z}$,
+
+$$
+A - B = \{z \in \mathbb{Z} ~ | ~ z + B \subseteq A\}, ~~~~ nA = \{a_1 + \cdots + a_n ~ | ~ a_1, \ldots, a_n \in A\}.
+$$
+
+It can be proven that $nI - (n-1)I \subseteq (n+1)I - nI$ for all $n \in \mathbb{N} \setminus \{0\}$ and that the chain
+
+$$
+I \subseteq 2I - I \subseteq 3I - 2I \subseteq \cdots \subseteq (n+1)I - nI \subseteq \cdots \subseteq \mathbb{Z},
+$$
+
+stabilizes. In general, $nI - (n-1)I = (n+1)I - nI$ does not imply that $(n+1)I - nI = (n+2)I - (n+1)I$.
+
+## Examples
+
+$\circ$ Let $I$ a relative ideal of a certain numerical semigroup and let $r(I)$ be the [reduction number](Reduction-number.qmd) of $I$, that is, the minimum $h \ge 1$ such that $(h + 1)I = m(I) + hI$, where $m(I)$ is the [multiplicity](Multiplicity-ideal.qmd) of $I$. Let $h \ge r(I)$ and let us prove that $(h+1)I - hI = (h+2)I - (h+1)I$. Since, the inclusion $\subseteq$ always holds, let us prove the another inclusion. Given $z \in (h+2)I - (h+1)I$, by definition $z + (h+1)I \subseteq (h+2)I$, then
+
+$$
+z + (h+1)I \subseteq z + (h+2)I \Longleftrightarrow z + (r(I) + 1)I + (h - r(I))I \subseteq (r(I) + 1)I + (h - r(I) + 1)I
+$$
+
+$$
+\Longrightarrow z + m(I) + r(I)I + (h - r(I))I \subseteq m(I) + r(I)I + (h - r(I) + 1)I \Longrightarrow z + hI \subseteq (h+1)I,
+$$
+
+concluding that $z \in (h+1)I - hI$. From this demonstration, we have that the Ratliff-closure of any relative ideal is
+
+$$
+RR(I) = S \cap ( (r(I) + 1)I - r(I)I ).
+$$
+
+$\circ$ Let $S = \langle 3, 5, 7 \rangle$ and $I = \{2, 4\} + S = \{2, 4, 5, 7, \rightarrow \}$. Clearly, $m(I) = 2$, then we are looking for the smaller $h \in \mathbb{N} \setminus \{0\}$ such that $(h+1)I = 2 + hI$. If we take $h = 1$,
+
+$$
+2I = I + I = \{4, 6, \rightarrow\} \ne \{4, 6, 7, 9, \rightarrow \} = 2 + I.
+$$
+
+For $h = 2$,
+
+$$
+3I = (I + I) + I = \{6, 8, \rightarrow\} = 2 + 2I
+$$
+
+Then, the reduction number of $I$ is $r(I) = 2$ and its Ratliff-Rush closure is
+
+$$
+RR(I) = S \cap (3I - 2I) = S \cap \{2, 4, \rightarrow\} = \{5, \rightarrow \},
+$$ but on the other hand,
+
+$$
+S \cap (2I - I) = \{5, \rightarrow \}.
+$$
+
+The least integer $n$ such that $S \cap ((n+1)I - nI)$ is the Ratliff-Rush closure is called the [Ratliff-Rush number](Ratliff-Rush-number.qmd) of $I$ and it is denoted by $R(I)$. From what we have seen above, $R(I) \le r(I)$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 50, 54, 78, 115, 116, 119 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(50, 54, 78, 115, 116, 119);
+<Numerical semigroup with 6 generators>
+gap> I := [25, 38, 66, 70, 82] + S;
+<Ideal of numerical semigroup>
+```
+
+Given a relative ideal $I$ of a numerical semigroup, the functions `RatliffRushClosure` and `RatliffRushClosureOfIdealOfNumericalSemigroup` return the Ratliff-Rush closure of $I$.
+
+``` gap
+gap> RR := RatliffRushClosure(I);
+<Ideal of numerical semigroup>
+gap> L := MinimalGenerators(RR);
+[ 108, 115, 116, 128, 132, 150, 154, 156, 173, 197, 238 ]
+```
+
+Given a relative ideal, the function `MinimalGenerators` returns its [minimal set of generators](Minimal-set-generators-ideal.qmd). Then, the Ratliff-Rush closure of $I$ is $RR(I) = L + S$.
+
+## References

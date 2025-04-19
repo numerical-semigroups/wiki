@@ -1,0 +1,79 @@
+---
+title: "Hilbert function of a proper ideal"
+format: html
+engine: markdown
+---
+
+<!--  -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $E$ a [proper ideal](Proper-ideal.qmd) of $S$. It is defined the Hilbert function of $E$ as the application
+
+$$
+HF_E(n) = |nE \setminus (n+1)E|,
+$$ 
+where
+
+$$
+nE = \{e_1 + \cdots + e_n ~ | ~ e_1, \ldots, e_n \in E\}.
+$$
+
+This definition comes from the concept of Hilbert function of an ideal in $\mathbb{K}[x_1, \ldots, x_n]$ for some fixed field $\mathbb{K}$.
+
+## Examples
+
+$\circ$ Let $S = \langle 4, 7, 9 \rangle = \{0, 4, 7, 8, 9, 11, \rightarrow \}$, $I = \{-3, -1, 0\} + S$ and $n = 2$. Doing the computations, if $L = \{0, 4, 7, 8, 9\}$ and $L - x = \{l - x ~ | ~ l \in L\}$,
+
+$$
+I = (L-3) \cup (L - 1) \cup L \cup \{8, \rightarrow\} = \{-3, -1, 0, 1, 3, \rightarrow\}
+$$
+
+where it is deduced that
+
+$$
+2I = \{-3, -1, 0, 1, 3, \rightarrow\} + \{-3, -1, 0, 1, 3, \rightarrow\} = (\{-3, -1, 0, 1\} + \{-3, -1, 0, 1 \}) \cup \{0, \rightarrow\} = \{-6, -4, \rightarrow\}
+$$
+
+and
+
+$$
+3I = 2I + I = \{-6, -4, \rightarrow \} + \{-3, -1, 0, 1, 3, \rightarrow\} = \{-9, -7, \rightarrow\}.
+$$
+
+Therefore, the Hilbert function of $I$ in $n = 1$ and $N = 2$ is
+
+$$
+HF_I(1) = |I \setminus 2I| = 0, ~~ HF_I(2) = |2I \setminus 3I| = 0.
+$$
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 39, 56, 93, 96, 104, 105 \rangle$ and $I = \{47, 57, 70, 92, 100\} + S$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(39, 56, 93, 96, 104, 105);
+<Numerical semigroup with 6 generators>
+gap> I := [47, 57, 70, 92, 100] + S;
+<Ideal of numerical semigroup>
+```
+
+Given a proper ideal $I$ of a numerical semigroup and a non-negative integer $n$, the function `HilbertFunctionOfIdealOfNumericalSemigroup` returns $HF_I(n)$.
+
+``` gap
+gap> List([1..20], l -> HilbertFunctionOfIdealOfNumericalSemigroup(l, I));
+[ 37, 44, 52, 54, 54, 54, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 ]
+```
+
+Moreover, given a proper ideal $I$ of a numerical semigroup, the function `HilbertFunction` returns a functions that maps to each $n$ the value $HF_I(n)$.
+
+``` gap
+gap> f := HilbertFunction(I);
+function( n ) ... end
+gap> f(50);
+53
+```
+
+## References

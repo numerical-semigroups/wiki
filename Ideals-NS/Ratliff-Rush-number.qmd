@@ -1,0 +1,61 @@
+---
+title: ""
+format: html
+engine: markdown
+---
+
+<!-- [DGH01] D'Anna, M., Guerrieri, A. and Heinzer, W., Invariants of ideals having principal reductions, Comm. Algebra, 29 (2) (2001), 889--906. -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $E$ a [relative ideal](Relative-ideal.qmd) of $S$. It is defined the Ratliff-Rush number of $I$, denoted by $R(I)$, as the least integer $n$ such that $S \cap ( (n+1)I - nI)$ is the [Ratliff-Rush closure](Ratliff-Rush-closure.qmd) of $I$.
+
+If $r(I)$, that is, the minimum $h \ge 1$ such that $(h + 1)I = m(I) + hI$, where $m(I)$ is the [multiplicity](Multiplicity-ideal.qmd) of $I$, it can be proven that $R(I) \le r(I)$.
+
+## Examples
+
+$\circ$ Let $S = \langle 3, 5, 7 \rangle$ and $I = \{2, 4\} + S = \{2, 4, 5, 7, \rightarrow \}$. Clearly, $m(I) = 2$, then we are looking for the smaller $h \in \mathbb{N} \setminus \{0\}$ such that $(h+1)I = 2 + hI$. If we take $h = 1$,
+
+$$
+2I = I + I = \{4, 6, \rightarrow\} \ne \{4, 6, 7, 9, \rightarrow \} = 2 + I.
+$$
+
+For $h = 2$,
+
+$$
+3I = (I + I) + I = \{6, 8, \rightarrow\} = 2 + 2I
+$$
+
+Then, the reduction number of $I$ is $r(I) = 2$. Now, with few computations,
+
+$$
+S \cap (2I - I) = \{5, \rightarrow \} = S \cap (3I - 2I),
+$$
+
+concluding that the Ratliff-Rush number of $I$ is $R(I) = 1$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 50, 54, 78, 115, 116, 119 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(50, 54, 78, 115, 116, 119);
+<Numerical semigroup with 6 generators>
+gap> I := [25, 38, 66, 70, 82] + S;
+<Ideal of numerical semigroup>
+```
+
+Given a relative ideal $I$ of a numerical semigroup, the functions `RatliffRushNumber` and `RatliffRushNumberOfIdealOfNumericalSemigroup` return the Ratliff-Rush number of $I$.
+
+``` gap
+gap> RatliffRushNumber(I);
+5
+gap> RatliffRushNumberOfIdealOfNumericalSemigroup(I) = RatliffRushNumber(I);
+true
+```
+
+Then, the Ratliff-Rush closure of $I$ is $S \cap (6I - 5I)$.
+
+## References
