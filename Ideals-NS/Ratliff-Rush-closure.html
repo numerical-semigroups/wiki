@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Type sequence – Wiki numerical semigroups</title>
+<title>Ratliff-Rush closure – Wiki numerical semigroups</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -1185,7 +1185,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Type sequence</h1>
+<h1 class="title">Ratliff-Rush closure</h1>
 </div>
 
 
@@ -1202,38 +1202,66 @@ window.Quarto = {
 </header>
 
 
-<!-- Barucci, V., Dobbs, D. D. and Fontana, M., Maximality properties in numerical semigroups and applications to one-dimensional analytically irreducible local domains, American Mathematical Society, Memoirs of the American Mathematical Society (598) (1997). -->
+<!-- [DGH01] D'Anna, M., Guerrieri, A. and Heinzer, W., Invariants of ideals having principal reductions, Comm. Algebra, 29 (2) (2001), 889--906. -->
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a>, let <span class="math inline">\(G(S) = \{x_1, \ldots, x_g\}\)</span> be the <a href="../Basic-concepts/Gap.html">gaps</a> of <span class="math inline">\(S\)</span> and <span class="math inline">\(N(S) = \{s_1, \ldots, s_n\}\)</span> the set of <a href="../Basic-concepts/Left-elements.html">left elements</a> of <span class="math inline">\(S\)</span>, both ordered from smallest to larger. For each <span class="math inline">\(j \in \{1, \ldots, g\}\)</span>, it is defined</p>
+<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> and <span class="math inline">\(E\)</span> a <a href="../Ideals-NS/Relative-ideal.html">relative ideal</a> of <span class="math inline">\(S\)</span>. It is defined the Ratliff-Rush closure of <span class="math inline">\(E\)</span>, denoted by <span class="math inline">\(RR(E)\)</span> as</p>
 <p><span class="math display">\[
-\sigma_j = \max ~ \{i \in \{1, \ldots, n\} ~ | ~ x_j + s_i \not \in S \}.
-\]</span> Then, it is defined the type sequence of <span class="math inline">\(S\)</span> as the tuple <span class="math inline">\((t_1(S), \ldots, t_n(S))\)</span>, where for all <span class="math inline">\(i \in \{1, \ldots, g\}\)</span>,</p>
+RR(E) = S \cap \bigcup_{n \in \mathbb{N}} (n+1)I - nI,
+\]</span> where for any <span class="math inline">\(A,B \subseteq \mathbb{Z}\)</span>,</p>
 <p><span class="math display">\[
-t_i(S) = |\{j \in \{1, \ldots, g\} ~ | ~ \sigma_j = i \}|.
+A - B = \{z \in \mathbb{Z} ~ | ~ z + B \subseteq A\}, ~~~~ nA = \{a_1 + \cdots + a_n ~ | ~ a_1, \ldots, a_n \in A\}.
 \]</span></p>
-<p>Since <span class="math inline">\(0 \in N(S)\)</span>, it follows that <span class="math inline">\(\sigma_j\)</span> is well defined. Moreover, from the definition it is deduced that <span class="math inline">\(t_1(S)\)</span> is the <a href="../Basic-concepts/Type.html">type</a> of <span class="math inline">\(S\)</span> and its sum is <span class="math inline">\(\sum_{i = 1}^n t_i(S) = |G(S)|\)</span>, the <a href="../Basic-concepts/Genus.html">genus</a> of <span class="math inline">\(S\)</span>.</p>
+<p>It can be proven that <span class="math inline">\(nI - (n-1)I \subseteq (n+1)I - nI\)</span> for all <span class="math inline">\(n \in \mathbb{N} \setminus \{0\}\)</span> and that the chain</p>
+<p><span class="math display">\[
+I \subseteq 2I - I \subseteq 3I - 2I \subseteq \cdots \subseteq (n+1)I - nI \subseteq \cdots \subseteq \mathbb{Z},
+\]</span></p>
+<p>stabilizes. In general, <span class="math inline">\(nI - (n-1)I = (n+1)I - nI\)</span> does not imply that <span class="math inline">\((n+1)I - nI = (n+2)I - (n+1)I\)</span>.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> For any numerical semigroup with set of gaps <span class="math inline">\(G(S) = \{x_1, \ldots, x_g\}\)</span> and left elements <span class="math inline">\(N(S) = \{s_1, \ldots, s_n\}\)</span>, both ordered from smallest to larger, it holds that <span class="math inline">\(t_i(S) \ne 0\)</span> for all <span class="math inline">\(i \in \{1, \ldots, n\}\)</span>. Indeed, for any <span class="math inline">\(i \in \{1, \ldots, n\}\)</span>, it is well known that <span class="math inline">\(F(S) - s_i \in G(S)\)</span>, where <span class="math inline">\(F(S)\)</span> denotes the <a href="../Basic-concepts/Frobenius-number.html">Frobenius number</a> of <span class="math inline">\(S\)</span>, and by definition, it holds that <span class="math inline">\(F(S) - s_i + s_{j} \in S\)</span> for all <span class="math inline">\(j \in \{i+1, \ldots, n\}\)</span>. Therefore, taking into account that <span class="math inline">\(F(S) - s_i + s_i = F(S) \not \in S\)</span>, if <span class="math inline">\(x_j = F(S) - s_i\)</span>, it is concluded that <span class="math inline">\(\sigma_j = i\)</span> and <span class="math inline">\(t_i(S) \ne 0\)</span>.</p>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 5, 7, 9 \rangle\)</span>. Its set of gaps and its set of left elements are respectively <span class="math inline">\(G(S) = \{1, 2, 3, 4, 6, 8, 11, 13\}\)</span> and <span class="math inline">\(N(S) = \{0, 5, 7, 9, 10, 12\}\)</span>. With few computations,</p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(I\)</span> a relative ideal of a certain numerical semigroup and let <span class="math inline">\(r(I)\)</span> be the <a href="../Ideals-NS/Reduction-number.html">reduction number</a> of <span class="math inline">\(I\)</span>, that is, the minimum <span class="math inline">\(h \ge 1\)</span> such that <span class="math inline">\((h + 1)I = m(I) + hI\)</span>, where <span class="math inline">\(m(I)\)</span> is the <a href="../Ideals-NS/Multiplicity-ideal.html">multiplicity</a> of <span class="math inline">\(I\)</span>. Let <span class="math inline">\(h \ge r(I)\)</span> and let us prove that <span class="math inline">\((h+1)I - hI = (h+2)I - (h+1)I\)</span>. Since, the inclusion <span class="math inline">\(\subseteq\)</span> always holds, let us prove the another inclusion. Given <span class="math inline">\(z \in (h+2)I - (h+1)I\)</span>, by definition <span class="math inline">\(z + (h+1)I \subseteq (h+2)I\)</span>, then</p>
 <p><span class="math display">\[
-\sigma_{13} = 1, ~~ \sigma_{11} = 1, ~~ \sigma_8 = 2, ~~ \sigma_6 = 3, ~~ \sigma_4 = 4, ~~ \sigma_3 = 5, ~~ \sigma_2 = 4, ~~ \sigma_1 = 6,
-\]</span> concluding that <span class="math inline">\((2, 1, 1, 2, 1, 1)\)</span> is the type sequence of <span class="math inline">\(S\)</span>.</p>
+z + (h+1)I \subseteq z + (h+2)I \Longleftrightarrow z + (r(I) + 1)I + (h - r(I))I \subseteq (r(I) + 1)I + (h - r(I) + 1)I
+\]</span></p>
+<p><span class="math display">\[
+\Longrightarrow z + m(I) + r(I)I + (h - r(I))I \subseteq m(I) + r(I)I + (h - r(I) + 1)I \Longrightarrow z + hI \subseteq (h+1)I,
+\]</span></p>
+<p>concluding that <span class="math inline">\(z \in (h+1)I - hI\)</span>. From this demonstration, we have that the Ratliff-closure of any relative ideal is</p>
+<p><span class="math display">\[
+RR(I) = S \cap ( (r(I) + 1)I - r(I)I ).
+\]</span></p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 3, 5, 7 \rangle\)</span> and <span class="math inline">\(I = \{2, 4\} + S = \{2, 4, 5, 7, \rightarrow \}\)</span>. Clearly, <span class="math inline">\(m(I) = 2\)</span>, then we are looking for the smaller <span class="math inline">\(h \in \mathbb{N} \setminus \{0\}\)</span> such that <span class="math inline">\((h+1)I = 2 + hI\)</span>. If we take <span class="math inline">\(h = 1\)</span>,</p>
+<p><span class="math display">\[
+2I = I + I = \{4, 6, \rightarrow\} \ne \{4, 6, 7, 9, \rightarrow \} = 2 + I.
+\]</span></p>
+<p>For <span class="math inline">\(h = 2\)</span>,</p>
+<p><span class="math display">\[
+3I = (I + I) + I = \{6, 8, \rightarrow\} = 2 + 2I
+\]</span></p>
+<p>Then, the reduction number of <span class="math inline">\(I\)</span> is <span class="math inline">\(r(I) = 2\)</span> and its Ratliff-Rush closure is</p>
+<p><span class="math display">\[
+RR(I) = S \cap (3I - 2I) = S \cap \{2, 4, \rightarrow\} = \{5, \rightarrow \},
+\]</span> but on the other hand,</p>
+<p><span class="math display">\[
+S \cap (2I - I) = \{5, \rightarrow \}.
+\]</span></p>
+<p>The least integer <span class="math inline">\(n\)</span> such that <span class="math inline">\(S \cap ((n+1)I - nI)\)</span> is the Ratliff-Rush closure is called the <a href="../Ideals-NS/Ratliff-Rush-number.html">Ratliff-Rush number</a> of <span class="math inline">\(I\)</span> and it is denoted by <span class="math inline">\(R(I)\)</span>. From what we have seen above, <span class="math inline">\(R(I) \le r(I)\)</span>.</p>
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
 <p>The following example is made with the package NumericalSgps in GAP.</p>
-<p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 18, 21, 46, 49, 59, 61, 104 \rangle\)</span>, in GAP:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">18</span><span class="op">,</span> <span class="fl">21</span><span class="op">,</span> <span class="fl">46</span><span class="op">,</span> <span class="fl">49</span><span class="op">,</span> <span class="fl">59</span><span class="op">,</span> <span class="fl">61</span><span class="op">,</span> <span class="fl">104</span>)<span class="op">;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">7</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Given a numerical semigroup <span class="math inline">\(S\)</span>, the functions <code>TypeSequence</code> and <code>TypeSequenceOfNumericalSemigroup</code> return the type sequence of <span class="math inline">\(S\)</span>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">TypeSequence</span>(<span class="va">S</span>)<span class="op">;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>[ <span class="fl">6</span><span class="op">,</span> <span class="fl">4</span><span class="op">,</span> <span class="fl">5</span><span class="op">,</span> <span class="fl">3</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">3</span><span class="op">,</span> <span class="fl">3</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">3</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fl">1</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">1</span> ]</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">TypeSequenceOfNumericalSemigroup</span>(<span class="va">S</span>) <span class="op">=</span> <span class="va">TypeSequence</span>(<span class="va">S</span>)<span class="op">;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="cn">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 50, 54, 78, 115, 116, 119 \rangle\)</span>, in GAP:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">50</span><span class="op">,</span> <span class="fl">54</span><span class="op">,</span> <span class="fl">78</span><span class="op">,</span> <span class="fl">115</span><span class="op">,</span> <span class="fl">116</span><span class="op">,</span> <span class="fl">119</span>)<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">6</span> <span class="va">generators</span><span class="op">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">I</span> <span class="op">:=</span> [<span class="fl">25</span><span class="op">,</span> <span class="fl">38</span><span class="op">,</span> <span class="fl">66</span><span class="op">,</span> <span class="fl">70</span><span class="op">,</span> <span class="fl">82</span>] <span class="op">+</span> <span class="va">S</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="bu">Ideal</span> <span class="va">of</span> <span class="va">numerical</span> <span class="va">semigroup</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Given a relative ideal <span class="math inline">\(I\)</span> of a numerical semigroup, the functions <code>RatliffRushClosure</code> and <code>RatliffRushClosureOfIdealOfNumericalSemigroup</code> return the Ratliff-Rush closure of <span class="math inline">\(I\)</span>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">RR</span> <span class="op">:=</span> <span class="va">RatliffRushClosure</span>(<span class="va">I</span>)<span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="bu">Ideal</span> <span class="va">of</span> <span class="va">numerical</span> <span class="va">semigroup</span><span class="op">&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">L</span> <span class="op">:=</span> <span class="va">MinimalGenerators</span>(<span class="va">RR</span>)<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>[ <span class="fl">108</span><span class="op">,</span> <span class="fl">115</span><span class="op">,</span> <span class="fl">116</span><span class="op">,</span> <span class="fl">128</span><span class="op">,</span> <span class="fl">132</span><span class="op">,</span> <span class="fl">150</span><span class="op">,</span> <span class="fl">154</span><span class="op">,</span> <span class="fl">156</span><span class="op">,</span> <span class="fl">173</span><span class="op">,</span> <span class="fl">197</span><span class="op">,</span> <span class="fl">238</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Given a relative ideal, the function <code>MinimalGenerators</code> returns its <a href="../Ideals-NS/Minimal-set-generators-ideal.html">minimal set of generators</a>. Then, the Ratliff-Rush closure of <span class="math inline">\(I\)</span> is <span class="math inline">\(RR(I) = L + S\)</span>.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
