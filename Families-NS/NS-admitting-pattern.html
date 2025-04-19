@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -1180,6 +1214,25 @@ window.Quarto = {
 a_1 m_1 + \cdots + a_n m_n \ge a_1 m_n + \cdots + a_nm_n = \left( \sum_{i = 0}^n a_i \right) m_n \ge 0
 \]</span></p>
 <p>Therefore, <span class="math inline">\(\mathbb{N} \in \mathcal{S}(P)\)</span>.</p>
+</section>
+<section id="examples-with-gap" class="level2">
+<h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
+<p>The following example is made with the package NumericalSgps in GAP.</p>
+<p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 4, 7, 10 \rangle\)</span>, in GAP:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">4</span><span class="op">,</span> <span class="fl">7</span><span class="op">,</span> <span class="fl">10</span>)<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">3</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Given a strongly admissible pattern <span class="math inline">\(p(x_1, \ldots, x_n) = a_1x_1 + \cdots + a_nx_n\)</span> and a numerical semigroup <span class="math inline">\(S\)</span>, the function <code>ApplyPatternToNumericalSemigroup</code> returns a list <span class="math inline">\([d, p(S)/d]\)</span>: <span class="math inline">\(d\)</span> is the great common divisor of <span class="math inline">\(a_1, \ldots, a_n\)</span> and <span class="math inline">\(p(S)/d = \{s'/d, ~ | ~ s' \in p(S)\}\)</span>, where <span class="math inline">\(p(S) = \{p(s_1, \ldots, s_n) ~ | ~ s_1 \ge \cdots \ge s_n, ~~ s_i \in S\}\)</span>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">p</span> <span class="op">:=</span> [<span class="fl">1</span><span class="op">,</span> <span class="fl">3</span><span class="op">,</span> <span class="op">-</span><span class="fl">1</span>]<span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>[ <span class="fl">1</span><span class="op">,</span> <span class="fl">3</span><span class="op">,</span> <span class="op">-</span><span class="fl">1</span> ]</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">L</span> <span class="op">:=</span> <span class="va">ApplyPatternToNumericalSemigroup</span>(<span class="va">p</span><span class="op">,</span> <span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>[ <span class="fl">1</span><span class="op">,</span> <span class="op">&lt;</span><span class="bu">Ideal</span> <span class="va">of</span> <span class="va">numerical</span> <span class="va">semigroup</span><span class="op">&gt;</span> ]</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">pS</span> <span class="op">:=</span> <span class="va">L</span>[<span class="fl">2</span>]<span class="op">;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="bu">Ideal</span> <span class="va">of</span> <span class="va">numerical</span> <span class="va">semigroup</span><span class="op">&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">SmallElements</span>(<span class="va">pS</span>)<span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>[ <span class="fl">0</span><span class="op">,</span> <span class="fl">4</span><span class="op">,</span> <span class="fl">7</span><span class="op">,</span> <span class="fl">8</span><span class="op">,</span> <span class="fl">10</span><span class="op">,</span> <span class="fl">11</span><span class="op">,</span> <span class="fl">12</span><span class="op">,</span> <span class="fl">14</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Then, <span class="math inline">\(p(S) = \{ 0, 4, 7, 8, 10, 11, 12, 14, \rightarrow\}\)</span>. Moreover, if <span class="math inline">\(p\)</span> is a strongly admissible pattern and <span class="math inline">\(S, T\)</span> are numerical semigroups, the function <code>IsAdmittedPatternByNumericalSemigroup</code> returns true if <span class="math inline">\(p(S) \subseteq T\)</span>. In particular, if <span class="math inline">\(T = S\)</span>, this function returns true if <span class="math inline">\(S\)</span> admits the pattern <span class="math inline">\(p\)</span>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">IsAdmittedPatternByNumericalSemigroup</span>(<span class="va">p</span><span class="op">,</span> <span class="va">S</span><span class="op">,</span> <span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cn">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>

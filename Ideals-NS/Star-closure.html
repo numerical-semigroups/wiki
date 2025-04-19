@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Arf semigroup – Wiki numerical semigroups</title>
+<title>Star closure – Wiki numerical semigroups</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -142,7 +142,9 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Families-NS/Arf-semigroup.html">Families of numerical semigroups</a></li><li class="breadcrumb-item"><a href="../Families-NS/Arf-semigroup.html">Arf semigroup</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Wiki numerical semigroups
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -354,16 +356,16 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Families of numerical semigroups</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Families-NS/Arf-semigroup.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Families-NS/Arf-semigroup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Arf semigroup</span></a>
   </div>
 </li>
@@ -1181,9 +1183,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Families-NS/Arf-semigroup.html">Families of numerical semigroups</a></li><li class="breadcrumb-item"><a href="../Families-NS/Arf-semigroup.html">Arf semigroup</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Arf semigroup</h1>
+<h1 class="title">Star closure</h1>
 </div>
 
 
@@ -1200,60 +1202,66 @@ window.Quarto = {
 </header>
 
 
-<!-- Num. appl. -->
+<!-- -->
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a>. It is said that <span class="math inline">\(S\)</span> is Arf if every <a href="../Ideals-NS/Integrally-closed-ideal.html">integrally closed</a> <a href="../Ideals-NS/Proper-ideal.html">proper ideal</a> of <span class="math inline">\(S\)</span> is <a href="../Ideals-NS/Stable-ideal.html">stable</a>. It can be proven that a numerical semigroup <span class="math inline">\(S\)</span> is Arf if, and only if, for any <span class="math inline">\(s,t \in S\)</span> with <span class="math inline">\(s \le t\)</span>, it holds <span class="math inline">\(2t - s \in S\)</span>.</p>
+<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a>, let <span class="math inline">\(E\)</span> be a <a href="../Ideals-NS/Relative-ideal.html">relative ideal</a> of <span class="math inline">\(S\)</span> and <span class="math inline">\(Is = \{E_1, \ldots, E_n\}\)</span> a set of relative ideals of <span class="math inline">\(S\)</span>. It is defined the star closure of <span class="math inline">\(E\)</span> with respect to <span class="math inline">\(Is\)</span>, denoted by <span class="math inline">\(St(E)\)</span>, as</p>
+<p><span class="math display">\[
+st(E) = (S - (S - E)) \bigcap_{k \in \{1, \ldots, n\}} (E_k - (E_k - E)),
+\]</span></p>
+<p>where for any <span class="math inline">\(A,B \subseteq \mathbb{Z}\)</span>,</p>
+<p><span class="math display">\[
+A - B = \{z \in \mathbb{Z} ~ | ~ z + B \subseteq A\}.
+\]</span></p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 5, 7, 9 \rangle = \{0, 5, 7, 9, 10, 12, 14, \rightarrow \}\)</span>, <span class="math inline">\(I = \{9, 10, 12, 14\}\)</span> and <span class="math inline">\(E = I + S\)</span>. It is easy to prove that <span class="math inline">\(E = (9 + \mathbb{N}) \cap S = S(9)\)</span>. Then, <span class="math inline">\(E\)</span> is integrally closed, but <span class="math inline">\(r(E) = 2\)</span>, since</p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 4, 6, 11 \rangle = \{ 0, 4, 6, 8, 10, 11, 12, 14, \rightarrow \}\)</span>, <span class="math inline">\(I = \{-2, 3\} + S\)</span> and <span class="math inline">\(Is = \{J,K\}\)</span>, where <span class="math inline">\(J = \{-10, -7\} + S\)</span> and <span class="math inline">\(K = \{1, 2\} + S\)</span>. With few computations,</p>
 <p><span class="math display">\[
-2E = E + E = \{18, \rightarrow \} \ne \{18, 19, 21, 23, \rightarrow \} = m(E) + E,
+I = \{-2, 2, 3, 4, 6, \rightarrow\}, ~~ J = \{ -10, -7, -6, -4, \rightarrow\}, ~~ K = \{1, 2, 5, \rightarrow\}.
+\]</span></p>
+<p>On the other hand, taking into account that <span class="math inline">\(\{16, \rightarrow \} \subseteq S - I \subseteq \{2, \rightarrow\}\)</span>, <span class="math inline">\(\{-2,\rightarrow\} \subseteq J - I \subseteq \{-8, \rightarrow\}\)</span> and <span class="math inline">\(\{7, \rightarrow\} \subseteq K - I \subseteq \{3, \rightarrow \}\)</span>, it is obtained that</p>
+<p><span class="math display">\[
+S - I = \{8, 12, 13, 14, 16, \rightarrow\}, ~~ J - I = \{-5, -4, -2, \rightarrow\}, ~~ K - I = \{3, 4, 7, \rightarrow\}.
+\]</span></p>
+<p>Finally, with the same argument as above,</p>
+<p><span class="math display">\[
+S - (S - I) = \{-2, 2, 3, 4, 6, \rightarrow\}, ~~ J - (J - I) = \{-2, 1, \rightarrow\}, ~~ K - (K - I) = \{-2, 2, \rightarrow\},
 \]</span></p>
 <p>and</p>
 <p><span class="math display">\[
-3E = E + (E + E) = \{27, \rightarrow \} = m(E) + 2E.
+St(S) = \{-2, 2, 3, 4, 6, \rightarrow\} \cap \{-2, 1, \rightarrow\} \cap \{-2, 2, \rightarrow\} = \{-2, 2, 3, 4, 6, \rightarrow\}.
 \]</span></p>
-<p>Therefore, <span class="math inline">\(E\)</span> is integrally closed but not stable. Thus, <span class="math inline">\(S\)</span> is not an Arf semigroup. Let us also note that <span class="math inline">\(2 \cdot 9 - 7 = 11 \not \in S\)</span>, but <span class="math inline">\(7,9 \in S\)</span>.</p>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 3, 5, 7 \rangle = \{0, 3, 5, \rightarrow \}\)</span>, let’s prove that for any <span class="math inline">\(s,t \in S\)</span> with <span class="math inline">\(s \le t\)</span>, it holds <span class="math inline">\(2t - s \in S\)</span>. The <a href="../Basic-concepts/Conductor.html">conductor</a> of <span class="math inline">\(S\)</span> is <span class="math inline">\(C(S) = 5\)</span>, we divide into cases:</p>
-<ul>
-<li><p>If <span class="math inline">\(t &lt; C(S)\)</span>, it must be <span class="math inline">\(t = 0\)</span> or <span class="math inline">\(t = 3\)</span> and the property holds easily.</p></li>
-<li><p>If <span class="math inline">\(t \ge C(S)\)</span>, let <span class="math inline">\(s \in S\)</span> with <span class="math inline">\(s \le t\)</span>. Then, <span class="math inline">\(2t - s = t + (t-s) \ge t \ge C(S)\)</span> and <span class="math inline">\(2t - s \in S\)</span>.</p></li>
-</ul>
-<p>Therefore, <span class="math inline">\(S\)</span> is an Arf semigroup. In fact, we have proven that <span class="math inline">\(S\)</span> is Arf if, and only if, for any <span class="math inline">\(s \in S\)</span> and <span class="math inline">\(t \in N(S)\)</span> with <span class="math inline">\(s \le t\)</span>, where <span class="math inline">\(N(S)\)</span> denotes the set of <a href="../Basic-concepts/Left-elements.html">left elements</a> of <span class="math inline">\(S\)</span>, it holds <span class="math inline">\(2t - s \in S\)</span>.</p>
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>The following examples are made with the package NumericalSgps in GAP.</p>
-<p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 20, 24, 45, 66 \rangle\)</span>, in GAP:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">20</span><span class="op">,</span> <span class="fl">24</span><span class="op">,</span> <span class="fl">45</span><span class="op">,</span> <span class="fl">66</span>)<span class="op">;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">4</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The function <code>IsArf</code> returns true or false depending on whether a numerical semigroup is Arf or not.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">IsArf</span>(<span class="va">S</span>)<span class="op">;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cn">false</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><span class="math inline">\(\diamond\)</span> There are several functions related to how many Arf numerical semigroups satisfy a certain condition.</p>
-<ul>
-<li>Condition on <a href="../Basic-concepts/Frobenius-number.html">Frobenius number</a>: the function <code>ArfNumericalSemigroupsWithFrobeniusNumber</code> returns the Arf numerical semigroups with Frobenius number equals to a given number.</li>
-</ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="bu">Length</span>(<span class="va">ArfNumericalSemigroupsWithFrobeniusNumber</span>(<span class="fl">10</span>))<span class="op">;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fl">9</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This function is extended with the function <code>ArfNumericalSemigroupsWithFrobeniusNumberUpTo</code>, which returns the Arf numerical semigroups with Frobenius number less than or equal to a given number.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="bu">Length</span>(<span class="va">ArfNumericalSemigroupsWithFrobeniusNumberUpTo</span>(<span class="fl">10</span>))<span class="op">;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fl">46</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>Condition on <a href="../Basic-concepts/Genus.html">genus</a>: the function <code>ArfNumericalSemigroupsWithGenus</code> returns the Arf numerical semigroups with genus equals to a given number.</li>
-</ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="bu">Length</span>(<span class="va">ArfNumericalSemigroupsWithGenus</span>(<span class="fl">12</span>))<span class="op">;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fl">31</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This function is extended with the function <code>ArfNumericalSemigroupsWithGenusUpTo</code>, which returns the Arf numerical semigroups with genus less than or equal to a given number.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="bu">Length</span>(<span class="va">ArfNumericalSemigroupsWithGenusUpTo</span>(<span class="fl">12</span>))<span class="op">;</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fl">143</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>Condition on Frobenius number and genus: The function <code>ArfNumericalSemigroupsWithGenusAndFrobeniusNumber</code> returns the Arf numerical semigroups with genus and Frobenius number both fixed. The first parameter is the genus and the next one is the Frobenius number.</li>
-</ul>
-<div class="sourceCode" id="cb7"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="bu">Length</span>(<span class="va">ArfNumericalSemigroupsWithGenusAndFrobeniusNumber</span>(<span class="fl">12</span><span class="op">,</span><span class="fl">15</span>))<span class="op">;</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fl">6</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The following example is made with the package NumericalSgps in GAP.</p>
+<p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 45, 53, 58, 86, 89, 109, 117 \rangle\)</span>, <span class="math inline">\(I = \{19, 23, 58, 59, 61, 85 \} + S\)</span> and <span class="math inline">\(Is = \{J, K, L\}\)</span> where <span class="math inline">\(J = \{ 2, 22, 26, 46, 52, 98\} + S, K = \{-9, -5, 17, 35, 83 \} + S, L = \{-6, 0, 41, 49, 93 \} + S\)</span> , in GAP:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">45</span><span class="op">,</span> <span class="fl">53</span><span class="op">,</span> <span class="fl">58</span><span class="op">,</span> <span class="fl">86</span><span class="op">,</span> <span class="fl">89</span><span class="op">,</span> <span class="fl">109</span><span class="op">,</span> <span class="fl">117</span>)<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">7</span> <span class="va">generators</span><span class="op">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">I</span> <span class="op">:=</span> [<span class="fl">19</span><span class="op">,</span> <span class="fl">23</span><span class="op">,</span> <span class="fl">58</span><span class="op">,</span> <span class="fl">59</span><span class="op">,</span> <span class="fl">61</span><span class="op">,</span> <span class="fl">85</span>] <span class="op">+</span> <span class="va">S</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="bu">Ideal</span> <span class="va">of</span> <span class="va">numerical</span> <span class="va">semigroup</span><span class="op">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">J</span> <span class="op">:=</span> [<span class="fl">2</span><span class="op">,</span> <span class="fl">22</span><span class="op">,</span> <span class="fl">26</span><span class="op">,</span> <span class="fl">46</span><span class="op">,</span> <span class="fl">52</span><span class="op">,</span> <span class="fl">98</span>] <span class="op">+</span> <span class="va">S</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="bu">Ideal</span> <span class="va">of</span> <span class="va">numerical</span> <span class="va">semigroup</span><span class="op">&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">K</span> <span class="op">:=</span> [<span class="op">-</span><span class="fl">9</span><span class="op">,</span> <span class="op">-</span><span class="fl">5</span><span class="op">,</span> <span class="fl">17</span><span class="op">,</span> <span class="fl">35</span><span class="op">,</span> <span class="fl">83</span>] <span class="op">+</span> <span class="va">S</span><span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="bu">Ideal</span> <span class="va">of</span> <span class="va">numerical</span> <span class="va">semigroup</span><span class="op">&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">L</span> <span class="op">:=</span> [<span class="op">-</span><span class="fl">6</span><span class="op">,</span> <span class="fl">0</span><span class="op">,</span> <span class="fl">41</span><span class="op">,</span> <span class="fl">49</span><span class="op">,</span> <span class="fl">93</span>] <span class="op">+</span> <span class="va">S</span><span class="op">;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="bu">Ideal</span> <span class="va">of</span> <span class="va">numerical</span> <span class="va">semigroup</span><span class="op">&gt;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">Is</span> <span class="op">:=</span> [<span class="va">J</span><span class="op">,</span><span class="va">K</span><span class="op">,</span><span class="va">L</span>]<span class="op">;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>[ <span class="op">&lt;</span><span class="bu">Ideal</span> <span class="va">of</span> <span class="va">numerical</span> <span class="va">semigroup</span><span class="op">&gt;,</span> <span class="op">&lt;</span><span class="bu">Ideal</span> <span class="va">of</span> <span class="va">numerical</span> <span class="va">semigroup</span><span class="op">&gt;,</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="op">&lt;</span><span class="bu">Ideal</span> <span class="va">of</span> <span class="va">numerical</span> <span class="va">semigroup</span><span class="op">&gt;</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Given a numerical semigroup <span class="math inline">\(S\)</span>, a relative ideal <span class="math inline">\(I\)</span> and a set of relative ideals <span class="math inline">\(Is\)</span>, the function <code>StarClosureOfIdealOfNumericalSemigroup</code> returns the star closure of <span class="math inline">\(I\)</span> with respect to <span class="math inline">\(Is\)</span>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">St</span> <span class="op">:=</span> <span class="va">StarClosureOfIdealOfNumericalSemigroup</span>(<span class="va">I</span><span class="op">,</span> <span class="va">Is</span>)<span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="bu">Ideal</span> <span class="va">of</span> <span class="va">numerical</span> <span class="va">semigroup</span><span class="op">&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">SmallElements</span>(<span class="va">St</span>)<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>[ <span class="fl">19</span><span class="op">,</span> <span class="fl">23</span><span class="op">,</span> <span class="fl">58</span><span class="op">,</span> <span class="fl">59</span><span class="op">,</span> <span class="fl">61</span><span class="op">,</span> <span class="fl">64</span><span class="op">,</span> <span class="fl">68</span><span class="op">,</span> <span class="fl">72</span><span class="op">,</span> <span class="fl">76</span><span class="op">,</span> <span class="fl">77</span><span class="op">,</span> <span class="fl">81</span><span class="op">,</span> <span class="fl">85</span><span class="op">,</span> <span class="fl">92</span><span class="op">,</span> <span class="fl">98</span><span class="op">,</span> <span class="fl">103</span><span class="op">,</span> <span class="fl">104</span><span class="op">,</span> <span class="fl">105</span><span class="op">,</span> <span class="fl">106</span><span class="op">,</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fl">108</span><span class="op">,</span> <span class="fl">109</span><span class="op">,</span> <span class="fl">111</span><span class="op">,</span> <span class="fl">112</span><span class="op">,</span> <span class="fl">113</span><span class="op">,</span> <span class="fl">114</span><span class="op">,</span> <span class="fl">116</span><span class="op">,</span> <span class="fl">117</span><span class="op">,</span> <span class="fl">118</span><span class="op">,</span> <span class="fl">119</span><span class="op">,</span> <span class="fl">121</span><span class="op">,</span> <span class="fl">122</span><span class="op">,</span> <span class="fl">124</span><span class="op">,</span> <span class="fl">125</span><span class="op">,</span> <span class="fl">126</span><span class="op">,</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fl">128</span><span class="op">,</span> <span class="fl">129</span><span class="op">,</span> <span class="fl">130</span><span class="op">,</span> <span class="fl">131</span><span class="op">,</span> <span class="fl">132</span><span class="op">,</span> <span class="fl">133</span><span class="op">,</span> <span class="fl">134</span><span class="op">,</span> <span class="fl">135</span><span class="op">,</span> <span class="fl">136</span><span class="op">,</span> <span class="fl">137</span><span class="op">,</span> <span class="fl">138</span><span class="op">,</span> <span class="fl">139</span><span class="op">,</span> <span class="fl">140</span><span class="op">,</span> <span class="fl">141</span><span class="op">,</span> <span class="fl">142</span><span class="op">,</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fl">143</span><span class="op">,</span> <span class="fl">144</span><span class="op">,</span> <span class="fl">145</span><span class="op">,</span> <span class="fl">146</span><span class="op">,</span> <span class="fl">147</span><span class="op">,</span> <span class="fl">148</span><span class="op">,</span> <span class="fl">149</span><span class="op">,</span> <span class="fl">150</span><span class="op">,</span> <span class="fl">151</span><span class="op">,</span> <span class="fl">152</span><span class="op">,</span> <span class="fl">153</span><span class="op">,</span> <span class="fl">154</span><span class="op">,</span> <span class="fl">155</span><span class="op">,</span> <span class="fl">156</span><span class="op">,</span> <span class="fl">157</span><span class="op">,</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fl">158</span><span class="op">,</span> <span class="fl">159</span><span class="op">,</span> <span class="fl">161</span> ]</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">M</span> <span class="op">:=</span> <span class="va">MinimalGenerators</span>(<span class="va">St</span>)<span class="op">;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>[ <span class="fl">19</span><span class="op">,</span> <span class="fl">23</span><span class="op">,</span> <span class="fl">58</span><span class="op">,</span> <span class="fl">59</span><span class="op">,</span> <span class="fl">61</span><span class="op">,</span> <span class="fl">85</span><span class="op">,</span> <span class="fl">92</span><span class="op">,</span> <span class="fl">98</span><span class="op">,</span> <span class="fl">118</span><span class="op">,</span> <span class="fl">124</span><span class="op">,</span> <span class="fl">131</span><span class="op">,</span> <span class="fl">133</span><span class="op">,</span> <span class="fl">141</span><span class="op">,</span> <span class="fl">142</span><span class="op">,</span> <span class="fl">146</span><span class="op">,</span> <span class="fl">152</span><span class="op">,</span> <span class="fl">155</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The functions <code>SmallElements</code> and <code>MinimalGenerators</code> returns the set of <a href="../Ideals-NS/Left-elements-ideal.html">small elements</a> and thee set of <a href="../Ideals-NS/Minimal-set-generators-ideal.html">minimal generators</a>, respectively. Then, the star closure is <span class="math inline">\(St(I) = M + S\)</span>.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
