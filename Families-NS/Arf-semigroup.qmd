@@ -4,6 +4,8 @@ format: html
 engine: markdown
 ---
 
+<!-- Num. appl. -->
+
 ## Definition
 
 Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is said that $S$ is Arf if every [integrally closed](../Ideals-NS/Integrally-closed-ideal.qmd) [proper ideal](../Ideals-NS/Proper-ideal.qmd) of $S$ is [stable](../Ideals-NS/Stable-ideal.qmd). It can be proven that a numerical semigroup $S$ is Arf if, and only if, for any $s,t \in S$ with $s \le t$, it holds $2t - s \in S$.

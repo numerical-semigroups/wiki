@@ -1,0 +1,57 @@
+---
+title: "Dual of a relative ideal"
+format: html
+engine: markdown
+---
+
+<!-- Patterns_of_ideals_NS -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $E$ a [relative ideal](Relative-ideal.qmd) of $S$. It is defined the dual of $E$, denoted by $E^*$, as
+
+$$
+E^* = S - E = \{z \in \mathbb{Z} ~ | ~ z + E \subseteq S\}.
+$$
+
+It can be proven that $E^*$ is also a relative ideal. This idea can be generalized considering $J$ another relative ideal instead of $S$.
+
+## Examples
+
+$\circ$ Let $S = \langle 7, 9, 13, 17 \rangle = \{0, 7, 9, 13, 14, 16, 17, 18, 20, \rightarrow\}$ and $I = \{-10, -7, 3\} + S$. If $L = \{0, 7, 9, 13, 14, 16, 17, 18\}$ and $L - n = \{l - n ~ | ~ l \in L\}$,
+
+$$
+I = (L - 10) \cup (L - 7) \cup (L + 3) \cup \{10, \rightarrow\} = \{-10, -7, -3, -1, 0, 2, 3, 4, 6, \rightarrow\}.
+$$
+
+Then, taking into account that $\{30, \rightarrow\} \subseteq S - I \subseteq \{10, \rightarrow\}$, it is obtained that
+
+$$
+I^* = S - I = \{23, 24, 27, 28, 30, \rightarrow\}.
+$$
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 22, 30, 58, 78, 89, 93, 94, 103, 106 \rangle$ and $I = \{3, 49, 56, 57, 60 \} + S$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(22, 30, 58, 78, 89, 93, 94, 103, 106);
+<Numerical semigroup with 9 generators>
+gap> I := [3, 49, 56, 57, 60] + S;
+<Ideal of numerical semigroup>
+```
+
+Given two relative ideals $I,J$ of the same numerical semigroup $S$; the function `SubtractIdealsOfNumericalSemigroup` returns $J - I$. If we consider $S$ as ideal, then it returns the dual of $I$.
+
+``` gap
+gap> I_2 := SubtractIdealsOfNumericalSemigroup(0+S, I);
+<Ideal of numerical semigroup>
+gap> L := MinimalGenerators(I_2);
+[ 55, 63, 91, 103, 112, 117, 119, 120, 122, 127, 130, 131, 138, 146 ]
+```
+
+The function `MinimalGenerators` returns the [minimal set of generators](Minimal-set-generators-ideal.qmd). Then, $I^* = L + S$.
+
+## References

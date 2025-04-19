@@ -24,4 +24,35 @@ $$
 
 Therefore, $\mathbb{N} \in \mathcal{S}(P)$.
 
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 4, 7, 10 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(4, 7, 10);
+<Numerical semigroup with 3 generators>
+```
+
+Given a strongly admissible pattern $p(x_1, \ldots, x_n) = a_1x_1 + \cdots + a_nx_n$ and a numerical semigroup $S$, the function `ApplyPatternToNumericalSemigroup` returns a list $[d, p(S)/d]$: $d$ is the great common divisor of $a_1, \ldots, a_n$ and $p(S)/d = \{s'/d, ~ | ~ s' \in p(S)\}$, where $p(S) = \{p(s_1, \ldots, s_n) ~ | ~ s_1 \ge \cdots \ge s_n, ~~ s_i \in S\}$.
+
+``` gap
+gap> p := [1, 3, -1];
+[ 1, 3, -1 ]
+gap> L := ApplyPatternToNumericalSemigroup(p, S);
+[ 1, <Ideal of numerical semigroup> ]
+gap> pS := L[2];
+<Ideal of numerical semigroup>
+gap> SmallElements(pS);
+[ 0, 4, 7, 8, 10, 11, 12, 14 ]
+```
+
+Then, $p(S) = \{ 0, 4, 7, 8, 10, 11, 12, 14, \rightarrow\}$. Moreover, if $p$ is a strongly admissible pattern and $S, T$ are numerical semigroups, the function `IsAdmittedPatternByNumericalSemigroup` returns true if $p(S) \subseteq T$. In particular, if $T = S$, this function returns true if $S$ admits the pattern $p$.
+
+``` gap
+gap> IsAdmittedPatternByNumericalSemigroup(p, S, S);
+true
+```
+
 ## References

@@ -1,0 +1,71 @@
+---
+title: "Apéry list of a relative ideal"
+format: html
+engine: markdown
+---
+
+<!-- -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), let $E$ be a [relative ideal](Relative-ideal.qmd) of $S$ and $n \in S$. It is defined the Apéry set of $E$ in $n$, denoted by $Ap(E, n)$, as
+
+$$
+Ap(E, n) = \{w \in E ~ | ~ w - n \not \in E\}.
+$$
+
+It can be proven that $Ap(E, n) = \{w(0), w(1), \ldots, w(n-1)\}$, where $w(i) \in E$ is the least element in $E$ such that $w(i) \equiv i ~ (mod ~ n)$. In particular, $|Ap(E, n)| = n$.
+
+## Examples
+
+$\circ$ Let $S = \langle 4, 9, 15 \rangle = \{0, 4, 8, 9, 12, 13, 15, \rightarrow \}$, $I = \{-2, 3, 5\} + S$ and $n = 4$. If $L = \{0, 4, 8, 9, 12, 13\}$ and $L - n = \{l - n ~ | ~ l \in L\}$,
+
+$$
+I = (L-2) \cup (L+3) \cup (L+5) \cup \{13, \rightarrow\} = \{-2, 2, 3, 5, 6, 7, 9, \rightarrow\},
+$$
+
+and with few computations, the Apéry set of $I$ in $n = 4$ is
+
+$$
+Ap(I,4) = \{12, 5, -2, 3\}.
+$$
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 39, 56, 93, 96, 104, 105\rangle$ and $I = \{47, 57, 70, 92, 100\} + S$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(39, 56, 93, 96, 104, 105);
+<Numerical semigroup with 6 generators>
+gap> I := [47, 57, 70, 92, 100] + S;
+<Ideal of numerical semigroup>
+```
+
+Given a relative ideal $I$ of a numerical semigroup $S$ and an integer $n \in S$; the functions `AperyList` and `AperyListOfIdealOfNumericalSemigroupWRTElement` return the Apéry set of $I$ in $n$.
+
+``` gap
+gap> AperyList(I, 56);
+[ 224, 57, 170, 227, 228, 229, 174, 175, 232, 233, 178, 179, 236, 125, 70, 239,
+  240, 185, 242, 131, 188, 189, 190, 135, 192, 193, 306, 139, 140, 197, 86, 143,
+  200, 201, 202, 203, 92, 205, 150, 151, 96, 153, 266, 267, 100, 213, 214, 47,
+  272, 161, 162, 163, 164, 109, 166, 279 ]
+gap> AperyListOfIdealOfNumericalSemigroupWRTElement(I, 56) = AperyList(I, 56);
+true
+```
+
+If no integer is given, the function `AperyList` computes the Apéry set of $I$ in $m(S)$, where $m(S)$ denotes the [multiplicity](../Basic-concepts/Multiplicity.qmd) of $S$.
+
+``` gap
+gap> AperyList(I);
+[ 156, 196, 197, 159, 199, 161, 162, 163, 47, 126, 166, 206, 207, 169, 92, 249,
+  289, 212, 57, 175, 215, 255, 100, 140, 219, 103, 143, 222, 262, 185, 225, 70,
+  188, 150, 151, 113, 153, 193, 233 ]
+gap> m := Multiplicity(S);
+39
+gap> AperyList(I, m) = AperyList(I);
+true
+```
+
+## References

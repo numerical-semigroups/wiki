@@ -1,0 +1,83 @@
+---
+title: ""
+format: html
+engine: markdown
+---
+
+<!-- Cortadellas Ben\'{\i}tez, T., Jafari, R. and Zarzuela Armengou, S., On teh Ap\'ery sets of monomial curves, Semigroup Forum, 86 (2013), 289--320. -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) with [multiplicity](../Basic-concepts/Multiplicity.qmd) $m$ and $M = S \setminus \{0\}$ its [maximal ideal](Maximal-ideal.qmd) with [reduction number](Reduction-number.qmd) $r$. It is defined the Apéry table of $S$, denoted by $Ap(S)$, as the matrix $(r+1) \times m$ such that the first row is the [Apéry set](../Basic-concepts/Apery-set.qmd) of $S$ in $m$ and the $k-$th row is the [Apéry set](Apery-set-ideal.qmd) of $(k+1)M$ in $m$ for $k \in \{2, \ldots, r\}$, where
+
+$$
+kM = \{m_1 + \cdot m_k ~ | ~ m_1, \ldots, m_k \in M\}.
+$$
+
+The Apéry table can be written as
+
+$$
+Ap(S) = \begin{pmatrix}
+  Ap(S, m) \\
+  Ap(M, m) \\
+  Ap(2M, m) \\
+  \vdots \\
+  Ap(rM, m) \\
+\end{pmatrix},
+$$ where $Ap(S,m), Ap(M,m), \ldots, Ap(rM,m)$ denotes the Apéry set of $S, M, 2M, \ldots, rM$ in $m$, respectively.
+
+## Examples
+
+$\circ$ Let $S = \langle 4, 6, 11 \rangle = \{0, 4, 6, 8, 10, 11, 12, 14, \rightarrow\}$. With few computations, it is obtained that $r(M) = 2$, where $r(M)$ denotes the reduction number of $M$. Also,
+
+$$
+\begin{align*}
+M + M &= \{4, 6, 8, 10, 11, 12, 14, \rightarrow\} + \{4, 6, 8, 10, 11, 12, 14, \rightarrow\} \\
+& = (\{4, 6, 8, 10, 11, 12\} + \{4, 6, 8, 10, 11, 12\}) \cup \{18, \rightarrow\} = \{8, 10, 12, 14, \rightarrow\}.
+\end{align*}
+$$
+
+Since $m(S) = 4$, the Apéry set of $S, M$ and $2M$ are, respectively,
+
+$$
+Ap(S, 4) = \{0, 17, 6, 11\}, ~~ Ap(M, 4) = \{4, 17, 6, 11\}, ~~ Ap(2M, 4) = \{8, 17, 10, 15\},
+$$ concluding that the Apéry table of $S$ is as follows.
+
+$$
+Ap(S) = \begin{pmatrix}
+  0 & 17 & 6 & 11 \\
+  4 & 17 & 6 & 11 \\
+  8 & 17 & 10 & 15
+\end{pmatrix}.
+$$
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 20, 50, 54, 78, 115, 116, 119 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(20, 50, 54, 78, 115, 116, 119);
+<Numerical semigroup with 7 generators>
+```
+
+Given a numerical semigroup $S$, the functions `AperyTable` and `AperyTableOfNumericalSemigroup` return the Apéry table of $S$.
+
+``` gap
+gap> AperyTable(S);
+[ [ 0, 281, 162, 223, 104, 165, 166, 227, 108, 169, 50, 231, 132, 173, 54, 115,
+      116, 197, 78, 119 ],
+  [ 20, 281, 162, 223, 104, 165, 166, 227, 108, 169, 50, 231, 132, 173, 54, 115,
+      116, 197, 78, 119 ],
+  [ 40, 281, 162, 223, 104, 165, 166, 227, 108, 169, 70, 231, 132, 173, 74, 135,
+      136, 197, 98, 139 ],
+  [ 60, 281, 162, 223, 124, 185, 186, 227, 128, 189, 90, 251, 152, 193, 94, 155,
+      156, 217, 118, 159 ],
+  [ 80, 281, 182, 243, 144, 205, 206, 247, 148, 209, 110, 271, 172, 213, 114,
+      175, 176, 237, 138, 179 ] ]
+gap> AperyTableOfNumericalSemigroup(S) = AperyTable(S);
+true
+```
+
+## References

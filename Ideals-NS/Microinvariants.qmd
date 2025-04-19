@@ -1,0 +1,72 @@
+---
+title: "Microinvariants"
+format: html
+engine: markdown
+---
+
+<!-- On_the_deep_structure_of_the_blowing-up_of_curve_s // Associated_graded_rings_of_one-dimensional_analytically-->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) with [multiplicity](../Basic-concepts/Multiplicity.qmd) $m$, and let $B(S)$ be the [blowup](Blowup.qmd). It is defined the set of microinvariants of $S$, denoted by $micr(S)$, as
+
+$$
+micr(S) = \left \{ \frac{w - w'}{m} ~ | ~ w \in Ap(S, m), ~ w' \in Ap(B(S), m)\right \},
+$$
+
+where $Ap(S, m)$ denotes the [Apéry set](../Basic-concepts/Apery-set.qmd) of $S$ in $m$ and both are ordered by module, that is,
+
+$$
+Ap(S, m) = \{w(0) = 0, \ldots, w(m-1)\}, ~~ Ap(B(S), m) = \{w'(0) = 0, \ldots, w'(m-1)\},
+$$
+
+where $w(i)$ (resp. $w'(i)$) is the least element in $S$ (resp. $B(S)$) such that $w(i) \equiv i ~ (mod ~ m)$ (resp. $w'(i) \equiv i ~ (mod ~ m)$).
+
+It can be proven that $micr(S) \subseteq \mathbb{N}$ for any numerical semigroup.
+
+## Examples
+
+$\circ$ Let $S = \langle 5, 7, 11 \rangle$ and $M = S \setminus \{0\}$ its [maximal ideal](Maximal-ideal.qmd). The blowup of $S$ is defined as $B(S) = r(M)*M - m(M)r(M)$, where $r(M)$ is the [reduction number](Reduction-number.qmd) of $M$, $m(M)$ is the [multiplicity ideal](Multiplicity-ideal.qmd) of $M$. With few computations, it is obtained that $r(M) = 2$ and $B(S) = \{0, 2, 4, \rightarrow\}$. Then, taking into account that $m(S) = 5$,
+
+$$
+Ap(S, 5) := \{w \in S ~ | ~ w - 5 \not \in S \} = \{0, 11, 7, 18, 14\}, ~~ \text{and} ~~ Ap(B(S), 5) = \{w \in B(S) ~ | ~ w - S \not \in B(S)\} = \{0, 6, 2, 8, 4\}.
+$$
+
+Therefore, the set of microinvariants of $S$ is
+
+$$
+micr(S) = \{0, 1, 1, 2, 2\}.
+$$
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 12, 21, 30, 39, 56, 64 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(12, 21, 30, 39, 56, 64);
+<Numerical semigroup with 6 generators>
+```
+
+Given a numerical semigroup $S$, the functions `MicroInvariants` and `MicroInvariantsOfNumericalSemigroup` return the set of microinvariants of $S$.
+
+``` gap
+gap> MicroInvariants(S);
+[ 0, 2, 2, 1, 1, 2, 1, 2, 1, 1, 2, 2 ]
+```
+
+With functions `Multiplicity`, `AperyList` and `BlowUp` can be calculated the multiplicity, the Apéry set and the blowup of a given numerical semigroup, respectively.
+
+``` gap
+gap> m := Multiplicity(S);
+12
+gap> Ap := AperyList(S,m);
+[ 0, 85, 86, 39, 64, 77, 30, 103, 56, 21, 94, 95 ]
+gap> ApB := AperyList(BlowUp(S), m);
+[ 0, 61, 62, 27, 52, 53, 18, 79, 44, 9, 70, 71 ]
+gap> MicroInvariants(S) = (Ap - ApB)/m;
+true
+```
+
+## References

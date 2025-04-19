@@ -1,0 +1,81 @@
+---
+title: "Ideal admits the pattern"
+format: html
+engine: markdown
+---
+
+<!-- Patterns_of_ideals_NS  -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), $I$ a [relative ideal](Relative-ideal.qmd) of $S$ and let $p(x_1, \ldots, x_n) = a_1x_1 + \cdots + a_nx_n$ be a [pattern](../Varieties-NS/Pattern.qmd). It is said that $I$ admits the pattern $p$ if $p(s_1, \ldots, s_n) \in S$ for any non-increasing sequence $s_1, \ldots, s_n$ in $I$.
+
+If $J \subseteq I$ is another relative ideal of $S$, then it can be proven that if $I$ admits a pattern $p$, then $J$ also admits the pattern $p$.
+
+## Examples
+
+$\circ$ If $p$ is a pattern and $S$ is a numerical semigroup [admitting the pattern p](../Families-NS/NS-admitting-pattern.qmd), then any relative ideal $I$ admits the pattern $p$.
+
+$\circ$ Let $p(x_1, \ldots, x_n) = a_1x_1 + \cdots + a_n x_n$ be a pattern such that $gcd(a_1, \ldots, a_n) = 1$ and let $S$ be a numerical semigroup. It can be proven that for any relative ideal $I$ of $S$, it holds that $p(I) = \{p(s_1, \ldots, s_n) ~ | ~ s_1 \ge s_2 \ge \cdots \ge s_n, ~~ s_i \in I\}$ is a relative ideal of a numerical semigroup.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 4, 7, 10 \rangle$ and $I = \{33, 50\} + S$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(4, 7, 10);
+<Numerical semigroup with 3 generators>
+gap> I := [33, 50] + S;
+<Ideal of numerical semigroup>
+```
+
+Given a strongly admissible pattern $p$ and a [proper ideal](Proper-ideal.qmd) $I$, the function `ApplyPatternToIdeal` returns the list $[d, p(I)/d]$, where $d$ is the great common divisor of the coefficients of the pattern $p$ and $p(I)/d = \{i/d ~ | ~ i \in p(I)\} \subseteq \mathbb{Z}$.
+
+``` gap
+gap> p := [1, 3, -1];
+[ 1, 3, -1 ]
+gap> L := ApplyPatternToIdeal(p, I);
+[ 1, <Ideal of numerical semigroup> ]
+gap> pI := L[2];
+<Ideal of numerical semigroup>
+gap> SmallElements(pI);
+[ 99, 103, 106, 107, 110, 111, 113 ]
+```
+
+The function `SmallElements` returns the [small elements](Left-elements-ideal.qmd) of the given relative ideal. Then, $p(I) = \{99, 103, 106, 107, 110, 111, 113 , \rightarrow\}$.
+
+Moreover, given a pattern $p$ and two relative ideals $I,J$, the function `IsAdmittedPatternByIdeal` returns true if $p(I) \subseteq J$ and false otherwise. If we consider $J = S$ as ideal, then this function returns true if $I$ admits the pattern and false otherwise.
+
+``` gap
+gap> IsAdmittedPatternByIdeal(p, I, 0+S);
+true
+```
+
+Then, $I$ admits the pattern $p$.
+
+
+$\diamond$ Let $S = \langle 18, 19, 26, 28, 30 \rangle$ and $I = \{11, 38, 62, 70\} + S$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(18, 19, 26, 28, 30);
+<Numerical semigroup with 5 generators>
+gap> I := [11, 38, 62, 70] + S;
+<Ideal of numerical semigroup>
+```
+
+Given an admissible pattern $p$ and a positive integer $C$, the function `BoundForConductorOfImageOfPattern` returns an upper bound of the smallest element $K$ in $p(I)$ such that all integers larger than $K$ belong to $p(I)$ (the image of $I$ by $p$), where $C$ is assumed to be the [conductor of a relative ideal](Conductor-of-an-ideal.qmd) $I$. The conductor can be computed with function `Conductor`.
+
+``` gap
+gap> C := Conductor(I);
+73
+gap> p := [3, -1, 4, 5];
+[ 3, -1, 4, 5 ]
+gap> BoundForConductorOfImageOfPattern(p, C);
+823
+```
+
+Then, the above result indicates that at least, $\{823, \rightarrow\} \subseteq p(I)$.
+
+## References

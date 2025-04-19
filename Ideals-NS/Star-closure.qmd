@@ -1,0 +1,88 @@
+---
+title: "Star closure"
+format: html
+engine: markdown
+---
+
+<!-- -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), let $E$ be a [relative ideal](Relative-ideal.qmd) of $S$ and $Is = \{E_1, \ldots, E_n\}$ a set of relative ideals of $S$. It is defined the star closure of $E$ with respect to $Is$, denoted by $St(E)$, as
+
+$$
+st(E) = (S - (S - E)) \bigcap_{k \in \{1, \ldots, n\}} (E_k - (E_k - E)),
+$$
+
+where for any $A,B \subseteq \mathbb{Z}$,
+
+$$
+A - B = \{z \in \mathbb{Z} ~ | ~ z + B \subseteq A\}.
+$$
+
+## Examples
+
+$\circ$ Let $S = \langle 4, 6, 11 \rangle = \{ 0, 4, 6, 8, 10, 11, 12, 14, \rightarrow \}$, $I = \{-2, 3\} + S$ and $Is = \{J,K\}$, where $J = \{-10, -7\} + S$ and $K = \{1, 2\} + S$. With few computations,
+
+$$
+I = \{-2, 2, 3, 4, 6, \rightarrow\}, ~~ J = \{ -10, -7, -6, -4, \rightarrow\}, ~~ K = \{1, 2, 5, \rightarrow\}.
+$$
+
+On the other hand, taking into account that $\{16, \rightarrow \} \subseteq S - I \subseteq \{2, \rightarrow\}$, $\{-2,\rightarrow\} \subseteq J - I \subseteq \{-8, \rightarrow\}$ and $\{7, \rightarrow\} \subseteq K - I \subseteq \{3, \rightarrow \}$, it is obtained that
+
+$$
+S - I = \{8, 12, 13, 14, 16, \rightarrow\}, ~~ J - I = \{-5, -4, -2, \rightarrow\}, ~~ K - I = \{3, 4, 7, \rightarrow\}.
+$$
+
+Finally, with the same argument as above,
+
+$$
+S - (S - I) = \{-2, 2, 3, 4, 6, \rightarrow\}, ~~ J - (J - I) = \{-2, 1, \rightarrow\}, ~~ K - (K - I) = \{-2, 2, \rightarrow\},
+$$
+
+and
+
+$$
+St(S) = \{-2, 2, 3, 4, 6, \rightarrow\} \cap \{-2, 1, \rightarrow\} \cap \{-2, 2, \rightarrow\} = \{-2, 2, 3, 4, 6, \rightarrow\}.
+$$
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 45, 53, 58, 86, 89, 109, 117 \rangle$, $I = \{19, 23, 58, 59, 61, 85 \} + S$ and $Is = \{J, K, L\}$ where $J = \{ 2, 22, 26, 46, 52, 98\} + S, K = \{-9, -5, 17, 35, 83 \} + S, L = \{-6, 0, 41, 49, 93 \} + S$ , in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(45, 53, 58, 86, 89, 109, 117);
+<Numerical semigroup with 7 generators>
+gap> I := [19, 23, 58, 59, 61, 85] + S;
+<Ideal of numerical semigroup>
+gap> J := [2, 22, 26, 46, 52, 98] + S;
+<Ideal of numerical semigroup>
+gap> K := [-9, -5, 17, 35, 83] + S;
+<Ideal of numerical semigroup>
+gap> L := [-6, 0, 41, 49, 93] + S;
+<Ideal of numerical semigroup>
+gap> Is := [J,K,L];
+[ <Ideal of numerical semigroup>, <Ideal of numerical semigroup>,
+  <Ideal of numerical semigroup> ]
+```
+
+Given a numerical semigroup $S$, a relative ideal $I$ and a set of relative ideals $Is$, the function `StarClosureOfIdealOfNumericalSemigroup` returns the star closure of $I$ with respect to $Is$.
+
+``` gap
+gap> St := StarClosureOfIdealOfNumericalSemigroup(I, Is);
+<Ideal of numerical semigroup>
+gap> SmallElements(St);
+[ 19, 23, 58, 59, 61, 64, 68, 72, 76, 77, 81, 85, 92, 98, 103, 104, 105, 106,
+  108, 109, 111, 112, 113, 114, 116, 117, 118, 119, 121, 122, 124, 125, 126,
+  128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142,
+  143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157,
+  158, 159, 161 ]
+gap> M := MinimalGenerators(St);
+[ 19, 23, 58, 59, 61, 85, 92, 98, 118, 124, 131, 133, 141, 142, 146, 152, 155 ]
+```
+
+The functions `SmallElements` and `MinimalGenerators` returns the set of [small elements](Left-elements-ideal.qmd) and thee set of [minimal generators](Minimal-set-generators-ideal.qmd), respectively. Then, the star closure is $St(I) = M + S$.
+
+## References
