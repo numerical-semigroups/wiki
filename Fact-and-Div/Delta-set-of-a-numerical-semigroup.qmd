@@ -4,9 +4,11 @@ format: html
 engine: markdown
 ---
 
+<!-- Num. appl. // [GMV15] Garc\'{\i}a-Garc\'{\i}a, J. I., Moreno-Fr\'{\i}as, M. A. and Vigneron-Tenorio, A., Computation of Delta sets of numerical monoids, Monatsh. Math. , 178 (2015), 457--472. -->
+
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is defined the Delta set of $S$, denoted by $\Delta(S)$, as
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $P = \{n_1, \ldots, n_p\}$. It is defined the Delta set of $S$, denoted by $\Delta(S)$, as
 
 $$
 \Delta(S) = \bigcup_{s \in S} \Delta(s),
@@ -17,6 +19,8 @@ where $\Delta(s)$ denotes the [delta set of s](Delta-set-of-an-element.qmd) in $
 $$
 \max \Delta(S) = \max \{\max \Delta(b) ~ | ~ b \in Betti(S)\}.
 $$
+
+On the other hand, there exists $N_S \in \mathbb{N}$ such that $\Delta(s)$ is periodic from $N_S$ and its period is equal to $lcm(n_1, n_p)$.
 
 Given a numerical semigroup $S$, there is a relation between its Delta set $\Delta(S)$, its [catenary degree](Catenary-degree-of-a-numerical-semigroup.qmd) $\mathbf{C}(S)$, its [w-primality](w-primality-of-a-numerical-semigroup.qmd) $\omega(S)$ and its [tame degree](Tame-degree-of-a-numerical-semigroup.qmd) $\mathbf{t}(S)$, which is
 
@@ -49,5 +53,15 @@ gap> DeltaSet(S);
 gap> DeltaSet(S, 314);
 [ 1, 2, 4 ]
 ```
+
+Given a numerical semigroup $S$, the function `DeltaSetPeriodicityBoundForNumericalSemigroup` returns the bound where the periodicity starts for Delta sets of the elements in $S$, $N_S$. On the other hand, the function `DeltaSetPeriodicityStartForNumericalSemigroup` computes the actual element were the periodicity stars for Delta sets of the elements in $S$.
+
+```gap
+gap> DeltaSetPeriodicityBoundForNumericalSemigroup(S);
+10065
+gap> DeltaSetPeriodicityStartForNumericalSemigroup(S);
+496
+```
+
 
 ## References
