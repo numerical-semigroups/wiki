@@ -1,0 +1,58 @@
+---
+title: "M-pure numerical semigroup"
+format: html
+engine: markdown
+---
+
+<!-- [Bry10] Bryant, L., Goto numbers of a numerical semigroup ring and the Gorensteiness of associated graded rings, Comm. Algebra, 38 (6) (2010), 2092--2128. -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) with [multiplicity](../Basic-concepts/Multiplicity.qmd) $m$, let $Ap(S,m)$ be the [Apéry set](../Basic-concepts/Apery-set.qmd) of $m$ in $S$ and let $\le_S$ be the [relation order](../Basic-concepts/Relation-order-NS.qmd) of $S$. For $x,y \in \mathbb{Z}$, it is defined the following partial order:
+
+$$
+x \preceq_S y \Longleftrightarrow x \le_S y ~~ \text{and} ~~ ord(y) = ord(x) + ord(y-x),
+$$
+where $ord(\cdot)$ denotes the [order](Order-of-an-element.qmd) of the respective element in $S$. It is said that $S$ is $M-$pure if the maximal elements of $Ap(S,m)$ with respect to $\preceq_S$ have all the same [order](../Fact-and-div/Order-of-an-element.qmd).
+
+It can be proven that if $S$ is $M-$pure, then is [pure](NS-pure.qmd).
+
+## Examples
+
+$\circ$ Let $S = \langle 4, 10, 11 \rangle = \{0, 4, 8, 10, 11, 12, 14, 15, 16, 18, \rightarrow\}$. The multiplicity of $S$ is $m = 4$ and the Apéry set of $m$ in $S$ is
+
+$$
+Ap(S,4) := \{s \in S ~ | ~ s - 4 \not \in S\} = \{0, 21, 10, 11\}.
+$$ 
+
+The [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) of each element in $Ap(S,4) \setminus \{0\}$ is
+
+$$
+\mathbf{Z}(10) = \{(0,1,0)\}, ~~ \mathbf{Z}(11) = \{(0,0,1)\}, ~~ \mathbf{Z}(21) = \{(0,1,1)\}.
+$$
+Therefore, since $10 \le_S 21$ and $11 \le 21$ and $ord(21) = ord(10) + ord(11)$, it is concluded that $w = 21$ is the unique maximal element in $Ap(S,4)$ with respect to $\preceq_S$ and consequently $S$ is $M-$pure.
+
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 50, 99, 111, 119, 125, 139, 141, 146 \rangle$, in GAP:
+
+```gap
+gap> S := NumericalSemigroup(50, 99, 111, 119, 125, 139, 141, 146);
+<Numerical semigroup with 8 generators>
+```
+
+Given a numerical semigroup $S$, the functions `IsMpure` and `IsMpureNumericalSemigroup` return true if $S$ is $M-$pure and false otherwise.
+
+```gap
+gap> IsMpure(S);
+true
+gap> IsMpureNumericalSemigroup(S) = IsMpure(S);
+true
+```
+
+
+## References
+

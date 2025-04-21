@@ -1,0 +1,47 @@
+---
+title: "Equal catenary degree of a numerical semigroup"
+format: html
+engine: markdown
+---
+
+<!-- -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is defined the equal catenary degree of $S$, denoted by $EqC(S)$, as
+
+$$
+EqC(S) = \max_{s \in S} EqC(s),
+$$
+
+where $EqC(s)$ denotes the [equal catenary degree](Equal-catenary-degree-element.qmd) of $s$ in $S$. 
+
+It can be proven that $EqC(S) = \max_{s \in I} EqC(S)$, where $I$ is the set of [primitive elements](../Basic-concepts/Primitive-element.qmd) of $S$.
+
+
+## Examples
+
+$\circ$ Let $S = \langle \rangle$.
+
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 3, 8, 10 \rangle$, in GAP:
+
+```gap
+gap> S := NumericalSemigroup(3, 8, 10);
+<Numerical semigroup with 3 generators>
+```
+
+Given a numerical semigroup $S$, the function `EqualCatenaryDegreeOfNumericalSemigroup` returns the equal catenary degree of $S$.
+
+```gap
+gap> EqualCatenaryDegreeOfNumericalSemigroup(S);
+7
+```
+
+
+## References
+

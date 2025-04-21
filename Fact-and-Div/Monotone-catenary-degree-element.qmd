@@ -8,7 +8,7 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), $s \in S$ and $\mathbf{Z}(s)$ its [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd). Is defined the monotone catenary degree of $s$ in $S$ as the least $N$ such that for any two factorizations $x,y \in \mathbf{Z}(s)$ with [lengths](Length-factorization.qmd) $|x| \le |y|$, there exists an [N-chain](Chain-of-factorizations.qmd) of factorizations with non-decreasing lengths joining them.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), $s \in S$ and $\mathbf{Z}(s)$ its [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd). Is defined the monotone catenary degree of $s$ in $S$, denoted by $MonC(s)$, as the least $N$ such that for any two factorizations $x,y \in \mathbf{Z}(s)$ with [lengths](Length-factorization.qmd) $|x| \le |y|$, there exists an [N-chain](Chain-of-factorizations.qmd) of factorizations with non-decreasing lengths joining them.
 
 It can be proven that the monotone catenary degree of is the maximum of the [adjacent catenary degree](Adjacent-catenary-degree-element.qmd) and the [equal catenary degree](Equal-catenary-degree-element.qmd) of $s$ in $S$.
 
@@ -42,7 +42,7 @@ $$
 d(\mathbf{Z}_{10}, \mathbf{Z}_{11}) = d((4,6,0), (7,3,1)) = 4, ~~ d(\mathbf{Z}_{11}, \mathbf{Z}_{12}) = d((7,3,1), (10, 0, 2)) = 4,
 $$
 
-concluding that $AdjC(100) = 5$ and $MaxC(S) = 5$.
+concluding that $AdjC(100) = 5$ and $MonC(S) = 5$.
 
 ## Examples with GAP
 

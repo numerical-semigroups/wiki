@@ -8,7 +8,7 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), $s \in S$ and $\mathbf{Z}(s)$ its [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd). It is defined the equal catenary degree of $s$ in $S$, denoted by $EqC(S)$, as the least $N$ such that for any two factorizations $x,y \in \mathbf{Z}(s)$ with the same length, there exist an [N-chain](Chain-of-factorizations.qmd) joining them with all the factorizations of the same length. Equivalently, if $l_1, \ldots, l_n$ are the [lengths](Length-factorization.qmd) of the factorizations and $\mathbf{Z}_{l_i}$ are the factorizations of length $l_i$ for $i \in \{1, \ldots, n\}$, then the equal catenary degree of $s$ is the maximum of the [catenary degrees](Catenary-degree.qmd) of $\mathbf{Z}_{l_1}, \ldots, \mathbf{Z}_{l_n}$.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), $s \in S$ and $\mathbf{Z}(s)$ its [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd). It is defined the equal catenary degree of $s$ in $S$, denoted by $EqC(S)$, as the least $N$ such that for any two factorizations $x,y \in \mathbf{Z}(s)$ with the same length, there exist an [N-chain](Chain-of-factorizations.qmd) joining them with all the factorizations of the same length. Equivalently, if $l_1, \ldots, l_n$ are the [lengths](Length-factorization.qmd) of the factorizations and $\mathbf{Z}_{l_i}$ are the factorizations of length $l_i$ for $i \in \{1, \ldots, n\}$, then the equal catenary degree of $s$ is the maximum of the [catenary degrees](Catenary-degree-of-an-element.qmd) of $\mathbf{Z}_{l_1}, \ldots, \mathbf{Z}_{l_n}$.
 
 ## Examples
 

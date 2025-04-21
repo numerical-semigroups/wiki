@@ -1,0 +1,43 @@
+---
+title: "Pure numerical semigroup"
+format: html
+engine: markdown
+---
+
+<!-- [Bry10] Bryant, L., Goto numbers of a numerical semigroup ring and the Gorensteiness of associated graded rings, Comm. Algebra, 38 (6) (2010), 2092--2128. -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) with [multiplicity](../Basic-concepts/Multiplicity.qmd) $m$, let $Ap(S,m)$ be the [Apéry set](../Basic-concepts/Apery-set.qmd) of $m$ in $S$ and let $\le_S$ be the [relation order](../Basic-concepts/Relation-order-NS.qmd) of $S$. It is said that $S$ is pure if the maximal elements of $Ap(S,m)$ with respect to $\le_S$ have all the same [order](../Fact-and-div/Order-of-an-element.qmd).
+
+## Examples
+
+$\circ$ Let $S = \langle 4, 10, 11 \rangle = \{0, 4, 8, 10, 11, 12, 14, 15, 16, 18, \rightarrow\}$. The multiplicity of $S$ is $m = 4$ and the Apéry set of $m$ in $S$ is
+
+$$
+Ap(S,4) := \{s \in S ~ | ~ s - 4 \not \in S\} = \{0, 21, 10, 11\}.
+$$ 
+
+Since $10 \le_S 21$ and $11 \le 21$, it is concluded that $w = 21$ is the unique maximal element in $Ap(S,4)$ with respect to $\le_S$ and consequently $S$ is pure.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 17, 30, 35, 50, 72, 88 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(17, 30, 35, 50, 72, 88);
+<Numerical semigroup with 6 generators>
+```
+
+Given a numerical semigroup $S$, the functions `IsPure` and `IsPureNumericalSemigroup` return true if $S$ is pure and false otherwise.
+
+``` gap
+gap> IsPure(S);
+true
+gap> IsPureNumericalSemigroup(S) = IsPure(S);
+true
+```
+
+## References
