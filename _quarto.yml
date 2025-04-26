@@ -8,28 +8,46 @@ website:
     collapse-level: 1
     contents:
       - section: "Basic concepts"
-        contents: 
-          - Basic-concepts/Apery-set.qmd
+        contents:  
           - Basic-concepts/Apery-set-respect-set.qmd
           - Basic-concepts/Apery-set.qmd
           - Basic-concepts/Arf-closure-set.qmd
           - Basic-concepts/Arf-closure.qmd
+          - Basic-concepts/Arf-special-gap.qmd
+          - Basic-concepts/Arf-system-of-generators.qmd
+          - Basic-concepts/Binomial-ideal.qmd
+          - Basic-concepts/Cocycle.qmd
           - Basic-concepts/Conductor.qmd
           - Basic-concepts/Degree-of-singularity.qmd
+          - Basic-concepts/Depth-and-remainder.qmd
           - Basic-concepts/Dominant.qmd
+          - Basic-concepts/Eliahou-number.qmd
+          - Basic-concepts/Eliahou-slices.qmd
           - Basic-concepts/Embedding-dimension.qmd
           - Basic-concepts/Frobenius-number.qmd
           - Basic-concepts/Fundamental-gap.qmd
           - Basic-concepts/Gap.qmd
           - Basic-concepts/Genus.qmd
           - Basic-concepts/Gluing.qmd
+          - Basic-concepts/Graph-element-Apery-set.qmd
+          - Basic-concepts/Holes.qmd
+          - Basic-concepts/Homogenization-NS.qmd
           - Basic-concepts/Irreducible-Z-components.qmd
+          - Basic-concepts/Kunz-coordinates.qmd
+          - Basic-concepts/Kunz-polytope.qmd
+          - Basic-concepts/Lattice-path.qmd
           - Basic-concepts/Left-elements.qmd
+          - Basic-concepts/MED-closure.qmd
+          - Basic-concepts/MED-system-of-generators.qmd
           - Basic-concepts/Minimal-set-of-generators.qmd
           - Basic-concepts/Multiplicity.qmd
+          - Basic-concepts/Nu-sequence.qmd
           - Basic-concepts/Numerical-semigroup.qmd
           - Basic-concepts/Oversemigroup.qmd
+          - Basic-concepts/Primitive-element.qmd
+          - Basic-concepts/Profile.qmd
           - Basic-concepts/Pseudo-Frobenius-number.qmd
+          - Basic-concepts/RF-matrix.qmd
           - Basic-concepts/Ratio.qmd
           - Basic-concepts/Relation-order-NS.qmd
           - Basic-concepts/Saturated-closure.qmd
@@ -37,81 +55,138 @@ website:
           - Basic-concepts/Set-divisors.qmd
           - Basic-concepts/Special-gap.qmd
           - Basic-concepts/Standard-representation-free-NS.qmd
+          - Basic-concepts/Tau-sequence.qmd
+          - Basic-concepts/Threshold-interval.qmd
+          - Basic-concepts/Type-sequence.qmd
           - Basic-concepts/Type.qmd
+          - Basic-concepts/Weierstrass-weight.qmd
+          - Basic-concepts/Wilf-number.qmd
           
       - section: "Families of numerical semigroups"
         contents:
+          
+          - Families-NS/Arf-irreducible.qmd
           - Families-NS/Arf-semigroup.qmd
           - Families-NS/NS-Apery-set.qmd
+          - Families-NS/NS-Dilatation.qmd
+          - Families-NS/NS-M-pure.qmd
           - Families-NS/NS-acute.qmd
+          - Families-NS/NS-additive.qmd
           - Families-NS/NS-admitting-pattern.qmd
           - Families-NS/NS-almost-symmetric.qmd
+          - Families-NS/NS-alpha-rectangular.qmd
           - Families-NS/NS-arithmetic.qmd
+          - Families-NS/NS-beta-rectangular.qmd
           - Families-NS/NS-complete-intersection.qmd
+          - Families-NS/NS-cyclotomic.qmd
+          - Families-NS/NS-duplication.qmd
           - Families-NS/NS-free.qmd
+          - Families-NS/NS-gamma-rectangular.qmd
+          - Families-NS/NS-generalized-almost-symmetric.qmd
+          - Families-NS/NS-generic.qmd
           - Families-NS/NS-gluing.qmd
           - Families-NS/NS-half-line.qmd
+          - Families-NS/NS-homogeneous.qmd
+          - Families-NS/NS-inductive.qmd
           - Families-NS/NS-irreducible.qmd
           - Families-NS/NS-maximal-embedding-dimension.qmd
           - Families-NS/NS-modular.qmd
+          - Families-NS/NS-multiple.qmd
+          - Families-NS/NS-plane-branch.qmd
           - Families-NS/NS-prop-modular.qmd
           - Families-NS/NS-pseudo-symmetric.qmd
+          - Families-NS/NS-pure.qmd
           - Families-NS/NS-quotient.qmd
           - Families-NS/NS-saturated.qmd
           - Families-NS/NS-set-rational-numbers.qmd
+          - Families-NS/NS-shifted.qmd
           - Families-NS/NS-simple.qmd
+          - Families-NS/NS-supersymmetric.qmd
           - Families-NS/NS-symmetric.qmd
           - Families-NS/NS-telescopic.qmd
+          - Families-NS/NS-unique-Betti-element.qmd
+          - Families-NS/NS-uniquely-presented.qmd
+          - Families-NS/Pi-semigroup.qmd
           - Families-NS/Weierstrass-semigroup.qmd
+          - Families-NS/Wilf-semigroup.qmd
 
       - section: "Ideals and numerical semigroups"
         contents:
+          
           - Ideals-NS/Almost-canonical-ideal.qmd
+          - Ideals-NS/Apery-set-ideal.qmd
+          - Ideals-NS/Apery-table.qmd
           - Ideals-NS/Blowup.qmd
           - Ideals-NS/Canonical-ideal.qmd
           - Ideals-NS/Conductor-ideal.qmd
+          - Ideals-NS/Conductor-of-an-ideal.qmd
+          - Ideals-NS/Denumerant-ideal.qmd
+          - Ideals-NS/Dual-ideal.qmd
           - Ideals-NS/Frobenius-number-ideal.qmd
           - Ideals-NS/Genus-ideal.qmd
+          - Ideals-NS/Hilbert-function-ideal.qmd
+          - Ideals-NS/Ideal-admits-pattern.qmd
           - Ideals-NS/Integrally-closed-ideal.qmd
           - Ideals-NS/Irreducible-ideal.qmd
+          - Ideals-NS/Left-elements-ideal.qmd
           - Ideals-NS/Maximal-ideal.qmd
           - Ideals-NS/Maximum-sparse-ideal.qmd
+          - Ideals-NS/Microinvariants.qmd
+          - Ideals-NS/Minimal-set-generators-ideal.qmd
           - Ideals-NS/Multiplicity-ideal.qmd
           - Ideals-NS/Multiplicity-sequence.qmd
           - Ideals-NS/Principal-ideal.qmd
           - Ideals-NS/Proper-ideal.qmd
+          - Ideals-NS/Pseudo-Frobenius-number-ideal.qmd
+          - Ideals-NS/Ratliff-Rush-closure.qmd
+          - Ideals-NS/Ratliff-Rush-number.qmd
           - Ideals-NS/Reduction-number.qmd
           - Ideals-NS/Reduction.qmd
           - Ideals-NS/Relative-ideal.qmd
           - Ideals-NS/Set-closed-divisors.qmd
           - Ideals-NS/Stable-ideal.qmd
           - Ideals-NS/Standard-canonical-ideal.qmd
+          - Ideals-NS/Star-closure.qmd
+          - Ideals-NS/Trace-ideal.qmd
+          - Ideals-NS/Translation-ideal.qmd
           - Ideals-NS/Type-ideal.qmd
           - Ideals-NS/Z-irreducible-ideal.qmd
       
       - section: "Factorizations and divisibility"
         contents: 
-          - Fact-and-Div/Apery-set-integer.qmd
-          - Fact-and-Div/Catenary-degree-of-a-numerical-semigroup.qmd
-          - Fact-and-Div/Catenary-degree-of-an-element.qmd
-          - Fact-and-Div/Chain-of-factorizations.qmd
-          - Fact-and-Div/Delta-set-of-a-numerical-semigroup.qmd
-          - Fact-and-Div/Delta-set-of-an-element.qmd
-          - Fact-and-Div/Desert.qmd
-          - Fact-and-Div/Distance-factorizations.qmd
-          - Fact-and-Div/Divide.qmd
-          - Fact-and-Div/Elasticity-of-a-numerical-semigroup.qmd
-          - Fact-and-Div/Elasticity-of-an-element.qmd
-          - Fact-and-Div/Feng-Rao-distance-generalized.qmd
-          - Fact-and-Div/Feng-Rao-distance.qmd
-          - Fact-and-Div/Half-factorial-monoid.qmd
-          - Fact-and-Div/Length-factorization.qmd
-          - Fact-and-Div/One-point-algebraic-code.qmd
-          - Fact-and-Div/Set-of-lengths.qmd
-          - Fact-and-Div/Tame-degree-of-a-numerical-semigroup.qmd
-          - Fact-and-Div/Tame-degree-of-an-element.qmd
-          - Fact-and-Div/w-primality-of-a-numerical-semigroup.qmd
-          - Fact-and-Div/w-primality-of-an-element.qmd
+          
+          - Fact-and-div/Adjacent-catenary-degree-element.qmd
+          - Fact-and-div/Adjustment-NS.qmd
+          - Fact-and-div/Adjustment-of-an-element.qmd
+          - Fact-and-div/Apery-set-integer.qmd
+          - Fact-and-div/Catenary-degree-of-a-numerical-semigroup.qmd
+          - Fact-and-div/Catenary-degree-of-an-element.qmd
+          - Fact-and-div/Chain-of-factorizations.qmd
+          - Fact-and-div/Delta-set-of-a-numerical-semigroup.qmd
+          - Fact-and-div/Delta-set-of-an-element.qmd
+          - Fact-and-div/Desert.qmd
+          - Fact-and-div/Distance-factorizations.qmd
+          - Fact-and-div/Divide.qmd
+          - Fact-and-div/Elasticity-of-a-numerical-semigroup.qmd
+          - Fact-and-div/Elasticity-of-an-element.qmd
+          - Fact-and-div/Equal-catenary-degree-NS.qmd
+          - Fact-and-div/Equal-catenary-degree-element.qmd
+          - Fact-and-div/Feng-Rao-distance-generalized.qmd
+          - Fact-and-div/Feng-Rao-distance.qmd
+          - Fact-and-div/Half-factorial-monoid.qmd
+          - Fact-and-div/Length-factorization.qmd
+          - Fact-and-div/Maximal-denumerant-NS.qmd
+          - Fact-and-div/Maximal-denumerant-of-an-element.qmd
+          - Fact-and-div/Moebius-function-NS.qmd
+          - Fact-and-div/Monotone-catenary-degree-NS.qmd
+          - Fact-and-div/Monotone-catenary-degree-element.qmd
+          - Fact-and-div/One-point-algebraic-code.qmd
+          - Fact-and-div/Order-of-an-element.qmd
+          - Fact-and-div/Set-of-lengths.qmd
+          - Fact-and-div/Tame-degree-of-a-numerical-semigroup.qmd
+          - Fact-and-div/Tame-degree-of-an-element.qmd
+          - Fact-and-div/w-primality-of-a-numerical-semigroup.qmd
+          - Fact-and-div/w-primality-of-an-element.qmd
 
       - section: "Frobenius varieties"
         contents:
