@@ -18,7 +18,7 @@ $\circ$ Let $S = \langle 10, 11, 15 \rangle$ and $s = 100 \in S$. We have $\math
 
 ## Examples with GAP
 
-The following example is made with the package NumericalSgps in GAP.
+The following examples are made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 12, 34, 50, 79, 107 \rangle$, in GAP:
 
@@ -54,4 +54,192 @@ gap> Length(RClassesOfSetOfFactorizations(Factorizations(S, 84)));
 
 Therefore, $s = 84$ is a Betti element.
 
+
+$\diamond$ Let $S = \langle 25, 30, 62, 69, 108, 114, 146 \rangle$, in GAP:
+
+
+```gap
+gap> S := NumericalSemigroup(25, 30, 62, 69, 108, 114, 146);
+<Numerical semigroup with 7 generators>
+```
+
+
+Given a numerical semigroup $S$ with set of Betti elements $Betti(S)$, the function `HasseDiagramOfBettiElementsOfNumericalSemigroup` returns the Hasse diagram of $S$ by the [relation order of S](../Basic-concepts/Relation-order-NS.qmd) $\le_S$, that is, $u \le_S v \Longleftrightarrow v - u \in S$. The vertices are the Betti elements of $S$. The function `DotBinaryRelation` returns a GraphViz dot that represents the given binary relation.
+
+
+
+```gap
+gap> H := HasseDiagramOfAperyListOfNumericalSemigroup(S);
+<general mapping: Domain([ 0, 30, 60, 62, 69, 90, 92, 99, 108, 114, 120, 122, 129, 131, 138,
+  146, 152, 159, 161, 168, 176, 182, 191, 198, 228 ]) -> Domain([ 0, 30, 60, 62, 69, 90, 92, 99,
+  108, 114, 120, 122, 129, 131, 138, 146, 152, 159, 161, 168, 176, 182, 191, 198, 228 ]) >
+gap>
+gap> h := DotBinaryRelation(H);;
+gap> Print(h);
+digraph  NSGraph{rankdir = TB; edge[dir=back];
+1 [label="0"];
+2 [label="30"];
+3 [label="60"];
+4 [label="62"];
+5 [label="69"];
+6 [label="90"];
+7 [label="92"];
+8 [label="99"];
+9 [label="108"];
+10 [label="114"];
+11 [label="120"];
+12 [label="122"];
+13 [label="129"];
+14 [label="131"];
+15 [label="138"];
+16 [label="146"];
+17 [label="152"];
+18 [label="159"];
+19 [label="161"];
+20 [label="168"];
+21 [label="176"];
+22 [label="182"];
+23 [label="191"];
+24 [label="198"];
+25 [label="228"];
+2 -> 1;
+4 -> 1;
+5 -> 1;
+9 -> 1;
+10 -> 1;
+16 -> 1;
+3 -> 2;
+7 -> 2;
+8 -> 2;
+15 -> 2;
+21 -> 2;
+6 -> 3;
+12 -> 3;
+13 -> 3;
+20 -> 3;
+7 -> 4;
+14 -> 4;
+21 -> 4;
+8 -> 5;
+14 -> 5;
+15 -> 5;
+11 -> 6;
+17 -> 6;
+18 -> 6;
+24 -> 6;
+12 -> 7;
+19 -> 7;
+13 -> 8;
+19 -> 8;
+20 -> 8;
+15 -> 9;
+21 -> 10;
+25 -> 10;
+22 -> 11;
+25 -> 11;
+17 -> 12;
+23 -> 12;
+18 -> 13;
+23 -> 13;
+24 -> 13;
+19 -> 14;
+20 -> 15;
+21 -> 16;
+22 -> 17;
+25 -> 18;
+23 -> 19;
+24 -> 20;
+25 -> 24;
+}
+```
+
+The Hasse diagram is as follows.
+
+
+```{dot}
+digraph  NSGraph{rankdir = TB; edge[dir=back];
+1 [label="0"];
+2 [label="30"];
+3 [label="60"];
+4 [label="62"];
+5 [label="69"];
+6 [label="90"];
+7 [label="92"];
+8 [label="99"];
+9 [label="108"];
+10 [label="114"];
+11 [label="120"];
+12 [label="122"];
+13 [label="129"];
+14 [label="131"];
+15 [label="138"];
+16 [label="146"];
+17 [label="152"];
+18 [label="159"];
+19 [label="161"];
+20 [label="168"];
+21 [label="176"];
+22 [label="182"];
+23 [label="191"];
+24 [label="198"];
+25 [label="228"];
+2 -> 1;
+4 -> 1;
+5 -> 1;
+9 -> 1;
+10 -> 1;
+16 -> 1;
+3 -> 2;
+7 -> 2;
+8 -> 2;
+15 -> 2;
+21 -> 2;
+6 -> 3;
+12 -> 3;
+13 -> 3;
+20 -> 3;
+7 -> 4;
+14 -> 4;
+21 -> 4;
+8 -> 5;
+14 -> 5;
+15 -> 5;
+11 -> 6;
+17 -> 6;
+18 -> 6;
+24 -> 6;
+12 -> 7;
+19 -> 7;
+13 -> 8;
+19 -> 8;
+20 -> 8;
+15 -> 9;
+21 -> 10;
+25 -> 10;
+22 -> 11;
+25 -> 11;
+17 -> 12;
+23 -> 12;
+18 -> 13;
+23 -> 13;
+24 -> 13;
+19 -> 14;
+20 -> 15;
+21 -> 16;
+22 -> 17;
+25 -> 18;
+23 -> 19;
+24 -> 20;
+25 -> 24;
+}
+
+```
+
+
+
 ## References
+
+
+
+
+
