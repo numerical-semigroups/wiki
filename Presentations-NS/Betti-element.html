@@ -1548,7 +1548,7 @@ window.Quarto = {
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>The following example is made with the package NumericalSgps in GAP.</p>
+<p>The following examples are made with the package NumericalSgps in GAP.</p>
 <p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 12, 34, 50, 79, 107 \rangle\)</span>, in GAP:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">12</span><span class="op">,</span> <span class="fl">34</span><span class="op">,</span> <span class="fl">50</span><span class="op">,</span> <span class="fl">79</span><span class="op">,</span> <span class="fl">107</span>)<span class="op">;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">5</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1566,6 +1566,547 @@ window.Quarto = {
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="bu">Length</span>(<span class="va">RClassesOfSetOfFactorizations</span>(<span class="va">Factorizations</span>(<span class="va">S</span><span class="op">,</span> <span class="fl">84</span>)))<span class="op">;</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fl">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Therefore, <span class="math inline">\(s = 84\)</span> is a Betti element.</p>
+<p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 25, 30, 62, 69, 108, 114, 146 \rangle\)</span>, in GAP:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">25</span><span class="op">,</span> <span class="fl">30</span><span class="op">,</span> <span class="fl">62</span><span class="op">,</span> <span class="fl">69</span><span class="op">,</span> <span class="fl">108</span><span class="op">,</span> <span class="fl">114</span><span class="op">,</span> <span class="fl">146</span>)<span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">7</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Given a numerical semigroup <span class="math inline">\(S\)</span> with set of Betti elements <span class="math inline">\(Betti(S)\)</span>, the function <code>HasseDiagramOfBettiElementsOfNumericalSemigroup</code> returns the Hasse diagram of <span class="math inline">\(S\)</span> by the <a href="../Basic-concepts/Relation-order-NS.html">relation order of S</a> <span class="math inline">\(\le_S\)</span>, that is, <span class="math inline">\(u \le_S v \Longleftrightarrow v - u \in S\)</span>. The vertices are the Betti elements of <span class="math inline">\(S\)</span>. The function <code>DotBinaryRelation</code> returns a GraphViz dot that represents the given binary relation.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">H</span> <span class="op">:=</span> <span class="va">HasseDiagramOfAperyListOfNumericalSemigroup</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">general</span> <span class="va">mapping</span><span class="op">:</span> <span class="bu">Domain</span>([ <span class="fl">0</span><span class="op">,</span> <span class="fl">30</span><span class="op">,</span> <span class="fl">60</span><span class="op">,</span> <span class="fl">62</span><span class="op">,</span> <span class="fl">69</span><span class="op">,</span> <span class="fl">90</span><span class="op">,</span> <span class="fl">92</span><span class="op">,</span> <span class="fl">99</span><span class="op">,</span> <span class="fl">108</span><span class="op">,</span> <span class="fl">114</span><span class="op">,</span> <span class="fl">120</span><span class="op">,</span> <span class="fl">122</span><span class="op">,</span> <span class="fl">129</span><span class="op">,</span> <span class="fl">131</span><span class="op">,</span> <span class="fl">138</span><span class="op">,</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fl">146</span><span class="op">,</span> <span class="fl">152</span><span class="op">,</span> <span class="fl">159</span><span class="op">,</span> <span class="fl">161</span><span class="op">,</span> <span class="fl">168</span><span class="op">,</span> <span class="fl">176</span><span class="op">,</span> <span class="fl">182</span><span class="op">,</span> <span class="fl">191</span><span class="op">,</span> <span class="fl">198</span><span class="op">,</span> <span class="fl">228</span> ]) <span class="op">-&gt;</span> <span class="bu">Domain</span>([ <span class="fl">0</span><span class="op">,</span> <span class="fl">30</span><span class="op">,</span> <span class="fl">60</span><span class="op">,</span> <span class="fl">62</span><span class="op">,</span> <span class="fl">69</span><span class="op">,</span> <span class="fl">90</span><span class="op">,</span> <span class="fl">92</span><span class="op">,</span> <span class="fl">99</span><span class="op">,</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fl">108</span><span class="op">,</span> <span class="fl">114</span><span class="op">,</span> <span class="fl">120</span><span class="op">,</span> <span class="fl">122</span><span class="op">,</span> <span class="fl">129</span><span class="op">,</span> <span class="fl">131</span><span class="op">,</span> <span class="fl">138</span><span class="op">,</span> <span class="fl">146</span><span class="op">,</span> <span class="fl">152</span><span class="op">,</span> <span class="fl">159</span><span class="op">,</span> <span class="fl">161</span><span class="op">,</span> <span class="fl">168</span><span class="op">,</span> <span class="fl">176</span><span class="op">,</span> <span class="fl">182</span><span class="op">,</span> <span class="fl">191</span><span class="op">,</span> <span class="fl">198</span><span class="op">,</span> <span class="fl">228</span> ]) <span class="op">&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">h</span> <span class="op">:=</span> <span class="va">DotBinaryRelation</span>(<span class="va">H</span>)<span class="op">;;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="bu">Print</span>(<span class="va">h</span>)<span class="op">;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="va">digraph</span>  <span class="va">NSGraph</span>{<span class="va">rankdir</span> <span class="op">=</span> <span class="va">TB</span><span class="op">;</span> <span class="va">edge</span>[<span class="va">dir</span><span class="op">=</span><span class="va">back</span>]<span class="op">;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="fl">1</span> [<span class="va">label</span><span class="op">=</span><span class="st">"0"</span>]<span class="op">;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="fl">2</span> [<span class="va">label</span><span class="op">=</span><span class="st">"30"</span>]<span class="op">;</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="fl">3</span> [<span class="va">label</span><span class="op">=</span><span class="st">"60"</span>]<span class="op">;</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="fl">4</span> [<span class="va">label</span><span class="op">=</span><span class="st">"62"</span>]<span class="op">;</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="fl">5</span> [<span class="va">label</span><span class="op">=</span><span class="st">"69"</span>]<span class="op">;</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="fl">6</span> [<span class="va">label</span><span class="op">=</span><span class="st">"90"</span>]<span class="op">;</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="fl">7</span> [<span class="va">label</span><span class="op">=</span><span class="st">"92"</span>]<span class="op">;</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="fl">8</span> [<span class="va">label</span><span class="op">=</span><span class="st">"99"</span>]<span class="op">;</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="fl">9</span> [<span class="va">label</span><span class="op">=</span><span class="st">"108"</span>]<span class="op">;</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="fl">10</span> [<span class="va">label</span><span class="op">=</span><span class="st">"114"</span>]<span class="op">;</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="fl">11</span> [<span class="va">label</span><span class="op">=</span><span class="st">"120"</span>]<span class="op">;</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="fl">12</span> [<span class="va">label</span><span class="op">=</span><span class="st">"122"</span>]<span class="op">;</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="fl">13</span> [<span class="va">label</span><span class="op">=</span><span class="st">"129"</span>]<span class="op">;</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="fl">14</span> [<span class="va">label</span><span class="op">=</span><span class="st">"131"</span>]<span class="op">;</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="fl">15</span> [<span class="va">label</span><span class="op">=</span><span class="st">"138"</span>]<span class="op">;</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="fl">16</span> [<span class="va">label</span><span class="op">=</span><span class="st">"146"</span>]<span class="op">;</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="fl">17</span> [<span class="va">label</span><span class="op">=</span><span class="st">"152"</span>]<span class="op">;</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="fl">18</span> [<span class="va">label</span><span class="op">=</span><span class="st">"159"</span>]<span class="op">;</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="fl">19</span> [<span class="va">label</span><span class="op">=</span><span class="st">"161"</span>]<span class="op">;</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="fl">20</span> [<span class="va">label</span><span class="op">=</span><span class="st">"168"</span>]<span class="op">;</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="fl">21</span> [<span class="va">label</span><span class="op">=</span><span class="st">"176"</span>]<span class="op">;</span></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="fl">22</span> [<span class="va">label</span><span class="op">=</span><span class="st">"182"</span>]<span class="op">;</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="fl">23</span> [<span class="va">label</span><span class="op">=</span><span class="st">"191"</span>]<span class="op">;</span></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="fl">24</span> [<span class="va">label</span><span class="op">=</span><span class="st">"198"</span>]<span class="op">;</span></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="fl">25</span> [<span class="va">label</span><span class="op">=</span><span class="st">"228"</span>]<span class="op">;</span></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a><span class="fl">2</span> <span class="op">-&gt;</span> <span class="fl">1</span><span class="op">;</span></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="fl">4</span> <span class="op">-&gt;</span> <span class="fl">1</span><span class="op">;</span></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="fl">5</span> <span class="op">-&gt;</span> <span class="fl">1</span><span class="op">;</span></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a><span class="fl">9</span> <span class="op">-&gt;</span> <span class="fl">1</span><span class="op">;</span></span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a><span class="fl">10</span> <span class="op">-&gt;</span> <span class="fl">1</span><span class="op">;</span></span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a><span class="fl">16</span> <span class="op">-&gt;</span> <span class="fl">1</span><span class="op">;</span></span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a><span class="fl">3</span> <span class="op">-&gt;</span> <span class="fl">2</span><span class="op">;</span></span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a><span class="fl">7</span> <span class="op">-&gt;</span> <span class="fl">2</span><span class="op">;</span></span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="fl">8</span> <span class="op">-&gt;</span> <span class="fl">2</span><span class="op">;</span></span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a><span class="fl">15</span> <span class="op">-&gt;</span> <span class="fl">2</span><span class="op">;</span></span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a><span class="fl">21</span> <span class="op">-&gt;</span> <span class="fl">2</span><span class="op">;</span></span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a><span class="fl">6</span> <span class="op">-&gt;</span> <span class="fl">3</span><span class="op">;</span></span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a><span class="fl">12</span> <span class="op">-&gt;</span> <span class="fl">3</span><span class="op">;</span></span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a><span class="fl">13</span> <span class="op">-&gt;</span> <span class="fl">3</span><span class="op">;</span></span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a><span class="fl">20</span> <span class="op">-&gt;</span> <span class="fl">3</span><span class="op">;</span></span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a><span class="fl">7</span> <span class="op">-&gt;</span> <span class="fl">4</span><span class="op">;</span></span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a><span class="fl">14</span> <span class="op">-&gt;</span> <span class="fl">4</span><span class="op">;</span></span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a><span class="fl">21</span> <span class="op">-&gt;</span> <span class="fl">4</span><span class="op">;</span></span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a><span class="fl">8</span> <span class="op">-&gt;</span> <span class="fl">5</span><span class="op">;</span></span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a><span class="fl">14</span> <span class="op">-&gt;</span> <span class="fl">5</span><span class="op">;</span></span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a><span class="fl">15</span> <span class="op">-&gt;</span> <span class="fl">5</span><span class="op">;</span></span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a><span class="fl">11</span> <span class="op">-&gt;</span> <span class="fl">6</span><span class="op">;</span></span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a><span class="fl">17</span> <span class="op">-&gt;</span> <span class="fl">6</span><span class="op">;</span></span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a><span class="fl">18</span> <span class="op">-&gt;</span> <span class="fl">6</span><span class="op">;</span></span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a><span class="fl">24</span> <span class="op">-&gt;</span> <span class="fl">6</span><span class="op">;</span></span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a><span class="fl">12</span> <span class="op">-&gt;</span> <span class="fl">7</span><span class="op">;</span></span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a><span class="fl">19</span> <span class="op">-&gt;</span> <span class="fl">7</span><span class="op">;</span></span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a><span class="fl">13</span> <span class="op">-&gt;</span> <span class="fl">8</span><span class="op">;</span></span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a><span class="fl">19</span> <span class="op">-&gt;</span> <span class="fl">8</span><span class="op">;</span></span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a><span class="fl">20</span> <span class="op">-&gt;</span> <span class="fl">8</span><span class="op">;</span></span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a><span class="fl">15</span> <span class="op">-&gt;</span> <span class="fl">9</span><span class="op">;</span></span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a><span class="fl">21</span> <span class="op">-&gt;</span> <span class="fl">10</span><span class="op">;</span></span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a><span class="fl">25</span> <span class="op">-&gt;</span> <span class="fl">10</span><span class="op">;</span></span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a><span class="fl">22</span> <span class="op">-&gt;</span> <span class="fl">11</span><span class="op">;</span></span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a><span class="fl">25</span> <span class="op">-&gt;</span> <span class="fl">11</span><span class="op">;</span></span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a><span class="fl">17</span> <span class="op">-&gt;</span> <span class="fl">12</span><span class="op">;</span></span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a><span class="fl">23</span> <span class="op">-&gt;</span> <span class="fl">12</span><span class="op">;</span></span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a><span class="fl">18</span> <span class="op">-&gt;</span> <span class="fl">13</span><span class="op">;</span></span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a><span class="fl">23</span> <span class="op">-&gt;</span> <span class="fl">13</span><span class="op">;</span></span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a><span class="fl">24</span> <span class="op">-&gt;</span> <span class="fl">13</span><span class="op">;</span></span>
+<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a><span class="fl">19</span> <span class="op">-&gt;</span> <span class="fl">14</span><span class="op">;</span></span>
+<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a><span class="fl">20</span> <span class="op">-&gt;</span> <span class="fl">15</span><span class="op">;</span></span>
+<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a><span class="fl">21</span> <span class="op">-&gt;</span> <span class="fl">16</span><span class="op">;</span></span>
+<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a><span class="fl">22</span> <span class="op">-&gt;</span> <span class="fl">17</span><span class="op">;</span></span>
+<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a><span class="fl">25</span> <span class="op">-&gt;</span> <span class="fl">18</span><span class="op">;</span></span>
+<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a><span class="fl">23</span> <span class="op">-&gt;</span> <span class="fl">19</span><span class="op">;</span></span>
+<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a><span class="fl">24</span> <span class="op">-&gt;</span> <span class="fl">20</span><span class="op">;</span></span>
+<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a><span class="fl">25</span> <span class="op">-&gt;</span> <span class="fl">24</span><span class="op">;</span></span>
+<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The Hasse diagram is as follows.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 434.27 404.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 400)">
+<title>NSGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-400 430.27,-400 430.27,4 -4,4"></polygon>
+<!-- 1 -->
+<g id="node1" class="node">
+<title>1</title>
+<ellipse fill="none" stroke="black" cx="207" cy="-18" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="207" y="-13.8" font-family="Times,serif" font-size="14.00">0</text>
+</g>
+<!-- 2 -->
+<g id="node2" class="node">
+<title>2</title>
+<ellipse fill="none" stroke="black" cx="171" cy="-90" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="171" y="-85.8" font-family="Times,serif" font-size="14.00">30</text>
+</g>
+<!-- 2&#45;&gt;1 -->
+<g id="edge1" class="edge">
+<title>2-&gt;1</title>
+<path fill="none" stroke="black" d="M184.01,-63.7C188.91,-54.18 194.34,-43.61 198.7,-35.15"></path>
+<polygon fill="black" stroke="black" points="180.81,-62.27 179.35,-72.76 187.04,-65.47 180.81,-62.27"></polygon>
+</g>
+<!-- 3 -->
+<g id="node3" class="node">
+<title>3</title>
+<ellipse fill="none" stroke="black" cx="171" cy="-162" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="171" y="-157.8" font-family="Times,serif" font-size="14.00">60</text>
+</g>
+<!-- 3&#45;&gt;2 -->
+<g id="edge7" class="edge">
+<title>3-&gt;2</title>
+<path fill="none" stroke="black" d="M171,-133.67C171,-125.05 171,-115.79 171,-108.1"></path>
+<polygon fill="black" stroke="black" points="167.5,-133.7 171,-143.7 174.5,-133.7 167.5,-133.7"></polygon>
+</g>
+<!-- 4 -->
+<g id="node4" class="node">
+<title>4</title>
+<ellipse fill="none" stroke="black" cx="243" cy="-90" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="243" y="-85.8" font-family="Times,serif" font-size="14.00">62</text>
+</g>
+<!-- 4&#45;&gt;1 -->
+<g id="edge2" class="edge">
+<title>4-&gt;1</title>
+<path fill="none" stroke="black" d="M229.99,-63.7C225.09,-54.18 219.66,-43.61 215.3,-35.15"></path>
+<polygon fill="black" stroke="black" points="226.96,-65.47 234.65,-72.76 233.19,-62.27 226.96,-65.47"></polygon>
+</g>
+<!-- 5 -->
+<g id="node5" class="node">
+<title>5</title>
+<ellipse fill="none" stroke="black" cx="99" cy="-90" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="99" y="-85.8" font-family="Times,serif" font-size="14.00">69</text>
+</g>
+<!-- 5&#45;&gt;1 -->
+<g id="edge3" class="edge">
+<title>5-&gt;1</title>
+<path fill="none" stroke="black" d="M126.25,-71.34C145.68,-58.75 171.28,-42.15 188.4,-31.05"></path>
+<polygon fill="black" stroke="black" points="124.3,-68.43 117.81,-76.81 128.11,-74.3 124.3,-68.43"></polygon>
+</g>
+<!-- 6 -->
+<g id="node6" class="node">
+<title>6</title>
+<ellipse fill="none" stroke="black" cx="171" cy="-234" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="171" y="-229.8" font-family="Times,serif" font-size="14.00">90</text>
+</g>
+<!-- 6&#45;&gt;3 -->
+<g id="edge12" class="edge">
+<title>6-&gt;3</title>
+<path fill="none" stroke="black" d="M171,-205.67C171,-197.05 171,-187.79 171,-180.1"></path>
+<polygon fill="black" stroke="black" points="167.5,-205.7 171,-215.7 174.5,-205.7 167.5,-205.7"></polygon>
+</g>
+<!-- 7 -->
+<g id="node7" class="node">
+<title>7</title>
+<ellipse fill="none" stroke="black" cx="315" cy="-162" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="315" y="-157.8" font-family="Times,serif" font-size="14.00">92</text>
+</g>
+<!-- 7&#45;&gt;2 -->
+<g id="edge8" class="edge">
+<title>7-&gt;2</title>
+<path fill="none" stroke="black" d="M284.53,-146.19C256.85,-132.73 216.73,-113.23 192.33,-101.37"></path>
+<polygon fill="black" stroke="black" points="283.23,-149.45 293.75,-150.67 286.29,-143.15 283.23,-149.45"></polygon>
+</g>
+<!-- 7&#45;&gt;4 -->
+<g id="edge16" class="edge">
+<title>7-&gt;4</title>
+<path fill="none" stroke="black" d="M292.96,-139.57C281.55,-128.48 267.93,-115.24 257.8,-105.38"></path>
+<polygon fill="black" stroke="black" points="290.82,-142.37 300.43,-146.83 295.7,-137.35 290.82,-142.37"></polygon>
+</g>
+<!-- 8 -->
+<g id="node8" class="node">
+<title>8</title>
+<ellipse fill="none" stroke="black" cx="99" cy="-162" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="99" y="-157.8" font-family="Times,serif" font-size="14.00">99</text>
+</g>
+<!-- 8&#45;&gt;2 -->
+<g id="edge9" class="edge">
+<title>8-&gt;2</title>
+<path fill="none" stroke="black" d="M121.04,-139.57C132.45,-128.48 146.07,-115.24 156.2,-105.38"></path>
+<polygon fill="black" stroke="black" points="118.3,-137.35 113.57,-146.83 123.18,-142.37 118.3,-137.35"></polygon>
+</g>
+<!-- 8&#45;&gt;5 -->
+<g id="edge19" class="edge">
+<title>8-&gt;5</title>
+<path fill="none" stroke="black" d="M99,-133.67C99,-125.05 99,-115.79 99,-108.1"></path>
+<polygon fill="black" stroke="black" points="95.5,-133.7 99,-143.7 102.5,-133.7 95.5,-133.7"></polygon>
+</g>
+<!-- 9 -->
+<g id="node9" class="node">
+<title>9</title>
+<ellipse fill="none" stroke="black" cx="27" cy="-90" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="27" y="-85.8" font-family="Times,serif" font-size="14.00">108</text>
+</g>
+<!-- 9&#45;&gt;1 -->
+<g id="edge4" class="edge">
+<title>9-&gt;1</title>
+<path fill="none" stroke="black" d="M57.46,-74.39C59.32,-73.56 61.18,-72.76 63,-72 104.77,-54.49 154.56,-36.87 183.31,-27"></path>
+<polygon fill="black" stroke="black" points="55.83,-71.29 48.18,-78.62 58.73,-77.65 55.83,-71.29"></polygon>
+</g>
+<!-- 10 -->
+<g id="node10" class="node">
+<title>10</title>
+<ellipse fill="none" stroke="black" cx="387" cy="-90" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="387" y="-85.8" font-family="Times,serif" font-size="14.00">114</text>
+</g>
+<!-- 10&#45;&gt;1 -->
+<g id="edge5" class="edge">
+<title>10-&gt;1</title>
+<path fill="none" stroke="black" d="M356.54,-74.39C354.68,-73.56 352.82,-72.76 351,-72 309.23,-54.49 259.44,-36.87 230.69,-27"></path>
+<polygon fill="black" stroke="black" points="355.27,-77.65 365.82,-78.62 358.17,-71.29 355.27,-77.65"></polygon>
+</g>
+<!-- 11 -->
+<g id="node11" class="node">
+<title>11</title>
+<ellipse fill="none" stroke="black" cx="171" cy="-306" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="171" y="-301.8" font-family="Times,serif" font-size="14.00">120</text>
+</g>
+<!-- 11&#45;&gt;6 -->
+<g id="edge22" class="edge">
+<title>11-&gt;6</title>
+<path fill="none" stroke="black" d="M171,-277.67C171,-269.05 171,-259.79 171,-252.1"></path>
+<polygon fill="black" stroke="black" points="167.5,-277.7 171,-287.7 174.5,-277.7 167.5,-277.7"></polygon>
+</g>
+<!-- 12 -->
+<g id="node12" class="node">
+<title>12</title>
+<ellipse fill="none" stroke="black" cx="315" cy="-234" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="315" y="-229.8" font-family="Times,serif" font-size="14.00">122</text>
+</g>
+<!-- 12&#45;&gt;3 -->
+<g id="edge13" class="edge">
+<title>12-&gt;3</title>
+<path fill="none" stroke="black" d="M284.53,-218.19C256.85,-204.73 216.73,-185.23 192.33,-173.37"></path>
+<polygon fill="black" stroke="black" points="283.23,-221.45 293.75,-222.67 286.29,-215.15 283.23,-221.45"></polygon>
+</g>
+<!-- 12&#45;&gt;7 -->
+<g id="edge26" class="edge">
+<title>12-&gt;7</title>
+<path fill="none" stroke="black" d="M315,-205.67C315,-197.05 315,-187.79 315,-180.1"></path>
+<polygon fill="black" stroke="black" points="311.5,-205.7 315,-215.7 318.5,-205.7 311.5,-205.7"></polygon>
+</g>
+<!-- 13 -->
+<g id="node13" class="node">
+<title>13</title>
+<ellipse fill="none" stroke="black" cx="99" cy="-234" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="99" y="-229.8" font-family="Times,serif" font-size="14.00">129</text>
+</g>
+<!-- 13&#45;&gt;3 -->
+<g id="edge14" class="edge">
+<title>13-&gt;3</title>
+<path fill="none" stroke="black" d="M121.04,-211.57C132.45,-200.48 146.07,-187.24 156.2,-177.38"></path>
+<polygon fill="black" stroke="black" points="118.3,-209.35 113.57,-218.83 123.18,-214.37 118.3,-209.35"></polygon>
+</g>
+<!-- 13&#45;&gt;8 -->
+<g id="edge28" class="edge">
+<title>13-&gt;8</title>
+<path fill="none" stroke="black" d="M99,-205.67C99,-197.05 99,-187.79 99,-180.1"></path>
+<polygon fill="black" stroke="black" points="95.5,-205.7 99,-215.7 102.5,-205.7 95.5,-205.7"></polygon>
+</g>
+<!-- 14 -->
+<g id="node14" class="node">
+<title>14</title>
+<ellipse fill="none" stroke="black" cx="243" cy="-162" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="243" y="-157.8" font-family="Times,serif" font-size="14.00">131</text>
+</g>
+<!-- 14&#45;&gt;4 -->
+<g id="edge17" class="edge">
+<title>14-&gt;4</title>
+<path fill="none" stroke="black" d="M243,-133.67C243,-125.05 243,-115.79 243,-108.1"></path>
+<polygon fill="black" stroke="black" points="239.5,-133.7 243,-143.7 246.5,-133.7 239.5,-133.7"></polygon>
+</g>
+<!-- 14&#45;&gt;5 -->
+<g id="edge20" class="edge">
+<title>14-&gt;5</title>
+<path fill="none" stroke="black" d="M212.53,-146.19C184.85,-132.73 144.73,-113.23 120.33,-101.37"></path>
+<polygon fill="black" stroke="black" points="211.23,-149.45 221.75,-150.67 214.29,-143.15 211.23,-149.45"></polygon>
+</g>
+<!-- 15 -->
+<g id="node15" class="node">
+<title>15</title>
+<ellipse fill="none" stroke="black" cx="27" cy="-162" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="27" y="-157.8" font-family="Times,serif" font-size="14.00">138</text>
+</g>
+<!-- 15&#45;&gt;2 -->
+<g id="edge10" class="edge">
+<title>15-&gt;2</title>
+<path fill="none" stroke="black" d="M57.47,-146.19C85.15,-132.73 125.27,-113.23 149.67,-101.37"></path>
+<polygon fill="black" stroke="black" points="55.71,-143.15 48.25,-150.67 58.77,-149.45 55.71,-143.15"></polygon>
+</g>
+<!-- 15&#45;&gt;5 -->
+<g id="edge21" class="edge">
+<title>15-&gt;5</title>
+<path fill="none" stroke="black" d="M49.04,-139.57C60.45,-128.48 74.07,-115.24 84.2,-105.38"></path>
+<polygon fill="black" stroke="black" points="46.3,-137.35 41.57,-146.83 51.18,-142.37 46.3,-137.35"></polygon>
+</g>
+<!-- 15&#45;&gt;9 -->
+<g id="edge31" class="edge">
+<title>15-&gt;9</title>
+<path fill="none" stroke="black" d="M27,-133.67C27,-125.05 27,-115.79 27,-108.1"></path>
+<polygon fill="black" stroke="black" points="23.5,-133.7 27,-143.7 30.5,-133.7 23.5,-133.7"></polygon>
+</g>
+<!-- 16 -->
+<g id="node16" class="node">
+<title>16</title>
+<ellipse fill="none" stroke="black" cx="315" cy="-90" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="315" y="-85.8" font-family="Times,serif" font-size="14.00">146</text>
+</g>
+<!-- 16&#45;&gt;1 -->
+<g id="edge6" class="edge">
+<title>16-&gt;1</title>
+<path fill="none" stroke="black" d="M287.75,-71.34C268.32,-58.75 242.72,-42.15 225.6,-31.05"></path>
+<polygon fill="black" stroke="black" points="285.89,-74.3 296.19,-76.81 289.7,-68.43 285.89,-74.3"></polygon>
+</g>
+<!-- 17 -->
+<g id="node17" class="node">
+<title>17</title>
+<ellipse fill="none" stroke="black" cx="315" cy="-306" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="315" y="-301.8" font-family="Times,serif" font-size="14.00">152</text>
+</g>
+<!-- 17&#45;&gt;6 -->
+<g id="edge23" class="edge">
+<title>17-&gt;6</title>
+<path fill="none" stroke="black" d="M284.53,-290.19C256.85,-276.73 216.73,-257.23 192.33,-245.37"></path>
+<polygon fill="black" stroke="black" points="283.23,-293.45 293.75,-294.67 286.29,-287.15 283.23,-293.45"></polygon>
+</g>
+<!-- 17&#45;&gt;12 -->
+<g id="edge36" class="edge">
+<title>17-&gt;12</title>
+<path fill="none" stroke="black" d="M315,-277.67C315,-269.05 315,-259.79 315,-252.1"></path>
+<polygon fill="black" stroke="black" points="311.5,-277.7 315,-287.7 318.5,-277.7 311.5,-277.7"></polygon>
+</g>
+<!-- 18 -->
+<g id="node18" class="node">
+<title>18</title>
+<ellipse fill="none" stroke="black" cx="99" cy="-306" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="99" y="-301.8" font-family="Times,serif" font-size="14.00">159</text>
+</g>
+<!-- 18&#45;&gt;6 -->
+<g id="edge24" class="edge">
+<title>18-&gt;6</title>
+<path fill="none" stroke="black" d="M121.04,-283.57C132.45,-272.48 146.07,-259.24 156.2,-249.38"></path>
+<polygon fill="black" stroke="black" points="118.3,-281.35 113.57,-290.83 123.18,-286.37 118.3,-281.35"></polygon>
+</g>
+<!-- 18&#45;&gt;13 -->
+<g id="edge38" class="edge">
+<title>18-&gt;13</title>
+<path fill="none" stroke="black" d="M99,-277.67C99,-269.05 99,-259.79 99,-252.1"></path>
+<polygon fill="black" stroke="black" points="95.5,-277.7 99,-287.7 102.5,-277.7 95.5,-277.7"></polygon>
+</g>
+<!-- 19 -->
+<g id="node19" class="node">
+<title>19</title>
+<ellipse fill="none" stroke="black" cx="243" cy="-234" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="243" y="-229.8" font-family="Times,serif" font-size="14.00">161</text>
+</g>
+<!-- 19&#45;&gt;7 -->
+<g id="edge27" class="edge">
+<title>19-&gt;7</title>
+<path fill="none" stroke="black" d="M265.04,-211.57C276.45,-200.48 290.07,-187.24 300.2,-177.38"></path>
+<polygon fill="black" stroke="black" points="262.3,-209.35 257.57,-218.83 267.18,-214.37 262.3,-209.35"></polygon>
+</g>
+<!-- 19&#45;&gt;8 -->
+<g id="edge29" class="edge">
+<title>19-&gt;8</title>
+<path fill="none" stroke="black" d="M212.53,-218.19C184.85,-204.73 144.73,-185.23 120.33,-173.37"></path>
+<polygon fill="black" stroke="black" points="211.23,-221.45 221.75,-222.67 214.29,-215.15 211.23,-221.45"></polygon>
+</g>
+<!-- 19&#45;&gt;14 -->
+<g id="edge41" class="edge">
+<title>19-&gt;14</title>
+<path fill="none" stroke="black" d="M243,-205.67C243,-197.05 243,-187.79 243,-180.1"></path>
+<polygon fill="black" stroke="black" points="239.5,-205.7 243,-215.7 246.5,-205.7 239.5,-205.7"></polygon>
+</g>
+<!-- 20 -->
+<g id="node20" class="node">
+<title>20</title>
+<ellipse fill="none" stroke="black" cx="27" cy="-234" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="27" y="-229.8" font-family="Times,serif" font-size="14.00">168</text>
+</g>
+<!-- 20&#45;&gt;3 -->
+<g id="edge15" class="edge">
+<title>20-&gt;3</title>
+<path fill="none" stroke="black" d="M57.47,-218.19C85.15,-204.73 125.27,-185.23 149.67,-173.37"></path>
+<polygon fill="black" stroke="black" points="55.71,-215.15 48.25,-222.67 58.77,-221.45 55.71,-215.15"></polygon>
+</g>
+<!-- 20&#45;&gt;8 -->
+<g id="edge30" class="edge">
+<title>20-&gt;8</title>
+<path fill="none" stroke="black" d="M49.04,-211.57C60.45,-200.48 74.07,-187.24 84.2,-177.38"></path>
+<polygon fill="black" stroke="black" points="46.3,-209.35 41.57,-218.83 51.18,-214.37 46.3,-209.35"></polygon>
+</g>
+<!-- 20&#45;&gt;15 -->
+<g id="edge42" class="edge">
+<title>20-&gt;15</title>
+<path fill="none" stroke="black" d="M27,-205.67C27,-197.05 27,-187.79 27,-180.1"></path>
+<polygon fill="black" stroke="black" points="23.5,-205.7 27,-215.7 30.5,-205.7 23.5,-205.7"></polygon>
+</g>
+<!-- 21 -->
+<g id="node21" class="node">
+<title>21</title>
+<ellipse fill="none" stroke="black" cx="387" cy="-162" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="387" y="-157.8" font-family="Times,serif" font-size="14.00">176</text>
+</g>
+<!-- 21&#45;&gt;2 -->
+<g id="edge11" class="edge">
+<title>21-&gt;2</title>
+<path fill="none" stroke="black" d="M356.63,-146.16C354.74,-145.39 352.86,-144.66 351,-144 288.87,-121.81 269.13,-130.19 207,-108 202.05,-106.23 196.87,-104.02 192.03,-101.77"></path>
+<polygon fill="black" stroke="black" points="355.41,-149.44 365.97,-150.23 358.2,-143.02 355.41,-149.44"></polygon>
+</g>
+<!-- 21&#45;&gt;4 -->
+<g id="edge18" class="edge">
+<title>21-&gt;4</title>
+<path fill="none" stroke="black" d="M356.53,-146.19C328.85,-132.73 288.73,-113.23 264.33,-101.37"></path>
+<polygon fill="black" stroke="black" points="355.23,-149.45 365.75,-150.67 358.29,-143.15 355.23,-149.45"></polygon>
+</g>
+<!-- 21&#45;&gt;10 -->
+<g id="edge32" class="edge">
+<title>21-&gt;10</title>
+<path fill="none" stroke="black" d="M387,-133.67C387,-125.05 387,-115.79 387,-108.1"></path>
+<polygon fill="black" stroke="black" points="383.5,-133.7 387,-143.7 390.5,-133.7 383.5,-133.7"></polygon>
+</g>
+<!-- 21&#45;&gt;16 -->
+<g id="edge43" class="edge">
+<title>21-&gt;16</title>
+<path fill="none" stroke="black" d="M364.96,-139.57C353.55,-128.48 339.93,-115.24 329.8,-105.38"></path>
+<polygon fill="black" stroke="black" points="362.82,-142.37 372.43,-146.83 367.7,-137.35 362.82,-142.37"></polygon>
+</g>
+<!-- 22 -->
+<g id="node22" class="node">
+<title>22</title>
+<ellipse fill="none" stroke="black" cx="261" cy="-378" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="261" y="-373.8" font-family="Times,serif" font-size="14.00">182</text>
+</g>
+<!-- 22&#45;&gt;11 -->
+<g id="edge34" class="edge">
+<title>22-&gt;11</title>
+<path fill="none" stroke="black" d="M236.01,-357.56C220.66,-345.62 201.41,-330.65 187.85,-320.11"></path>
+<polygon fill="black" stroke="black" points="234.03,-360.46 244.07,-363.83 238.33,-354.93 234.03,-360.46"></polygon>
+</g>
+<!-- 22&#45;&gt;17 -->
+<g id="edge44" class="edge">
+<title>22-&gt;17</title>
+<path fill="none" stroke="black" d="M279.25,-353.34C287.11,-343.16 296.06,-331.55 303.05,-322.49"></path>
+<polygon fill="black" stroke="black" points="276.32,-351.41 272.98,-361.46 281.86,-355.68 276.32,-351.41"></polygon>
+</g>
+<!-- 23 -->
+<g id="node23" class="node">
+<title>23</title>
+<ellipse fill="none" stroke="black" cx="243" cy="-306" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="243" y="-301.8" font-family="Times,serif" font-size="14.00">191</text>
+</g>
+<!-- 23&#45;&gt;12 -->
+<g id="edge37" class="edge">
+<title>23-&gt;12</title>
+<path fill="none" stroke="black" d="M265.04,-283.57C276.45,-272.48 290.07,-259.24 300.2,-249.38"></path>
+<polygon fill="black" stroke="black" points="262.3,-281.35 257.57,-290.83 267.18,-286.37 262.3,-281.35"></polygon>
+</g>
+<!-- 23&#45;&gt;13 -->
+<g id="edge39" class="edge">
+<title>23-&gt;13</title>
+<path fill="none" stroke="black" d="M212.53,-290.19C184.85,-276.73 144.73,-257.23 120.33,-245.37"></path>
+<polygon fill="black" stroke="black" points="211.23,-293.45 221.75,-294.67 214.29,-287.15 211.23,-293.45"></polygon>
+</g>
+<!-- 23&#45;&gt;19 -->
+<g id="edge46" class="edge">
+<title>23-&gt;19</title>
+<path fill="none" stroke="black" d="M243,-277.67C243,-269.05 243,-259.79 243,-252.1"></path>
+<polygon fill="black" stroke="black" points="239.5,-277.7 243,-287.7 246.5,-277.7 239.5,-277.7"></polygon>
+</g>
+<!-- 24 -->
+<g id="node24" class="node">
+<title>24</title>
+<ellipse fill="none" stroke="black" cx="27" cy="-306" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="27" y="-301.8" font-family="Times,serif" font-size="14.00">198</text>
+</g>
+<!-- 24&#45;&gt;6 -->
+<g id="edge25" class="edge">
+<title>24-&gt;6</title>
+<path fill="none" stroke="black" d="M57.47,-290.19C85.15,-276.73 125.27,-257.23 149.67,-245.37"></path>
+<polygon fill="black" stroke="black" points="55.71,-287.15 48.25,-294.67 58.77,-293.45 55.71,-287.15"></polygon>
+</g>
+<!-- 24&#45;&gt;13 -->
+<g id="edge40" class="edge">
+<title>24-&gt;13</title>
+<path fill="none" stroke="black" d="M49.04,-283.57C60.45,-272.48 74.07,-259.24 84.2,-249.38"></path>
+<polygon fill="black" stroke="black" points="46.3,-281.35 41.57,-290.83 51.18,-286.37 46.3,-281.35"></polygon>
+</g>
+<!-- 24&#45;&gt;20 -->
+<g id="edge47" class="edge">
+<title>24-&gt;20</title>
+<path fill="none" stroke="black" d="M27,-277.67C27,-269.05 27,-259.79 27,-252.1"></path>
+<polygon fill="black" stroke="black" points="23.5,-277.7 27,-287.7 30.5,-277.7 23.5,-277.7"></polygon>
+</g>
+<!-- 25 -->
+<g id="node25" class="node">
+<title>25</title>
+<ellipse fill="none" stroke="black" cx="135" cy="-378" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="135" y="-373.8" font-family="Times,serif" font-size="14.00">228</text>
+</g>
+<!-- 25&#45;&gt;10 -->
+<g id="edge33" class="edge">
+<title>25-&gt;10</title>
+<path fill="none" stroke="black" d="M170.66,-369.96C228.29,-358.32 336.9,-335.26 351,-324 406.91,-279.35 406.56,-249.64 423,-180 426.68,-164.43 427.7,-159.29 423,-144 418.62,-129.75 408.96,-115.9 400.75,-105.93"></path>
+<polygon fill="black" stroke="black" points="169.65,-366.59 160.53,-371.99 171.02,-373.45 169.65,-366.59"></polygon>
+</g>
+<!-- 25&#45;&gt;11 -->
+<g id="edge35" class="edge">
+<title>25-&gt;11</title>
+<path fill="none" stroke="black" d="M148.01,-351.7C152.91,-342.18 158.34,-331.61 162.7,-323.15"></path>
+<polygon fill="black" stroke="black" points="144.81,-350.27 143.35,-360.76 151.04,-353.47 144.81,-350.27"></polygon>
+</g>
+<!-- 25&#45;&gt;18 -->
+<g id="edge45" class="edge">
+<title>25-&gt;18</title>
+<path fill="none" stroke="black" d="M121.99,-351.7C117.09,-342.18 111.66,-331.61 107.3,-323.15"></path>
+<polygon fill="black" stroke="black" points="118.96,-353.47 126.65,-360.76 125.19,-350.27 118.96,-353.47"></polygon>
+</g>
+<!-- 25&#45;&gt;24 -->
+<g id="edge48" class="edge">
+<title>25-&gt;24</title>
+<path fill="none" stroke="black" d="M107.75,-359.34C88.32,-346.75 62.72,-330.15 45.6,-319.05"></path>
+<polygon fill="black" stroke="black" points="105.89,-362.3 116.19,-364.81 109.7,-356.43 105.89,-362.3"></polygon>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
