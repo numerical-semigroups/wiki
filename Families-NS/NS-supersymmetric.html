@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Inductive numerical semigroup – Wiki numerical semigroups</title>
+<title>Supersymmetric numerical semigroup – Wiki numerical semigroups</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -1185,7 +1185,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Inductive numerical semigroup</h1>
+<h1 class="title">Supersymmetric numerical semigroup</h1>
 </div>
 
 
@@ -1202,41 +1202,28 @@ window.Quarto = {
 </header>
 
 
-<!--  -->
+<!-- -->
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a>. It is said that <span class="math inline">\(S\)</span> is an inductive numerical semigroup if there exist <span class="math inline">\(I_1 = \{a_0, \ldots, a_{k-1}\}\)</span> and <span class="math inline">\(I_2 = \{b_1, \ldots, b_{k-1}\}\)</span> two lists of positive integers holding <span class="math inline">\(b_{i+1} \ge a_i b_i\)</span> for all <span class="math inline">\(i \in \{0, \ldots, k-2\}\)</span> and</p>
-<p><span class="math display">\[
-S_0 = \mathbb{N}, ~~ S_i = a_{i-1} S_{i-1} \cup \{a_{i-1}b_{i-1}, \rightarrow \}, ~~ \text{for all } ~ i \in \{1, \ldots, k\},
-\]</span></p>
-<p>such that <span class="math inline">\(S_k = S\)</span>. In this definition, <span class="math inline">\(a_i S_i = \{a_i \cdot s ~ | ~ s \in S_i \}\)</span>.</p>
-<p>From the definition, every inductive numerical semigroup is a <a href="../Families-NS/NS-multiple.html">multiple numerical semigroup</a>.</p>
+<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> with <a href="../Basic-concepts/Frobenius-number.html">Frobenius number</a> <span class="math inline">\(F(S)\)</span>, <a href="../Basic-concepts/Multiplicity.html">multiplicity</a> <span class="math inline">\(m\)</span> and <a href="../Basic-concepts/Apery-set.html">Apéry set</a> <span class="math inline">\(Ap(S,m)\)</span> in <span class="math inline">\(m\)</span>. It is said that <span class="math inline">\(S\)</span> is supersymmetric if it is <a href="../Families-NS/NS-symmetric.html">symmetric</a>, <a href="../Families-NS/NS-additive.html">additive</a> and whenever <span class="math inline">\(w + w' = F(S) + m\)</span> for some <span class="math inline">\(w, w' \in Ap(S,m)\)</span>, we have <span class="math inline">\(ord(w + w') = ord(w) + ord(w')\)</span>, where <span class="math inline">\(ord(\cdot)\)</span> denotes the <a href="../Fact-and-Div/Order-of-an-element.html">order</a> of the element.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(I_1 = \{2,3\}\)</span> and <span class="math inline">\(I_2 = \{3, 10\}\)</span>. We have <span class="math inline">\(a_0 = 2, a_1 = 3\)</span>, <span class="math inline">\(b_0 = 3, b_1 = 10\)</span> and <span class="math inline">\(b_1 = 10 \ge 6 = a_0 b_0\)</span>. Now, <span class="math inline">\(S_0 = \mathbb{N}\)</span>,</p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 4, 9, 10 \rangle = \{0, 4, 8, 9, 10, 12, 13, 14, 16, \rightarrow\}\)</span>. Since <span class="math inline">\(F(S) = 15\)</span> and <span class="math inline">\(g(S) = 8\)</span>, where <span class="math inline">\(g(S)\)</span> denotes the <a href="../Basic-concepts/Genus.html">genus</a> of <span class="math inline">\(S\)</span>, we have that <span class="math inline">\(2g(S) = F(S) + 1\)</span> and <span class="math inline">\(S\)</span> is symmetric. Moreover, it can be proven that <span class="math inline">\(adj(S) = Ap(B(S), 4)\)</span>, where <span class="math inline">\(adj(S)\)</span> is the <a href="../Fact-and-Div/Adjustment-NS.html">adjustment</a> and <span class="math inline">\(B(S)\)</span> is the <a href="../Ideals-NS/Blowup.html">blowup</a> of <span class="math inline">\(S\)</span>, and then <span class="math inline">\(S\)</span> is additive. On the other hand,</p>
 <p><span class="math display">\[
-S_1 = a_0S_0 \cup \{a_0b_0, \rightarrow\} =  2 \mathbb{N} \cup \{6, \rightarrow\} = \{0, 2, 4, 6, \rightarrow \},
-\]</span> and</p>
-<p><span class="math display">\[
-S_2 = a_1S_1 \cup \{a_1b_1, \rightarrow\} = 3 S_1 \cup \{30, \rightarrow\} = \{0, 6, 12, 18, 21, 24, 27, 30, \rightarrow\}.
+Ap(S, 4) = \{0, 9, 10, 19\},
 \]</span></p>
-<p>The numerical semigroup <span class="math inline">\(S_2\)</span> is <a href="../Basic-concepts/Minimal-set-of-generators.html">minimally generated</a> by <span class="math inline">\(P(S_2) = \{6, 21, 31, 32, 34, 35\}\)</span>. Therefore, <span class="math inline">\(S = \langle 6, 21, 31, 32, 34, 35 \rangle\)</span> is an inductive numerical semigroup.</p>
+<p>and <span class="math inline">\(w + w' = F(S) + m = 19\)</span> if <span class="math inline">\(\{w,w'\} = \{10, 9\}\)</span>. Since <span class="math inline">\(s = 9\)</span> and <span class="math inline">\(s = 10\)</span> are <a href="../Basic-concepts/Minimal-set-of-generators.html">minimal generators</a>, we have <span class="math inline">\(ord(9) = ord(10) = 1\)</span>. Finally, <span class="math inline">\(ord(19) = 2\)</span> and <span class="math inline">\(S\)</span> is supersymmetric.</p>
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
 <p>The following example is made with the package NumericalSgps in GAP.</p>
-<p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(I_1 = \{1, 2, 4, 5, 10\}\)</span> and <span class="math inline">\(I_2 = \{2, 4, 10, 41, 206\}\)</span>, in GAP:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">I_1</span> <span class="op">:=</span> [<span class="fl">1</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">4</span><span class="op">,</span> <span class="fl">5</span><span class="op">,</span> <span class="fl">10</span>]<span class="op">;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>[ <span class="fl">1</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">4</span><span class="op">,</span> <span class="fl">5</span><span class="op">,</span> <span class="fl">10</span> ]</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">I_2</span> <span class="op">:=</span> [<span class="fl">2</span><span class="op">,</span> <span class="fl">4</span><span class="op">,</span> <span class="fl">10</span><span class="op">,</span> <span class="fl">41</span><span class="op">,</span> <span class="fl">206</span>]<span class="op">;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>[ <span class="fl">2</span><span class="op">,</span> <span class="fl">4</span><span class="op">,</span> <span class="fl">10</span><span class="op">,</span> <span class="fl">41</span><span class="op">,</span> <span class="fl">206</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Given two list of integers <span class="math inline">\(I_1 = \{a_0, \ldots, a_k\}\)</span>, <span class="math inline">\(I_2 = \{b_0, \ldots, b_k\}\)</span> so that <span class="math inline">\(b_{i+1} \ge a_i b_i\)</span> for all <span class="math inline">\(i \in \{0, \ldots, k-2\}\)</span>, the function <code>InductiveNumericalSemigroup</code> returns <span class="math inline">\(S_k\)</span>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">InductiveNumericalSemigroup</span>(<span class="va">I_1</span><span class="op">,</span> <span class="va">I_2</span>)<span class="op">;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span><span class="op">&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">SmallElements</span>(<span class="va">S</span>)<span class="op">;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>[ <span class="fl">0</span><span class="op">,</span> <span class="fl">400</span><span class="op">,</span> <span class="fl">800</span><span class="op">,</span> <span class="fl">1200</span><span class="op">,</span> <span class="fl">1600</span><span class="op">,</span> <span class="fl">1800</span><span class="op">,</span> <span class="fl">2000</span><span class="op">,</span> <span class="fl">2050</span><span class="op">,</span> <span class="fl">2060</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The function <code>SmallElements</code> returns a list with the <a href="../Basic-concepts/Left-elements.html">left elements</a> and the <a href="../Basic-concepts/Conductor.html">conductor</a> of the given numerical semigroup. Therefore, <span class="math inline">\(S_5 = \{0, 400, 800, 1200, 1600, 1800, 2000, 2050, 2060, \rightarrow\}\)</span>.</p>
+<p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 46, 47, 48, 49, 50, 69, 70 \rangle\)</span>, in GAP:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">46</span><span class="op">,</span> <span class="fl">47</span><span class="op">,</span> <span class="fl">48</span><span class="op">,</span> <span class="fl">49</span><span class="op">,</span> <span class="fl">50</span><span class="op">,</span> <span class="fl">69</span><span class="op">,</span> <span class="fl">70</span>)<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">7</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Given a numerical semigroup <span class="math inline">\(S\)</span>, the function <code>IsSuperSymmetricNumericalSemigroup</code> returns true if <span class="math inline">\(S\)</span> is supersymmetric and false otherwise.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">IsSuperSymmetricNumericalSemigroup</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cn">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
