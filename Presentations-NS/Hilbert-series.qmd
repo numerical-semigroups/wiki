@@ -1,5 +1,5 @@
 ---
-title: "Hilbert series / Generating function"
+title: "Hilbert series"
 format: html
 engine: markdown
 ---
@@ -50,7 +50,7 @@ $$
 
 ## Examples with GAP
 
-The following example is made with the package NumericalSgps in GAP.
+The following examples are made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 7, 10, 13, 15, 19 \rangle$, in GAP:
 
@@ -66,6 +66,43 @@ gap> x := X(Rationals, "x");
 x
 gap> HilbertSeriesOfNumericalSemigroup(S,x);
 (x^19-x^18+x^17-x^16+x^13-x^11+x^10-x^8+x^7-x+1)/(-x+1)
+```
+
+Moreover, given a numerical semigroup $S$ and a variable $x$ (or a value $x = s \in \mathbb{Z}$), the function `NumericalSemigroupPolynomial` returns $(1-x)H_S(x)$.
+
+``` gap
+gap> NumericalSemigroupPolynomial(S, x);
+x^19-x^18+x^17-x^16+x^13-x^11+x^10-x^8+x^7-x+1
+gap> NumericalSemigroupPolynomial(S, 2);
+334719
+```
+
+$\diamond$ Let $S = \langle 30, 35, 59, 63, 74 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(30, 35, 59, 63, 74);
+<Numerical semigroup with 5 generators>
+```
+
+Given a polynomial $f$, the function `IsNumericalSemigroupPolynomial` returns true if there exists a numerical semigroup $S$ such that $f = (1-x)H_S(x)$.
+
+``` gap
+gap> x := X(Rationals, "x");
+x
+gap> f := NumericalSemigroupPolynomial(S, x);
+x^207-x^206+x^202-x^201+x^177-x^176+x^174-x^173+x^172-x^171+x^167-x^166+x^163-x^162+x^152-x^151+x\
+^148-x^145+x^144-x^141+x^139-x^138+x^137-x^136+x^133-x^131+x^128-x^127+x^122-x^121+x^118-x^110+x^\
+109-x^106+x^104-x^101+x^100-x^99+x^98-x^96+x^93-x^91+x^89-x^75+x^74-x^71+x^70-x^66+x^65-x^64+x^63\
+-x^61+x^59-x^36+x^35-x^31+x^30-x+1
+gap> IsNumericalSemigroupPolynomial(f);
+true
+```
+
+Furthermore, given a polynomial $f$ associated to a numerical semigroup $S$, the function `NumericalSemigroupFromNumericalSemigroupPolynomial` returns the numerical semigroup $S$ such that $f = (1-x)H_S(x)$.
+
+``` gap
+gap> S = NumericalSemigroupFromNumericalSemigroupPolynomial(f);
+true
 ```
 
 ## References

@@ -1,0 +1,41 @@
+---
+title: "Supersymmetric numerical semigroup"
+format: html
+engine: markdown
+---
+
+<!-- -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) with [Frobenius number](../Basic-concepts/Frobenius-number.qmd) $F(S)$, [multiplicity](../Basic-concepts/Multiplicity.qmd) $m$ and [Apéry set](../Basic-concepts/Apery-set.qmd) $Ap(S,m)$ in $m$. It is said that $S$ is supersymmetric if it is [symmetric](NS-symmetric.qmd), [additive](NS-additive.qmd) and whenever $w + w' = F(S) + m$ for some $w, w' \in Ap(S,m)$, we have $ord(w + w') = ord(w) + ord(w')$, where $ord(\cdot)$ denotes the [order](../Fact-and-Div/Order-of-an-element.qmd) of the element.
+
+## Examples
+
+$\circ$ Let $S = \langle 4, 9, 10 \rangle = \{0, 4, 8, 9, 10, 12, 13, 14, 16, \rightarrow\}$. Since $F(S) = 15$ and $g(S) = 8$, where $g(S)$ denotes the [genus](../Basic-concepts/Genus.qmd) of $S$, we have that $2g(S) = F(S) + 1$ and $S$ is symmetric. Moreover, it can be proven that $adj(S) = Ap(B(S), 4)$, where $adj(S)$ is the [adjustment](../Fact-and-Div/Adjustment-NS.qmd) and $B(S)$ is the [blowup](../Ideals-NS/Blowup.qmd) of $S$, and then $S$ is additive. On the other hand,
+
+$$
+Ap(S, 4) = \{0, 9, 10, 19\},
+$$
+
+and $w + w' = F(S) + m = 19$ if $\{w,w'\} = \{10, 9\}$. Since $s = 9$ and $s = 10$ are [minimal generators](../Basic-concepts/Minimal-set-of-generators.qmd), we have $ord(9) = ord(10) = 1$. Finally, $ord(19) = 2$ and $S$ is supersymmetric.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 46, 47, 48, 49, 50, 69, 70 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(46, 47, 48, 49, 50, 69, 70);
+<Numerical semigroup with 7 generators>
+```
+
+Given a numerical semigroup $S$, the function `IsSuperSymmetricNumericalSemigroup` returns true if $S$ is supersymmetric and false otherwise.
+
+``` gap
+gap> IsSuperSymmetricNumericalSemigroup(S);
+true
+```
+
+## References

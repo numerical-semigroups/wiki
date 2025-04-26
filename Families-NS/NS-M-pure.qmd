@@ -13,7 +13,7 @@ Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) wi
 $$
 x \preceq_S y \Longleftrightarrow x \le_S y ~~ \text{and} ~~ ord(y) = ord(x) + ord(y-x),
 $$
-where $ord(\cdot)$ denotes the [order](Order-of-an-element.qmd) of the respective element in $S$. It is said that $S$ is $M-$pure if the maximal elements of $Ap(S,m)$ with respect to $\preceq_S$ have all the same [order](../Fact-and-div/Order-of-an-element.qmd).
+where $ord(\cdot)$ denotes the [order](../Fact-and-div/Order-of-an-element.qmd) of the respective element in $S$. It is said that $S$ is $M-$pure if the maximal elements of $Ap(S,m)$ with respect to $\preceq_S$ have all the same order.
 
 It can be proven that if $S$ is $M-$pure, then is [pure](NS-pure.qmd).
 
