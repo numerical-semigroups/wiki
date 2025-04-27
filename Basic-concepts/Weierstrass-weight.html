@@ -203,7 +203,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Basic-concepts/Arf-special-gap.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Arf special gaps</span></a>
+ <span class="menu-text">Arf special gap</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -353,7 +353,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Basic-concepts/MED-system-of-generators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Maximal embedding dimension of generators</span></a>
+ <span class="menu-text">Maximal embedding dimension system of generators</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -455,7 +455,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Basic-concepts/Tau-sequence.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tau-sequence of a numerical semigroup</span></a>
+ <span class="menu-text">Tau-sequence</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1539,7 +1539,7 @@ window.Quarto = {
 <!--  -->
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> and let <span class="math inline">\(G(S) = \{l_1, \ldots, l_g\}\)</span> be the set of <a href="Gaps.qmd">gaps</a> of <span class="math inline">\(S\)</span> with <span class="math inline">\(l_1 &lt; l_2 &lt; \ldots &lt; l_g\)</span>. It is defined the Weierstrass weight of <span class="math inline">\(S\)</span>, denoted by <span class="math inline">\(w(S)\)</span>, as</p>
+<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> and let <span class="math inline">\(G(S) = \{l_1, \ldots, l_g\}\)</span> be the set of <a href="../Basic-concepts/Gap.html">gaps</a> of <span class="math inline">\(S\)</span> with <span class="math inline">\(l_1 &lt; l_2 &lt; \ldots &lt; l_g\)</span>. It is defined the Weierstrass weight of <span class="math inline">\(S\)</span>, denoted by <span class="math inline">\(w(S)\)</span>, as</p>
 <p><span class="math display">\[
 w(S) = \sum_{i = 1}^g (l_i - i).
 \]</span></p>
@@ -1549,9 +1549,12 @@ w(S) = \sum_{i = 1}^g (l_i - i).
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
 <p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 5, 9, 12 \rangle = \{0, 5, 9, 10, 12, 14, 15, 17, \rightarrow\}\)</span>. The set of gaps of <span class="math inline">\(S\)</span> is</p>
 <p><span class="math display">\[
-G(S) = \{1, 2, 3, 4, 6, 7, 8, 11, 13, 16 \}.
+G(S) = \{1, 2, 3, 4, 6, 7, 8, 11, 13, 16 \},
 \]</span></p>
-<p>Then, the Weierstrass weight of <span class="math inline">\(S\)</span> is <span class="math inline">\(w(S) = 16\)</span>.</p>
+<p>and the <a href="../Basic-concepts/Genus.html">genus</a> of <span class="math inline">\(S\)</span> is <span class="math inline">\(|G(S)| = 10\)</span>. Then, the Weierstrass weight of <span class="math inline">\(S\)</span> is</p>
+<p><span class="math display">\[
+w(S) = \sum_{i = 1}^{10} (l_i - i) = \sum_{i = 1}^4 (l_i - i) + \sum_{i = 5}^7 (l_i - i) + (l_8-8) + (l_9-9) + (l_{10}-10) = 0 + 3 + 3 + 4 + 6 = 16.
+\]</span></p>
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>

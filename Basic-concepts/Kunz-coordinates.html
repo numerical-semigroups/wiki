@@ -203,7 +203,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Basic-concepts/Arf-special-gap.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Arf special gaps</span></a>
+ <span class="menu-text">Arf special gap</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -353,7 +353,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Basic-concepts/MED-system-of-generators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Maximal embedding dimension of generators</span></a>
+ <span class="menu-text">Maximal embedding dimension system of generators</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -455,7 +455,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Basic-concepts/Tau-sequence.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tau-sequence of a numerical semigroup</span></a>
+ <span class="menu-text">Tau-sequence</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1547,7 +1547,7 @@ Ap(S,n) := \{w \in S ~ | ~ w - n \not \in S\} = \{w(0) = 0, w(1), \ldots, w(n-1)
 <p><span class="math display">\[
 w(k) = x_kn + k, ~~ \text{for all } ~ k \in \{0, \ldots, n-1\}.
 \]</span></p>
-<p>It is defined the Kunz coordinates of <span class="math inline">\(S\)</span> with respect to <span class="math inline">\(n\)</span> as the tuple <span class="math inline">\((x_1, \ldots, x_{n-1}) \in \mathbb{N}^n\)</span>. If we consider <span class="math inline">\(n = m(S)\)</span>, where <span class="math inline">\(m(S)\)</span> denotes the <a href="../Basic-concepts/Multiplicity.html">multiplicity</a> of <span class="math inline">\(S\)</span>, it is said directly as the Kunz coordinates of <span class="math inline">\(S\)</span>.</p>
+<p>It is defined the Kunz coordinates of <span class="math inline">\(S\)</span> with respect to <span class="math inline">\(n\)</span> as the tuple <span class="math inline">\((x_1, \ldots, x_{n-1}) \in \mathbb{N}^{n-1}\)</span>. If we consider <span class="math inline">\(n = m(S)\)</span>, where <span class="math inline">\(m(S)\)</span> denotes the <a href="../Basic-concepts/Multiplicity.html">multiplicity</a> of <span class="math inline">\(S\)</span>, it is said directly as the Kunz coordinates of <span class="math inline">\(S\)</span>.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
@@ -1558,7 +1558,7 @@ w(1) = 16 = 3 \cdot 5 + 1, ~ w(2) = 7 = 1 \cdot 5 + 2,
 <p><span class="math display">\[
 w(3) = 18 = 3 \cdot 5 + 3, ~ w(4) = 9 = 1 \cdot 5 + 4,
 \]</span></p>
-<p>obtaining that the tuple <span class="math inline">\((3, 1, 3, 1)\)</span> is the Kunz coordinate of <span class="math inline">\(S\)</span>.</p>
+<p>obtaining that the tuple <span class="math inline">\((3, 1, 3, 1)\)</span> is the Kunz coordinates of <span class="math inline">\(S\)</span>.</p>
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
@@ -1572,7 +1572,7 @@ w(3) = 18 = 3 \cdot 5 + 3, ~ w(4) = 9 = 1 \cdot 5 + 4,
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fl">2</span><span class="op">,</span> <span class="fl">3</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">3</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">3</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">0</span><span class="op">,</span> <span class="fl">1</span><span class="op">,</span> <span class="fl">2</span> ]</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">KunzCoordinatesOfNumericalSemigroup</span>(<span class="va">S</span><span class="op">,</span> <span class="fl">42</span>) <span class="op">=</span> <span class="va">KunzCoordinates</span>(<span class="va">S</span><span class="op">,</span> <span class="fl">42</span>)<span class="op">;</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="cn">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>If we only give a numerical semigroup, the functions computes the Kunz coordinates of <span class="math inline">\(S\)</span>.</p>
+<p>If we only give a numerical semigroup, the functions computes the Kunz coordinates of <span class="math inline">\(S\)</span> with respect to its multiplicity.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">KunzCoordinates</span>(<span class="va">S</span>)<span class="op">;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>[ <span class="fl">6</span><span class="op">,</span> <span class="fl">12</span><span class="op">,</span> <span class="fl">3</span><span class="op">,</span> <span class="fl">3</span><span class="op">,</span> <span class="fl">9</span><span class="op">,</span> <span class="fl">6</span><span class="op">,</span> <span class="fl">5</span><span class="op">,</span> <span class="fl">6</span><span class="op">,</span> <span class="fl">9</span><span class="op">,</span> <span class="fl">8</span><span class="op">,</span> <span class="fl">8</span><span class="op">,</span> <span class="fl">9</span> ]</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">KunzCoordinatesOfNumericalSemigroup</span>(<span class="va">S</span>) <span class="op">=</span> <span class="va">KunzCoordinates</span>(<span class="va">S</span>)<span class="op">;</span></span>

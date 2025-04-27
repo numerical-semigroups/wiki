@@ -203,7 +203,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Basic-concepts/Arf-special-gap.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Arf special gaps</span></a>
+ <span class="menu-text">Arf special gap</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -353,7 +353,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Basic-concepts/MED-system-of-generators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Maximal embedding dimension of generators</span></a>
+ <span class="menu-text">Maximal embedding dimension system of generators</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -455,7 +455,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Basic-concepts/Tau-sequence.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tau-sequence of a numerical semigroup</span></a>
+ <span class="menu-text">Tau-sequence</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1539,11 +1539,15 @@ window.Quarto = {
 <!-- Moscariello, A., On the type of an almost Gorenstein monomial curve, J. Algebra, 456 (2016), 266--277. -->
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> <a href="../Basic-concepts/Minimal-set-of-generators.html">minimally generated</a> by <span class="math inline">\(P(S) = \{n_1, \ldots, n_e\}\)</span> with <span class="math inline">\(n_1 &lt; \cdots &lt; n_e\)</span> and let <span class="math inline">\(f \in PF(S)\)</span> a <a href="../Basic-concepts/Pseudo-Frobenius-number.html">pseudo-Frobenius number</a>. By definition of pseudo-Frobenius number, it holds that <span class="math inline">\(f + n_i \in S\)</span> for all <span class="math inline">\(i \in \{1, \ldots, e\}\)</span>. Then, it is said that a matrix <span class="math inline">\(A \in \mathcal{M}_{e \times e}(\mathbb{Z})\)</span> is a <span class="math inline">\(RF-\)</span>matrix of <span class="math inline">\(f\)</span> in <span class="math inline">\(S\)</span> if the <span class="math inline">\(i-\)</span>th row is a <a href="../Presentations-NS/Set-of-factorizations.html">factorization</a> of <span class="math inline">\(f + n_i\)</span> in <span class="math inline">\(S\)</span> with <span class="math inline">\(a_{i,i} = -1\)</span> for all <span class="math inline">\(i \in \{1, \ldots, e\}\)</span>.</p>
+<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> <a href="../Basic-concepts/Minimal-set-of-generators.html">minimally generated</a> by <span class="math inline">\(P(S) = \{n_1, \ldots, n_e\}\)</span> with <span class="math inline">\(n_1 &lt; \cdots &lt; n_e\)</span> and let <span class="math inline">\(f \in PF(S)\)</span> be a <a href="../Basic-concepts/Pseudo-Frobenius-number.html">pseudo-Frobenius number</a>. By definition of pseudo-Frobenius number, it holds that <span class="math inline">\(f + n_i \in S\)</span> for all <span class="math inline">\(i \in \{1, \ldots, e\}\)</span>. Then, it is said that a matrix <span class="math inline">\(A \in \mathcal{M}_{e \times e}(\mathbb{Z})\)</span> is a <span class="math inline">\(RF-\)</span>matrix of <span class="math inline">\(f\)</span> in <span class="math inline">\(S\)</span> if the <span class="math inline">\(i-\)</span>th row is a <a href="../Presentations-NS/Set-of-factorizations.html">factorization</a> of <span class="math inline">\(f + n_i\)</span> in <span class="math inline">\(S\)</span> with <span class="math inline">\(a_{i,i} = -1\)</span> for all <span class="math inline">\(i \in \{1, \ldots, e\}\)</span>.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 5, 7, 13 \rangle = \{0, 5, 7, 10, 12, 13, 14, 15, 17, \rightarrow\}\)</span> and <span class="math inline">\(f = 8 \in PF(S)\)</span>. We have that <span class="math inline">\(8 + 5 = 13 = 0 \cdot 5 + 0 \cdot 7 + 1 \cdot 13\)</span>, <span class="math inline">\(8 + 7 = 15 = 3 \cdot 5 + 0 \cdot 7 + 0 \cdot 13\)</span>, <span class="math inline">\(8 + 13 = 21 = 0 \cdot 5 + 3 \cdot 7 + 0 \cdot 13\)</span> and these are the unique factorizations of <span class="math inline">\(13, 15\)</span> and <span class="math inline">\(20\)</span>, respectively. Then, the unique <span class="math inline">\(RF-\)</span>matrix of <span class="math inline">\(f = 8\)</span> in <span class="math inline">\(S\)</span> is</p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 5, 7, 13 \rangle = \{0, 5, 7, 10, 12, 13, 14, 15, 17, \rightarrow\}\)</span> and <span class="math inline">\(f = 8 \in PF(S)\)</span>. We have that</p>
+<p><span class="math display">\[
+8 + 5 = 13 = 0 \cdot 5 + 0 \cdot 7 + 1 \cdot 13, ~~~ 8 + 7 = 15 = 3 \cdot 5 + 0 \cdot 7 + 0 \cdot 13, ~~~ 8 + 13 = 21 = 0 \cdot 5 + 3 \cdot 7 + 0 \cdot 13
+\]</span></p>
+<p>and these are the unique factorizations of <span class="math inline">\(13, 15\)</span> and <span class="math inline">\(20\)</span>, respectively. Then, the unique <span class="math inline">\(RF-\)</span>matrix of <span class="math inline">\(f = 8\)</span> in <span class="math inline">\(S\)</span> is</p>
 <p><span class="math display">\[
 A = \begin{pmatrix}
   -1 &amp; 0 &amp; 1 \\
@@ -1558,7 +1562,7 @@ A = \begin{pmatrix}
 <p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 31, 35, 50, 87, 111, 121, 130 \rangle\)</span>, in GAP:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">31</span><span class="op">,</span> <span class="fl">35</span><span class="op">,</span> <span class="fl">50</span><span class="op">,</span> <span class="fl">87</span><span class="op">,</span> <span class="fl">111</span><span class="op">,</span> <span class="fl">121</span><span class="op">,</span> <span class="fl">130</span>)<span class="op">;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">7</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Given a numerical semigroup <span class="math inline">\(S\)</span> and a pseudo-Frobenius number of <span class="math inline">\(S\)</span>, the function <code>RFMatrices</code> returns a list with all the <span class="math inline">\(RF-\)</span>matrices of <span class="math inline">\(f\)</span> in <span class="math inline">\(S\)</span>. The function <code>PseudoFrobenius</code> computes the set of pseudo-Frobenius numbers of <span class="math inline">\(S\)</span>.</p>
+<p>Given a numerical semigroup <span class="math inline">\(S\)</span> and a pseudo-Frobenius number <span class="math inline">\(f\)</span> of <span class="math inline">\(S\)</span>, the function <code>RFMatrices</code> returns a list with all the <span class="math inline">\(RF-\)</span>matrices of <span class="math inline">\(f\)</span> in <span class="math inline">\(S\)</span>. The function <code>PseudoFrobenius</code> computes the set of pseudo-Frobenius numbers of <span class="math inline">\(S\)</span>.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">F</span> <span class="op">:=</span> <span class="va">PseudoFrobenius</span>(<span class="va">S</span>)<span class="op">;</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>[ <span class="fl">115</span><span class="op">,</span> <span class="fl">169</span><span class="op">,</span> <span class="fl">176</span><span class="op">,</span> <span class="fl">179</span><span class="op">,</span> <span class="fl">189</span><span class="op">,</span> <span class="fl">195</span> ]</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">RFMatrices</span>(<span class="fl">115</span><span class="op">,</span> <span class="va">S</span>)<span class="op">;</span></span>

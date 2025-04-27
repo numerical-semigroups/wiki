@@ -203,7 +203,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Basic-concepts/Arf-special-gap.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Arf special gaps</span></a>
+ <span class="menu-text">Arf special gap</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -353,7 +353,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Basic-concepts/MED-system-of-generators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Maximal embedding dimension of generators</span></a>
+ <span class="menu-text">Maximal embedding dimension system of generators</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -455,7 +455,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Basic-concepts/Tau-sequence.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tau-sequence of a numerical semigroup</span></a>
+ <span class="menu-text">Tau-sequence</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1539,15 +1539,15 @@ window.Quarto = {
 <!--  -->
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> with set of <a href="Gaps.qmd">gaps</a> <span class="math inline">\(G(S)\)</span> and <a href="../Basic-concepts/Frobenius-number.html">Frobenius number</a> <span class="math inline">\(F(S)\)</span>. It is said that <span class="math inline">\(g \in G(S)\)</span> is a hole of <span class="math inline">\(S\)</span> if <span class="math inline">\(F(S) - g \in G(S)\)</span>. The set of holes of <span class="math inline">\(S\)</span>, denoted by <span class="math inline">\(H(S)\)</span>, is</p>
+<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> with set of <a href="../Basic-concepts/Gap.html">gaps</a> <span class="math inline">\(G(S)\)</span> and <a href="../Basic-concepts/Frobenius-number.html">Frobenius number</a> <span class="math inline">\(F(S)\)</span>. It is said that <span class="math inline">\(g \in G(S)\)</span> is a hole of <span class="math inline">\(S\)</span> if <span class="math inline">\(F(S) - g \in G(S)\)</span>. The set of holes of <span class="math inline">\(S\)</span>, denoted by <span class="math inline">\(H(S)\)</span>, is</p>
 <p><span class="math display">\[
 H(S) = \{x \in G(S) ~ | ~ F(S) - x \in G(S)\} \subseteq G(S).
 \]</span></p>
-<p>Since <span class="math inline">\(F(S) \in G(S)\)</span> and <span class="math inline">\(F(S) - F(S) = 0 \in S\)</span>, it holds that <span class="math inline">\(H(S) \subsetneq G(S)\)</span> for any numerical semigroup. It can be proven that <span class="math inline">\(H(S) = \emptyset\)</span> if, and only if, <span class="math inline">\(S\)</span> is <a href="../Families-NS/Symmetric.qmd">symmetric</a>.</p>
+<p>Since <span class="math inline">\(F(S) \in G(S)\)</span> and <span class="math inline">\(F(S) - F(S) = 0 \in S\)</span>, it holds that <span class="math inline">\(H(S) \subsetneq G(S)\)</span> for any numerical semigroup. It can be proven that <span class="math inline">\(H(S) = \emptyset\)</span> if, and only if, <span class="math inline">\(S\)</span> is <a href="../Families-NS/NS-symmetric.html">symmetric</a>.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 4, 6, 11 \rangle = \{0, 4, 6, 8, 10, 11, 12, 14, \rightarrow\}\)</span>. The Frobenius number of <span class="math inline">\(S\)</span> is <span class="math inline">\(F(S) = 13\)</span> and the set of gaps is <span class="math inline">\(G(S) = \{1, 2, 3, 5, 7, 9, 13\}\)</span>. if we compute <span class="math inline">\(F(S) - g\)</span> for all <span class="math inline">\(g \in G(S)\)</span>, we obtain that <span class="math inline">\(F(S) - G(S) = \{12, 11, 10, 8, 6, 4, 0\}\)</span>. Therefore, <span class="math inline">\(H(S) = \emptyset\)</span>.</p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 4, 6, 11 \rangle = \{0, 4, 6, 8, 10, 11, 12, 14, \rightarrow\}\)</span>. The Frobenius number of <span class="math inline">\(S\)</span> is <span class="math inline">\(F(S) = 13\)</span> and the set of gaps is <span class="math inline">\(G(S) = \{1, 2, 3, 5, 7, 9, 13\}\)</span>. If we compute <span class="math inline">\(F(S) - g\)</span> for all <span class="math inline">\(g \in G(S)\)</span>, we obtain that <span class="math inline">\(F(S) - G(S) = \{12, 11, 10, 8, 6, 4, 0\} \subseteq S\)</span>. Therefore, <span class="math inline">\(H(S) = \emptyset\)</span>.</p>
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>

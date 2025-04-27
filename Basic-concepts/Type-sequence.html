@@ -203,7 +203,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Basic-concepts/Arf-special-gap.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Arf special gaps</span></a>
+ <span class="menu-text">Arf special gap</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -353,7 +353,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Basic-concepts/MED-system-of-generators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Maximal embedding dimension of generators</span></a>
+ <span class="menu-text">Maximal embedding dimension system of generators</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -455,7 +455,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Basic-concepts/Tau-sequence.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tau-sequence of a numerical semigroup</span></a>
+ <span class="menu-text">Tau-sequence</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1539,22 +1539,23 @@ window.Quarto = {
 <!-- Barucci, V., Dobbs, D. D. and Fontana, M., Maximality properties in numerical semigroups and applications to one-dimensional analytically irreducible local domains, American Mathematical Society, Memoirs of the American Mathematical Society (598) (1997). -->
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a>, let <span class="math inline">\(G(S) = \{x_1, \ldots, x_g\}\)</span> be the <a href="../Basic-concepts/Gap.html">gaps</a> of <span class="math inline">\(S\)</span> and <span class="math inline">\(N(S) = \{s_1, \ldots, s_n\}\)</span> the set of <a href="../Basic-concepts/Left-elements.html">left elements</a> of <span class="math inline">\(S\)</span>, both ordered from smallest to larger. For each <span class="math inline">\(j \in \{1, \ldots, g\}\)</span>, it is defined</p>
+<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a>, let <span class="math inline">\(G(S) = \{x_1, \ldots, x_g\}\)</span> be the set of <a href="../Basic-concepts/Gap.html">gaps</a> of <span class="math inline">\(S\)</span> and <span class="math inline">\(N(S) = \{s_1, \ldots, s_n\}\)</span> the set of <a href="../Basic-concepts/Left-elements.html">left elements</a> of <span class="math inline">\(S\)</span>, both ordered from smallest to larger. For each <span class="math inline">\(j \in \{1, \ldots, g\}\)</span>, it is defined</p>
 <p><span class="math display">\[
 \sigma_j = \max ~ \{i \in \{1, \ldots, n\} ~ | ~ x_j + s_i \not \in S \}.
 \]</span> Then, it is defined the type sequence of <span class="math inline">\(S\)</span> as the tuple <span class="math inline">\((t_1(S), \ldots, t_n(S))\)</span>, where for all <span class="math inline">\(i \in \{1, \ldots, g\}\)</span>,</p>
 <p><span class="math display">\[
 t_i(S) = |\{j \in \{1, \ldots, g\} ~ | ~ \sigma_j = i \}|.
 \]</span></p>
-<p>Since <span class="math inline">\(0 \in N(S)\)</span>, it follows that <span class="math inline">\(\sigma_j\)</span> is well defined. Moreover, from the definition it is deduced that <span class="math inline">\(t_1(S)\)</span> is the <a href="../Basic-concepts/Type.html">type</a> of <span class="math inline">\(S\)</span> and its sum is <span class="math inline">\(\sum_{i = 1}^n t_i(S) = |G(S)|\)</span>, the <a href="../Basic-concepts/Genus.html">genus</a> of <span class="math inline">\(S\)</span>.</p>
+<p>Since <span class="math inline">\(s_1 = 0\)</span>, it follows that <span class="math inline">\(\sigma_j\)</span> is well defined. Moreover, from the definition it is deduced that <span class="math inline">\(t_1(S)\)</span> is the <a href="../Basic-concepts/Type.html">type</a> of <span class="math inline">\(S\)</span> and its sum is <span class="math inline">\(\sum_{i = 1}^n t_i(S) = |G(S)|\)</span>, the <a href="../Basic-concepts/Genus.html">genus</a> of <span class="math inline">\(S\)</span>.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p><span class="math inline">\(\circ\)</span> For any numerical semigroup with set of gaps <span class="math inline">\(G(S) = \{x_1, \ldots, x_g\}\)</span> and left elements <span class="math inline">\(N(S) = \{s_1, \ldots, s_n\}\)</span>, both ordered from smallest to larger, it holds that <span class="math inline">\(t_i(S) \ne 0\)</span> for all <span class="math inline">\(i \in \{1, \ldots, n\}\)</span>. Indeed, for any <span class="math inline">\(i \in \{1, \ldots, n\}\)</span>, it is well known that <span class="math inline">\(F(S) - s_i \in G(S)\)</span>, where <span class="math inline">\(F(S)\)</span> denotes the <a href="../Basic-concepts/Frobenius-number.html">Frobenius number</a> of <span class="math inline">\(S\)</span>, and by definition, it holds that <span class="math inline">\(F(S) - s_i + s_{j} \in S\)</span> for all <span class="math inline">\(j \in \{i+1, \ldots, n\}\)</span>. Therefore, taking into account that <span class="math inline">\(F(S) - s_i + s_i = F(S) \not \in S\)</span>, if <span class="math inline">\(x_j = F(S) - s_i\)</span>, it is concluded that <span class="math inline">\(\sigma_j = i\)</span> and <span class="math inline">\(t_i(S) \ne 0\)</span>.</p>
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 5, 7, 9 \rangle\)</span>. Its set of gaps and its set of left elements are respectively <span class="math inline">\(G(S) = \{1, 2, 3, 4, 6, 8, 11, 13\}\)</span> and <span class="math inline">\(N(S) = \{0, 5, 7, 9, 10, 12\}\)</span>. With few computations,</p>
+<p><span class="math inline">\(\circ\)</span> For any numerical semigroup with set of gaps <span class="math inline">\(G(S) = \{x_1, \ldots, x_g\}\)</span> and left elements <span class="math inline">\(N(S) = \{s_1, \ldots, s_n\}\)</span>, both ordered from smallest to larger, it holds that <span class="math inline">\(t_i(S) \ne 0\)</span> for all <span class="math inline">\(i \in \{1, \ldots, n\}\)</span>. Indeed, for any <span class="math inline">\(i \in \{1, \ldots, n\}\)</span>, it is well known that <span class="math inline">\(F(S) - s_i \in G(S)\)</span>, where <span class="math inline">\(F(S)\)</span> denotes the <a href="../Basic-concepts/Frobenius-number.html">Frobenius number</a> of <span class="math inline">\(S\)</span>, and from the definition of Frobenius number, it holds that <span class="math inline">\(F(S) - s_i + s_{j} \in S\)</span> for all <span class="math inline">\(j \in \{i+1, \ldots, n\}\)</span>. Therefore, taking into account that <span class="math inline">\(F(S) - s_i + s_i = F(S) \not \in S\)</span>, if <span class="math inline">\(x_j = F(S) - s_i\)</span>, it is concluded that <span class="math inline">\(\sigma_j = i\)</span> and <span class="math inline">\(t_i(S) \ne 0\)</span>.</p>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 5, 7, 9 \rangle\)</span>. Its set of gaps and its set of left elements are <span class="math inline">\(G(S) = \{1, 2, 3, 4, 6, 8, 11, 13\}\)</span> and <span class="math inline">\(N(S) = \{0, 5, 7, 9, 10, 12\}\)</span>, respectively. With few computations,</p>
 <p><span class="math display">\[
 \sigma_{13} = 1, ~~ \sigma_{11} = 1, ~~ \sigma_8 = 2, ~~ \sigma_6 = 3, ~~ \sigma_4 = 4, ~~ \sigma_3 = 5, ~~ \sigma_2 = 4, ~~ \sigma_1 = 6,
-\]</span> concluding that <span class="math inline">\((2, 1, 1, 2, 1, 1)\)</span> is the type sequence of <span class="math inline">\(S\)</span>.</p>
+\]</span></p>
+<p>concluding that <span class="math inline">\((2, 1, 1, 2, 1, 1)\)</span> is the type sequence of <span class="math inline">\(S\)</span>.</p>
 </section>
 <section id="examples-with-gap" class="level2">
 <h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>

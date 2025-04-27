@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tau-sequence of a numerical semigroup – Wiki numerical semigroups</title>
+<title>Tau-sequence – Wiki numerical semigroups</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -142,7 +142,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Basic-concepts/Apery-set-respect-set.html">Basic concepts</a></li><li class="breadcrumb-item"><a href="../Basic-concepts/Tau-sequence.html">Tau-sequence of a numerical semigroup</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Basic-concepts/Apery-set-respect-set.html">Basic concepts</a></li><li class="breadcrumb-item"><a href="../Basic-concepts/Tau-sequence.html">Tau-sequence</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -203,7 +203,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Basic-concepts/Arf-special-gap.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Arf special gaps</span></a>
+ <span class="menu-text">Arf special gap</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -353,7 +353,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Basic-concepts/MED-system-of-generators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Maximal embedding dimension of generators</span></a>
+ <span class="menu-text">Maximal embedding dimension system of generators</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -455,7 +455,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Basic-concepts/Tau-sequence.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Tau-sequence of a numerical semigroup</span></a>
+ <span class="menu-text">Tau-sequence</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1517,9 +1517,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Basic-concepts/Apery-set-respect-set.html">Basic concepts</a></li><li class="breadcrumb-item"><a href="../Basic-concepts/Tau-sequence.html">Tau-sequence of a numerical semigroup</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Basic-concepts/Apery-set-respect-set.html">Basic concepts</a></li><li class="breadcrumb-item"><a href="../Basic-concepts/Tau-sequence.html">Tau-sequence</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Tau-sequence of a numerical semigroup</h1>
+<h1 class="title">Tau-sequence</h1>
 </div>
 
 
@@ -1543,7 +1543,7 @@ window.Quarto = {
 <p><span class="math display">\[
 i \oplus j = k \Longleftrightarrow s_i + s_j = s_k.
 \]</span></p>
-<p>It is defined the <span class="math inline">\(\tau-\)</span>sequence of <span class="math inline">\(S\)</span> as the sequence <span class="math inline">\((\tau_0, \tau_1, \tau_2 \ldots)\)</span> such that for all <span class="math inline">\(i \in \mathbb{N} \setminus \{0\}\)</span>,</p>
+<p>It is defined the <span class="math inline">\(\tau-\)</span>sequence of <span class="math inline">\(S\)</span> as the sequence <span class="math inline">\((\tau_0, \tau_1, \tau_2 \ldots)\)</span> such that for all <span class="math inline">\(i \in \mathbb{N}\)</span>,</p>
 <p><span class="math display">\[
 \tau_i = \max \{j \in \mathbb{N} ~ | ~ \exists k \in \{j, \ldots, i\} ~ \text{ such that } ~ j \oplus k = i\},
 \]</span></p>
@@ -1566,7 +1566,7 @@ D(0) = \{0\}, ~~ D(4) = \{0, 4\}, ~~ D(6) = \{0, 6\}, ~~ D(8) = \{0, 4, 8\}, ~~ 
 <p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 26, 35, 38, 39, 46, 47, 48, 50, 57 \rangle\)</span>, in GAP:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>( <span class="fl">26</span><span class="op">,</span> <span class="fl">35</span><span class="op">,</span> <span class="fl">38</span><span class="op">,</span> <span class="fl">39</span><span class="op">,</span> <span class="fl">46</span><span class="op">,</span> <span class="fl">47</span><span class="op">,</span> <span class="fl">48</span><span class="op">,</span> <span class="fl">50</span><span class="op">,</span> <span class="fl">57</span>)<span class="op">;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">9</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Given a list of integers <span class="math inline">\(I\)</span> representing the first <span class="math inline">\(2C(S) - g(S)+1\)</span> elements of a <span class="math inline">\(\tau-\)</span>sequence, the function <code>NumericalSemigroupByTauSequence</code> computes the unique numerical semigroup such that its <span class="math inline">\(\tau-\)</span>sequence is <span class="math inline">\(I \cup \{l+1, l+1, l+2, l+2 \ldots\}\)</span>, where <span class="math inline">\(l\)</span> is the last element of <span class="math inline">\(I\)</span>. Given a numerical semigroup <span class="math inline">\(S\)</span> and an integer <span class="math inline">\(i\)</span>, the function <code>TauNS</code> computes <span class="math inline">\(\tau_i\)</span>. On the other hand, the function <code>Conductor</code> and <code>Genus</code> compute the conductor, genus of the given numerical semigroup, respectively.</p>
+<p>Given a list of integers <span class="math inline">\(I\)</span> representing the first <span class="math inline">\(2C(S) - g(S)+1\)</span> elements of a <span class="math inline">\(\tau-\)</span>sequence, the function <code>NumericalSemigroupByTauSequence</code> computes the unique numerical semigroup such that its <span class="math inline">\(\tau-\)</span>sequence is <span class="math inline">\(I \cup \{l+1, l+1, l+2, l+2 \ldots\}\)</span>, where <span class="math inline">\(l\)</span> is the last element of <span class="math inline">\(I\)</span>. Given a numerical semigroup <span class="math inline">\(S\)</span> and an integer <span class="math inline">\(i\)</span>, the function <code>TauNS</code> computes <span class="math inline">\(\tau_i\)</span>. On the other hand, the function <code>Conductor</code> and <code>Genus</code> compute the conductor and the genus of the given numerical semigroup, respectively.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">TauNS</span> <span class="op">:=</span> <span class="fu">function</span>(<span class="va">i</span><span class="op">,</span><span class="va">S</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>     <span class="ex">local</span> <span class="va">d</span><span class="op">,</span> <span class="va">D</span><span class="op">,</span> <span class="va">si</span><span class="op">;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span>     <span class="va">D</span><span class="op">:=</span><span class="va">DivisorsOfElementInNumericalSemigroup</span>(<span class="va">S</span>[<span class="va">i</span><span class="op">+</span><span class="fl">1</span>]<span class="op">,</span><span class="va">S</span>)<span class="op">;</span></span>
