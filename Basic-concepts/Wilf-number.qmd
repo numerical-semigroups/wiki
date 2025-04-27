@@ -18,7 +18,7 @@ It is said that $S$ is a [Wilf semigroup](../Families-NS/Wilf-semigroup.qmd) if 
 
 ## Examples
 
-$\circ$ Let $S = \langle 4, 7, 10 \rangle = \{ 0, 4, 7, 8, 10, 11, 12, 14, \rightarrow\}$. We have $e(S) = 3, n(S) = 7$ and $C(S) = 14$. The Wilf number of $S$ is $W(S) = e(S) n(S) - C(S) = 7 \ge 0$.
+$\circ$ Let $S = \langle 4, 7, 10 \rangle = \{ 0, 4, 7, 8, 10, 11, 12, 14, \rightarrow\}$. We have $e(S) = 3, n(S) = 7$ and $C(S) = 14$. The Wilf number of $S$ is $W(S) = e(S) n(S) - C(S) = 3 \cdot 7 - 14 = 7 \ge 0$.
 
 ## Examples with GAP
 
@@ -31,7 +31,7 @@ gap> S := NumericalSemigroup(17, 31, 66, 80, 91);
 <Numerical semigroup with 5 generators>
 ```
 
-Given a numerical semigroup $S$; the functions `EmbeddingDimension`, `SmallElements` and `Condcutor` returns the embedding dimension, the list of small elements (left elements with the conductor) and the conductor, respectively.
+Given a numerical semigroup $S$, the functions `EmbeddingDimension`, `SmallElements` and `Conductor` returns the embedding dimension, the list of small elements (left elements with the conductor) and the conductor, respectively.
 
 ``` gap
 gap> e := EmbeddingDimension(S);
@@ -53,6 +53,6 @@ gap> WilfNumberOfNumericalSemigroup(S);
 165
 ```
 
-therefore, $W(S) = 165 \ge 0$.
+Therefore, $W(S) = 165 \ge 0$.
 
 ## References

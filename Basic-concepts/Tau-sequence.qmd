@@ -1,5 +1,5 @@
 ---
-title: "Tau-sequence of a numerical semigroup"
+title: "Tau-sequence"
 format: html
 engine: markdown
 ---
@@ -14,7 +14,7 @@ $$
 i \oplus j = k \Longleftrightarrow s_i + s_j = s_k.
 $$
 
-It is defined the $\tau-$sequence of $S$ as the sequence $(\tau_0, \tau_1, \tau_2 \ldots)$ such that for all $i \in \mathbb{N} \setminus \{0\}$,
+It is defined the $\tau-$sequence of $S$ as the sequence $(\tau_0, \tau_1, \tau_2 \ldots)$ such that for all $i \in \mathbb{N}$,
 
 $$
 \tau_i = \max \{j \in \mathbb{N} ~ | ~ \exists k \in \{j, \ldots, i\} ~ \text{ such that } ~ j \oplus k = i\},
@@ -47,7 +47,7 @@ gap> S := NumericalSemigroup( 26, 35, 38, 39, 46, 47, 48, 50, 57);
 <Numerical semigroup with 9 generators>
 ```
 
-Given a list of integers $I$ representing the first $2C(S) - g(S)+1$ elements of a $\tau-$sequence, the function `NumericalSemigroupByTauSequence` computes the unique numerical semigroup such that its $\tau-$sequence is $I \cup \{l+1, l+1, l+2, l+2 \ldots\}$, where $l$ is the last element of $I$. Given a numerical semigroup $S$ and an integer $i$, the function `TauNS` computes $\tau_i$. On the other hand, the function `Conductor` and `Genus` compute the conductor, genus of the given numerical semigroup, respectively.
+Given a list of integers $I$ representing the first $2C(S) - g(S)+1$ elements of a $\tau-$sequence, the function `NumericalSemigroupByTauSequence` computes the unique numerical semigroup such that its $\tau-$sequence is $I \cup \{l+1, l+1, l+2, l+2 \ldots\}$, where $l$ is the last element of $I$. Given a numerical semigroup $S$ and an integer $i$, the function `TauNS` computes $\tau_i$. On the other hand, the function `Conductor` and `Genus` compute the conductor and the genus of the given numerical semigroup, respectively.
 
 ``` gap
 gap> TauNS := function(i,S)

@@ -8,17 +8,17 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $n \in S \setminus \{0\}$. If $w(i)$ denotes the smallest element in $S$ such that $w(i) \equiv i ~~ (mod ~ n)$ for all $i \in \{0, \ldots, n-1\}$ and $\overline{m} = m ~ (mod ~ n)$ for all $m \in \mathbb{N}$, it is defined the cocycle of $S$ with respect to $n$ as the matrix $(h_{i,j})_{i, j = 0}^{n-1}$, where $h_{i,j}$ is defined as
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $n \in S \setminus \{0\}$. If $w(i)$ denotes the smallest element in $S$ such that $w(i) \equiv i ~~ (mod ~ n)$ for all $i \in \{0, \ldots, n-1\}$ and $\overline{m} = m ~ (mod ~ n)$ for all $m \in \mathbb{N}$, it is defined the cocycle of $S$ with respect to $n$, denoted by $H(S,n)$, as the matrix $H(S,n) = (h_{i,j})_{i, j = 0}^{n-1}$, where $h_{i,j}$ is defined as
 
 $$
-h_{i,j} = \frac{w(i) + w(j) - w(\overline{i+j})}{n}.
+h_{i,j} = \frac{w(i) + w(j) - w\left(\overline{i+j}\right)}{n}.
 $$
 
 It can be proven that $h_{i,j} \in \mathbb{N}$ for all $i,j \in \{0, \ldots, n-1\}$.
 
 ## Examples
 
-$\circ$ Let $S = \langle 5, 9, 11, 12 \rangle = \{0, 5, 9, 10, 11, 12, 14, \rightarrow\}$ and $n = 5$. It is well known that $Ap(S,n) = \{w(0) = 0, w(1), \ldots, w(n-1)\}$, where $Ap(S,n)$ denotes the [Apéry list](Apery-set.qmd) of $S$ with respect to $n$. Since, $Ap(S,5) = \{0, 9, 11, 12, 18\}$, it is deduced that
+$\circ$ Let $S = \langle 5, 9, 11, 12 \rangle = \{0, 5, 9, 10, 11, 12, 14, \rightarrow\}$ and $n = 5$. It is well known that $Ap(S,n) = \{w(0) = 0, w(1), \ldots, w(n-1)\}$, where $Ap(S,n)$ denotes the [Apéry list](Apery-set.qmd) of $S$ with respect to $n$. Since $Ap(S,5) = \{0, 9, 11, 12, 18\}$, it is deduced that
 
 $$
 w(0) = 0, ~ w(1) = 11, ~ w(2) = 12, ~w(3) = 18, ~w(4) = 9,
@@ -49,7 +49,7 @@ gap> S := NumericalSemigroup(6, 15, 17, 22);
 <Numerical semigroup with 4 generators>
 ```
 
-Given a numerical semigroup $S$ and an element $m \in S \setminus \{0\}$, the function `CocycleOfNumericalSemigroupWRTElement` returns the cocycle of $S$ with respect to $m$.
+Given a numerical semigroup $S$ and an element $n \in S \setminus \{0\}$, the function `CocycleOfNumericalSemigroupWRTElement` returns the cocycle of $S$ with respect to $n$.
 
 ``` gap
 gap> CocycleOfNumericalSemigroupWRTElement(S, 6);

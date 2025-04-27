@@ -1,5 +1,5 @@
 ---
-title: "Maximal embedding dimension of generators"
+title: "Maximal embedding dimension system of generators"
 format: html
 engine: markdown
 ---
@@ -8,23 +8,23 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [maximal embedding dimension](../Families-NS/NS-maximal-embedding-dimension.qmd) [numerical semigroup](Numerical-semigroup.qmd) and $M = \{m_1, \ldots, m_k\}$ a set of positive integers with $gcd(M) = 1$ and $m_1 < \ldots < m_k$. It is said that $M$ is a maximal embedding dimension system of generators (or a MED system of generators) if the [MED closure](MED-closure.qmd) of $M$ is $S$.
+Let $S$ be a [maximal embedding dimension](../Families-NS/NS-maximal-embedding-dimension.qmd) [numerical semigroup](Numerical-semigroup.qmd) and $M = \{m_1, \ldots, m_k\}$ a set of positive integers with $gcd(M) = 1$ and $m_1 < \ldots < m_k$. It is said that $M$ is a maximal embedding dimension system of generators of $S$ (or a MED system of generators of $S$) if the [MED closure](MED-closure.qmd) of $M$ is $S$.
 
 From the definition, if $M$ is a MED system of generators with MED closure $S$, then $M$ is minimal, since every proper subset of $M$ is not a MED system of generators of $S$. Moreover, $M$ is unique and is a subset of the [minimal set of generators](Minimal-set-of-generators.qmd) of $S$.
 
 ## Examples
 
-$\circ$ Let $S = \langle 4, 6, 7, 9 \rangle$. Since $e(S) = m(S) = 4$, where $e(S)$ is the [embedding dimension](Embedding-dimension.qmd) and $m(S)$ is the [multiplicty](Multiplicity.qmd) of $S$ respectively, we have that $S$ has maximal embedding dimension. From the condition $gcd(M) = 1$, the candidates to be the MED system of generators of $S$ are
+$\circ$ Let $S = \langle 4, 6, 7, 9 \rangle$. Since $e(S) = m(S) = 4$, where $e(S)$ is the [embedding dimension](Embedding-dimension.qmd) and $m(S)$ is the [multiplicity](Multiplicity.qmd) of $S$ respectively, we have that $S$ has maximal embedding dimension. From the condition $gcd(M) = 1$, the candidates to be the MED system of generators of $S$ are
 
 $$
 M_1 = \{4, 7\}, ~~ M_2 = \{4, 9\}, ~~ M_3 = \{6, 7\}, ~~ M_4 = \{7,9\},
-$$ 
+$$
 
 $$
 M_5 = \{4, 6, 7\}, ~~ M_6 = \{4, 6, 9\}, ~~ M_7 = \{6, 7, 9\}, ~~ M_8 = \{4, 6, 7, 9\}.
 $$
 
-If $S$ is the MED closure of $M_j$ with $j \in \{1, \ldots, 8\}$, then $\min M_j = m(S) = 4$, therefore $M_1, M_2, M_5, M_6, M_8$ are the only possibilities. From this, it is deduced that the MED system of generators is $M_5 = \{4,6,7\}$.
+If $S$ is the MED closure of $M_j$ with $j \in \{1, \ldots, 8\}$, then $\min M_j = m(S) = 4$, obtaining that $M_1, M_2, M_5, M_6, M_8$ are the only possibilities. From this, it is deduced that the MED system of generators is $M_5 = \{4,6,7\}$.
 
 ## Examples with GAP
 

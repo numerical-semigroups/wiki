@@ -11,21 +11,23 @@ engine: markdown
 Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) with [multiplicity](Multiplicity.qmd) $m(S)$ and [depth and remainder](Depth-and-remainder.qmd) $q(S), \rho(S)$ respectively. If
 
 $$
-I_j = [jm(S) - \rho(S), (j+1)m(S) - \rho(S)) \cap \mathbb{Z}, ~~~~ \text{for } ~ j \in \{1, \ldots, q(S)\},
+I_j = [jm(S) - \rho(S), (j+1)m(S) - \rho(S)) \cap \mathbb{Z}, ~~~~ \text{for all } ~ j \in \{1, \ldots, q(S)\},
 $$
 
 it is defined the Eliahou slices of $S$ as the sets
 
 $$
-S_j = S \cap I_j ~~~~ \text{for } ~ j \in \{1, \ldots, q(S)\}. 
+S_j = S \cap I_j ~~~~ \text{for all } ~ j \in \{1, \ldots, q(S)\}. 
 $$
+
+From the definition, $I_{q(S)}$ is the [threshold interval](Threshold-interval.qmd) of $S$.
 
 ## Examples
 
 $\circ$ Let $S = \langle 7, 8, 13, 17 \rangle = \{0, 7, 8, 13, 14, 15, 16, 17, 20, \rightarrow\}$. Since the multiplicity of $S$ is $m(S) = 7$ and its [conductor](Conductor.qmd) is $C(S) = 20$, we have $q(S) = 3$ and $\rho(S) = 1$. Then,
 
 $$
-I_j = [7j - 1, 7(j+1) - 1) \cap \mathbb{Z}, ~~~~ \text{for } ~ j = 1, 2, 3.
+I_j = [7j - 1, 7(j+1) - 1) \cap \mathbb{Z}, ~~~~ \text{for all } ~ j \in \{1, 2, 3\}.
 $$
 
 The Eliahou slices of $S$ are
@@ -49,7 +51,7 @@ gap> S := NumericalSemigroup(9, 14, 21, 31);
 <Numerical semigroup with 4 generators>
 ```
 
-Given a numerical semigroup $S$, the function `EliahouSlicesOfNumericalSemigroup` returns a list with the Eliahou slices of $S$ for $j = 1, \ldots, q(S)-1$.
+Given a numerical semigroup $S$, the function `EliahouSlicesOfNumericalSemigroup` returns a list with the Eliahou slices of $S$ for all $j \in \{1, \ldots, q(S)-1\}$.
 
 ``` gap
 gap> EliahouSlicesOfNumericalSemigroup(S);
@@ -58,7 +60,7 @@ gap> EliahouSlicesOfNumericalSemigroup(S);
   [ 39, 40, 41, 42, 44, 45, 46 ] ]
 ```
 
-In order to obtain $S_q = S \cap I_q$, the following functions computes it. The interval $S_q$ is called the [threshold interval](Threshold%20interval) of $S$.
+In order to obtain $S_{q(S)} = S \cap I_{q(S)}$, the following functions computes it.
 
 ``` gap
 gap> ThresholdIntervalOfNumericalSemigroup := function(S)

@@ -8,17 +8,17 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) with set of [gaps](Gaps.qmd) $G(S)$ and [Frobenius number](Frobenius-number.qmd) $F(S)$. It is said that $g \in G(S)$ is a hole of $S$ if $F(S) - g \in G(S)$. The set of holes of $S$, denoted by $H(S)$, is
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) with set of [gaps](Gap.qmd) $G(S)$ and [Frobenius number](Frobenius-number.qmd) $F(S)$. It is said that $g \in G(S)$ is a hole of $S$ if $F(S) - g \in G(S)$. The set of holes of $S$, denoted by $H(S)$, is
 
 $$
 H(S) = \{x \in G(S) ~ | ~ F(S) - x \in G(S)\} \subseteq G(S).
 $$
 
-Since $F(S) \in G(S)$ and $F(S) - F(S) = 0 \in S$, it holds that $H(S) \subsetneq G(S)$ for any numerical semigroup. It can be proven that $H(S) = \emptyset$ if, and only if, $S$ is [symmetric](../Families-NS/Symmetric.qmd).
+Since $F(S) \in G(S)$ and $F(S) - F(S) = 0 \in S$, it holds that $H(S) \subsetneq G(S)$ for any numerical semigroup. It can be proven that $H(S) = \emptyset$ if, and only if, $S$ is [symmetric](../Families-NS/NS-symmetric.qmd).
 
 ## Examples
 
-$\circ$ Let $S = \langle 4, 6, 11 \rangle = \{0, 4, 6, 8, 10, 11, 12, 14, \rightarrow\}$. The Frobenius number of $S$ is $F(S) = 13$ and the set of gaps is $G(S) = \{1, 2, 3, 5, 7, 9, 13\}$. if we compute $F(S) - g$ for all $g \in G(S)$, we obtain that $F(S) - G(S) = \{12, 11, 10, 8, 6, 4, 0\}$. Therefore, $H(S) = \emptyset$.
+$\circ$ Let $S = \langle 4, 6, 11 \rangle = \{0, 4, 6, 8, 10, 11, 12, 14, \rightarrow\}$. The Frobenius number of $S$ is $F(S) = 13$ and the set of gaps is $G(S) = \{1, 2, 3, 5, 7, 9, 13\}$. If we compute $F(S) - g$ for all $g \in G(S)$, we obtain that $F(S) - G(S) = \{12, 11, 10, 8, 6, 4, 0\} \subseteq S$. Therefore, $H(S) = \emptyset$.
 
 ## Examples with GAP
 

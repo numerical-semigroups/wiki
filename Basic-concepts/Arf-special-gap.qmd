@@ -1,5 +1,5 @@
 ---
-title: "Arf special gaps"
+title: "Arf special gap"
 format: html
 engine: markdown
 ---
@@ -11,7 +11,7 @@ engine: markdown
 Let $S$ be an [Arf](../Families-NS/Arf-semigroup.qmd) [numerical semigroup](Numerical-semigroup.qmd). It is defined the set of Arf special gaps of $S$, denoted by $ArfG(S)$, as
 
 $$
-ArfG(S) = \{x \in SG(S) ~ | ~ S \cup \{x\} ~~ \text{is an Arf numerical semigroup }\},
+ArfG(S) = \{x \in SG(S) ~ | ~ S \cup \{x\} ~~ \text{is an Arf numerical semigroup}\},
 $$
 
 where $SG(S)$ denotes the set of [special gaps](Special-gap.qmd) of $S$.
@@ -20,19 +20,19 @@ If $S = \{h_0 = 0, h_1, \ldots, h_{n-1}, h_n, \rightarrow\}$ is an Arf numerical
 
 ## Examples
 
-$\circ$ Let $S = \langle 3, 5, 7 \rangle = \{0, 3, 5, \rightarrow\}$. The set of [gaps](Gap.qmd) of $S$ is $G(S) = \{1, 2, 4\}$ and its set of special gaps is $SG(S) = \{x \in G(S) ~ | ~ \{2x, 3x\} \subseteq S\} = \{4\}$. We have that $3 < 4 < 5$, $4 \in SG(S)$, $2 \cdot 4 - 3 = 5 \in S$ and $2 \cdot 5 - 4 = 6 \in S$, concluding that $ArfSG(S) = \{4\}$.
+$\circ$ Let $S = \langle 3, 5, 7 \rangle = \{0, 3, 5, \rightarrow\}$. The set of [gaps](Gap.qmd) of $S$ is $G(S) = \{1, 2, 4\}$ and its set of special gaps is $SG(S) := \{x \in G(S) ~ | ~ \{2x, 3x\} \subseteq S\} = \{4\}$. We have that $3 < 4 < 5$, $2 \cdot 4 - 3 = 5 \in S$ and $2 \cdot 5 - 4 = 6 \in S$, concluding that $ArfSG(S) = \{4\}$.
 
 ## Examples with GAP
 
 The following example is made with the package NumericalSgps in GAP.
 
-$\diamond$ Let $S = \langle P \rangle$ with
+$\diamond$ Let $S = \langle P(S) \rangle$ with
 
 $$
-P(S) = \{26, 29, 32, 35, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 53, 54, 56, 57, 59, 60, 62\}.
+P(S) = \{26, 29, 32, 35, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 53, 54, 56, 57, 59, 60, 62\},
 $$
 
-In GAP:
+in GAP:
 
 ``` gap
 gap> P := [26, 29, 32, 35, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 53, 54, 56, 57, 59, 60, 62];

@@ -19,11 +19,11 @@ $$
 \end{cases}
 $$
 
-It can be proven that there is one-to-one correspondence between the number of [numerical semigroups](Numerical-semigroup.qmd) with [multiplicity](Multiplicity.qmd) $m$ and [genus](Genus.qmd) $g$ and the set of positive integers $(x_1, \ldots, x_{m-1})$ that are solutions of the Kunz polytope.
+It can be proven that there is a one-to-one correspondence between the number of [numerical semigroups](Numerical-semigroup.qmd) with [multiplicity](Multiplicity.qmd) $m$ and [genus](Genus.qmd) $g$ and the set of positive integers $(x_1, \ldots, x_{m-1})$ that are solutions of the Kunz polytope.
 
 ## Examples
 
-$\circ$ Let us consider the numerical semigroup $S = \langle 3, 7, 11 \rangle$, which has multiplicity $m(S) = 3$ and genus $g(S) = 5$. Let us see that the [Kunz coordinates](Kunz-coordinates.qmd) of $S$ is a solution of the Kunz polytope $K(3,5)$. The [Apéry set](Apery-set.qmd) of $S$ with respect to $m$ is $Ap(S,3) = \{0, 7, 11\}$ and $7 = 2 \cdot 3 + 1, 11 = 3 \cdot 3 + 2$. Then, the Kunz coordinates of $S$ is $(x_1, x_2) = (2,3)$. On the other hand, the Kunz polytope $K(3, 5)$ is the following system of equations.
+$\circ$ Let us consider the numerical semigroup $S = \langle 3, 7, 11 \rangle$, which has multiplicity $m(S) = 3$ and genus $g(S) = 5$. Let us see that the [Kunz coordinates](Kunz-coordinates.qmd) of $S$ is a solution of the Kunz polytope $K(3,5)$. The [Apéry set](Apery-set.qmd) of $S$ with respect to $m(S)$ is $Ap(S,3) = \{0, 7, 11\}$ and $7 = 2 \cdot 3 + 1, 11 = 3 \cdot 3 + 2$. Then, the Kunz coordinates of $S$ is $(x_1, x_2) = (2,3)$. On the other hand, the Kunz polytope $K(3, 5)$ is the following system of equations.
 
 $$
 \begin{cases}

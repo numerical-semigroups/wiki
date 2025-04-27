@@ -22,7 +22,7 @@ $$
 \ker(\varphi) = \langle X^{\alpha_1} - X^{\beta_1}, \ldots, X^{\alpha_n} - X^{\beta_n} \rangle,
 $$
 
-where $\alpha_i = (\alpha_{i,1}, \ldots, \alpha_{i,e})$, $X^{\alpha_i} = X_1^{\alpha_{i,1}} \cdots X_e^{\alpha_{i,e}}$ and $\beta_i = (\beta_{i,1}, \ldots, \beta_{i,e})$ and $X^{\beta_i} = X_1^{\beta_{i,1}} \cdots X_e^{\beta_{i,e}}$.
+where $\alpha_i = (\alpha_{i,1}, \ldots, \alpha_{i,e})$, $X^{\alpha_i} = X_1^{\alpha_{i,1}} \cdots X_e^{\alpha_{i,e}}$ and $\beta_i = (\beta_{i,1}, \ldots, \beta_{i,e})$, $X^{\beta_i} = X_1^{\beta_{i,1}} \cdots X_e^{\beta_{i,e}}$.
 
 ## Examples
 

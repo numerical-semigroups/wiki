@@ -8,9 +8,9 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd), $n \in S$ and let $Ap(S,n)$ be the [Apéry set](Apery-set.qmd) of $S$ with respect to $n$. It is defined the graph associated to $n$ by Apéry list as the graph with vertices $Ap(S, n)$ and $(u,v)$ is an edge if, and only if, $v - u \in Ap(S, n)$. The graph is denoted by $(Ap(S,n), E_n)$.
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) with [relation order](Relation-order-NS.qmd) $\le_S$, $n \in S$ and let $Ap(S,n)$ be the [Apéry set](Apery-set.qmd) of $S$ with respect to $n$. It is defined the graph associated to $n$ by Apéry list as the graph with vertices $Ap(S, n)$ and $(u,v)$ is an edge if, and only if, $u \le_S v$, that is, $v - u \in S$. The graph is denoted by $(Ap(S,n), E_n)$.
 
-The relation $u \le v \Longleftrightarrow v-u \in Ap(S,n)$ in $Ap(S,n)$ is a partial order, since the conditions $v-u \in S$, $v \in Ap(S,n)$ and $u \in S$ implies that $v-u \in Ap(S,n)$.
+It is well known that $\le_S$ is a partial order. Moreover, if $v \in Ap(S,n), u \in S$ and $v - u \in S$, then $v-u \in Ap(S,n)$.
 
 ## Examples
 
@@ -20,7 +20,7 @@ $$
 Ap(S, n) = \{s \in S ~ | ~ s - n \not \in S\},
 $$
 
-and is well known that $|Ap(S, n)| = n$, where it is deduced that $Ap(S, 7) = \{0, 3, 6, 9, 11, 12, 15\}$. Taking into account that if $(u,v)$ is an edge, then $u \le v$, with few calculations we have that the set of edges is
+and $|Ap(S, n)| = n$, where it is deduced that $Ap(S, 7) = \{0, 3, 6, 9, 11, 12, 15\}$. Taking into account that if $(u,v)$ is an edge, then $u \le v$, with few calculations we have that the set of edges is
 
 $$
 E_7 = \{(0, v) ~ | ~ v \in Ap(S, 7) \} \cup \{(v,v) ~ | ~ v \in Ap(S,7)\} \cup B_3 \cup B_6 \cup B_9 \cup B_{12},
@@ -199,7 +199,7 @@ gap> S := NumericalSemigroup(22, 26, 38, 45, 58);
 <Numerical semigroup with 5 generators>
 ```
 
-Given a numerical semigroup $S$ and an element $n \in S$, the function `HasseDiagramOfAperyListOfNumericalSemigroup` returns the Hasse diagram by the relation $u \le v$ if, and only if, $v - u \in Ap(S, n)$, with $u,v \in Ap(S, n)$. The function `DotBinaryRelation` returns a GraphViz dot that represents the given binary relation.
+Given a numerical semigroup $S$ and an element $n \in S$, the function `HasseDiagramOfAperyListOfNumericalSemigroup` returns the Hasse diagram by the relation $u \le v$ if, and only if, $v - u \in S$, with $u,v \in Ap(S, n)$. The function `DotBinaryRelation` returns a GraphViz dot that represents the given binary relation.
 
 ``` gap
 gap> H := HasseDiagramOfAperyListOfNumericalSemigroup(S, 26);
@@ -286,7 +286,7 @@ digraph  NSGraph{rankdir = TB; edge[dir=back];
 }
 ```
 
-The Hasse diagram is as follows.
+The Hasse diagram of $Ap(S, 26)$ is as follows.
 
 ::: {style="text-align:center;"}
 ```{dot}

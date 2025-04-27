@@ -8,11 +8,11 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and let $G(S) = \{l_1, \ldots, l_g\}$ be the set of [gaps](Gaps.qmd) of $S$ with $l_1 < l_2 < \ldots < l_g$. It is defined the Weierstrass weight of $S$, denoted by $w(S)$, as
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and let $G(S) = \{l_1, \ldots, l_g\}$ be the set of [gaps](Gap.qmd) of $S$ with $l_1 < l_2 < \ldots < l_g$. It is defined the Weierstrass weight of $S$, denoted by $w(S)$, as
 
 $$
 w(S) = \sum_{i = 1}^g (l_i - i).
-$$ 
+$$
 
 From the definition, since the least possible gap is $1$, we have that $i \le l_i$ for all $i \in \{1, \ldots, g\}$, from which it follows that the Weierstrass weight is always non-negative and $w(S) = 0$ if, and only if, $S$ is a [half-line](../Families-NS/NS-half-line.qmd).
 
@@ -21,10 +21,14 @@ From the definition, since the least possible gap is $1$, we have that $i \le l_
 $\circ$ Let $S = \langle 5, 9, 12 \rangle = \{0, 5, 9, 10, 12, 14, 15, 17, \rightarrow\}$. The set of gaps of $S$ is
 
 $$
-G(S) = \{1, 2, 3, 4, 6, 7, 8, 11, 13, 16 \}.
-$$ 
+G(S) = \{1, 2, 3, 4, 6, 7, 8, 11, 13, 16 \},
+$$
 
-Then, the Weierstrass weight of $S$ is $w(S) = 16$.
+and the [genus](Genus.qmd) of $S$ is $|G(S)| = 10$. Then, the Weierstrass weight of $S$ is
+
+$$
+w(S) = \sum_{i = 1}^{10} (l_i - i) = \sum_{i = 1}^4 (l_i - i) + \sum_{i = 5}^7 (l_i - i) + (l_8-8) + (l_9-9) + (l_{10}-10) = 0 + 3 + 3 + 4 + 6 = 16.
+$$
 
 ## Examples with GAP
 

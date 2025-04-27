@@ -20,7 +20,7 @@ $$
 w(k) = x_kn + k, ~~ \text{for all } ~ k \in \{0, \ldots, n-1\}.
 $$
 
-It is defined the Kunz coordinates of $S$ with respect to $n$ as the tuple $(x_1, \ldots, x_{n-1}) \in \mathbb{N}^n$. If we consider $n = m(S)$, where $m(S)$ denotes the [multiplicity](Multiplicity.qmd) of $S$, it is said directly as the Kunz coordinates of $S$.
+It is defined the Kunz coordinates of $S$ with respect to $n$ as the tuple $(x_1, \ldots, x_{n-1}) \in \mathbb{N}^{n-1}$. If we consider $n = m(S)$, where $m(S)$ denotes the [multiplicity](Multiplicity.qmd) of $S$, it is said directly as the Kunz coordinates of $S$.
 
 ## Examples
 
@@ -34,7 +34,7 @@ $$
 w(3) = 18 = 3 \cdot 5 + 3, ~ w(4) = 9 = 1 \cdot 5 + 4,
 $$
 
-obtaining that the tuple $(3, 1, 3, 1)$ is the Kunz coordinate of $S$.
+obtaining that the tuple $(3, 1, 3, 1)$ is the Kunz coordinates of $S$.
 
 ## Examples with GAP
 
@@ -57,7 +57,7 @@ gap> KunzCoordinatesOfNumericalSemigroup(S, 42) = KunzCoordinates(S, 42);
 true
 ```
 
-If we only give a numerical semigroup, the functions computes the Kunz coordinates of $S$.
+If we only give a numerical semigroup, the functions computes the Kunz coordinates of $S$ with respect to its multiplicity.
 
 ``` gap
 gap> KunzCoordinates(S);

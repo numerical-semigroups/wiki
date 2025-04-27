@@ -8,7 +8,7 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and $M = \{m_1, \ldots, m_k\}$ a set of positive integers with $gcd(M) = 1$ and $m_1 < \ldots < m_k$. It is said that $M$ is an Arf system of generators of $S$ if the [Arf closure](Arf-closure.qmd) of $M$ is $S$.
+Let $S$ be an [Arf](../Families-NS/Arf-semigroup.qmd) [numerical semigroup](Numerical-semigroup.qmd) and $M = \{m_1, \ldots, m_k\}$ a set of positive integers with $gcd(M) = 1$ and $m_1 < \ldots < m_k$. It is said that $M$ is an Arf system of generators of $S$ if the [Arf closure](Arf-closure.qmd) of $M$ is $S$.
 
 From the definition, if $M$ is a Arf system of generators with Arf closure $S$, then $M$ is minimal, since every proper subset of $M$ is not an Arf system of generators of $S$. Moreover, $M$ is unique and is a subset of the [minimal set of generators](Minimal-set-of-generators.qmd) of $S$.
 

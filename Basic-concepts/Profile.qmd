@@ -8,15 +8,23 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) [minimally generated](Minimal-set-of-generators.qmd) by $P(S)$, with [Eliahou slices](Eliahou-slices.qmd) $S_1, \ldots, S_q$. If $P_j = P(S) \cap S_j$ and $p_j = |P_j|$ for $j \in \{1, \ldots, q(S)-1\}$, where $q(S)$ denotes the [depth and remainder](Depth-and-remainder.qmd) of $S$, it is defined the profile of $S$ as the $(q(S)-1)-$tuple $(p_1, \ldots, p_{q(S)-1}) \in \mathbb{N}^{q(S) - 1}$.
+Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) [minimally generated](Minimal-set-of-generators.qmd) by $P(S)$ with [Eliahou slices](Eliahou-slices.qmd) $S_1, \ldots, S_q$ and [depth](Depth-and-remainder.qmd) $q(S)$. If
+
+$$
+P_j = P(S) \cap S_j ~~ \text{and} ~~ p_j = |P_j| ~~ \text{for all } ~ j \in \{1, \ldots, q(S)-1\},
+$$
+
+it is defined the profile of $S$ as the $(q(S)-1)-$tuple $(p_1, \ldots, p_{q(S)-1}) \in \mathbb{N}^{q(S) - 1}$.
 
 ## Examples
 
-$\circ$ Let $S = \langle 4, 9, 10 \rangle = \{ 0, 4, 8, 9, 10, 12, 13, 14, 16, \rightarrow\}$. Since $m(S) = 4$ and $C(S) = 16$, where $m(S)$ and $C(S)$ denotes the [multiplicity](Multiplicity.qmd) and the [conductor](Conductor.qmd) of $S$, respectively, we have that $q(S) = 4$. With few calculations, we have that
+$\circ$ Let $S = \langle 4, 9, 10 \rangle = \{ 0, 4, 8, 9, 10, 12, 13, 14, 16, \rightarrow\}$. Since $m(S) = 4$ and $C(S) = 16$, where $m(S)$ and $C(S)$ denotes the [multiplicity](Multiplicity.qmd) and the [conductor](Conductor.qmd) of $S$, respectively, we have that $q(S) = 4$ and [remainder](Depth-and-remainder.qmd) $\rho(S) = 0$. Then,
 
 $$
-S_1 = \{4\}, ~~ S_2 = \{8,9,10\}, ~~ \text{and } ~~ S_3 = \{12,13,14\},
-$$ concluding that the profile of $S$ is $(1, 2, 0)$.
+S_1 = S \cap [4, 8) = \{4\}, ~~ S_2 = S \cap [8, 12) = \{8,9,10\}, ~~ \text{and } ~~ S_3 = S \cap [12, 16) = \{12,13,14\},
+$$
+
+concluding that the profile of $S$ is $(1, 2, 0)$.
 
 ## Examples with GAP
 
@@ -29,7 +37,7 @@ gap> S := NumericalSemigroup(19, 31, 60, 78, 80);
 <Numerical semigroup with 5 generators>
 ```
 
-Given a numerical semigroup $S$, the function `ProfileOfNumericalSemigroup` returns the profile of $S$. On the other hand, the function `EliahouSlicesOfNumericalSemigroup` returns the Eliahou slices $S_1, \ldots, S_{q(S)-1}$ of the numerical semigroup.
+Given a numerical semigroup $S$, the function `ProfileOfNumericalSemigroup` returns the profile of $S$. On the other hand, the function `EliahouSlicesOfNumericalSemigroup` returns the Eliahou slices $S_1, \ldots, S_{q(S)-1}$ of the given numerical semigroup.
 
 ``` gap
 gap> ProfileOfNumericalSemigroup(S);

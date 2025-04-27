@@ -12,7 +12,7 @@ Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) with [conductor](Con
 
 ## Examples
 
-$\circ$ Let $S = \langle 6,7,11 \rangle = \{0, 6, 7, 11, 12, 13, 14, 17, \rightarrow \}$. The conductor of $S$ is $C(S) = 17$ and the multiplicity is $m(S) = 6$. Therefore, the depth of $S$ is $q(S) = \lceil \frac{17}{6} \rceil = 3$ and the remainder is $\rho(S) = 1$.
+$\circ$ Let $S = \langle 6,7,11 \rangle = \{0, 6, 7, 11, 12, 13, 14, 17, \rightarrow \}$. The conductor of $S$ is $C(S) = 17$ and the multiplicity is $m(S) = 6$. Therefore, the depth of $S$ is $q(S) = \left \lceil \frac{17}{6} \right \rceil = 3$ and the remainder is $\rho(S) = 1$.
 
 ## Examples with GAP
 
@@ -50,10 +50,12 @@ gap> S := NumericalSemigroup(27, 29, 41, 66, 94);
 Given a numerical semigroup, the functions `Conductor` and `Multiplicity` return the conductor and the multiplicity of $S$, respectively.
 
 ``` gap
-gap> Conductor(S);
+gap> C := Conductor(S);
 213
-gap> Multiplicity(S);
+gap> m := Multiplicity(S);
 27
+gap> C/m;
+71/9
 ```
 
 If we use the functions defined above,

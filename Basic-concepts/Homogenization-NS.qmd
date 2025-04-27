@@ -32,7 +32,7 @@ $$
 (n,s) = \lambda_0(1,0) + \lambda_1 (1, m_1) + \cdots + \lambda_n (1, m_n) = \left( \sum_{i = 0}^n \lambda_i, \sum_{i = 1}^n \lambda_i m_i  \right).
 $$
 
-Then, $s = \sum_{i = 1}^n \lambda_i m_i$ and $(\lambda_1, \ldots, \lambda_n)$ is a factorization of $s$ such that
+Then, $s = \sum_{i = 1}^n \lambda_i m_i \in S$ and $(\lambda_1, \ldots, \lambda_n)$ is a factorization of $s$, from which it follows the relation
 
 $$
 \min \mathbf{L}(s) \le |(\lambda_1, \ldots, \lambda_n)| = \sum_{i = 1}^n \lambda_i \le \lambda_0 + \sum_{i = 1}^n \lambda_i = n,
