@@ -1,0 +1,54 @@
+---
+title: "Nearly Gorenstein numerical semigroup"
+format: html
+engine: markdown
+---
+
+<!--  -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $P(S) = \{n_1, \ldots, n_e\}$, ordered from smallest to largest, and set of [pseudo Frobenius numbers](../Basic-concepts/Pseudo-Frobenius-number.qmd) $PF(S)$. It is said that $S$ is nearly Gorenstein if for every $i \in \{1, \ldots, e\}$, there exists $f_i \in PF(S)$ such that $n_i + f_i - f \in S$ for all $f \in PF(S)$. The pairs $(f_1, \ldots, f_e) \in PF(S)^e$ that fulfills the condition are called nearly Gorenstein vectors.
+
+## Examples
+
+$\circ$ Let $S = \langle 3, 8, 13 \rangle = \{0, 3, 6, 8, 9, 11, \rightarrow \}$. The set of Pseudo-Frobenius numbers is
+
+$$
+PF(S) := \{x \not \in S ~ | ~ x + s \in S, ~ \text{for all} ~  s \in S \setminus \{0\} \} = \{5, 10\}.
+$$ If we consider $f_i = 10$ for all $i \in \{1, 2, 3\}$,
+
+$$
+3 + 10 - 5 = 3 + 5 = 8 \in S, ~~ 8 + 10 - 5 = 13 \in S, ~~ 13 + 10 - 5 = 18 \in S,
+$$
+
+deducing that $S$ is nearly Gorenstein. It can be proven that $\{10\} \times \{5, 10\} \times \{5, 10\}$ is the set of nearly Gorenstein vectors.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 10, 32, 67, 89 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(10, 32, 67, 89);
+<Numerical semigroup with 4 generators>
+```
+
+Given a numerical semigroup $S$, the function `IsNearlyGorenstein` returns true if $S$ is nearly Gorenstein and false otherwise.
+
+``` gap
+gap> IsNearlyGorenstein(S);
+true
+```
+
+The function `NearlyGorensteinVectors` returns a list of lists such that making the cartesian product it is obtained all the nearly Gorenstein vectors of the given numerical semigroup. If $S$ is not nearly Gorenstein, there is at least one empty list.
+
+``` gap
+gap> NearlyGorensteinVectors(S);
+[ [ 175 ], [ 175 ], [ 118, 175 ], [ 118, 175 ] ]
+```
+
+Then, the set of nearly Gorenstein vectors of $S$ is $\{175\} \times \{175\} \times \{118, 175\} \times \{118, 175\}$.
+
+## References

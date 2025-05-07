@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Ratliff-Rush number of a proper ideal"
 format: html
 engine: markdown
 ---
@@ -8,7 +8,7 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $E$ a [relative ideal](Relative-ideal.qmd) of $S$. It is defined the Ratliff-Rush number of $I$, denoted by $R(I)$, as the least integer $n$ such that $S \cap ( (n+1)I - nI)$ is the [Ratliff-Rush closure](Ratliff-Rush-closure.qmd) of $I$.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $E$ a [proper ideal](Proper-ideal.qmd) of $S$. It is defined the Ratliff-Rush number of $I$, denoted by $R(I)$, as the least integer $n$ such that $S \cap ( (n+1)I - nI)$ is the [Ratliff-Rush closure](Ratliff-Rush-closure.qmd) of $I$.
 
 If $r(I)$, that is, the minimum $h \ge 1$ such that $(h + 1)I = m(I) + hI$, where $m(I)$ is the [multiplicity](Multiplicity-ideal.qmd) of $I$, it can be proven that $R(I) \le r(I)$.
 
@@ -36,14 +36,14 @@ concluding that the Ratliff-Rush number of $I$ is $R(I) = 1$.
 
 ## Examples with GAP
 
-The following example is made with the package NumericalSgps in GAP.
+The following examples are made with the package NumericalSgps in GAP.
 
-$\diamond$ Let $S = \langle 50, 54, 78, 115, 116, 119 \rangle$, in GAP:
+$\diamond$ Let $S = \langle 50, 54, 78, 115, 116, 119 \rangle$ and $I = \{50, 78, 119\} + S$, in GAP:
 
 ``` gap
 gap> S := NumericalSemigroup(50, 54, 78, 115, 116, 119);
 <Numerical semigroup with 6 generators>
-gap> I := [25, 38, 66, 70, 82] + S;
+gap> I := [50, 78, 119] + S;
 <Ideal of numerical semigroup>
 ```
 
@@ -51,11 +51,36 @@ Given a relative ideal $I$ of a numerical semigroup, the functions `RatliffRushN
 
 ``` gap
 gap> RatliffRushNumber(I);
-5
+6
 gap> RatliffRushNumberOfIdealOfNumericalSemigroup(I) = RatliffRushNumber(I);
 true
 ```
 
-Then, the Ratliff-Rush closure of $I$ is $S \cap (6I - 5I)$.
+Then, the Ratliff-Rush closure of $I$ is $S \cap (7I - 6I)$.
+
+
+$\diamond$ Let $S = \langle 39, 96, 105, 120, 130 \rangle$ and $I = \{96, 169, 183, 195 \} + S$, in GAP:
+
+
+```gap
+gap> S := NumericalSemigroup(39, 96, 105, 120, 130);
+<Numerical semigroup with 5 generators>
+gap> I := [96, 169, 183, 195] + S;
+<Ideal of numerical semigroup>
+```
+
+Given a proper ideal $I$, the functions `AsymptoticRatliffRushNumber` and `AsymptoticRatliffRushNumberOfIdealOfNumericalSemigroup` return the least integer $n$ such that the Ratliff-Rush closure of 
+$mI$ equals to $mI$ for all $m \ge n$, that is, the asymptotic Ratliff-Rush number.
+
+
+```gap
+gap> AsymptoticRatliffRushNumber(I);
+4
+gap> RatliffRushNumber(I);
+3
+```
+
+It can be proven that the asymptotic Ratliff-Rush number is greater or equal to the Ratliff-Rush number.
+
 
 ## References

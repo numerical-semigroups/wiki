@@ -4,17 +4,21 @@ format: html
 engine: markdown
 ---
 
-<!--  -->
+<!-- https://www.ugr.es/~imns2010/2014/Slides/IMNS_2014_Strazzanti.pdf -->
 
 ## Definition
 
-Let $T$ and $S$ be [numerical semigroups](../Basic-concepts/Numerical-semigroup.qmd), $E$ a [proper ideal](../Ideals-NS/Proper-ideal.qmd) of $S$ and $b$ a positive odd integer. It is said that $T$ is a duplication of $S$ by $E$ and $b$ if $T = 2S \cup (2E + b)$, where
+Let $T$ and $S$ be [numerical semigroups](../Basic-concepts/Numerical-semigroup.qmd), $E$ a [proper ideal](../Ideals-NS/Proper-ideal.qmd) of $S$ and $b$ a positive odd integer. It is said that $T$ is a duplication of $S$ by $E$ and $b$ if $T = 2S \cup (2E + b)$, where for any subset $X$ of $\mathbb{Z}$, $2X$ denotes the set
 
 $$
-2S = \{s + t ~ | ~ s \in S, t \in S\}, ~~ 2E = \{e + e' ~ | ~ e,e' \in E\}, ~~ 2E + b = \{e + b ~ | ~ e \in 2E\}.
+2X = \{2x ~ | ~ x \in X\}.
 $$
 
-The set $2S \cup (2E + b)$ is not always a numerical semigroup, but it can be proven that $2E + b \subseteq S$ is a sufficient condition.
+The set $2S \cup (2E + b)$ is not always a numerical semigroup, but it can be proven that $E + E + b \subseteq S$ is a sufficient condition, where $E + E + b$ denotes the set
+
+$$
+E + E + b = \{e + e' + b ~ | ~ e, e' \in E\}.
+$$
 
 ## Examples
 
@@ -25,16 +29,13 @@ T = \{0, 6, 12, 13, 16, 18, 19, 20, 22, 24, 25, 26, 28, \rightarrow\},
 $$
 
 $$
-2S \supseteq \{0, 3, 6, 8, 9, 10, 11, 12, 13, 14\} + \{0, 3, 6, 8, 9, 10, 11, 12, 13, 14\}
+2S = 2 \cdot \{0, 3, 6, 8, \rightarrow \} = \{0, 6, 12\} \cup \{2x ~ | ~ x \ge 8\},
 $$
+$$
+2I + b = 2 \cdot \{6,9,12,14, \rightarrow\} + 1 = \{13, 19, 25\} \cup \{2x + 1 ~ | ~ x \ge 14\},
+$$
+where it is deduced that $T = 2S \cup (2E + b)$.
 
-$$
-= \{0, 3, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28 \}
-$$
-
-$$
-2I + b = \{13, 16, 19, 21, \rightarrow \}
-$$
 
 ## Examples with GAP
 

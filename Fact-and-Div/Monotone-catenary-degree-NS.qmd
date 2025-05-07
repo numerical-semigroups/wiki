@@ -14,13 +14,22 @@ $$
 MonC(S) = \max_{s \in S} MonC(s),
 $$
 
-where $MonC(s)$ denotes the [monotone catenary degree](Monotone-catenary-degree-element.qmd) of $s$ in $S$. 
+where $MonC(s)$ denotes the [monotone catenary degree](Monotone-catenary-degree-element.qmd) of $s$ in $S$.
 
-It can be proven that $MonC(S) = \max_{s \in I} MonC(S)$, where $I$ is the set of [primitive elements](../Basic-concepts/Primitive-element.qmd) of $S$.
+It can be proven that $MonC(S) = \max_{s \in I} MonC(S)$, where $I$ is the set of [monotone degrees of primitive elements](../Basic-concepts/Degree-of-a-primitive-element.qmd) of $S$.
 
 ## Examples
 
-$\circ$ Let $S = \langle \rangle$.
+$\circ$ Let $S = \langle 4, 6, 11 \rangle$. Let $M$ be the set of solutions of the equation
+
+$$
+\left \{ \begin{array}{c}
+  4(x_1 - y_1) + 6(x_2 - y_2) + 11(x_3 - y_3) = 0, \\
+  x_1 + x_2 + x_3 - y_1 - y_2 - y_3 + t = 0.
+\end{array} \right.
+$$
+
+Applying elimination theorem and extension theorem from ring theory in several indeterminate, it is obtained that the monotone degrees of primitive elements are $B = \{4, 6, 11, 12, 22, 28, 30, 42, 44, 48, 66 \}$. Computing the [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) of each element in $B$, it is concluded that $MonC(S) = 7$.
 
 
 ## Examples with GAP
@@ -29,17 +38,16 @@ The following example is made with the package NumericalSgps in GAP.
 
 $\diamond$ Let $S = \langle 3, 8, 10 \rangle$, in GAP:
 
-```gap
+``` gap
 gap> S := NumericalSemigroup(3, 8, 10);
 <Numerical semigroup with 3 generators>
 ```
 
 Given a numerical semigroup $S$, the function `MonotoneCatenaryDegreeOfNumericalSemigroup` returns the monotone catenary degree of $S$.
 
-```gap
+``` gap
 gap> MonotoneCatenaryDegreeOfNumericalSemigroup(S);
 7
 ```
 
 ## References
-

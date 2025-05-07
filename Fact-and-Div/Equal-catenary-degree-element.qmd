@@ -4,7 +4,9 @@ format: html
 engine: markdown
 ---
 
-<!-- -->
+<!-- P. A. García-Sánchez, I. Ojeda, A.
+Sánchez-R.-Navarro, Factorization invariants in half-factorial affine
+semigroups, Internat. J. Algebra Comput. 23 (2013), 111–122. -->
 
 ## Definition
 

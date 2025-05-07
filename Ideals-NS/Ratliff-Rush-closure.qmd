@@ -1,5 +1,5 @@
 ---
-title: "Ratliff-Rush closure"
+title: "Ratliff-Rush closure of a proper ideal"
 format: html
 engine: markdown
 ---
@@ -8,11 +8,13 @@ engine: markdown
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $E$ a [relative ideal](Relative-ideal.qmd) of $S$. It is defined the Ratliff-Rush closure of $E$, denoted by $RR(E)$ as
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $E$ a [proper ideal](Proper-ideal.qmd) of $S$. It is defined the Ratliff-Rush closure of $E$, denoted by $RR(E)$ as
 
 $$
 RR(E) = S \cap \bigcup_{n \in \mathbb{N}} (n+1)I - nI,
-$$ where for any $A,B \subseteq \mathbb{Z}$,
+$$
+
+where for any $A,B \subseteq \mathbb{Z}$,
 
 $$
 A - B = \{z \in \mathbb{Z} ~ | ~ z + B \subseteq A\}, ~~~~ nA = \{a_1 + \cdots + a_n ~ | ~ a_1, \ldots, a_n \in A\}.
@@ -28,7 +30,7 @@ stabilizes. In general, $nI - (n-1)I = (n+1)I - nI$ does not imply that $(n+1)I 
 
 ## Examples
 
-$\circ$ Let $I$ a relative ideal of a certain numerical semigroup and let $r(I)$ be the [reduction number](Reduction-number.qmd) of $I$, that is, the minimum $h \ge 1$ such that $(h + 1)I = m(I) + hI$, where $m(I)$ is the [multiplicity](Multiplicity-ideal.qmd) of $I$. Let $h \ge r(I)$ and let us prove that $(h+1)I - hI = (h+2)I - (h+1)I$. Since, the inclusion $\subseteq$ always holds, let us prove the another inclusion. Given $z \in (h+2)I - (h+1)I$, by definition $z + (h+1)I \subseteq (h+2)I$, then
+$\circ$ Let $I$ a proper ideal of a certain numerical semigroup and let $r(I)$ be the [reduction number](Reduction-number.qmd) of $I$, that is, the minimum $h \ge 1$ such that $(h + 1)I = m(I) + hI$, where $m(I)$ is the [multiplicity](Multiplicity-ideal.qmd) of $I$. Let $h \ge r(I)$ and let us prove that $(h+1)I - hI = (h+2)I - (h+1)I$. Since the inclusion $\subseteq$ always holds, let us prove the another inclusion. Given $z \in (h+2)I - (h+1)I$, by definition $z + (h+1)I \subseteq (h+2)I$, then
 
 $$
 z + (h+1)I \subseteq z + (h+2)I \Longleftrightarrow z + (r(I) + 1)I + (h - r(I))I \subseteq (r(I) + 1)I + (h - r(I) + 1)I
@@ -77,7 +79,7 @@ $\diamond$ Let $S = \langle 50, 54, 78, 115, 116, 119 \rangle$, in GAP:
 ``` gap
 gap> S := NumericalSemigroup(50, 54, 78, 115, 116, 119);
 <Numerical semigroup with 6 generators>
-gap> I := [25, 38, 66, 70, 82] + S;
+gap> I := [50, 78, 119] + S;
 <Ideal of numerical semigroup>
 ```
 
@@ -87,7 +89,7 @@ Given a relative ideal $I$ of a numerical semigroup, the functions `RatliffRushC
 gap> RR := RatliffRushClosure(I);
 <Ideal of numerical semigroup>
 gap> L := MinimalGenerators(RR);
-[ 108, 115, 116, 128, 132, 150, 154, 156, 173, 197, 238 ]
+[ 50, 78, 119, 162, 231, 345 ]
 ```
 
 Given a relative ideal, the function `MinimalGenerators` returns its [minimal set of generators](Minimal-set-generators-ideal.qmd). Then, the Ratliff-Rush closure of $I$ is $RR(I) = L + S$.

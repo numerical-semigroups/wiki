@@ -1,5 +1,5 @@
 ---
-title: "Nu-squence"
+title: "Nu-sequence"
 format: html
 engine: markdown
 ---
@@ -24,7 +24,9 @@ $\circ$ Let $S = \langle 4, 6, 11 \rangle = \{ 0, 4, 6, 8, 10, 11, 12, 14, \righ
 
 $$
 D(0) = \{0\}, ~~ D(4) = \{0, 4\}, ~~ D(6) = \{0, 6\}, ~~ D(8) = \{0, 4, 8\}, ~~ D(10) = \{0, 4, 6, 10\},
-$$ concluding that $(\nu_0, \nu_1, \nu_2, \nu_3, \nu_4) = (1, 2, 2, 3, 4)$. The conductor of $S$ is $C(S) = 14$ and the set of gaps is $G(S) = \{1, 2, 3, 5, 7, 9, 13\}$, and then $g(S) = |G(S)| = 7$. Therefore, the first $2C(S) - g(S) = 21$ elements of the $\nu-$sequences determine uniquely the numerical semigroup, which are
+$$
+
+concluding that $(\nu_0, \nu_1, \nu_2, \nu_3, \nu_4) = (1, 2, 2, 3, 4)$. The conductor of $S$ is $C(S) = 14$ and the set of gaps is $G(S) = \{1, 2, 3, 5, 7, 9, 13\}$, and then $g(S) = |G(S)| = 7$. Therefore, the first $2C(S) - g(S) = 21$ elements of the $\nu-$sequences determine uniquely the numerical semigroup, which are
 
 $$
 (1, 2, 2, 3, 4, 2, 5, 6, 4, 7, 4, 8, 6, 9, 8, 11, 10, 11, 12, 14, 14 ).
@@ -41,6 +43,38 @@ gap> S := NumericalSemigroup(22, 37, 42, 72, 113, 139);
 <Numerical semigroup with 6 generators>
 ```
 
+Given a numerical semigroup $S$ and two integers $a,b$ with $a \le b$, the following function returns $(\nu_a, \nu_{a+1}, \ldots, \nu_b)$. If only a numerical semigroup has been given, the function returns the first $2C(S) - g(S)$ elements of the $\nu-$sequence of $S$.
+
+``` gap
+gap> NuNS := function(S, I...)
+>     local n, a, b, list_nu, i;
+>       if not IsNumericalSemigroup(S) then
+>           Error("The argument must be a Numerical Semigroup");
+>       fi;
+>       n := Length(I);
+>       if n = 1 or n > 2 then
+>           Error("If more arguments are given, they must be two elements");
+>       fi;
+>       if n = 0 then
+>           a := 0;
+>           b := 2*Conductor(S) - Genus(S);
+>       fi;
+>       if n = 2 then
+>           a := I[1];
+>           b := I[2];
+>           if a > b then
+>               Error("If more arguments are given, the first argument given must be less or equal to the second argument given");
+>           fi;
+>       fi;
+>       list_nu := [];
+>       for i in [a..b] do
+>         Add(list_nu, Length(DivisorsOfElementInNumericalSemigroup (S, S[i])));
+>       od;
+>       return list_nu;
+> end;
+function( S, I... ) ... end
+```
+
 Given a list of integers $I$ representing the first $2C(S) - g(S)$ elements of a $\nu-$sequence, the function `NumericalSemigroupByNuSequence` computes the unique numerical semigroup such that its $\nu-$sequence is $I \cup \{k+1, k+2, \ldots\}$, where $k$ is the last element of $I$. On the other hand, the function `Conductor`, `Genus` and `DivisorsOfElementInNumericalSemigroup` compute the conductor, genus and set of divisors, respectively.
 
 ``` gap
@@ -48,7 +82,7 @@ gap> c := Conductor(S);
 172
 gap> g := Genus(S);
 105
-gap> Nuseq := List([1..(2*c - g)], i -> Length(DivisorsOfElementInNumericalSemigroup(S[i], S))); 
+gap> Nuseq := NuNS(S, 1, 2*c - g);
 [ 1, 2, 2, 2, 3, 4, 4, 4, 2, 3, 4, 6, 3, 6, 5, 4, 6, 8, 8, 6, 8, 4, 6, 4, 2, 4, 10, 9, 6, 12,
   10, 4, 9, 10, 8, 7, 8, 4, 8, 16, 2, 12, 12, 3, 16, 6, 12, 11, 14, 8, 12, 16, 8, 14, 6, 6,
   17, 22, 4, 15, 8, 18, 6, 20, 15, 14, 18, 19, 16, 14, 24, 11, 20, 12, 8, 26, 8, 28, 12, 18,

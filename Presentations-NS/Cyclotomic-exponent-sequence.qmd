@@ -1,0 +1,80 @@
+---
+title: "Cyclotomic exponent sequence"
+format: html
+engine: markdown
+---
+
+<!-- @article{doi:10.1137/140989479,
+author = {Ciolan, Emil-Alexandru and Garc\'{\i}a-S\'{a}nchez, Pedro A. and Moree, Pieter},
+title = {Cyclotomic Numerical Semigroups},
+journal = {SIAM Journal on Discrete Mathematics},
+volume = {30},
+number = {2},
+pages = {650-668},
+year = {2016},
+doi = {10.1137/140989479},
+
+URL = { 
+    
+        https://doi.org/10.1137/140989479
+    
+}, 
+
+
+Cyclotomic-exponent-sequence
+-->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), $H_S(x)$ its [Hilbert series](Hilbert-series.qmd) and $P_S(x) = (1-x) H_S(x)$. It can be proven that there exists unique integers $e_j$ such that the formal identity
+
+$$
+P_S(x) = \prod_{j = 1}^{+ \infty} (1 - x^j)^{e_j},
+$$
+
+holds. It is defined the cyclotomic exponent sequence of $S$, denoted by $\mathbf{e}(S)$, as $\mathbf{e}(S) = \{e_j\}_{j \ge 1}$.
+
+It can be proven that if $S$ is a [complete intersection](../Families-NS/NS-complete-intersection.qmd), then the cyclotomic exponent sequence is finite.
+
+## Examples
+
+$\circ$ Let $S = \langle 4, 6, 9 \rangle$. With some computations (see [Hilbert series of a numerical semigroup](Hilbert-series.qmd)), it holds that
+
+$$
+H_S(x) = \frac{x^{12}-x^{11}+x^8-x^7+x^6-x^5+x^4-x+1}{1-x},
+
+$$
+
+and then,
+
+$$
+P_S(x) = (1 - x)H_S(x) = x^{12}-x^{11}+x^8-x^7+x^6-x^5+x^4-x+1
+$$
+
+$$
+= (1-x)(1-x^4)^{-1}(1-x^6)^{-1}(1-x^9)^{-1}(1-x^{12})(1-x^{18}).
+$$
+
+Therefore, $\mathbf{e}(S) = \{1,0,0,-1,0,-1,0,0,-1,0,0,1,0,0,0,0,0,1,0, \ldots\}$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 15, 37, 56, 64, 95, 121 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(15, 37, 56, 64, 95, 121);
+<Numerical semigroup with 6 generators>
+```
+
+Given a numerical semigroup $S$ and a positive integer $k$, the function `CyclotomicExponentSequence` returns a list with the first $k$ elements of the cyclotomic exponent sequence of $S$.
+
+```gap
+gap> CyclotomicExponentSequence(S, 40);
+[ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, -1, 0, 0, 0 ]
+```
+
+
+## References
