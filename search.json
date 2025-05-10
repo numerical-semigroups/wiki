@@ -224,35 +224,55 @@
     "href": "Presentations-NS/Cyclotomic-exponent-sequence.html",
     "title": "Cyclotomic exponent sequence",
     "section": "",
-    "text": "Let \\(S\\) be a numerical semigroup, \\(H_S(x)\\) its Hilbert series and \\(P_S(x) = (1-x) H_S(x)\\). It can be proven that there exists unique integers \\(e_j\\) such that the formal identity\n\\[\nP_S(x) = \\prod_{j = 1}^{+ \\infty} (1 - x^j)^{e_j},\n\\]\nholds. It is defined the cyclotomic exponent sequence of \\(S\\), denoted by \\(\\mathbf{e}(S)\\), as \\(\\mathbf{e}(S) = \\{e_j\\}_{j \\ge 1}\\).\nIt can be proven that if \\(S\\) is a complete intersection, then the cyclotomic exponent sequence is finite."
+    "text": "Let \\(S\\) be a numerical semigroup, \\(H_S(x)\\) its Hilbert series and \\(P_S(x) = (1-x) H_S(x)\\). It can be proven that there exists unique integers \\(e_j\\) such that the formal identity\n\\[\nP_S(x) = \\prod_{j = 1}^{+ \\infty} (1 - x^j)^{e_j},\n\\]\nholds. It is defined the cyclotomic exponent sequence of \\(S\\), denoted by \\(\\mathbf{e}(S)\\), as \\(\\mathbf{e}(S) = \\{e_j\\}_{j \\ge 1}\\).\nIt can be proven that if \\(S\\) is a complete intersection, then the cyclotomic exponent sequence is finite.",
+    "crumbs": [
+      "Presentations of a numerical smeigroup",
+      "Cyclotomic exponent sequence"
+    ]
   },
   {
     "objectID": "Presentations-NS/Cyclotomic-exponent-sequence.html#definition",
     "href": "Presentations-NS/Cyclotomic-exponent-sequence.html#definition",
     "title": "Cyclotomic exponent sequence",
     "section": "",
-    "text": "Let \\(S\\) be a numerical semigroup, \\(H_S(x)\\) its Hilbert series and \\(P_S(x) = (1-x) H_S(x)\\). It can be proven that there exists unique integers \\(e_j\\) such that the formal identity\n\\[\nP_S(x) = \\prod_{j = 1}^{+ \\infty} (1 - x^j)^{e_j},\n\\]\nholds. It is defined the cyclotomic exponent sequence of \\(S\\), denoted by \\(\\mathbf{e}(S)\\), as \\(\\mathbf{e}(S) = \\{e_j\\}_{j \\ge 1}\\).\nIt can be proven that if \\(S\\) is a complete intersection, then the cyclotomic exponent sequence is finite."
+    "text": "Let \\(S\\) be a numerical semigroup, \\(H_S(x)\\) its Hilbert series and \\(P_S(x) = (1-x) H_S(x)\\). It can be proven that there exists unique integers \\(e_j\\) such that the formal identity\n\\[\nP_S(x) = \\prod_{j = 1}^{+ \\infty} (1 - x^j)^{e_j},\n\\]\nholds. It is defined the cyclotomic exponent sequence of \\(S\\), denoted by \\(\\mathbf{e}(S)\\), as \\(\\mathbf{e}(S) = \\{e_j\\}_{j \\ge 1}\\).\nIt can be proven that if \\(S\\) is a complete intersection, then the cyclotomic exponent sequence is finite.",
+    "crumbs": [
+      "Presentations of a numerical smeigroup",
+      "Cyclotomic exponent sequence"
+    ]
   },
   {
     "objectID": "Presentations-NS/Cyclotomic-exponent-sequence.html#examples",
     "href": "Presentations-NS/Cyclotomic-exponent-sequence.html#examples",
     "title": "Cyclotomic exponent sequence",
     "section": "Examples",
-    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 4, 6, 9 \\rangle\\). With some computations (see Hilbert series of a numerical semigroup), it holds that\n$$ H_S(x) = ,\n$$\nand then,\n\\[\nP_S(x) = (1 - x)H_S(x) = x^{12}-x^{11}+x^8-x^7+x^6-x^5+x^4-x+1\n\\]\n\\[\n= (1-x)(1-x^4)^{-1}(1-x^6)^{-1}(1-x^9)^{-1}(1-x^{12})(1-x^{18}).\n\\]\nTherefore, \\(\\mathbf{e}(S) = \\{1,0,0,-1,0,-1,0,0,-1,0,0,1,0,0,0,0,0,1,0, \\ldots\\}\\)."
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 4, 6, 9 \\rangle\\). With some computations (see Hilbert series of a numerical semigroup), it holds that\n$$ H_S(x) = ,\n$$\nand then,\n\\[\nP_S(x) = (1 - x)H_S(x) = x^{12}-x^{11}+x^8-x^7+x^6-x^5+x^4-x+1\n\\]\n\\[\n= (1-x)(1-x^4)^{-1}(1-x^6)^{-1}(1-x^9)^{-1}(1-x^{12})(1-x^{18}).\n\\]\nTherefore, \\(\\mathbf{e}(S) = \\{1,0,0,-1,0,-1,0,0,-1,0,0,1,0,0,0,0,0,1,0, \\ldots\\}\\).",
+    "crumbs": [
+      "Presentations of a numerical smeigroup",
+      "Cyclotomic exponent sequence"
+    ]
   },
   {
     "objectID": "Presentations-NS/Cyclotomic-exponent-sequence.html#examples-with-gap",
     "href": "Presentations-NS/Cyclotomic-exponent-sequence.html#examples-with-gap",
     "title": "Cyclotomic exponent sequence",
     "section": "Examples with GAP",
-    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 15, 37, 56, 64, 95, 121 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(15, 37, 56, 64, 95, 121);\n&lt;Numerical semigroup with 6 generators&gt;\nGiven a numerical semigroup \\(S\\) and a positive integer \\(k\\), the function CyclotomicExponentSequence returns a list with the first \\(k\\) elements of the cyclotomic exponent sequence of \\(S\\).\ngap&gt; CyclotomicExponentSequence(S, 40);\n[ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,\n  0, 0, 0, 0, 0, 0, -1, 0, 0, 0 ]"
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 15, 37, 56, 64, 95, 121 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(15, 37, 56, 64, 95, 121);\n&lt;Numerical semigroup with 6 generators&gt;\nGiven a numerical semigroup \\(S\\) and a positive integer \\(k\\), the function CyclotomicExponentSequence returns a list with the first \\(k\\) elements of the cyclotomic exponent sequence of \\(S\\).\ngap&gt; CyclotomicExponentSequence(S, 40);\n[ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,\n  0, 0, 0, 0, 0, 0, -1, 0, 0, 0 ]",
+    "crumbs": [
+      "Presentations of a numerical smeigroup",
+      "Cyclotomic exponent sequence"
+    ]
   },
   {
     "objectID": "Presentations-NS/Cyclotomic-exponent-sequence.html#references",
     "href": "Presentations-NS/Cyclotomic-exponent-sequence.html#references",
     "title": "Cyclotomic exponent sequence",
     "section": "References",
-    "text": "References"
+    "text": "References",
+    "crumbs": [
+      "Presentations of a numerical smeigroup",
+      "Cyclotomic exponent sequence"
+    ]
   },
   {
     "objectID": "Presentations-NS/Presentation-NS.html",
@@ -2015,28 +2035,44 @@
     "href": "Varieties-NS/V-monoid-generated.html",
     "title": "V-monoid generated by a subset",
     "section": "",
-    "text": "The definition of \\(\\mathcal{V}-\\)system of generators comes from the following result.\n\n\n\n\n\n\n\\(\\textbf{Proposition}\\): The intersection of V-monoids is a \\(\\mathcal{V}-\\)monoid.\n\n\n\nLet \\(\\mathcal{V}\\) be a Frobenius variety and let \\(X\\) be a subset of \\(\\mathbb{N}\\). It is defined the \\(\\mathcal{V}-\\)monoid generated by \\(X\\), denoted by \\(\\mathcal{V}(X)\\), as the intersection of all \\(\\mathcal{V}-\\)monoids that contains \\(X\\). The subset \\(X\\) is called a \\(\\mathcal{V}-\\)system of generators of \\(\\mathcal{V}(X)\\) and it is called minimal if no proper subset of \\(X\\) is a \\(\\mathcal{V}-\\)system of generators.\nFrom the definition, \\(\\mathcal{V}(X)\\) is the smallest \\(\\mathcal{V}-\\)monoid that contains \\(X\\). It can be proven that every \\(\\mathcal{V}-\\)monoid has a unique minimal \\(\\mathcal{V}-\\)system of generators."
+    "text": "The definition of \\(\\mathcal{V}-\\)system of generators comes from the following result.\n\n\n\n\n\n\n\\(\\textbf{Proposition}\\): The intersection of V-monoids is a \\(\\mathcal{V}-\\)monoid.\n\n\n\nLet \\(\\mathcal{V}\\) be a Frobenius variety and let \\(X\\) be a subset of \\(\\mathbb{N}\\). It is defined the \\(\\mathcal{V}-\\)monoid generated by \\(X\\), denoted by \\(\\mathcal{V}(X)\\), as the intersection of all \\(\\mathcal{V}-\\)monoids that contains \\(X\\). The subset \\(X\\) is called a \\(\\mathcal{V}-\\)system of generators of \\(\\mathcal{V}(X)\\) and it is called minimal if no proper subset of \\(X\\) is a \\(\\mathcal{V}-\\)system of generators.\nFrom the definition, \\(\\mathcal{V}(X)\\) is the smallest \\(\\mathcal{V}-\\)monoid that contains \\(X\\). It can be proven that every \\(\\mathcal{V}-\\)monoid has a unique minimal \\(\\mathcal{V}-\\)system of generators.",
+    "crumbs": [
+      "Frobenius varieties",
+      "V-monoid generated by a subset"
+    ]
   },
   {
     "objectID": "Varieties-NS/V-monoid-generated.html#definition",
     "href": "Varieties-NS/V-monoid-generated.html#definition",
     "title": "V-monoid generated by a subset",
     "section": "",
-    "text": "The definition of \\(\\mathcal{V}-\\)system of generators comes from the following result.\n\n\n\n\n\n\n\\(\\textbf{Proposition}\\): The intersection of V-monoids is a \\(\\mathcal{V}-\\)monoid.\n\n\n\nLet \\(\\mathcal{V}\\) be a Frobenius variety and let \\(X\\) be a subset of \\(\\mathbb{N}\\). It is defined the \\(\\mathcal{V}-\\)monoid generated by \\(X\\), denoted by \\(\\mathcal{V}(X)\\), as the intersection of all \\(\\mathcal{V}-\\)monoids that contains \\(X\\). The subset \\(X\\) is called a \\(\\mathcal{V}-\\)system of generators of \\(\\mathcal{V}(X)\\) and it is called minimal if no proper subset of \\(X\\) is a \\(\\mathcal{V}-\\)system of generators.\nFrom the definition, \\(\\mathcal{V}(X)\\) is the smallest \\(\\mathcal{V}-\\)monoid that contains \\(X\\). It can be proven that every \\(\\mathcal{V}-\\)monoid has a unique minimal \\(\\mathcal{V}-\\)system of generators."
+    "text": "The definition of \\(\\mathcal{V}-\\)system of generators comes from the following result.\n\n\n\n\n\n\n\\(\\textbf{Proposition}\\): The intersection of V-monoids is a \\(\\mathcal{V}-\\)monoid.\n\n\n\nLet \\(\\mathcal{V}\\) be a Frobenius variety and let \\(X\\) be a subset of \\(\\mathbb{N}\\). It is defined the \\(\\mathcal{V}-\\)monoid generated by \\(X\\), denoted by \\(\\mathcal{V}(X)\\), as the intersection of all \\(\\mathcal{V}-\\)monoids that contains \\(X\\). The subset \\(X\\) is called a \\(\\mathcal{V}-\\)system of generators of \\(\\mathcal{V}(X)\\) and it is called minimal if no proper subset of \\(X\\) is a \\(\\mathcal{V}-\\)system of generators.\nFrom the definition, \\(\\mathcal{V}(X)\\) is the smallest \\(\\mathcal{V}-\\)monoid that contains \\(X\\). It can be proven that every \\(\\mathcal{V}-\\)monoid has a unique minimal \\(\\mathcal{V}-\\)system of generators.",
+    "crumbs": [
+      "Frobenius varieties",
+      "V-monoid generated by a subset"
+    ]
   },
   {
     "objectID": "Varieties-NS/V-monoid-generated.html#examples",
     "href": "Varieties-NS/V-monoid-generated.html#examples",
     "title": "V-monoid generated by a subset",
     "section": "Examples",
-    "text": "Examples\n\\(\\circ\\) Let \\(X = \\langle 4, 6, 7 \\rangle\\) and \\(\\mathcal{V}\\) the family of Arf numerical semigroups, which is a Frobenius Variety. Since \\(X\\) is a numerical semigroup, if \\(X \\subseteq M\\) with \\(M\\) a \\(\\mathcal{V}-\\)monoid, then \\(M\\) is a numerical semigroup. Therefore, \\(\\mathcal{V}(X)\\) is the Arf closure of \\(X\\), which is \\(S = \\langle 4, 6, 7 \\rangle\\). It can be proven that \\(A = \\{4,6,7\\}\\) is the minimal \\(\\mathcal{V}-\\)system of generators of \\(S\\) (see Arf system of generators)."
+    "text": "Examples\n\\(\\circ\\) Let \\(X = \\langle 4, 6, 7 \\rangle\\) and \\(\\mathcal{V}\\) the family of Arf numerical semigroups, which is a Frobenius Variety. Since \\(X\\) is a numerical semigroup, if \\(X \\subseteq M\\) with \\(M\\) a \\(\\mathcal{V}-\\)monoid, then \\(M\\) is a numerical semigroup. Therefore, \\(\\mathcal{V}(X)\\) is the Arf closure of \\(X\\), which is \\(S = \\langle 4, 6, 7 \\rangle\\). It can be proven that \\(A = \\{4,6,7\\}\\) is the minimal \\(\\mathcal{V}-\\)system of generators of \\(S\\) (see Arf system of generators).",
+    "crumbs": [
+      "Frobenius varieties",
+      "V-monoid generated by a subset"
+    ]
   },
   {
     "objectID": "Varieties-NS/V-monoid-generated.html#references",
     "href": "Varieties-NS/V-monoid-generated.html#references",
     "title": "V-monoid generated by a subset",
     "section": "References",
-    "text": "References"
+    "text": "References",
+    "crumbs": [
+      "Frobenius varieties",
+      "V-monoid generated by a subset"
+    ]
   },
   {
     "objectID": "Meromorphic-series-NS/Order.html",
@@ -8154,35 +8190,55 @@
     "href": "Basic-concepts/L-shape-of-Apery-set.html",
     "title": "L-shape of Apéry set",
     "section": "",
-    "text": "Let \\(S\\) be a numerical semigroup minimally generated by \\(P(S) = \\{n_1, \\ldots, n_e\\}\\) and \\(m \\in S \\setminus \\{0\\}\\). It is said that \\(L \\subseteq \\mathbb{N}^e\\) is an \\(L-\\)shape associated to \\(Ap(S,m)\\) if the following two properties hold.\n\nThe map \\((x_1, \\ldots, x_e) \\to n_1x_1 + \\cdots + n_e x_e\\) is a bijection from \\(L\\) to \\(Ap(S,m)\\).\nIf \\((x_1, \\ldots, x_e) \\in L\\), then \\((y_1, \\ldots, y_e) \\in L\\) for every \\((y_1, \\ldots, y_e) \\in \\mathbb{N}^e\\) such that \\(y_i \\le x_i\\) for all \\(i \\in \\{1, \\ldots, e\\}\\).\n\nIf \\(\\mathbf{Z}(s)\\) is the set of factorizations for any \\(s \\in S\\), the first condition means that \\(|\\mathbf{Z}(s) \\cap L| = 1\\) for all \\(s \\in Ap(s,m)\\). Moreover, it can be proven that if \\(x \\in Ap(S,m)\\) and \\(x - y \\in S\\), then \\(y \\in Ap(S,m)\\), and the second condition means that \\((y_1, \\ldots, y_e)\\) is a factorization of an element in \\(Ap(S,m)\\)."
+    "text": "Let \\(S\\) be a numerical semigroup minimally generated by \\(P(S) = \\{n_1, \\ldots, n_e\\}\\) and \\(m \\in S \\setminus \\{0\\}\\). It is said that \\(L \\subseteq \\mathbb{N}^e\\) is an \\(L-\\)shape associated to \\(Ap(S,m)\\) if the following two properties hold.\n\nThe map \\((x_1, \\ldots, x_e) \\to n_1x_1 + \\cdots + n_e x_e\\) is a bijection from \\(L\\) to \\(Ap(S,m)\\).\nIf \\((x_1, \\ldots, x_e) \\in L\\), then \\((y_1, \\ldots, y_e) \\in L\\) for every \\((y_1, \\ldots, y_e) \\in \\mathbb{N}^e\\) such that \\(y_i \\le x_i\\) for all \\(i \\in \\{1, \\ldots, e\\}\\).\n\nIf \\(\\mathbf{Z}(s)\\) is the set of factorizations for any \\(s \\in S\\), the first condition means that \\(|\\mathbf{Z}(s) \\cap L| = 1\\) for all \\(s \\in Ap(s,m)\\). Moreover, it can be proven that if \\(x \\in Ap(S,m)\\) and \\(x - y \\in S\\), then \\(y \\in Ap(S,m)\\), and the second condition means that \\((y_1, \\ldots, y_e)\\) is a factorization of an element in \\(Ap(S,m)\\).",
+    "crumbs": [
+      "Basic concepts",
+      "L-shape of Apéry set"
+    ]
   },
   {
     "objectID": "Basic-concepts/L-shape-of-Apery-set.html#definition",
     "href": "Basic-concepts/L-shape-of-Apery-set.html#definition",
     "title": "L-shape of Apéry set",
     "section": "",
-    "text": "Let \\(S\\) be a numerical semigroup minimally generated by \\(P(S) = \\{n_1, \\ldots, n_e\\}\\) and \\(m \\in S \\setminus \\{0\\}\\). It is said that \\(L \\subseteq \\mathbb{N}^e\\) is an \\(L-\\)shape associated to \\(Ap(S,m)\\) if the following two properties hold.\n\nThe map \\((x_1, \\ldots, x_e) \\to n_1x_1 + \\cdots + n_e x_e\\) is a bijection from \\(L\\) to \\(Ap(S,m)\\).\nIf \\((x_1, \\ldots, x_e) \\in L\\), then \\((y_1, \\ldots, y_e) \\in L\\) for every \\((y_1, \\ldots, y_e) \\in \\mathbb{N}^e\\) such that \\(y_i \\le x_i\\) for all \\(i \\in \\{1, \\ldots, e\\}\\).\n\nIf \\(\\mathbf{Z}(s)\\) is the set of factorizations for any \\(s \\in S\\), the first condition means that \\(|\\mathbf{Z}(s) \\cap L| = 1\\) for all \\(s \\in Ap(s,m)\\). Moreover, it can be proven that if \\(x \\in Ap(S,m)\\) and \\(x - y \\in S\\), then \\(y \\in Ap(S,m)\\), and the second condition means that \\((y_1, \\ldots, y_e)\\) is a factorization of an element in \\(Ap(S,m)\\)."
+    "text": "Let \\(S\\) be a numerical semigroup minimally generated by \\(P(S) = \\{n_1, \\ldots, n_e\\}\\) and \\(m \\in S \\setminus \\{0\\}\\). It is said that \\(L \\subseteq \\mathbb{N}^e\\) is an \\(L-\\)shape associated to \\(Ap(S,m)\\) if the following two properties hold.\n\nThe map \\((x_1, \\ldots, x_e) \\to n_1x_1 + \\cdots + n_e x_e\\) is a bijection from \\(L\\) to \\(Ap(S,m)\\).\nIf \\((x_1, \\ldots, x_e) \\in L\\), then \\((y_1, \\ldots, y_e) \\in L\\) for every \\((y_1, \\ldots, y_e) \\in \\mathbb{N}^e\\) such that \\(y_i \\le x_i\\) for all \\(i \\in \\{1, \\ldots, e\\}\\).\n\nIf \\(\\mathbf{Z}(s)\\) is the set of factorizations for any \\(s \\in S\\), the first condition means that \\(|\\mathbf{Z}(s) \\cap L| = 1\\) for all \\(s \\in Ap(s,m)\\). Moreover, it can be proven that if \\(x \\in Ap(S,m)\\) and \\(x - y \\in S\\), then \\(y \\in Ap(S,m)\\), and the second condition means that \\((y_1, \\ldots, y_e)\\) is a factorization of an element in \\(Ap(S,m)\\).",
+    "crumbs": [
+      "Basic concepts",
+      "L-shape of Apéry set"
+    ]
   },
   {
     "objectID": "Basic-concepts/L-shape-of-Apery-set.html#examples",
     "href": "Basic-concepts/L-shape-of-Apery-set.html#examples",
     "title": "L-shape of Apéry set",
     "section": "Examples",
-    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 3, 5, 7 \\rangle = \\{0, 3, 5, \\rightarrow \\}\\). Let us prove that\n\\[\nL = \\{ (0, 0, 0), (1, 0, 0), (0, 1, 0), (2, 0, 0), (1, 1, 0), (3, 0, 0), (2, 1, 0)  \\},\n\\]\nis an \\(L-\\)shape of \\(Ap(S,7)\\). From the definitions,\n\\[\nAp(S, 7) := \\{s \\in S ~ | ~ s - 4 \\not \\in S\\} = \\{0, 8, 9, 3, 11, 5, 6 \\},\n\\]\nand\n\\[\n\\mathbf{Z}(0) = \\{(0,0,0)\\}, ~ \\mathbf{Z}(8) = \\{(1,1,0)\\}, ~ \\mathbf{Z}(9) = \\{(3,0,0)\\}, ~ \\mathbf{Z}(3) = \\{(1,0,0)\\},\n\\]\n\\[\n\\mathbf{Z}(11) = \\{(2,1,0)\\}, ~ \\mathbf{Z}(5) = \\{(0,1,0)\\}, ~ \\mathbf{Z}(6) = \\{(2,0,0)\\}.\n\\]\nSince each element has an unique factorization and \\(L\\) is the union of all factorizations, it is concluded that \\(L\\) is an \\(L-\\)shape of \\(Ap(S,7)\\). In fact, is the unique \\(L-\\)shape of \\(Ap(S,7)\\)."
+    "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 3, 5, 7 \\rangle = \\{0, 3, 5, \\rightarrow \\}\\). Let us prove that\n\\[\nL = \\{ (0, 0, 0), (1, 0, 0), (0, 1, 0), (2, 0, 0), (1, 1, 0), (3, 0, 0), (2, 1, 0)  \\},\n\\]\nis an \\(L-\\)shape of \\(Ap(S,7)\\). From the definitions,\n\\[\nAp(S, 7) := \\{s \\in S ~ | ~ s - 4 \\not \\in S\\} = \\{0, 8, 9, 3, 11, 5, 6 \\},\n\\]\nand\n\\[\n\\mathbf{Z}(0) = \\{(0,0,0)\\}, ~ \\mathbf{Z}(8) = \\{(1,1,0)\\}, ~ \\mathbf{Z}(9) = \\{(3,0,0)\\}, ~ \\mathbf{Z}(3) = \\{(1,0,0)\\},\n\\]\n\\[\n\\mathbf{Z}(11) = \\{(2,1,0)\\}, ~ \\mathbf{Z}(5) = \\{(0,1,0)\\}, ~ \\mathbf{Z}(6) = \\{(2,0,0)\\}.\n\\]\nSince each element has an unique factorization and \\(L\\) is the union of all factorizations, it is concluded that \\(L\\) is an \\(L-\\)shape of \\(Ap(S,7)\\). In fact, is the unique \\(L-\\)shape of \\(Ap(S,7)\\).",
+    "crumbs": [
+      "Basic concepts",
+      "L-shape of Apéry set"
+    ]
   },
   {
     "objectID": "Basic-concepts/L-shape-of-Apery-set.html#examples-with-gap",
     "href": "Basic-concepts/L-shape-of-Apery-set.html#examples-with-gap",
     "title": "L-shape of Apéry set",
     "section": "Examples with GAP",
-    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 13, 14, 33, 64 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(13, 14, 33, 64);\n&lt;Numerical semigroup with 4 generators&gt;\nGiven a numerical semigroup \\(S\\) minimally generated by \\(P = \\{n_1 &lt; n_2 &lt; \\cdots &lt; n_e\\}\\), the functions LShapes and LShapesOfNumericalSemigroup return a list with all L-shapes of \\(Ap(S, n_e)\\).\ngap&gt; LShapes(S);\n[ [ [ 0, 0, 0 ], [ 1, 0, 0 ], [ 0, 1, 0 ], [ 2, 0, 0 ], [ 1, 1, 0 ], [ 0, 2, 0 ],\n      [ 0, 0, 1 ], [ 3, 0, 0 ], [ 2, 1, 0 ], [ 1, 2, 0 ], [ 0, 3, 0 ], [ 1, 0, 1 ],\n      [ 0, 1, 1 ], [ 4, 0, 0 ], [ 3, 1, 0 ], [ 2, 2, 0 ], [ 1, 3, 0 ], [ 0, 4, 0 ],\n      [ 2, 0, 1 ], [ 1, 1, 1 ], [ 0, 2, 1 ], [ 5, 0, 0 ], [ 0, 0, 2 ], [ 3, 2, 0 ],\n      [ 2, 3, 0 ], [ 1, 4, 0 ], [ 0, 5, 0 ], [ 3, 0, 1 ], [ 2, 1, 1 ], [ 1, 2, 1 ],\n      [ 0, 3, 1 ], [ 1, 0, 2 ], [ 0, 1, 2 ], [ 3, 3, 0 ], [ 2, 4, 0 ], [ 1, 5, 0 ],\n      [ 0, 6, 0 ], [ 4, 0, 1 ], [ 3, 1, 1 ], [ 2, 2, 1 ], [ 1, 3, 1 ], [ 0, 4, 1 ],\n      [ 1, 1, 2 ], [ 0, 2, 2 ], [ 3, 4, 0 ], [ 2, 5, 0 ], [ 0, 7, 0 ], [ 0, 0, 3 ],\n      [ 3, 2, 1 ], [ 2, 3, 1 ], [ 1, 4, 1 ], [ 1, 2, 2 ], [ 0, 3, 2 ], [ 3, 5, 0 ],\n      [ 0, 8, 0 ], [ 0, 1, 3 ], [ 3, 3, 1 ], [ 2, 4, 1 ], [ 1, 3, 2 ], [ 0, 4, 2 ],\n      [ 0, 9, 0 ], [ 0, 2, 3 ], [ 1, 4, 2 ], [ 0, 10, 0 ] ],\n  [ [ 0, 0, 0 ], [ 1, 0, 0 ], [ 0, 1, 0 ], [ 2, 0, 0 ], [ 1, 1, 0 ], [ 0, 2, 0 ],\n      [ 0, 0, 1 ], [ 3, 0, 0 ], [ 2, 1, 0 ], [ 1, 2, 0 ], [ 0, 3, 0 ], [ 1, 0, 1 ],\n      [ 0, 1, 1 ], [ 4, 0, 0 ], [ 3, 1, 0 ], [ 2, 2, 0 ], [ 1, 3, 0 ], [ 0, 4, 0 ],\n      [ 2, 0, 1 ], [ 1, 1, 1 ], [ 0, 2, 1 ], [ 5, 0, 0 ], [ 0, 0, 2 ], [ 3, 2, 0 ],\n      [ 2, 3, 0 ], [ 1, 4, 0 ], [ 0, 5, 0 ], [ 3, 0, 1 ], [ 2, 1, 1 ], [ 1, 2, 1 ],\n      [ 0, 3, 1 ], [ 1, 0, 2 ], [ 0, 1, 2 ], [ 3, 3, 0 ], [ 2, 4, 0 ], [ 1, 5, 0 ],\n      [ 0, 6, 0 ], [ 4, 0, 1 ], [ 3, 1, 1 ], [ 2, 2, 1 ], [ 1, 3, 1 ], [ 0, 4, 1 ],\n      [ 1, 1, 2 ], [ 0, 2, 2 ], [ 3, 4, 0 ], [ 2, 5, 0 ], [ 0, 7, 0 ], [ 0, 0, 3 ],\n      [ 3, 2, 1 ], [ 2, 3, 1 ], [ 1, 4, 1 ], [ 1, 2, 2 ], [ 0, 3, 2 ], [ 3, 5, 0 ],\n      [ 1, 0, 3 ], [ 0, 1, 3 ], [ 3, 3, 1 ], [ 2, 4, 1 ], [ 1, 3, 2 ], [ 0, 4, 2 ],\n      [ 1, 1, 3 ], [ 0, 2, 3 ], [ 1, 4, 2 ], [ 1, 2, 3 ] ],\n  [ [ 0, 0, 0 ], [ 1, 0, 0 ], [ 0, 1, 0 ], [ 2, 0, 0 ], [ 1, 1, 0 ], [ 0, 2, 0 ],\n      [ 0, 0, 1 ], [ 3, 0, 0 ], [ 2, 1, 0 ], [ 1, 2, 0 ], [ 0, 3, 0 ], [ 1, 0, 1 ],\n      [ 0, 1, 1 ], [ 4, 0, 0 ], [ 3, 1, 0 ], [ 2, 2, 0 ], [ 1, 3, 0 ], [ 0, 4, 0 ],\n      [ 2, 0, 1 ], [ 1, 1, 1 ], [ 0, 2, 1 ], [ 5, 0, 0 ], [ 0, 0, 2 ], [ 3, 2, 0 ],\n      [ 2, 3, 0 ], [ 1, 4, 0 ], [ 0, 5, 0 ], [ 3, 0, 1 ], [ 2, 1, 1 ], [ 1, 2, 1 ],\n      [ 0, 3, 1 ], [ 1, 0, 2 ], [ 0, 1, 2 ], [ 3, 3, 0 ], [ 2, 4, 0 ], [ 1, 5, 0 ],\n      [ 0, 6, 0 ], [ 4, 0, 1 ], [ 3, 1, 1 ], [ 2, 2, 1 ], [ 1, 3, 1 ], [ 0, 4, 1 ],\n      [ 1, 1, 2 ], [ 0, 2, 2 ], [ 3, 4, 0 ], [ 2, 5, 0 ], [ 5, 0, 1 ], [ 0, 0, 3 ],\n      [ 3, 2, 1 ], [ 2, 3, 1 ], [ 1, 4, 1 ], [ 1, 2, 2 ], [ 0, 3, 2 ], [ 3, 5, 0 ],\n      [ 1, 0, 3 ], [ 0, 1, 3 ], [ 3, 3, 1 ], [ 2, 4, 1 ], [ 1, 3, 2 ], [ 0, 4, 2 ],\n      [ 1, 1, 3 ], [ 0, 2, 3 ], [ 1, 4, 2 ], [ 1, 2, 3 ] ],\n  [ [ 0, 0, 0 ], [ 1, 0, 0 ], [ 0, 1, 0 ], [ 2, 0, 0 ], [ 1, 1, 0 ], [ 0, 2, 0 ],\n      [ 0, 0, 1 ], [ 3, 0, 0 ], [ 2, 1, 0 ], [ 1, 2, 0 ], [ 0, 3, 0 ], [ 1, 0, 1 ],\n      [ 0, 1, 1 ], [ 4, 0, 0 ], [ 3, 1, 0 ], [ 2, 2, 0 ], [ 1, 3, 0 ], [ 0, 4, 0 ],\n      [ 2, 0, 1 ], [ 1, 1, 1 ], [ 0, 2, 1 ], [ 5, 0, 0 ], [ 4, 1, 0 ], [ 3, 2, 0 ],\n      [ 2, 3, 0 ], [ 1, 4, 0 ], [ 0, 5, 0 ], [ 3, 0, 1 ], [ 2, 1, 1 ], [ 1, 2, 1 ],\n      [ 0, 3, 1 ], [ 5, 1, 0 ], [ 4, 2, 0 ], [ 3, 3, 0 ], [ 2, 4, 0 ], [ 1, 5, 0 ],\n      [ 0, 6, 0 ], [ 4, 0, 1 ], [ 3, 1, 1 ], [ 2, 2, 1 ], [ 1, 3, 1 ], [ 0, 4, 1 ],\n      [ 5, 2, 0 ], [ 4, 3, 0 ], [ 3, 4, 0 ], [ 2, 5, 0 ], [ 0, 7, 0 ], [ 4, 1, 1 ],\n      [ 3, 2, 1 ], [ 2, 3, 1 ], [ 1, 4, 1 ], [ 5, 3, 0 ], [ 4, 4, 0 ], [ 3, 5, 0 ],\n      [ 0, 8, 0 ], [ 4, 2, 1 ], [ 3, 3, 1 ], [ 2, 4, 1 ], [ 5, 4, 0 ], [ 4, 5, 0 ],\n      [ 0, 9, 0 ], [ 4, 3, 1 ], [ 5, 5, 0 ], [ 0, 10, 0 ] ],\n  [ [ 0, 0, 0 ], [ 1, 0, 0 ], [ 0, 1, 0 ], [ 2, 0, 0 ], [ 1, 1, 0 ], [ 0, 2, 0 ],\n      [ 0, 0, 1 ], [ 3, 0, 0 ], [ 2, 1, 0 ], [ 1, 2, 0 ], [ 0, 3, 0 ], [ 1, 0, 1 ],\n      [ 0, 1, 1 ], [ 4, 0, 0 ], [ 3, 1, 0 ], [ 2, 2, 0 ], [ 1, 3, 0 ], [ 0, 4, 0 ],\n      [ 2, 0, 1 ], [ 1, 1, 1 ], [ 0, 2, 1 ], [ 5, 0, 0 ], [ 4, 1, 0 ], [ 3, 2, 0 ],\n      [ 2, 3, 0 ], [ 1, 4, 0 ], [ 0, 5, 0 ], [ 3, 0, 1 ], [ 2, 1, 1 ], [ 1, 2, 1 ],\n      [ 0, 3, 1 ], [ 5, 1, 0 ], [ 4, 2, 0 ], [ 3, 3, 0 ], [ 2, 4, 0 ], [ 1, 5, 0 ],\n      [ 0, 6, 0 ], [ 4, 0, 1 ], [ 3, 1, 1 ], [ 2, 2, 1 ], [ 1, 3, 1 ], [ 0, 4, 1 ],\n      [ 5, 2, 0 ], [ 4, 3, 0 ], [ 3, 4, 0 ], [ 2, 5, 0 ], [ 5, 0, 1 ], [ 4, 1, 1 ],\n      [ 3, 2, 1 ], [ 2, 3, 1 ], [ 1, 4, 1 ], [ 5, 3, 0 ], [ 4, 4, 0 ], [ 3, 5, 0 ],\n      [ 5, 1, 1 ], [ 4, 2, 1 ], [ 3, 3, 1 ], [ 2, 4, 1 ], [ 5, 4, 0 ], [ 4, 5, 0 ],\n      [ 5, 2, 1 ], [ 4, 3, 1 ], [ 5, 5, 0 ], [ 5, 3, 1 ] ] ]\ngap&gt; LShapesOfNumericalSemigroup(S) = LShapes(S);\ntrue"
+    "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 13, 14, 33, 64 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(13, 14, 33, 64);\n&lt;Numerical semigroup with 4 generators&gt;\nGiven a numerical semigroup \\(S\\) minimally generated by \\(P = \\{n_1 &lt; n_2 &lt; \\cdots &lt; n_e\\}\\), the functions LShapes and LShapesOfNumericalSemigroup return a list with all L-shapes of \\(Ap(S, n_e)\\).\ngap&gt; LShapes(S);\n[ [ [ 0, 0, 0 ], [ 1, 0, 0 ], [ 0, 1, 0 ], [ 2, 0, 0 ], [ 1, 1, 0 ], [ 0, 2, 0 ],\n      [ 0, 0, 1 ], [ 3, 0, 0 ], [ 2, 1, 0 ], [ 1, 2, 0 ], [ 0, 3, 0 ], [ 1, 0, 1 ],\n      [ 0, 1, 1 ], [ 4, 0, 0 ], [ 3, 1, 0 ], [ 2, 2, 0 ], [ 1, 3, 0 ], [ 0, 4, 0 ],\n      [ 2, 0, 1 ], [ 1, 1, 1 ], [ 0, 2, 1 ], [ 5, 0, 0 ], [ 0, 0, 2 ], [ 3, 2, 0 ],\n      [ 2, 3, 0 ], [ 1, 4, 0 ], [ 0, 5, 0 ], [ 3, 0, 1 ], [ 2, 1, 1 ], [ 1, 2, 1 ],\n      [ 0, 3, 1 ], [ 1, 0, 2 ], [ 0, 1, 2 ], [ 3, 3, 0 ], [ 2, 4, 0 ], [ 1, 5, 0 ],\n      [ 0, 6, 0 ], [ 4, 0, 1 ], [ 3, 1, 1 ], [ 2, 2, 1 ], [ 1, 3, 1 ], [ 0, 4, 1 ],\n      [ 1, 1, 2 ], [ 0, 2, 2 ], [ 3, 4, 0 ], [ 2, 5, 0 ], [ 0, 7, 0 ], [ 0, 0, 3 ],\n      [ 3, 2, 1 ], [ 2, 3, 1 ], [ 1, 4, 1 ], [ 1, 2, 2 ], [ 0, 3, 2 ], [ 3, 5, 0 ],\n      [ 0, 8, 0 ], [ 0, 1, 3 ], [ 3, 3, 1 ], [ 2, 4, 1 ], [ 1, 3, 2 ], [ 0, 4, 2 ],\n      [ 0, 9, 0 ], [ 0, 2, 3 ], [ 1, 4, 2 ], [ 0, 10, 0 ] ],\n  [ [ 0, 0, 0 ], [ 1, 0, 0 ], [ 0, 1, 0 ], [ 2, 0, 0 ], [ 1, 1, 0 ], [ 0, 2, 0 ],\n      [ 0, 0, 1 ], [ 3, 0, 0 ], [ 2, 1, 0 ], [ 1, 2, 0 ], [ 0, 3, 0 ], [ 1, 0, 1 ],\n      [ 0, 1, 1 ], [ 4, 0, 0 ], [ 3, 1, 0 ], [ 2, 2, 0 ], [ 1, 3, 0 ], [ 0, 4, 0 ],\n      [ 2, 0, 1 ], [ 1, 1, 1 ], [ 0, 2, 1 ], [ 5, 0, 0 ], [ 0, 0, 2 ], [ 3, 2, 0 ],\n      [ 2, 3, 0 ], [ 1, 4, 0 ], [ 0, 5, 0 ], [ 3, 0, 1 ], [ 2, 1, 1 ], [ 1, 2, 1 ],\n      [ 0, 3, 1 ], [ 1, 0, 2 ], [ 0, 1, 2 ], [ 3, 3, 0 ], [ 2, 4, 0 ], [ 1, 5, 0 ],\n      [ 0, 6, 0 ], [ 4, 0, 1 ], [ 3, 1, 1 ], [ 2, 2, 1 ], [ 1, 3, 1 ], [ 0, 4, 1 ],\n      [ 1, 1, 2 ], [ 0, 2, 2 ], [ 3, 4, 0 ], [ 2, 5, 0 ], [ 0, 7, 0 ], [ 0, 0, 3 ],\n      [ 3, 2, 1 ], [ 2, 3, 1 ], [ 1, 4, 1 ], [ 1, 2, 2 ], [ 0, 3, 2 ], [ 3, 5, 0 ],\n      [ 1, 0, 3 ], [ 0, 1, 3 ], [ 3, 3, 1 ], [ 2, 4, 1 ], [ 1, 3, 2 ], [ 0, 4, 2 ],\n      [ 1, 1, 3 ], [ 0, 2, 3 ], [ 1, 4, 2 ], [ 1, 2, 3 ] ],\n  [ [ 0, 0, 0 ], [ 1, 0, 0 ], [ 0, 1, 0 ], [ 2, 0, 0 ], [ 1, 1, 0 ], [ 0, 2, 0 ],\n      [ 0, 0, 1 ], [ 3, 0, 0 ], [ 2, 1, 0 ], [ 1, 2, 0 ], [ 0, 3, 0 ], [ 1, 0, 1 ],\n      [ 0, 1, 1 ], [ 4, 0, 0 ], [ 3, 1, 0 ], [ 2, 2, 0 ], [ 1, 3, 0 ], [ 0, 4, 0 ],\n      [ 2, 0, 1 ], [ 1, 1, 1 ], [ 0, 2, 1 ], [ 5, 0, 0 ], [ 0, 0, 2 ], [ 3, 2, 0 ],\n      [ 2, 3, 0 ], [ 1, 4, 0 ], [ 0, 5, 0 ], [ 3, 0, 1 ], [ 2, 1, 1 ], [ 1, 2, 1 ],\n      [ 0, 3, 1 ], [ 1, 0, 2 ], [ 0, 1, 2 ], [ 3, 3, 0 ], [ 2, 4, 0 ], [ 1, 5, 0 ],\n      [ 0, 6, 0 ], [ 4, 0, 1 ], [ 3, 1, 1 ], [ 2, 2, 1 ], [ 1, 3, 1 ], [ 0, 4, 1 ],\n      [ 1, 1, 2 ], [ 0, 2, 2 ], [ 3, 4, 0 ], [ 2, 5, 0 ], [ 5, 0, 1 ], [ 0, 0, 3 ],\n      [ 3, 2, 1 ], [ 2, 3, 1 ], [ 1, 4, 1 ], [ 1, 2, 2 ], [ 0, 3, 2 ], [ 3, 5, 0 ],\n      [ 1, 0, 3 ], [ 0, 1, 3 ], [ 3, 3, 1 ], [ 2, 4, 1 ], [ 1, 3, 2 ], [ 0, 4, 2 ],\n      [ 1, 1, 3 ], [ 0, 2, 3 ], [ 1, 4, 2 ], [ 1, 2, 3 ] ],\n  [ [ 0, 0, 0 ], [ 1, 0, 0 ], [ 0, 1, 0 ], [ 2, 0, 0 ], [ 1, 1, 0 ], [ 0, 2, 0 ],\n      [ 0, 0, 1 ], [ 3, 0, 0 ], [ 2, 1, 0 ], [ 1, 2, 0 ], [ 0, 3, 0 ], [ 1, 0, 1 ],\n      [ 0, 1, 1 ], [ 4, 0, 0 ], [ 3, 1, 0 ], [ 2, 2, 0 ], [ 1, 3, 0 ], [ 0, 4, 0 ],\n      [ 2, 0, 1 ], [ 1, 1, 1 ], [ 0, 2, 1 ], [ 5, 0, 0 ], [ 4, 1, 0 ], [ 3, 2, 0 ],\n      [ 2, 3, 0 ], [ 1, 4, 0 ], [ 0, 5, 0 ], [ 3, 0, 1 ], [ 2, 1, 1 ], [ 1, 2, 1 ],\n      [ 0, 3, 1 ], [ 5, 1, 0 ], [ 4, 2, 0 ], [ 3, 3, 0 ], [ 2, 4, 0 ], [ 1, 5, 0 ],\n      [ 0, 6, 0 ], [ 4, 0, 1 ], [ 3, 1, 1 ], [ 2, 2, 1 ], [ 1, 3, 1 ], [ 0, 4, 1 ],\n      [ 5, 2, 0 ], [ 4, 3, 0 ], [ 3, 4, 0 ], [ 2, 5, 0 ], [ 0, 7, 0 ], [ 4, 1, 1 ],\n      [ 3, 2, 1 ], [ 2, 3, 1 ], [ 1, 4, 1 ], [ 5, 3, 0 ], [ 4, 4, 0 ], [ 3, 5, 0 ],\n      [ 0, 8, 0 ], [ 4, 2, 1 ], [ 3, 3, 1 ], [ 2, 4, 1 ], [ 5, 4, 0 ], [ 4, 5, 0 ],\n      [ 0, 9, 0 ], [ 4, 3, 1 ], [ 5, 5, 0 ], [ 0, 10, 0 ] ],\n  [ [ 0, 0, 0 ], [ 1, 0, 0 ], [ 0, 1, 0 ], [ 2, 0, 0 ], [ 1, 1, 0 ], [ 0, 2, 0 ],\n      [ 0, 0, 1 ], [ 3, 0, 0 ], [ 2, 1, 0 ], [ 1, 2, 0 ], [ 0, 3, 0 ], [ 1, 0, 1 ],\n      [ 0, 1, 1 ], [ 4, 0, 0 ], [ 3, 1, 0 ], [ 2, 2, 0 ], [ 1, 3, 0 ], [ 0, 4, 0 ],\n      [ 2, 0, 1 ], [ 1, 1, 1 ], [ 0, 2, 1 ], [ 5, 0, 0 ], [ 4, 1, 0 ], [ 3, 2, 0 ],\n      [ 2, 3, 0 ], [ 1, 4, 0 ], [ 0, 5, 0 ], [ 3, 0, 1 ], [ 2, 1, 1 ], [ 1, 2, 1 ],\n      [ 0, 3, 1 ], [ 5, 1, 0 ], [ 4, 2, 0 ], [ 3, 3, 0 ], [ 2, 4, 0 ], [ 1, 5, 0 ],\n      [ 0, 6, 0 ], [ 4, 0, 1 ], [ 3, 1, 1 ], [ 2, 2, 1 ], [ 1, 3, 1 ], [ 0, 4, 1 ],\n      [ 5, 2, 0 ], [ 4, 3, 0 ], [ 3, 4, 0 ], [ 2, 5, 0 ], [ 5, 0, 1 ], [ 4, 1, 1 ],\n      [ 3, 2, 1 ], [ 2, 3, 1 ], [ 1, 4, 1 ], [ 5, 3, 0 ], [ 4, 4, 0 ], [ 3, 5, 0 ],\n      [ 5, 1, 1 ], [ 4, 2, 1 ], [ 3, 3, 1 ], [ 2, 4, 1 ], [ 5, 4, 0 ], [ 4, 5, 0 ],\n      [ 5, 2, 1 ], [ 4, 3, 1 ], [ 5, 5, 0 ], [ 5, 3, 1 ] ] ]\ngap&gt; LShapesOfNumericalSemigroup(S) = LShapes(S);\ntrue",
+    "crumbs": [
+      "Basic concepts",
+      "L-shape of Apéry set"
+    ]
   },
   {
     "objectID": "Basic-concepts/L-shape-of-Apery-set.html#references",
     "href": "Basic-concepts/L-shape-of-Apery-set.html#references",
     "title": "L-shape of Apéry set",
     "section": "References",
-    "text": "References"
+    "text": "References",
+    "crumbs": [
+      "Basic concepts",
+      "L-shape of Apéry set"
+    ]
   },
   {
     "objectID": "Basic-concepts/Gluing.html",
