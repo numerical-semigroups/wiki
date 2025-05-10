@@ -2,6 +2,13 @@
 title: "Arithmetic numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -64,4 +71,6 @@ gap> MinimalGenerators(S);
 
 ## References
 
-<!-- https://docs.gap-system.org/doc/tut/chap0_mj.html -->
+::: {#refs}
+
+:::

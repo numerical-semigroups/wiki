@@ -2,6 +2,13 @@
 title: "Numerical semigroup associated to a set of rational numbers"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -85,3 +92,7 @@ false
 ```
 
 ## References
+
+::: {#refs}
+
+:::

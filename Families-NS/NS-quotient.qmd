@@ -2,6 +2,13 @@
 title: "Quotient of a numerical semigroup by an integer"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -56,3 +63,7 @@ true
 ```
 
 ## References
+
+::: {#refs}
+
+:::

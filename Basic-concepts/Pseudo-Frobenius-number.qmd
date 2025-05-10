@@ -2,6 +2,13 @@
 title: "Pseudo-Frobenius number"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -63,3 +70,7 @@ gap> MinimalGenerators(S);
 The function `MinimalGenerators` returns the set of [minimal generators]() of a given numerical semigroup. Then, there is $561$ numerical semigroups with set of pseudo-Frobenius numbers $L = \{58, 64, 75\}$ and one of them is $S = \langle 12, 30, 31, 35, 37, 41, 50, 56, 57 \rangle$.
 
 ## References
+
+::: {#refs}
+
+:::

@@ -2,6 +2,13 @@
 title: "Pi-semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 <!-- Num. sem. -->
@@ -119,3 +126,7 @@ $$
 
 
 ## References
+
+::: {#refs}
+
+:::

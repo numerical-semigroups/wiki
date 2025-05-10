@@ -2,6 +2,13 @@
 title: "Semigroup ring"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -14,5 +21,8 @@ $\circ$ Let us consider $b \in \mathbb{N}$ an odd natural arbitrary but fixed an
 \mathbb{K}[S] = \{a_0 + a_1t^{s_1} + \cdots + a_nt^{s_n} ~ | ~ a_0, \ldots, a_n \in \mathbb{K}, ~~ s_0, s_1, \ldots, s_n \in S\}.
 $$ In this case, $s_i$ is even or greater or equal to $b$ for all $i \in \{1, 2, \ldots, n\}$.
 
-
 ## References
+
+::: {#refs}
+
+:::

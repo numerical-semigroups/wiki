@@ -2,6 +2,13 @@
 title: "Symmetric numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -55,3 +62,7 @@ gap> FrobeniusNumber(S);
 As we can see, $F(S)$ is not odd. The irreducible numerical semigroups with Frobenius number even are called [pseudo-symmetric numerical semigroups](NS-pseudo-symmetric.qmd).
 
 ## References
+
+::: {#refs}
+
+:::

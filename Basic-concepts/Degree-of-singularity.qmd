@@ -2,6 +2,13 @@
 title: "Degree of singularity"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -10,3 +17,7 @@ Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd), $t$ be an indetermi
 
 
 ## References
+
+::: {#refs}
+
+:::

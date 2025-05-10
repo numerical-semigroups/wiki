@@ -2,6 +2,13 @@
 title: "Apéry set"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 ## Definition
@@ -78,4 +85,6 @@ true
 
 ## References
 
-<!-- J. C. Rosales, P. A. García-Sánchez, Numerical Semigroups, Springer, 2009. -->
+::: {#refs}
+
+:::

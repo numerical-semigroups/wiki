@@ -2,6 +2,13 @@
 title: "Arf semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 <!-- Num. appl. -->
@@ -90,3 +97,7 @@ gap> Length(ArfNumericalSemigroupsWithGenusAndFrobeniusNumber(12,15));
 ```
 
 ## References
+
+::: {#refs}
+
+:::

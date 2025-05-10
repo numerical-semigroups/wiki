@@ -2,6 +2,13 @@
 title: "Weierstrass semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -13,3 +20,8 @@ Let $C$ be a smooth algebraic curve over the complex numbers of genus $g$. Weier
 $\circ$
 
 ## References
+
+::: {#refs}
+
+
+:::

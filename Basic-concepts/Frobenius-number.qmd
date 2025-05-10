@@ -2,6 +2,13 @@
 title: "Frobenius number"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -69,3 +76,7 @@ gap> Length(NumericalSemigroupsWithFrobeniusNumberFG(15));
 ```
 
 ## References
+
+::: {#refs}
+
+:::

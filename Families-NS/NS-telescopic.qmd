@@ -2,6 +2,13 @@
 title: "Telescopic numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -44,3 +51,7 @@ gap> Length(TelescopicNumericalSemigroupsWithFrobeniusNumber(11));
 ```
 
 ## References
+
+::: {#refs}
+
+:::

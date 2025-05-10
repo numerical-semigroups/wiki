@@ -2,6 +2,13 @@
 title: "Arf closure"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 <!-- Appl -->
@@ -117,3 +124,7 @@ gap> List(A, l -> MinimalGenerators(l));
 ```
 
 ## References
+
+::: {#refs}
+
+:::

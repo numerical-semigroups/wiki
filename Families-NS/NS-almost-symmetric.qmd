@@ -2,8 +2,14 @@
 title: "Almost symmetric numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
 
+---
+nocite: |
+  @nsapp2, @JMDA
+---
 ## Definition
 
 Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), $F(S)$ the [Frobenius number](../Basic-concepts/Frobenius-number.qmd), $g(S)$ the [genus](../Basic-concepts/Genus.qmd) and $t(S)$ the [type](../Basic-concepts/Type.qmd) of $S$. It is said that $S$ is an almost symmetric numerical semigroup if it satisfies the equality $2g(S) = F(S) + t(S)$.
@@ -77,3 +83,7 @@ gap> Length(AlmostSymmetricNumericalSemigroupsWithFrobeniusNumber(12));
 ```
 
 ## References
+
+::: {#refs}
+
+:::

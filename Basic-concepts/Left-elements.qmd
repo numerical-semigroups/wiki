@@ -2,6 +2,13 @@
 title: "Left Elements"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -67,4 +74,7 @@ true
 
 ## References
 
+::: {#refs}
+
+:::
 

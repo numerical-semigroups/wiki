@@ -2,6 +2,13 @@
 title: "Gluing of numerical semigroups"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -135,3 +142,7 @@ digraph  NSGraph{rankdir = TB;
 :::
 
 ## References
+
+::: {#refs}
+
+:::

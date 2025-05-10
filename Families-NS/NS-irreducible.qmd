@@ -2,6 +2,13 @@
 title: "Irreducible numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -75,3 +82,7 @@ gap> List(D, T -> MinimalGenerators(T));
 
 
 ## References
+
+::: {#refs}
+
+:::

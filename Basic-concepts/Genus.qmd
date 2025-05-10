@@ -1,7 +1,14 @@
 ---
-title: "Genus / degree of singularity"
+title: "Genus"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -76,4 +83,13 @@ gap> List(A, l -> SmallElements(l));
 
 ## References
 
-<!-- Appl. -->
+::: {#refs}
+
+:::
+
+
+
+
+
+
+

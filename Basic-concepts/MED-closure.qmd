@@ -2,6 +2,13 @@
 title: "Maximal embedding dimension closure"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 <!--  -->

@@ -2,6 +2,13 @@
 title: "Standard representation in a free Numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -172,3 +179,8 @@ gap> List(last, l -> l[1]*25 + l[2]*40 + l[3]*13);
 ```
 
 ## References
+
+
+::: {#refs}
+
+:::

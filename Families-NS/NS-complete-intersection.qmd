@@ -2,6 +2,13 @@
 title: "Complete intersection numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -67,3 +74,8 @@ gap> List(Li, l -> MinimalGenerators(l));
 ```
 
 ## References
+
+::: {#refs}
+
+:::
+

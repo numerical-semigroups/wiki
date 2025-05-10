@@ -2,6 +2,13 @@
 title: "Ratio"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -54,4 +61,6 @@ gap> RatioNumericalSemigroup(S);
 
 ## References
 
-<!-- https://docs.gap-system.org/doc/tut/chap0_mj.html#contents -->
+::: {#refs}
+
+:::

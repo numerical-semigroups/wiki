@@ -2,6 +2,13 @@
 title: "Special gap"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -60,3 +67,7 @@ gap> PseudoFrobenius(S);
 With this numerical semigroup we found an example that $SG(S) \subsetneq PF(S) \subsetneq G(S)$.
 
 ## References
+
+::: {#refs}
+
+:::

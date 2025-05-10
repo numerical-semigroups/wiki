@@ -2,6 +2,13 @@
 title: "Fundamental gap"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 ## Definition
@@ -58,4 +65,6 @@ The function `MinimalGenerators` returns a list with the [minimal generators](Mi
 
 ## References
 
-<!-- Num. Sem -->
+::: {#refs}
+
+:::

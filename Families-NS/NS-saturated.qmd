@@ -2,6 +2,13 @@
 title: "Saturated numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -42,3 +49,7 @@ gap> Length(SaturatedNumericalSemigroupsWithFrobeniusNumber(23));
 ```
 
 ## References
+
+::: {#refs}
+
+:::

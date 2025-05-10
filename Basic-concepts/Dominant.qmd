@@ -2,6 +2,13 @@
 title: "Dominant"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -58,4 +65,6 @@ gap> DominantOfNumericalSemigroup(S);
 
 ## References
 
-<!-- https://docs.gap-system.org/doc/tut/chap4_mj.html#X801EE07E839B31B2 -->
+::: {#refs}
+
+:::

@@ -2,6 +2,13 @@
 title: "Apéry set with respect to a set"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -34,3 +41,7 @@ gap> AperyList(C, 9);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

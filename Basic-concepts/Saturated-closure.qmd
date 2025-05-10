@@ -2,6 +2,13 @@
 title: "Saturated closure"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -53,3 +60,8 @@ gap> SmallElements(A);
 The function `SmallElements` returns a list with the [left elements](Left-elements.qmd) and the [conductor](Conductor.qmd) of the numerical semigroup. Then, the saturated closure of $S$ is $A = \{0, 12, 24, \rightarrow \}$.
 
 ## References
+
+
+::: {#refs}
+
+:::

@@ -2,6 +2,13 @@
 title: "Oversemigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -117,3 +124,7 @@ digraph  NSGraph{rankdir = TB; edge[dir=back];
 The nodes with grey background are irreducible numerical semigroups.
 
 ## References
+
+::: {#refs}
+
+:::

@@ -1,7 +1,14 @@
 ---
-title: "Half-line / ordinary numerical semigroup"
+title: "Half-line"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -59,3 +66,8 @@ true
 It is concluded that $S = \{0, 6, \rightarrow\}$.
 
 ## References
+
+::: {#refs}
+
+:::
+

@@ -2,6 +2,13 @@
 title: "Numerical Semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -71,5 +78,8 @@ If $T$ is not a numerical semigroup, it can be used the function `IsSubset`.
 
 ## References
 
+::: {#refs}
+
+:::
 
 

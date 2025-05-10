@@ -2,6 +2,13 @@
 title: "Arf closure of a set"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -66,3 +73,7 @@ gap> SmallElements(A)
 Therefore, the Arf closure of $X$ is $A = \{0, 4, 8, 12, \rightarrow\}$.
 
 ## References
+
+::: {#refs}
+
+:::
