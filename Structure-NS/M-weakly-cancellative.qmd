@@ -2,6 +2,13 @@
 title: "Weakly cancellative monoid"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -21,6 +28,12 @@ C_{1,1} = \begin{pmatrix}
   1 & 0 \\
   0 & 0
 \end{pmatrix}.
-$$ If $AC = BC$, then $a_{1,1}c_{1,1} + a_{1,2}c_{2,1} = b_{1,1}c_{1,1} + b_{1,2}c_{2,1}$, and consequently $a_{1,1} = b_{1,1}$. With an analogous argument it is obtained that $a_{i,j} = b_{i,j}$ for $i,j \in \{1,2\}$, concluding that $A = B$. Therefore, $(M_2(R), \cdot)$ is a weakly cancellative monoid.
+$$ 
+
+If $AC = BC$, then $a_{1,1}c_{1,1} + a_{1,2}c_{2,1} = b_{1,1}c_{1,1} + b_{1,2}c_{2,1}$, and consequently $a_{1,1} = b_{1,1}$. With an analogous argument it is obtained that $a_{i,j} = b_{i,j}$ for $i,j \in \{1,2\}$, concluding that $A = B$. Therefore, $(M_2(R), \cdot)$ is a weakly cancellative monoid.
 
 ## References
+
+::: {#refs}
+
+:::

@@ -2,13 +2,20 @@
 title: "Minimal set of generators of an ideal"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 <!-- Sem. Num. Appl. -->
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) and $E$ a [relative ideal](Relative-ideal.qmd) of $S$. It is said that $I = \{e_1, \ldots, e_h\}$ with $I \subseteq E$ is a set of generators of $E$ if $E = \{e_1, \ldots, e_h\} + S$, where for any two subsets $A,B \subseteq \mathbb{Z}$, the sum is defined as
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and $E$ a [relative ideal](Relative-ideal.qmd) of $S$. It is said that $I = \{e_1, \ldots, e_h\}$ with $I \subseteq E$ is a set of generators of $E$ if $E = \{e_1, \ldots, e_h\} + S$, where for any two subsets $A,B \subseteq \mathbb{Z}$, the sum is defined as
 
 $$
 A + B = \{a + b ~ | ~ a \in A, ~ b \in B\}.
@@ -56,3 +63,7 @@ gap> MinimalGeneratingSystemOfIdealOfNumericalSemigroup(IS);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

@@ -2,6 +2,13 @@
 title: "Frobenius number of an ideal"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -49,3 +56,7 @@ gap> FrobeniusNumber(S);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

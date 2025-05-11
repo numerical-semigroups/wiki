@@ -2,6 +2,13 @@
 title: "Type sequence"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @MPNSAOAILD, @JMDA
 ---
 
 <!-- Barucci, V., Dobbs, D. D. and Fontana, M., Maximality properties in numerical semigroups and applications to one-dimensional analytically irreducible local domains, American Mathematical Society, Memoirs of the American Mathematical Society (598) (1997). -->
@@ -12,7 +19,9 @@ Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd), let $G(S) = \{x_1, 
 
 $$
 \sigma_j = \max ~ \{i \in \{1, \ldots, n\} ~ | ~ x_j + s_i \not \in S \}.
-$$ Then, it is defined the type sequence of $S$ as the tuple $(t_1(S), \ldots, t_n(S))$, where for all $i \in \{1, \ldots, g\}$,
+$$ 
+
+Then, it is defined the type sequence of $S$ as the tuple $(t_1(S), \ldots, t_n(S))$, where for all $i \in \{1, \ldots, g\}$,
 
 $$
 t_i(S) = |\{j \in \{1, \ldots, g\} ~ | ~ \sigma_j = i \}|.
@@ -54,3 +63,7 @@ true
 ```
 
 ## References
+
+::: {#refs}
+
+:::

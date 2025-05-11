@@ -2,6 +2,13 @@
 title: "Arf system of generators"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ANS, @JMDA
 ---
 
 <!--  Arf_NS -->
@@ -56,3 +63,7 @@ gap> MinimalArfGeneratingSystemOfArfNumericalSemigroup(S);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

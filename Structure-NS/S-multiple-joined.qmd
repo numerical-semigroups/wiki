@@ -2,6 +2,13 @@
 title: "Multiple joined semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -17,3 +24,7 @@ $\circ$ Given a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd)
 $\circ$ Every multiple joined semigroup is [Archimedean](Archimedean-property.qmd). Given $x, y \in S$, there exist $p, q \in \mathbb{N} \setminus \{0\}$ such that $px = qy$. Then, $(p+1)x = qy+x$ and $S$ is Archimedean.
 
 ## References
+
+::: {#refs}
+
+:::

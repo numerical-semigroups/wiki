@@ -2,6 +2,13 @@
 title: "Congruence on a semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -35,3 +42,7 @@ is a congruence on $S$, let us prove it. Let $x, y, z \in S$ arbitrary but fixed
 -   Transitive: if $x \sigma_b y$ and $y \sigma_b z$, there exist $n,m, n', m' \in \mathbb{N} \setminus \{0\}$ such that $x + nb = y + mb$ and $y + n'b = z + m'b$. Then, $x + (n + n')b = y + mb + n'b = z + (m + m')b$ and $x \sigma_b z$.
 
 ## References
+
+::: {#refs}
+
+:::

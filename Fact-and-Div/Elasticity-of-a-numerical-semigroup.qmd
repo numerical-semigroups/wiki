@@ -2,6 +2,13 @@
 title: "Elasticity of a numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -59,3 +66,7 @@ gap> Elasticity(S, 1890);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

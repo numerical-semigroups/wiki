@@ -2,6 +2,13 @@
 title: "Characteristic sequences associated to an irreducible polynomial"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2
 ---
 
 The definition of characteristic sequences comes from the following result.
@@ -35,3 +42,7 @@ $$
 It is defined the characteristic sequences of $f$ as the sequences $\underline{m}, \underline{d}$ and $\underline{r}$. In particular, the sequence $\underline{m}$ is called the [Newton-Puiseux exponents](Newton-Puiseux-exponents.qmd) of $f$.
 
 ## References
+
+::: {#refs}
+
+:::

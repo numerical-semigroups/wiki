@@ -2,6 +2,13 @@
 title: "Tau-sequence"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @NSC, @JMDA
 ---
 
 <!-- [Bra13] Bras-Amor\'{o}s, M., Numerical semigroups and codes, in Algebraic geometry modeling in information theory, World Sci. Publ., Hackensack, NJ, Ser. Coding Theory Cryptol., 8 (2013), 167--218. -->
@@ -75,3 +82,7 @@ true
 ```
 
 ## References
+
+::: {#refs}
+
+:::

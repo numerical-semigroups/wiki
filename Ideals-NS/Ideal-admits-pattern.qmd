@@ -2,6 +2,13 @@
 title: "Ideal admits the pattern"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @PINS, @JMDA
 ---
 
 <!-- Patterns_of_ideals_NS  -->
@@ -79,3 +86,7 @@ gap> BoundForConductorOfImageOfPattern(p, C);
 Then, the above result indicates that at least, $\{823, \rightarrow\} \subseteq p(I)$.
 
 ## References
+
+::: {#refs}
+
+:::

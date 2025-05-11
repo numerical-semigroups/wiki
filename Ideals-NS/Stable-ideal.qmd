@@ -2,6 +2,13 @@
 title: "Stable proper ideal"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -43,3 +50,7 @@ gap> ReductionNumber(IS);
 It is obtained that $IS$ is a stable proper ideal.
 
 ## References
+
+::: {#refs}
+
+:::

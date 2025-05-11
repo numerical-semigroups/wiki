@@ -2,6 +2,13 @@
 title: "Chain associated to a numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -246,3 +253,7 @@ The nodes with grey background are [irreducible](../Families-NS/NS-irreducible.q
 
 
 ## References
+
+::: {#refs}
+
+:::

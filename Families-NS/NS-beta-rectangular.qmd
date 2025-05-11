@@ -2,6 +2,13 @@
 title: "Beta rectangular numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @CCNS, @JMDA
 ---
 
 <!-- Classes-of-complete-intersection-NS -->
@@ -150,3 +157,7 @@ true
 ```
 
 ## References
+
+::: {#refs}
+
+:::

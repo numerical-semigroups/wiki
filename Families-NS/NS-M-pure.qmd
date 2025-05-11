@@ -2,6 +2,13 @@
 title: "M-pure numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @NSRGAGR, @JMDA
 ---
 
 <!-- [Bry10] Bryant, L., Goto numbers of a numerical semigroup ring and the Gorensteiness of associated graded rings, Comm. Algebra, 38 (6) (2010), 2092--2128. -->
@@ -56,3 +63,6 @@ true
 
 ## References
 
+::: {#refs}
+
+:::

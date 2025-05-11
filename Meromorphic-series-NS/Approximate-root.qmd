@@ -2,6 +2,13 @@
 title: "Approximate root"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2
 ---
 
 ## Definition
@@ -37,3 +44,7 @@ $$ and $\alpha_1(x,y) = 0$.
 To sum up, $Ap(f;2) = y^2 + \frac{13}{2}x^2$.
 
 ## References
+
+::: {#refs}
+
+:::

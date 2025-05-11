@@ -2,6 +2,13 @@
 title: "Very short parametrization"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2
 ---
 
 ## Definition
@@ -17,3 +24,7 @@ Let $f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}[[x]][y]$ be a
 Let us consider the hypothesis of the proposition. It is said that a parametrization of $f$ is a very short parametrization of $f$ if it has an expression as above and satisfies the condition mentioned.
 
 ## References
+
+::: {#refs}
+
+:::

@@ -2,6 +2,13 @@
 title: "Pseudo-approximate root of an irreducible polynomial"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2
 ---
 
 ## Definition
@@ -15,3 +22,7 @@ G_k(t^{\frac{n}{d_k}}, y) = \prod_{v, v^{n/d_k} = 1} (y - Y(vt)).
 $$
 
 ## References
+
+::: {#refs}
+
+:::

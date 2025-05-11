@@ -2,6 +2,13 @@
 title: "Quasi-Archimedean monoid"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -15,3 +22,7 @@ Let $A$ be a monoid with identity element $0$. It is said that $A$ is quasi-Arch
 $\circ$ Given a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) $S$, it holds that $S$ is Quasi-Archimedean. First, $s = 0$ is not an Archimedean. On the other hand, let $F(S)$ be the [Frobenius number](../Basic-concepts/Frobenius-number.qmd) of $S$. Given $x, y \in S^*$, there exists $k \in \mathbb{N} \setminus \{0\}$ such that $kx - y > F(S)$. Then, $z := kx - y \in S^*$ and $kx = y + z$.
 
 ## References
+
+::: {#refs}
+
+:::

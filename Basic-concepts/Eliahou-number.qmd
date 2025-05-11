@@ -2,6 +2,13 @@
 title: "Eliahou number"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @WCMT, @JMDA
 ---
 
 <!-- Wilf_conjecture_Macaulay_Shalom_Eliahou -->
@@ -72,3 +79,7 @@ gap> WilfNumber(S);
 concluding that there exist numerical semigroups such that $W(S) = E(S)$.
 
 ## References
+
+::: {#refs}
+
+:::

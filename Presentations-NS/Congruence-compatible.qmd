@@ -4,6 +4,13 @@ format: html
 editor: visual
 execute: 
   echo: false
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2
 ---
 
 ## Definition
@@ -45,3 +52,7 @@ Then, $\tau$ is compatible if has at least one of the following pairs: $(a_{1,1}
 Nowadays, there are no functions in package NumericalSgps related to congruence compatible.
 
 ## References
+
+::: {#refs}
+
+:::

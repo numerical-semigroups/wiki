@@ -2,6 +2,13 @@
 title: "Maximum sparse ideal"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -39,3 +46,7 @@ false
 To sum up, $IS$ is not a maximum sparse ideal.
 
 ## References
+
+::: {#refs}
+
+:::

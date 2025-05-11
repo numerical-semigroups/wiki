@@ -2,6 +2,13 @@
 title: "Factor of a proportionally modular Diophantine inequality"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -61,3 +68,7 @@ gap> SmallElements(S);
 Then, the set of solutions of $6x ~ (mod ~ 19) \le x$ is $S = \{0, 7, 10, 11, 13, \rightarrow \}$.
 
 ## References
+
+::: {#refs}
+
+:::

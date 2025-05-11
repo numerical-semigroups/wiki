@@ -2,6 +2,13 @@
 title: "Blowup of a relative ideal"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## thatDefinition
@@ -77,3 +84,7 @@ gap> Generators(BM);
 Since the blowup of a relative ideal is a numerical semigroup, this process can be repeated. From this, process, it is defined the [multiplicity sequence](Multiplicity-sequence.qmd) of $S$.
 
 ## References
+
+::: {#refs}
+
+:::

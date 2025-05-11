@@ -2,6 +2,13 @@
 title: "Cancellative monoid"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -43,3 +50,7 @@ $$
 where it is deduced that $(M_2(R), \cdot)$ is not a cancellative monoid.
 
 ## References
+
+::: {#refs}
+
+:::

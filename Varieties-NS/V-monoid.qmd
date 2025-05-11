@@ -2,6 +2,13 @@
 title: "V-monoid"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -26,7 +33,9 @@ is a $\mathcal{V}-$monoid, but $\{0\}$ is not an element of $\mathcal{V}$.
 
 ## References
 
+::: {#refs}
 
+:::
 
 
 

@@ -2,6 +2,13 @@
 title: "Genus of a relative ideal"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -55,3 +62,7 @@ gap> Conductor(I) - Minimum(I) + 1 - Length(SmallElements(I));
 ```
 
 ## References
+
+::: {#refs}
+
+:::

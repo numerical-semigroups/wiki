@@ -2,9 +2,14 @@
 title: "Translation of a relative ideal"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
 
-<!-- Num. appl. -->
+---
+nocite: |
+  @nsapp2, @JMDA
+---
 
 ## Definition
 
@@ -42,3 +47,7 @@ true
 ```
 
 ## References
+
+::: {#refs}
+
+:::

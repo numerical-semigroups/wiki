@@ -2,6 +2,13 @@
 title: "Principal ideal"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -68,4 +75,6 @@ Then, $I = 151 + S$ with $s = 151 \in S$.
 
 ## References
 
-<!-- https://docs.gap-system.org/doc/tut/chap0_mj.html -->
+::: {#refs}
+
+:::

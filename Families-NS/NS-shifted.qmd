@@ -2,6 +2,13 @@
 title: "Shifted numerical semigroups"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @Wilfsurvey, @ASSNM, @JMDA
 ---
 
 <!-- Apery_sets_of_shifted_N_monoids -->
@@ -130,3 +137,7 @@ gap> S := ShiftedNumericalSemigroup(n, I);
 Then, it is obtained the shifted numerical semigroup $S = \langle 15, 15 + 7, 15 + 9, 15 + 10, 15 + 11, 15 + 13 \rangle = \langle 15, 22, 24, 25, 26, 28 \rangle$.
 
 ## References
+
+::: {#refs}
+
+:::

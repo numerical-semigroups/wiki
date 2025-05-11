@@ -2,6 +2,13 @@
 title: "Factorization homomorphism"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -81,4 +88,6 @@ Then, $0 \cdot 14 + 1 \cdot 30 + 2 \cdot 71 + 1 \cdot 73 = 245$.
 
 ## References
 
-<!-- https://docs.gap-system.org/doc/tut/chap0_mj.html#contents -->
+::: {#refs}
+
+:::

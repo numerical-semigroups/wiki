@@ -2,6 +2,13 @@
 title: "Intersection multiplicity"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2
 ---
 
 ## Definition
@@ -23,3 +30,8 @@ $$
 It can be proven that this definition does not depend on the root $y(t)$, that is, $int(f,g) = ord_t g(t^n, y(wt))$ for all $w \in \mathbb{K}$ such that $w^n = 1$.
 
 ## References
+
+
+::: {#refs}
+
+:::

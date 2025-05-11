@@ -2,6 +2,13 @@
 title: "RF-matrix of a pseudo-Frobenius number"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @GMC, @JMDA
 ---
 
 <!-- Moscariello, A., On the type of an almost Gorenstein monomial curve, J. Algebra, 456 (2016), 266--277. -->
@@ -84,3 +91,7 @@ gap> RFMatrices(115, S);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

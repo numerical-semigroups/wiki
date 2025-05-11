@@ -2,6 +2,13 @@
 title: "w-primality of an element"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -45,7 +52,7 @@ gap> OmegaPrimality(S);
 
 Given a numerical semigroup $S$ and a list of integers $Is$ of $S$, the function `OmegaPrimalityOfElementListInNumericalSemigroup` returns a list with the $w-$primality of each element in $Is$.
 
-```gap
+``` gap
 gap> Is := [174, 175, 183, 300, 354];
 [ 174, 175, 183, 300, 354 ]
 gap> IsSubset(S,Is);
@@ -54,5 +61,9 @@ gap> OmegaPrimalityOfElementListInNumericalSemigroup(Is,S);
 [ 11, 10, 11, 14, 17 ]
 ```
 
-
 ## References
+
+
+::: {#refs}
+
+:::

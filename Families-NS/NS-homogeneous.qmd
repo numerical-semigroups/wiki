@@ -2,6 +2,13 @@
 title: "Homogeneous numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @HNS, @JMDA
 ---
 
 <!-- [JZA18] Jafari, R. and Zarzuela Armengou, S., Homogeneous numerical semigroups, Semigroup Forum, 97 (2) (2018), 278--306. -->
@@ -49,3 +56,7 @@ true
 ```
 
 ## References
+
+::: {#refs}
+
+:::

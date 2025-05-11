@@ -2,6 +2,13 @@
 title: "Delta set of an element"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -105,3 +112,7 @@ gap> DeltaSetUnionUpToElementWRTNumericalSemigroup(1000, S);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

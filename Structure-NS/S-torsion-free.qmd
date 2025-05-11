@@ -2,6 +2,13 @@
 title: "Torsion free semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -19,3 +26,7 @@ $\circ$ Every subset of $\mathbb{N}$ is torsion free, in particular, every numer
 $\circ$ Let $S_3$ the group of permutations with three elements. If we consider the permutations $\sigma_1 = (1,2), \sigma_2 = (2,3)$, we have that $2\sigma_1 = \sigma_1 \circ \sigma_1 = Id = \sigma_2 \circ \sigma_2 = 2\sigma_2$, but $\sigma_1 \ne \sigma_2$. Then, $S_3$ is not a torsion free semigroup.
 
 ## References
+
+::: {#refs}
+
+:::

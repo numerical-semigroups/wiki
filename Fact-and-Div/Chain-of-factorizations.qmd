@@ -2,6 +2,13 @@
 title: "N-Chain of factorizations"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -212,4 +219,6 @@ false
 
 ## References
 
-<!-- https://docs.gap-system.org/doc/tut/chap0_mj.html#contents -->
+::: {#refs}
+
+:::

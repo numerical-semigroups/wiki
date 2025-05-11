@@ -2,6 +2,13 @@
 title: "Numerical semigroup associated to a curve"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2
 ---
 
 ## Definition
@@ -27,3 +34,7 @@ $$
 It can be proven that $\Gamma(f)$ is a subsemigroup of $- \mathbb{N}$.
 
 ## References
+
+::: {#refs}
+
+:::

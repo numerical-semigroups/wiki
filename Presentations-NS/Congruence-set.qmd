@@ -2,6 +2,13 @@
 title: "Congruences"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @nsapp2, @JMDA
 ---
 
 <!-- Definiciones de Num. Sem. y de Num. Sem. y Appl. -->
@@ -71,3 +78,7 @@ false
 ```
 
 ## References
+
+::: {#refs}
+
+:::

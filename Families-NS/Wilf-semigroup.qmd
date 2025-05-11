@@ -2,6 +2,13 @@
 title: "Wilf semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @Wilfsurvey, @JMDA
 ---
 
 <!-- Wilf survey -->
@@ -55,3 +62,7 @@ gap> WilfNumberOfNumericalSemigroup(S);
 therefore, $W(S) = 165 \ge 0$ and $S$ is Wilf.
 
 ## References
+
+::: {#refs}
+
+:::

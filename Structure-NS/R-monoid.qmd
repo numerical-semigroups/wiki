@@ -2,6 +2,13 @@
 title: "R-monoid"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -17,3 +24,7 @@ $\circ$ $(\mathbb{N}, +)$ is an $\mathcal{R}-$monoid. In particular, every [nume
 $\circ$ Let $R$ be an unitary ring and $A = (M_2(R), \cdot)$, where $M_2(R)$ is the set of $2 \times 2$ matrix with coefficients in $R$ and $\cdot$ denotes the usual product matrix. Since $A$ is not cancellative, $A$ is not a $\mathcal{R}-$monoid.
 
 ## References
+
+::: {#refs}
+
+:::

@@ -2,8 +2,14 @@
 title: "Trace ideal"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
 
+---
+nocite: |
+  @CTIRNS, @JMDA
+---
 <!-- Canonical-trace-ideal-and-residue-for-NS-rings -->
 
 ## Definition
@@ -66,3 +72,7 @@ gap> SmallElements(tr);
 The function `SmallElements` returns a list with the [small elements](Left-elements-ideal.qmd) of the given ideal. Then, $tr(S) = \{27, 28, 29, 30, 32, 34, \rightarrow\}$.
 
 ## References
+
+::: {#refs}
+
+:::

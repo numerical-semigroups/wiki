@@ -2,6 +2,13 @@
 title: "Binomial ideal of a numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @GRABNS, @JMDA
 ---
 
 <!-- Gen-and-relations-Ab-semigroups-and-semigroups-rings -->
@@ -60,3 +67,7 @@ gap> GeneratorsOfTwoSidedIdeal(I);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

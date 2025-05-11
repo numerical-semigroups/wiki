@@ -2,6 +2,13 @@
 title: "Shaded set"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -62,3 +69,7 @@ gap> ShadedSetOfElementInNumericalSemigroup(80,S);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

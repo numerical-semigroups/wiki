@@ -8,6 +8,7 @@ cls: apa
 
 ---
 nocite: |
+  @JMDA, @AGUILOGOST20152168
 ---
 
 <!-- vertices_L_shape  -->
@@ -125,4 +126,5 @@ true
 ## References
 
 ::: {#refs}
+
 :::

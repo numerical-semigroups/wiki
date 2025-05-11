@@ -1,7 +1,14 @@
 ---
-title: "Set of factorizations / Set of expressions"
+title: "Set of factorizations"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -95,3 +102,7 @@ gap> DenumerantOfElementInNumericalSemigroup(101, S);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

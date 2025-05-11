@@ -2,6 +2,13 @@
 title: "Cocycle"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @PANS, @JMDA
 ---
 
 <!-- Parametrizing_Arf_NS -->
@@ -72,3 +79,7 @@ H(S, 6) = \begin{pmatrix}
 $$
 
 ## References
+
+::: {#refs}
+
+:::

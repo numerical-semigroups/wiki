@@ -2,6 +2,13 @@
 title: "Expansion with respect to a set of polynomials"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2
 ---
 
 ## Definition
@@ -51,3 +58,7 @@ $$
 $$
 
 ## References
+
+::: {#refs}
+
+:::

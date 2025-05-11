@@ -2,6 +2,13 @@
 title: "Contact"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2
 ---
 
 ## Definition
@@ -21,3 +28,7 @@ c(f,g) = \frac{1}{np} \max_{i,j} ord_t (y_i(t^p) - z_j(t^n)).
 $$
 
 ## References
+
+::: {#refs}
+
+:::

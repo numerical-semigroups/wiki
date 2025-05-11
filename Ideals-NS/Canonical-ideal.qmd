@@ -2,6 +2,13 @@
 title: "Canonical ideal"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -48,3 +55,7 @@ true
 In this case, $S = K(S)$ (this happens if, and only if, $S$ is [symmetric](../Families-NS/NS-symmetric.qmd)).
 
 ## References
+
+::: {#refs}
+
+:::

@@ -2,6 +2,13 @@
 title: "Lattice path associated to a numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @GINS, @JMDA
 ---
 
 <!-- Geometrical-illustration-NS -->
@@ -57,3 +64,7 @@ The result is as follows.
 As before, the red line denotes the line $ax + by = c-1$ and the blue points are the coordinates of the gaps of $S$.
 
 ## References
+
+::: {#refs}
+
+:::

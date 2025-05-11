@@ -2,6 +2,13 @@
 title: "Unique Betti element numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA, @ANSBE 
 ---
 
 <!-- Affine-NS-unique-Betti-element // Num. Sem.  -->
@@ -63,3 +70,7 @@ gap> IsUniqueBettiElementNumericalSemigroup := function(S)
 ```
 
 ## References
+
+::: {#refs}
+
+:::

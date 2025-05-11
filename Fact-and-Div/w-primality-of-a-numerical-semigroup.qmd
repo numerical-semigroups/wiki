@@ -2,6 +2,13 @@
 title: "w-primality of a numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -22,7 +29,7 @@ $$
 
 ## Examples
 
-$\circ$ Let $S = \langle 10, 11, 17, 23 \rangle$. Since $Betti(S) = \{33, 34, 40, 69 \}$, where $Betti(S)$ denotes the set of [Betti elements](Betti-element.qmd) of $S$, it is deduced that its catenary degree is $\mathbf{C}(S) = 6$, then $\omega(S) \ge 6$. One can also prove that $\mathbf{t}(S) = 6$, concluding that $\omega(S) = 6$.
+$\circ$ Let $S = \langle 10, 11, 17, 23 \rangle$. Since $Betti(S) = \{33, 34, 40, 69 \}$, where $Betti(S)$ denotes the set of [Betti elements](../Presentations-NS/Betti-element.qmd) of $S$, it is deduced that its catenary degree is $\mathbf{C}(S) = 6$, then $\omega(S) \ge 6$. One can also prove that $\mathbf{t}(S) = 6$, concluding that $\omega(S) = 6$.
 
 ## Examples with GAP
 
@@ -54,3 +61,7 @@ gap> OmegaPrimality(207, S);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

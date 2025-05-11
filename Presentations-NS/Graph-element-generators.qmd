@@ -4,6 +4,13 @@ format: html
 editor: visual
 execute: 
   echo: false
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -52,7 +59,6 @@ graph  NSGraph{
 ```
 :::
 
-
 ## Examples with GAP
 
 The following examples are made with the package NumericalSgps in GAP.
@@ -90,15 +96,14 @@ graph G {
 
 $\diamond$ Let $S = \langle 22, 23, 41, 50 \rangle$, in GAP:
 
-```gap
+``` gap
 gap> S := NumericalSemigroup(22, 23, 41, 50);
 <Numerical semigroup with 4 generators>
 ```
 
-
 Given a numerical semigroup $S$ and an element $n \in S$, the function `DotRosalesGraph` returns the graph associated to $n$ in $S$ by minimal generators.
 
-```gap
+``` gap
 gap> 150 in S;
 true
 gap> h := DotRosalesGraph(150, S);;
@@ -133,9 +138,8 @@ graph  NSGraph{
 ```
 :::
 
-
 ## References
 
+::: {#refs}
 
-
-
+:::

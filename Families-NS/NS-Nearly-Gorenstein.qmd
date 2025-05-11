@@ -2,9 +2,16 @@
 title: "Nearly Gorenstein numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
 
-<!--  -->
+---
+nocite: |
+  @NGNS, @JMDA
+---
+
+<!-- NGNS -->
 
 ## Definition
 
@@ -52,3 +59,7 @@ gap> NearlyGorensteinVectors(S);
 Then, the set of nearly Gorenstein vectors of $S$ is $\{175\} \times \{175\} \times \{118, 175\} \times \{118, 175\}$.
 
 ## References
+
+::: {#refs}
+
+:::

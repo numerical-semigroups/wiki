@@ -2,6 +2,13 @@
 title: "Generic numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @STC, @JMDA
 ---
 
 <!-- Semigroup-theoretical-charact-arithm-invariants-appl-Num-monoids-Krull-monoids -->
@@ -82,3 +89,7 @@ gap> AllMinimalRelationsOfNumericalSemigroup(S);
 For example, $[ (0, 0, 2, 2, 0, 0), (0, 0, 0, 0, 3, 0) ]$ is a minimal relation but not all minimal generators occur.
 
 ## References
+
+::: {#refs}
+
+:::

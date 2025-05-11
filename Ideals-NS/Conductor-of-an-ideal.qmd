@@ -2,6 +2,13 @@
 title: "Conductor of an ideal"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @PINS, @JMDA
 ---
 
 <!-- Patterns_of_ideals_NS -->
@@ -61,3 +68,7 @@ gap> Conductor(S);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

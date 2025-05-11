@@ -2,6 +2,13 @@
 title: "Duplication of a numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @Prs, @JMDA
 ---
 
 <!-- https://www.ugr.es/~imns2010/2014/Slides/IMNS_2014_Strazzanti.pdf -->
@@ -89,3 +96,7 @@ gap> b := L[3];
 Then, $T = 2S \cup (2I + b)$ where $S = \langle 4, 6, 7 \rangle, I = \{10\} + S$ and $b = 7$.
 
 ## References
+
+::: {#refs}
+
+:::

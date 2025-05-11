@@ -2,6 +2,13 @@
 title: "Graph associated to an element by set of factorizations"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -37,8 +44,6 @@ graph  NSGraph{
 }
 ```
 :::
-
-
 
 ## Examples with GAP
 
@@ -77,18 +82,16 @@ gap> RClassesOfSetOfFactorizations(z);
 
 In this case, $\nabla_{215}$ is connected.
 
-
 $\diamond$ Let $S = \langle 15, 18, 22, 32 \rangle$, in GAP:
 
-```gap
+``` gap
 gap> S := NumericalSemigroup(15, 18, 22, 32);
 <Numerical semigroup with 4 generators>
 ```
 
 Given a set of factorizations $f$, the function `DotEliahouGraph` returns the graph (in dot) of factorizations associated to $f$. Edges are labelled with [distances](../Fact-and-Div/Distance-factorizations.qmd) between nodes they join.
 
-
-```gap
+``` gap
 gap> 120 in S;
 true
 gap> f := Factorizations(S, 120);
@@ -136,11 +139,8 @@ graph  NSGraph{
 ```
 :::
 
-
 ## References
 
+::: {#refs}
 
-
-
-
-
+:::

@@ -2,6 +2,13 @@
 title: "Archimedean property of an element"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -19,3 +26,7 @@ $\circ$ The semigroup $(\mathbb{N}^*, +)$, where $\mathbb{N}^* = \mathbb{N} \set
 $\circ$ Given a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) $S$, it holds that $S^* = S \setminus \{0\}$ is Archimedean. Let $F(S)$ be the [Frobenius number](../Basic-concepts/Frobenius-number.qmd) of $S$. Given $x, y \in S^*$, there exists $k \in \mathbb{N} \setminus \{0\}$ such that $kx - y > F(S)$. Then, $z := kx - y \in S^*$ and $kx = y + z$.
 
 ## References
+
+::: {#refs}
+
+:::

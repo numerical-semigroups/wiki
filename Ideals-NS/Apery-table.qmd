@@ -1,10 +1,17 @@
 ---
-title: ""
+title: "Apéry table"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
 
-<!-- Cortadellas Ben\'{\i}tez, T., Jafari, R. and Zarzuela Armengou, S., On teh Ap\'ery sets of monomial curves, Semigroup Forum, 86 (2013), 289--320. -->
+---
+nocite: |
+  @ASMC, @JMDA
+---
+
+<!-- Cortadellas Ben\'{\i}tez, T., Jafari, R. and Zarzuela Armengou, S., On the Apéry sets of monomial curves, Semigroup Forum, 86 (2013), 289--320. -->
 
 ## Definition
 
@@ -81,3 +88,7 @@ true
 ```
 
 ## References
+
+::: {#refs}
+
+:::

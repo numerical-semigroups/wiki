@@ -2,6 +2,13 @@
 title: "Factorizations R-related"
 format: html
 enigne: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -48,3 +55,8 @@ gap> RClassesOfSetOfFactorizations(z);
 ```
 
 ## References
+
+::: {#refs}
+
+:::
+

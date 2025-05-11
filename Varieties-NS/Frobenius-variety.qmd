@@ -2,6 +2,13 @@
 title: "Frobenius variety"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -25,3 +32,8 @@ $\circ$ Let $A$ be a subset of $\mathbb{N}$, $\mathcal{S}$ the set of numerical 
 -   If $S \in V$, we have $A \subseteq S \subsetneq S \cup \{F(S)\}$, Therefore, $S \cup \{F(S)\} \in V$.
 
 ## References
+
+::: {#refs}
+
+:::
+

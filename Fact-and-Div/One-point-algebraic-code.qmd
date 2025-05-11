@@ -2,6 +2,13 @@
 title: "One point algebraic code"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -19,3 +26,7 @@ Set $\mathcal{L}(mQ) = \{f \in R ~ | ~ v_Q(f) \ge -m\}$, where $v_Q$ is the disc
 $\circ$
 
 ## References
+
+::: {#refs}
+
+:::

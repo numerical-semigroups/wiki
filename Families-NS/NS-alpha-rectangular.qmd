@@ -2,6 +2,13 @@
 title: "Alpha rectangular numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @CCINS, @JMDA
 ---
 
 <!-- Classes-of-complete-intersection-NS -->
@@ -143,3 +150,7 @@ gap> MinimalGenerators(S);
 Then, $S = \langle 45, 80, 153 \rangle$ is an $\alpha-$rectangular numerical semigroup.
 
 ## References
+
+::: {#refs}
+
+:::

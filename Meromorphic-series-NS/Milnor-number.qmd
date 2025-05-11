@@ -2,6 +2,13 @@
 title: "Milnor number"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2
 ---
 
 ## Definition
@@ -11,3 +18,7 @@ Let $f(x,y) = y^n + a_1(x)y^{n-1} + \cdots + a_n(x) \in \mathbb{K}((x))[y]$ be a
 It can be proven that $\int(f_x, f_y) = rank_{\mathbb{K}}(\mathbb{K}[[x]][y] / (f_x, f_y))$.
 
 ## References
+
+::: {#refs}
+
+:::

@@ -2,6 +2,13 @@
 title: "Ratliff-Rush number of a proper ideal"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @IIPR, @JMDA
 ---
 
 <!-- [DGH01] D'Anna, M., Guerrieri, A. and Heinzer, W., Invariants of ideals having principal reductions, Comm. Algebra, 29 (2) (2001), 889--906. -->
@@ -84,3 +91,7 @@ It can be proven that the asymptotic Ratliff-Rush number is greater or equal to 
 
 
 ## References
+
+::: {#refs}
+
+:::

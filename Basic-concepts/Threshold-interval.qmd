@@ -2,6 +2,13 @@
 title: "Threshold interval"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @Wilfsurvey, @JMDA
 ---
 
 <!-- Wilf survey -->
@@ -48,3 +55,7 @@ gap> ThresholdIntervalOfNumericalSemigroup(S);
 Therefore, the threshold interval of $S$ is $\{92, 93, \ldots, 102\}$.
 
 ## References
+
+::: {#refs}
+
+:::

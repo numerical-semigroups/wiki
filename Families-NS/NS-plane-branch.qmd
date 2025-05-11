@@ -2,6 +2,13 @@
 title: "Numerical semigroup associated to a plane branch"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @CCNS, @JMDA
 ---
 
 <!-- Classes-of-complete-intersection-NS -->
@@ -101,3 +108,7 @@ gap> ConstantsTau(S);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

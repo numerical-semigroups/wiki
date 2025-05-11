@@ -2,6 +2,13 @@
 title: "Additive numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @MDNS, @JMDA
 ---
 
 <!-- Maximal-denumerant-NS -->
@@ -66,3 +73,7 @@ gap> MaximumDegree(S, 158+m);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

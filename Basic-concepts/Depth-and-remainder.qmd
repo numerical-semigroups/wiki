@@ -2,6 +2,13 @@
 title: "Depth and remainder"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @WCMT, @JMDA
 ---
 
 <!-- Wilf’s conjecture and Macaulay’s theorem -->
@@ -70,3 +77,7 @@ gap> RemainderOfNumericalSemigroup(S);
 Then, the depth of $S$ is $q(S) = 8$ and the remainder is $\rho(S) = 3$.
 
 ## References
+
+::: {#refs}
+
+:::

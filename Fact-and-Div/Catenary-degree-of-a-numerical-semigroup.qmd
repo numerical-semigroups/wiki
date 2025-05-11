@@ -2,6 +2,13 @@
 title: "Catenary degree of a numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -58,3 +65,7 @@ gap> CatenaryDegree(400, S);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

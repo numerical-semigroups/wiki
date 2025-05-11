@@ -2,6 +2,13 @@
 title: "Dual of a relative ideal"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @PINS, @JMDA
 ---
 
 <!-- Patterns_of_ideals_NS -->
@@ -55,3 +62,7 @@ gap> L := MinimalGenerators(I_2);
 The function `MinimalGenerators` returns the [minimal set of generators](Minimal-set-generators-ideal.qmd). Then, $I^* = L + S$.
 
 ## References
+
+::: {#refs}
+
+:::

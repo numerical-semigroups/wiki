@@ -2,6 +2,13 @@
 title: "Dilatation of a numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @DNS, @JMDA
 ---
 
 <!-- Dilatations_of_NS_V_Barucci -->
@@ -131,3 +138,7 @@ false
 Therefore, there exist non-trivial numerical semigroups that are not a dilatation.
 
 ## References
+
+::: {#refs}
+
+:::

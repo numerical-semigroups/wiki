@@ -2,6 +2,13 @@
 title: "Newton-Puiseux exponents of an irreducible polynomial"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2
 ---
 
 ## Definition
@@ -25,3 +32,7 @@ where $Supp(y(t))$ is the [support](Support.qmd) of $y(t)$.
 Let us consider $f(x,y) \in \mathbb{K}((x))[y]$ irreducible and let $y = \sum_{p \in \mathbb{N}} c_p t^p \in \mathbb{K}((t))$. Let $d_1 = n = deg_y(f)$ and let $m_1 = \min \{p \in Supp(y(t)) ~ | ~ d_1 \not | \ \ p\}$, $d_2 = gcd(d_1, m_1)$. Then for all $i \ge 2$, if $d_i \ne 1$, let $m_i = \min \{p \in Supp(y(t)) ~ | ~ d_i \not | \ \ p \}$ and $d_{i+1} = gcd(d_i, m_i)$. By the above proposition, $m_i$ is well defined and there exists $h \ge 1$ such that $d_{h+1} = 1$. It is defined the Newton-Poiseux exponents of $f$ as $(m_1, m_2, \ldots, m_h)$ and is denoted by $\underline{m}$.
 
 ## References
+
+::: {#refs}
+
+:::

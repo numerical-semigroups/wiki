@@ -2,6 +2,13 @@
 title: "Directed graph of all numerical semigroups"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -191,4 +198,7 @@ digraph  NSGraph{rankdir = BT;
 
 ## References
 
+::: {#refs}
+
+:::
 

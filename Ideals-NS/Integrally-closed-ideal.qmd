@@ -2,6 +2,13 @@
 title: "Integrally closed ideal"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -52,3 +59,7 @@ true
 First, the function `Minimum` returns the multiplicity of a proper ideal, $m(IS)$; afterwards, the function `NumericalSemigroupBySmallElements` generates the numerical semigroup given a list, considered as the list of left elements along with the conductor of a numerical semigroup. Then, $N1 = \{0, m(IS), \rightarrow\} = (m(IS) + \mathbb{N})\cup\{0\}$; also, the function `Intersection` computes the intersection of two given numerical semigroups. Therefore, $N1 \cap S = ((m(IS) + \mathbb{N}) \cap S) \cup \{0\}$; then, the function `MaximalIdeal` returns the maximal ideal of the numerical semigroup, $L = (m(IS) + \mathbb{N}) \cap S$; finally, given two subsets $I,J$ of $\mathbb{N}$, the function `IsSubset` returns true if $J \subseteq I$. To sum up, $IS = (73 + \mathbb{N}) \cap S$ and $IS$ is an integrally closed ideal.
 
 ## References
+
+::: {#refs}
+
+:::

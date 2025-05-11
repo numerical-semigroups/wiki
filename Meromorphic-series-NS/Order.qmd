@@ -2,6 +2,13 @@
 title: "Order of a formal series"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2
 ---
 
 ## Definition
@@ -17,3 +24,7 @@ $\circ$ Let $f(x) = 7x^5 + 4x^3 - x^2$. The coefficients are: $a_0 = a_1 = 0, a_
 $\circ$ Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let us consider $f(x) = \sum_{s \in S \setminus \{0\}} x^s$. The order of $f$ is the smallest non-zero coefficient, equivalent to compute the minimum of $S\setminus \{0\}$, which is the [multiplicity](../Basic-concepts/Multiplicity.qmd) of $S$, $m(S)$. Therefore, $ord_x(f) = m(S)$.
 
 ## References
+
+::: {#refs}
+
+:::

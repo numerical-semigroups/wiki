@@ -2,6 +2,13 @@
 title: "Pattern"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -54,3 +61,8 @@ false
 That means, the set $\mathcal{S}(P)$ is non-empty but the set $\mathcal{S}(P')$ it is.
 
 ## References
+
+::: {#refs}
+
+:::
+

@@ -2,6 +2,13 @@
 title: "Support of a formal series"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2
 ---
 
 ## Definition
@@ -21,3 +28,7 @@ $$
 $$
 
 ## References
+
+::: {#refs}
+
+:::

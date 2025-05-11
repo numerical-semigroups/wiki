@@ -2,6 +2,13 @@
 title: "Reduction of a proper ideal"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -72,4 +79,6 @@ true
 
 ## References
 
-<!-- https://docs.gap-system.org/doc/tut/chap0_mj.html -->
+::: {#refs}
+
+:::

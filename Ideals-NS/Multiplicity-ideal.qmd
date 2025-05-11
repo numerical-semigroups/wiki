@@ -2,6 +2,13 @@
 title: "Multiplicity of an ideal"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
 ---
 
 ## Definition
@@ -35,3 +42,7 @@ gap> Minimum(I+S);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

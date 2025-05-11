@@ -2,6 +2,13 @@
 title: "Eliahou slices"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @WCMT, @JMDA
 ---
 
 <!-- Wilf_conjecture_Macaulay_Shalom_Eliahou -->
@@ -81,3 +88,7 @@ gap> ThresholdIntervalOfNumericalSemigroup(S);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

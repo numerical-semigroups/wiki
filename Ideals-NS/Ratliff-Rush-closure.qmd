@@ -2,6 +2,13 @@
 title: "Ratliff-Rush closure of a proper ideal"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @IIPR, @JMDA
 ---
 
 <!-- [DGH01] D'Anna, M., Guerrieri, A. and Heinzer, W., Invariants of ideals having principal reductions, Comm. Algebra, 29 (2) (2001), 889--906. -->
@@ -95,3 +102,7 @@ gap> L := MinimalGenerators(RR);
 Given a relative ideal, the function `MinimalGenerators` returns its [minimal set of generators](Minimal-set-generators-ideal.qmd). Then, the Ratliff-Rush closure of $I$ is $RR(I) = L + S$.
 
 ## References
+
+::: {#refs}
+
+:::

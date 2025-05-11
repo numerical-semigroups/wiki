@@ -2,6 +2,13 @@
 title: "Proper Bézout sequence"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -103,3 +110,8 @@ true
 ```
 
 ## References
+
+::: {#refs}
+
+:::
+

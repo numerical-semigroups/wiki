@@ -2,6 +2,13 @@
 title: "G-adic expansion"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2
 ---
 
 ## Definition
@@ -41,3 +48,7 @@ $$
 $\circ$ Let $F = \sum_{k = 0}^l \alpha_k(x,y) G^k$. It can be proven by induction on $l \in \mathbb{N}$ that the $G-$adic expression is unique.
 
 ## References
+
+::: {#refs}
+
+:::

@@ -2,6 +2,13 @@
 title: "Bézout sequence"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @ns, @JMDA
 ---
 
 <!-- Definición de Num. Sem. -->
@@ -72,3 +79,7 @@ gap> BezoutSequence(12/5, 39/10);
 ```
 
 ## References
+
+::: {#refs}
+
+:::
