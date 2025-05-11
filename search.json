@@ -48,7 +48,7 @@
     "href": "Presentations-NS/Congruence-compatible.html#references",
     "title": "Congruence compatible",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.",
     "crumbs": [
       "Presentations of a numerical smeigroup",
       "Congruence compatible"
@@ -103,7 +103,7 @@
     "href": "Presentations-NS/Shaded-set.html#references",
     "title": "Shaded set",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Presentations of a numerical smeigroup",
       "Shaded set"
@@ -158,7 +158,7 @@
     "href": "Presentations-NS/Factorization-homomorphism.html#references",
     "title": "Factorization homomorphism",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Presentations of a numerical smeigroup",
       "Factorization homomorphism"
@@ -213,7 +213,7 @@
     "href": "Presentations-NS/Graph-element-generators.html#references",
     "title": "Graph associated to an element by minimal generators",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "Presentations of a numerical smeigroup",
       "Graph associated to an element by minimal generators"
@@ -323,7 +323,7 @@
     "href": "Presentations-NS/Presentation-NS.html#references",
     "title": "Presentation of a numerical semigroup",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Presentations of a numerical smeigroup",
       "Presentation of a numerical semigroup"
@@ -367,7 +367,7 @@
     "href": "Structure-NS/R-monoid.html#references",
     "title": "R-monoid",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "The structure of a numerical semigroup",
       "R-monoid"
@@ -411,7 +411,7 @@
     "href": "Structure-NS/S-torsion-free.html#references",
     "title": "Torsion free semigroup",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "The structure of a numerical semigroup",
       "Torsion free semigroup"
@@ -455,7 +455,7 @@
     "href": "Structure-NS/M-hereditarily-finitely-generated.html#references",
     "title": "Hereditarily finitely generated monoid",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "The structure of a numerical semigroup",
       "Hereditarily finitely generated monoid"
@@ -499,7 +499,7 @@
     "href": "Structure-NS/Quotient-group-monoid.html#references",
     "title": "Quotient group of a monoid",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "The structure of a numerical semigroup",
       "Quotient group of a monoid"
@@ -543,7 +543,7 @@
     "href": "Structure-NS/S-multiple-joined.html#references",
     "title": "Multiple joined semigroup",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "The structure of a numerical semigroup",
       "Multiple joined semigroup"
@@ -605,7 +605,7 @@
     "href": "Prop-modular-NS/Adjacent-fractions.html#references",
     "title": "Adjacent fractions",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "Proportionally modular numerical semigroups",
       "Adjacent fractions"
@@ -660,7 +660,7 @@
     "href": "Prop-modular-NS/Mod-Diophantine-ineq.html#references",
     "title": "Modular Diophantine inequality",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "Proportionally modular numerical semigroups",
       "Modular Diophantine inequality"
@@ -715,7 +715,7 @@
     "href": "Prop-modular-NS/Prop-mod-Diophantine-ineq.html#references",
     "title": "Proportionally modular Diophantine inequality",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "Proportionally modular numerical semigroups",
       "Proportionally modular Diophantine inequality"
@@ -770,7 +770,7 @@
     "href": "Prop-modular-NS/Factor-prop-mod-Diophantine-ineq.html#references",
     "title": "Factor of a proportionally modular Diophantine inequality",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "Proportionally modular numerical semigroups",
       "Factor of a proportionally modular Diophantine inequality"
@@ -825,7 +825,7 @@
     "href": "Prop-modular-NS/Bezout-sequence.html#references",
     "title": "Bézout sequence",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "Proportionally modular numerical semigroups",
       "Bézout sequence"
@@ -880,7 +880,7 @@
     "href": "Ideals-NS/Reduction-number.html#references",
     "title": "Reduction number",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Reduction number"
@@ -935,7 +935,7 @@
     "href": "Ideals-NS/Set-closed-divisors.html#references",
     "title": "Set closed under divisors",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Set closed under divisors"
@@ -990,7 +990,7 @@
     "href": "Ideals-NS/Almost-canonical-ideal.html#references",
     "title": "Almost canonical ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Almost canonical ideal"
@@ -999,56 +999,56 @@
   {
     "objectID": "Ideals-NS/Apery-table.html",
     "href": "Ideals-NS/Apery-table.html",
-    "title": "Wiki numerical semigroups",
+    "title": "Apéry table",
     "section": "",
     "text": "Let \\(S\\) be a numerical semigroup with multiplicity \\(m\\) and \\(M = S \\setminus \\{0\\}\\) its maximal ideal with reduction number \\(r\\). It is defined the Apéry table of \\(S\\), denoted by \\(Ap(S)\\), as the matrix \\((r+1) \\times m\\) such that the first row is the Apéry set of \\(S\\) in \\(m\\) and the \\(k-\\)th row is the Apéry set of \\((k+1)M\\) in \\(m\\) for \\(k \\in \\{2, \\ldots, r\\}\\), where\n\\[\nkM = \\{m_1 + \\cdot m_k ~ | ~ m_1, \\ldots, m_k \\in M\\}.\n\\]\nThe Apéry table can be written as\n\\[\nAp(S) = \\begin{pmatrix}\n  Ap(S, m) \\\\\n  Ap(M, m) \\\\\n  Ap(2M, m) \\\\\n  \\vdots \\\\\n  Ap(rM, m) \\\\\n\\end{pmatrix},\n\\] where \\(Ap(S,m), Ap(M,m), \\ldots, Ap(rM,m)\\) denotes the Apéry set of \\(S, M, 2M, \\ldots, rM\\) in \\(m\\), respectively.",
     "crumbs": [
       "Ideals and numerical semigroups",
-      "Definition"
+      "Apéry table"
     ]
   },
   {
     "objectID": "Ideals-NS/Apery-table.html#definition",
     "href": "Ideals-NS/Apery-table.html#definition",
-    "title": "Wiki numerical semigroups",
+    "title": "Apéry table",
     "section": "",
     "text": "Let \\(S\\) be a numerical semigroup with multiplicity \\(m\\) and \\(M = S \\setminus \\{0\\}\\) its maximal ideal with reduction number \\(r\\). It is defined the Apéry table of \\(S\\), denoted by \\(Ap(S)\\), as the matrix \\((r+1) \\times m\\) such that the first row is the Apéry set of \\(S\\) in \\(m\\) and the \\(k-\\)th row is the Apéry set of \\((k+1)M\\) in \\(m\\) for \\(k \\in \\{2, \\ldots, r\\}\\), where\n\\[\nkM = \\{m_1 + \\cdot m_k ~ | ~ m_1, \\ldots, m_k \\in M\\}.\n\\]\nThe Apéry table can be written as\n\\[\nAp(S) = \\begin{pmatrix}\n  Ap(S, m) \\\\\n  Ap(M, m) \\\\\n  Ap(2M, m) \\\\\n  \\vdots \\\\\n  Ap(rM, m) \\\\\n\\end{pmatrix},\n\\] where \\(Ap(S,m), Ap(M,m), \\ldots, Ap(rM,m)\\) denotes the Apéry set of \\(S, M, 2M, \\ldots, rM\\) in \\(m\\), respectively.",
     "crumbs": [
       "Ideals and numerical semigroups",
-      "Definition"
+      "Apéry table"
     ]
   },
   {
     "objectID": "Ideals-NS/Apery-table.html#examples",
     "href": "Ideals-NS/Apery-table.html#examples",
-    "title": "Wiki numerical semigroups",
+    "title": "Apéry table",
     "section": "Examples",
     "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 4, 6, 11 \\rangle = \\{0, 4, 6, 8, 10, 11, 12, 14, \\rightarrow\\}\\). With few computations, it is obtained that \\(r(M) = 2\\), where \\(r(M)\\) denotes the reduction number of \\(M\\). Also,\n\\[\n\\begin{align*}\nM + M &= \\{4, 6, 8, 10, 11, 12, 14, \\rightarrow\\} + \\{4, 6, 8, 10, 11, 12, 14, \\rightarrow\\} \\\\\n& = (\\{4, 6, 8, 10, 11, 12\\} + \\{4, 6, 8, 10, 11, 12\\}) \\cup \\{18, \\rightarrow\\} = \\{8, 10, 12, 14, \\rightarrow\\}.\n\\end{align*}\n\\]\nSince \\(m(S) = 4\\), the Apéry set of \\(S, M\\) and \\(2M\\) are, respectively,\n\\[\nAp(S, 4) = \\{0, 17, 6, 11\\}, ~~ Ap(M, 4) = \\{4, 17, 6, 11\\}, ~~ Ap(2M, 4) = \\{8, 17, 10, 15\\},\n\\] concluding that the Apéry table of \\(S\\) is as follows.\n\\[\nAp(S) = \\begin{pmatrix}\n  0 & 17 & 6 & 11 \\\\\n  4 & 17 & 6 & 11 \\\\\n  8 & 17 & 10 & 15\n\\end{pmatrix}.\n\\]",
     "crumbs": [
       "Ideals and numerical semigroups",
-      "Definition"
+      "Apéry table"
     ]
   },
   {
     "objectID": "Ideals-NS/Apery-table.html#examples-with-gap",
     "href": "Ideals-NS/Apery-table.html#examples-with-gap",
-    "title": "Wiki numerical semigroups",
+    "title": "Apéry table",
     "section": "Examples with GAP",
     "text": "Examples with GAP\nThe following example is made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 20, 50, 54, 78, 115, 116, 119 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(20, 50, 54, 78, 115, 116, 119);\n&lt;Numerical semigroup with 7 generators&gt;\nGiven a numerical semigroup \\(S\\), the functions AperyTable and AperyTableOfNumericalSemigroup return the Apéry table of \\(S\\).\ngap&gt; AperyTable(S);\n[ [ 0, 281, 162, 223, 104, 165, 166, 227, 108, 169, 50, 231, 132, 173, 54, 115,\n      116, 197, 78, 119 ],\n  [ 20, 281, 162, 223, 104, 165, 166, 227, 108, 169, 50, 231, 132, 173, 54, 115,\n      116, 197, 78, 119 ],\n  [ 40, 281, 162, 223, 104, 165, 166, 227, 108, 169, 70, 231, 132, 173, 74, 135,\n      136, 197, 98, 139 ],\n  [ 60, 281, 162, 223, 124, 185, 186, 227, 128, 189, 90, 251, 152, 193, 94, 155,\n      156, 217, 118, 159 ],\n  [ 80, 281, 182, 243, 144, 205, 206, 247, 148, 209, 110, 271, 172, 213, 114,\n      175, 176, 237, 138, 179 ] ]\ngap&gt; AperyTableOfNumericalSemigroup(S) = AperyTable(S);\ntrue",
     "crumbs": [
       "Ideals and numerical semigroups",
-      "Definition"
+      "Apéry table"
     ]
   },
   {
     "objectID": "Ideals-NS/Apery-table.html#references",
     "href": "Ideals-NS/Apery-table.html#references",
-    "title": "Wiki numerical semigroups",
+    "title": "Apéry table",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nBenítez, Teresa Cortadellas, Raheleh Jafari, and Santiago Zarzuela Armengou. 2012. “On the Apery Sets of Monomial Curves.” https://arxiv.org/abs/1205.4118.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
-      "Definition"
+      "Apéry table"
     ]
   },
   {
@@ -1100,7 +1100,7 @@
     "href": "Ideals-NS/Multiplicity-sequence.html#references",
     "title": "Multiplicity sequence of a numerical semigroup",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Multiplicity sequence of a numerical semigroup"
@@ -1210,7 +1210,7 @@
     "href": "Ideals-NS/Irreducible-ideal.html#references",
     "title": "Irreducible ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Irreducible ideal"
@@ -1265,7 +1265,7 @@
     "href": "Ideals-NS/Ratliff-Rush-closure.html#references",
     "title": "Ratliff-Rush closure of a proper ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nD’Anna, Guerrieri, M., and W. Heinzer. 2001. “NVARIANTS OF IDEALS HAVING PRINCIPAL REDUCTIONS.” Communications in Algebra 29 (2): 889–906. https://doi.org/10.1081/AGB-100001550.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Ratliff-Rush closure of a proper ideal"
@@ -1320,7 +1320,7 @@
     "href": "Ideals-NS/Principal-ideal.html#references",
     "title": "Principal ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Principal ideal"
@@ -1384,56 +1384,56 @@
   {
     "objectID": "Ideals-NS/Proper-ideal.html",
     "href": "Ideals-NS/Proper-ideal.html",
-    "title": "Proper ideal / Integral ideal / Ideal",
+    "title": "Proper ideal",
     "section": "",
     "text": "Let \\(S\\) be a numerical semigroup and let \\(E\\) be a subset of \\(\\mathbb{Z}\\). It is said that \\(E\\) is a proper ideal, an integral ideal, or simply an ideal of \\(S\\), if \\(E\\) is a relative ideal of \\(S\\) and \\(E \\subseteq S\\).",
     "crumbs": [
       "Ideals and numerical semigroups",
-      "Proper ideal / Integral ideal / Ideal"
+      "Proper ideal"
     ]
   },
   {
     "objectID": "Ideals-NS/Proper-ideal.html#definition",
     "href": "Ideals-NS/Proper-ideal.html#definition",
-    "title": "Proper ideal / Integral ideal / Ideal",
+    "title": "Proper ideal",
     "section": "",
     "text": "Let \\(S\\) be a numerical semigroup and let \\(E\\) be a subset of \\(\\mathbb{Z}\\). It is said that \\(E\\) is a proper ideal, an integral ideal, or simply an ideal of \\(S\\), if \\(E\\) is a relative ideal of \\(S\\) and \\(E \\subseteq S\\).",
     "crumbs": [
       "Ideals and numerical semigroups",
-      "Proper ideal / Integral ideal / Ideal"
+      "Proper ideal"
     ]
   },
   {
     "objectID": "Ideals-NS/Proper-ideal.html#examples",
     "href": "Ideals-NS/Proper-ideal.html#examples",
-    "title": "Proper ideal / Integral ideal / Ideal",
+    "title": "Proper ideal",
     "section": "Examples",
     "text": "Examples\n\\(\\circ\\) Let’s prove that \\(E = S^*\\) is an ideal of \\(S\\). Clearly \\(S^* \\subseteq S\\) and \\(S + S^* \\subseteq S^*\\). If we consider \\(s = C(S)\\), where \\(C(S)\\) denotes the conductor of \\(S\\), it is deduced that \\(C(S) + S^* \\subseteq S\\) and \\(S^*\\) is an ideal. The ideal \\(S^*\\) is called the maximal ideal of \\(S\\).\n\\(\\circ\\) Let \\(b \\in \\mathbb{N}\\) an odd natural arbitrary but fixed, \\(S = \\langle 2, b \\rangle = \\{0, 2, 4, \\ldots, b - 1, \\rightarrow\\}\\) and \\(E = \\{0, b, \\rightarrow \\}\\). Clearly, \\(E\\) is an ideal of \\(S\\). In general, given a numerical semigroup \\(S\\), the set \\(E = \\{C(S), \\rightarrow\\}\\) is a proper ideal and is called the conductor ideal of \\(S\\).",
     "crumbs": [
       "Ideals and numerical semigroups",
-      "Proper ideal / Integral ideal / Ideal"
+      "Proper ideal"
     ]
   },
   {
     "objectID": "Ideals-NS/Proper-ideal.html#examples-with-gap",
     "href": "Ideals-NS/Proper-ideal.html#examples-with-gap",
-    "title": "Proper ideal / Integral ideal / Ideal",
+    "title": "Proper ideal",
     "section": "Examples with GAP",
     "text": "Examples with GAP\nThe following examples are made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 10, 11, 15, 19 \\rangle\\), \\(I = \\{20, 21, 25\\}\\) and the relative ideal \\(IS = I + S\\), in GAP:\ngap&gt; S := NumericalSemigroup(10, 11, 15, 19);\n&lt;Numerical semigroup with 4 generators&gt;\ngap&gt; I := [20, 21, 25];\n[ 20, 21, 25 ]\ngap&gt; IS := I + S;\n&lt;Ideal of numerical semigroup&gt;\nThe functions IsIntegral and IsIntegralIdealOfNumericalSemigroup return true or false depending on whether an ideal of a semigroup is contained in the semigroup or not.\ngap&gt; IsIntegral(IS);\ntrue\ngap&gt; IsIntegral(IS) = IsIntegralIdealOfNumericalSemigroup(IS);\ntrue\n\\(\\diamond\\) Given \\(IS, JS\\) ideals of a numerical semigroup \\(S\\) with \\(JS \\subseteq IS\\), the functions Difference and DifferenceOfIdealsOfNumericalSemigroup return the set \\(I \\setminus J\\).\ngap&gt; IsSubset(IS, JS);\ntrue\ngap&gt; IS := [-4, 7, 22, 35, 64] + S;\n&lt;Ideal of numerical semigroup&gt;\ngap&gt; JS := [-4, 21, 28, 43, 50, 51] + S;\n&lt;Ideal of numerical semigroup&gt;\ngap&gt; Difference(IS, JS);\n[ 7, 14, 22, 29, 36, 44 ]\nGiven a numerical semigroup \\(S\\) and a subset \\(X\\) of \\(S\\), the function IsComplementOfIntegralIdeal returns true or false depending on whether \\(X\\) is a complement of a proper ideal or not.\ngap&gt; IsComplementOfIntegralIdeal([0, 36, 46, 50, 51],S);\nfalse\ngap&gt; IsComplementOfIntegralIdeal([0, 46, 83],S);\ntrue",
     "crumbs": [
       "Ideals and numerical semigroups",
-      "Proper ideal / Integral ideal / Ideal"
+      "Proper ideal"
     ]
   },
   {
     "objectID": "Ideals-NS/Proper-ideal.html#references",
     "href": "Ideals-NS/Proper-ideal.html#references",
-    "title": "Proper ideal / Integral ideal / Ideal",
+    "title": "Proper ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
-      "Proper ideal / Integral ideal / Ideal"
+      "Proper ideal"
     ]
   },
   {
@@ -1485,7 +1485,7 @@
     "href": "Ideals-NS/Conductor-ideal.html#references",
     "title": "Conductor ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Conductor ideal"
@@ -1540,7 +1540,7 @@
     "href": "Ideals-NS/Dual-ideal.html#references",
     "title": "Dual of a relative ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nStokes, K. 2016. “Patterns of Ideals of Numerical Semigroups.” Semigroup Forum 93: 180–200. https://doi.org/10.1007/s00233-015-9741-1.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Dual of a relative ideal"
@@ -1595,7 +1595,7 @@
     "href": "Ideals-NS/Ratliff-Rush-number.html#references",
     "title": "Ratliff-Rush number of a proper ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nD’Anna, Guerrieri, M., and W. Heinzer. 2001. “NVARIANTS OF IDEALS HAVING PRINCIPAL REDUCTIONS.” Communications in Algebra 29 (2): 889–906. https://doi.org/10.1081/AGB-100001550.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Ratliff-Rush number of a proper ideal"
@@ -1705,7 +1705,7 @@
     "href": "Ideals-NS/Conductor-of-an-ideal.html#references",
     "title": "Conductor of an ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nStokes, K. 2016. “Patterns of Ideals of Numerical Semigroups.” Semigroup Forum 93: 180–200. https://doi.org/10.1007/s00233-015-9741-1.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Conductor of an ideal"
@@ -1760,7 +1760,7 @@
     "href": "Ideals-NS/Integrally-closed-ideal.html#references",
     "title": "Integrally closed ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Integrally closed ideal"
@@ -1815,7 +1815,7 @@
     "href": "Ideals-NS/Relative-ideal.html#references",
     "title": "Relative ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Relative ideal"
@@ -1870,7 +1870,7 @@
     "href": "Ideals-NS/Type-ideal.html#references",
     "title": "Type of a relative ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Type of a relative ideal"
@@ -1914,7 +1914,7 @@
     "href": "Varieties-NS/Frobenius-variety.html#references",
     "title": "Frobenius variety",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "Frobenius varieties",
       "Frobenius variety"
@@ -1969,7 +1969,7 @@
     "href": "Varieties-NS/Directed-graph-all-NS.html#references",
     "title": "Directed graph of all numerical semigroups",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "Frobenius varieties",
       "Directed graph of all numerical semigroups"
@@ -2024,7 +2024,7 @@
     "href": "Varieties-NS/Pattern.html#references",
     "title": "Pattern",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "Frobenius varieties",
       "Pattern"
@@ -2068,7 +2068,7 @@
     "href": "Varieties-NS/V-monoid-generated.html#references",
     "title": "V-monoid generated by a subset",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "Frobenius varieties",
       "V-monoid generated by a subset"
@@ -2112,7 +2112,7 @@
     "href": "Meromorphic-series-NS/Order.html#references",
     "title": "Order of a formal series",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.",
     "crumbs": [
       "Semigroup of an irreducible meromorphic series",
       "Order of a formal series"
@@ -2145,7 +2145,7 @@
     "href": "Meromorphic-series-NS/Contact.html#references",
     "title": "Contact",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.",
     "crumbs": [
       "Semigroup of an irreducible meromorphic series",
       "Contact"
@@ -2178,7 +2178,7 @@
     "href": "Meromorphic-series-NS/Newton-Puiseux-exponents.html#references",
     "title": "Newton-Puiseux exponents of an irreducible polynomial",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.",
     "crumbs": [
       "Semigroup of an irreducible meromorphic series",
       "Newton-Puiseux exponents of an irreducible polynomial"
@@ -2222,7 +2222,7 @@
     "href": "Meromorphic-series-NS/G-adic-expansion.html#references",
     "title": "G-adic expansion",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.",
     "crumbs": [
       "Semigroup of an irreducible meromorphic series",
       "G-adic expansion"
@@ -2266,7 +2266,7 @@
     "href": "Meromorphic-series-NS/Tschirnhausen-transform.html#references",
     "title": "Tschirnhausen transform",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.",
     "crumbs": [
       "Semigroup of an irreducible meromorphic series",
       "Tschirnhausen transform"
@@ -2299,7 +2299,7 @@
     "href": "Meromorphic-series-NS/Intersection-multiplicity.html#references",
     "title": "Intersection multiplicity",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.",
     "crumbs": [
       "Semigroup of an irreducible meromorphic series",
       "Intersection multiplicity"
@@ -2332,7 +2332,7 @@
     "href": "Meromorphic-series-NS/Curves-one-place-infinity.html#references",
     "title": "Curve with one place at infinity",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.",
     "crumbs": [
       "Semigroup of an irreducible meromorphic series",
       "Curve with one place at infinity"
@@ -2365,7 +2365,7 @@
     "href": "Meromorphic-series-NS/Short-parametrization.html#references",
     "title": "Short parametrization",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.",
     "crumbs": [
       "Semigroup of an irreducible meromorphic series",
       "Short parametrization"
@@ -2409,7 +2409,7 @@
     "href": "Meromorphic-series-NS/Expansion.html#references",
     "title": "Expansion with respect to a set of polynomials",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.",
     "crumbs": [
       "Semigroup of an irreducible meromorphic series",
       "Expansion with respect to a set of polynomials"
@@ -2515,6 +2515,17 @@
     ]
   },
   {
+    "objectID": "Basic-concepts/MED-closure.html#references",
+    "href": "Basic-concepts/MED-closure.html#references",
+    "title": "Maximal embedding dimension closure",
+    "section": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
+    "crumbs": [
+      "Basic concepts",
+      "Maximal embedding dimension closure"
+    ]
+  },
+  {
     "objectID": "Basic-concepts/Tau-sequence.html",
     "href": "Basic-concepts/Tau-sequence.html",
     "title": "Tau-sequence",
@@ -2563,7 +2574,7 @@
     "href": "Basic-concepts/Tau-sequence.html#references",
     "title": "Tau-sequence",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nBras-Amorós, Maria. n.d. “Numerical Semigroups and Codes.” In Algebraic Geometry Modeling in Information Theory, 167–218. https://doi.org/10.1142/9789814335768_0005.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Basic concepts",
       "Tau-sequence"
@@ -2673,7 +2684,7 @@
     "href": "Basic-concepts/Nu-sequence.html#references",
     "title": "Nu-sequence",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nBras-Amorós, Maria. n.d. “Numerical Semigroups and Codes.” In Algebraic Geometry Modeling in Information Theory, 167–218. https://doi.org/10.1142/9789814335768_0005.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Basic concepts",
       "Nu-sequence"
@@ -2763,7 +2774,7 @@
     "href": "Basic-concepts/Eliahou-number.html#references",
     "title": "Eliahou number",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nEliahou, Shalom. 2018. “Wilf’s Conjecture and Macaulay’s Theorem.” J. Eur. Math. Soc. 20 (9): 2105–29. https://doi.org/10.4171/JEMS/807.",
     "crumbs": [
       "Basic concepts",
       "Eliahou number"
@@ -2818,7 +2829,7 @@
     "href": "Basic-concepts/RF-matrix.html#references",
     "title": "RF-matrix of a pseudo-Frobenius number",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nMoscariello, Alessio. 2016. “On the Type of an Almost Gorenstein Monomial Curve.” Journal of Algebra 456: 266–77. https://doi.org/https://doi.org/10.1016/j.jalgebra.2016.02.019.",
     "crumbs": [
       "Basic concepts",
       "RF-matrix of a pseudo-Frobenius number"
@@ -2928,7 +2939,7 @@
     "href": "Basic-concepts/Arf-special-gap.html#references",
     "title": "Arf special gap",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nSüer, Meral. 2022. “Irreducibility of Arf Numerical Semigroups.” https://arxiv.org/abs/2207.13206.",
     "crumbs": [
       "Basic concepts",
       "Arf special gap"
@@ -3082,7 +3093,7 @@
     "href": "Basic-concepts/Holes.html#references",
     "title": "Holes",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nEaton, Rachel, Kurt Herzinger, Ian Pierce, and Jeremy Thompson. 2020. “Numerical Semigroups and the Game of Sylver Coinage.” The American Mathematical Monthly 127 (8): pp. 706–715. https://www.jstor.org/stable/48661501.",
     "crumbs": [
       "Basic concepts",
       "Holes"
@@ -3368,7 +3379,7 @@
     "href": "Basic-concepts/Type-sequence.html",
     "title": "Type sequence",
     "section": "",
-    "text": "Let \\(S\\) be a numerical semigroup, let \\(G(S) = \\{x_1, \\ldots, x_g\\}\\) be the set of gaps of \\(S\\) and \\(N(S) = \\{s_1, \\ldots, s_n\\}\\) the set of left elements of \\(S\\), both ordered from smallest to larger. For each \\(j \\in \\{1, \\ldots, g\\}\\), it is defined\n\\[\n\\sigma_j = \\max ~ \\{i \\in \\{1, \\ldots, n\\} ~ | ~ x_j + s_i \\not \\in S \\}.\n\\] Then, it is defined the type sequence of \\(S\\) as the tuple \\((t_1(S), \\ldots, t_n(S))\\), where for all \\(i \\in \\{1, \\ldots, g\\}\\),\n\\[\nt_i(S) = |\\{j \\in \\{1, \\ldots, g\\} ~ | ~ \\sigma_j = i \\}|.\n\\]\nSince \\(s_1 = 0\\), it follows that \\(\\sigma_j\\) is well defined. Moreover, from the definition it is deduced that \\(t_1(S)\\) is the type of \\(S\\) and its sum is \\(\\sum_{i = 1}^n t_i(S) = |G(S)|\\), the genus of \\(S\\).",
+    "text": "Let \\(S\\) be a numerical semigroup, let \\(G(S) = \\{x_1, \\ldots, x_g\\}\\) be the set of gaps of \\(S\\) and \\(N(S) = \\{s_1, \\ldots, s_n\\}\\) the set of left elements of \\(S\\), both ordered from smallest to larger. For each \\(j \\in \\{1, \\ldots, g\\}\\), it is defined\n\\[\n\\sigma_j = \\max ~ \\{i \\in \\{1, \\ldots, n\\} ~ | ~ x_j + s_i \\not \\in S \\}.\n\\]\nThen, it is defined the type sequence of \\(S\\) as the tuple \\((t_1(S), \\ldots, t_n(S))\\), where for all \\(i \\in \\{1, \\ldots, g\\}\\),\n\\[\nt_i(S) = |\\{j \\in \\{1, \\ldots, g\\} ~ | ~ \\sigma_j = i \\}|.\n\\]\nSince \\(s_1 = 0\\), it follows that \\(\\sigma_j\\) is well defined. Moreover, from the definition it is deduced that \\(t_1(S)\\) is the type of \\(S\\) and its sum is \\(\\sum_{i = 1}^n t_i(S) = |G(S)|\\), the genus of \\(S\\).",
     "crumbs": [
       "Basic concepts",
       "Type sequence"
@@ -3379,7 +3390,7 @@
     "href": "Basic-concepts/Type-sequence.html#definition",
     "title": "Type sequence",
     "section": "",
-    "text": "Let \\(S\\) be a numerical semigroup, let \\(G(S) = \\{x_1, \\ldots, x_g\\}\\) be the set of gaps of \\(S\\) and \\(N(S) = \\{s_1, \\ldots, s_n\\}\\) the set of left elements of \\(S\\), both ordered from smallest to larger. For each \\(j \\in \\{1, \\ldots, g\\}\\), it is defined\n\\[\n\\sigma_j = \\max ~ \\{i \\in \\{1, \\ldots, n\\} ~ | ~ x_j + s_i \\not \\in S \\}.\n\\] Then, it is defined the type sequence of \\(S\\) as the tuple \\((t_1(S), \\ldots, t_n(S))\\), where for all \\(i \\in \\{1, \\ldots, g\\}\\),\n\\[\nt_i(S) = |\\{j \\in \\{1, \\ldots, g\\} ~ | ~ \\sigma_j = i \\}|.\n\\]\nSince \\(s_1 = 0\\), it follows that \\(\\sigma_j\\) is well defined. Moreover, from the definition it is deduced that \\(t_1(S)\\) is the type of \\(S\\) and its sum is \\(\\sum_{i = 1}^n t_i(S) = |G(S)|\\), the genus of \\(S\\).",
+    "text": "Let \\(S\\) be a numerical semigroup, let \\(G(S) = \\{x_1, \\ldots, x_g\\}\\) be the set of gaps of \\(S\\) and \\(N(S) = \\{s_1, \\ldots, s_n\\}\\) the set of left elements of \\(S\\), both ordered from smallest to larger. For each \\(j \\in \\{1, \\ldots, g\\}\\), it is defined\n\\[\n\\sigma_j = \\max ~ \\{i \\in \\{1, \\ldots, n\\} ~ | ~ x_j + s_i \\not \\in S \\}.\n\\]\nThen, it is defined the type sequence of \\(S\\) as the tuple \\((t_1(S), \\ldots, t_n(S))\\), where for all \\(i \\in \\{1, \\ldots, g\\}\\),\n\\[\nt_i(S) = |\\{j \\in \\{1, \\ldots, g\\} ~ | ~ \\sigma_j = i \\}|.\n\\]\nSince \\(s_1 = 0\\), it follows that \\(\\sigma_j\\) is well defined. Moreover, from the definition it is deduced that \\(t_1(S)\\) is the type of \\(S\\) and its sum is \\(\\sum_{i = 1}^n t_i(S) = |G(S)|\\), the genus of \\(S\\).",
     "crumbs": [
       "Basic concepts",
       "Type sequence"
@@ -3412,7 +3423,7 @@
     "href": "Basic-concepts/Type-sequence.html#references",
     "title": "Type sequence",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nValentina Barucci, Marco Fontana, David E. Dobb. 1997. Maximality Properties in Numerical Semigroups and Applications to One-Dimensional Analytically Irreducible Local Domains. Vol. 125. Memoirs of the American Mathematical Society 598. American Mathematical Society.",
     "crumbs": [
       "Basic concepts",
       "Type sequence"
@@ -3522,7 +3533,7 @@
     "href": "Basic-concepts/Depth-and-remainder.html#references",
     "title": "Depth and remainder",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nEliahou, Shalom. 2018. “Wilf’s Conjecture and Macaulay’s Theorem.” J. Eur. Math. Soc. 20 (9): 2105–29. https://doi.org/10.4171/JEMS/807.",
     "crumbs": [
       "Basic concepts",
       "Depth and remainder"
@@ -3742,7 +3753,7 @@
     "href": "Basic-concepts/Lattice-path.html#references",
     "title": "Lattice path associated to a numerical semigroup",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nKunz, E., and R. Waldi. 2014. “Geometrical Illustration of Numerical Semigroups and of Some of Their Invariants.” Semigroup Forum 89: 664–91. https://doi.org/10.1007/s00233-014-9599-7.",
     "crumbs": [
       "Basic concepts",
       "Lattice path associated to a numerical semigroup"
@@ -3797,7 +3808,7 @@
     "href": "Basic-concepts/Kunz-polytope.html#references",
     "title": "Kunz polytope",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAlhajjar, Russel, E., and M. Steward. 2019. “Numerical Semigroups and Kunz Polytopes.” Semigroup Forum 99: 153–68. https://doi.org/10.1007/s00233-019-10028-x.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nROSALES, J. C., P. A. GARCÍA-SÁNCHEZ, J. I. GARCÍA-GARCÍA, and M. B. BRANCO. 2002. “SYSTEMS OF INEQUALITIES AND NUMERICAL SEMIGROUPS.” Journal of the London Mathematical Society 65 (3): 611–23. https://doi.org/10.1112/S0024610701003052.",
     "crumbs": [
       "Basic concepts",
       "Kunz polytope"
@@ -3926,7 +3937,7 @@
     "href": "Fact-and-Div/Tame-degree-of-an-element.html#references",
     "title": "Tame degree of an element",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid."
   },
   {
     "objectID": "Fact-and-Div/One-point-algebraic-code.html",
@@ -3954,7 +3965,7 @@
     "href": "Fact-and-Div/One-point-algebraic-code.html#references",
     "title": "One point algebraic code",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid."
   },
   {
     "objectID": "Fact-and-Div/Equal-catenary-degree-element.html",
@@ -4024,7 +4035,7 @@
     "href": "Fact-and-Div/Distance-factorizations.html#references",
     "title": "Distance between factorizations",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid."
   },
   {
     "objectID": "Fact-and-Div/Monotone-catenary-degree-element.html",
@@ -4129,7 +4140,7 @@
     "href": "Fact-and-Div/Apery-set-integer.html#references",
     "title": "Apéry set of an integer",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid."
   },
   {
     "objectID": "Fact-and-Div/w-primality-of-an-element.html",
@@ -4164,7 +4175,7 @@
     "href": "Fact-and-Div/w-primality-of-an-element.html#references",
     "title": "w-primality of an element",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid."
   },
   {
     "objectID": "Fact-and-Div/Catenary-degree-of-an-element.html",
@@ -4199,7 +4210,7 @@
     "href": "Fact-and-Div/Catenary-degree-of-an-element.html#references",
     "title": "Catenary degree of an element",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid."
   },
   {
     "objectID": "Fact-and-Div/Adjustment-NS.html",
@@ -4269,7 +4280,7 @@
     "href": "Fact-and-Div/Chain-of-factorizations.html#references",
     "title": "N-Chain of factorizations",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid."
   },
   {
     "objectID": "Fact-and-Div/Adjacent-catenary-degree-element.html",
@@ -4374,7 +4385,7 @@
     "href": "Fact-and-Div/Feng-Rao-distance.html#references",
     "title": "Feng-Rao distance of an element",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid."
   },
   {
     "objectID": "Fact-and-Div/Elasticity-of-an-element.html",
@@ -4409,7 +4420,7 @@
     "href": "Fact-and-Div/Elasticity-of-an-element.html#references",
     "title": "Elasticity of an element",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid."
   },
   {
     "objectID": "Families-NS/NS-complete-intersection.html",
@@ -4515,7 +4526,7 @@
     "href": "Families-NS/NS-pure.html#references",
     "title": "Pure numerical semigroup",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nBryant, Lance. 2010. “Goto Numbers of a Numerical Semigroup Ring and the Gorensteiness of Associated Graded Rings.” Communications in Algebra 38 (6): 2092–2128. https://doi.org/10.1080/00927870903025993.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Families of numerical semigroups",
       "Pure numerical semigroup"
@@ -4735,7 +4746,7 @@
     "href": "Families-NS/NS-alpha-rectangular.html#references",
     "title": "Alpha rectangular numerical semigroup",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nD’Anna, Micale, M., and Sammartano. 2014. “Classes of Complete Intersection Numerical Semigroups.” Semigroup Forum 88: 453–67. https://doi.org/10.1007/s00233-013-9547-y.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Families of numerical semigroups",
       "Alpha rectangular numerical semigroup"
@@ -5010,7 +5021,7 @@
     "href": "Families-NS/NS-shifted.html#references",
     "title": "Shifted numerical semigroups",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, Manuel. 2019. “Conjecture of Wilf: A Survey.” https://arxiv.org/abs/1902.03461.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nO’Neill, Christopher, and Roberto Pelayo. 2018. “Apéry Sets of Shifted Numerical Monoids.” Advances in Applied Mathematics 97: 27–35. https://doi.org/https://doi.org/10.1016/j.aam.2018.01.005.",
     "crumbs": [
       "Families of numerical semigroups",
       "Shifted numerical semigroups"
@@ -5175,7 +5186,7 @@
     "href": "Families-NS/NS-plane-branch.html#references",
     "title": "Numerical semigroup associated to a plane branch",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Families of numerical semigroups",
       "Numerical semigroup associated to a plane branch"
@@ -5395,7 +5406,7 @@
     "href": "Families-NS/NS-M-pure.html#references",
     "title": "M-pure numerical semigroup",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nBryant, Lance. 2010. “Goto Numbers of a Numerical Semigroup Ring and the Gorensteiness of Associated Graded Rings.” Communications in Algebra 38 (6): 2092–2128. https://doi.org/10.1080/00927870903025993.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Families of numerical semigroups",
       "M-pure numerical semigroup"
@@ -5725,7 +5736,7 @@
     "href": "Families-NS/NS-beta-rectangular.html#references",
     "title": "Beta rectangular numerical semigroup",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Families of numerical semigroups",
       "Beta rectangular numerical semigroup"
@@ -5835,7 +5846,7 @@
     "href": "Families-NS/NS-gamma-rectangular.html#references",
     "title": "Gamma rectangular numerical semigroup",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Families of numerical semigroups",
       "Gamma rectangular numerical semigroup"
@@ -5890,7 +5901,7 @@
     "href": "Families-NS/NS-homogeneous.html#references",
     "title": "Homogeneous numerical semigroup",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nJafari, Zarzuela Armengou, R. 2018. “Homogeneous Numerical Semigroups.” Semigroup Forum 97: 278–306. https://doi.org/10.1007/s00233-018-9941-6.",
     "crumbs": [
       "Families of numerical semigroups",
       "Homogeneous numerical semigroup"
@@ -6209,7 +6220,7 @@
     "href": "Families-NS/NS-duplication.html#references",
     "title": "Duplication of a numerical semigroup",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nStrazzanti, Francesco. September 9, 2014. “Numerical Duplication of a Numerical Semigroup [Powerpoint Slides].” https://www.ugr.es/~imns2010/2014/Slides/IMNS_2014_Strazzanti.pdf.",
     "crumbs": [
       "Families of numerical semigroups",
       "Duplication of a numerical semigroup"
@@ -6429,7 +6440,7 @@
     "href": "Families-NS/NS-Dilatation.html#references",
     "title": "Dilatation of a numerical semigroup",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nBarucci, Strazzanti, V. 2019. “Dilatations of Numerical Semigroups.” Semigroup Forum 98: 251–60. https://doi.org/10.1007/s00233-018-9922-9.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Families of numerical semigroups",
       "Dilatation of a numerical semigroup"
@@ -6484,7 +6495,7 @@
     "href": "Families-NS/NS-generic.html#references",
     "title": "Generic numerical semigroup",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nBlanco, V., P. A. García-Sánchez, and A. Geroldinger. 2011. “Semigroup-theoretical characterizations of arithmetical invariants with applications to numerical monoids and Krull monoids.” Illinois Journal of Mathematics 55 (4): 1385–1414. https://doi.org/10.1215/ijm/1373636689.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Families of numerical semigroups",
       "Generic numerical semigroup"
@@ -6539,7 +6550,7 @@
     "href": "Families-NS/NS-unique-Betti-element.html#references",
     "title": "Unique Betti element numerical semigroup",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nGARCÍA SÁNCHEZ, P. A., I. OJEDA, and J. C. ROSALES. 2012. “AFFINE SEMIGROUPS HAVING a UNIQUE BETTI ELEMENT.” Journal of Algebra and Its Applications 12 (03): 1250177. https://doi.org/10.1142/s0219498812501770.\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "Families of numerical semigroups",
       "Unique Betti element numerical semigroup"
@@ -6688,7 +6699,7 @@
     "href": "Families-NS/NS-Nearly-Gorenstein.html#references",
     "title": "Nearly Gorenstein numerical semigroup",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nMoscariello, Alessio, and Francesco Strazzanti. 2025. “Nearly Gorenstein Numerical Semigroups with Five Generators Have Bounded Type.” https://arxiv.org/abs/2501.08260."
   },
   {
     "objectID": "Families-NS/Wilf-semigroup.html",
@@ -6739,7 +6750,7 @@
     "href": "Families-NS/Wilf-semigroup.html#references",
     "title": "Wilf semigroup",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, Manuel. 2019. “Conjecture of Wilf: A Survey.” https://arxiv.org/abs/1902.03461.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Families of numerical semigroups",
       "Wilf semigroup"
@@ -6849,7 +6860,7 @@
     "href": "Families-NS/NS-additive.html#references",
     "title": "Additive numerical semigroup",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nBryant, Hamblin, L. 2013. “The Maximal Denumerant of a Numerical Semigroup.” Semigroup Forum 86: 571–82. https://doi.org/10.1007/s00233-012-9448-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Families of numerical semigroups",
       "Additive numerical semigroup"
@@ -6888,7 +6899,7 @@
     "href": "Fact-and-Div/Desert.html#references",
     "title": "Desert of a numerical semigroup",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid."
   },
   {
     "objectID": "Fact-and-Div/Order-of-an-element.html",
@@ -6993,7 +7004,7 @@
     "href": "Fact-and-Div/Catenary-degree-of-a-numerical-semigroup.html#references",
     "title": "Catenary degree of a numerical semigroup",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid."
   },
   {
     "objectID": "Fact-and-Div/Divide.html",
@@ -7028,7 +7039,7 @@
     "href": "Fact-and-Div/Divide.html#references",
     "title": "Division between elements in a numerical semigroup",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid."
   },
   {
     "objectID": "Fact-and-Div/Monotone-catenary-degree-NS.html",
@@ -7098,7 +7109,7 @@
     "href": "Fact-and-Div/Elasticity-of-a-numerical-semigroup.html#references",
     "title": "Elasticity of a numerical semigroup",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid."
   },
   {
     "objectID": "Fact-and-Div/Length-factorization.html",
@@ -7133,7 +7144,7 @@
     "href": "Fact-and-Div/Length-factorization.html#references",
     "title": "Length of a factorization",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid."
   },
   {
     "objectID": "Fact-and-Div/Half-factorial-monoid.html",
@@ -7168,7 +7179,7 @@
     "href": "Fact-and-Div/Half-factorial-monoid.html#references",
     "title": "Half-factorial monoid",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid."
   },
   {
     "objectID": "Fact-and-Div/Delta-set-of-an-element.html",
@@ -7203,7 +7214,7 @@
     "href": "Fact-and-Div/Delta-set-of-an-element.html#references",
     "title": "Delta set of an element",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid."
   },
   {
     "objectID": "Fact-and-Div/Set-of-lengths.html",
@@ -7238,7 +7249,7 @@
     "href": "Fact-and-Div/Set-of-lengths.html#references",
     "title": "Set of lengths of an element",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid."
   },
   {
     "objectID": "Fact-and-Div/Feng-Rao-distance-generalized.html",
@@ -7273,7 +7284,7 @@
     "href": "Fact-and-Div/Feng-Rao-distance-generalized.html#references",
     "title": "Generalized Feng-Rao distance of an element",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid."
   },
   {
     "objectID": "Fact-and-Div/Delta-set-of-a-numerical-semigroup.html",
@@ -7343,7 +7354,7 @@
     "href": "Fact-and-Div/w-primality-of-a-numerical-semigroup.html#references",
     "title": "w-primality of a numerical semigroup",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid."
   },
   {
     "objectID": "Fact-and-Div/Equal-catenary-degree-NS.html",
@@ -7413,7 +7424,7 @@
     "href": "Fact-and-Div/Tame-degree-of-a-numerical-semigroup.html#references",
     "title": "Tame degree of a numerical semigroup",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid."
   },
   {
     "objectID": "Basic-concepts/Multiplicity.html",
@@ -7629,7 +7640,7 @@
     "href": "Basic-concepts/Threshold-interval.html#references",
     "title": "Threshold interval",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, Manuel. 2019. “Conjecture of Wilf: A Survey.” https://arxiv.org/abs/1902.03461.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Basic concepts",
       "Threshold interval"
@@ -7959,7 +7970,7 @@
     "href": "Basic-concepts/Binomial-ideal.html#references",
     "title": "Binomial ideal of a numerical semigroup",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nHergoz, Jürgen. 1970. “Generators and Relations of Abelian Semigroups and Semigroup Rings.” Manuscripta Mathematica 3: 175–93. https://doi.org/10.1007/BF01273309.",
     "crumbs": [
       "Basic concepts",
       "Binomial ideal of a numerical semigroup"
@@ -8014,7 +8025,7 @@
     "href": "Basic-concepts/Cocycle.html#references",
     "title": "Cocycle",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nGarcía-Sánchez, P. A., B. A. Heredia, H. İ. Karakaş, and J. C. Rosales. 2016. “Parametrizing Arf Numerical Semigroups.” https://arxiv.org/abs/1604.08929.",
     "crumbs": [
       "Basic concepts",
       "Cocycle"
@@ -8234,7 +8245,7 @@
     "href": "Basic-concepts/L-shape-of-Apery-set.html#references",
     "title": "L-shape of Apéry set",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAguiló-Gost, F., P. A. García-Sánchez, and D. Llena. 2015. “On the Number of l-Shapes in Embedding Dimension Four Numerical Semigroups.” Discrete Mathematics 338 (12): 2168–78. https://doi.org/10.1016/j.disc.2015.05.019.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Basic concepts",
       "L-shape of Apéry set"
@@ -8399,7 +8410,7 @@
     "href": "Basic-concepts/Profile.html#references",
     "title": "Profile",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nEliahou, Shalom. 2018. “Wilf’s Conjecture and Macaulay’s Theorem.” J. Eur. Math. Soc. 20 (9): 2105–29. https://doi.org/10.4171/JEMS/807.",
     "crumbs": [
       "Basic concepts",
       "Profile"
@@ -8564,7 +8575,7 @@
     "href": "Basic-concepts/Wilf-number.html#references",
     "title": "Wilf number",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, Manuel. 2019. “Conjecture of Wilf: A Survey.” https://arxiv.org/abs/1902.03461.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Basic concepts",
       "Wilf number"
@@ -8619,7 +8630,7 @@
     "href": "Basic-concepts/Eliahou-slices.html#references",
     "title": "Eliahou slices",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nEliahou, Shalom. 2018. “Wilf’s Conjecture and Macaulay’s Theorem.” J. Eur. Math. Soc. 20 (9): 2105–29. https://doi.org/10.4171/JEMS/807.",
     "crumbs": [
       "Basic concepts",
       "Eliahou slices"
@@ -8674,7 +8685,7 @@
     "href": "Basic-concepts/Arf-system-of-generators.html#references",
     "title": "Arf system of generators",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nRosales, J. C., P. A. Garcı́a-Sánchez, J. I. Garcı́a-Garcı́a, and M. B. Branco. 2004. “Arf Numerical Semigroups.” Journal of Algebra 276 (1): 3–12. https://doi.org/10.1016/j.jalgebra.2004.03.007.",
     "crumbs": [
       "Basic concepts",
       "Arf system of generators"
@@ -8817,7 +8828,7 @@
     "href": "Basic-concepts/Kunz-coordinates.html#references",
     "title": "Kunz coordinates",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nGarcía-Sánchez, P. A., B. A. Heredia, H. İ. Karakaş, and J. C. Rosales. 2016. “Parametrizing Arf Numerical Semigroups.” https://arxiv.org/abs/1604.08929.",
     "crumbs": [
       "Basic concepts",
       "Kunz coordinates"
@@ -8850,7 +8861,7 @@
     "href": "Meromorphic-series-NS/Pseudo-approximate-root.html#references",
     "title": "Pseudo-approximate root of an irreducible polynomial",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.",
     "crumbs": [
       "Semigroup of an irreducible meromorphic series",
       "Pseudo-approximate root of an irreducible polynomial"
@@ -8883,7 +8894,7 @@
     "href": "Meromorphic-series-NS/Exact-degree-algebroid-curve.html#references",
     "title": "Exact degree of an algebroid curve",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.",
     "crumbs": [
       "Semigroup of an irreducible meromorphic series",
       "Exact degree of an algebroid curve"
@@ -8916,7 +8927,7 @@
     "href": "Meromorphic-series-NS/Polynomial-NS.html#references",
     "title": "Numerical semigroup associated to a polynomial",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.",
     "crumbs": [
       "Semigroup of an irreducible meromorphic series",
       "Numerical semigroup associated to a polynomial"
@@ -8938,7 +8949,7 @@
     "href": "Meromorphic-series-NS/Characteristic-sequences.html#references",
     "title": "Characteristic sequences associated to an irreducible polynomial",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.",
     "crumbs": [
       "Semigroup of an irreducible meromorphic series",
       "Characteristic sequences associated to an irreducible polynomial"
@@ -8971,7 +8982,7 @@
     "href": "Meromorphic-series-NS/Curve-NS.html#references",
     "title": "Numerical semigroup associated to a curve",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.",
     "crumbs": [
       "Semigroup of an irreducible meromorphic series",
       "Numerical semigroup associated to a curve"
@@ -9004,7 +9015,7 @@
     "href": "Meromorphic-series-NS/Very-short-parametrization.html#references",
     "title": "Very short parametrization",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.",
     "crumbs": [
       "Semigroup of an irreducible meromorphic series",
       "Very short parametrization"
@@ -9037,7 +9048,7 @@
     "href": "Meromorphic-series-NS/Exact-degree-polynomial-curve.html#references",
     "title": "Exact degree of a polynomial curve",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.",
     "crumbs": [
       "Semigroup of an irreducible meromorphic series",
       "Exact degree of a polynomial curve"
@@ -9070,7 +9081,7 @@
     "href": "Meromorphic-series-NS/Milnor-number.html#references",
     "title": "Milnor number",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.",
     "crumbs": [
       "Semigroup of an irreducible meromorphic series",
       "Milnor number"
@@ -9114,7 +9125,7 @@
     "href": "Meromorphic-series-NS/Approximate-root.html#references",
     "title": "Approximate root",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.",
     "crumbs": [
       "Semigroup of an irreducible meromorphic series",
       "Approximate root"
@@ -9158,7 +9169,7 @@
     "href": "Meromorphic-series-NS/Support.html#references",
     "title": "Support of a formal series",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.",
     "crumbs": [
       "Semigroup of an irreducible meromorphic series",
       "Support of a formal series"
@@ -9213,7 +9224,7 @@
     "href": "Varieties-NS/Chain-associated-NS.html#references",
     "title": "Chain associated to a numerical semigroup",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "Frobenius varieties",
       "Chain associated to a numerical semigroup"
@@ -9257,7 +9268,7 @@
     "href": "Varieties-NS/V-monoid.html#references",
     "title": "V-monoid",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "Frobenius varieties",
       "V-monoid"
@@ -9301,7 +9312,7 @@
     "href": "Varieties-NS/Frobenius-variety-generated-NS.html#examples-with-gap",
     "title": "Frobenius variety generated by a family of numerical semigroups",
     "section": "Examples with GAP",
-    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to Frobenius variety generated by a family of numerical semigroups. However, given a family of numerical semigroups \\(X\\), the following function computes \\(Ch(X)\\).\ngap&gt; ChainOfFamilyOfNumericalSemigroups := function(X)\n&gt;       local Chain, S;\n&gt;       Chain := [];\n&gt;       for S in X do\n&gt;           if not IsNumericalSemigroup(S) then\n&gt;                   Error(\"The argument must be a list of Numerical Semigroups\");\n&gt;           fi;\n&gt;           Chain := Union(Chain, ChainOfNumericalSemigroup(S));\n&gt;       od;\n&gt;       return Chain;\n&gt; end;\nfunction( X ) ... end\nThe function ChainOfNumericalSemigroup is not implemented in GAP, it computes \\(Ch(S)\\) where \\(S\\) denotes a numerical semigroup.\ngap&gt; ChainOfNumericalSemigroup := function(S)\n&gt;       local g, C, i, F, Min_gen, I, T;\n&gt;       if not IsNumericalSemigroup(S) then\n&gt;               Error(\"The argument must be a Numerical Semigroup\");\n&gt;       fi;\n&gt;       g := Length(Gaps(S));\n&gt;       C := [S];\n&gt;       for i in [1..g] do\n&gt;               F := FrobeniusNumber(C[i]);\n&gt;               Min_gen := MinimalGenerators(C[i]);\n&gt;               I := Union(Min_gen, [F]);\n&gt;               T := NumericalSemigroupByGenerators(I);\n&gt;               Add(C, T);\n&gt;       od;\n&gt;       return C;\n&gt; end;\nfunction( S ) ... end\n\\(\\diamond\\) Let \\(I = \\{\\langle 2,5 \\rangle, \\langle 3,7 \\rangle, \\langle 3,8 \\rangle, \\langle 3,4,5 \\rangle \\}\\), in GAP:\ngap&gt; S_1 := NumericalSemigroup(2,5);\n&lt;Numerical semigroup with 2 generators&gt;\ngap&gt; S_2 := NumericalSemigroup(3,7);\n&lt;Numerical semigroup with 2 generators&gt;\ngap&gt; S_3 := NumericalSemigroup(3,8);\n&lt;Numerical semigroup with 2 generators&gt;\ngap&gt; S_4 := NumericalSemigroup(3,4,5);\n&lt;Numerical semigroup with 3 generators&gt;\ngap&gt; I := [S_1, S_2, S_3, S_4];\n[ &lt;Numerical semigroup with 2 generators&gt;, &lt;Numerical semigroup with 2 generators&gt;,\n  &lt;Numerical semigroup with 2 generators&gt;, &lt;Numerical semigroup with 3 generators&gt;\n ]\nFrom the functions defined above,\ngap&gt; C := ChainOfFamilyOfNumericalSemigroups(I);\n[ &lt;The numerical semigroup N&gt;, &lt;Numerical semigroup with 2 generators&gt;,\n  &lt;Numerical semigroup with 2 generators&gt;, &lt;Numerical semigroup with 3 generators&gt;,\n  &lt;Numerical semigroup with 3 generators&gt;, &lt;Numerical semigroup with 3 generators&gt;,\n  &lt;Numerical semigroup with 3 generators&gt;, &lt;Numerical semigroup with 2 generators&gt;,\n  &lt;Numerical semigroup with 3 generators&gt;, &lt;Numerical semigroup with 3 generators&gt;,\n  &lt;Numerical semigroup with 2 generators&gt; ]\ngap&gt; List(C, S -&gt; MinimalGenerators(S));\n[ [ 1 ], [ 2, 3 ], [ 2, 5 ], [ 3 .. 5 ], [ 3, 5, 7 ], [ 3, 7, 8 ], [ 3, 7, 11 ],\n  [ 3, 7 ], [ 3, 8, 10 ], [ 3, 8, 13 ], [ 3, 8 ] ]\nTherefore,\n\\[\nCh(I) = \\{S_1, S_2, S_3, S_4, \\langle 2,3 \\rangle, \\langle 3,5,7 \\rangle, \\langle 3,7,8 \\rangle,\n\\] \\[\n\\langle 3,7,11 \\rangle, \\langle 3,8,10 \\rangle, \\langle 3,8,13 \\rangle, \\mathbb{N} \\},\n\\]\nand the Frobenius variety generated by \\(I\\) is the set of all finite intersections of elements in \\(Ch(I)\\).",
+    "text": "Examples with GAP\nNowadays, there are no functions in package NumericalSgps related to Frobenius variety generated by a family of numerical semigroups. However, given a family of numerical semigroups \\(X\\), the following function computes \\(Ch(X)\\).\ngap&gt; ChainOfFamilyOfNumericalSemigroups := function(X)\n&gt;       local Chain, S;\n&gt;       Chain := [];\n&gt;       for S in X do\n&gt;           if not IsNumericalSemigroup(S) then\n&gt;                   Error(\"The argument must be a list of Numerical Semigroups\");\n&gt;           fi;\n&gt;           Chain := Union(Chain, ChainOfNumericalSemigroup(S));\n&gt;       od;\n&gt;       return Chain;\n&gt; end;\nfunction( X ) ... end\nThe function ChainOfNumericalSemigroup is not implemented in GAP, it computes \\(Ch(S)\\) where \\(S\\) denotes a numerical semigroup.\ngap&gt; ChainOfNumericalSemigroup := function(S)\n&gt;       local g, C, i, F, Min_gen, I, T;\n&gt;       if not IsNumericalSemigroup(S) then\n&gt;               Error(\"The argument must be a Numerical Semigroup\");\n&gt;       fi;\n&gt;       g := Length(Gaps(S));\n&gt;       C := [S];\n&gt;       for i in [1..g] do\n&gt;               F := FrobeniusNumber(C[i]);\n&gt;               Min_gen := MinimalGenerators(C[i]);\n&gt;               I := Union(Min_gen, [F]);\n&gt;               T := NumericalSemigroupByGenerators(I);\n&gt;               Add(C, T);\n&gt;       od;\n&gt;       return C;\n&gt; end;\nfunction( S ) ... end\n\\(\\diamond\\) Let \\(I = \\{\\langle 2,5 \\rangle, \\langle 3,7 \\rangle, \\langle 3,8 \\rangle, \\langle 3,4,5 \\rangle \\}\\), in GAP:\ngap&gt; S_1 := NumericalSemigroup(2,5);\n&lt;Numerical semigroup with 2 generators&gt;\ngap&gt; S_2 := NumericalSemigroup(3,7);\n&lt;Numerical semigroup with 2 generators&gt;\ngap&gt; S_3 := NumericalSemigroup(3,8);\n&lt;Numerical semigroup with 2 generators&gt;\ngap&gt; S_4 := NumericalSemigroup(3,4,5);\n&lt;Numerical semigroup with 3 generators&gt;\ngap&gt; I := [S_1, S_2, S_3, S_4];\n[ &lt;Numerical semigroup with 2 generators&gt;, &lt;Numerical semigroup with 2 generators&gt;,\n  &lt;Numerical semigroup with 2 generators&gt;, &lt;Numerical semigroup with 3 generators&gt;\n ]\nFrom the functions defined above,\ngap&gt; C := ChainOfFamilyOfNumericalSemigroups(I);\n[ &lt;The numerical semigroup N&gt;, &lt;Numerical semigroup with 2 generators&gt;,\n  &lt;Numerical semigroup with 2 generators&gt;, &lt;Numerical semigroup with 3 generators&gt;,\n  &lt;Numerical semigroup with 3 generators&gt;, &lt;Numerical semigroup with 3 generators&gt;,\n  &lt;Numerical semigroup with 3 generators&gt;, &lt;Numerical semigroup with 2 generators&gt;,\n  &lt;Numerical semigroup with 3 generators&gt;, &lt;Numerical semigroup with 3 generators&gt;,\n  &lt;Numerical semigroup with 2 generators&gt; ]\ngap&gt; List(C, S -&gt; MinimalGenerators(S));\n[ [ 1 ], [ 2, 3 ], [ 2, 5 ], [ 3 .. 5 ], [ 3, 5, 7 ], [ 3, 7, 8 ], [ 3, 7, 11 ],\n  [ 3, 7 ], [ 3, 8, 10 ], [ 3, 8, 13 ], [ 3, 8 ] ]\nTherefore,\n\\[\nCh(I) = \\{S_1, S_2, S_3, S_4, \\langle 2,3 \\rangle, \\langle 3,5,7 \\rangle, \\langle 3,7,8 \\rangle,\n\\]\n\\[\n\\langle 3,7,11 \\rangle, \\langle 3,8,10 \\rangle, \\langle 3,8,13 \\rangle, \\mathbb{N} \\},\n\\]\nand the Frobenius variety generated by \\(I\\) is the set of all finite intersections of elements in \\(Ch(I)\\).",
     "crumbs": [
       "Frobenius varieties",
       "Frobenius variety generated by a family of numerical semigroups"
@@ -9312,7 +9323,7 @@
     "href": "Varieties-NS/Frobenius-variety-generated-NS.html#references",
     "title": "Frobenius variety generated by a family of numerical semigroups",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "Frobenius varieties",
       "Frobenius variety generated by a family of numerical semigroups"
@@ -9367,7 +9378,7 @@
     "href": "Ideals-NS/Standard-canonical-ideal.html#references",
     "title": "Standard canonical ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Standard canonical ideal"
@@ -9422,7 +9433,7 @@
     "href": "Ideals-NS/Translation-ideal.html#references",
     "title": "Translation of a relative ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Translation of a relative ideal"
@@ -9477,7 +9488,7 @@
     "href": "Ideals-NS/Z-irreducible-ideal.html#references",
     "title": "Z-irreducible ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Z-irreducible ideal"
@@ -9587,7 +9598,7 @@
     "href": "Ideals-NS/Maximal-ideal.html#references",
     "title": "Maximal ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Maximal ideal"
@@ -9642,7 +9653,7 @@
     "href": "Ideals-NS/Microinvariants.html#references",
     "title": "Microinvariants",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nBarucci, Valentina, and Ralf Fröberg. 2011. “Associated Graded Rings of One-Dimensional Analytically Irreducible Rings II.” Journal of Algebra 336 (1): 279–85. https://doi.org/https://doi.org/10.1016/j.jalgebra.2010.12.033.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nElias, Juan. 2001. “On the Deep Structure of the Blowing-up of Curve Singularities.” Mathematical Proceedings of the Cambridge Philosophical Society 131 (September): 227–40. https://doi.org/10.1017/S0305004101005217.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Microinvariants"
@@ -9697,7 +9708,7 @@
     "href": "Ideals-NS/Reduction.html#references",
     "title": "Reduction of a proper ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Reduction of a proper ideal"
@@ -9807,7 +9818,7 @@
     "href": "Ideals-NS/Ideal-admits-pattern.html#references",
     "title": "Ideal admits the pattern",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nStokes, K. 2016. “Patterns of Ideals of Numerical Semigroups.” Semigroup Forum 93: 180–200. https://doi.org/10.1007/s00233-015-9741-1.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Ideal admits the pattern"
@@ -9862,7 +9873,7 @@
     "href": "Ideals-NS/Multiplicity-ideal.html#references",
     "title": "Multiplicity of an ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Multiplicity of an ideal"
@@ -9917,7 +9928,7 @@
     "href": "Ideals-NS/Genus-ideal.html#references",
     "title": "Genus of a relative ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Genus of a relative ideal"
@@ -9972,7 +9983,7 @@
     "href": "Ideals-NS/Pseudo-Frobenius-number-ideal.html#references",
     "title": "Pseudo-Frobenius number of a relative ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Pseudo-Frobenius number of a relative ideal"
@@ -10027,7 +10038,7 @@
     "href": "Ideals-NS/Stable-ideal.html#references",
     "title": "Stable proper ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Stable proper ideal"
@@ -10082,7 +10093,7 @@
     "href": "Ideals-NS/Frobenius-number-ideal.html#references",
     "title": "Frobenius number of an ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Frobenius number of an ideal"
@@ -10137,7 +10148,7 @@
     "href": "Ideals-NS/Blowup.html#references",
     "title": "Blowup of a relative ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Blowup of a relative ideal"
@@ -10192,7 +10203,7 @@
     "href": "Ideals-NS/Canonical-ideal.html#references",
     "title": "Canonical ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Canonical ideal"
@@ -10247,7 +10258,7 @@
     "href": "Ideals-NS/Maximum-sparse-ideal.html#references",
     "title": "Maximum sparse ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Maximum sparse ideal"
@@ -10302,7 +10313,7 @@
     "href": "Ideals-NS/Trace-ideal.html#references",
     "title": "Trace ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nHerzog, Jürgen, Takayuki Hibi, and Dumitru I. Stamate. 2021. “Canonical Trace Ideal and Residue for Numerical Semigroup Rings.” Semigroup Forum 103 (2): 550–66. https://doi.org/10.1007/s00233-021-10205-x.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Trace ideal"
@@ -10357,7 +10368,7 @@
     "href": "Ideals-NS/Minimal-set-generators-ideal.html#references",
     "title": "Minimal set of generators of an ideal",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Ideals and numerical semigroups",
       "Minimal set of generators of an ideal"
@@ -10412,7 +10423,7 @@
     "href": "Prop-modular-NS/Weight-mod-Diophantine-ineq.html#references",
     "title": "Weight of a modular Diophantine inequality",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "Proportionally modular numerical semigroups",
       "Weight of a modular Diophantine inequality"
@@ -10467,7 +10478,7 @@
     "href": "Prop-modular-NS/Modulus-prop-mod-Diophantine-ineq.html#references",
     "title": "Modulus of a proportionally modular Diophantine inequality",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "Proportionally modular numerical semigroups",
       "Modulus of a proportionally modular Diophantine inequality"
@@ -10522,7 +10533,7 @@
     "href": "Prop-modular-NS/Period-of-a-subadditive-function.html#references",
     "title": "Period of a subadditive function",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "Proportionally modular numerical semigroups",
       "Period of a subadditive function"
@@ -10577,7 +10588,7 @@
     "href": "Prop-modular-NS/Subadditive-function.html#references",
     "title": "Subadditive function",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "Proportionally modular numerical semigroups",
       "Subadditive function"
@@ -10632,7 +10643,7 @@
     "href": "Prop-modular-NS/Proportion-prop-mod-Diophantine-ineq.html#references",
     "title": "Proportion of a proportionally modular Diophantine inequality",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "Proportionally modular numerical semigroups",
       "Proportion of a proportionally modular Diophantine inequality"
@@ -10687,7 +10698,7 @@
     "href": "Prop-modular-NS/Proper-Bezout-sequence.html#references",
     "title": "Proper Bézout sequence",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "Proportionally modular numerical semigroups",
       "Proper Bézout sequence"
@@ -10720,7 +10731,7 @@
     "href": "Structure-NS/M-weakly-cancellative.html#examples",
     "title": "Weakly cancellative monoid",
     "section": "Examples",
-    "text": "Examples\n\\(\\circ\\) If \\(A\\) is a cancellative monoid, then it is a weakly cancellative monoid.\n\\(\\circ\\) Let \\(R\\) be an unitary ring and let us consider \\(A = (M_2(R), \\cdot)\\), where \\(M_2(R)\\) denotes the set of \\(2 \\times 2\\) matrix with coefficients in \\(R\\) and \\(\\cdot\\) denotes the usual matrix product. Let us suppose that there exist \\(A,B \\in M_2(R)\\) such that for all \\(C \\in M_2(R) \\setminus \\{Id\\}\\), it holds \\(AC = BC\\). Let us consider\n\\[\nC_{1,1} = \\begin{pmatrix}\n  1 & 0 \\\\\n  0 & 0\n\\end{pmatrix}.\n\\] If \\(AC = BC\\), then \\(a_{1,1}c_{1,1} + a_{1,2}c_{2,1} = b_{1,1}c_{1,1} + b_{1,2}c_{2,1}\\), and consequently \\(a_{1,1} = b_{1,1}\\). With an analogous argument it is obtained that \\(a_{i,j} = b_{i,j}\\) for \\(i,j \\in \\{1,2\\}\\), concluding that \\(A = B\\). Therefore, \\((M_2(R), \\cdot)\\) is a weakly cancellative monoid.",
+    "text": "Examples\n\\(\\circ\\) If \\(A\\) is a cancellative monoid, then it is a weakly cancellative monoid.\n\\(\\circ\\) Let \\(R\\) be an unitary ring and let us consider \\(A = (M_2(R), \\cdot)\\), where \\(M_2(R)\\) denotes the set of \\(2 \\times 2\\) matrix with coefficients in \\(R\\) and \\(\\cdot\\) denotes the usual matrix product. Let us suppose that there exist \\(A,B \\in M_2(R)\\) such that for all \\(C \\in M_2(R) \\setminus \\{Id\\}\\), it holds \\(AC = BC\\). Let us consider\n\\[\nC_{1,1} = \\begin{pmatrix}\n  1 & 0 \\\\\n  0 & 0\n\\end{pmatrix}.\n\\]\nIf \\(AC = BC\\), then \\(a_{1,1}c_{1,1} + a_{1,2}c_{2,1} = b_{1,1}c_{1,1} + b_{1,2}c_{2,1}\\), and consequently \\(a_{1,1} = b_{1,1}\\). With an analogous argument it is obtained that \\(a_{i,j} = b_{i,j}\\) for \\(i,j \\in \\{1,2\\}\\), concluding that \\(A = B\\). Therefore, \\((M_2(R), \\cdot)\\) is a weakly cancellative monoid.",
     "crumbs": [
       "The structure of a numerical semigroup",
       "Weakly cancellative monoid"
@@ -10731,7 +10742,7 @@
     "href": "Structure-NS/M-weakly-cancellative.html#references",
     "title": "Weakly cancellative monoid",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "The structure of a numerical semigroup",
       "Weakly cancellative monoid"
@@ -10775,7 +10786,7 @@
     "href": "Structure-NS/Archimedean-property.html#references",
     "title": "Archimedean property of an element",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "The structure of a numerical semigroup",
       "Archimedean property of an element"
@@ -10819,7 +10830,7 @@
     "href": "Structure-NS/M-cancellative.html#references",
     "title": "Cancellative monoid",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "The structure of a numerical semigroup",
       "Cancellative monoid"
@@ -10863,7 +10874,7 @@
     "href": "Structure-NS/M-quasi-Archimedean.html#references",
     "title": "Quasi-Archimedean monoid",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "The structure of a numerical semigroup",
       "Quasi-Archimedean monoid"
@@ -10907,7 +10918,7 @@
     "href": "Structure-NS/Congruence-on-a-semigroup.html#references",
     "title": "Congruence on a semigroup",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "The structure of a numerical semigroup",
       "Congruence on a semigroup"
@@ -10962,7 +10973,7 @@
     "href": "Presentations-NS/Hilbert-series.html#references",
     "title": "Hilbert series",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Presentations of a numerical smeigroup",
       "Hilbert series"
@@ -11017,7 +11028,7 @@
     "href": "Presentations-NS/Factorizations-R-related.html#references",
     "title": "Factorizations R-related",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Presentations of a numerical smeigroup",
       "Factorizations R-related"
@@ -11072,7 +11083,7 @@
     "href": "Presentations-NS/Congruence-set.html#references",
     "title": "Congruences",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.\n\n\nRosales, J. C., and P. A. Garcı́a-Sánchez. 2009. Numerical Semigroups. Springer.",
     "crumbs": [
       "Presentations of a numerical smeigroup",
       "Congruences"
@@ -11127,7 +11138,7 @@
     "href": "Presentations-NS/Betti-element.html#references",
     "title": "Betti element",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Presentations of a numerical smeigroup",
       "Betti element"
@@ -11136,56 +11147,56 @@
   {
     "objectID": "Presentations-NS/Set-of-factorizations.html",
     "href": "Presentations-NS/Set-of-factorizations.html",
-    "title": "Set of factorizations / Set of expressions",
+    "title": "Set of factorizations",
     "section": "",
     "text": "Let \\(S\\) be a numerical semigroup with minimal set of generators \\(\\{n_1, n_2, \\ldots, n_p\\}\\) and factorization homomorphism \\(\\phi\\). Given \\(s \\in S\\), it is defined the set of factorizations (or the set of expressions) of \\(s\\) in \\(S\\) as\n\\[\n\\mathbf{Z}(s) = \\phi^{-1}(s) = \\{a \\in \\mathbb{N}^p ~ | ~ \\phi(a) = s\\}.\n\\]\nIt is said that \\(s \\in S\\) has unique expression if the set \\(\\mathbf{Z}(s)\\) has only one element. It can be proven that for any \\(s \\in S\\), the set of factorizations \\(\\mathbf{Z}(s)\\) is finite. The cardinality of \\(|\\mathbf{Z}(s)|\\) is called the denumerant of \\(s\\) in \\(S\\).",
     "crumbs": [
       "Presentations of a numerical smeigroup",
-      "Set of factorizations / Set of expressions"
+      "Set of factorizations"
     ]
   },
   {
     "objectID": "Presentations-NS/Set-of-factorizations.html#definition",
     "href": "Presentations-NS/Set-of-factorizations.html#definition",
-    "title": "Set of factorizations / Set of expressions",
+    "title": "Set of factorizations",
     "section": "",
     "text": "Let \\(S\\) be a numerical semigroup with minimal set of generators \\(\\{n_1, n_2, \\ldots, n_p\\}\\) and factorization homomorphism \\(\\phi\\). Given \\(s \\in S\\), it is defined the set of factorizations (or the set of expressions) of \\(s\\) in \\(S\\) as\n\\[\n\\mathbf{Z}(s) = \\phi^{-1}(s) = \\{a \\in \\mathbb{N}^p ~ | ~ \\phi(a) = s\\}.\n\\]\nIt is said that \\(s \\in S\\) has unique expression if the set \\(\\mathbf{Z}(s)\\) has only one element. It can be proven that for any \\(s \\in S\\), the set of factorizations \\(\\mathbf{Z}(s)\\) is finite. The cardinality of \\(|\\mathbf{Z}(s)|\\) is called the denumerant of \\(s\\) in \\(S\\).",
     "crumbs": [
       "Presentations of a numerical smeigroup",
-      "Set of factorizations / Set of expressions"
+      "Set of factorizations"
     ]
   },
   {
     "objectID": "Presentations-NS/Set-of-factorizations.html#examples",
     "href": "Presentations-NS/Set-of-factorizations.html#examples",
-    "title": "Set of factorizations / Set of expressions",
+    "title": "Set of factorizations",
     "section": "Examples",
     "text": "Examples\n\\(\\circ\\) Let \\(S = \\langle 7, 9, 12 \\rangle\\) and \\(s = 33\\). To compute \\(\\mathbf{Z}(s)\\), we need all the elements \\((\\alpha, \\beta, \\gamma) \\in \\mathbb{N}^3\\) such that\n\\[\n7 \\alpha + 9 \\beta + 12 \\gamma = 33.\n\\]\nEach coefficient has an upper bound, which is\\(\\alpha \\le \\lfloor \\frac{33}{7} \\rfloor = 4, \\beta \\le \\lfloor \\frac{33}{9} \\rfloor = 3, \\gamma \\le \\lfloor \\frac{33}{12} \\rfloor = 2\\). Then, \\(\\phi(\\alpha, \\beta, \\gamma) = s\\) implies \\(0 \\le \\alpha \\le 4, 0 \\le \\beta \\le 3\\) and \\(0 \\le \\gamma \\le 2\\). From this bounds it is deduced that \\(\\mathbf{Z}(33) = \\{(3,0,1), (0,1,2)\\}\\).",
     "crumbs": [
       "Presentations of a numerical smeigroup",
-      "Set of factorizations / Set of expressions"
+      "Set of factorizations"
     ]
   },
   {
     "objectID": "Presentations-NS/Set-of-factorizations.html#examples-with-gap",
     "href": "Presentations-NS/Set-of-factorizations.html#examples-with-gap",
-    "title": "Set of factorizations / Set of expressions",
+    "title": "Set of factorizations",
     "section": "Examples with GAP",
     "text": "Examples with GAP\nThe following examples are made with the package NumericalSgps in GAP.\n\\(\\diamond\\) Let \\(S = \\langle 37, 42, 44, 51 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(37, 42, 44, 51);\n&lt;Numerical semigroup with 4 generators&gt;\nGiven a numerical semigroup \\(S\\) and an element \\(n \\in S\\), the functions Factorizations and FactorizationsElementWRTNumericalSemigroup return the set of factorizations of \\(n\\) in terms of the minimal generating set of \\(S\\).\ngap&gt; Factorizations(S, 500);\n[ [ 10, 1, 2, 0 ], [ 2, 7, 3, 0 ], [ 4, 0, 8, 0 ], [ 11, 1, 0, 1 ], [ 3, 7, 1, 1 ], [ 5, 0, 6, 1 ], [ 6, 0, 4, 2 ],\n  [ 7, 0, 2, 3 ], [ 8, 0, 0, 4 ], [ 0, 6, 1, 4 ] ]\ngap&gt; Factorizations(500, S);\n[ [ 10, 1, 2, 0 ], [ 2, 7, 3, 0 ], [ 4, 0, 8, 0 ], [ 11, 1, 0, 1 ], [ 3, 7, 1, 1 ], [ 5, 0, 6, 1 ], [ 6, 0, 4, 2 ],\n  [ 7, 0, 2, 3 ], [ 8, 0, 0, 4 ], [ 0, 6, 1, 4 ] ]\ngap&gt; Factorizations(S, 500) = FactorizationsElementWRTNumericalSemigroup(500, S);\ntrue\n\\(\\diamond\\) Given a list of integers \\(Is\\) and an integer \\(n\\), the function FactorizationsIntegerWRTList computes the set of factorizations of \\(n\\) in terms of the elements in the list \\(Is\\).\ngap&gt; I := [5, 10, 12];\n[ 5, 10, 12 ]\ngap&gt; FactorizationsIntegerWRTList(40, I);\n[ [ 8, 0, 0 ], [ 6, 1, 0 ], [ 4, 2, 0 ], [ 2, 3, 0 ], [ 0, 4, 0 ] ]\nGiven a numerical semigroup \\(S\\) and a list of elements \\(Is\\) in \\(S\\), the function FactorizationsElementListWRTNumericalSemigroup computes the set of factorizations of each element in terms of its minimal generating set.\ngap&gt; FactorizationsElementListWRTNumericalSemigroup([320, 321, 322], S);\n[ [ [ 0, 1, 4, 2 ], [ 1, 1, 2, 3 ], [ 2, 1, 0, 4 ], [ 4, 2, 2, 0 ],\n      [ 5, 2, 0, 1 ] ], [ [ 0, 4, 0, 3 ], [ 3, 5, 0, 0 ] ],\n  [ [ 0, 0, 5, 2 ], [ 1, 0, 3, 3 ], [ 2, 0, 1, 4 ], [ 4, 1, 3, 0 ],\n      [ 5, 1, 1, 1 ] ] ]\n\\(\\diamond\\) Let \\(S = \\langle 14, 17, 20, 32 \\rangle\\), in GAP:\ngap&gt; S := NumericalSemigroup(14, 17, 20, 32);\n&lt;Numerical semigroup with 4 generators&gt;\nGiven a numerical semigroup \\(S\\) and a positive integer \\(n\\), the function DenumerantOfElementInNumericalSemigroup returns the number of factorizations of \\(n\\) in terms of the minimal generating set of \\(S\\), that is, \\(|\\mathbf{Z}(n)|\\) in \\(S\\).\ngap&gt; DenumerantOfElementInNumericalSemigroup(100, S);\n4\ngap&gt; DenumerantOfElementInNumericalSemigroup(21, S);\n0\nMoreover, given a numerical semigroup \\(S\\), the function DenumerantFunction returns a function such that for a given \\(n\\) computes the number of factorizations of \\(n\\) in terms of the minimal generating set of \\(S\\).\ngap&gt; f := DenumerantFunction(S);\nfunction( n ) ... end\ngap&gt; f(101);\n2\ngap&gt; DenumerantOfElementInNumericalSemigroup(101, S);\n2",
     "crumbs": [
       "Presentations of a numerical smeigroup",
-      "Set of factorizations / Set of expressions"
+      "Set of factorizations"
     ]
   },
   {
     "objectID": "Presentations-NS/Set-of-factorizations.html#references",
     "href": "Presentations-NS/Set-of-factorizations.html#references",
-    "title": "Set of factorizations / Set of expressions",
+    "title": "Set of factorizations",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Presentations of a numerical smeigroup",
-      "Set of factorizations / Set of expressions"
+      "Set of factorizations"
     ]
   },
   {
@@ -11237,7 +11248,7 @@
     "href": "Presentations-NS/Graph-associated-to-an-element.html#references",
     "title": "Graph associated to an element by set of factorizations",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\nAssi, Abdallah, Marco D’Anna, and Pedro A. Garcı́a-Sánchez. 2020. Numerical Semigroups and Applications. Vol. 3. RSME Springer Series. Springer, [Cham]. https://doi.org/10.1007/978-3-030-54943-5.\n\n\nDelgado, M., P. A. García-Sánchez, and J. Morais. 2006. “On the GAP Package Numericalsgps.” In Fifth Conference on Discrete Mathematics and Computer Science (Spanish), 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.",
     "crumbs": [
       "Presentations of a numerical smeigroup",
       "Graph associated to an element by set of factorizations"

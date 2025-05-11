@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>apery-table – Wiki numerical semigroups</title>
+<title>Apéry table – Wiki numerical semigroups</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -144,7 +164,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Ideals-NS/Almost-canonical-ideal.html">Ideals and numerical semigroups</a></li><li class="breadcrumb-item"><a href="../Ideals-NS/Apery-table.html">Definition</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Ideals-NS/Almost-canonical-ideal.html">Ideals and numerical semigroups</a></li><li class="breadcrumb-item"><a href="../Ideals-NS/Apery-table.html">Apéry table</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -797,7 +817,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Ideals-NS/Apery-table.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Definition</span></a>
+ <span class="menu-text">Apéry table</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -923,7 +943,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Ideals-NS/Proper-ideal.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Proper ideal / Integral ideal / Ideal</span></a>
+ <span class="menu-text">Proper ideal</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1244,7 +1264,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Presentations-NS/Set-of-factorizations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Set of factorizations / Set of expressions</span></a>
+ <span class="menu-text">Set of factorizations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1535,12 +1555,28 @@ window.Quarto = {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Ideals-NS/Almost-canonical-ideal.html">Ideals and numerical semigroups</a></li><li class="breadcrumb-item"><a href="../Ideals-NS/Apery-table.html">Definition</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Ideals-NS/Almost-canonical-ideal.html">Ideals and numerical semigroups</a></li><li class="breadcrumb-item"><a href="../Ideals-NS/Apery-table.html">Apéry table</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Apéry table</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<!-- Cortadellas Ben\'{\i}tez, T., Jafari, R. and Zarzuela Armengou, S., On teh Ap\'ery sets of monomial curves, Semigroup Forum, 86 (2013), 289--320. -->
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!-- Cortadellas Ben\'{\i}tez, T., Jafari, R. and Zarzuela Armengou, S., On the Apéry sets of monomial curves, Semigroup Forum, 86 (2013), 289--320. -->
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
 <p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> with <a href="../Basic-concepts/Multiplicity.html">multiplicity</a> <span class="math inline">\(m\)</span> and <span class="math inline">\(M = S \setminus \{0\}\)</span> its <a href="../Ideals-NS/Maximal-ideal.html">maximal ideal</a> with <a href="../Ideals-NS/Reduction-number.html">reduction number</a> <span class="math inline">\(r\)</span>. It is defined the Apéry table of <span class="math inline">\(S\)</span>, denoted by <span class="math inline">\(Ap(S)\)</span>, as the matrix <span class="math inline">\((r+1) \times m\)</span> such that the first row is the <a href="../Basic-concepts/Apery-set.html">Apéry set</a> of <span class="math inline">\(S\)</span> in <span class="math inline">\(m\)</span> and the <span class="math inline">\(k-\)</span>th row is the <a href="../Ideals-NS/Apery-set-ideal.html">Apéry set</a> of <span class="math inline">\((k+1)M\)</span> in <span class="math inline">\(m\)</span> for <span class="math inline">\(k \in \{2, \ldots, r\}\)</span>, where</p>
@@ -1602,6 +1638,14 @@ Ap(S) = \begin{pmatrix}
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-ASMC" class="csl-entry" role="listitem">
+Benítez, Teresa Cortadellas, Raheleh Jafari, and Santiago Zarzuela Armengou. 2012. <span>“On the Apery Sets of Monomial Curves.”</span> <a href="https://arxiv.org/abs/1205.4118">https://arxiv.org/abs/1205.4118</a>.
+</div>
+<div id="ref-JMDA" class="csl-entry" role="listitem">
+Delgado, M., P. A. García-Sánchez, and J. Morais. 2006. <span>“On the <span>GAP</span> Package Numericalsgps.”</span> In <em>Fifth <span>C</span>onference on <span>D</span>iscrete <span>M</span>athematics and <span>C</span>omputer <span>S</span>cience (<span>S</span>panish)</em>, 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.
+</div>
+</div>
 
 
 </section>

@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -799,7 +819,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Ideals-NS/Apery-table.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Definition</span></a>
+ <span class="menu-text">Apéry table</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -925,7 +945,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Ideals-NS/Proper-ideal.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Proper ideal / Integral ideal / Ideal</span></a>
+ <span class="menu-text">Proper ideal</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1246,7 +1266,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Presentations-NS/Set-of-factorizations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Set of factorizations / Set of expressions</span></a>
+ <span class="menu-text">Set of factorizations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1558,7 +1578,7 @@ window.Quarto = {
 </header>
 
 
-<!--  -->
+<!-- NGNS -->
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
 <p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> <a href="../Basic-concepts/Minimal-set-of-generators.html">minimally generated</a> by <span class="math inline">\(P(S) = \{n_1, \ldots, n_e\}\)</span>, ordered from smallest to largest, and set of <a href="../Basic-concepts/Pseudo-Frobenius-number.html">pseudo Frobenius numbers</a> <span class="math inline">\(PF(S)\)</span>. It is said that <span class="math inline">\(S\)</span> is nearly Gorenstein if for every <span class="math inline">\(i \in \{1, \ldots, e\}\)</span>, there exists <span class="math inline">\(f_i \in PF(S)\)</span> such that <span class="math inline">\(n_i + f_i - f \in S\)</span> for all <span class="math inline">\(f \in PF(S)\)</span>. The pairs <span class="math inline">\((f_1, \ldots, f_e) \in PF(S)^e\)</span> that fulfills the condition are called nearly Gorenstein vectors.</p>
@@ -1590,6 +1610,14 @@ PF(S) := \{x \not \in S ~ | ~ x + s \in S, ~ \text{for all} ~  s \in S \setminus
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-JMDA" class="csl-entry" role="listitem">
+Delgado, M., P. A. García-Sánchez, and J. Morais. 2006. <span>“On the <span>GAP</span> Package Numericalsgps.”</span> In <em>Fifth <span>C</span>onference on <span>D</span>iscrete <span>M</span>athematics and <span>C</span>omputer <span>S</span>cience (<span>S</span>panish)</em>, 23:271–78. Ciencias (Valladolid). Secr. Publ. Intercamb. Ed., Valladolid: Univ. Valladolid.
+</div>
+<div id="ref-NGNS" class="csl-entry" role="listitem">
+Moscariello, Alessio, and Francesco Strazzanti. 2025. <span>“Nearly Gorenstein Numerical Semigroups with Five Generators Have Bounded Type.”</span> <a href="https://arxiv.org/abs/2501.08260">https://arxiv.org/abs/2501.08260</a>.
+</div>
+</div>
 
 
 </section>
