@@ -2,7 +2,15 @@
 title: "Inductive numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
+
+---
+nocite: |
+  @JMDA
+---
+
 
 <!--  -->
 
@@ -57,3 +65,7 @@ gap> SmallElements(S);
 The function `SmallElements` returns a list with the [left elements](../Basic-concepts/Left-elements.qmd) and the [conductor](../Basic-concepts/Conductor.qmd) of the given numerical semigroup. Therefore, $S_5 = \{0, 400, 800, 1200, 1600, 1800, 2000, 2050, 2060, \rightarrow\}$.
 
 ## References
+
+::: {#refs}
+
+:::

@@ -2,7 +2,15 @@
 title: "Homogenization of a numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
+
+---
+nocite: |
+  @FIHFAS, @JMDA
+---
+
 
 <!-- -->
 
@@ -111,3 +119,7 @@ gap> HomogeneousCatenaryDegreeOfNumericalSemigroup(S);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

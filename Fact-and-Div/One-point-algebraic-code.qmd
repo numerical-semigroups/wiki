@@ -8,7 +8,7 @@ cls: apa
 
 ---
 nocite: |
-  @nsapp2, @JMDA
+  @nsapp2
 ---
 
 ## Definition
@@ -21,9 +21,6 @@ $$
 
 Set $\mathcal{L}(mQ) = \{f \in R ~ | ~ v_Q(f) \ge -m\}$, where $v_Q$ is the discrete valuation at $Q$. The image of $-v_Q$ of $R^*$ is a numerical semigroup, say $S$. Given $s \in S$, it is defined the one point algebraic code as the orthogonal (with respect to the usual dot product) of $ev_{\mathcal{P}}(\mathcal{L}(sQ))$.
 
-## Examples
-
-$\circ$
 
 ## References
 

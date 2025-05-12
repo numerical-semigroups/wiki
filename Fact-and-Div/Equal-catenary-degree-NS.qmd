@@ -2,13 +2,16 @@
 title: "Equal catenary degree of a numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
 
-```{=html}
-<!-- //// P. A. García-Sánchez, I. Ojeda, A.
-Sánchez-R.-Navarro, Factorization invariants in half-factorial affine
-semigroups, Internat. J. Algebra Comput. 23 (2013), 111–122. -->
-```
+---
+nocite: |
+  @FIHFAS, @JMDA
+---
+
+
 ## Definition
 
 Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is defined the equal catenary degree of $S$, denoted by $EqC(S)$, as
@@ -61,3 +64,7 @@ gap> EqualCatenaryDegreeOfNumericalSemigroup(S);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

@@ -2,7 +2,15 @@
 title: "Cyclotomic numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
+
+---
+nocite: |
+  @CNS, @JMDA
+---
+
 
 <!-- -->
 
@@ -72,3 +80,8 @@ true
 ```
 
 ## References
+
+::: {#refs}
+
+:::
+

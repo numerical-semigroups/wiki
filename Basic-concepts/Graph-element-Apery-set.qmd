@@ -2,7 +2,15 @@
 title: "Graph associated to an element by Apéry set"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
+
+---
+nocite: |
+  @JMDA
+---
+
 
 <!--  -->
 
@@ -371,3 +379,7 @@ digraph  NSGraph{rankdir = TB; edge[dir=back];
 :::
 
 ## References
+
+::: {#refs}
+
+:::

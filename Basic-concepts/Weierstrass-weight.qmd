@@ -2,7 +2,15 @@
 title: "Weierstrass weight"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
+
+---
+nocite: |
+  @WeightNS, @JMDA
+---
+
 
 <!--  -->
 
@@ -49,3 +57,7 @@ gap> Weight(S);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

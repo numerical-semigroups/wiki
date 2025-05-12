@@ -2,7 +2,15 @@
 title: "Denumerant ideal"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
+
+---
+nocite: |
+  @DFRNAP, @JMDA
+---
+
 
 <!-- ??? -->
 
@@ -51,3 +59,7 @@ gap> SmallElements(I);
 Therefore, $D(S, 20) = \{280, 284, 288, 289, 290, 292, \rightarrow\}$.
 
 ## References
+
+::: {#refs}
+
+:::

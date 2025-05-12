@@ -2,7 +2,15 @@
 title: "Monotone catenary degree of an element"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
+
+---
+nocite: |
+  @FIHFAS, @JMDA
+---
+
 
 <!-- -->
 
@@ -97,3 +105,7 @@ gap> EqualCatenaryDegreeOfSetOfFactorizations(Is);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

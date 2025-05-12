@@ -2,6 +2,13 @@
 title: "Adjustment of a numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @MDNS, @JMDA
 ---
 
 <!-- Maximal-denumerant-NS -->
@@ -93,3 +100,7 @@ gap> AdjustmentOfElementInNumericalSemigroup(S, 300);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

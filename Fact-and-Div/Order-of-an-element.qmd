@@ -2,6 +2,13 @@
 title: "Order of an element"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @MDNS, @JMDA
 ---
 
 <!-- Maximal-denumerant-NS -->
@@ -88,3 +95,7 @@ gap> MaximalDenumerant(415,S);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

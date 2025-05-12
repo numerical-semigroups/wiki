@@ -2,7 +2,15 @@
 title: "Degrees of a primitive element"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
+
+---
+nocite: |
+  @CPMNS, @JMDA
+---
+
 
 <!--  -->
 
@@ -120,3 +128,7 @@ gap> Length(T);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

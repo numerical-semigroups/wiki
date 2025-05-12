@@ -2,6 +2,13 @@
 title: "Maximal denumerant of a numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @MDNS, @JMDA
 ---
 
 <!-- Maximal-denumerant-NS -->
@@ -78,3 +85,7 @@ gap> MaximalDenumerant(S, 720);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

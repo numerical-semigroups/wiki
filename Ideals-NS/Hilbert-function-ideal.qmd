@@ -2,7 +2,15 @@
 title: "Hilbert function of a proper ideal"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
+
+---
+nocite: |
+  @JMDA
+---
+
 
 <!--  -->
 
@@ -77,3 +85,7 @@ gap> f(50);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

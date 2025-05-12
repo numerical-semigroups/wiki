@@ -2,7 +2,15 @@
 title: "Maximal embedding dimension system of generators"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
+
+---
+nocite: |
+  @NSMED, @JMDA
+---
+
 
 <!--  -->
 
@@ -52,3 +60,7 @@ gap> MinimalMEDGeneratingSystemOfMEDNumericalSemigroup(S);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

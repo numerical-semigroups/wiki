@@ -2,7 +2,15 @@
 title: "Multiple of a numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
+
+---
+nocite: |
+  @JMDA
+---
+
 
 <!--  -->
 
@@ -156,3 +164,7 @@ gap> WhichIsMultipleOfNumericalSemigroup(T,S);
 Therefore, $T = 5\cdot S \cup \{1735, \rightarrow\}$.
 
 ## References
+
+::: {#refs}
+
+:::

@@ -2,7 +2,15 @@
 title: "Generalized almost symmetric numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
+
+---
+nocite: |
+  @ACINS, @JMDA
+---
+
 
 <!--  -->
 
@@ -61,6 +69,8 @@ false
 ## References
 
 
+::: {#refs}
 
+:::
 
 

@@ -2,7 +2,15 @@
 title: "Uniquely presented numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
+
+---
+nocite: |
+  @UPFGCM, @JMDA
+---
+
 
 <!--  -->
 
@@ -84,3 +92,7 @@ gap> Length(relations);
 and $S$ is not uniquely presented, as we obtained before.
 
 ## References
+
+::: {#refs}
+
+:::

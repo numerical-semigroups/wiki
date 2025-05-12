@@ -2,7 +2,15 @@
 title: "Left elements of a relative ideal"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
+
+---
+nocite: |
+  @nsapp2, @JMDA
+---
+
 
 <!--  -->
 
@@ -60,3 +68,7 @@ gap> SmallElements(S);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

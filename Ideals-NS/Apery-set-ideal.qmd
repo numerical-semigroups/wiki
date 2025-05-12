@@ -2,7 +2,15 @@
 title: "Apéry list of a relative ideal"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
+
+---
+nocite: |
+  @ASICMNS, @JMDA
+---
+
 
 <!-- -->
 
@@ -69,3 +77,7 @@ true
 ```
 
 ## References
+
+::: {#refs}
+
+:::

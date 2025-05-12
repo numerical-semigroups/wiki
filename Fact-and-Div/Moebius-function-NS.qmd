@@ -2,6 +2,13 @@
 title: "Moebius function of a numerical semigroup"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @OMFNS, @JMDA
 ---
 
 <!-- Moebius_function_of_locally_finite_poset_associated_NS -->
@@ -74,3 +81,7 @@ gap> MoebiusFunctionAssociatedToNumericalSemigroup(S, 100);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

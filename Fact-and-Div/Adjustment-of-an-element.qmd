@@ -2,13 +2,20 @@
 title: "Adjustment of an element"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @MDNS, @JMDA
 ---
 
 <!-- Maximal-denumerant-NS -->
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](Numerical-semigroup.qmd) [minimally generated](../Basic-concepts/Minimal-set-of-factorizations.qmd) by $P(S) = \{n_1, \ldots, n_e\}$ with $n_1 < n_2 < \ldots < n_e$, and let $s \in S$ with [order](Order-of-an-element.qmd) $ord(s)$. It is defined the adjustment of $s$ in $S$, denoted by $adj(s;S)$ or simply $adj(s)$, as $adj(s) = s - ord(s) \cdot n_1$.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $P(S) = \{n_1, \ldots, n_e\}$ with $n_1 < n_2 < \ldots < n_e$, and let $s \in S$ with [order](Order-of-an-element.qmd) $ord(s)$. It is defined the adjustment of $s$ in $S$, denoted by $adj(s;S)$ or simply $adj(s)$, as $adj(s) = s - ord(s) \cdot n_1$.
 
 This definition comes from the objective of finding an algorithm to compute the [maximal denumerant of a numerical semigroup](Maximal-denumerant-NS).
 
@@ -70,3 +77,7 @@ gap> AdjustmentOfElementInNumericalSemigroup(S, s);
 ```
 
 ## References
+
+::: {#refs}
+
+:::

@@ -8,10 +8,10 @@ cls: apa
 
 ---
 nocite: |
-  @JMDA
+  @JMDA, @CMCNS
 ---
 
-<!--  -->
+<!-- Computation MED closure of a NS -->
 
 ## Definition
 

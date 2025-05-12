@@ -2,27 +2,16 @@
 title: "Cyclotomic exponent sequence"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
 
-<!-- @article{doi:10.1137/140989479,
-author = {Ciolan, Emil-Alexandru and Garc\'{\i}a-S\'{a}nchez, Pedro A. and Moree, Pieter},
-title = {Cyclotomic Numerical Semigroups},
-journal = {SIAM Journal on Discrete Mathematics},
-volume = {30},
-number = {2},
-pages = {650-668},
-year = {2016},
-doi = {10.1137/140989479},
+---
+nocite: |
+  @CNS, @JMDA
+---
 
-URL = { 
-    
-        https://doi.org/10.1137/140989479
-    
-}, 
-
-
-Cyclotomic-exponent-sequence
--->
+<!-- Cyclotomic-exponent-sequence -->
 
 ## Definition
 
@@ -78,3 +67,7 @@ gap> CyclotomicExponentSequence(S, 40);
 
 
 ## References
+
+::: {#refs}
+
+:::

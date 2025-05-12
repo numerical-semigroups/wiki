@@ -2,7 +2,15 @@
 title: "Star closure"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
 ---
+
+---
+nocite: |
+  @PMDI, @JMDA
+---
+
 
 <!-- -->
 
@@ -86,3 +94,7 @@ gap> M := MinimalGenerators(St);
 The functions `SmallElements` and `MinimalGenerators` returns the set of [small elements](Left-elements-ideal.qmd) and thee set of [minimal generators](Minimal-set-generators-ideal.qmd), respectively. Then, the star closure is $St(I) = M + S$.
 
 ## References
+
+::: {#refs}
+
+:::

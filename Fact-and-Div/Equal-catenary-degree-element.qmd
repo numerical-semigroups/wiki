@@ -2,6 +2,13 @@
 title: "Equal catenary degree of an element"
 format: html
 engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @FIHFAS, @JMDA
 ---
 
 <!-- P. A. García-Sánchez, I. Ojeda, A.
@@ -69,3 +76,7 @@ gap> EqualCatenaryDegreeOfSetOfFactorizations(Is);
 ```
 
 ## References
+
+::: {#refs}
+
+:::
