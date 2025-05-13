@@ -55,7 +55,7 @@ website:
           - Basic-concepts/Semigroup-ring.qmd
           - Basic-concepts/Set-divisors.qmd
           - Basic-concepts/Special-gap.qmd
-          - Basic-concepts/Standard-representation-free-NS.qmd
+          - Basic-concepts/Standard-repr-free-NS.qmd
           - Basic-concepts/Tau-sequence.qmd
           - Basic-concepts/Threshold-interval.qmd
           - Basic-concepts/Type-sequence.qmd
@@ -161,15 +161,15 @@ website:
           - Fact-and-div/Adjustment-NS.qmd
           - Fact-and-div/Adjustment-of-an-element.qmd
           - Fact-and-div/Apery-set-integer.qmd
-          - Fact-and-div/Catenary-degree-of-a-numerical-semigroup.qmd
+          - Fact-and-div/Catenary-degree-NS.qmd
           - Fact-and-div/Catenary-degree-of-an-element.qmd
           - Fact-and-div/Chain-of-factorizations.qmd
-          - Fact-and-div/Delta-set-of-a-numerical-semigroup.qmd
+          - Fact-and-div/Delta-set-NS.qmd
           - Fact-and-div/Delta-set-of-an-element.qmd
           - Fact-and-div/Desert.qmd
           - Fact-and-div/Distance-factorizations.qmd
           - Fact-and-div/Divide.qmd
-          - Fact-and-div/Elasticity-of-a-numerical-semigroup.qmd
+          - Fact-and-div/Elasticity-NS.qmd
           - Fact-and-div/Elasticity-of-an-element.qmd
           - Fact-and-div/Equal-catenary-degree-NS.qmd
           - Fact-and-div/Equal-catenary-degree-element.qmd
@@ -185,9 +185,9 @@ website:
           - Fact-and-div/One-point-algebraic-code.qmd
           - Fact-and-div/Order-of-an-element.qmd
           - Fact-and-div/Set-of-lengths.qmd
-          - Fact-and-div/Tame-degree-of-a-numerical-semigroup.qmd
+          - Fact-and-div/Tame-degree-NS.qmd
           - Fact-and-div/Tame-degree-of-an-element.qmd
-          - Fact-and-div/w-primality-of-a-numerical-semigroup.qmd
+          - Fact-and-div/w-primality-NS.qmd
           - Fact-and-div/w-primality-of-an-element.qmd
 
       - section: "Frobenius varieties"
@@ -234,7 +234,7 @@ website:
           - Structure-NS/Archimedean-property.qmd
           - Structure-NS/Congruence-on-a-semigroup.qmd
           - Structure-NS/M-cancellative.qmd
-          - Structure-NS/M-hereditarily-finitely-generated.qmd
+          - Structure-NS/M-hered-finitely-generated.qmd
           - Structure-NS/M-quasi-Archimedean.qmd
           - Structure-NS/M-weakly-cancellative.qmd
           - Structure-NS/Quotient-group-monoid.qmd
