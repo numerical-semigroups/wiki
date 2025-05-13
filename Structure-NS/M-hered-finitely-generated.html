@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Delta set of a numerical semigroup – Wiki numerical semigroups</title>
+<title>Hereditarily finitely generated monoid – Wiki numerical semigroups</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,42 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -71,7 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-85d6ed6ef93f7b75ae44cb4d7fc8909c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -144,9 +129,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      Wiki numerical semigroups
-      </li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Structure-NS/Archimedean-property.html">The structure of a numerical semigroup</a></li><li class="breadcrumb-item"><a href="../Structure-NS/M-hered-finitely-generated.html">Hereditarily finitely generated monoid</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -455,7 +438,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Basic-concepts/Standard-representation-free-NS.html" class="sidebar-item-text sidebar-link">
+  <a href="../Basic-concepts/Standard-repr-free-NS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Standard representation in a free Numerical semigroup</span></a>
   </div>
 </li>
@@ -1036,7 +1019,7 @@ window.Quarto = {
  <span class="menu-text">Fact-and-div/Apery-set-integer.qmd</span>
   </li>
           <li class="sidebar-item">
- <span class="menu-text">Fact-and-div/Catenary-degree-of-a-numerical-semigroup.qmd</span>
+ <span class="menu-text">Fact-and-div/Catenary-degree-NS.qmd</span>
   </li>
           <li class="sidebar-item">
  <span class="menu-text">Fact-and-div/Catenary-degree-of-an-element.qmd</span>
@@ -1045,7 +1028,7 @@ window.Quarto = {
  <span class="menu-text">Fact-and-div/Chain-of-factorizations.qmd</span>
   </li>
           <li class="sidebar-item">
- <span class="menu-text">Fact-and-div/Delta-set-of-a-numerical-semigroup.qmd</span>
+ <span class="menu-text">Fact-and-div/Delta-set-NS.qmd</span>
   </li>
           <li class="sidebar-item">
  <span class="menu-text">Fact-and-div/Delta-set-of-an-element.qmd</span>
@@ -1060,7 +1043,7 @@ window.Quarto = {
  <span class="menu-text">Fact-and-div/Divide.qmd</span>
   </li>
           <li class="sidebar-item">
- <span class="menu-text">Fact-and-div/Elasticity-of-a-numerical-semigroup.qmd</span>
+ <span class="menu-text">Fact-and-div/Elasticity-NS.qmd</span>
   </li>
           <li class="sidebar-item">
  <span class="menu-text">Fact-and-div/Elasticity-of-an-element.qmd</span>
@@ -1108,13 +1091,13 @@ window.Quarto = {
  <span class="menu-text">Fact-and-div/Set-of-lengths.qmd</span>
   </li>
           <li class="sidebar-item">
- <span class="menu-text">Fact-and-div/Tame-degree-of-a-numerical-semigroup.qmd</span>
+ <span class="menu-text">Fact-and-div/Tame-degree-NS.qmd</span>
   </li>
           <li class="sidebar-item">
  <span class="menu-text">Fact-and-div/Tame-degree-of-an-element.qmd</span>
   </li>
           <li class="sidebar-item">
- <span class="menu-text">Fact-and-div/w-primality-of-a-numerical-semigroup.qmd</span>
+ <span class="menu-text">Fact-and-div/w-primality-NS.qmd</span>
   </li>
           <li class="sidebar-item">
  <span class="menu-text">Fact-and-div/w-primality-of-an-element.qmd</span>
@@ -1336,13 +1319,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
  <span class="menu-text">The structure of a numerical semigroup</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Structure-NS/Archimedean-property.html" class="sidebar-item-text sidebar-link">
@@ -1363,7 +1346,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Structure-NS/M-hereditarily-finitely-generated.html" class="sidebar-item-text sidebar-link">
+  <a href="../Structure-NS/M-hered-finitely-generated.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Hereditarily finitely generated monoid</span></a>
   </div>
 </li>
@@ -1539,9 +1522,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Structure-NS/Archimedean-property.html">The structure of a numerical semigroup</a></li><li class="breadcrumb-item"><a href="../Structure-NS/M-hered-finitely-generated.html">Hereditarily finitely generated monoid</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Delta set of a numerical semigroup</h1>
+<h1 class="title">Hereditarily finitely generated monoid</h1>
 </div>
 
 
@@ -1558,47 +1541,22 @@ window.Quarto = {
 </header>
 
 
-<!-- Num. appl. // [GMV15] Garc\'{\i}a-Garc\'{\i}a, J. I., Moreno-Fr\'{\i}as, M. A. and Vigneron-Tenorio, A., Computation of Delta sets of numerical monoids, Monatsh. Math. , 178 (2015), 457--472. -->
+<!-- Definición de Num. Sem. -->
 <section id="definition" class="level2">
 <h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> <a href="../Basic-concepts/Minimal-set-of-generators.html">minimally generated</a> by <span class="math inline">\(P = \{n_1, \ldots, n_p\}\)</span>. It is defined the Delta set of <span class="math inline">\(S\)</span>, denoted by <span class="math inline">\(\Delta(S)\)</span>, as</p>
-<p><span class="math display">\[
-\Delta(S) = \bigcup_{s \in S} \Delta(s),
-\]</span></p>
-<p>where <span class="math inline">\(\Delta(s)\)</span> denotes the <a href="../Fact-and-Div/Delta-set-of-an-element.html">delta set of s</a> in <span class="math inline">\(S\)</span>. If <span class="math inline">\(Betti(S)\)</span> is the set of <a href="../Presentations-NS/Betti-element.html">Betti elements</a> of <span class="math inline">\(S\)</span>, it can be proven that</p>
-<p><span class="math display">\[
-\max \Delta(S) = \max \{\max \Delta(b) ~ | ~ b \in Betti(S)\}.
-\]</span></p>
-<p>On the other hand, there exists <span class="math inline">\(N_S \in \mathbb{N}\)</span> such that <span class="math inline">\(\Delta(s)\)</span> is periodic from <span class="math inline">\(N_S\)</span> and its period is equal to <span class="math inline">\(lcm(n_1, n_p)\)</span>.</p>
-<p>Given a numerical semigroup <span class="math inline">\(S\)</span>, there is a relation between its Delta set <span class="math inline">\(\Delta(S)\)</span>, its <a href="../Fact-and-Div/Catenary-degree-of-a-numerical-semigroup.html">catenary degree</a> <span class="math inline">\(\mathbf{C}(S)\)</span>, its <a href="../Fact-and-Div/w-primality-of-a-numerical-semigroup.html">w-primality</a> <span class="math inline">\(\omega(S)\)</span> and its <a href="../Fact-and-Div/Tame-degree-of-a-numerical-semigroup.html">tame degree</a> <span class="math inline">\(\mathbf{t}(S)\)</span>, which is</p>
-<p><span class="math display">\[
-\max \Delta(S) + 2 \le \mathbf{C}(S) \le \omega(S) \le \mathbf{t}(S).
-\]</span></p>
+<p>Let <span class="math inline">\(A\)</span> be a monoid. It is said that <span class="math inline">\(A\)</span> is a hereditarily finitely generated monoid if every submonoid is finitely generated.</p>
 </section>
 <section id="examples" class="level2">
 <h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<!-- Ej. de Num. Sem. Appl. -->
-<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 2, 3 \rangle\)</span>. If <span class="math inline">\(\nabla_s\)</span> is not connected, where <span class="math inline">\(\nabla_s\)</span> denotes the <a href="../Presentations-NS/Graph-associated-to-an-element.html">graph associated to s</a>, then <span class="math inline">\(s = n + w\)</span> with <span class="math inline">\(n \in \{2,3\}\)</span> and <span class="math inline">\(w \in Ap(S,2)\)</span>. From the above argument, it is deduced that <span class="math inline">\(Betti(S) = \{6\}\)</span>, and its <a href="../Presentations-NS/Set-of-factorizations.html">set of factorizations</a> is <span class="math inline">\(\mathbf{Z}(6) = \{(3,0),(0,2)\}\)</span>. Thus, <span class="math inline">\(\Delta(6) = \{1\}\)</span> and <span class="math inline">\(\max \Delta(S) = \{1\}\)</span>. Finally, <span class="math inline">\(\Delta(S) = \{1\}\)</span>.</p>
-</section>
-<section id="examples-with-gap" class="level2">
-<h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
-<p>The following example is made with the package NumericalSgps in GAP.</p>
-<p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 13, 45, 60, 89 \rangle\)</span>, in GAP:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">13</span><span class="op">,</span> <span class="fl">45</span><span class="op">,</span> <span class="fl">60</span><span class="op">,</span> <span class="fl">89</span>)<span class="op">;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">4</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Given a numerical semigroup <span class="math inline">\(S\)</span>, the functions <code>DeltaSet</code> and <code>DeltaSetOfNumericalSemigroup</code> return the Delta set of <span class="math inline">\(S\)</span>. If we also give an element <span class="math inline">\(n \in S\)</span> in <code>DeltaSet</code>, the function returns the Delta set of <span class="math inline">\(n\)</span> in <span class="math inline">\(S\)</span>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">DeltaSet</span>(<span class="va">S</span>)<span class="op">;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>[ <span class="fl">1</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">3</span><span class="op">,</span> <span class="fl">4</span><span class="op">,</span> <span class="fl">6</span><span class="op">,</span> <span class="fl">7</span><span class="op">,</span> <span class="fl">11</span> ]</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">DeltaSet</span>(<span class="va">S</span><span class="op">,</span> <span class="fl">314</span>)<span class="op">;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>[ <span class="fl">1</span><span class="op">,</span> <span class="fl">2</span><span class="op">,</span> <span class="fl">4</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Given a numerical semigroup <span class="math inline">\(S\)</span>, the function <code>DeltaSetPeriodicityBoundForNumericalSemigroup</code> returns the bound where the periodicity starts for Delta sets of the elements in <span class="math inline">\(S\)</span>, <span class="math inline">\(N_S\)</span>. On the other hand, the function <code>DeltaSetPeriodicityStartForNumericalSemigroup</code> computes the actual element were the periodicity stars for Delta sets of the elements in <span class="math inline">\(S\)</span>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">DeltaSetPeriodicityBoundForNumericalSemigroup</span>(<span class="va">S</span>)<span class="op">;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fl">10065</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">DeltaSetPeriodicityStartForNumericalSemigroup</span>(<span class="va">S</span>)<span class="op">;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fl">496</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="math inline">\(\circ\)</span> Let us consider <span class="math inline">\(A = (\mathbb{N}, +)\)</span> and <span class="math inline">\(X\)</span> a submonoid of <span class="math inline">\(A\)</span>. Let <span class="math inline">\(d = gcd(X)\)</span> and <span class="math inline">\(S = \left \{\frac{x}{d} ~ | ~ x \in X \right\}\)</span>. Since <span class="math inline">\(gcd(S) = 1\)</span>, it is well known that <span class="math inline">\(S\)</span> is a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> and it has a <a href="../Basic-concepts/Minimal-set-of-generators.html">minimal set of generators</a> <span class="math inline">\(P\)</span>. Then, <span class="math inline">\(dP = \{dp ~ | ~ p \in P\}\)</span> is a set of generators of <span class="math inline">\(X\)</span> and <span class="math inline">\(A\)</span> is a hereditarily finitely generated monoid.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-ns" class="csl-entry" role="listitem">
+Rosales, J. C., and P. A. Garcı́a-Sánchez. 2009. <em>Numerical Semigroups</em>. Springer.
+</div>
+</div>
 
 
 </section>
