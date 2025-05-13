@@ -48,12 +48,24 @@ gap> IsSimpleNumericalSemigroup := function(S)
 function( S ) ... end
 ```
 
-The function `pivots` is not yet implemented in GAP, it computes the constants $c_i$ defined above.
+The function `pivots` is not implemented in GAP yet, it computes the constants $c_i$ defined above.
 
 ``` gap
-gap> pivots:=function(s)
+gap> pivots:=function(s, I...)
 >    local cs,msg,e,a,c,ap,i,rmsg,rs,d;
->    msg:=MinimalGenerators(s);
+>    if Length(I) = 0 then
+>       msg:=MinimalGenerators(s);
+>    elif Length(I) = 1 then
+>       msg:=I[1];
+>    else
+>       Error("The number of arguments must be one or two");
+>    fi;
+>    if not IsList(msg) or msg = [] then
+>       Error("Second argument must be an arrangement of the minimal system of generators of the first argument");
+>    fi;
+>    if not SortedList(msg) = MinimalGenerators(s) then
+>       Error("Second argument must be an arrangement of the minimal system of generators of the first argument");
+>    fi;   
 >    e:=EmbeddingDimension(s);
 >    cs:=[]; 
 >    for i in [1..e] do
@@ -122,6 +134,4 @@ function( S ) ... end
 ## References
 
 ::: {#refs}
-
 :::
-
