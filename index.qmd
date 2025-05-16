@@ -1,8 +1,7 @@
 ---
 title: "About Numerical Semigroups"
 author: 
-  - Ángel Álamo
-  - Pedro A. García-Sánchez
+  - name: Ángel Álamo
 engine: markdown
 bibliography: Bibliography.bib
 cls: apa
@@ -12,6 +11,9 @@ cls: apa
 nocite: |
   @ns, @nsapp2, @JMDA
 ---
+
+The first version of this wiki is the result of my internship in the Master's degree in Mathematics under the supervision of Pedro A. García-Sánchez.
+
 
 The notion of numerical semigroup resides in the universe of natural numbers (taking into account the zero) with the usual addition operation. Formally, a numerical semigroup is a subset $S \subseteq \mathbb{N}$ such that fulfills the following conditions.
 

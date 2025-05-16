@@ -1,0 +1,44 @@
+---
+title: "How to contribute"
+engine: markdown
+bibliography: Bibliography.bib
+cls: apa
+---
+
+This page is intended to explain how to contribute in the wiki. Every case is explained below and the steps to follow.
+
+
+## Fixing errors
+
+If you have notice of an error, such a wrong definition or a wrong example, fork this repository on your GitHub account and do a Pull Request with the relevant changes. If the error is related with a wrong definition, please give a reference where the definition is given. If the error is related with a proposition or a proof, please give a reference explaining where is the proof or the counterexample in the description of the Pull Request.
+
+
+## Adding new definitions
+
+If you want to contribute adding a new concept, the following structure must be follow.
+
+ - Definition: All definitions related to numerical semigroups and their notations that are used to define the concept must be explained, and if any definition has a dedicated page in the wiki, link to it in the name of the definition. If the concept needs a previous result, it can be written at the beginning. Additionally, at the end of the section you can add some relevant results to handle the concept, and it must be referenced in section "Reference" or at the end of the statement.
+ 
+ 
+ - Examples: each example considered must be related with the concept defined in the page. The example has to be at least in one of the following groups:
+    
+    1. A particular case where the concept is shown.
+    
+    2. A particular case to reaffirm or refuse a property of the concept.
+    
+    3. A short demonstration of a result widely known in the literature. The statement of the result has to be written at the beginning.
+
+
+  - Examples with GAP: if there are no functions in GAP or in package NumericalSgps related with the concept, the following sentence has to be written at the beginning: "Nowadays, there are no functions in package NumericalSgps related to (name of the concept)". If you have made a function related to the concept, the code has to be written in the page and also in the document named "GAP-functions". In "GAP-functions" the code must be commented, and if the function is based on a proposition, the reference must be written in the description of the Pull-request and in the section "Reference" of the page. If there are functions in GAP or in package NumericalSgps related to the concept, the example must be a particular case. You have to mention the arguments that have to be passed, the name of the function (if several functions return the same result, you have to put all of them) and the result that it returns in each case.
+  
+  
+  - References: in this section has to be at least the reference where the concept is defined. If package NumericalSgps has been used in section "Examples with GAP", it has to be referenced. The package has key "JMDA" in the bibliography.
+
+
+
+
+
+
+
+
+
