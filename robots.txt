@@ -1,1 +1,1 @@
-Sitemap: https://AngelAlamo.github.io/Prueba-WNS/sitemap.xml
+Sitemap: https://numerical-semigroups.github.io/wiki/sitemap.xml
