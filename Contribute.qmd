@@ -12,6 +12,8 @@ This page is intended to explain how to contribute in the wiki. Every case is ex
 
 If you have notice of an error, such a wrong definition or a wrong example, fork this repository on your GitHub account and do a Pull Request with the relevant changes. If the error is related with a wrong definition, please give a reference where the definition is given. If the error is related with a proposition or a proof, please give a reference explaining where is the proof or the counterexample in the description of the Pull Request.
 
+You can also report an [issue](https://github.com/numerical-semigroups/wiki/issues) if you find a typo or you want to suggest a small change.
+
 
 ## Adding new definitions
 

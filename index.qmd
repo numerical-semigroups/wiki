@@ -12,7 +12,7 @@ nocite: |
   @ns, @nsapp2, @JMDA
 ---
 
-The first version of this wiki is the result of my internship in the Master's degree in Mathematics under the supervision of Pedro A. García-Sánchez.
+The first version of this wiki is the result of my internship in the Master's degree in Mathematics under the supervision of [Pedro A. García-Sánchez](https://github.com/pedritomelenas).
 
 
 The notion of numerical semigroup resides in the universe of natural numbers (taking into account the zero) with the usual addition operation. Formally, a numerical semigroup is a subset $S \subseteq \mathbb{N}$ such that fulfills the following conditions.

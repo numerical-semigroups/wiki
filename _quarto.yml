@@ -4,6 +4,17 @@ project:
   
 website:
   title: "Wiki numerical semigroups"
+  navbar:
+    right:
+      - icon: github
+        aria-label: GitHub
+        menu:
+          - text: Source code
+            href: https://github.com/numerical-semigroups/wiki
+          - text: Report an issue
+            href: https://github.com/numerical-semigroups/wiki/issues
+
+
   sidebar:
     collapse-level: 1
     contents:
