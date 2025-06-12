@@ -89,7 +89,7 @@ gap> S := NumericalSemigroup(15, 18, 22, 32);
 <Numerical semigroup with 4 generators>
 ```
 
-Given a set of factorizations $f$, the function `DotEliahouGraph` returns the graph (in dot) of factorizations associated to $f$. Edges are labelled with [distances](../Fact-and-Div/Distance-factorizations.qmd) between nodes they join.
+Given a set of factorizations $f$, the function `DotEliahouGraph` returns the graph (in dot) of factorizations associated to $f$. Edges are labelled with [distances](../Fact-and-div/Distance-factorizations.qmd) between nodes they join.
 
 ``` gap
 gap> 120 in S;

@@ -15,7 +15,7 @@ nocite: |
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), $s \in S$, let $\mathbf{Z}(s)$ be the [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) and let $\mathbf{L}(s)$ be the [set of lengths](../Fact-and-div/Set-of-lengths.qmd) of $s$ in $S$. It is defined the maximal denumerant of $s$ in $S$, denoted by $d_{max}(s;S)$, as the number of factorizations $x \in \mathbf{Z}(s)$ such that the [length](../Fact-and-div/Length-factorization.qmd) of $x$ is maximum in $\mathbf{L}(s)$, that is,
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), $s \in S$, let $\mathbf{Z}(s)$ be the [set of factorizations](Set) and let $\mathbf{L}(s)$ be the [set of lengths](Set-of-lengths.qmd) of $s$ in $S$. It is defined the maximal denumerant of $s$ in $S$, denoted by $d_{max}(s;S)$, as the number of factorizations $x \in \mathbf{Z}(s)$ such that the [length](../Fact-and-div/Length-factorization.qmd) of $x$ is maximum in $\mathbf{L}(s)$, that is,
 
 $$
 d_{max}(s;S) = |\{x \in \mathbf{Z}(s) ~ | ~ |x| = \max \mathbf{L}(s) \}|,

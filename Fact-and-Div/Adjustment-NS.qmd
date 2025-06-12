@@ -25,7 +25,7 @@ where $adj(s;S)$ denotes the [adjustment of the element](Adjustment-of-an-elemen
 
 -   For all $i \in \{0, \ldots, n_1 - 1\}$, let $S_i = \{w(i)\}$, where $w(i) \in Ap(S, n_1)$ is such that $w(i) \equiv i ~ (mod ~ n_1)$.
 
--   Let $b_i = w'(i) + n_1 \cdot \min \mathbf{L}(w(i); B(S)^{D})$, where $w'(i) \in Ap(B(S), n_1)$ is such that $w'(i) \equiv i ~ (mod ~ n_1)$, and $\mathbf{L}(w(i); B^{D})$ denotes the [set of lengths](../Fact-and-Div/Set-of-lengths.qmd) of $w'(i)$ in the [blowup](../Ideals-NS/Blowup.qmd) of $S$, $B(S)$, with respect to $D = \{n_1, n_2 - n_1, \ldots, n_e - n_1\}$.
+-   Let $b_i = w'(i) + n_1 \cdot \min \mathbf{L}(w(i); B(S)^{D})$, where $w'(i) \in Ap(B(S), n_1)$ is such that $w'(i) \equiv i ~ (mod ~ n_1)$, and $\mathbf{L}(w(i); B^{D})$ denotes the [set of lengths](../Fact-and-div/Set-of-lengths.qmd) of $w'(i)$ in the [blowup](../Ideals-NS/Blowup.qmd) of $S$, $B(S)$, with respect to $D = \{n_1, n_2 - n_1, \ldots, n_e - n_1\}$.
 
 -   Set $x = w'(i)$ and while $x \le b_i$, define $x := x + n_1$. If $x \in S$, add $x$ in $S_i$.
 

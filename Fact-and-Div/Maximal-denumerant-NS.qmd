@@ -39,7 +39,7 @@ $$
 \mathcal{R}(u_j) = \left \{ x \in \mathcal{P}(u_j) ~ | ~ |x| < \min \mathbf{L}(u_{j-1}; B^{\mathcal{D}}) - \frac{u_j - u_{j-1}}{n_1} \right \},
 $$
 
-where $|x|$ is the [length](../Fact-and-Div/Length-factorization.qmd) of $x$ and $\mathbf{L}(u_{j-1}; B^{D})$ is the [set of lengths](../Fact-and-Div/Set-of-lengths.qmd) of $u_{j-1}$ in $B(S)$ with respect to the system of generators $D$. Therefore, it can be proven that $d_{max}(S_i) = \max_{u \in adj(S_i)} |\mathcal{R}(u)|$ and
+where $|x|$ is the [length](../Fact-and-div/Length-factorization.qmd) of $x$ and $\mathbf{L}(u_{j-1}; B^{D})$ is the [set of lengths](../Fact-and-div/Set-of-lengths.qmd) of $u_{j-1}$ in $B(S)$ with respect to the system of generators $D$. Therefore, it can be proven that $d_{max}(S_i) = \max_{u \in adj(S_i)} |\mathcal{R}(u)|$ and
 
 $$
 d_{max} (S) = \max_{0 \le i < n_1} d_{max} (S_i) = \max_{\stackrel{0 \le i < n_1}{u \in adj(S_i)}} \left| \mathcal{R}(u)  \right|.
