@@ -1,0 +1,2173 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Maximal denumerant of a numerical semigroup – Wiki numerical semigroups</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-cdbe2947715757e022544ab09c2be4d9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Wiki numerical semigroups</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-bi-github">    
+        <li>
+    <a class="dropdown-item" href="https://github.com/numerical-semigroups/wiki">
+ <span class="dropdown-text">Source code</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/numerical-semigroups/wiki/issues">
+ <span class="dropdown-text">Report an issue</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Fact-and-div/Adjacent-catenary-degree-element.html">Factorizations and divisibility</a></li><li class="breadcrumb-item"><a href="../Fact-and-div/Maximal-denumerant-NS.html">Maximal denumerant of a numerical semigroup</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Contribute.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to contribute</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Basic concepts</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Apery-set-respect-set.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Apéry set with respect to a set</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Apery-set.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Apéry set</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Arf-closure-set.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Arf closure of a set</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Arf-closure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Arf closure</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Arf-special-gap.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Arf special gap</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Arf-system-of-generators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Arf system of generators</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Binomial-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Binomial ideal of a numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Cocycle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cocycle</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Conductor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conductor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Degree-of-singularity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Degree of singularity</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Depth-and-remainder.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Depth and remainder</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Dominant.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dominant</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Eliahou-number.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Eliahou number</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Eliahou-slices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Eliahou slices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Embedding-dimension.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Embedding dimension</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Frobenius-number.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Frobenius number</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Fundamental-gap.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fundamental gap</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Gap.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gap</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Genus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Genus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Gluing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gluing of a set of positive integers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Graph-element-Apery-set.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Graph associated to an element by Apéry set</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Holes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Holes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Homogenization-NS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Homogenization of a numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Irreducible-Z-components.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Irreducible Z-components</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Kunz-coordinates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Kunz coordinates</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Kunz-polytope.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Kunz polytope</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/L-shape-of-Apery-set.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L-shape of Apéry set</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Lattice-path.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lattice path associated to a numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Left-elements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Left Elements</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/MED-closure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Maximal embedding dimension closure</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/MED-system-of-generators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Maximal embedding dimension system of generators</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Minimal-set-of-generators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Minimal set of generators</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Multiplicity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Multiplicity</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Nu-sequence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nu-sequence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Numerical-semigroup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Numerical Semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Oversemigroup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Oversemigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">Basic-concepts/Primitive-element.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Profile.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Profile</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Pseudo-Frobenius-number.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pseudo-Frobenius number</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/RF-matrix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">RF-matrix of a pseudo-Frobenius number</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Ratio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ratio</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Relation-order-NS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Relation order of a numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Saturated-closure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Saturated closure</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Semigroup-ring.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Semigroup ring</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Set-divisors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set of divisors</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Special-gap.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Special gap</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Standard-repr-free-NS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Standard representation in a free Numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Tau-sequence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tau-sequence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Threshold-interval.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Threshold interval</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Type-sequence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Type sequence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Type.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Type</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Weierstrass-weight.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Weierstrass weight</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basic-concepts/Wilf-number.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wilf number</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Families of numerical semigroups</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/Arf-irreducible.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Arf-irreducible</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/Arf-semigroup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Arf semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-Apery-set.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Numerical semigroup with Apéry set of unique expression</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-Dilatation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dilatation of a numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-M-pure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">M-pure numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-acute.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Acute numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-additive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Additive numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-admitting-pattern.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Numerical semigroup admitting a pattern</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-almost-symmetric.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Almost symmetric numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-alpha-rectangular.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Alpha rectangular numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-arithmetic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Arithmetic numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-beta-rectangular.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Beta rectangular numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-complete-intersection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Complete intersection numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-cyclotomic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cyclotomic numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-duplication.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Duplication of a numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-free.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Free numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-gamma-rectangular.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gamma rectangular numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-generalized-almost-symmetric.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Generalized almost symmetric numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-generic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Generic numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-gluing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gluing of numerical semigroups</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-half-line.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Half-line</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-homogeneous.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Homogeneous numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-inductive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inductive numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-irreducible.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Irreducible numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-maximal-embedding-dimension.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Numerical semigroup with maximal embedding dimension</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-modular.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modular numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-multiple.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Multiple of a numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">Families-NS/NS-nearly-Gorenstein.qmd</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-plane-branch.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Numerical semigroup associated to a plane branch</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-prop-modular.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proportionally modular numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-pseudo-symmetric.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pseudo-symmetric numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-pure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pure numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-quotient.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quotient of a numerical semigroup by an integer</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-saturated.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Saturated numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-set-rational-numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Numerical semigroup associated to a set of rational numbers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-shifted.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Shifted numerical semigroups</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-simple.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Simple numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-supersymmetric.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Supersymmetric numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-symmetric.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Symmetric numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-telescopic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Telescopic numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-unique-Betti-element.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unique Betti element numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/NS-uniquely-presented.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Uniquely presented numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/Pi-semigroup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pi-semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/Weierstrass-semigroup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Weierstrass semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Families-NS/Wilf-semigroup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wilf semigroup</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Ideals and numerical semigroups</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Almost-canonical-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Almost canonical ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Apery-set-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Apéry list of a relative ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Apery-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Apéry table</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Blowup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Blowup of a relative ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Canonical-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Canonical ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Conductor-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conductor ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Conductor-of-an-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conductor of an ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Denumerant-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Denumerant ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Dual-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dual of a relative ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Frobenius-number-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Frobenius number of an ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Genus-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Genus of a relative ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Hilbert-function-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hilbert function of a proper ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Ideal-admits-pattern.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ideal admits the pattern</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Integrally-closed-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Integrally closed ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Irreducible-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Irreducible ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Left-elements-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Left elements of a relative ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Maximal-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Maximal ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Maximum-sparse-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Maximum sparse ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Microinvariants.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Microinvariants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Minimal-set-generators-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Minimal set of generators of an ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Multiplicity-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Multiplicity of an ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Multiplicity-sequence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Multiplicity sequence of a numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Principal-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Principal ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Proper-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proper ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Pseudo-Frobenius-number-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pseudo-Frobenius number of a relative ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Ratliff-Rush-closure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ratliff-Rush closure of a proper ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Ratliff-Rush-number.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ratliff-Rush number of a proper ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Reduction-number.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reduction number</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Reduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reduction of a proper ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Relative-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Relative ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Set-closed-divisors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set closed under divisors</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Stable-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Stable proper ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Standard-canonical-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Standard canonical ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Star-closure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Star closure</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Trace-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Trace ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Translation-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Translation of a relative ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Type-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Type of a relative ideal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Ideals-NS/Z-irreducible-ideal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Z-irreducible ideal</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Factorizations and divisibility</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Adjacent-catenary-degree-element.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Adjacent catenary degree of an element</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Adjustment-NS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Adjustment of a numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Adjustment-of-an-element.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Adjustment of an element</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Apery-set-integer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Apéry set of an integer</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Catenary-degree-NS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Catenary degree of a numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Catenary-degree-of-an-element.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Catenary degree of an element</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Chain-of-factorizations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">N-Chain of factorizations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Delta-set-NS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Delta set of a numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Delta-set-of-an-element.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Delta set of an element</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Desert.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Desert of a numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Distance-factorizations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Distance between factorizations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Divide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Division between elements in a numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Elasticity-NS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Elasticity of a numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Elasticity-of-an-element.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Elasticity of an element</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Equal-catenary-degree-NS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Equal catenary degree of a numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Equal-catenary-degree-element.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Equal catenary degree of an element</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Feng-Rao-distance-generalized.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Generalized Feng-Rao distance of an element</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Feng-Rao-distance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feng-Rao distance of an element</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Half-factorial-monoid.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Half-factorial monoid</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Length-factorization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Length of a factorization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Maximal-denumerant-NS.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Maximal denumerant of a numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Maximal-denumerant-of-an-element.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Maximal denumerant of an element</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Moebius-function-NS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Moebius function of a numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Monotone-catenary-degree-NS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Monotone catenary degree of a numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Monotone-catenary-degree-element.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Monotone catenary degree of an element</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/One-point-algebraic-code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">One point algebraic code</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Order-of-an-element.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Order of an element</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Set-of-lengths.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set of lengths of an element</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Tame-degree-NS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tame degree of a numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/Tame-degree-of-an-element.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tame degree of an element</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/w-primality-NS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">w-primality of a numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Fact-and-div/w-primality-of-an-element.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">w-primality of an element</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Frobenius varieties</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Varieties-NS/Chain-associated-NS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chain associated to a numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Varieties-NS/Directed-graph-all-NS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Directed graph of all numerical semigroups</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Varieties-NS/Frobenius-variety-generated-NS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Frobenius variety generated by a family of numerical semigroups</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Varieties-NS/Frobenius-variety.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Frobenius variety</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Varieties-NS/Pattern.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pattern</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Varieties-NS/V-monoid-generated.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">V-monoid generated by a subset</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Varieties-NS/V-monoid.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">V-monoid</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Presentations of a numerical smeigroup</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Presentations-NS/Betti-element.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Betti element</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Presentations-NS/Congruence-compatible.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Congruence compatible</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Presentations-NS/Congruence-set.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Congruences</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Presentations-NS/Cyclotomic-exponent-sequence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cyclotomic exponent sequence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Presentations-NS/Factorization-homomorphism.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Factorization homomorphism</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Presentations-NS/Factorizations-R-related.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Factorizations R-related</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Presentations-NS/Graph-associated-to-an-element.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Graph associated to an element by set of factorizations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Presentations-NS/Graph-element-generators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Graph associated to an element by minimal generators</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Presentations-NS/Hilbert-series.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hilbert series</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Presentations-NS/Presentation-NS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentation of a numerical semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Presentations-NS/Set-of-factorizations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Set of factorizations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Presentations-NS/Shaded-set.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Shaded set</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Proportionally modular numerical semigroups</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Prop-modular-NS/Adjacent-fractions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Adjacent fractions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Prop-modular-NS/Bezout-sequence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bézout sequence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Prop-modular-NS/Factor-prop-mod-Diophantine-ineq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Factor of a proportionally modular Diophantine inequality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Prop-modular-NS/Mod-Diophantine-ineq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modular Diophantine inequality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Prop-modular-NS/Modulus-prop-mod-Diophantine-ineq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modulus of a proportionally modular Diophantine inequality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Prop-modular-NS/Period-of-a-subadditive-function.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Period of a subadditive function</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Prop-modular-NS/Prop-mod-Diophantine-ineq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proportionally modular Diophantine inequality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Prop-modular-NS/Proper-Bezout-sequence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proper Bézout sequence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Prop-modular-NS/Proportion-prop-mod-Diophantine-ineq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proportion of a proportionally modular Diophantine inequality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Prop-modular-NS/Subadditive-function.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Subadditive function</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Prop-modular-NS/Weight-mod-Diophantine-ineq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Weight of a modular Diophantine inequality</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">The structure of a numerical semigroup</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Structure-NS/Archimedean-property.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Archimedean property of an element</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Structure-NS/Congruence-on-a-semigroup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Congruence on a semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Structure-NS/M-cancellative.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cancellative monoid</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Structure-NS/M-hered-finitely-generated.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hereditarily finitely generated monoid</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Structure-NS/M-quasi-Archimedean.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quasi-Archimedean monoid</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Structure-NS/M-weakly-cancellative.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Weakly cancellative monoid</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Structure-NS/Quotient-group-monoid.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quotient group of a monoid</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Structure-NS/R-monoid.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R-monoid</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Structure-NS/S-multiple-joined.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Multiple joined semigroup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Structure-NS/S-torsion-free.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Torsion free semigroup</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Semigroup of an irreducible meromorphic series</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Meromorphic-series-NS/Approximate-root.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Approximate root</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Meromorphic-series-NS/Characteristic-sequences.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Characteristic sequences associated to an irreducible polynomial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Meromorphic-series-NS/Contact.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contact</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Meromorphic-series-NS/Curve-NS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Numerical semigroup associated to a curve</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Meromorphic-series-NS/Curves-one-place-infinity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Curve with one place at infinity</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Meromorphic-series-NS/Exact-degree-algebroid-curve.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exact degree of an algebroid curve</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Meromorphic-series-NS/Exact-degree-polynomial-curve.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exact degree of a polynomial curve</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Meromorphic-series-NS/Expansion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Expansion with respect to a set of polynomials</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Meromorphic-series-NS/G-adic-expansion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">G-adic expansion</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Meromorphic-series-NS/Intersection-multiplicity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Intersection multiplicity</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Meromorphic-series-NS/Milnor-number.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milnor number</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Meromorphic-series-NS/Newton-Puiseux-exponents.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Newton-Puiseux exponents of an irreducible polynomial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Meromorphic-series-NS/Order.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Order of a formal series</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Meromorphic-series-NS/Polynomial-NS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Numerical semigroup associated to a polynomial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Meromorphic-series-NS/Pseudo-approximate-root.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pseudo-approximate root of an irreducible polynomial</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Meromorphic-series-NS/Short-parametrization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Short parametrization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Meromorphic-series-NS/Support.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Support of a formal series</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Meromorphic-series-NS/Tschirnhausen-transform.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tschirnhausen transform</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Meromorphic-series-NS/Very-short-parametrization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Very short parametrization</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Fact-and-div/Adjacent-catenary-degree-element.html">Factorizations and divisibility</a></li><li class="breadcrumb-item"><a href="../Fact-and-div/Maximal-denumerant-NS.html">Maximal denumerant of a numerical semigroup</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Maximal denumerant of a numerical semigroup</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!-- Maximal-denumerant-NS -->
+<section id="definition" class="level2">
+<h2 class="anchored" data-anchor-id="definition">Definition</h2>
+<p>Let <span class="math inline">\(S\)</span> be a <a href="../Basic-concepts/Numerical-semigroup.html">numerical semigroup</a> <a href="../Basic-concepts/Minimal-set-of-generators.html">minimally generated</a> by <span class="math inline">\(P(S) = \{n_1, \ldots, n_e\}\)</span>, ordered from smallest to largest. It is defined the maximal denumerant of <span class="math inline">\(S\)</span>, denoted by <span class="math inline">\(d_{max}(S)\)</span>, as</p>
+<p><span class="math display">\[
+d_{max}(S) = \max_{s \in S} \{d_{max}(s;S)\},
+\]</span></p>
+<p>where <span class="math inline">\(d_{max}(s;S)\)</span> denotes the <a href="../Fact-and-div/Maximal-denumerant-of-an-element.html">maximal denumerant</a> of <span class="math inline">\(s\)</span> in <span class="math inline">\(S\)</span>.</p>
+<p>It can be proven that the maximal denumerant of a numerical semigroup <span class="math inline">\(S\)</span> is always finite. Moreover, let us consider for all <span class="math inline">\(i \in \{0, \ldots, n_1 - 1\}\)</span> the sets <span class="math inline">\(S_i\)</span> defined as</p>
+<p><span class="math display">\[
+S_i = \{s \in S ~ | ~ s \equiv i ~ (mod ~ n_1) \},
+\]</span></p>
+<p>and the <a href="../Ideals-NS/Blowup.html">blowup</a> of <span class="math inline">\(S\)</span>, <span class="math inline">\(B(S)\)</span>. For any <span class="math inline">\(b \in B(S)\)</span>, let us denote <span class="math inline">\(\mathcal{P}(b)\)</span> for the set of all <a href="../Presentations-NS/Set-of-factorizations.html">factorizations</a> in <span class="math inline">\(B(S)\)</span> with respect to the set of generators <span class="math inline">\(D = \{n_1, n_2 - n_1, \ldots, n_{e-1} - n_e\}\)</span>. If the <a href="../Fact-and-div/Adjustment-NS.html">adjustment</a> of <span class="math inline">\(S\)</span> is <span class="math inline">\(adj(S) = \{u_0 &lt; u_1 &lt; \cdots\}\)</span>, it is defined for each <span class="math inline">\(j \in \mathbb{N}\)</span>,</p>
+<ul>
+<li><p>If <span class="math inline">\(j = 0\)</span>, <span class="math inline">\(\mathcal{R}(u_0) = \mathcal{P}(u_0)\)</span>,</p></li>
+<li><p>If <span class="math inline">\(j &gt; 0\)</span>, then</p></li>
+</ul>
+<p><span class="math display">\[
+\mathcal{R}(u_j) = \left \{ x \in \mathcal{P}(u_j) ~ | ~ |x| &lt; \min \mathbf{L}(u_{j-1}; B^{\mathcal{D}}) - \frac{u_j - u_{j-1}}{n_1} \right \},
+\]</span></p>
+<p>where <span class="math inline">\(|x|\)</span> is the <a href="../Fact-and-div/Length-factorization.html">length</a> of <span class="math inline">\(x\)</span> and <span class="math inline">\(\mathbf{L}(u_{j-1}; B^{D})\)</span> is the <a href="../Fact-and-div/Set-of-lengths.html">set of lengths</a> of <span class="math inline">\(u_{j-1}\)</span> in <span class="math inline">\(B(S)\)</span> with respect to the system of generators <span class="math inline">\(D\)</span>. Therefore, it can be proven that <span class="math inline">\(d_{max}(S_i) = \max_{u \in adj(S_i)} |\mathcal{R}(u)|\)</span> and</p>
+<p><span class="math display">\[
+d_{max} (S) = \max_{0 \le i &lt; n_1} d_{max} (S_i) = \max_{\stackrel{0 \le i &lt; n_1}{u \in adj(S_i)}} \left| \mathcal{R}(u)  \right|.
+\]</span></p>
+</section>
+<section id="examples" class="level2">
+<h2 class="anchored" data-anchor-id="examples">Examples</h2>
+<p><span class="math inline">\(\circ\)</span> Let <span class="math inline">\(S = \langle 3, 5, 7 \rangle\)</span>. With some computations, it is obtained that <span class="math inline">\(adj(S_0) = \{0\}, adj(S_1) = \{4\}\)</span> and <span class="math inline">\(adj(S_2) = \{2\}\)</span> (see <a href="../Fact-and-div/Adjustment-NS.html">adjustment of a numerical semigroup</a> for more details). Then,</p>
+<p><span class="math display">\[
+\mathcal{R}(0) = \mathcal{P}(0) = \{(0,0,0)\}, ~~ \mathcal{R}(4) = \{(0,0,1), (0,2,0)\}, ~~ \text{and} ~~ \mathcal{R}(2) = \{(0,2,0)\},
+\]</span></p>
+<p>concluding that <span class="math inline">\(d_{max}(S) = 2\)</span>.</p>
+</section>
+<section id="examples-with-gap" class="level2">
+<h2 class="anchored" data-anchor-id="examples-with-gap">Examples with GAP</h2>
+<p>The following example is made with the package NumericalSgps in GAP.</p>
+<p><span class="math inline">\(\diamond\)</span> Let <span class="math inline">\(S = \langle 31, 49, 74, 118, 128, 150 \rangle\)</span>, in GAP:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">S</span> <span class="op">:=</span> <span class="va">NumericalSemigroup</span>(<span class="fl">31</span><span class="op">,</span> <span class="fl">49</span><span class="op">,</span> <span class="fl">74</span><span class="op">,</span> <span class="fl">118</span><span class="op">,</span> <span class="fl">128</span><span class="op">,</span> <span class="fl">150</span>)<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">Numerical</span> <span class="va">semigroup</span> <span class="va">with</span> <span class="fl">6</span> <span class="va">generators</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Given a numerical semigroup <span class="math inline">\(S\)</span>, the functions <code>MaximalDenumerant</code> and <code>MaximalDenumerantOfNumericalSemigroup</code> return the maximal denumerant of <span class="math inline">\(S\)</span>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">MaximalDenumerant</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fl">3</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">MaximalDenumerantOfNumericalSemigroup</span>(<span class="va">S</span>)<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fl">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If in function <code>MaximalDenumerant</code> we give an element <span class="math inline">\(n \in S\)</span>, then the function returns the maximal denumerant of <span class="math inline">\(n\)</span> in <span class="math inline">\(S\)</span>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode gap code-with-copy"><code class="sourceCode gap"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="fl">720</span> <span class="ex">in</span> <span class="va">S</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cn">true</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="va">gap</span><span class="op">&gt;</span> <span class="va">MaximalDenumerant</span>(<span class="va">S</span><span class="op">,</span> <span class="fl">720</span>)<span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fl">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-MDNS" class="csl-entry" role="listitem">
+Bryant, Hamblin, L. 2013. <span>“The Maximal Denumerant of a Numerical Semigroup.”</span> <em>Semigroup Forum</em> 86: 571–82. <a href="https://doi.org/10.1007/s00233-012-9448-5">https://doi.org/10.1007/s00233-012-9448-5</a>.
+</div>
+<div id="ref-JMDA" class="csl-entry" role="listitem">
+Delgado, M., P. A. Garcia-Sanchez, and J. Morais. 2024. <span>“<span>NumericalSgps</span>, a Package for Numerical Semigroups, <span>V</span>ersion 1.4.0.”</span> <a href="https://gap-packages.github.io/numericalsgps"><code>https://gap-packages.github.io/</code> <code>numericalsgps</code></a>.
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/numerical-semigroups\.github\.io\/wiki\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
