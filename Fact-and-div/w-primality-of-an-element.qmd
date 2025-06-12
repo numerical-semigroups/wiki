@@ -1,0 +1,69 @@
+---
+title: "w-primality of an element"
+format: html
+engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $s \in S$. It is defined the $\omega-$primality of $s$ in $S$, denoted by $\omega(s, S)$, as the least integer $N$ such that whenever $s$ divides $a_1 + \cdots + a_n$ for some $a_1, \ldots, a_n \in S$, then $s$ divides $a_{i_1} + \cdots a_{i_N}$ for some $\{i_1, \ldots, i_N\} \subseteq \{1, \ldots, n\}$.
+
+From the $\omega-$primality of an element it is defined the [w-primality of a numerical semigroup](w-primality-NS.qmd).
+
+## Examples
+
+$\circ$ Let $S$ be a numerical semigroup [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $\{n_1, \ldots, n_p\}$ with $p > 1$. Let $i \in \{1, \ldots, p\}$ arbitrary but fixed and let us prove that $\omega(n_i, S) \ne 1$. Let us consider the [Apéry set](../Basic-concepts/Apery-set) of $n_i$ in $S$, $Ap(S, n_i)$. It is well known that $|Ap(S,n)| = n$ and $F(S) + n \in Ap(S, n)$ for all $n \in S$, where $F(S)$ denotes the [Frobenius number](../Basic-concepts/Frobenius-number.qmd). Then, let us consider $a_1 \in Ap(S, n_i) \setminus \{0\}$ and $a_2 = F(S) + n_i$. We have that $a_1 + a_2 > F(S) + 1$, which means that $a_1 + a_2 \in S$. Now, $a_1 - n_i \not \in S$ and $a_2 - n_2 \not \in S$ by the definition of Apéry set and consequently $w(S, n_i) > 1$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 42, 56, 71, 90, 104 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(42, 56, 71, 90, 104);
+<Numerical semigroup with 5 generators>
+```
+
+Given a numerical semigroup $S$ and an element $n$ of it, the functions `OmegaPrimality` and `OmegaPrimalityOfElementInNumericalSemigroup` compute the $\omega-$primality of $n$ in $S$.
+
+``` gap
+gap> OmegaPrimality(419, S);
+15
+gap> OmegaPrimality(S, 419);
+15
+gap> OmegaPrimality(419, S) = OmegaPrimalityOfElementInNumericalSemigroup(419, S);
+true
+```
+
+If we only give a numerical semigroup $S$ in the function `OmegaPrimality`, then it returns the $\omega-$primality of $S$.
+
+``` gap
+gap> OmegaPrimality(S);
+9
+```
+
+Given a numerical semigroup $S$ and a list of integers $Is$ of $S$, the function `OmegaPrimalityOfElementListInNumericalSemigroup` returns a list with the $w-$primality of each element in $Is$.
+
+``` gap
+gap> Is := [174, 175, 183, 300, 354];
+[ 174, 175, 183, 300, 354 ]
+gap> IsSubset(S,Is);
+true
+gap> OmegaPrimalityOfElementListInNumericalSemigroup(Is,S);
+[ 11, 10, 11, 14, 17 ]
+```
+
+## References
+
+
+::: {#refs}
+
+:::

@@ -1,0 +1,87 @@
+---
+title: "Moebius function of a numerical semigroup"
+format: html
+engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @OMFNS, @JMDA
+---
+
+<!-- Moebius_function_of_locally_finite_poset_associated_NS -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $\le_S$ be the [relation order](../Basic-concepts/Relation-order-NS.qmd) defined by $S$. Given $s \in S$, a chain of length $l \ge 0$ between $0$ and $s$ is a subset of the [set of divisors](../Basic-concepts/Set-divisors.qmd) of $s$,
+
+$$
+D(s) = \{s' \in S ~ | ~ s' \le_S s\},
+$$ of length $l+1$, $a_0, a_1, \ldots, a_l$ with $a_i \ne a_j$ if $i \ne j$, such that
+
+$$
+0 = a_0 \le_S a_1 \le_S \cdots \le_S a_{l-1} \le_S a_l = s.
+$$ Then, it is defined the Moebius function of $S$ as the function $\mu_S: S \to \mathbb{Z}$ such that for all $s \in S$,
+
+$$
+\mu_S(s) = \sum_{l \ge 0} (-1)^l c_l(s),
+$$ where $c_l(s)$ denotes the number of chains of length $l$ between $0$ and $s$. Since $D(s)$ is finite for all $s \in S$, the sum in $\mu_s$ is always finite.
+
+## Examples
+
+$\circ$ Let $S = \langle 4, 10, 11 \rangle$, let us compute $\mu_S$ for $s \in \{0, 4, 8\}$.
+
+-   $D(0) = \{0\}$ and the unique chain is of length $l = 0$, $\{0\}$, then
+
+$$
+\mu_S(0) = (-1)^0 = 1.
+$$
+
+-   $D(4) = \{0, 4\}$ and the unique chain is of length $l = 1$, $\{0,4\}$,
+
+$$
+\mu_S(4) = -1.
+$$
+
+-   $D(8) = \{0, 4, 8\}$: there are the chains $\{0, 8\}$ and $\{0, 4, 8\}$,
+
+$$
+\mu_S(8) = (-1)^1 + (-1)^2 = 0.
+$$
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 13, 14, 33, 64, 76 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(13, 14, 33, 64, 76);
+<Numerical semigroup with 5 generators>
+```
+
+Given a numerical semigroup $S$, the function `MoebiusFunction` returns the Moebius function of $S$.
+
+``` gap
+gap> f := MoebiusFunction(S);
+function( n ) ... end
+gap> 100 in S;
+true
+gap> f(100);
+0
+```
+
+Given a numerical semigroup $S$ and an element $n \in S$, the function `MoebiusFunctionAssociatedToNumericalSemigroup` returns $\mu_S(n)$.
+
+``` gap
+gap> MoebiusFunctionAssociatedToNumericalSemigroup(S, 100);
+0
+```
+
+## References
+
+::: {#refs}
+
+:::

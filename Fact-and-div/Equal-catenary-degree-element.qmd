@@ -1,0 +1,82 @@
+---
+title: "Equal catenary degree of an element"
+format: html
+engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @FIHFAS, @JMDA
+---
+
+<!-- P. A. García-Sánchez, I. Ojeda, A.
+Sánchez-R.-Navarro, Factorization invariants in half-factorial affine
+semigroups, Internat. J. Algebra Comput. 23 (2013), 111–122. -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), $s \in S$ and $\mathbf{Z}(s)$ its [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd). It is defined the equal catenary degree of $s$ in $S$, denoted by $EqC(S)$, as the least $N$ such that for any two factorizations $x,y \in \mathbf{Z}(s)$ with the same length, there exist an [N-chain](Chain-of-factorizations.qmd) joining them with all the factorizations of the same length. Equivalently, if $l_1, \ldots, l_n$ are the [lengths](Length-factorization.qmd) of the factorizations and $\mathbf{Z}_{l_i}$ are the factorizations of length $l_i$ for $i \in \{1, \ldots, n\}$, then the equal catenary degree of $s$ is the maximum of the [catenary degrees](Catenary-degree-of-an-element.qmd) of $\mathbf{Z}_{l_1}, \ldots, \mathbf{Z}_{l_n}$.
+
+## Examples
+
+$\circ$ Let $S = \langle 7, 12, 15 \rangle$ and $s = 100$. If $(\alpha, \beta, \gamma) \in \mathbf{Z}(100)$, then
+
+$$
+7 \cdot \alpha + 12 \cdot \beta + 15 \cdot \gamma = 100,
+$$ 
+
+where necessarily $0 \le \alpha \le 7, ~ 0 \le \beta \le 8, ~ 0 \le \gamma \le 6$,
+
+deducing that
+
+$$
+\mathbf{Z}(100) = \{(4, 6, 0), (7, 3, 1), (10, 0, 2), (1, 4, 3), (4, 1, 4) \}.
+$$
+
+Their lengths are $(l_1, \ldots, l_5) = (8,9,10,11,12)$ and
+
+$$
+\mathbf{Z}_8 = \{(1,4,3)\}, ~~ \mathbf{Z}_9 = \{(4,1,4)\}, ~~ \mathbf{Z}_{10} = \{(4,6,0)\}, ~~ \mathbf{Z}_{11} = \{(7,3,1)\}, ~~ \mathbf{Z}_{12} = \{(10, 0, 2)\}.
+$$ 
+
+Since each set has one factorization, $EqC(100) = 0$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 20, 39, 96, 105, 126, 130 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(20, 39, 96, 105, 126, 130);
+<Numerical semigroup with 6 generators>
+```
+
+Given a set of factorizations $Is$, the function `EqualCatenaryDegreeOfSetOfFactorizations` returns the equal catenary degree of $Is$.
+
+``` gap
+gap> 600 in S;
+true
+gap> Is := Factorizations(600, S);
+[ [ 30, 0, 0, 0, 0, 0 ], [ 0, 8, 3, 0, 0, 0 ], [ 3, 4, 4, 0, 0, 0 ],
+  [ 6, 0, 5, 0, 0, 0 ], [ 15, 5, 0, 1, 0, 0 ], [ 18, 1, 1, 1, 0, 0 ],
+  [ 0, 10, 0, 2, 0, 0 ], [ 3, 6, 1, 2, 0, 0 ], [ 6, 2, 2, 2, 0, 0 ],
+  [ 9, 0, 0, 4, 0, 0 ], [ 12, 6, 0, 0, 1, 0 ], [ 15, 2, 1, 0, 1, 0 ],
+  [ 0, 7, 1, 1, 1, 0 ], [ 3, 3, 2, 1, 1, 0 ], [ 6, 1, 0, 3, 1, 0 ],
+  [ 0, 4, 2, 0, 2, 0 ], [ 3, 0, 3, 0, 2, 0 ], [ 3, 2, 0, 2, 2, 0 ],
+  [ 0, 3, 0, 1, 3, 0 ], [ 0, 0, 1, 0, 4, 0 ], [ 4, 10, 0, 0, 0, 1 ],
+  [ 7, 6, 1, 0, 0, 1 ], [ 10, 2, 2, 0, 0, 1 ], [ 13, 0, 0, 2, 0, 1 ],
+  [ 1, 1, 1, 3, 0, 1 ], [ 10, 1, 0, 1, 1, 1 ], [ 7, 2, 0, 0, 2, 1 ],
+  [ 17, 0, 0, 0, 0, 2 ], [ 2, 5, 0, 1, 0, 2 ], [ 5, 1, 1, 1, 0, 2 ],
+  [ 2, 2, 1, 0, 1, 2 ], [ 0, 0, 0, 2, 0, 3 ], [ 4, 0, 0, 0, 0, 4 ] ]
+gap> EqualCatenaryDegreeOfSetOfFactorizations(Is);
+5
+```
+
+## References
+
+::: {#refs}
+
+:::

@@ -1,0 +1,59 @@
+---
+title: "Set of lengths of an element"
+format: html
+engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $\{n_1, n_2, \ldots, n_p\}$, let $s \in S$ and let $\mathbf{Z}(s)$ be the [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) of $s$. It is defined the set of lengths of $s$ in $S$ as
+
+$$
+\mathbf{L}(s) = \{|x| ~ | ~ x \in \mathbf{Z}(s)\},
+$$
+
+where $|x|$ denotes the [length factorization](Length-factorization.qmd) of $x$. A factorization $x \in \mathbf{Z}(s)$ is said to be maximal in $\mathbf{Z}(s)$ if $|x|$ is a maximum in $\mathbf{L}(s)$, that is, $|x|$ is equal to the [order of s in S](Order-of-an-element.qmd). The number of maximal factorizations is called the [maximal denumerant](Maximal-denumerant-of-an-element.qmd) of $s$ in $S$.
+
+## Examples
+
+$\circ$ Let $S = \langle 5, 12, 17 \rangle$ and $s = 70$. Its set of factorizations is $\mathbf{Z}(70) = \{(14, 0), (2,5)\}$. The length of $(14,0)$ is $14$ and the length of $(2,5)$ is $7$. Therefore, $\mathbf{L}(70) = \{14, 7\}$.
+
+$\circ$ Let $S = \langle 5, 9, 13 \rangle$ and $s = 41 \in S$. Its set of factorizations is $\mathbf{Z}(41) = \{(1,4,0), (2,2,1), (3,0,2)\}$, therefore $\mathbf{L}(41) = \{5\}$. It is said that a monoid $A$ is [half-factorial](Half-factorial-monoid.qmd) if $|\mathbf{L}(a)| = 1$ for all $a \in A$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 15, 17, 21, 29 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(15, 17, 21, 29);
+<Numerical semigroup with 4 generators>
+```
+
+Given a numerical semigroup $S$ and an element $n$ of it, the function `LengthsOfFactorizationsElementWRTNumericalSemigroup` computes the set of lengths of $n$ in $S$.
+
+``` gap
+gap> LengthsOfFactorizationsElementWRTNumericalSemigroup(120, S);
+[ 6, 8 ]
+```
+
+Given a list of integers $Is$ and an element $n$, the function `LengthsOfFactorizationsIntegerWRTList` returns the set of lengths of the factorizations of $n$ in terms of the elements in $Is$.
+
+``` gap
+gap> LengthsOfFactorizationsIntegerWRTList(120, [10, 20, 35]);
+[ 5, 6, 7, 8, 9, 10, 11, 12 ]
+```
+
+## References
+
+::: {#refs}
+
+:::

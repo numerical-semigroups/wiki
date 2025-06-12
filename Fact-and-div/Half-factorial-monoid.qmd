@@ -1,0 +1,45 @@
+---
+title: "Half-factorial monoid"
+format: html
+engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
+---
+
+## Definition
+
+Let $A$ be a submonoid of $\mathbb{N}$. It is said that $A$ is a half-factorial monoid if the cardinality of $\mathbf{L}(a)$ is one for all $a \in A$, where $\mathbf{L}(a)$ denotes the [set of lengths](Set-of-lengths.qmd) of $a$ in $A$. Since every submonoid of $\mathbb{N}$ is minimally generated, the set of lengths of an element is well defined.
+
+## Examples
+
+$\circ$ Let $S = \langle n_1, n_2, \ldots, n_p \rangle$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). Let us suppose that $S$ is half-factorial and prove that necessarily $S = \mathbb{N}$. If $p = 1$, the result is obvious. Let us suppose $p > 1$. In particular, $n_1 \ne n_2$, and
+
+$$
+n_1n_2 = n_2 \cdot n_1 + 0 \cdot n_2 = 0 \cdot n_1 + n_1 \cdot n_2,
+$$
+
+which implies that $(n_2, 0),(0, n_1) \in \mathbf{Z}(n_1 n_2)$, where $\mathbf{Z}(n_1n_2)$ denotes the [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) of $n_1n_2$. That means $n_1, n_2 \in \mathbf{L}(n_1n_2)$ and by hypothesis, $\mathbf{L}(n_1 n_2)$ has cardinality $1$, consequently, $n_1 = n_2$, which is a contradiction.
+
+$\circ$ Let $A = \langle 4 \rangle \subseteq \mathbb{N}$. For every $a \in A$, there exists an unique $k \in \mathbb{N}$ such that $a = 4k$, therefore $\mathbf{Z}(a)$ has one element for all $a \in A$ and $A$ is half-factorial.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Given a list of integers $Is$ and an element $n$, the function `LengthsOfFactorizationsIntegerWRTList` returns the set of lengths of the factorizations of $n$ in terms of the elements in $Is$.
+
+``` gap
+gap> LengthsOfFactorizationsIntegerWRTList(120, [10, 20, 35]);
+[ 5, 6, 7, 8, 9, 10, 11, 12 ]
+```
+
+## References
+
+::: {#refs}
+
+:::

@@ -1,0 +1,71 @@
+---
+title: "Catenary degree of a numerical semigroup"
+format: html
+engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @nsapp2, @JMDA
+---
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd). It is defined the catenary degree of $S$, denoted by $\mathbf{C}(S)$, as
+
+$$
+\mathbf{C}(s) = \sup \{\mathbf{C}(s) ~ | ~ s \in S\},
+$$
+
+where $\mathbf{C}(s)$ denotes the [catenary degree of s](Catenary-degree-of-an-element.qmd) in $S$. If $Betti(S)$ denotes the set of [Betti elements](../Presentations-NS/Betti-element.qmd) of $S$, it can be proven that
+
+$$
+\mathbf{C}(S) = \max \{\mathbf{C}(b) ~ | ~ b \in Betti(S)\}.
+$$
+
+Given a numerical semigroup $S$, there is a relation between its [Delta set](Delta-set-NS.qmd) $\Delta(S)$, its catenary degree $\mathbf{C}(S)$, its [w-primality](w-primality-NS.qmd) $\omega(S)$ and its [tame degree](Tame-degree-NS.qmd) $\mathbf{t}(S)$, which is
+
+$$
+\max \Delta(S) + 2 \le \mathbf{C}(S) \le \omega(S) \le \mathbf{t}(S).
+$$
+
+## Examples
+
+$\circ$ Let $S = \langle 5, 7, 9 \rangle$. The set of Betti elements of $S$ is $Betti(S) = \{14, 25, 27\}$, and if we compute the catenary degree of each element, it is obtained that $\mathbf{C}(14) = 2, \mathbf{C}(25) = 5$ and $\mathbf{C}(27) = 5$, then $\mathbf{C}(S) = \max \{2, 5, 5\} = 5$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 37, 42, 45, 80 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(37, 42, 45, 80);
+<Numerical semigroup with 4 generators>
+```
+
+Given a numerical semigroup $S$, the functions `CatenaryDegree` and `CatenaryDegreeOfNumericalSemigroup` return the catenary degree of $S$.
+
+``` gap
+gap> CatenaryDegree(S);
+8
+gap> CatenaryDegreeOfNumericalSemigroup(S) = CatenaryDegree(S);
+true
+```
+
+If we also give an element $n$ of the numerical semigroup in `CatenaryDegree`, the function returns the catenary degree of $n$ in $S$.
+
+``` gap
+gap> CatenaryDegree(S, 400);
+6
+gap> CatenaryDegree(400, S);
+6
+```
+
+## References
+
+::: {#refs}
+
+:::

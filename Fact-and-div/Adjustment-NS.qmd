@@ -1,0 +1,106 @@
+---
+title: "Adjustment of a numerical semigroup"
+format: html
+engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @MDNS, @JMDA
+---
+
+<!-- Maximal-denumerant-NS -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $P(S) = \{n_1, \ldots, n_e\}$, ordered to smallest to larger. It is defined the adjustment of $S$, denoted by $adj(S)$, as
+
+$$
+adj(S) = \{adj(s;S) ~ | ~ s \in S \},
+$$
+
+where $adj(s;S)$ denotes the [adjustment of the element](Adjustment-of-an-element.qmd) $s$ in $S$. If $B(S)$ is the [blowup](../Ideals-NS/Blowup.qmd) of $S$, it can be proven that $adj(S)$ is always finite and $Ap(B(S), n_1) \subseteq adj(S) \subseteq B(S)$, where $Ap(B(S), n_1)$ denotes the [Apéry set](../Basic-concepts/Apery-set.qmd) of $n_1$ in $B(S)$. The following algorithm computes the adjustment of $S$.
+
+-   For all $i \in \{0, \ldots, n_1 - 1\}$, let $S_i = \{w(i)\}$, where $w(i) \in Ap(S, n_1)$ is such that $w(i) \equiv i ~ (mod ~ n_1)$.
+
+-   Let $b_i = w'(i) + n_1 \cdot \min \mathbf{L}(w(i); B(S)^{D})$, where $w'(i) \in Ap(B(S), n_1)$ is such that $w'(i) \equiv i ~ (mod ~ n_1)$, and $\mathbf{L}(w(i); B^{D})$ denotes the [set of lengths](../Fact-and-div/Set-of-lengths.qmd) of $w'(i)$ in the [blowup](../Ideals-NS/Blowup.qmd) of $S$, $B(S)$, with respect to $D = \{n_1, n_2 - n_1, \ldots, n_e - n_1\}$.
+
+-   Set $x = w'(i)$ and while $x \le b_i$, define $x := x + n_1$. If $x \in S$, add $x$ in $S_i$.
+
+-   Compute the adjustment of $S_i$ (it has finite elements).
+
+-   Finally, $\displaystyle adj(S) = \bigcup_{i = 0}^{n_1 - 1} adj(S_i)$.
+
+## Examples
+
+$\circ$ Let $S = \langle 3, 5, 7 \rangle$. Let us follow the previous algorithm. First, we have that $B(S) = \{0, 2, \rightarrow\}$, $Ap(S,3) = \{0, 7, 5\}$, $Ap(B(S), 3) = \{0, 4, 2\}$ and $D = \{3, 2, 4\}$.
+
+-   $S_0$: we have $w(0) =w'(0) = 0$, then $b_i = 0$ and since $0 + 3 \in S$, it is deduced that $S_0 = \{0, 3\}$.
+
+-   $S_1$: $w(1) = 7$ and $b_1 = 4 + 3 \cdot 1 = 7$. Since $7 + 3 = 10 \in S$, we have that $S_1 = \{7, 10\}$.
+
+-   $S_2$: $w(2) = 5$ and $b_2 = 2 + 3 \cdot 1 = 5$. Since $2 + 3 = 5 \in S$, we have that $S_2 = \{5, 8\}$.
+
+Therefore,
+
+$$
+adj(S) = adj(S_0) \cup adj(S_1) \cup adj(S_2) = \{0, 1, 2, 4\}.
+$$
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 32, 52, 56, 76, 82, 113 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(32, 52, 56, 76, 82, 113);
+<Numerical semigroup with 6 generators>
+```
+
+Given a numerical semigroup $S$, the functions `Adjustment` and `AdjustmentOfNumericalSemigroup` return the adjustment of $S$.
+
+``` gap
+gap> Adjustment(S);
+[ 0, 20, 24, 40, 44, 48, 50, 60, 68, 70, 74, 81, 90, 94, 98, 101,
+  105, 110, 118, 121, 125, 129, 131, 141, 149, 151, 155, 171, 175,
+  179, 191, 199 ]
+gap> AdjustmentOfNumericalSemigroup(S) = Adjustment(S);
+true
+```
+
+Given a numerical semigroup $S$ and an element $n \in S$, the following function returns the adjustment of $n$ in $S$.
+
+``` gap
+gap> AdjustmentOfElementInNumericalSemigroup := function(S,n)
+>       local n_1, ord_n;
+>       if not IsNumericalSemigroup(S) then
+>           Error("The first argument must be a Numerical Semigroup");
+>       fi;
+>       if not IsInt(n) then
+>           Error("Second argument must be an integer belonging to the first argument");
+>       fi;
+>       if not n in S then
+>           Error("Second argument must be an integer belonging to the first argument");
+>       fi;
+>       n_1 := MinimalGenerators(S)[1];
+>       ord_n := MaximumDegree(S,n);
+>       return n - ord_n*n_1;
+> end;
+function( S, n ) ... end
+```
+
+``` gap
+gap> 300 in S;
+true
+gap> AdjustmentOfElementInNumericalSemigroup(S, 300);
+44
+```
+
+## References
+
+::: {#refs}
+
+:::

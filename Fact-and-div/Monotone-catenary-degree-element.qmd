@@ -1,0 +1,111 @@
+---
+title: "Monotone catenary degree of an element"
+format: html
+engine: markdown
+bibliography: ../Bibliography.bib
+cls: apa
+---
+
+---
+nocite: |
+  @FIHFAS, @JMDA
+---
+
+
+<!-- -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), $s \in S$ and $\mathbf{Z}(s)$ its [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd). Is defined the monotone catenary degree of $s$ in $S$, denoted by $MonC(s)$, as the least $N$ such that for any two factorizations $x,y \in \mathbf{Z}(s)$ with [lengths](Length-factorization.qmd) $|x| \le |y|$, there exists an [N-chain](Chain-of-factorizations.qmd) of factorizations with non-decreasing lengths joining them.
+
+It can be proven that the monotone catenary degree of is the maximum of the [adjacent catenary degree](Adjacent-catenary-degree-element.qmd) and the [equal catenary degree](Equal-catenary-degree-element.qmd) of $s$ in $S$.
+
+## Examples
+
+$\circ$ Let $S = \langle 7, 12, 15 \rangle$ and $s = 100$. If $(\alpha, \beta, \gamma) \in \mathbf{Z}(100)$, then
+
+$$
+7 \cdot \alpha + 12 \cdot \beta + 15 \cdot \gamma = 100,
+$$
+
+where necessarily $0 \le \alpha \le 7, ~ 0 \le \beta \le 8, ~ 0 \le \gamma \le 6$, deducing that
+
+$$
+\mathbf{Z}(100) = \{(4, 6, 0), (7, 3, 1), (10, 0, 2), (1, 4, 3), (4, 1, 4) \}.
+$$
+
+Their lengths are $(l_1, \ldots, l_5) = (8,9,10,11,12)$ and
+
+$$
+\mathbf{Z}_8 = \{(1,4,3)\}, ~~ \mathbf{Z}_9 = \{(4,1,4)\}, ~~ \mathbf{Z}_{10} = \{(4,6,0)\}, ~~ \mathbf{Z}_{11} = \{(7,3,1)\}, ~~ \mathbf{Z}_{12} = \{(10, 0, 2)\}.
+$$
+
+Since each set has one factorization, $EqC(S) = 0$. On the other hand,
+
+$$
+d(\mathbf{Z}_8, \mathbf{Z}_9) = d((1,4,3), (4,1,4)) = 4, ~~ d(\mathbf{Z}_9, \mathbf{Z}_{10}) = d((4,1,4), (4,6,0)) = 5
+$$
+
+$$
+d(\mathbf{Z}_{10}, \mathbf{Z}_{11}) = d((4,6,0), (7,3,1)) = 4, ~~ d(\mathbf{Z}_{11}, \mathbf{Z}_{12}) = d((7,3,1), (10, 0, 2)) = 4,
+$$
+
+concluding that $AdjC(100) = 5$ and $MonC(S) = 5$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 39, 43, 46, 50, 53, 58, 79, 102, 126 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(39, 43, 46, 50, 53, 58, 79, 102, 126);
+<Numerical semigroup with 9 generators>
+```
+
+Given a set of factorizations $Is$, the function `MonotoneCatenaryDegreeOfSetOfFactorizations` computes the monotone catenary degree of $Is$. On the other hand, the functions `AdjacentCatenaryDegreeOfSetOfFactorizations` and `EqualCatenaryDegreeOfSetOfFactorizations` compute the adjacent catenary degree and the equal catenary degree of $Is$, respectively.
+
+``` gap
+gap> 361 in S;
+true
+gap> Is := Factorizations(361, S);
+[ [ 1, 0, 7, 0, 0, 0, 0, 0, 0 ], [ 0, 5, 1, 2, 0, 0, 0, 0, 0 ],
+  [ 1, 4, 0, 3, 0, 0, 0, 0, 0 ], [ 2, 0, 5, 0, 1, 0, 0, 0, 0 ],
+  [ 0, 6, 0, 1, 1, 0, 0, 0, 0 ], [ 3, 0, 3, 0, 2, 0, 0, 0, 0 ],
+  [ 4, 0, 1, 0, 3, 0, 0, 0, 0 ], [ 0, 0, 1, 1, 5, 0, 0, 0, 0 ],
+  [ 0, 1, 0, 0, 6, 0, 0, 0, 0 ], [ 1, 4, 2, 0, 0, 1, 0, 0, 0 ],
+  [ 2, 3, 1, 1, 0, 1, 0, 0, 0 ], [ 3, 2, 0, 2, 0, 1, 0, 0, 0 ],
+  [ 2, 4, 0, 0, 1, 1, 0, 0, 0 ], [ 0, 0, 0, 5, 1, 1, 0, 0, 0 ],
+  [ 4, 1, 1, 0, 0, 2, 0, 0, 0 ], [ 5, 0, 0, 1, 0, 2, 0, 0, 0 ],
+  [ 0, 0, 2, 2, 1, 2, 0, 0, 0 ], [ 0, 1, 1, 1, 2, 2, 0, 0, 0 ],
+  [ 1, 0, 0, 2, 2, 2, 0, 0, 0 ], [ 0, 2, 0, 0, 3, 2, 0, 0, 0 ],
+  [ 0, 3, 0, 0, 0, 4, 0, 0, 0 ], [ 0, 2, 1, 3, 0, 0, 1, 0, 0 ],
+  [ 1, 1, 0, 4, 0, 0, 1, 0, 0 ], [ 0, 3, 0, 2, 1, 0, 1, 0, 0 ],
+  [ 0, 2, 3, 0, 0, 1, 1, 0, 0 ], [ 1, 1, 2, 1, 0, 1, 1, 0, 0 ],
+  [ 2, 0, 1, 2, 0, 1, 1, 0, 0 ], [ 1, 2, 1, 0, 1, 1, 1, 0, 0 ],
+  [ 2, 1, 0, 1, 1, 1, 1, 0, 0 ], [ 0, 0, 0, 1, 0, 4, 1, 0, 0 ],
+  [ 3, 2, 0, 0, 0, 0, 2, 0, 0 ], [ 0, 0, 0, 3, 1, 0, 2, 0, 0 ],
+  [ 0, 0, 2, 0, 1, 1, 2, 0, 0 ], [ 1, 0, 0, 0, 2, 1, 2, 0, 0 ],
+  [ 2, 0, 1, 0, 0, 0, 3, 0, 0 ], [ 2, 1, 3, 0, 0, 0, 0, 1, 0 ],
+  [ 3, 0, 2, 1, 0, 0, 0, 1, 0 ], [ 3, 1, 1, 0, 1, 0, 0, 1, 0 ],
+  [ 4, 0, 0, 1, 1, 0, 0, 1, 0 ], [ 0, 0, 0, 2, 3, 0, 0, 1, 0 ],
+  [ 0, 1, 0, 2, 0, 2, 0, 1, 0 ], [ 1, 0, 1, 0, 0, 3, 0, 1, 0 ],
+  [ 0, 1, 0, 0, 0, 1, 2, 1, 0 ], [ 0, 0, 1, 0, 1, 1, 0, 2, 0 ],
+  [ 2, 0, 0, 0, 0, 0, 1, 2, 0 ], [ 0, 1, 2, 2, 0, 0, 0, 0, 1 ],
+  [ 1, 0, 1, 3, 0, 0, 0, 0, 1 ], [ 0, 2, 1, 1, 1, 0, 0, 0, 1 ],
+  [ 1, 1, 0, 2, 1, 0, 0, 0, 1 ], [ 0, 3, 0, 0, 2, 0, 0, 0, 1 ],
+  [ 1, 0, 3, 0, 0, 1, 0, 0, 1 ], [ 2, 0, 1, 0, 1, 1, 0, 0, 1 ],
+  [ 4, 0, 0, 0, 0, 0, 1, 0, 1 ], [ 0, 0, 0, 1, 2, 0, 1, 0, 1 ] ]
+gap> MonotoneCatenaryDegreeOfSetOfFactorizations(Is);
+4
+gap> AdjacentCatenaryDegreeOfSetOfFactorizations(Is);
+3
+gap> EqualCatenaryDegreeOfSetOfFactorizations(Is);
+4
+```
+
+## References
+
+::: {#refs}
+
+:::

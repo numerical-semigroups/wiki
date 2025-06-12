@@ -1,0 +1,67 @@
+---
+title: "Delta set of a numerical semigroup"
+format: html
+engine: markdown
+---
+
+<!-- Num. appl. // [GMV15] Garc\'{\i}a-Garc\'{\i}a, J. I., Moreno-Fr\'{\i}as, M. A. and Vigneron-Tenorio, A., Computation of Delta sets of numerical monoids, Monatsh. Math. , 178 (2015), 457--472. -->
+
+## Definition
+
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) [minimally generated](../Basic-concepts/Minimal-set-of-generators.qmd) by $P = \{n_1, \ldots, n_p\}$. It is defined the Delta set of $S$, denoted by $\Delta(S)$, as
+
+$$
+\Delta(S) = \bigcup_{s \in S} \Delta(s),
+$$
+
+where $\Delta(s)$ denotes the [delta set of s](Delta-set-of-an-element.qmd) in $S$. If $Betti(S)$ is the set of [Betti elements](../Presentations-NS/Betti-element.qmd) of $S$, it can be proven that
+
+$$
+\max \Delta(S) = \max \{\max \Delta(b) ~ | ~ b \in Betti(S)\}.
+$$
+
+On the other hand, there exists $N_S \in \mathbb{N}$ such that $\Delta(s)$ is periodic from $N_S$ and its period is equal to $lcm(n_1, n_p)$.
+
+Given a numerical semigroup $S$, there is a relation between its Delta set $\Delta(S)$, its [catenary degree](Catenary-degree-NS.qmd) $\mathbf{C}(S)$, its [w-primality](w-primality-NS.qmd) $\omega(S)$ and its [tame degree](Tame-degree-NS.qmd) $\mathbf{t}(S)$, which is
+
+$$
+\max \Delta(S) + 2 \le \mathbf{C}(S) \le \omega(S) \le \mathbf{t}(S).
+$$
+
+## Examples
+
+<!-- Ej. de Num. Sem. Appl. -->
+
+$\circ$ Let $S = \langle 2, 3 \rangle$. If $\nabla_s$ is not connected, where $\nabla_s$ denotes the [graph associated to s](../Presentations-NS/Graph-associated-to-an-element.qmd), then $s = n + w$ with $n \in \{2,3\}$ and $w \in Ap(S,2)$. From the above argument, it is deduced that $Betti(S) = \{6\}$, and its [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) is $\mathbf{Z}(6) = \{(3,0),(0,2)\}$. Thus, $\Delta(6) = \{1\}$ and $\max \Delta(S) = \{1\}$. Finally, $\Delta(S) = \{1\}$.
+
+## Examples with GAP
+
+The following example is made with the package NumericalSgps in GAP.
+
+$\diamond$ Let $S = \langle 13, 45, 60, 89 \rangle$, in GAP:
+
+``` gap
+gap> S := NumericalSemigroup(13, 45, 60, 89);
+<Numerical semigroup with 4 generators>
+```
+
+Given a numerical semigroup $S$, the functions `DeltaSet` and `DeltaSetOfNumericalSemigroup` return the Delta set of $S$. If we also give an element $n \in S$ in `DeltaSet`, the function returns the Delta set of $n$ in $S$.
+
+``` gap
+gap> DeltaSet(S);
+[ 1, 2, 3, 4, 6, 7, 11 ]
+gap> DeltaSet(S, 314);
+[ 1, 2, 4 ]
+```
+
+Given a numerical semigroup $S$, the function `DeltaSetPeriodicityBoundForNumericalSemigroup` returns the bound where the periodicity starts for Delta sets of the elements in $S$, $N_S$. On the other hand, the function `DeltaSetPeriodicityStartForNumericalSemigroup` computes the actual element were the periodicity stars for Delta sets of the elements in $S$.
+
+```gap
+gap> DeltaSetPeriodicityBoundForNumericalSemigroup(S);
+10065
+gap> DeltaSetPeriodicityStartForNumericalSemigroup(S);
+496
+```
+
+
+## References
