@@ -22,7 +22,7 @@ $$
 
 On the other hand, there exists $N_S \in \mathbb{N}$ such that $\Delta(s)$ is periodic from $N_S$ and its period is equal to $lcm(n_1, n_p)$.
 
-Given a numerical semigroup $S$, there is a relation between its Delta set $\Delta(S)$, its [catenary degree](Catenary-degree-of-a-numerical-semigroup.qmd) $\mathbf{C}(S)$, its [w-primality](w-primality-of-a-numerical-semigroup.qmd) $\omega(S)$ and its [tame degree](Tame-degree-of-a-numerical-semigroup.qmd) $\mathbf{t}(S)$, which is
+Given a numerical semigroup $S$, there is a relation between its Delta set $\Delta(S)$, its [catenary degree](Catenary-degree-NS.qmd) $\mathbf{C}(S)$, its [w-primality](w-primality-NS.qmd) $\omega(S)$ and its [tame degree](Tame-degree-NS.qmd) $\mathbf{t}(S)$, which is
 
 $$
 \max \Delta(S) + 2 \le \mathbf{C}(S) \le \omega(S) \le \mathbf{t}(S).

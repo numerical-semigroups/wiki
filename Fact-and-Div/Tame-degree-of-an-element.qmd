@@ -25,7 +25,7 @@ $$
 \mathbf{t}_i(n) = \max \{ \mathbf{t}_i(n) ~ | ~ n - n_i \in S, 1 \le i \le p\}.
 $$
 
-From the definition of tame degree of an element it is defined the [tame degree of a numerical semigroup](Tame-degree-of-a-numerical-semigroup.qmd).
+From the definition of tame degree of an element it is defined the [tame degree of a numerical semigroup](Tame-degree-NS.qmd).
 
 ## Examples
 

@@ -19,7 +19,7 @@ $$
 \Delta(s) = \{l_2 - l_1, \ldots, l_k - l_{k-1}\},
 $$
 
-and if $k = 1$, $\Delta(s) = \emptyset$. From the Delta set of an element it is defined the [Delta set of a numerical semigroup](Delta-set-of-a-numerical-semigroup.qmd).
+and if $k = 1$, $\Delta(s) = \emptyset$. From the Delta set of an element it is defined the [Delta set of a numerical semigroup](Delta-set-NS.qmd).
 
 ## Examples
 

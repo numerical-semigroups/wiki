@@ -19,7 +19,7 @@ $$
 \rho(s) = \frac{\max \mathbf{L}(s)}{\min \mathbf{L}(s)}.
 $$
 
-From the elasticity of an element it is defined the [elasticity of a numerical semigroup](Elasticity-of-a-numerical-semigroup.qmd).
+From the elasticity of an element it is defined the [elasticity of a numerical semigroup](Elasticity-NS.qmd).
 
 ## Examples
 

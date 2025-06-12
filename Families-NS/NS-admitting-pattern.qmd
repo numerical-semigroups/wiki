@@ -15,7 +15,7 @@ nocite: |
 
 ## Definition
 
-Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $a_1 x_1 + \cdots a_n x_n$ be a [pattern](../Graphs-varieties-NS/Pattern.qmd) $P$. It is said that $S$ admits the pattern $P$ if for every $s_1, \ldots, s_n \in S$ with $s_1 \ge s_2 \ge \ldots \ge s_n$, the element $a_1s_1 + \cdots + a_n s_n$ belongs to $S$. It is denoted by $\mathcal{S}(P)$ the set of all numerical semigroups admitting the pattern $P$.
+Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $a_1 x_1 + \cdots a_n x_n$ be a [pattern](../Varieties-NS/Pattern.qmd) $P$. It is said that $S$ admits the pattern $P$ if for every $s_1, \ldots, s_n \in S$ with $s_1 \ge s_2 \ge \ldots \ge s_n$, the element $a_1s_1 + \cdots + a_n s_n$ belongs to $S$. It is denoted by $\mathcal{S}(P)$ the set of all numerical semigroups admitting the pattern $P$.
 
 ## Examples
 

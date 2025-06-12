@@ -15,7 +15,7 @@ nocite: |
 
 Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd), let $s \in S$ and let $\mathbf{Z}(s)$ be the [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) of $s$ in $S$. It is defined the catenary degree of $s$, denoted by $\mathbf{C}(s)$, as the least $N$ such that for any two factorizations $x, y \in \mathbf{Z}(s)$, there is an [N-chain](Chain-of-factorizations.qmd) joining them.
 
-From the catenary degree of an element it is defined the [catenary degree of a numerical semigroup](Catenary-degree-of-a-numerical-semigroup.qmd).
+From the catenary degree of an element it is defined the [catenary degree of a numerical semigroup](Catenary-degree-NS.qmd).
 
 ## Examples
 

@@ -35,7 +35,7 @@ $$
 \mathbf{t}_i(S) = \max \{\mathbf{t}_i(s) ~ | ~ s \in S_i\}.
 $$
 
-Given a numerical semigroup $S$, there is a relation between its [Delta set](Delta-set-of-a-numerical-semigroup.qmd) $\Delta(S)$, its [catenary degree](Catenary-degree-of-a-numerical-semigroup.qmd) $\mathbf{C}(S)$, its [w-primality](w-primality-of-a-numerical-semigroup.qmd) $\omega(S)$ and its tame degree $\mathbf{t}(S)$, which is
+Given a numerical semigroup $S$, there is a relation between its [Delta set](Delta-set-NS.qmd) $\Delta(S)$, its [catenary degree](Catenary-degree-NS.qmd) $\mathbf{C}(S)$, its [w-primality](w-primality-NS.qmd) $\omega(S)$ and its tame degree $\mathbf{t}(S)$, which is
 
 $$
 \max \Delta(S) + 2 \le \mathbf{C}(S) \le \omega(S) \le \mathbf{t}(S).

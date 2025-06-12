@@ -21,7 +21,7 @@ It can be proven that every generic numerical semigroup is [uniquely presented](
 
 ## Examples
 
-$\circ$ Let $S = \langle 3, 7, 11 \rangle$. In order to compute all minimal relators, we have to consider the [Betti elements](../Presentations-NS/Betti-elements.qmd) of $S$, which are $Betti(S) = \{14, 18, 22\}$. Their [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) are
+$\circ$ Let $S = \langle 3, 7, 11 \rangle$. In order to compute all minimal relators, we have to consider the [Betti elements](../Presentations-NS/Betti-element.qmd) of $S$, which are $Betti(S) = \{14, 18, 22\}$. Their [set of factorizations](../Presentations-NS/Set-of-factorizations.qmd) are
 
 $$
 \mathbf{Z}(14) = \{(0,2,0), (1,0,1)\}, ~~ \mathbf{Z}(18) = \{(6,0,0), (0,1,1)\}, ~~ \mathbf{Z}(22) = \{(5,1,0), (0,0,2)\},

@@ -15,7 +15,7 @@ nocite: |
 
 Let $S$ be a [numerical semigroup](../Basic-concepts/Numerical-semigroup.qmd) and let $s \in S$. It is defined the $\omega-$primality of $s$ in $S$, denoted by $\omega(s, S)$, as the least integer $N$ such that whenever $s$ divides $a_1 + \cdots + a_n$ for some $a_1, \ldots, a_n \in S$, then $s$ divides $a_{i_1} + \cdots a_{i_N}$ for some $\{i_1, \ldots, i_N\} \subseteq \{1, \ldots, n\}$.
 
-From the $\omega-$primality of an element it is defined the [w-primality of a numerical semigroup](w-primality-of-a-numerical-semigroup.qmd).
+From the $\omega-$primality of an element it is defined the [w-primality of a numerical semigroup](w-primality-NS.qmd).
 
 ## Examples
 

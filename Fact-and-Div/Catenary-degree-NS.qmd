@@ -25,7 +25,7 @@ $$
 \mathbf{C}(S) = \max \{\mathbf{C}(b) ~ | ~ b \in Betti(S)\}.
 $$
 
-Given a numerical semigroup $S$, there is a relation between its [Delta set](Delta-set-of-a-numerical-semigroup.qmd) $\Delta(S)$, its catenary degree $\mathbf{C}(S)$, its [w-primality](w-primality-of-a-numerical-semigroup.qmd) $\omega(S)$ and its [tame degree](Tame-degree-of-a-numerical-semigroup.qmd) $\mathbf{t}(S)$, which is
+Given a numerical semigroup $S$, there is a relation between its [Delta set](Delta-set-NS.qmd) $\Delta(S)$, its catenary degree $\mathbf{C}(S)$, its [w-primality](w-primality-NS.qmd) $\omega(S)$ and its [tame degree](Tame-degree-NS.qmd) $\mathbf{t}(S)$, which is
 
 $$
 \max \Delta(S) + 2 \le \mathbf{C}(S) \le \omega(S) \le \mathbf{t}(S).
